@@ -4,6 +4,7 @@ date: "2026-03-12"
 author: "Gus"
 tags: ["thingsboard", "proxmox", "docker", "lxc"]
 excerpt: "Retour de chantier après deux semaines à faire tenir ThingsBoard CE sur une LXC Debian 12 dans un cluster Proxmox. Ce qui a marché du premier coup, ce qui a coincé."
+cover: "/articles/premier-poc-thingsboard-proxmox.svg"
 ---
 
 Le besoin était simple sur le papier : monter une plateforme IoT pour visualiser une centaine de capteurs LoRaWAN sans payer la version managed-cloud d'un éditeur. ThingsBoard Community Edition était le candidat évident. Je voulais le faire tourner sur l'infra Proxmox existante du client, sans VM dédiée si possible.

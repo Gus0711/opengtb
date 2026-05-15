@@ -4,6 +4,7 @@ export interface ArticleFrontmatter {
 	author: string;
 	tags: string[];
 	excerpt: string;
+	cover?: string;
 	reading_time?: number;
 }
 

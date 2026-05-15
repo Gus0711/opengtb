@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice">
+	<rect width="600" height="400" fill="#07090a" />
+
+	<g stroke="#11161a" stroke-width="1" opacity="0.7">
+		<line x1="0" y1="100" x2="600" y2="100" />
+		<line x1="0" y1="200" x2="600" y2="200" />
+		<line x1="0" y1="300" x2="600" y2="300" />
+	</g>
+
+	<text
+		x="35"
+		y="65"
+		font-family="JetBrains Mono, ui-monospace, monospace"
+		font-size="20"
+		font-weight="700"
+		fill="#6ce26c"
+	>$ docker compose up</text>
+	<text
+		x="35"
+		y="105"
+		font-family="JetBrains Mono, ui-monospace, monospace"
+		font-size="14"
+		fill="#b3bfc8"
+	>⠿ Network thingsboard_default  Created</text>
+	<text
+		x="35"
+		y="130"
+		font-family="JetBrains Mono, ui-monospace, monospace"
+		font-size="14"
+		fill="#b3bfc8"
+	>⠿ Volume  tb-data              Created</text>
+	<text
+		x="35"
+		y="155"
+		font-family="JetBrains Mono, ui-monospace, monospace"
+		font-size="14"
+		fill="#b3bfc8"
+	>⠿ Container tb-postgres        Started</text>
+	<text
+		x="35"
+		y="180"
+		font-family="JetBrains Mono, ui-monospace, monospace"
+		font-size="14"
+		fill="#b3bfc8"
+	>⠿ Container thingsboard        Started</text>
+
+	<g transform="translate(395 270)" opacity="0.9">
+		<rect x="0" y="0" width="170" height="90" fill="#0d1113" stroke="#1a2024" stroke-width="1" />
+		<g transform="translate(20 22) scale(4.6)">
+			<path
+				d="M2 11 H6 L8 5 L12 17 L14 11 H20"
+				stroke="#6ce26c"
+				stroke-width="1.8"
+				fill="none"
+				stroke-linejoin="round"
+				stroke-linecap="round"
+			/>
+		</g>
+	</g>
+
+	<text
+		x="35"
+		y="375"
+		font-family="JetBrains Mono, ui-monospace, monospace"
+		font-size="11"
+		fill="#6a7682"
+	>// thingsboard ce + proxmox lxc</text>
+</svg>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getAllArticles } from '$lib/articles/loader';
-	import { formatMonthYear } from '$lib/format';
+	import ArticleCard from '$lib/components/articles/ArticleCard.svelte';
 
 	const recent = getAllArticles().slice(0, 3);
 </script>
@@ -33,33 +33,7 @@
 	{:else}
 		<div class="border-border flex flex-col border-t">
 			{#each recent as article (article.slug)}
-				<a
-					href="/articles/{article.slug}"
-					class="group border-border hover:bg-card grid items-baseline gap-1 border-b px-1 py-5 transition-all hover:px-3 sm:grid-cols-[auto_1fr_auto] sm:gap-6"
-				>
-					<div class="text-text-dim min-w-[60px] font-mono text-xs tracking-wider">
-						{formatMonthYear(article.date)}
-					</div>
-					<div class="min-w-0">
-						{#if article.tags.length > 0}
-							<span class="text-primary mb-1 inline-block font-mono text-[11px]"
-								>#{article.tags[0]}</span
-							>
-						{/if}
-						<h3
-							class="group-hover:text-primary mb-1 text-[17.5px] leading-tight font-semibold tracking-[-0.01em] transition-colors"
-						>
-							{article.title}
-						</h3>
-						<p class="text-text-soft m-0 text-sm leading-[1.5]">{article.excerpt}</p>
-						<div class="text-text-dim mt-1.5 font-mono text-[11.5px]">— {article.author}</div>
-					</div>
-					<span
-						class="text-text-dim group-hover:text-primary self-center font-mono text-[13px] transition-all group-hover:translate-x-1 max-sm:hidden"
-					>
-						→
-					</span>
-				</a>
+				<ArticleCard {article} />
 			{/each}
 		</div>
 	{/if}
