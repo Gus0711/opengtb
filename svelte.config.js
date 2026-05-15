@@ -17,9 +17,7 @@ const config = {
 		}),
 		prerender: {
 			handleHttpError: 'fail',
-			handleMissingId: 'fail',
-			// TODO(after step 9 / 1st article): repasser à 'fail' (défaut strict).
-			handleUnseenRoutes: 'warn'
+			handleMissingId: 'fail'
 		}
 	},
 	preprocess: [mdsvex(mdsvexConfig)],
