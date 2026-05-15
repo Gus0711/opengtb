@@ -1,5 +1,6 @@
 import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-static';
+import mdsvexConfig from './mdsvex.config.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -21,7 +22,7 @@ const config = {
 			handleUnseenRoutes: 'warn'
 		}
 	},
-	preprocess: [mdsvex({ extensions: ['.svx', '.md'] })],
+	preprocess: [mdsvex(mdsvexConfig)],
 	extensions: ['.svelte', '.svx', '.md']
 };
 
