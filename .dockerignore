@@ -1,0 +1,28 @@
+# Repo / OS / editors
+.git
+.gitignore
+.gitattributes
+.DS_Store
+.vscode
+.claude
+
+# Build outputs / caches
+.svelte-kit
+build
+node_modules
+*.log
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Non-essentiel au build
+README.md
+CLAUDE.md
+design-export
+
+# Auto-référence
+Dockerfile
+docker-compose.yml
+.dockerignore
