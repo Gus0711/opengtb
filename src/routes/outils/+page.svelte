@@ -1,14 +1,15 @@
 <script lang="ts">
 	import { SECTORS, toolsBySector } from '$lib/tools/registry';
+	import SeoHead from '$lib/seo/SeoHead.svelte';
+	import { buildMeta } from '$lib/seo/meta';
+
+	const meta = buildMeta({
+		title: 'Tous les outils',
+		description: 'Les 12 outils OpenGTB pour les intégrateurs GTB & IoT, classés par secteur.'
+	});
 </script>
 
-<svelte:head>
-	<title>Tous les outils · OpenGTB</title>
-	<meta
-		name="description"
-		content="Les 12 outils OpenGTB pour les intégrateurs GTB &amp; IoT, classés par secteur."
-	/>
-</svelte:head>
+<SeoHead {meta} />
 
 <section class="mx-auto max-w-5xl px-6 py-12">
 	<h1 class="text-3xl font-semibold">Tous les outils</h1>

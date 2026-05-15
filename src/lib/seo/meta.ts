@@ -2,7 +2,7 @@ export const SITE_NAME = 'OpenGTB';
 export const SITE_URL = 'https://opengtb.fr';
 const DEFAULT_DESCRIPTION =
 	'La boîte à outils des intégrateurs GTB & IoT — 12 outils gratuits, en local dans le navigateur.';
-const DEFAULT_OG_IMAGE = '/og/default.png';
+const DEFAULT_OG_IMAGE = '/og/default.svg';
 
 export interface MetaInput {
 	title?: string;

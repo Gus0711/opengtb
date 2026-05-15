@@ -2,16 +2,22 @@
 	import type { Component } from 'svelte';
 	import { formatDateLong } from '$lib/format';
 	import type { PageData } from './$types';
+	import SeoHead from '$lib/seo/SeoHead.svelte';
+	import { buildMeta } from '$lib/seo/meta';
 
 	let { data }: { data: PageData } = $props();
 
 	const Article = $derived(data.Component as Component);
+	const meta = $derived(
+		buildMeta({
+			title: data.article.title,
+			description: data.article.excerpt,
+			type: 'article'
+		})
+	);
 </script>
 
-<svelte:head>
-	<title>{data.article.title} · OpenGTB</title>
-	<meta name="description" content={data.article.excerpt} />
-</svelte:head>
+<SeoHead {meta} />
 
 <article class="mx-auto max-w-2xl px-6 py-12">
 	<header class="border-border border-b pb-6">

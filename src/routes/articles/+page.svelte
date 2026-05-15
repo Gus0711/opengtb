@@ -1,17 +1,17 @@
 <script lang="ts">
 	import { getAllArticles } from '$lib/articles/loader';
 	import ArticleCard from '$lib/components/articles/ArticleCard.svelte';
+	import SeoHead from '$lib/seo/SeoHead.svelte';
+	import { buildMeta } from '$lib/seo/meta';
 
 	const articles = getAllArticles();
+	const meta = buildMeta({
+		title: 'Journal',
+		description: "Retours d'expérience et notes techniques pour les intégrateurs GTB & IoT."
+	});
 </script>
 
-<svelte:head>
-	<title>Journal · OpenGTB</title>
-	<meta
-		name="description"
-		content="Retours d'expérience et notes techniques pour les intégrateurs GTB &amp; IoT."
-	/>
-</svelte:head>
+<SeoHead {meta} />
 
 <section class="mx-auto max-w-3xl px-5 pt-6 pb-12 md:px-7">
 	<h1 class="text-3xl font-semibold">Journal</h1>

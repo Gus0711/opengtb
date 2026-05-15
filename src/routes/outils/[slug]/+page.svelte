@@ -1,13 +1,19 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import SeoHead from '$lib/seo/SeoHead.svelte';
+	import { buildMeta } from '$lib/seo/meta';
 
 	let { data }: { data: PageData } = $props();
+
+	const meta = $derived(
+		buildMeta({
+			title: data.tool.title,
+			description: data.tool.description
+		})
+	);
 </script>
 
-<svelte:head>
-	<title>{data.tool.title} · OpenGTB</title>
-	<meta name="description" content={data.tool.description} />
-</svelte:head>
+<SeoHead {meta} />
 
 <article class="mx-auto max-w-3xl px-6 py-12">
 	<p class="text-muted-foreground font-mono text-xs">// {data.tool.sector}</p>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+	<rect width="1200" height="630" fill="#07090a" />
+	<g transform="translate(440 220) scale(20)" fill="none">
+		<path
+			d="M2 11 H6 L8 5 L12 17 L14 11 H20"
+			stroke="#6ce26c"
+			stroke-width="1.8"
+			stroke-linejoin="round"
+			stroke-linecap="round"
+		/>
+	</g>
+	<text
+		x="600"
+		y="470"
+		text-anchor="middle"
+		font-family="JetBrains Mono, ui-monospace, monospace"
+		font-size="64"
+		font-weight="700"
+		fill="#eef3f7"
+	>
+		open<tspan fill="#6a7682">/</tspan><tspan fill="#6ce26c">gtb</tspan>
+	</text>
+	<text
+		x="600"
+		y="540"
+		text-anchor="middle"
+		font-family="IBM Plex Sans, ui-sans-serif, system-ui, sans-serif"
+		font-size="26"
+		fill="#b3bfc8"
+	>
+		la boîte à outils des intégrateurs GTB &amp; IoT
+	</text>
+</svg>
