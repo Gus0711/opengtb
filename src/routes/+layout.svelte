@@ -1,0 +1,22 @@
+<script lang="ts">
+	import './layout.css';
+	import favicon from '$lib/assets/favicon.svg';
+	import { theme } from '$lib/stores/theme.svelte';
+
+	let { children } = $props();
+
+	$effect(() => {
+		const cl = document.documentElement.classList;
+		if (theme.current === 'dark') cl.add('dark');
+		else cl.remove('dark');
+		document
+			.querySelector('meta[name="theme-color"]')
+			?.setAttribute('content', theme.current === 'dark' ? '#07090a' : '#f7f7f5');
+	});
+</script>
+
+<svelte:head>
+	<link rel="icon" href={favicon} />
+</svelte:head>
+
+{@render children()}
