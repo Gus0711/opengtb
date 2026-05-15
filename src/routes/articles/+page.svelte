@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { getAllArticles } from '$lib/articles/loader';
-	import ArticleCard from '$lib/components/articles/ArticleCard.svelte';
 	import SeoHead from '$lib/seo/SeoHead.svelte';
 	import { buildMeta } from '$lib/seo/meta';
+	import BackLink from '$lib/components/layout/BackLink.svelte';
+	import ArticleCard from '$lib/components/articles/ArticleCard.svelte';
 
 	const articles = getAllArticles();
 	const meta = buildMeta({
@@ -14,7 +15,9 @@
 <SeoHead {meta} />
 
 <section class="mx-auto max-w-3xl px-5 pt-6 pb-12 md:px-7">
-	<h1 class="text-3xl font-semibold">Journal</h1>
+	<BackLink href="/" label="retour à l'accueil" />
+
+	<h1 class="mt-6 text-3xl font-semibold">Journal</h1>
 	<p class="text-text-soft mt-2">Retours d'expérience et notes techniques.</p>
 
 	{#if articles.length === 0}

@@ -2,6 +2,7 @@
 	import { SECTORS, toolsBySector } from '$lib/tools/registry';
 	import SeoHead from '$lib/seo/SeoHead.svelte';
 	import { buildMeta } from '$lib/seo/meta';
+	import BackLink from '$lib/components/layout/BackLink.svelte';
 
 	const meta = buildMeta({
 		title: 'Tous les outils',
@@ -11,9 +12,10 @@
 
 <SeoHead {meta} />
 
-<section class="mx-auto max-w-5xl px-6 py-12">
-	<h1 class="text-3xl font-semibold">Tous les outils</h1>
-	<p class="text-muted-foreground mt-2">12 modules, 5 secteurs.</p>
+<section class="mx-auto max-w-5xl px-5 pt-6 pb-12 md:px-7">
+	<BackLink href="/" label="retour à l'accueil" />
+	<h1 class="mt-6 text-3xl font-semibold">Tous les outils</h1>
+	<p class="text-text-soft mt-2">12 modules, 5 secteurs.</p>
 
 	{#each SECTORS as sector (sector.slug)}
 		{@const tools = toolsBySector(sector.slug)}
