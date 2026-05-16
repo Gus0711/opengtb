@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Fond cercle rouge -->
+  <circle cx="50" cy="50" r="48" fill="#c0392b"/>
+
+  <!-- Pulsation cercle rouge -->
+  <circle cx="50" cy="50" r="48" fill="none" stroke="#ff2222" stroke-width="2" opacity="0">
+    <animate attributeName="r" values="48;56;48" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0;0.7" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Contour batterie -->
+  <rect x="18" y="32" width="58" height="36" rx="5" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.9"/>
+  <!-- Borne + batterie -->
+  <rect x="76" y="42" width="8" height="16" rx="3" fill="#ffffff" opacity="0.9"/>
+
+  <!-- Barres internes grises (fond statique - niveau plein fantôme) -->
+  <rect x="24" y="38" width="14" height="24" rx="3" fill="#ffffff" opacity="0.12"/>
+  <rect x="42" y="38" width="14" height="24" rx="3" fill="#ffffff" opacity="0.12"/>
+  <rect x="60" y="38" width="14" height="24" rx="3" fill="#ffffff" opacity="0.12"/>
+
+  <!-- Barres qui disparaissent de droite à gauche -->
+  <!-- Barre 3 - disparait en premier -->
+  <rect x="60" y="38" width="14" height="24" rx="3" fill="#ff4444">
+    <animate attributeName="opacity" values="0.9;0.9;0;0;0.9" dur="2.5s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeName="width" values="14;14;0;0;14" dur="2.5s" begin="0s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Barre 2 -->
+  <rect x="42" y="38" width="14" height="24" rx="3" fill="#ff4444">
+    <animate attributeName="opacity" values="0.9;0.9;0;0;0.9" dur="2.5s" begin="0.3s" repeatCount="indefinite"/>
+    <animate attributeName="width" values="14;14;0;0;14" dur="2.5s" begin="0.3s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Barre 1 - disparait en dernier, clignote -->
+  <rect x="24" y="38" width="14" height="24" rx="3" fill="#ff4444">
+    <animate attributeName="opacity" values="0.9;0.9;0.9;0.2;0.9" dur="2.5s" begin="0.6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Badge croix NOK -->
+  <circle cx="75" cy="78" r="12" fill="#7b0e0e">
+    <animate attributeName="opacity" values="0;0;1;1;0" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <line x1="69" y1="72" x2="81" y2="84" stroke="#ff4444" stroke-width="3" stroke-linecap="round"
+    stroke-dasharray="18" stroke-dashoffset="18">
+    <animate attributeName="stroke-dashoffset" values="18;18;0;0;18" dur="2.5s" repeatCount="indefinite"/>
+  </line>
+  <line x1="81" y1="72" x2="69" y2="84" stroke="#ff4444" stroke-width="3" stroke-linecap="round"
+    stroke-dasharray="18" stroke-dashoffset="18">
+    <animate attributeName="stroke-dashoffset" values="18;18;0;0;18" dur="2.5s" begin="0.2s" repeatCount="indefinite"/>
+  </line>
+</svg>

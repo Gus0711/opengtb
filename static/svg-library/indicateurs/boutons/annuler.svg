@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="60" viewBox="0 0 220 60">
+  <defs>
+    <!-- Dégradé rouge/rose animé - mode Annuler activé -->
+    <linearGradient id="bg-annuler-on" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#991b1b;stop-opacity:1">
+        <animate attributeName="stop-color" 
+                 values="#991b1b;#b91c1c;#dc2626;#be123c;#991b1b" 
+                 dur="2.5s" 
+                 repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#b91c1c;stop-opacity:1">
+        <animate attributeName="stop-color" 
+                 values="#b91c1c;#dc2626;#be123c;#991b1b;#b91c1c" 
+                 dur="2.5s" 
+                 repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1">
+        <animate attributeName="stop-color" 
+                 values="#dc2626;#be123c;#991b1b;#b91c1c;#dc2626" 
+                 dur="2.5s" 
+                 repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- Overlay pulsant -->
+    <linearGradient id="overlay-annuler-on" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.12">
+        <animate attributeName="stop-opacity" 
+                 values="0.12;0.25;0.05;0.2;0.12" 
+                 dur="2s" 
+                 repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.12">
+        <animate attributeName="stop-opacity" 
+                 values="0.12;0.05;0.2;0.08;0.12" 
+                 dur="2s" 
+                 repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <linearGradient id="knob-grad-annuler" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="50%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+    
+    <radialGradient id="knob-hl-annuler">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0"/>
+    </radialGradient>
+    
+    <filter id="shadow-annuler" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    
+    <filter id="glow-red">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fond principal animé -->
+  <rect x="2" y="2" width="216" height="56" rx="28" fill="url(#bg-annuler-on)" stroke="#7f1d1d" stroke-width="1.5"/>
+  
+  <!-- Overlay -->
+  <rect x="2" y="2" width="216" height="56" rx="28" fill="url(#overlay-annuler-on)" stroke="none"/>
+  
+  <!-- Pulse border -->
+  <rect x="2" y="2" width="216" height="56" rx="28" fill="none" stroke="#f87171" stroke-width="2">
+    <animate attributeName="stroke-opacity" values="0.2;0.7;0.2" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-width" values="1;2.5;1" dur="1.5s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Texte ANNULER -->
+  <text x="82" y="38" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1.5" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+    ANNULER
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="2s" repeatCount="indefinite"/>
+  </text>
+  
+  <!-- Bouton circulaire côté droit = activé -->
+  <g transform="translate(160, 4)" filter="url(#shadow-annuler)">
+    <circle cx="26" cy="26" r="26" fill="url(#knob-grad-annuler)" stroke="#cbd5e1" stroke-width="1.5"/>
+    <circle cx="26" cy="26" r="26" fill="url(#knob-hl-annuler)"/>
+    <ellipse cx="20" cy="18" rx="10" ry="8" fill="white" opacity="0.3"/>
+    
+    <!-- Icône X / annuler -->
+    <g fill="none" stroke="#991b1b" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="19" y1="19" x2="33" y2="33"/>
+      <line x1="33" y1="19" x2="19" y2="33"/>
+    </g>
+  </g>
+  
+  <!-- LED pulsante -->
+  <circle cx="15" cy="30" r="4" fill="#f87171" filter="url(#glow-red)">
+    <animate attributeName="r" values="3;5;3" dur="1.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

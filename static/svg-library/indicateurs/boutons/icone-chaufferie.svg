@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <defs>
+    <!-- Fond bouton - dégradé sombre pro -->
+    <linearGradient id="btn-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#374151"/>
+      <stop offset="100%" style="stop-color:#1f2937"/>
+    </linearGradient>
+    
+    <!-- Contour subtil lumineux -->
+    <linearGradient id="btn-stroke" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6b7280"/>
+      <stop offset="100%" style="stop-color:#374151"/>
+    </linearGradient>
+    
+    <!-- Inner highlight top -->
+    <linearGradient id="btn-highlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.08"/>
+      <stop offset="40%" style="stop-color:#ffffff;stop-opacity:0"/>
+    </linearGradient>
+    
+    <!-- Flamme dégradés -->
+    <linearGradient id="fl-outer" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#dc2626"/>
+      <stop offset="35%" style="stop-color:#ea580c"/>
+      <stop offset="65%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="fl-mid" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#ea580c"/>
+      <stop offset="50%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#fde68a"/>
+    </linearGradient>
+    <linearGradient id="fl-core" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#fef9c3"/>
+    </linearGradient>
+    
+    <!-- Engrenage dégradé -->
+    <linearGradient id="gear-fill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9ca3af"/>
+      <stop offset="100%" style="stop-color:#6b7280"/>
+    </linearGradient>
+    
+    <!-- Glow flamme -->
+    <filter id="fl-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="g"/>
+      <feComposite in="SourceGraphic" in2="g" operator="over"/>
+    </filter>
+    
+    <!-- Glow ambiant orange sur le bouton -->
+    <radialGradient id="ambient-glow" cx="50%" cy="35%" r="45%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.12">
+        <animate attributeName="stop-opacity" values="0.12;0.2;0.08;0.18;0.12" dur="1.8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0"/>
+    </radialGradient>
+    
+    <!-- Ombre portée bouton -->
+    <filter id="btn-shadow" x="-15%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    
+    <!-- Inner shadow (inset effect) -->
+    <filter id="inset-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feComponentTransfer in="SourceAlpha">
+        <feFuncA type="table" tableValues="1 0"/>
+      </feComponentTransfer>
+      <feGaussianBlur stdDeviation="2"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feFlood flood-color="#ffffff" flood-opacity="0.06" result="color"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feComposite in2="SourceAlpha" operator="in"/>
+      <feMerge>
+        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ===== BOUTON CONTAINER ===== -->
+  <!-- Ombre -->
+  <rect x="5" y="5" width="80" height="80" rx="18" fill="url(#btn-bg)" filter="url(#btn-shadow)"/>
+  <!-- Fond principal -->
+  <rect x="5" y="5" width="80" height="80" rx="18" fill="url(#btn-bg)"/>
+  <!-- Bordure -->
+  <rect x="5" y="5" width="80" height="80" rx="18" fill="none" stroke="url(#btn-stroke)" stroke-width="1"/>
+  <!-- Highlight top -->
+  <rect x="5" y="5" width="80" height="80" rx="18" fill="url(#btn-highlight)"/>
+  <!-- Glow ambiant -->
+  <rect x="5" y="5" width="80" height="80" rx="18" fill="url(#ambient-glow)"/>
+  
+  <!-- Pulse border subtil -->
+  <rect x="5" y="5" width="80" height="80" rx="18" fill="none" stroke="#f59e0b" stroke-width="0.8">
+    <animate attributeName="stroke-opacity" values="0;0.3;0" dur="2.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ===== ENGRENAGE - rotation continue ===== -->
+  <g opacity="0.3">
+    <animateTransform attributeName="transform" type="rotate"
+                      from="0 45 52" to="360 45 52"
+                      dur="12s" repeatCount="indefinite"/>
+    <!-- Anneau -->
+    <circle cx="45" cy="52" r="22" fill="none" stroke="url(#gear-fill)" stroke-width="6"/>
+    <!-- 8 dents -->
+    <g fill="#9ca3af">
+      <rect x="42" y="25" width="6" height="9" rx="2"/>
+      <rect x="42" y="70" width="6" height="9" rx="2"/>
+      <rect x="18" y="49" width="9" height="6" rx="2"/>
+      <rect x="63" y="49" width="9" height="6" rx="2"/>
+      <rect x="42" y="25" width="6" height="9" rx="2" transform="rotate(45 45 52)"/>
+      <rect x="42" y="70" width="6" height="9" rx="2" transform="rotate(45 45 52)"/>
+      <rect x="18" y="49" width="9" height="6" rx="2" transform="rotate(45 45 52)"/>
+      <rect x="63" y="49" width="9" height="6" rx="2" transform="rotate(45 45 52)"/>
+    </g>
+    <!-- Centre vide -->
+    <circle cx="45" cy="52" r="12" fill="#1f2937"/>
+  </g>
+
+  <!-- ===== FLAMME ANIMÉE ===== -->
+  <g transform="translate(45, 48)" filter="url(#fl-glow)">
+    <!-- Flamme extérieure -->
+    <path fill="url(#fl-outer)">
+      <animate attributeName="d" dur="0.7s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"
+               values="
+                 M0 -28 C-2 -26 -14 -14 -14 -2 C-14 6 -8 12 -4 14 C-6 8 -4 0 0 -4 C4 0 6 8 4 14 C8 12 14 6 14 -2 C14 -14 2 -26 0 -28 Z;
+                 M0 -30 C-3 -27 -16 -13 -16 -1 C-16 7 -9 13 -5 15 C-7 7 -3 -1 0 -6 C3 -1 7 7 5 15 C9 13 16 7 16 -1 C16 -13 3 -27 0 -30 Z;
+                 M0 -26 C-1 -25 -13 -15 -13 -3 C-13 5 -7 11 -3 13 C-5 9 -5 1 0 -3 C5 1 5 9 3 13 C7 11 13 5 13 -3 C13 -15 1 -25 0 -26 Z;
+                 M0 -28 C-2 -26 -14 -14 -14 -2 C-14 6 -8 12 -4 14 C-6 8 -4 0 0 -4 C4 0 6 8 4 14 C8 12 14 6 14 -2 C14 -14 2 -26 0 -28 Z;
+               "/>
+    </path>
+    
+    <!-- Flamme milieu -->
+    <path fill="url(#fl-mid)" opacity="0.9">
+      <animate attributeName="d" dur="0.55s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"
+               values="
+                 M0 -18 C-1 -17 -9 -8 -9 -1 C-9 4 -5 8 -3 9 C-4 5 -3 0 0 -2 C3 0 4 5 3 9 C5 8 9 4 9 -1 C9 -8 1 -17 0 -18 Z;
+                 M0 -20 C-2 -18 -10 -7 -10 0 C-10 5 -6 9 -4 10 C-5 4 -2 -1 0 -4 C2 -1 5 4 4 10 C6 9 10 5 10 0 C10 -7 2 -18 0 -20 Z;
+                 M0 -16 C-1 -15 -8 -9 -8 -2 C-8 3 -4 7 -2 8 C-3 6 -3 1 0 -1 C3 1 3 6 2 8 C4 7 8 3 8 -2 C8 -9 1 -15 0 -16 Z;
+                 M0 -18 C-1 -17 -9 -8 -9 -1 C-9 4 -5 8 -3 9 C-4 5 -3 0 0 -2 C3 0 4 5 3 9 C5 8 9 4 9 -1 C9 -8 1 -17 0 -18 Z;
+               "/>
+    </path>
+    
+    <!-- Cœur flamme -->
+    <ellipse cx="0" cy="4" fill="url(#fl-core)" opacity="0.85">
+      <animate attributeName="ry" values="6;8;5;7;6" dur="0.45s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="3;2.5;3.5;2.8;3" dur="0.5s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  
+  <!-- ===== MINI ICÔNE RÉGLAGE (3 lignes + dots) en bas à droite ===== -->
+  <g transform="translate(60, 62)" opacity="0.85">
+    <!-- Fond pastille -->
+    <circle cx="8" cy="8" r="10" fill="#111827" stroke="#4b5563" stroke-width="0.8"/>
+    <!-- 3 sliders horizontaux -->
+    <line x1="2" y1="4" x2="14" y2="4" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="2" y1="8" x2="14" y2="8" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="2" y1="12" x2="14" y2="12" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+    <!-- Curseurs animés -->
+    <circle cx="6" cy="4" r="1.8" fill="#f59e0b">
+      <animate attributeName="cx" values="6;10;6" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="10" cy="8" r="1.8" fill="#f59e0b">
+      <animate attributeName="cx" values="10;5;10" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="4" cy="12" r="1.8" fill="#f59e0b">
+      <animate attributeName="cx" values="4;9;4" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

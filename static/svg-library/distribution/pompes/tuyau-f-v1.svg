@@ -1,0 +1,76 @@
+<svg width="400" height="26" viewBox="100 180 400 26" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Dégradé principal effet cylindrique métallique -->
+    <linearGradient id="pipeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8d6e63;stop-opacity:1" />
+      <stop offset="10%" style="stop-color:#a1887f;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#bcaaa4;stop-opacity:1" />
+      <stop offset="45%" style="stop-color:#d7ccc8;stop-opacity:1" />
+      <stop offset="55%" style="stop-color:#efebe9;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#bcaaa4;stop-opacity:1" />
+      <stop offset="85%" style="stop-color:#a1887f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#795548;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Reflet supérieur -->
+    <linearGradient id="highlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+    
+    <!-- Ombre interne -->
+    <linearGradient id="innerShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
+    </linearGradient>
+    
+    <!-- Nuance bleue légère interne -->
+    <linearGradient id="blueTint" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1976d2;stop-opacity:0.15" />
+      <stop offset="50%" style="stop-color:#42a5f5;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#1976d2;stop-opacity:0.15" />
+    </linearGradient>
+    
+    <!-- Définition de la flèche -->
+    <polygon id="arrow" points="0,0 12,6 0,12" fill="#1e88e5"/>
+  </defs>
+  
+  <!-- Corps du tuyau -->
+  <rect x="100" y="180" width="400" height="26" fill="url(#pipeGradient)" rx="13"/>
+  
+  <!-- Nuance bleue par-dessus -->
+  <rect x="100" y="180" width="400" height="26" fill="url(#blueTint)" rx="13"/>
+  
+  <!-- Ombre interne haut -->
+  <rect x="100" y="180" width="400" height="4" fill="url(#innerShadow)" rx="13"/>
+  
+  <!-- Reflet brillant -->
+  <rect x="100" y="183" width="400" height="7" fill="url(#highlight)" rx="13" opacity="0.6"/>
+  
+  <!-- Flèches animées -->
+  <g opacity="0.85">
+    <!-- Flèche 1 -->
+    <use href="#arrow" x="120" y="187">
+      <animate attributeName="x" from="120" to="480" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3s" repeatCount="indefinite"/>
+    </use>
+    
+    <!-- Flèche 2 -->
+    <use href="#arrow" x="120" y="187">
+      <animate attributeName="x" from="120" to="480" dur="3s" begin="0.75s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3s" begin="0.75s" repeatCount="indefinite"/>
+    </use>
+    
+    <!-- Flèche 3 -->
+    <use href="#arrow" x="120" y="187">
+      <animate attributeName="x" from="120" to="480" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    </use>
+    
+    <!-- Flèche 4 -->
+    <use href="#arrow" x="120" y="187">
+      <animate attributeName="x" from="120" to="480" dur="3s" begin="2.25s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3s" begin="2.25s" repeatCount="indefinite"/>
+    </use>
+  </g>
+</svg>

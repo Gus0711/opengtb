@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="folderBack" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d4a017"/>
+      <stop offset="100%" stop-color="#b8860b"/>
+    </linearGradient>
+    <linearGradient id="folderFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f0c040"/>
+      <stop offset="100%" stop-color="#d4a017"/>
+    </linearGradient>
+    <linearGradient id="doc" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e8e8e8"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Onglet du dossier (arrière) -->
+  <path d="M8,18 L8,14 C8,12 9.5,10.5 11.5,10.5 L22,10.5 L26,16 L52,16 C54,16 56,17.5 56,19.5 L56,18" fill="url(#folderBack)" opacity="0.7"/>
+
+  <!-- Corps arrière du dossier -->
+  <rect x="6" y="18" width="52" height="34" rx="4" fill="url(#folderBack)" opacity="0.6"/>
+
+  <!-- Document qui sort du dossier -->
+  <g filter="url(#shadow)">
+    <rect x="22" y="14" width="20" height="26" rx="2" fill="url(#doc)">
+      <animate attributeName="y" values="20;14;20" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
+    </rect>
+    <!-- Lignes sur le document -->
+    <g opacity="0.3">
+      <line x1="26" y1="22" x2="38" y2="22" stroke="#666" stroke-width="1.5" stroke-linecap="round">
+        <animate attributeName="y1" values="28;22;28" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
+        <animate attributeName="y2" values="28;22;28" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
+      </line>
+      <line x1="26" y1="27" x2="36" y2="27" stroke="#666" stroke-width="1.5" stroke-linecap="round">
+        <animate attributeName="y1" values="33;27;33" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
+        <animate attributeName="y2" values="33;27;33" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
+      </line>
+      <line x1="26" y1="32" x2="34" y2="32" stroke="#666" stroke-width="1.5" stroke-linecap="round">
+        <animate attributeName="y1" values="38;32;38" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
+        <animate attributeName="y2" values="38;32;38" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
+      </line>
+    </g>
+  </g>
+
+  <!-- Rabat avant du dossier -->
+  <path d="M6,26 C6,24 7.5,22 10,22 L54,22 C56.5,22 58,24 58,26 L58,48 C58,50.5 56,52.5 53.5,52.5 L10.5,52.5 C8,52.5 6,50.5 6,48 Z" fill="url(#folderFront)" filter="url(#shadow)">
+    <animate attributeName="d" values="M6,26 C6,24 7.5,22 10,22 L54,22 C56.5,22 58,24 58,26 L58,48 C58,50.5 56,52.5 53.5,52.5 L10.5,52.5 C8,52.5 6,50.5 6,48 Z;M6,24 C6,22 7.5,20 10,20 L54,20 C56.5,20 58,22 58,24 L58,48 C58,50.5 56,52.5 53.5,52.5 L10.5,52.5 C8,52.5 6,50.5 6,48 Z;M6,26 C6,24 7.5,22 10,22 L54,22 C56.5,22 58,24 58,26 L58,48 C58,50.5 56,52.5 53.5,52.5 L10.5,52.5 C8,52.5 6,50.5 6,48 Z" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
+  </path>
+
+  <!-- Petit indicateur actif -->
+  <circle cx="52" cy="14" r="3" fill="#0f9b58">
+    <animate attributeName="r" values="2.5;4;2.5" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="52" cy="14" r="1.5" fill="#0f9b58"/>
+</svg>

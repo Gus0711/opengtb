@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="bar1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e94560"/>
+      <stop offset="100%" stop-color="#c23152"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f5a623"/>
+      <stop offset="100%" stop-color="#d4911e"/>
+    </linearGradient>
+    <linearGradient id="bar3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f9b58"/>
+      <stop offset="100%" stop-color="#0b7a45"/>
+    </linearGradient>
+    <linearGradient id="bar4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a90d9"/>
+      <stop offset="100%" stop-color="#3a7bc8"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="2" y="2" width="116" height="116" rx="24" fill="url(#bg)" stroke="#2a2a4a" stroke-width="1.5"/>
+  <g opacity="0.08">
+    <line x1="30" y1="20" x2="30" y2="100" stroke="#fff" stroke-width="0.5"/>
+    <line x1="50" y1="20" x2="50" y2="100" stroke="#fff" stroke-width="0.5"/>
+    <line x1="70" y1="20" x2="70" y2="100" stroke="#fff" stroke-width="0.5"/>
+    <line x1="90" y1="20" x2="90" y2="100" stroke="#fff" stroke-width="0.5"/>
+    <line x1="20" y1="40" x2="100" y2="40" stroke="#fff" stroke-width="0.5"/>
+    <line x1="20" y1="60" x2="100" y2="60" stroke="#fff" stroke-width="0.5"/>
+    <line x1="20" y1="80" x2="100" y2="80" stroke="#fff" stroke-width="0.5"/>
+  </g>
+  <rect x="24" y="40" width="16" height="45" rx="3" fill="url(#bar1)" filter="url(#glow)">
+    <animate attributeName="height" values="45;48;42;45" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="y" values="40;37;43;40" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="44" y="55" width="16" height="30" rx="3" fill="url(#bar2)" filter="url(#glow)">
+    <animate attributeName="height" values="30;35;28;30" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="y" values="55;50;57;55" dur="3.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="64" y="30" width="16" height="55" rx="3" fill="url(#bar3)" filter="url(#glow)">
+    <animate attributeName="height" values="55;52;58;55" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="y" values="30;33;27;30" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="84" y="47" width="16" height="38" rx="3" fill="url(#bar4)" filter="url(#glow)">
+    <animate attributeName="height" values="38;42;35;38" dur="3.2s" repeatCount="indefinite"/>
+    <animate attributeName="y" values="47;43;50;47" dur="3.2s" repeatCount="indefinite"/>
+  </rect>
+  <polyline points="32,42 52,57 72,32 92,49" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite"/>
+  </polyline>
+  <circle cx="32" cy="42" r="3.5" fill="#e94560" stroke="#fff" stroke-width="1.5">
+    <animate attributeName="r" values="3.5;3;3.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="52" cy="57" r="3.5" fill="#f5a623" stroke="#fff" stroke-width="1.5">
+    <animate attributeName="r" values="3.5;3;3.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="72" cy="32" r="3.5" fill="#0f9b58" stroke="#fff" stroke-width="1.5">
+    <animate attributeName="r" values="3.5;3;3.5" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="92" cy="49" r="3.5" fill="#4a90d9" stroke="#fff" stroke-width="1.5">
+    <animate attributeName="r" values="3.5;3;3.5" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="98" cy="22" r="4" fill="#0f9b58" opacity="0.9">
+    <animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.9;0.4;0.9" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="98" cy="22" r="2" fill="#0f9b58"/>
+  <line x1="20" y1="86" x2="104" y2="86" stroke="#4a4a6a" stroke-width="1" opacity="0.5"/>
+</svg>
