@@ -13,7 +13,7 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			fallback: undefined,
-			strict: true
+			strict: false
 		}),
 		prerender: {
 			handleHttpError: 'fail',
