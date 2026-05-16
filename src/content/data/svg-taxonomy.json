@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "themes": [
+    {
+      "slug": "production",
+      "number": "01",
+      "name": "Production thermique",
+      "subthemes": [
+        { "slug": "chaudieres", "name": "Chaudières" },
+        { "slug": "pac", "name": "Pompes à chaleur" },
+        { "slug": "groupes-froid", "name": "Groupes froid" },
+        { "slug": "echangeurs", "name": "Échangeurs" },
+        { "slug": "solaire", "name": "Solaire thermique" }
+      ]
+    },
+    {
+      "slug": "distribution",
+      "number": "02",
+      "name": "Distribution hydraulique",
+      "subthemes": [
+        { "slug": "pompes", "name": "Pompes" },
+        { "slug": "vannes-manuelles", "name": "Vannes manuelles" },
+        { "slug": "vannes-motorisees", "name": "Vannes motorisées" },
+        { "slug": "bouteilles-collecteurs", "name": "Bouteilles & collecteurs" },
+        { "slug": "filtres-expansion", "name": "Filtres & vases d'expansion" },
+        { "slug": "compteurs", "name": "Compteurs hydrauliques" }
+      ]
+    },
+    {
+      "slug": "aerau",
+      "number": "03",
+      "name": "Aéraulique / CTA",
+      "subthemes": [
+        { "slug": "ventilateurs", "name": "Ventilateurs" },
+        { "slug": "batteries", "name": "Batteries" },
+        { "slug": "filtres", "name": "Filtres" },
+        { "slug": "registres", "name": "Registres" },
+        { "slug": "caissons-bouches", "name": "Caissons & bouches" }
+      ]
+    },
+    {
+      "slug": "capteurs",
+      "number": "04",
+      "name": "Capteurs / Mesure",
+      "subthemes": [
+        { "slug": "temperature", "name": "Température" },
+        { "slug": "pression", "name": "Pression" },
+        { "slug": "hygro-qai", "name": "Hygrométrie & QAI" },
+        { "slug": "presence-lumiere", "name": "Présence & luminosité" },
+        { "slug": "debit-niveau", "name": "Débit & niveau" }
+      ]
+    },
+    {
+      "slug": "indicateurs",
+      "number": "05",
+      "name": "Indicateurs / IHM",
+      "subthemes": [
+        { "slug": "voyants", "name": "Voyants d'état" },
+        { "slug": "boutons", "name": "Boutons" },
+        { "slug": "afficheurs", "name": "Afficheurs" },
+        { "slug": "badges", "name": "Badges & cadres" }
+      ]
+    }
+  ],
+  "tagFamilies": [
+    {
+      "slug": "etat",
+      "name": "État",
+      "tags": [
+        { "slug": "static", "name": "Statique" },
+        { "slug": "animated", "name": "Animé" }
+      ]
+    },
+    {
+      "slug": "style",
+      "name": "Style",
+      "tags": [
+        { "slug": "line", "name": "Ligne" },
+        { "slug": "filled", "name": "Plein" }
+      ]
+    },
+    {
+      "slug": "theming",
+      "name": "Couleur",
+      "tags": [
+        { "slug": "currentcolor", "name": "currentColor" },
+        { "slug": "colored", "name": "Coloré" }
+      ]
+    },
+    {
+      "slug": "orientation",
+      "name": "Orientation",
+      "tags": [
+        { "slug": "h", "name": "Horizontal" },
+        { "slug": "v", "name": "Vertical" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-16T19:57:21.067Z",
+  "entries": [
+    {
+      "slug": "alarme-gtb",
+      "name": "alarme gtb",
+      "description": "alarm",
+      "theme": "indicateurs",
+      "subtheme": "voyants",
+      "tags": [
+        "animated",
+        "colored"
+      ],
+      "file": "indicateurs/voyants/alarme-gtb.svg",
+      "createdAt": "2026-05-16T19:46:24.356Z",
+      "updatedAt": "2026-05-16T19:46:24.356Z"
+    },
+    {
+      "slug": "annuler",
+      "name": "annuler",
+      "description": "bouton annuler",
+      "theme": "indicateurs",
+      "subtheme": "boutons",
+      "tags": [
+        "animated",
+        "filled",
+        "colored",
+        "h"
+      ],
+      "file": "indicateurs/boutons/annuler.svg",
+      "createdAt": "2026-05-16T19:47:19.162Z",
+      "updatedAt": "2026-05-16T19:47:19.162Z"
+    },
+    {
+      "slug": "auto",
+      "name": "Auto",
+      "description": "bouton Auto",
+      "theme": "indicateurs",
+      "subtheme": "boutons",
+      "tags": [
+        "animated",
+        "filled",
+        "colored",
+        "h"
+      ],
+      "file": "indicateurs/boutons/auto.svg",
+      "createdAt": "2026-05-16T19:48:15.742Z",
+      "updatedAt": "2026-05-16T19:48:15.742Z"
+    },
+    {
+      "slug": "battery-nok",
+      "name": "battery NOK",
+      "description": "battery HS",
+      "theme": "indicateurs",
+      "subtheme": "voyants",
+      "tags": [
+        "animated",
+        "filled",
+        "colored"
+      ],
+      "file": "indicateurs/voyants/battery-nok.svg",
+      "createdAt": "2026-05-16T19:49:01.241Z",
+      "updatedAt": "2026-05-16T19:49:01.241Z"
+    },
+    {
+      "slug": "battery-ok",
+      "name": "battery ok",
+      "description": "batterie ok",
+      "theme": "indicateurs",
+      "subtheme": "voyants",
+      "tags": [
+        "animated",
+        "filled",
+        "colored",
+        "h"
+      ],
+      "file": "indicateurs/voyants/battery-ok.svg",
+      "createdAt": "2026-05-16T19:49:19.778Z",
+      "updatedAt": "2026-05-16T19:49:19.778Z"
+    },
+    {
+      "slug": "chrono",
+      "name": "chrono",
+      "description": "chrono anime",
+      "theme": "indicateurs",
+      "subtheme": "badges",
+      "tags": [
+        "animated",
+        "filled"
+      ],
+      "file": "indicateurs/badges/chrono.svg",
+      "createdAt": "2026-05-16T19:50:31.926Z",
+      "updatedAt": "2026-05-16T19:50:31.926Z"
+    },
+    {
+      "slug": "dashb",
+      "name": "dashb",
+      "description": "icone graphique",
+      "theme": "indicateurs",
+      "subtheme": "boutons",
+      "tags": [
+        "animated",
+        "filled"
+      ],
+      "file": "indicateurs/boutons/dashb.svg",
+      "createdAt": "2026-05-16T19:50:59.534Z",
+      "updatedAt": "2026-05-16T19:50:59.534Z"
+    },
+    {
+      "slug": "download",
+      "name": "download",
+      "description": "icone de telechargement",
+      "theme": "indicateurs",
+      "subtheme": "boutons",
+      "tags": [
+        "animated",
+        "filled",
+        "colored"
+      ],
+      "file": "indicateurs/boutons/download.svg",
+      "createdAt": "2026-05-16T19:51:24.389Z",
+      "updatedAt": "2026-05-16T19:51:24.389Z"
+    },
+    {
+      "slug": "folder",
+      "name": "folder",
+      "description": "icone de dossier",
+      "theme": "indicateurs",
+      "subtheme": "boutons",
+      "tags": [
+        "animated",
+        "filled",
+        "colored"
+      ],
+      "file": "indicateurs/boutons/folder.svg",
+      "createdAt": "2026-05-16T19:52:04.661Z",
+      "updatedAt": "2026-05-16T19:52:04.661Z"
+    },
+    {
+      "slug": "forcage-active",
+      "name": "forcage active",
+      "description": "bouton forcage active",
+      "theme": "indicateurs",
+      "subtheme": "boutons",
+      "tags": [
+        "animated",
+        "filled",
+        "colored",
+        "h"
+      ],
+      "file": "indicateurs/boutons/forcage-active.svg",
+      "createdAt": "2026-05-16T19:52:30.294Z",
+      "updatedAt": "2026-05-16T19:52:30.294Z"
+    },
+    {
+      "slug": "forcage-desactive",
+      "name": "forcage desactive",
+      "description": "forcage desactive",
+      "theme": "indicateurs",
+      "subtheme": "boutons",
+      "tags": [
+        "animated",
+        "filled",
+        "colored",
+        "h"
+      ],
+      "file": "indicateurs/boutons/forcage-desactive.svg",
+      "createdAt": "2026-05-16T19:52:50.397Z",
+      "updatedAt": "2026-05-16T19:52:50.397Z"
+    },
+    {
+      "slug": "icone-chaufferie",
+      "name": "icone chaufferie",
+      "description": "icone chaufferie",
+      "theme": "indicateurs",
+      "subtheme": "boutons",
+      "tags": [
+        "animated",
+        "filled"
+      ],
+      "file": "indicateurs/boutons/icone-chaufferie.svg",
+      "createdAt": "2026-05-16T19:53:28.369Z",
+      "updatedAt": "2026-05-16T19:53:28.369Z"
+    },
+    {
+      "slug": "icone-clim",
+      "name": "icone clim",
+      "description": "icone clim",
+      "theme": "indicateurs",
+      "subtheme": "boutons",
+      "tags": [
+        "animated",
+        "filled",
+        "colored"
+      ],
+      "file": "indicateurs/boutons/icone-clim.svg",
+      "createdAt": "2026-05-16T19:53:55.211Z",
+      "updatedAt": "2026-05-16T19:53:55.211Z"
+    },
+    {
+      "slug": "info",
+      "name": "info",
+      "description": "icone infos",
+      "theme": "indicateurs",
+      "subtheme": "boutons",
+      "tags": [
+        "animated",
+        "filled"
+      ],
+      "file": "indicateurs/boutons/info.svg",
+      "createdAt": "2026-05-16T19:54:11.191Z",
+      "updatedAt": "2026-05-16T19:54:11.191Z"
+    },
+    {
+      "slug": "off-anime",
+      "name": "off anime",
+      "description": "bouton off",
+      "theme": "indicateurs",
+      "subtheme": "boutons",
+      "tags": [
+        "animated",
+        "filled",
+        "h",
+        "colored"
+      ],
+      "file": "indicateurs/boutons/off-anime.svg",
+      "createdAt": "2026-05-16T19:55:02.095Z",
+      "updatedAt": "2026-05-16T19:55:02.095Z"
+    },
+    {
+      "slug": "on-anime",
+      "name": "on anime",
+      "description": "bouton on",
+      "theme": "indicateurs",
+      "subtheme": "boutons",
+      "tags": [
+        "animated",
+        "filled",
+        "colored",
+        "h"
+      ],
+      "file": "indicateurs/boutons/on-anime.svg",
+      "createdAt": "2026-05-16T19:55:22.182Z",
+      "updatedAt": "2026-05-16T19:55:22.182Z"
+    },
+    {
+      "slug": "signalnok",
+      "name": "signalNOK",
+      "description": "info signal down",
+      "theme": "indicateurs",
+      "subtheme": "voyants",
+      "tags": [
+        "animated",
+        "filled",
+        "colored"
+      ],
+      "file": "indicateurs/voyants/signalnok.svg",
+      "createdAt": "2026-05-16T19:55:55.994Z",
+      "updatedAt": "2026-05-16T19:56:27.443Z"
+    },
+    {
+      "slug": "signalok",
+      "name": "signalok",
+      "description": "info signal ok",
+      "theme": "indicateurs",
+      "subtheme": "voyants",
+      "tags": [
+        "animated",
+        "filled",
+        "colored"
+      ],
+      "file": "indicateurs/voyants/signalok.svg",
+      "createdAt": "2026-05-16T19:56:17.588Z",
+      "updatedAt": "2026-05-16T19:56:17.588Z"
+    },
+    {
+      "slug": "tuyau-f-v1",
+      "name": "tuyau f v1",
+      "description": "tuyau froid",
+      "theme": "distribution",
+      "subtheme": "pompes",
+      "tags": [
+        "animated",
+        "colored",
+        "h"
+      ],
+      "file": "distribution/pompes/tuyau-f-v1.svg",
+      "createdAt": "2026-05-16T19:57:03.738Z",
+      "updatedAt": "2026-05-16T19:57:03.738Z"
+    },
+    {
+      "slug": "tuyau-r-v1",
+      "name": "tuyau r v1",
+      "description": "tuyau chaud",
+      "theme": "distribution",
+      "subtheme": "pompes",
+      "tags": [
+        "animated",
+        "h"
+      ],
+      "file": "distribution/pompes/tuyau-r-v1.svg",
+      "createdAt": "2026-05-16T19:57:21.067Z",
+      "updatedAt": "2026-05-16T19:57:21.067Z"
+    }
+  ]
+}
