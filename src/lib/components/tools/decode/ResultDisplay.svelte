@@ -2,6 +2,7 @@
 	import Copy from '@lucide/svelte/icons/copy';
 	import ChevronDown from '@lucide/svelte/icons/chevron-down';
 	import Check from '@lucide/svelte/icons/check';
+	import Link from '@lucide/svelte/icons/link';
 	import { bytesToHex } from '$lib/tools/decode/formats';
 	import { colorizeJson } from '$lib/tools/decode/format-json';
 	import type { DecodeSuccess } from '$lib/tools/decode/types';
@@ -11,6 +12,7 @@
 	let jsonOpen = $state(false);
 	let copiedTable = $state(false);
 	let copiedJson = $state(false);
+	let copiedLink = $state(false);
 
 	const jsonPlain = $derived(JSON.stringify(result.data, null, 2));
 	const jsonColored = $derived(colorizeJson(result.data));
@@ -34,19 +36,27 @@
 		return lines.join('\n');
 	}
 
-	async function copy(text: string, kind: 'table' | 'json') {
+	async function copy(text: string, kind: 'table' | 'json' | 'link') {
 		try {
 			await navigator.clipboard.writeText(text);
 			if (kind === 'table') {
 				copiedTable = true;
 				setTimeout(() => (copiedTable = false), 1500);
-			} else {
+			} else if (kind === 'json') {
 				copiedJson = true;
 				setTimeout(() => (copiedJson = false), 1500);
+			} else {
+				copiedLink = true;
+				setTimeout(() => (copiedLink = false), 1500);
 			}
 		} catch {
 			// silencieux : navigateur sans clipboard
 		}
+	}
+
+	function copyShareLink() {
+		if (typeof window === 'undefined') return;
+		void copy(window.location.href, 'link');
 	}
 </script>
 
@@ -65,18 +75,32 @@
 				{result.device.vendorName} · {result.device.name} · fPort {result.fPort}
 			</p>
 		</div>
-		<button
-			type="button"
-			onclick={() => copy(buildSummary(), 'table')}
-			class="border-border hover:border-primary hover:text-primary focus-visible:ring-ring text-text-soft inline-flex shrink-0 items-center gap-1.5 rounded border px-2.5 py-1.5 font-mono text-[11.5px] transition-colors focus-visible:ring-2 focus-visible:outline-none"
-			title="Copier la fiche au format texte"
-		>
-			{#if copiedTable}
-				<Check class="size-3.5" /> Copié
-			{:else}
-				<Copy class="size-3.5" /> Copier la fiche
-			{/if}
-		</button>
+		<div class="flex shrink-0 flex-wrap items-center gap-1.5">
+			<button
+				type="button"
+				onclick={copyShareLink}
+				class="border-border hover:border-primary hover:text-primary focus-visible:ring-ring text-text-soft inline-flex items-center gap-1.5 rounded border px-2.5 py-1.5 font-mono text-[11.5px] transition-colors focus-visible:ring-2 focus-visible:outline-none"
+				title="Copier un lien partageable vers ce décodage"
+			>
+				{#if copiedLink}
+					<Check class="size-3.5" /> Copié
+				{:else}
+					<Link class="size-3.5" /> Copier le lien
+				{/if}
+			</button>
+			<button
+				type="button"
+				onclick={() => copy(buildSummary(), 'table')}
+				class="border-border hover:border-primary hover:text-primary focus-visible:ring-ring text-text-soft inline-flex items-center gap-1.5 rounded border px-2.5 py-1.5 font-mono text-[11.5px] transition-colors focus-visible:ring-2 focus-visible:outline-none"
+				title="Copier la fiche au format texte"
+			>
+				{#if copiedTable}
+					<Check class="size-3.5" /> Copié
+				{:else}
+					<Copy class="size-3.5" /> Copier la fiche
+				{/if}
+			</button>
+		</div>
 	</div>
 
 	<!-- Tableau key/value -->

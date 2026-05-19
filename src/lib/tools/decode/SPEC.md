@@ -205,6 +205,29 @@ static/data/lorawan-codecs/
 10. **Cache 24 h + flag `--force`** sur le script de fetch :
     - Pertinent uniquement si on bascule en prebuild auto.
 
+11. **Pages SEO par device** (`/outils/decode/<slug>`) :
+    - Génération au build d'**une page prerender par device** (~900 pages
+      statiques). Chacune ciblée long-tail : « MClimate Vicki codec »,
+      « Milesight AM102 decode », « Dragino LHT65 payload format »...
+    - Contenu par page : H1 device-spécifique, meta tags vendor/device,
+      exemple TTN pré-décodé en HTML indexable (donc visible pour
+      Googlebot, pas seulement après hydratation), lien datasheet, regions
+      et fPorts du device, schema.org `SoftwareApplication` ou `HowTo`.
+    - L'outil de décodage reste accessible sur ces pages (preset device,
+      éditable), pour conversion immédiate du trafic SEO en usage.
+    - **Coûts à anticiper** :
+      - ~45 Mo de HTML statique au build, sitemap à 900 entrées.
+      - Exécution des codecs TTN côté Node au prerender (faisable mais
+        rallonge le build, et expose un peu à du JS arbitraire au build).
+      - Gestion des 410 si un device disparaît du repo TTN au resync.
+      - Maintenance éditoriale : pour éviter la pénalité « doorway pages »,
+        chaque page doit avoir un contenu propre — exemple décodé, hints
+        spécifiques, pas juste le shell de l'outil dupliqué 900×.
+    - **Décider en données** : laisser V1 en prod 4-6 semaines, regarder
+      les requêtes vendor-spécifiques dans Search Console. N'engager
+      cette V2 que si du trafic ciblé arrive déjà sur la page unique.
+      Sinon, l'effort SEO est mal calibré.
+
 ## Points à confirmer plus tard
 
 - Quels devices retenir comme **golden tests** d'intégration ? Candidats :
