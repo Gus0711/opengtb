@@ -50,6 +50,11 @@
 	let encodeFPort = $state(1);
 	let encodeResult = $state<EncodeResult | null>(null);
 	let encoding = $state(false);
+	// Index de l'exemple downlink courant tel quel (null si édité ou si manuel).
+	let appliedExampleIdx = $state<number | null>(null);
+	// Snapshot des bytes / label attendus capturé au moment de l'encode (le badge
+	// reflète l'état au moment de l'action, pas celui de la session après édition).
+	let referenceSnapshot = $state<{ bytes: number[]; label: string } | null>(null);
 
 	let manifestRef = $state<Manifest | null>(null);
 	let codecPanelOpen = $state(false);
@@ -167,6 +172,8 @@
 		encodeResult = null;
 		// Reset encoder data quand on change de device (les exemples sont per-device)
 		encodeData = '';
+		appliedExampleIdx = null;
+		referenceSnapshot = null;
 		pushUrl();
 	}
 
@@ -199,6 +206,19 @@
 		if (!selectedDevice) return;
 		encoding = true;
 		encodeResult = null;
+
+		// Snapshot de la référence active (exemple appliqué tel quel + output dispo)
+		referenceSnapshot = null;
+		if (appliedExampleIdx !== null) {
+			const ex = selectedDevice.downlinkExamples?.[appliedExampleIdx];
+			if (ex?.output?.bytes) {
+				referenceSnapshot = {
+					bytes: ex.output.bytes,
+					label: ex.description ?? `Exemple ${appliedExampleIdx + 1}`
+				};
+			}
+		}
+
 		try {
 			let parsed: unknown;
 			try {
@@ -342,6 +362,7 @@
 					device={selectedDevice}
 					bind:data={encodeData}
 					bind:fPort={encodeFPort}
+					bind:appliedExampleIdx
 					onChange={pushUrl}
 				/>
 
@@ -378,7 +399,11 @@
 					</div>
 				{/if}
 			{:else if encodeResult?.ok}
-				<EncoderResult result={encodeResult} />
+				<EncoderResult
+					result={encodeResult}
+					referenceBytes={referenceSnapshot?.bytes}
+					referenceLabel={referenceSnapshot?.label}
+				/>
 			{:else if encodeResult && !encodeResult.ok}
 				<ErrorDisplay failure={encodeResult} />
 			{:else}

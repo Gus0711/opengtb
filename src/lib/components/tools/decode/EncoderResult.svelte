@@ -2,10 +2,29 @@
 	import Copy from '@lucide/svelte/icons/copy';
 	import Check from '@lucide/svelte/icons/check';
 	import Link from '@lucide/svelte/icons/link';
+	import ShieldCheck from '@lucide/svelte/icons/shield-check';
 	import { bytesToHex, bytesToBase64 } from '$lib/tools/decode/formats';
 	import type { EncodeSuccess } from '$lib/tools/decode/types';
 
-	let { result }: { result: EncodeSuccess } = $props();
+	let {
+		result,
+		referenceBytes,
+		referenceLabel
+	}: {
+		result: EncodeSuccess;
+		/** Bytes attendus selon l'exemple TTN si l'utilisateur a encodé un exemple non modifié. */
+		referenceBytes?: number[];
+		referenceLabel?: string;
+	} = $props();
+
+	const matchesReference = $derived.by(() => {
+		if (!referenceBytes) return null;
+		if (referenceBytes.length !== result.bytes.length) return false;
+		for (let i = 0; i < referenceBytes.length; i++) {
+			if (referenceBytes[i] !== result.bytes[i]) return false;
+		}
+		return true;
+	});
 
 	let copied = $state<'hex' | 'b64' | 'fport' | 'fiche' | 'link' | null>(null);
 
@@ -187,5 +206,32 @@
 				<li class="text-amber">⚠ {w}</li>
 			{/each}
 		</ul>
+	{/if}
+
+	{#if matchesReference !== null}
+		<div
+			class="flex items-center gap-2 rounded border-l-4 px-4 py-2 text-sm {matchesReference
+				? 'border-primary/40 bg-primary/5 text-primary'
+				: 'border-amber/40 bg-amber/5 text-amber'}"
+			role="status"
+		>
+			<ShieldCheck class="size-4 shrink-0" aria-hidden="true" />
+			<div class="min-w-0 flex-1">
+				{#if matchesReference}
+					<p>
+						Sortie conforme à l'exemple TTN
+						{#if referenceLabel}
+							<span class="text-text-dim">« {referenceLabel} »</span>
+						{/if}
+					</p>
+				{:else}
+					<p>
+						⚠ La sortie diffère de l'exemple TTN
+						{#if referenceLabel}<span class="text-text-dim">« {referenceLabel} »</span>{/if}
+						(<span class="font-mono">{bytesToHex(referenceBytes!, { separator: ' ' })}</span>)
+					</p>
+				{/if}
+			</div>
+		</div>
 	{/if}
 </section>

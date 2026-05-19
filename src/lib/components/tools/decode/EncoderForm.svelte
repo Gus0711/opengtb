@@ -7,12 +7,18 @@
 		device,
 		data = $bindable(''),
 		fPort = $bindable(1),
+		appliedExampleIdx = $bindable<number | null>(null),
 		onChange,
 		onEncode
 	}: {
 		device: ManifestDevice;
 		data: string;
 		fPort: number;
+		/**
+		 * Index de l'exemple downlink actuellement appliqué tel quel.
+		 * `null` dès que l'utilisateur modifie le JSON.
+		 */
+		appliedExampleIdx?: number | null;
 		onChange?: () => void;
 		onEncode?: () => void;
 	} = $props();
@@ -20,7 +26,6 @@
 	const examples = $derived(device.downlinkExamples ?? []);
 
 	let textareaEl = $state<HTMLTextAreaElement | null>(null);
-	let lastAppliedExampleIdx = $state<number | null>(null);
 
 	function formatJson(input: unknown): string {
 		try {
@@ -35,7 +40,7 @@
 		if (typeof ex.input.fPort === 'number') {
 			fPort = ex.input.fPort;
 		}
-		lastAppliedExampleIdx = idx;
+		appliedExampleIdx = idx;
 		onChange?.();
 		// Focus pour signaler que l'utilisateur peut éditer
 		setTimeout(() => textareaEl?.focus(), 0);
@@ -60,7 +65,7 @@
 	function onDataInput(e: Event) {
 		data = (e.target as HTMLTextAreaElement).value;
 		// Si l'utilisateur édite le contenu, on n'est plus "sur" l'exemple
-		lastAppliedExampleIdx = null;
+		appliedExampleIdx = null;
 		onChange?.();
 	}
 
@@ -92,7 +97,7 @@
 					<button
 						type="button"
 						onclick={() => applyExample(ex, i)}
-						class="border-line-soft hover:border-primary hover:bg-secondary/40 hover:text-foreground focus-visible:ring-ring inline-flex items-center gap-1.5 rounded border px-2 py-1 font-mono text-[11px] transition-colors focus-visible:ring-2 focus-visible:outline-none {lastAppliedExampleIdx ===
+						class="border-line-soft hover:border-primary hover:bg-secondary/40 hover:text-foreground focus-visible:ring-ring inline-flex items-center gap-1.5 rounded border px-2 py-1 font-mono text-[11px] transition-colors focus-visible:ring-2 focus-visible:outline-none {appliedExampleIdx ===
 						i
 							? 'border-primary bg-primary/10 text-primary'
 							: 'text-text-soft'}"
