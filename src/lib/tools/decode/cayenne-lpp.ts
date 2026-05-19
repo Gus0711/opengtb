@@ -4,10 +4,16 @@ import type { CodecOutput } from './types';
  * Décodeur Cayenne LPP (myDevices / LoRa Alliance).
  *
  * Format : suite de tuples [channel (1 byte) | type (1 byte) | value (N bytes)].
- * Référence : https://github.com/myDevicesIoT/cayenne-docs/blob/master/docs/LORA.md
+ * Référence standard : https://github.com/myDevicesIoT/cayenne-docs/blob/master/docs/LORA.md
  *
- * Cas non couverts (V1) : Generic 4-bytes Sensor (0x66 ambigu), Polyline, Color.
- * Les types inconnus interrompent le décodage avec une erreur explicite.
+ * Couvre les 13 types standard myDevices + 7 types fréquemment rencontrés
+ * dans les extensions vendeur (codes >= 0x76). Ces extensions ne sont PAS
+ * normées : si votre device utilise un mapping différent, le décodage
+ * échouera sur un type inconnu — il faudra alors préférer le codec TTN
+ * dédié au device. Les codes choisis ici suivent les conventions les plus
+ * répandues (Electronic Cats CayenneLPP, ARM Mbed).
+ *
+ * Cas non couverts : Polyline, Color RGB, codecs vendor exotiques.
  */
 
 interface LppType {
@@ -134,6 +140,47 @@ const LPP_TYPES: Record<number, LppType> = {
 		size: 2,
 		unit: 'A',
 		parse: (b, o) => readUInt16BE(b, o) / 1000
+	},
+	// — Extensions communes (hors spec myDevices stricte) ———————————————
+	0x76: {
+		name: 'generic_uint32',
+		size: 4,
+		parse: (b, o) => readUInt32BE(b, o)
+	},
+	0x7e: {
+		name: 'switch',
+		size: 1,
+		parse: (b, o) => b[o]
+	},
+	0x7f: {
+		name: 'concentration',
+		size: 2,
+		unit: 'ppm',
+		parse: (b, o) => readUInt16BE(b, o)
+	},
+	0x80: {
+		name: 'power',
+		size: 2,
+		unit: 'W',
+		parse: (b, o) => readUInt16BE(b, o)
+	},
+	0x81: {
+		name: 'energy',
+		size: 4,
+		unit: 'kWh',
+		parse: (b, o) => readUInt32BE(b, o) / 1000
+	},
+	0x82: {
+		name: 'frequency',
+		size: 4,
+		unit: 'Hz',
+		parse: (b, o) => readUInt32BE(b, o)
+	},
+	0x83: {
+		name: 'percentage',
+		size: 1,
+		unit: '%',
+		parse: (b, o) => b[o]
 	}
 };
 

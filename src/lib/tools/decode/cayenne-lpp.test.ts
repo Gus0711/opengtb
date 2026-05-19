@@ -77,4 +77,46 @@ describe('decodeCayenneLPP', () => {
 		expect(out.errors).toEqual([]);
 		expect(out.data).toEqual({});
 	});
+
+	// — Extensions ———————————————————————————————————————————————————————
+	test('decodes Generic 4-byte unsigned (0x76)', () => {
+		// 0x000001F4 = 500
+		const out = lpp([0x01, 0x76, 0x00, 0x00, 0x01, 0xf4]);
+		expect(out.errors).toEqual([]);
+		expect(out.data.ch1_generic_uint32).toBe(500);
+	});
+
+	test('decodes Switch (0x7E)', () => {
+		const out = lpp([0x02, 0x7e, 0x01]);
+		expect(out.data.ch2_switch).toBe(1);
+	});
+
+	test('decodes Concentration (0x7F) in ppm', () => {
+		// 0x0271 = 625
+		const out = lpp([0x03, 0x7f, 0x02, 0x71]);
+		expect(out.data.ch3_concentration).toEqual({ value: 625, unit: 'ppm' });
+	});
+
+	test('decodes Power (0x80) in W', () => {
+		// 0x07D0 = 2000
+		const out = lpp([0x04, 0x80, 0x07, 0xd0]);
+		expect(out.data.ch4_power).toEqual({ value: 2000, unit: 'W' });
+	});
+
+	test('decodes Energy (0x81) in kWh (/1000 Wh resolution)', () => {
+		// 0x000003E8 = 1000 → 1.000 kWh
+		const out = lpp([0x05, 0x81, 0x00, 0x00, 0x03, 0xe8]);
+		expect(out.data.ch5_energy).toEqual({ value: 1, unit: 'kWh' });
+	});
+
+	test('decodes Frequency (0x82) in Hz', () => {
+		// 0x00000032 = 50 → 50 Hz
+		const out = lpp([0x06, 0x82, 0x00, 0x00, 0x00, 0x32]);
+		expect(out.data.ch6_frequency).toEqual({ value: 50, unit: 'Hz' });
+	});
+
+	test('decodes Percentage (0x83) in %', () => {
+		const out = lpp([0x07, 0x83, 0x55]);
+		expect(out.data.ch7_percentage).toEqual({ value: 85, unit: '%' });
+	});
 });
