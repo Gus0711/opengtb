@@ -59,17 +59,17 @@ describe('decodeCayenneLPP', () => {
 
 	test('reports unknown type', () => {
 		const out = lpp([0x01, 0xee, 0x00, 0x01]);
-		expect(out.errors[0]).toMatch(/inconnu/);
+		expect(out.errors?.[0]).toMatch(/inconnu/);
 	});
 
 	test('reports truncated frame', () => {
 		const out = lpp([0x01, 0x67, 0x00]); // temperature needs 2 bytes, only 1 available
-		expect(out.errors[0]).toMatch(/tronqu/);
+		expect(out.errors?.[0]).toMatch(/tronqu/);
 	});
 
 	test('reports missing type byte', () => {
 		const out = lpp([0x01]);
-		expect(out.errors[0]).toMatch(/tronqu/);
+		expect(out.errors?.[0]).toMatch(/tronqu/);
 	});
 
 	test('returns empty result on empty input', () => {
