@@ -22,6 +22,20 @@
 
 	let inputEl = $state<HTMLInputElement | null>(null);
 
+	// Raccourcis : top vendors pertinents pour la cible FR. Le clic
+	// pré-remplit la recherche — pas de filtrage strict, juste un coup
+	// de pouce pour qui sait quel fabricant il cherche.
+	const SUGGESTED_FILTERS = [
+		{ label: 'Cayenne LPP', query: 'cayenne' },
+		{ label: 'Milesight', query: 'milesight' },
+		{ label: 'MClimate', query: 'mclimate' },
+		{ label: 'Adeunis', query: 'adeunis' },
+		{ label: 'Enless', query: 'enless' },
+		{ label: 'Dragino', query: 'dragino' },
+		{ label: 'Atim', query: 'atim' },
+		{ label: 'Netvox', query: 'netvox' }
+	];
+
 	const selectedDevice = $derived.by(() => {
 		if (!manifest || !value) return undefined;
 		return manifest.devices.find((d) => d.slug === value);
@@ -156,12 +170,39 @@
 		</div>
 
 		{#if open && manifest}
-			<ul
-				id="decode-device-listbox"
-				role="listbox"
+			<div
 				class="border-line-strong bg-background absolute z-20 mt-1 max-h-80 w-full overflow-auto rounded border shadow-lg"
 			>
-				{#if results.length === 0}
+				{#if query.trim() === ''}
+					<div
+						class="border-line-soft border-b px-2.5 pt-2 pb-2"
+						aria-label="Filtres rapides par fabricant"
+					>
+						<p class="text-text-dim mb-1.5 px-1 font-mono text-[10px] tracking-wide uppercase">
+							Filtres rapides
+						</p>
+						<div class="flex flex-wrap gap-1">
+							{#each SUGGESTED_FILTERS as f (f.query)}
+								<button
+									type="button"
+									onmousedown={(e) => {
+										e.preventDefault();
+										query = f.query;
+										inputEl?.focus();
+									}}
+									class="border-line-soft hover:border-primary hover:bg-secondary/40 hover:text-foreground text-text-soft rounded border px-2 py-0.5 font-mono text-[11px] transition-colors"
+								>
+									{f.label}
+								</button>
+							{/each}
+						</div>
+					</div>
+				{/if}
+				<ul
+					id="decode-device-listbox"
+					role="listbox"
+				>
+					{#if results.length === 0}
 					<li class="text-text-dim px-3 py-2 text-sm italic">Aucun device pour « {query} »</li>
 				{:else}
 					{#each results as d, i (d.slug)}
@@ -186,7 +227,8 @@
 						</li>
 					{/each}
 				{/if}
-			</ul>
+				</ul>
+			</div>
 		{/if}
 	{/if}
 

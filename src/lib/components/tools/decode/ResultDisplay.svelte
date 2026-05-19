@@ -3,6 +3,7 @@
 	import ChevronDown from '@lucide/svelte/icons/chevron-down';
 	import Check from '@lucide/svelte/icons/check';
 	import { bytesToHex } from '$lib/tools/decode/formats';
+	import { colorizeJson } from '$lib/tools/decode/format-json';
 	import type { DecodeSuccess } from '$lib/tools/decode/types';
 
 	let { result }: { result: DecodeSuccess } = $props();
@@ -11,7 +12,8 @@
 	let copiedTable = $state(false);
 	let copiedJson = $state(false);
 
-	const jsonText = $derived(JSON.stringify(result.data, null, 2));
+	const jsonPlain = $derived(JSON.stringify(result.data, null, 2));
+	const jsonColored = $derived(colorizeJson(result.data));
 
 	function buildSummary(): string {
 		const lines: string[] = [];
@@ -132,7 +134,7 @@
 				onclick={(e) => {
 					e.preventDefault();
 					e.stopPropagation();
-					void copy(jsonText, 'json');
+					void copy(jsonPlain, 'json');
 				}}
 				class="text-text-dim hover:text-primary focus-visible:ring-ring inline-flex items-center gap-1.5 rounded px-1.5 py-0.5 font-mono text-[11px] transition-colors focus-visible:ring-2 focus-visible:outline-none"
 				title="Copier le JSON"
@@ -146,7 +148,7 @@
 		</summary>
 		<pre
 			class="border-line-soft bg-secondary/20 m-0 overflow-x-auto border-t px-3 py-2 font-mono text-[12px] leading-relaxed"><code
-				>{jsonText}</code
+				>{@html jsonColored}</code
 			></pre>
 	</details>
 </section>

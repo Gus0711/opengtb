@@ -16,6 +16,7 @@
 	import { loadManifest } from '$lib/tools/decode/manifest';
 	import { decode } from '$lib/tools/decode/decoder';
 	import { parsePayload } from '$lib/tools/decode/formats';
+	import { timeAgoFr } from '$lib/tools/decode/relative-time';
 	import type {
 		DecodeResult,
 		Manifest,
@@ -111,7 +112,7 @@
 		}
 	}
 
-	function loadExample() {
+	async function loadExample() {
 		if (!selectedDevice) return;
 		const ex = selectedDevice.examples[0];
 		if (!ex) return;
@@ -120,10 +121,13 @@
 		format = 'hex';
 		fPort = ex.fPort;
 		pushUrl();
+		// L'exemple est là pour être décodé — pas de raison de demander un clic de plus.
+		await runDecode();
 	}
 
-	const commitShort = $derived(manifestRef?.source.commit.slice(0, 12) ?? '');
-	const commitDate = $derived(manifestRef?.source.commitDate.slice(0, 10) ?? '');
+	const catalogAge = $derived(
+		manifestRef ? timeAgoFr(manifestRef.source.commitDate) : ''
+	);
 </script>
 
 <ToolShell
@@ -232,8 +236,8 @@
 			Codecs issus de
 			<a class="hover:text-primary underline-offset-2 hover:underline" href="https://github.com/TheThingsNetwork/lorawan-devices" rel="noopener">TheThingsNetwork/lorawan-devices</a>
 			sous licence Apache-2.0.
-			{#if commitShort}
-				Snapshot {commitShort} ({commitDate}).
+			{#if catalogAge}
+				Catalogue mis à jour {catalogAge}.
 			{/if}
 		</p>
 	</section>
