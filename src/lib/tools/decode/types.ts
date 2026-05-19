@@ -1,6 +1,7 @@
 export type PayloadFormat = 'hex' | 'base64';
 
-export type CodecFormat = 'ttn-v3' | 'ttn-v2';
+/** Cibles d'export pour le téléchargement utilisateur. V1 : pas de legacy. */
+export type CodecTarget = 'ttn-v3' | 'chirpstack-v4';
 
 /** Entrée publique du manifest, telle que générée par scripts/decode/fetch-codecs.ts. */
 export interface ManifestDevice {
@@ -13,9 +14,16 @@ export interface ManifestDevice {
 	sensors?: string[];
 	regions: string[];
 	fPorts: number[];
-	/** Soit "codecs/<slug>.js" pour un codec TTN, soit "internal:<key>" pour un décodeur natif. */
+	/** Chemin du codec exécuté par le runtime web : "ttn-v3/<slug>.js" ou "internal:<key>". */
 	codecFile: string;
-	codecFormat: CodecFormat;
+	/**
+	 * Fichiers téléchargeables prêts à coller dans le NS cible.
+	 * Absent pour les décodeurs internes (ex. Cayenne LPP).
+	 */
+	downloads?: {
+		ttnV3: string;
+		chirpstackV4: string;
+	};
 	productURL?: string;
 	examples: PayloadExample[];
 }

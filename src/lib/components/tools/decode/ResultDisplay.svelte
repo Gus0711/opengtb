@@ -63,7 +63,7 @@
 <section aria-labelledby="decode-result-heading" class="space-y-4">
 	<!-- Bandeau verdict -->
 	<div
-		class="border-primary/40 bg-primary/5 flex items-start gap-3 rounded border-l-4 px-4 py-3"
+		class="border-primary/40 bg-primary/5 flex flex-col gap-3 rounded border-l-4 px-4 py-3 sm:flex-row sm:items-start"
 		role="status"
 	>
 		<div class="min-w-0 flex-1">
@@ -71,11 +71,11 @@
 				<span class="text-primary">Décodé</span>
 				<span class="text-text-dim">— {result.rows.length} valeur{result.rows.length > 1 ? 's' : ''}</span>
 			</h2>
-			<p class="text-text-soft mt-0.5 text-xs">
+			<p class="text-text-soft mt-0.5 text-xs break-words">
 				{result.device.vendorName} · {result.device.name} · fPort {result.fPort}
 			</p>
 		</div>
-		<div class="flex shrink-0 flex-wrap items-center gap-1.5">
+		<div class="flex flex-wrap items-center gap-1.5 sm:shrink-0">
 			<button
 				type="button"
 				onclick={copyShareLink}

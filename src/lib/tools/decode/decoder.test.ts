@@ -11,7 +11,6 @@ const cayenneDevice: ManifestDevice = {
 	regions: [],
 	fPorts: [],
 	codecFile: 'internal:cayenne-lpp',
-	codecFormat: 'ttn-v3',
 	examples: []
 };
 
@@ -23,21 +22,21 @@ const ttnV3Device: ManifestDevice = {
 	name: 'Test V3 Codec',
 	regions: [],
 	fPorts: [],
-	codecFile: 'codecs/test-v3.js',
-	codecFormat: 'ttn-v3',
+	codecFile: 'ttn-v3/test-v3.js',
+	downloads: { ttnV3: 'ttn-v3/test-v3.js', chirpstackV4: 'chirpstack-v4/test-v3.js' },
 	examples: []
 };
 
-const ttnV2Device: ManifestDevice = {
-	slug: 'test-v2',
+const ttnNamespacedDevice: ManifestDevice = {
+	slug: 'test-namespaced',
 	vendorId: 'test',
 	vendorName: 'Test',
-	deviceId: 'v2',
-	name: 'Test V2 Codec',
+	deviceId: 'namespaced',
+	name: 'Test Namespaced Codec',
 	regions: [],
 	fPorts: [],
-	codecFile: 'codecs/test-v2.js',
-	codecFormat: 'ttn-v2',
+	codecFile: 'ttn-v3/test-namespaced.js',
+	downloads: { ttnV3: 'ttn-v3/test-namespaced.js', chirpstackV4: 'chirpstack-v4/test-namespaced.js' },
 	examples: []
 };
 
@@ -49,13 +48,13 @@ const brokenDevice: ManifestDevice = {
 	name: 'Broken codec',
 	regions: [],
 	fPorts: [],
-	codecFile: 'codecs/test-broken.js',
-	codecFormat: 'ttn-v3',
+	codecFile: 'ttn-v3/test-broken.js',
+	downloads: { ttnV3: 'ttn-v3/test-broken.js', chirpstackV4: 'chirpstack-v4/test-broken.js' },
 	examples: []
 };
 
 const SOURCES: Record<string, string> = {
-	'codecs/test-v3.js': `
+	'ttn-v3/test-v3.js': `
 		function decodeUplink(input) {
 			if (input.fPort !== 1) {
 				return { data: {}, warnings: [], errors: ['fPort non supporté'] };
@@ -67,13 +66,14 @@ const SOURCES: Record<string, string> = {
 			};
 		}
 	`,
-	'codecs/test-v2.js': `
-		function Decoder(bytes, port) {
-			return { value: bytes[0] * 10 };
-		}
+	'ttn-v3/test-namespaced.js': `
+		var codec = {};
+		codec.decodeUplink = function(input) {
+			return { data: { count: input.bytes.length }, warnings: [], errors: [] };
+		};
 	`,
-	'codecs/test-broken.js': `
-		// Aucune fonction decodeUplink ni Decoder
+	'ttn-v3/test-broken.js': `
+		// Aucune fonction decodeUplink ni codec.decodeUplink
 		var x = 1 + 1;
 	`
 };
@@ -133,17 +133,17 @@ describe('decode — ttn v3', () => {
 	});
 });
 
-describe('decode — ttn v2 legacy', () => {
-	test('wraps Decoder() output as { data }', async () => {
+describe('decode — ttn v3 namespaced', () => {
+	test('finds decodeUplink exposed via codec namespace', async () => {
 		const r = await decode({
-			device: ttnV2Device,
-			bytes: [7],
+			device: ttnNamespacedDevice,
+			bytes: [1, 2, 3],
 			fPort: 1,
 			format: 'hex'
 		});
 		expect(r.ok).toBe(true);
 		if (!r.ok) return;
-		expect(r.data).toEqual({ value: 70 });
+		expect(r.data).toEqual({ count: 3 });
 	});
 });
 

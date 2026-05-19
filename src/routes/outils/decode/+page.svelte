@@ -5,12 +5,16 @@
 	import Play from '@lucide/svelte/icons/play';
 	import Loader2 from '@lucide/svelte/icons/loader-2';
 
+	import ChevronDown from '@lucide/svelte/icons/chevron-down';
+	import Code2 from '@lucide/svelte/icons/code-2';
+
 	import ToolShell from '$lib/components/tools/ToolShell.svelte';
 	import DeviceSelector from '$lib/components/tools/decode/DeviceSelector.svelte';
 	import PayloadInput from '$lib/components/tools/decode/PayloadInput.svelte';
 	import PortInput from '$lib/components/tools/decode/PortInput.svelte';
 	import ResultDisplay from '$lib/components/tools/decode/ResultDisplay.svelte';
 	import ErrorDisplay from '$lib/components/tools/decode/ErrorDisplay.svelte';
+	import CodecSnippet from '$lib/components/tools/decode/CodecSnippet.svelte';
 
 	import { getTool } from '$lib/tools/registry';
 	import { loadManifest } from '$lib/tools/decode/manifest';
@@ -33,6 +37,7 @@
 	let result = $state<DecodeResult | null>(null);
 	let decoding = $state(false);
 	let manifestRef = $state<Manifest | null>(null);
+	let codecPanelOpen = $state(false);
 
 	const selectedDevice = $derived.by(() => {
 		if (!manifestRef || !selectedSlug) return undefined;
@@ -136,8 +141,34 @@
 	seoDescription="Décodez n'importe quel payload LoRaWAN dans votre navigateur. Plus de 900 devices supportés (Milesight, MClimate, Adeunis, Enless, Dragino…) depuis le repo TheThingsNetwork/lorawan-devices. Gratuit, sans inscription, calcul local."
 >
 	<div class="grid gap-6 md:grid-cols-2">
-		<div class="space-y-4">
+		<div class="min-w-0 space-y-4">
 			<DeviceSelector bind:value={selectedSlug} {onSelect} />
+
+			{#if selectedDevice?.downloads}
+				<details
+					class="border-line-soft bg-surface group min-w-0 overflow-hidden rounded border"
+					ontoggle={(e) => (codecPanelOpen = (e.currentTarget as HTMLDetailsElement).open)}
+				>
+					<summary
+						class="hover:bg-secondary/30 flex cursor-pointer flex-wrap items-center gap-x-2 gap-y-1 px-3 py-2 font-mono text-[12.5px]"
+					>
+						<ChevronDown
+							class="size-3.5 shrink-0 transition-transform {codecPanelOpen
+								? 'rotate-0'
+								: '-rotate-90'} text-text-dim"
+						/>
+						<Code2 class="text-primary size-3.5 shrink-0" />
+						<span>Récupérer le codec prêt à l'emploi</span>
+						<span class="text-text-dim text-[11px]">(TTN v3 / ChirpStack v4)</span>
+					</summary>
+					{#if codecPanelOpen}
+						<div class="min-w-0 px-2 pt-1 pb-2">
+							<CodecSnippet device={selectedDevice} />
+						</div>
+					{/if}
+				</details>
+			{/if}
+
 			<PayloadInput bind:value={payload} bind:format onChange={pushUrl} />
 			<PortInput bind:value={fPort} suggested={selectedDevice?.fPorts} onChange={pushUrl} />
 
@@ -167,7 +198,7 @@
 			</div>
 		</div>
 
-		<div class="md:min-h-[300px]">
+		<div class="min-w-0 md:min-h-[300px]">
 			{#if result?.ok}
 				<ResultDisplay {result} />
 			{:else if result && !result.ok}
@@ -189,6 +220,18 @@
 		<h2 class="font-mono text-base">Comprendre le décodage LoRaWAN</h2>
 
 		<div class="grid gap-6 md:grid-cols-2">
+			<div class="space-y-2 text-sm leading-relaxed">
+				<h3 class="text-foreground font-mono text-[13px]">Récupérer le codec sans décoder une trame</h3>
+				<p class="text-text-soft">
+					Sélectionnez votre device puis dépliez l'accordéon
+					<span class="text-text-dim font-mono text-[12px]">« Récupérer le codec prêt à l'emploi »</span>.
+					Vous obtenez le payload formatter du fabricant en deux variantes : <strong>TTN v3</strong>
+					(prêt pour TheThingsStack) ou <strong>ChirpStack v4</strong> (wrappé pour le runtime TR013).
+					Un clic pour copier ou télécharger le <code class="text-text-dim font-mono">.js</code>,
+					les instructions d'installation par NS sont rappelées dans le panneau.
+				</p>
+			</div>
+
 			<div class="space-y-2 text-sm leading-relaxed">
 				<h3 class="text-foreground font-mono text-[13px]">Qu'est-ce qu'un payload LoRaWAN ?</h3>
 				<p class="text-text-soft">

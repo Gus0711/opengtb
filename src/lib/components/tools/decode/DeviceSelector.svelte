@@ -41,9 +41,12 @@
 		return manifest.devices.find((d) => d.slug === value);
 	});
 
+	// Limite large : certains vendors (Milesight 87, Tektelic 30, Adeunis 15…)
+	// dépassent les 30 entrées attendues à l'origine. La listbox est scrollable
+	// (max-h-80) donc rendre 100+ items est sans impact perf.
 	const results = $derived.by(() => {
 		if (!manifest) return [];
-		return searchDevices(manifest, query, 30);
+		return searchDevices(manifest, query, 250);
 	});
 
 	async function ensureManifest() {

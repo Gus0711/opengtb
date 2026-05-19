@@ -17,20 +17,15 @@ const CODECS_BASE = '/data/lorawan-codecs/';
 
 /**
  * Trampoline ajouté à la fin du source TTN brut pour exposer une fonction
- * d'entrée unifiée, qu'il s'agisse d'un codec v3 (decodeUplink) ou legacy
- * v2 (Decoder). Renvoie null si rien n'est trouvé.
+ * d'entrée unifiée. V1 ne supporte que ttn-v3 (les legacy `Decoder` sont
+ * filtrés au build), donc on cherche `decodeUplink` top-level ou via
+ * namespace `codec.decodeUplink`. Renvoie null si rien n'est trouvé.
  */
 const RUNTIME_TRAMPOLINE = `
 ;return (typeof decodeUplink === 'function')
   ? decodeUplink
-  : (typeof Decoder === 'function'
-    ? function(input) {
-        try {
-          return { data: Decoder(input.bytes, input.fPort), warnings: [], errors: [] };
-        } catch (e) {
-          return { data: {}, warnings: [], errors: [(e && e.message) ? e.message : String(e)] };
-        }
-      }
+  : (typeof codec !== 'undefined' && codec && typeof codec.decodeUplink === 'function'
+    ? codec.decodeUplink
     : null);
 `;
 
@@ -57,7 +52,7 @@ async function loadCodecFn(device: ManifestDevice): Promise<DecodeFn> {
 		);
 	}
 	if (typeof fn !== 'function') {
-		throw new Error('Le codec ne définit ni decodeUplink ni Decoder');
+		throw new Error('Le codec ne définit pas de fonction decodeUplink utilisable');
 	}
 
 	const wrapped: DecodeFn = (input) => {

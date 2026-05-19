@@ -1,0 +1,114 @@
+// ─────────────────────────────────────────────────────────────────────
+// Codec LoRaWAN — ChirpStack v4
+// ─────────────────────────────────────────────────────────────────────
+// Vendor       : Bosch Connected Devices and Solutions GmbH
+// Device       : Parking Lot Sensor
+// fPort(s)     : 1, 2, 3
+// Source       : TheThingsNetwork/lorawan-devices @ 26f5522b7eb8
+//                https://github.com/TheThingsNetwork/lorawan-devices/blob/26f5522b7eb894f139c68971b9183413aa2b2bea/vendor/bosch/tpl110-0292.js
+// Adapté par   : OpenGTB — https://opengtb.fr/outils/decode
+// Licence      : Apache-2.0 (per upstream repo)
+//
+// Installation :
+//   1. ChirpStack → Device Profiles → <votre profil>
+//   2. Onglet « Codec » → « JavaScript functions »
+//   3. Coller ce fichier intégralement dans « Codec functions »
+//
+// Note : le codec TTN d'origine est conservé intact dans un IIFE ;
+// la fonction decodeUplink exposée à ChirpStack le réinvoque et normalise
+// la sortie au format { data, warnings, errors } attendu par v4 (TR013).
+// ─────────────────────────────────────────────────────────────────────
+
+var __opengtb_ttn_decode;
+(function () {
+	// ─── Source TTN v3 (intact) ─────────────────────────────────────────
+function decodeUplink(input) {
+  var data = {};
+  switch (input.fPort) {
+    case 1: // Parking status
+      data.type = 'parking status';
+      data.occupied = (input.bytes[0] & 0x1) === 0x1;
+      break;
+
+    case 2: // Heartbeat
+      data.type = 'heartbeat';
+      data.occupied = (input.bytes[0] & 0x1) === 0x1;
+      if (input.bytes.length >= 2) {
+        data.temperature =
+          input.bytes[1] & 0x80 ? input.bytes[1] - 0x100 : input.bytes[1];
+      }
+      break;
+
+    case 3: // Start-up
+      data.type = 'startup';
+      data.debugCodes = [];
+      for (var i = 0; i <= 8; i += 4) {
+        var debugCode = ((input.bytes[i + 1] & 0xf) << 8) | input.bytes[i];
+        if (debugCode) {
+          data.debugCodes.push(debugCode);
+        }
+      }
+      data.firmwareVersion =
+        input.bytes[12] + '.' + input.bytes[13] + '.' + input.bytes[14];
+      data.resetCause = [
+        undefined,
+        'watchdog',
+        'power on',
+        'system request',
+        'other',
+      ][input.bytes[15]];
+      data.occupied = (input.bytes[16] & 0x1) == 0x1;
+      break;
+
+    case 4: // Device information
+      data.type = 'device information';
+      data.bytes = input.bytes;
+      break;
+
+    case 5: // Device usage
+      data.type = 'device usage';
+      data.bytes = input.bytes;
+      break;
+
+    case 6: // Debug
+      data.type = 'debug';
+      data.timestamp =
+        (input.bytes[3] << 24) |
+        (input.bytes[2] << 16) |
+        (input.bytes[1] << 8) |
+        input.bytes[0];
+      data.debugCode = ((input.bytes[5] & 0xf) << 8) | input.bytes[4];
+      data.sequenceNumber = (input.bytes[9] << 8) | input.bytes[8];
+      break;
+  }
+
+  return {
+    data: data,
+  };
+}
+	// ─── /Source TTN v3 ─────────────────────────────────────────────────
+
+	__opengtb_ttn_decode = (typeof decodeUplink === 'function')
+		? decodeUplink
+		: (typeof codec !== 'undefined' && codec && typeof codec.decodeUplink === 'function')
+			? codec.decodeUplink
+			: null;
+})();
+
+function decodeUplink(input) {
+	if (typeof __opengtb_ttn_decode !== 'function') {
+		return { data: {}, warnings: [], errors: ['decodeUplink TTN introuvable dans le codec source'] };
+	}
+	var r;
+	try {
+		r = __opengtb_ttn_decode(input) || {};
+	} catch (e) {
+		return { data: {}, warnings: [], errors: [(e && e.message) ? e.message : String(e)] };
+	}
+	var data = (r && r.data !== undefined) ? r.data : r;
+	return {
+		data: data,
+		warnings: Array.isArray(r.warnings) ? r.warnings : [],
+		errors: Array.isArray(r.errors) ? r.errors : []
+	};
+}

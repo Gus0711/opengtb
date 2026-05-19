@@ -11,8 +11,7 @@ function dev(slug: string, vendorName: string, name: string): ManifestDevice {
 		name,
 		regions: [],
 		fPorts: [],
-		codecFile: `codecs/${slug}.js`,
-		codecFormat: 'ttn-v3',
+		codecFile: `ttn-v3/${slug}.js`,
 		examples: []
 	};
 }

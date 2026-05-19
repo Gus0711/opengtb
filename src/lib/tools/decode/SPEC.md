@@ -9,13 +9,21 @@ Décodeur de payloads **LoRaWAN uplink uniquement**. Pas de downlink, pas
 de BACnet/Modbus, pas de mapping vers d'autres protocoles, pas
 d'historique, pas d'auth.
 
-L'utilisateur :
-1. choisit son device dans une liste alimentée par le repo TTN
-   `lorawan-devices` (ou choisit le device générique « Cayenne LPP ») ;
-2. colle son payload (hex *ou* base64, toggle explicite) + saisit le
-   fPort ;
-3. clique « Décoder » → voit le résultat sous forme tableau clé/valeur
-   et JSON brut pliable.
+**Pas de legacy** : seuls les codecs TTN v3 (`decodeUplink`) sont retenus.
+Les codecs Decoder() v2 (~1 % du repo) sont filtrés au build.
+
+L'utilisateur peut :
+1. choisir son device dans une liste alimentée par le repo TTN
+   `lorawan-devices` (ou choisir le device générique « Cayenne LPP ») ;
+2. **option A — récupérer le codec** : déplier l'accordéon sous le
+   sélecteur, choisir l'onglet TTN v3 ou ChirpStack v4, copier/télécharger
+   le fichier prêt à coller dans son Network Server ;
+3. **option B — décoder une trame** : coller son payload (hex *ou* base64,
+   toggle explicite) + saisir le fPort + cliquer « Décoder » → voir le
+   résultat sous forme tableau clé/valeur et JSON brut pliable.
+
+Les deux options sont indépendantes : le codec est disponible dès la
+sélection du device, sans avoir à décoder une trame.
 
 URL cible : `/outils/decode`.
 
@@ -26,7 +34,9 @@ URL cible : `/outils/decode`.
 | Encoder downlink | **Non** en V1 | Reporté V2, voir attendus V2 |
 | Isolation d'exécution | `new Function()` direct, main thread, try/catch + `setTimeout` de garde (~2 s) | Codecs TTN sont publics et bien rodés ; Worker apportait pas de vraie sandbox |
 | Source codecs | Repo TTN `TheThingsNetwork/lorawan-devices`, **clone + extraction lancés à la main**, output commité dans `static/data/lorawan-codecs/` | Évite un clone de plusieurs centaines de Mo à chaque build CI ; cohérent avec `svg` et `dju` |
-| Cayenne LPP | Décodeur **hard-codé** dans `lib/tools/decode/cayenne-lpp.ts`, exposé comme device pseudo « generic-cayenne-lpp » dans le manifest | Standard LoRa Alliance largement utilisé sur passerelles génériques |
+| Legacy v2 (`Decoder`) | **Exclu au build** | Repo TTN pousse les vendors à migrer ; on reste sur la signature v3 alignée TR013 |
+| Cibles de téléchargement | **TTN v3 + ChirpStack v4**, deux artefacts par device | Couvre l'écosystème FR (TTS Cloud + ChirpStack on-prem Kerlink/Actility) ; Loriot et ThingPark hors scope |
+| Cayenne LPP | Décodeur **hard-codé** dans `lib/tools/decode/cayenne-lpp.ts`, exposé comme device pseudo « generic-cayenne-lpp » dans le manifest. **Pas de téléchargement** (standard générique) | Standard LoRa Alliance largement utilisé sur passerelles génériques |
 | Codec personnalisé collé par l'utilisateur | **Non** en V1 | Reporté V2, voir attendus V2 |
 | Détection hex/base64 | **Toggle explicite** (pas d'auto-détection) | Conforme au pattern Auto/Manuel, sans ambiguïté sur les payloads short |
 | Affichage résultat | Tableau clé/valeur en tête + JSON brut pliable en dessous, bouton copier sur les deux | Pattern « lisible chantier » + JSON exploitable |
@@ -79,18 +89,24 @@ src/lib/tools/decode/
 ├── manifest.ts             # chargement lazy du manifest JSON
 ├── search.ts               # recherche maison sur vendor+name
 ├── formats.ts              # parsing hex/base64 + tolérance espacements
+├── format-json.ts          # coloration syntaxique JSON
+├── format-js.ts            # coloration syntaxique JS (pour CodecSnippet)
 ├── cayenne-lpp.ts          # décodeur Cayenne LPP hard-codé
 ├── decoder.ts              # orchestration : load codec → exec sandbox → normalise
 ├── decoder.test.ts
 ├── formats.test.ts
+├── format-json.test.ts
+├── format-js.test.ts
 ├── search.test.ts
-└── cayenne-lpp.test.ts
+├── cayenne-lpp.test.ts
+└── codec-build.test.ts     # tests d'intégration sur les artefacts générés
 
 src/lib/components/tools/decode/
 ├── DeviceSelector.svelte
 ├── PayloadInput.svelte     # textarea + toggle hex/base64
 ├── PortInput.svelte
 ├── ResultDisplay.svelte    # tableau + JSON pliable + copier
+├── CodecSnippet.svelte     # accordéon « codec prêt à l'emploi » (tabs TTN/CS)
 └── ErrorDisplay.svelte
 
 src/routes/outils/decode/
@@ -98,11 +114,13 @@ src/routes/outils/decode/
 └── +page.ts                # parseQuery → initial state SSR-safe
 
 scripts/decode/
-└── fetch-lorawan-codecs.ts # lancé à la main, output commité
+└── fetch-codecs.ts         # lancé à la main, output commité
 
 static/data/lorawan-codecs/
 ├── manifest.json           # { generatedAt, source: {url, commit}, devices: [...] }
-└── codecs/
+├── ttn-v3/                 # codecs prêts à coller dans TheThingsStack
+│   └── {vendor}-{device}.js
+└── chirpstack-v4/          # codecs wrappés pour ChirpStack v4 (TR013)
     └── {vendor}-{device}.js
 ```
 
@@ -115,17 +133,25 @@ static/data/lorawan-codecs/
 - Parcourt `vendor/*/`, lit chaque `*.yaml` device.
 - Pour chaque device qui référence un codec uplink :
   - Charge le JS du codec ;
-  - Vérifie qu'il définit `decodeUplink` *ou* `Decoder` (legacy TTN v2) ;
+  - Vérifie qu'il définit `decodeUplink` (TTN v3). Les codecs legacy v2
+    (`Decoder()`) sont **exclus** avec warning ; pas de legacy en V1.
   - Si autre format (Cayenne LPP brut, JS exotique) → **exclut** + warning console.
 - Génère :
-  - `manifest.json` (vendor, deviceId, name, slug, fPorts si listés, codecPath,
-    codecFormat: `'ttn-v3' | 'ttn-v2'`) ;
-  - Un fichier JS par device dans `codecs/`, normalisé pour exposer
-    `decodeUplink({ bytes, fPort })` (adapter legacy → v3 au moment du build).
+  - `manifest.json` (vendor, deviceId, name, slug, fPorts si listés, `codecFile`
+    pour le runtime, `downloads: { ttnV3, chirpstackV4 }` pour le téléchargement
+    utilisateur) ;
+  - Pour chaque device : **deux artefacts** prêts à coller :
+    - `ttn-v3/<slug>.js` — source TTN brut + header FR (vendor, device, fPorts,
+      source, instructions d'installation TTN) ;
+    - `chirpstack-v4/<slug>.js` — même source enrobé dans un IIFE qui capture
+      `decodeUplink` (top-level ou `codec.decodeUplink`) et expose une fonction
+      `decodeUplink` top-level normalisée au format TR013
+      (`{ data, warnings, errors }`).
 - Inclut dans le manifest une entrée `generic-cayenne-lpp` qui pointe vers
-  notre décodeur interne (flag `internal: true`).
-- Sortie console : nombre de devices retenus, exclus avec raison, taille
-  manifest.
+  notre décodeur interne. **Pas de téléchargement** : Cayenne LPP est un
+  standard, l'utilisateur active le décodeur natif de son NS.
+- Sortie console : nombre de devices retenus, exclus avec raison, regroupement
+  par vendor.
 - Idempotent. Pas de cache 24 h en V1 (on lance à la main).
 
 ## Conventions UI
@@ -238,16 +264,18 @@ static/data/lorawan-codecs/
 
 ## État au snapshot TTN du 21 avril 2026 (commit `26f5522`)
 
-Sortie de `npm run fetch-codecs -- --all` :
+Sortie de `npm run fetch-codecs -- --all` (V1 post drop legacy + dual output) :
 
-- **913 devices retenus** sur 117 vendors (149 vendors listés, mais 32
-  sans `endDevices` exploitables / en draft).
-- Manifest : 1,6 Mo brut → **151 Ko gzippé**. Chargé lazy au focus du
-  sélecteur.
-- Codecs : 19 Mo total non gzippé, chargés à la demande device par device.
+- **902 devices retenus** en `ttn-v3` (903 entrées manifest incl. Cayenne).
+- 11 codecs `ttn-v2` legacy (`Decoder()`) exclus au build.
+- Manifest : 1,6 Mo brut → ~150 Ko gzippé. Chargé lazy au focus du sélecteur.
+- Codecs : ~19 Mo par variante (TTN v3 + ChirpStack v4 ≈ 38 Mo non gzippé),
+  chargés à la demande device par device.
 - Temps d'exécution : ~9 s.
 
 **Exclusions notables** :
+- 11 codecs **ttn-v2 legacy** (signature `Decoder(bytes, port)`) — par
+  décision de scope V1 « pas de legacy ». Ré-évaluer si demande terrain.
 - 146 devices ne référencent aucun codec dans leur profil (souvent des
   devices certifiés LoRa Alliance qui utilisent Cayenne LPP générique
   ou un format proprio non publié).
