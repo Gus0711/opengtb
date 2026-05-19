@@ -17,7 +17,12 @@ const config = {
 		}),
 		prerender: {
 			handleHttpError: 'fail',
-			handleMissingId: 'fail'
+			handleMissingId: 'fail',
+			// La route [slug] sert de placeholder « implémentation à venir » et
+			// n'est plus liée nulle part depuis que chaque outil a sa route
+			// dédiée — on tolère son absence dans le crawl plutôt que de planter
+			// le build.
+			handleUnseenRoutes: 'warn'
 		}
 	},
 	preprocess: [mdsvex(mdsvexConfig)],

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Sparkles from '@lucide/svelte/icons/sparkles';
 	import { getTool } from '$lib/tools/registry';
 	import type { Tool, SectorSlug } from '$lib/tools/types';
 
@@ -10,16 +11,20 @@
 		commissioning: 'commissioning'
 	};
 
-	const FEATURED_SLUGS = ['decode', 'loi-eau', 'trends'] as const;
-	const featured: Tool[] = FEATURED_SLUGS.map(getTool).filter((t): t is Tool => !!t);
+	const FEATURED_SLUGS = ['decode', 'loi-eau', 'v3v'] as const;
+	// Garde-fou : on ne référence jamais un outil non implémenté (status !== 'done')
+	// — sinon le lien casse le prerender.
+	const featured: Tool[] = FEATURED_SLUGS.map(getTool).filter(
+		(t): t is Tool => !!t && !t.external && t.status === 'done'
+	);
 </script>
 
 <section id="featured" class="mx-auto max-w-5xl px-5 pt-20 pb-2 md:px-7">
 	<div
 		class="border-border mb-6 flex items-baseline justify-between gap-6 border-b pb-3.5 max-sm:flex-col max-sm:items-start"
 	>
-		<div class="flex items-baseline gap-3.5">
-			<span class="text-primary font-mono text-[13px] font-semibold">§ 01</span>
+		<div class="flex items-center gap-3">
+			<Sparkles class="text-amber size-[18px] shrink-0" aria-hidden="true" />
 			<h2
 				class="m-0 text-[clamp(22px,2.4vw,28px)] font-bold tracking-[-0.015em]"
 			>
@@ -47,7 +52,7 @@
 					class="bg-primary absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 transition-transform duration-200 group-hover:scale-x-100"
 					aria-hidden="true"
 				></span>
-				<div class="text-text-dim mb-4 font-mono text-[11px] tracking-wider">
+				<div class="text-amber-dim mb-4 font-mono text-[11px] tracking-wider">
 					// {SECTOR_LABEL[tool.sector]}
 				</div>
 				<h3 class="mb-1.5 text-[22px] font-bold tracking-[-0.01em]">
