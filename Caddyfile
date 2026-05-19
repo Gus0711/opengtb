@@ -24,5 +24,10 @@
 	# consolidées (fonts inlinées, OG image, éventuels analytics).
 	# Définir une CSP stricte default-src 'self' à ce moment-là.
 
+	# adapter-static produit /outils/decode.html, pas /outils/decode/index.html.
+	# Caddy file_server ne tente pas <path>.html par défaut — on l'ajoute via
+	# try_files pour que /outils/decode résolve vers decode.html.
+	try_files {path} {path}.html {path}/index.html
+
 	file_server
 }
