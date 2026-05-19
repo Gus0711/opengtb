@@ -4,6 +4,7 @@
 // Vendor       : Jooby
 // Device       : ephir-rms-gmel10
 // fPort(s)     : non spécifié dans le profil
+// Fonctions    : decodeUplink + encodeDownlink
 // Source       : TheThingsNetwork/lorawan-devices @ 26f5522b7eb8
 //                https://github.com/TheThingsNetwork/lorawan-devices/blob/26f5522b7eb894f139c68971b9183413aa2b2bea/vendor/jooby/analog-gasic.js
 // Préparé par  : OpenGTB — https://opengtb.fr/outils/decode
@@ -13,6 +14,7 @@
 //   1. Console TTN → Application → Payload formatters
 //   2. Type : « Custom JavaScript formatter »
 //   3. Onglet « Uplink » → coller ce fichier intégralement
+//   4. (optionnel) Onglet « Downlink » → encodeDownlink est dans le même fichier
 // ─────────────────────────────────────────────────────────────────────
 
 // https://github.com/jooby-dev/jooby-codec/blob/main/src/analog/constants/hardwareTypes.ts

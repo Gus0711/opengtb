@@ -4,6 +4,7 @@
 // Vendor       : Arwin Technology Limited
 // Device       : LRS20100 - Temperature & Humidity Sensor
 // fPort(s)     : 8, 10, 12, 13
+// Fonctions    : decodeUplink
 // Source       : TheThingsNetwork/lorawan-devices @ 26f5522b7eb8
 //                https://github.com/TheThingsNetwork/lorawan-devices/blob/26f5522b7eb894f139c68971b9183413aa2b2bea/vendor/arwin-technology/lrs20100.js
 // Préparé par  : OpenGTB — https://opengtb.fr/outils/decode
@@ -13,6 +14,7 @@
 //   1. Console TTN → Application → Payload formatters
 //   2. Type : « Custom JavaScript formatter »
 //   3. Onglet « Uplink » → coller ce fichier intégralement
+//   4. (downlink non fourni par ce vendor)
 // ─────────────────────────────────────────────────────────────────────
 
 var lrs20100_events = ['heartbeat', 'rsvd', 'temperature_high', 'temperature_low', 'humidity_high', 'humidity_low'];

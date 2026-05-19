@@ -4,64 +4,60 @@ import type {
 	DecodeFailure,
 	DecodeResult,
 	DecodeSuccess,
+	EncodeFailure,
+	EncodeResult,
+	EncodeSuccess,
+	EncoderOutput,
 	ManifestDevice,
 	PayloadFormat,
 	ResultRow
 } from './types';
 
 type DecodeFn = (input: { bytes: number[]; fPort: number }) => CodecOutput;
+type EncodeFn = (input: { data: unknown; fPort?: number }) => EncoderOutput;
 
-const codecCache = new Map<string, DecodeFn>();
+interface LoadedCodec {
+	decode: DecodeFn | null;
+	encode: EncodeFn | null;
+}
+
+const codecCache = new Map<string, LoadedCodec>();
 
 const CODECS_BASE = '/data/lorawan-codecs/';
 
 /**
- * Trampoline ajouté à la fin du source TTN brut pour exposer une fonction
- * d'entrée unifiée. V1 ne supporte que ttn-v3 (les legacy `Decoder` sont
- * filtrés au build), donc on cherche `decodeUplink` top-level ou via
- * namespace `codec.decodeUplink`. Renvoie null si rien n'est trouvé.
+ * Trampoline ajouté à la fin du source TTN brut pour exposer un couple
+ * { decode, encode } unifié. Cherche `decodeUplink` et `encodeDownlink`
+ * en top-level OU via namespace `codec.*`. Renvoie null pour les
+ * fonctions absentes (l'encoder est optionnel selon le vendor).
  */
 const RUNTIME_TRAMPOLINE = `
-;return (typeof decodeUplink === 'function')
-  ? decodeUplink
-  : (typeof codec !== 'undefined' && codec && typeof codec.decodeUplink === 'function'
-    ? codec.decodeUplink
-    : null);
+;return {
+  decode: (typeof decodeUplink === 'function')
+    ? decodeUplink
+    : (typeof codec !== 'undefined' && codec && typeof codec.decodeUplink === 'function'
+      ? codec.decodeUplink
+      : null),
+  encode: (typeof encodeDownlink === 'function')
+    ? encodeDownlink
+    : (typeof codec !== 'undefined' && codec && typeof codec.encodeDownlink === 'function'
+      ? codec.encodeDownlink
+      : null)
+};
 `;
 
-async function loadCodecFn(device: ManifestDevice): Promise<DecodeFn> {
-	const cached = codecCache.get(device.slug);
-	if (cached) return cached;
-
-	if (device.codecFile === 'internal:cayenne-lpp') {
-		codecCache.set(device.slug, decodeCayenneLPP);
-		return decodeCayenneLPP;
-	}
-
-	const url = `${CODECS_BASE}${device.codecFile}`;
-	const r = await fetch(url);
-	if (!r.ok) throw new Error(`Codec indisponible (HTTP ${r.status}) — ${url}`);
-	const source = await r.text();
-
-	let fn: DecodeFn | null;
-	try {
-		fn = new Function(source + RUNTIME_TRAMPOLINE)() as DecodeFn | null;
-	} catch (e) {
-		throw new Error(
-			`Le codec n'a pas pu être chargé : ${(e as Error).message ?? String(e)}`
-		);
-	}
-	if (typeof fn !== 'function') {
-		throw new Error('Le codec ne définit pas de fonction decodeUplink utilisable');
-	}
-
-	const wrapped: DecodeFn = (input) => {
+function wrapDecode(raw: DecodeFn): DecodeFn {
+	return (input) => {
 		try {
-			const out = fn!(input);
+			const out = raw(input);
 			// Normalise les codecs v3 qui retournent { data, warnings, errors }
 			// et les rares cas où data est nullish.
 			return {
-				data: (out && typeof out === 'object' && 'data' in out ? out.data : out) as Record<string, unknown> ?? {},
+				data:
+					((out && typeof out === 'object' && 'data' in out ? out.data : out) as Record<
+						string,
+						unknown
+					>) ?? {},
 				warnings: Array.isArray(out?.warnings) ? out!.warnings : [],
 				errors: Array.isArray(out?.errors) ? out!.errors : []
 			};
@@ -73,9 +69,61 @@ async function loadCodecFn(device: ManifestDevice): Promise<DecodeFn> {
 			};
 		}
 	};
+}
 
-	codecCache.set(device.slug, wrapped);
-	return wrapped;
+function wrapEncode(raw: EncodeFn): EncodeFn {
+	return (input) => {
+		try {
+			const out = raw(input) as Partial<EncoderOutput> | undefined;
+			return {
+				bytes: Array.isArray(out?.bytes) ? out!.bytes : [],
+				fPort: typeof out?.fPort === 'number' ? out!.fPort : input.fPort,
+				warnings: Array.isArray(out?.warnings) ? out!.warnings : [],
+				errors: Array.isArray(out?.errors) ? out!.errors : []
+			};
+		} catch (e) {
+			return {
+				bytes: [],
+				fPort: input.fPort,
+				warnings: [],
+				errors: [(e as Error)?.message ?? String(e)]
+			};
+		}
+	};
+}
+
+async function loadCodec(device: ManifestDevice): Promise<LoadedCodec> {
+	const cached = codecCache.get(device.slug);
+	if (cached) return cached;
+
+	if (device.codecFile === 'internal:cayenne-lpp') {
+		const result: LoadedCodec = { decode: decodeCayenneLPP, encode: null };
+		codecCache.set(device.slug, result);
+		return result;
+	}
+
+	const url = `${CODECS_BASE}${device.codecFile}`;
+	const r = await fetch(url);
+	if (!r.ok) throw new Error(`Codec indisponible (HTTP ${r.status}) — ${url}`);
+	const source = await r.text();
+
+	let raw: { decode: DecodeFn | null; encode: EncodeFn | null };
+	try {
+		raw = new Function(source + RUNTIME_TRAMPOLINE)() as typeof raw;
+	} catch (e) {
+		throw new Error(`Le codec n'a pas pu être chargé : ${(e as Error).message ?? String(e)}`);
+	}
+
+	const decode = typeof raw?.decode === 'function' ? wrapDecode(raw.decode) : null;
+	const encode = typeof raw?.encode === 'function' ? wrapEncode(raw.encode) : null;
+
+	if (!decode) {
+		throw new Error('Le codec ne définit pas de fonction decodeUplink utilisable');
+	}
+
+	const result: LoadedCodec = { decode, encode };
+	codecCache.set(device.slug, result);
+	return result;
 }
 
 /**
@@ -139,31 +187,39 @@ const MAX_PAYLOAD_BYTES = 256;
  */
 export async function decode(req: DecodeRequest): Promise<DecodeResult> {
 	if (req.bytes.length === 0) {
-		return failure('parse-payload', 'Payload vide après parsing');
+		return decodeFailure('parse-payload', 'Payload vide après parsing');
 	}
 	if (req.bytes.length > MAX_PAYLOAD_BYTES) {
-		return failure(
+		return decodeFailure(
 			'parse-payload',
 			`Payload trop long (${req.bytes.length} octets, max ${MAX_PAYLOAD_BYTES}). LoRaWAN limite la taille utile à quelques dizaines d'octets.`
 		);
 	}
 	if (req.fPort < 1 || req.fPort > 223 || !Number.isInteger(req.fPort)) {
-		return failure('parse-payload', `fPort hors plage applicative LoRaWAN (1–223)`);
+		return decodeFailure('parse-payload', `fPort hors plage applicative LoRaWAN (1–223)`);
 	}
 
-	let fn: DecodeFn;
+	let loaded: LoadedCodec;
 	try {
-		fn = await loadCodecFn(req.device);
+		loaded = await loadCodec(req.device);
 	} catch (e) {
-		return failure('load-codec', (e as Error)?.message ?? String(e));
+		return decodeFailure('load-codec', (e as Error)?.message ?? String(e));
 	}
 
-	const out = fn({ bytes: req.bytes, fPort: req.fPort });
+	if (!loaded.decode) {
+		return decodeFailure('load-codec', 'Décodeur non disponible pour ce device');
+	}
+
+	const out = loaded.decode({ bytes: req.bytes, fPort: req.fPort });
 	const errors = out.errors ?? [];
 	const warnings = out.warnings ?? [];
 	const isEmpty = !out.data || Object.keys(out.data).length === 0;
 	if (errors.length > 0 && isEmpty) {
-		return failure('execute-codec', 'Le codec n\'a pas pu décoder ce payload sur ce fPort', errors);
+		return decodeFailure(
+			'execute-codec',
+			"Le codec n'a pas pu décoder ce payload sur ce fPort",
+			errors
+		);
 	}
 
 	const success: DecodeSuccess = {
@@ -179,11 +235,76 @@ export async function decode(req: DecodeRequest): Promise<DecodeResult> {
 	return success;
 }
 
-function failure(
+function decodeFailure(
 	stage: DecodeFailure['stage'],
 	message: string,
 	codecErrors?: string[]
 ): DecodeFailure {
+	return { ok: false, stage, message, codecErrors };
+}
+
+export interface EncodeRequest {
+	device: ManifestDevice;
+	/** Donnée structurée à envoyer à `encodeDownlink({ data, fPort })`. */
+	data: unknown;
+	fPort: number;
+}
+
+/**
+ * Orchestre l'encodage : charge le codec, exécute `encodeDownlink`, normalise
+ * la sortie. Retourne soit un EncodeSuccess avec bytes/fPort, soit un
+ * EncodeFailure typé.
+ */
+export async function encode(req: EncodeRequest): Promise<EncodeResult> {
+	if (req.fPort < 1 || req.fPort > 223 || !Number.isInteger(req.fPort)) {
+		return encodeFailure('parse-input', `fPort hors plage applicative LoRaWAN (1–223)`);
+	}
+
+	let loaded: LoadedCodec;
+	try {
+		loaded = await loadCodec(req.device);
+	} catch (e) {
+		return encodeFailure('load-codec', (e as Error)?.message ?? String(e));
+	}
+
+	if (!loaded.encode) {
+		return encodeFailure(
+			'load-codec',
+			"Ce device n'expose pas d'encodeur downlink dans son codec TTN"
+		);
+	}
+
+	const out = loaded.encode({ data: req.data, fPort: req.fPort });
+	const errors = out.errors ?? [];
+	const warnings = out.warnings ?? [];
+
+	if (errors.length > 0 && (!out.bytes || out.bytes.length === 0)) {
+		return encodeFailure(
+			'execute-encoder',
+			"Le codec n'a pas pu encoder ces données sur ce fPort",
+			errors
+		);
+	}
+	if (!out.bytes || out.bytes.length === 0) {
+		return encodeFailure('execute-encoder', "Le codec a renvoyé un payload vide", errors);
+	}
+
+	const success: EncodeSuccess = {
+		ok: true,
+		device: req.device,
+		data: req.data,
+		bytes: out.bytes,
+		fPort: typeof out.fPort === 'number' ? out.fPort : req.fPort,
+		warnings: [...warnings, ...errors]
+	};
+	return success;
+}
+
+function encodeFailure(
+	stage: EncodeFailure['stage'],
+	message: string,
+	codecErrors?: string[]
+): EncodeFailure {
 	return { ok: false, stage, message, codecErrors };
 }
 

@@ -3,6 +3,9 @@ export type PayloadFormat = 'hex' | 'base64';
 /** Cibles d'export pour le téléchargement utilisateur. V1 : pas de legacy. */
 export type CodecTarget = 'ttn-v3' | 'chirpstack-v4';
 
+/** Mode d'utilisation de l'outil : décodage uplink ou encodage downlink. */
+export type ToolMode = 'decode' | 'encode';
+
 /** Entrée publique du manifest, telle que générée par scripts/decode/fetch-codecs.ts. */
 export interface ManifestDevice {
 	slug: string;
@@ -24,8 +27,12 @@ export interface ManifestDevice {
 		ttnV3: string;
 		chirpstackV4: string;
 	};
+	/** True si le codec expose une fonction encodeDownlink utilisable. */
+	hasEncoder?: boolean;
 	productURL?: string;
 	examples: PayloadExample[];
+	/** Exemples downlink (presets cliquables pour l'éditeur d'encodage). */
+	downlinkExamples?: DownlinkExample[];
 }
 
 export interface PayloadExample {
@@ -33,6 +40,47 @@ export interface PayloadExample {
 	fPort: number;
 	bytes: number[];
 }
+
+/** Exemple downlink issu du YAML (preset cliquable). */
+export interface DownlinkExample {
+	description?: string;
+	input: {
+		data: unknown;
+		fPort?: number;
+	};
+	output?: {
+		bytes: number[];
+		fPort?: number;
+	};
+}
+
+/** Forme de retour standardisée d'un encoder downlink TTN v3 (officielle). */
+export interface EncoderOutput {
+	bytes: number[];
+	fPort?: number;
+	warnings?: string[];
+	errors?: string[];
+}
+
+/** Sortie complète d'un encodage côté UI. */
+export interface EncodeSuccess {
+	ok: true;
+	device: ManifestDevice;
+	/** Donnée structurée envoyée à `encodeDownlink`. */
+	data: unknown;
+	bytes: number[];
+	fPort: number;
+	warnings: string[];
+}
+
+export interface EncodeFailure {
+	ok: false;
+	stage: 'parse-input' | 'load-codec' | 'execute-encoder';
+	message: string;
+	codecErrors?: string[];
+}
+
+export type EncodeResult = EncodeSuccess | EncodeFailure;
 
 export interface Manifest {
 	generatedAt: string;

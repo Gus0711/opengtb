@@ -4,6 +4,7 @@
 // Vendor       : Moko Technology Ltd
 // Device       : LW001-BG PRO - Tracker
 // fPort(s)     : 1, 2
+// Fonctions    : decodeUplink
 // Source       : TheThingsNetwork/lorawan-devices @ 26f5522b7eb8
 //                https://github.com/TheThingsNetwork/lorawan-devices/blob/26f5522b7eb894f139c68971b9183413aa2b2bea/vendor/moko/lw001-bgpro.js
 // Préparé par  : OpenGTB — https://opengtb.fr/outils/decode
@@ -13,6 +14,7 @@
 //   1. Console TTN → Application → Payload formatters
 //   2. Type : « Custom JavaScript formatter »
 //   3. Onglet « Uplink » → coller ce fichier intégralement
+//   4. (downlink non fourni par ce vendor)
 // ─────────────────────────────────────────────────────────────────────
 
 var packet_type = ["heart","fix_success","fix_false","sys_close_info","shake_info","idle_info","demolish_alarm","event","battery_consume","config","store_data","limit_gps_data"];

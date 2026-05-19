@@ -120,6 +120,12 @@ describe('manifest', () => {
 					slug: string;
 					codecFile: string;
 					downloads?: { ttnV3: string; chirpstackV4: string };
+					hasEncoder?: boolean;
+					downlinkExamples?: Array<{
+						description?: string;
+						input: { data: unknown; fPort?: number };
+						output?: { bytes: number[]; fPort?: number };
+					}>;
 				}>;
 			})
 		: null;
@@ -135,5 +141,100 @@ describe('manifest', () => {
 		const cayenne = manifest!.devices.find((d) => d.slug === 'generic-cayenne-lpp');
 		expect(cayenne).toBeDefined();
 		expect(cayenne!.downloads).toBeUndefined();
+	});
+
+	test.skipIf(!manifest)('a meaningful share of devices expose an encoder', () => {
+		const withEncoder = manifest!.devices.filter((d) => d.hasEncoder);
+		// Sanity check : on attend ~400+ encoders sur le catalogue complet.
+		// On reste très conservateur (>100) pour éviter d'être trop fragile face
+		// à l'évolution du repo upstream.
+		expect(withEncoder.length).toBeGreaterThan(100);
+	});
+
+	test.skipIf(!manifest)('downlinkExamples shape is well-formed when present', () => {
+		const withExamples = manifest!.devices.filter((d) => d.downlinkExamples?.length);
+		expect(withExamples.length).toBeGreaterThan(100);
+		for (const d of withExamples.slice(0, 20)) {
+			for (const ex of d.downlinkExamples!) {
+				expect(ex.input).toBeDefined();
+				expect(ex.input.data).toBeDefined();
+			}
+		}
+	});
+});
+
+describe('codec artifacts — encoder execution', () => {
+	const manifestPath = resolve(CODECS_DIR, 'manifest.json');
+	const manifest = existsSync(manifestPath)
+		? (JSON.parse(readFileSync(manifestPath, 'utf8')) as {
+				devices: Array<{
+					slug: string;
+					hasEncoder?: boolean;
+					downlinkExamples?: Array<{
+						description?: string;
+						input: { data: unknown; fPort?: number };
+						output?: { bytes: number[]; fPort?: number };
+					}>;
+				}>;
+			})
+		: null;
+
+	// On choisit aquascope-aqm comme golden encoder test : exemple bien défini
+	// (« Turn Valve on » → [7, 255], fPort 1) et codec court.
+	const SLUG_ENC = 'aquascope-aqm';
+	const aqm = manifest?.devices.find((d) => d.slug === SLUG_ENC);
+
+	const ttnSrc =
+		aqm && existsSync(resolve(CODECS_DIR, 'ttn-v3', `${SLUG_ENC}.js`))
+			? readArtifact('ttn-v3', SLUG_ENC)
+			: null;
+	const csSrc =
+		aqm && existsSync(resolve(CODECS_DIR, 'chirpstack-v4', `${SLUG_ENC}.js`))
+			? readArtifact('chirpstack-v4', SLUG_ENC)
+			: null;
+
+	function instantiateEncoder(
+		source: string
+	): (input: { data: unknown; fPort: number }) => unknown {
+		const fn = new Function(
+			`${source}\n;return (typeof encodeDownlink === 'function') ? encodeDownlink : null;`
+		)();
+		if (typeof fn !== 'function') {
+			throw new Error('encodeDownlink introuvable dans le codec');
+		}
+		return fn as (input: { data: unknown; fPort: number }) => unknown;
+	}
+
+	test.skipIf(!ttnSrc)('TTN file exposes encodeDownlink and matches YAML example', () => {
+		const fn = instantiateEncoder(ttnSrc!);
+		const ex = aqm!.downlinkExamples![0];
+		const out = fn({ data: ex.input.data, fPort: ex.input.fPort ?? 1 }) as {
+			bytes: number[];
+			fPort: number;
+		};
+		expect(out.bytes).toEqual(ex.output!.bytes);
+	});
+
+	test.skipIf(!csSrc)('ChirpStack file exposes encodeDownlink (top-level) and matches YAML example', () => {
+		const fn = instantiateEncoder(csSrc!);
+		const ex = aqm!.downlinkExamples![0];
+		const out = fn({ data: ex.input.data, fPort: ex.input.fPort ?? 1 }) as {
+			bytes: number[];
+			fPort: number;
+			warnings: string[];
+			errors: string[];
+		};
+		expect(out.bytes).toEqual(ex.output!.bytes);
+		expect(Array.isArray(out.warnings)).toBe(true);
+		expect(Array.isArray(out.errors)).toBe(true);
+	});
+
+	test.skipIf(!ttnSrc || !csSrc)('TTN and ChirpStack agree on encoded bytes', () => {
+		const ttnFn = instantiateEncoder(ttnSrc!);
+		const csFn = instantiateEncoder(csSrc!);
+		const ex = aqm!.downlinkExamples![0];
+		const ttnOut = ttnFn({ data: ex.input.data, fPort: ex.input.fPort ?? 1 }) as { bytes: number[] };
+		const csOut = csFn({ data: ex.input.data, fPort: ex.input.fPort ?? 1 }) as { bytes: number[] };
+		expect(csOut.bytes).toEqual(ttnOut.bytes);
 	});
 });

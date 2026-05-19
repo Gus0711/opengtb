@@ -1,17 +1,21 @@
 <script lang="ts">
 	import AlertTriangle from '@lucide/svelte/icons/alert-triangle';
-	import type { DecodeFailure } from '$lib/tools/decode/types';
+	import type { DecodeFailure, EncodeFailure } from '$lib/tools/decode/types';
 
-	let { failure }: { failure: DecodeFailure } = $props();
+	let { failure }: { failure: DecodeFailure | EncodeFailure } = $props();
 
 	const stageLabel = $derived.by(() => {
 		switch (failure.stage) {
 			case 'parse-payload':
 				return 'Payload invalide';
+			case 'parse-input':
+				return 'Données d\'entrée invalides';
 			case 'load-codec':
 				return 'Chargement du codec échoué';
 			case 'execute-codec':
 				return 'Décodage impossible';
+			case 'execute-encoder':
+				return 'Encodage impossible';
 		}
 	});
 </script>

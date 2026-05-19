@@ -1,37 +1,42 @@
-# Outil `decode` — décodeur LoRaWAN
+# Outil `decode` — décodeur & encodeur LoRaWAN
 
 Spécification consolidée après itération sur le brief initial.
 Source unique pour les décisions de périmètre. À mettre à jour si on rejoue un tour.
 
-## Périmètre V1
+## Périmètre
 
-Décodeur de payloads **LoRaWAN uplink uniquement**. Pas de downlink, pas
-de BACnet/Modbus, pas de mapping vers d'autres protocoles, pas
-d'historique, pas d'auth.
+Décodeur et encodeur de payloads **LoRaWAN uplink + downlink**. Pas de
+BACnet/Modbus, pas de mapping vers d'autres protocoles, pas d'historique,
+pas d'auth.
 
-**Pas de legacy** : seuls les codecs TTN v3 (`decodeUplink`) sont retenus.
-Les codecs Decoder() v2 (~1 % du repo) sont filtrés au build.
+**Pas de legacy** : seuls les codecs TTN v3 (`decodeUplink`, `encodeDownlink`)
+sont retenus. Les codecs Decoder() v2 (~1 % du repo) sont filtrés au build.
 
-L'utilisateur peut :
-1. choisir son device dans une liste alimentée par le repo TTN
-   `lorawan-devices` (ou choisir le device générique « Cayenne LPP ») ;
-2. **option A — récupérer le codec** : déplier l'accordéon sous le
+L'utilisateur peut, sur n'importe quel device sélectionné :
+1. **option A — récupérer le codec** : déplier l'accordéon sous le
    sélecteur, choisir l'onglet TTN v3 ou ChirpStack v4, copier/télécharger
-   le fichier prêt à coller dans son Network Server ;
-3. **option B — décoder une trame** : coller son payload (hex *ou* base64,
-   toggle explicite) + saisir le fPort + cliquer « Décoder » → voir le
-   résultat sous forme tableau clé/valeur et JSON brut pliable.
+   le fichier prêt à coller dans son Network Server. Le fichier inclut
+   `encodeDownlink` quand le vendor le fournit.
+2. **option B — décoder une trame uplink** : coller son payload (hex *ou*
+   base64, toggle explicite) + saisir le fPort + cliquer « Décoder » → voir
+   le résultat sous forme tableau clé/valeur et JSON brut pliable.
+3. **option C — encoder un downlink** (si `hasEncoder` sur le device) :
+   choisir un exemple dans les chips presets (issus du YAML TTN) ou
+   saisir directement l'objet structuré, ajuster le fPort, cliquer
+   « Encoder » → voir les bytes en hex, base64, fPort, copyables.
 
-Les deux options sont indépendantes : le codec est disponible dès la
-sélection du device, sans avoir à décoder une trame.
+Les trois options sont indépendantes : le codec est disponible dès la
+sélection du device, sans avoir à décoder/encoder. Le toggle « Décoder
+uplink » / « Encoder downlink » bascule l'éditeur ; il est désactivé pour
+les devices sans `encodeDownlink`.
 
-URL cible : `/outils/decode`.
+URL cible : `/outils/decode`. Mode encoder sélectionnable via `?mode=encode`.
 
 ## Décisions actées
 
 | Sujet | Décision | Raison |
 |---|---|---|
-| Encoder downlink | **Non** en V1 | Reporté V2, voir attendus V2 |
+| Encoder downlink | **Inclus** | Couverture mesurée : 466/898 devices avec `encodeDownlink`, 399 avec exemples cliquables. Top vendors couverts (Netvox 155, Milesight 79, Decentlab 59…). |
 | Isolation d'exécution | `new Function()` direct, main thread, try/catch + `setTimeout` de garde (~2 s) | Codecs TTN sont publics et bien rodés ; Worker apportait pas de vraie sandbox |
 | Source codecs | Repo TTN `TheThingsNetwork/lorawan-devices`, **clone + extraction lancés à la main**, output commité dans `static/data/lorawan-codecs/` | Évite un clone de plusieurs centaines de Mo à chaque build CI ; cohérent avec `svg` et `dju` |
 | Legacy v2 (`Decoder`) | **Exclu au build** | Repo TTN pousse les vendors à migrer ; on reste sur la signature v3 alignée TR013 |
@@ -166,13 +171,15 @@ static/data/lorawan-codecs/
 
 ## SEO
 
-- Title : « Décodeur Payload LoRaWAN — OpenGTB »
-- Description : « Décodez n'importe quel payload LoRaWAN dans le
-  navigateur. Plus de 3000 devices supportés depuis le repo TTN
-  lorawan-devices. Gratuit, sans inscription, exécution locale. »
-- Long-tail : « décoder payload LoRaWAN », « MClimate Vicki codec »,
-  « Milesight WT101 decode », « Cayenne LPP decoder », « TTN device
-  payload decoder ».
+- Title : « Décodeur & Encodeur Payload LoRaWAN — OpenGTB »
+- Description : « Décodez et encodez vos payloads LoRaWAN dans votre
+  navigateur. 900+ devices supportés depuis le repo TTN lorawan-devices.
+  Téléchargez le codec prêt pour TTN v3 ou ChirpStack v4. Gratuit,
+  sans inscription, calcul local. »
+- Long-tail : « décoder payload LoRaWAN », « encoder downlink LoRaWAN »,
+  « MClimate Vicki codec », « Milesight AM102 decode », « Netvox encoder »,
+  « Cayenne LPP decoder », « ChirpStack codec javascript », « TTN payload
+  formatter ».
 
 ## Crédit & licence
 
@@ -182,11 +189,11 @@ static/data/lorawan-codecs/
 - Mention de la date du snapshot dans le manifest et affichée dans le
   footer de l'outil.
 
-## Hors-scope V1 — attendus V2
+## Hors-scope — attendus V3+
 
-À traiter lorsque V1 est en prod et que la demande remonte.
+À traiter lorsque la V2 (encoder) est en prod et que la demande remonte.
 
-1. **Encoder downlink** :
+1. ~~**Encoder downlink**~~ : **shipped en V2** (mai 2026).
    - Toggle uplink/downlink dans l'UI.
    - Appel `encodeDownlink({ data, fPort })` (format objet → bytes).
    - Affichage payload encodé en hex et base64 + bouton copier.

@@ -4,6 +4,7 @@
 // Vendor       : Arwin Technology Limited
 // Device       : LRS2M001-4P3P - Power Monitoring Sensor
 // fPort(s)     : 8, 10, 16, 50, 55, 57, 60
+// Fonctions    : decodeUplink + encodeDownlink
 // Source       : TheThingsNetwork/lorawan-devices @ 26f5522b7eb8
 //                https://github.com/TheThingsNetwork/lorawan-devices/blob/26f5522b7eb894f139c68971b9183413aa2b2bea/vendor/arwin-technology/lrs2m001-4xxx.js
 // Préparé par  : OpenGTB — https://opengtb.fr/outils/decode
@@ -13,6 +14,7 @@
 //   1. Console TTN → Application → Payload formatters
 //   2. Type : « Custom JavaScript formatter »
 //   3. Onglet « Uplink » → coller ce fichier intégralement
+//   4. (optionnel) Onglet « Downlink » → encodeDownlink est dans le même fichier
 // ─────────────────────────────────────────────────────────────────────
 
 var lrs2m001_meter_events = ['heartbeat/button', 'bakcup power', 'ph_C_under_V', 'ph_C_over_V', 'ph_B_under_V', 'ph_B_over_V', 'ph_A_under_V', 'ph_A_over_V', 'backup_batt_low'];

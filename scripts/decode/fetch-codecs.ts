@@ -60,6 +60,19 @@ interface ManifestExample {
 	bytes: number[];
 }
 
+/** Exemple de downlink prêt à pré-remplir l'éditeur d'encodage. */
+interface ManifestDownlinkExample {
+	description?: string;
+	input: {
+		data: unknown;
+		fPort?: number;
+	};
+	output?: {
+		bytes: number[];
+		fPort?: number;
+	};
+}
+
 interface ManifestDevice {
 	slug: string;
 	vendorId: string;
@@ -77,8 +90,12 @@ interface ManifestDevice {
 		ttnV3: string;
 		chirpstackV4: string;
 	};
+	/** True si le codec expose une fonction encodeDownlink utilisable. */
+	hasEncoder?: boolean;
 	productURL?: string;
 	examples: ManifestExample[];
+	/** Exemples downlink issus du YAML (presets cliquables pour l'éditeur d'encodage). */
+	downlinkExamples?: ManifestDownlinkExample[];
 }
 
 interface ManifestWarning {
@@ -137,6 +154,106 @@ function detectCodecFormat(source: string): 'ttn-v3' | 'ttn-v2' | null {
 	return null;
 }
 
+/**
+ * Détecte la présence d'une fonction `encodeDownlink` exécutable dans le
+ * source JS — top-level ou via namespace `codec.encodeDownlink`.
+ */
+function hasEncodeDownlinkFn(source: string): boolean {
+	return /(?:\b(?:function|export\s+function)\s+encodeDownlink\b)|(?:\b(?:const|let|var)\s+encodeDownlink\s*=)|(?:\bcodec\.encodeDownlink\s*=)/.test(
+		source
+	);
+}
+
+/**
+ * Combine le source decoder et le source encoder dans un seul fichier
+ * utilisable côté TTN (top-level `decodeUplink` + `encodeDownlink`) :
+ *   - si l'encoder est dans le même fichier que le decoder (ou absent),
+ *     on renvoie le source tel quel (cas le plus courant) ;
+ *   - sinon on enrobe chaque fichier dans son propre IIFE qui capture la
+ *     fonction recherchée, puis on expose deux fonctions top-level qui
+ *     délèguent. Ça empêche les collisions quand les deux fichiers
+ *     déclarent eux-mêmes `decodeUplink`/`encodeDownlink` (cas Aquascope
+ *     aqm.js + aqs.js, Decentlab, etc.).
+ */
+function buildCombinedSource(
+	decoderSrc: string,
+	encoderSrc: string | null,
+	encoderFileName: string | null
+): string {
+	if (!encoderSrc) return decoderSrc;
+	return [
+		'// Codec OpenGTB — combinaison decoder + encoder (fichiers TTN distincts).',
+		'// Chaque source TTN est encapsulé dans son propre IIFE pour éviter les',
+		'// collisions quand chaque fichier déclare sa propre `decodeUplink`.',
+		'var __ogtb_decode_uplink;',
+		'var __ogtb_encode_downlink;',
+		'',
+		'// ─── Source decoder (TTN uplinkDecoder) ────────────────────────────',
+		'(function () {',
+		decoderSrc.trimEnd(),
+		'',
+		"\tif (typeof decodeUplink === 'function') {",
+		'\t\t__ogtb_decode_uplink = decodeUplink;',
+		"\t} else if (typeof codec !== 'undefined' && codec && typeof codec.decodeUplink === 'function') {",
+		'\t\t__ogtb_decode_uplink = codec.decodeUplink;',
+		'\t}',
+		'})();',
+		'',
+		`// ─── Source encoder (TTN downlinkEncoder : ${encoderFileName}) ─────────`,
+		'(function () {',
+		encoderSrc.trimEnd(),
+		'',
+		"\tif (typeof encodeDownlink === 'function') {",
+		'\t\t__ogtb_encode_downlink = encodeDownlink;',
+		"\t} else if (typeof codec !== 'undefined' && codec && typeof codec.encodeDownlink === 'function') {",
+		'\t\t__ogtb_encode_downlink = codec.encodeDownlink;',
+		'\t}',
+		'})();',
+		'',
+		'function decodeUplink(input) {',
+		"\tif (typeof __ogtb_decode_uplink !== 'function') {",
+		"\t\treturn { data: {}, warnings: [], errors: ['decodeUplink TTN introuvable dans le codec source'] };",
+		'\t}',
+		'\treturn __ogtb_decode_uplink(input);',
+		'}',
+		'',
+		'function encodeDownlink(input) {',
+		"\tif (typeof __ogtb_encode_downlink !== 'function') {",
+		"\t\treturn { bytes: [], fPort: input && input.fPort, warnings: [], errors: ['encodeDownlink TTN introuvable dans le codec source'] };",
+		'\t}',
+		'\treturn __ogtb_encode_downlink(input);',
+		'}',
+		''
+	].join('\n');
+}
+
+function normalizeDownlinkExamples(rawExamples: unknown): ManifestDownlinkExample[] {
+	if (!Array.isArray(rawExamples)) return [];
+	const out: ManifestDownlinkExample[] = [];
+	for (const ex of rawExamples) {
+		if (!ex || typeof ex !== 'object') continue;
+		const exObj = ex as Record<string, unknown>;
+		const input = exObj.input as Record<string, unknown> | undefined;
+		if (!input || input.data === undefined) continue;
+		const entry: ManifestDownlinkExample = {
+			description: typeof exObj.description === 'string' ? exObj.description : undefined,
+			input: {
+				data: input.data,
+				fPort: typeof input.fPort === 'number' ? input.fPort : undefined
+			}
+		};
+		const output = exObj.output as Record<string, unknown> | undefined;
+		if (output && Array.isArray(output.bytes)) {
+			entry.output = {
+				bytes: (output.bytes as unknown[]).filter((b): b is number => typeof b === 'number'),
+				fPort: typeof output.fPort === 'number' ? output.fPort : undefined
+			};
+		}
+		out.push(entry);
+	}
+	return out;
+}
+
 function getRepoCommit(): { sha: string; date: string } {
 	try {
 		const sha = execSync('git rev-parse HEAD', { cwd: CACHE_DIR, encoding: 'utf8' }).trim();
@@ -178,6 +295,10 @@ interface HeaderOpts {
 	deviceName: string;
 	fPortsHint: string;
 	sourcePath: string;
+	/** Présent si le codec encoder downlink vient d'un fichier différent. */
+	encoderSourcePath?: string;
+	/** True si `encodeDownlink` est exposé par le codec combiné. */
+	hasEncoder: boolean;
 	commit: string;
 }
 
@@ -185,15 +306,22 @@ const RULE = '──────────────────────
 
 function buildTtnV3Header(o: HeaderOpts): string {
 	const url = `${UPSTREAM_REPO}/blob/${o.commit}/${o.sourcePath}`;
-	return [
+	const lines = [
 		`// ${RULE}`,
 		`// Codec LoRaWAN — TheThingsStack (TTN v3)`,
 		`// ${RULE}`,
 		`// Vendor       : ${o.vendorName}`,
 		`// Device       : ${o.deviceName}`,
 		`// fPort(s)     : ${o.fPortsHint}`,
+		`// Fonctions    : decodeUplink${o.hasEncoder ? ' + encodeDownlink' : ''}`,
 		`// Source       : TheThingsNetwork/lorawan-devices @ ${o.commit.slice(0, 12)}`,
-		`//                ${url}`,
+		`//                ${url}`
+	];
+	if (o.encoderSourcePath) {
+		const encUrl = `${UPSTREAM_REPO}/blob/${o.commit}/${o.encoderSourcePath}`;
+		lines.push(`//                ${encUrl}`);
+	}
+	lines.push(
 		`// Préparé par  : OpenGTB — ${OPENGTB_URL}`,
 		`// Licence      : Apache-2.0 (per upstream repo)`,
 		`//`,
@@ -201,23 +329,34 @@ function buildTtnV3Header(o: HeaderOpts): string {
 		`//   1. Console TTN → Application → Payload formatters`,
 		`//   2. Type : « Custom JavaScript formatter »`,
 		`//   3. Onglet « Uplink » → coller ce fichier intégralement`,
+		o.hasEncoder
+			? `//   4. (optionnel) Onglet « Downlink » → encodeDownlink est dans le même fichier`
+			: `//   4. (downlink non fourni par ce vendor)`,
 		`// ${RULE}`,
 		'',
 		''
-	].join('\n');
+	);
+	return lines.join('\n');
 }
 
 function buildChirpstackV4Header(o: HeaderOpts): string {
 	const url = `${UPSTREAM_REPO}/blob/${o.commit}/${o.sourcePath}`;
-	return [
+	const lines = [
 		`// ${RULE}`,
 		`// Codec LoRaWAN — ChirpStack v4`,
 		`// ${RULE}`,
 		`// Vendor       : ${o.vendorName}`,
 		`// Device       : ${o.deviceName}`,
 		`// fPort(s)     : ${o.fPortsHint}`,
+		`// Fonctions    : decodeUplink${o.hasEncoder ? ' + encodeDownlink' : ''}`,
 		`// Source       : TheThingsNetwork/lorawan-devices @ ${o.commit.slice(0, 12)}`,
-		`//                ${url}`,
+		`//                ${url}`
+	];
+	if (o.encoderSourcePath) {
+		const encUrl = `${UPSTREAM_REPO}/blob/${o.commit}/${o.encoderSourcePath}`;
+		lines.push(`//                ${encUrl}`);
+	}
+	lines.push(
 		`// Adapté par   : OpenGTB — ${OPENGTB_URL}`,
 		`// Licence      : Apache-2.0 (per upstream repo)`,
 		`//`,
@@ -227,12 +366,15 @@ function buildChirpstackV4Header(o: HeaderOpts): string {
 		`//   3. Coller ce fichier intégralement dans « Codec functions »`,
 		`//`,
 		`// Note : le codec TTN d'origine est conservé intact dans un IIFE ;`,
-		`// la fonction decodeUplink exposée à ChirpStack le réinvoque et normalise`,
-		`// la sortie au format { data, warnings, errors } attendu par v4 (TR013).`,
+		`// decodeUplink${o.hasEncoder ? ' et encodeDownlink sont' : ' est'} ré-exposé${
+			o.hasEncoder ? 's' : ''
+		} au top-level et`,
+		`// normalisé${o.hasEncoder ? 's' : ''} au format TR013 attendu par v4.`,
 		`// ${RULE}`,
 		'',
 		''
-	].join('\n');
+	);
+	return lines.join('\n');
 }
 
 /**
@@ -249,13 +391,15 @@ function sanitizeForChirpstack(src: string): string {
 }
 
 /**
- * Enrobe le source TTN dans un IIFE qui capture `decodeUplink` (top-level
- * ou via `codec.decodeUplink`) puis expose une fonction `decodeUplink`
- * top-level conforme au format ChirpStack v4 (TR013).
+ * Enrobe le source TTN dans un IIFE qui capture `decodeUplink` (et
+ * éventuellement `encodeDownlink`) — top-level ou via namespace `codec.*`
+ * — puis expose une fonction `decodeUplink` (et au besoin `encodeDownlink`)
+ * top-level normalisée au format ChirpStack v4 (TR013).
  */
-function wrapForChirpstack(sanitizedSrc: string): string {
-	return [
-		'var __opengtb_ttn_decode;',
+function wrapForChirpstack(sanitizedSrc: string, hasEncoder: boolean): string {
+	const lines: string[] = ['var __opengtb_ttn_decode;'];
+	if (hasEncoder) lines.push('var __opengtb_ttn_encode;');
+	lines.push(
 		'(function () {',
 		'\t// ─── Source TTN v3 (intact) ─────────────────────────────────────────',
 		sanitizedSrc.trimEnd(),
@@ -265,7 +409,18 @@ function wrapForChirpstack(sanitizedSrc: string): string {
 		'\t\t? decodeUplink',
 		"\t\t: (typeof codec !== 'undefined' && codec && typeof codec.decodeUplink === 'function')",
 		'\t\t\t? codec.decodeUplink',
-		'\t\t\t: null;',
+		'\t\t\t: null;'
+	);
+	if (hasEncoder) {
+		lines.push(
+			"\t__opengtb_ttn_encode = (typeof encodeDownlink === 'function')",
+			'\t\t? encodeDownlink',
+			"\t\t: (typeof codec !== 'undefined' && codec && typeof codec.encodeDownlink === 'function')",
+			'\t\t\t? codec.encodeDownlink',
+			'\t\t\t: null;'
+		);
+	}
+	lines.push(
 		'})();',
 		'',
 		'function decodeUplink(input) {',
@@ -286,7 +441,30 @@ function wrapForChirpstack(sanitizedSrc: string): string {
 		'\t};',
 		'}',
 		''
-	].join('\n');
+	);
+	if (hasEncoder) {
+		lines.push(
+			'function encodeDownlink(input) {',
+			"\tif (typeof __opengtb_ttn_encode !== 'function') {",
+			"\t\treturn { bytes: [], fPort: input && input.fPort, warnings: [], errors: ['encodeDownlink TTN introuvable dans le codec source'] };",
+			'\t}',
+			'\tvar r;',
+			'\ttry {',
+			'\t\tr = __opengtb_ttn_encode(input) || {};',
+			'\t} catch (e) {',
+			'\t\treturn { bytes: [], fPort: input && input.fPort, warnings: [], errors: [(e && e.message) ? e.message : String(e)] };',
+			'\t}',
+			'\treturn {',
+			'\t\tbytes: Array.isArray(r.bytes) ? r.bytes : [],',
+			"\t\tfPort: typeof r.fPort === 'number' ? r.fPort : (input && input.fPort),",
+			'\t\twarnings: Array.isArray(r.warnings) ? r.warnings : [],',
+			'\t\terrors: Array.isArray(r.errors) ? r.errors : []',
+			'\t};',
+			'}',
+			''
+		);
+	}
+	return lines.join('\n') + '\n';
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -319,6 +497,14 @@ interface DeviceYaml {
 
 interface CodecYaml {
 	uplinkDecoder?: {
+		fileName?: string;
+		examples?: unknown[];
+	};
+	downlinkEncoder?: {
+		fileName?: string;
+		examples?: unknown[];
+	};
+	downlinkDecoder?: {
 		fileName?: string;
 		examples?: unknown[];
 	};
@@ -420,6 +606,33 @@ async function processDevice(
 		return null;
 	}
 
+	// Encoder downlink : YAML + JS éventuellement dans un fichier séparé.
+	// Beaucoup de vendors (Decentlab par ex.) factorisent l'encoder dans un
+	// fichier commun à toute leur gamme.
+	const downEnc = codecMeta.downlinkEncoder;
+	const downlinkExamples = normalizeDownlinkExamples(downEnc?.examples);
+	let extraEncoderJs: string | null = null;
+	let encoderSourcePath: string | undefined;
+	if (downEnc?.fileName && downEnc.fileName !== upDec.fileName) {
+		const encPath = resolve(vendorDir, downEnc.fileName);
+		if (existsSync(encPath)) {
+			extraEncoderJs = await readFile(encPath, 'utf8');
+			encoderSourcePath = `vendor/${vendor.id}/${downEnc.fileName}`;
+		} else {
+			warnings.push({
+				vendor: vendor.id,
+				device: deviceId,
+				reason: `encoder js missing: ${downEnc.fileName}`
+			});
+		}
+	}
+	const combinedSource = buildCombinedSource(
+		jsSource,
+		extraEncoderJs,
+		downEnc?.fileName ?? null
+	);
+	const hasEncoder = hasEncodeDownlinkFn(combinedSource);
+
 	// ttn-v3 : on génère les deux artefacts téléchargeables.
 	const slug = `${vendor.id}-${deviceId}`;
 	const sourcePath = `vendor/${vendor.id}/${upDec.fileName}`;
@@ -431,12 +644,15 @@ async function processDevice(
 		deviceName: device.name ?? deviceId,
 		fPortsHint,
 		sourcePath,
+		encoderSourcePath,
+		hasEncoder,
 		commit: commitSha
 	};
 
-	const ttnContent = buildTtnV3Header(headerOpts) + jsSource;
+	const ttnContent = buildTtnV3Header(headerOpts) + combinedSource;
 	const csContent =
-		buildChirpstackV4Header(headerOpts) + wrapForChirpstack(sanitizeForChirpstack(jsSource));
+		buildChirpstackV4Header(headerOpts) +
+		wrapForChirpstack(sanitizeForChirpstack(combinedSource), hasEncoder);
 
 	const ttnFile = `ttn-v3/${slug}.js`;
 	const csFile = `chirpstack-v4/${slug}.js`;
@@ -458,8 +674,10 @@ async function processDevice(
 			ttnV3: ttnFile,
 			chirpstackV4: csFile
 		},
+		hasEncoder,
 		productURL: device.productURL,
-		examples
+		examples,
+		downlinkExamples: downlinkExamples.length > 0 ? downlinkExamples : undefined
 	};
 }
 

@@ -4,6 +4,7 @@
 // Vendor       : RAKwireless Technology Co.
 // Device       : Wisblock Kit 1 - Indoor Ambient Monitor
 // fPort(s)     : non spécifié dans le profil
+// Fonctions    : decodeUplink
 // Source       : TheThingsNetwork/lorawan-devices @ 26f5522b7eb8
 //                https://github.com/TheThingsNetwork/lorawan-devices/blob/26f5522b7eb894f139c68971b9183413aa2b2bea/vendor/rakwireless/decoder-rakwireless-standardized-payload.js
 // Préparé par  : OpenGTB — https://opengtb.fr/outils/decode
@@ -13,6 +14,7 @@
 //   1. Console TTN → Application → Payload formatters
 //   2. Type : « Custom JavaScript formatter »
 //   3. Onglet « Uplink » → coller ce fichier intégralement
+//   4. (downlink non fourni par ce vendor)
 // ─────────────────────────────────────────────────────────────────────
 
 // Source:

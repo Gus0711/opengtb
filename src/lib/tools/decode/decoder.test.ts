@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, test, vi } from 'vitest';
-import { _clearCache, buildRows, decode } from './decoder';
+import { _clearCache, buildRows, decode, encode } from './decoder';
 import type { ManifestDevice } from './types';
 
 const cayenneDevice: ManifestDevice = {
@@ -53,6 +53,23 @@ const brokenDevice: ManifestDevice = {
 	examples: []
 };
 
+const encoderDevice: ManifestDevice = {
+	slug: 'test-encoder',
+	vendorId: 'test',
+	vendorName: 'Test',
+	deviceId: 'encoder',
+	name: 'Test Encoder',
+	regions: [],
+	fPorts: [],
+	codecFile: 'ttn-v3/test-encoder.js',
+	downloads: { ttnV3: 'ttn-v3/test-encoder.js', chirpstackV4: 'chirpstack-v4/test-encoder.js' },
+	hasEncoder: true,
+	examples: [],
+	downlinkExamples: [
+		{ description: 'Open valve', input: { data: { cmd: 'open' } }, output: { bytes: [1], fPort: 10 } }
+	]
+};
+
 const SOURCES: Record<string, string> = {
 	'ttn-v3/test-v3.js': `
 		function decodeUplink(input) {
@@ -75,6 +92,20 @@ const SOURCES: Record<string, string> = {
 	'ttn-v3/test-broken.js': `
 		// Aucune fonction decodeUplink ni codec.decodeUplink
 		var x = 1 + 1;
+	`,
+	'ttn-v3/test-encoder.js': `
+		function decodeUplink(input) {
+			return { data: { echo: input.bytes[0] }, warnings: [], errors: [] };
+		}
+		function encodeDownlink(input) {
+			if (input.data && input.data.cmd === 'open') {
+				return { bytes: [1], fPort: input.fPort, warnings: [], errors: [] };
+			}
+			if (input.data && input.data.cmd === 'close') {
+				return { bytes: [0], fPort: input.fPort, warnings: [], errors: [] };
+			}
+			return { bytes: [], fPort: input.fPort, warnings: [], errors: ['unknown cmd'] };
+		}
 	`
 };
 
@@ -190,6 +221,65 @@ describe('decode — error paths', () => {
 		expect(r.ok).toBe(false);
 		if (r.ok) return;
 		expect(r.stage).toBe('load-codec');
+	});
+});
+
+describe('encode — ttn v3', () => {
+	test('encodes a known command and returns bytes', async () => {
+		const r = await encode({
+			device: encoderDevice,
+			data: { cmd: 'open' },
+			fPort: 10
+		});
+		expect(r.ok).toBe(true);
+		if (!r.ok) return;
+		expect(r.bytes).toEqual([1]);
+		expect(r.fPort).toBe(10);
+	});
+
+	test('different command yields different bytes', async () => {
+		const r = await encode({
+			device: encoderDevice,
+			data: { cmd: 'close' },
+			fPort: 10
+		});
+		expect(r.ok).toBe(true);
+		if (!r.ok) return;
+		expect(r.bytes).toEqual([0]);
+	});
+
+	test('reports execute-encoder failure when codec returns empty bytes + errors', async () => {
+		const r = await encode({
+			device: encoderDevice,
+			data: { cmd: 'unsupported' },
+			fPort: 10
+		});
+		expect(r.ok).toBe(false);
+		if (r.ok) return;
+		expect(r.stage).toBe('execute-encoder');
+		expect(r.codecErrors).toContain('unknown cmd');
+	});
+
+	test('fails when device has no encoder (Cayenne LPP internal)', async () => {
+		const r = await encode({
+			device: cayenneDevice,
+			data: { whatever: 1 },
+			fPort: 10
+		});
+		expect(r.ok).toBe(false);
+		if (r.ok) return;
+		expect(r.stage).toBe('load-codec');
+	});
+
+	test('fails on fPort out of range', async () => {
+		const r = await encode({
+			device: encoderDevice,
+			data: { cmd: 'open' },
+			fPort: 0
+		});
+		expect(r.ok).toBe(false);
+		if (r.ok) return;
+		expect(r.stage).toBe('parse-input');
 	});
 });
 

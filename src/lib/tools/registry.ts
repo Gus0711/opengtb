@@ -33,11 +33,12 @@ export const TOOLS: Tool[] = [
 	{
 		slug: 'decode',
 		name: 'decode',
-		title: 'Décodeur Payload LoRaWAN',
-		description: 'Décodeur payload LoRaWAN — 900+ devices TTN, Cayenne LPP, hex/base64.',
+		title: 'Décodeur & Encodeur Payload LoRaWAN',
+		description:
+			'Décoder et encoder un payload LoRaWAN — 900+ devices TTN, Cayenne LPP, hex/base64. Codec TTN v3 / ChirpStack v4 téléchargeable.',
 		sector: 'briques-techniques',
 		icon: Radio,
-		tags: ['lorawan', 'ttn', 'hex', 'base64'],
+		tags: ['lorawan', 'ttn', 'chirpstack', 'encoder', 'downlink', 'hex', 'base64'],
 		status: 'done'
 	},
 	{

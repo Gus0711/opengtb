@@ -4,6 +4,7 @@
 // Vendor       : Fencyboy GmbH
 // Device       : Fency boy - Electric Fence Sensor
 // fPort(s)     : 1
+// Fonctions    : decodeUplink
 // Source       : TheThingsNetwork/lorawan-devices @ 26f5522b7eb8
 //                https://github.com/TheThingsNetwork/lorawan-devices/blob/26f5522b7eb894f139c68971b9183413aa2b2bea/vendor/fencyboy/fencyboy-v1-3-1_payload_decoder_ttn.js
 // Adapté par   : OpenGTB — https://opengtb.fr/outils/decode
@@ -15,8 +16,8 @@
 //   3. Coller ce fichier intégralement dans « Codec functions »
 //
 // Note : le codec TTN d'origine est conservé intact dans un IIFE ;
-// la fonction decodeUplink exposée à ChirpStack le réinvoque et normalise
-// la sortie au format { data, warnings, errors } attendu par v4 (TR013).
+// decodeUplink est ré-exposé au top-level et
+// normalisé au format TR013 attendu par v4.
 // ─────────────────────────────────────────────────────────────────────
 
 var __opengtb_ttn_decode;
@@ -255,3 +256,4 @@ function decodeUplink(input) {
 		errors: Array.isArray(r.errors) ? r.errors : []
 	};
 }
+

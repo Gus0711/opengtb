@@ -4,6 +4,7 @@
 // Vendor       : micropelt
 // Device       : MLR003 - LoRaWAN® TRV
 // fPort(s)     : 1, 2, 3, 4, 5, 6, 7, 15
+// Fonctions    : decodeUplink + encodeDownlink
 // Source       : TheThingsNetwork/lorawan-devices @ 26f5522b7eb8
 //                https://github.com/TheThingsNetwork/lorawan-devices/blob/26f5522b7eb894f139c68971b9183413aa2b2bea/vendor/micropelt/mlr003.js
 // Adapté par   : OpenGTB — https://opengtb.fr/outils/decode
@@ -15,11 +16,12 @@
 //   3. Coller ce fichier intégralement dans « Codec functions »
 //
 // Note : le codec TTN d'origine est conservé intact dans un IIFE ;
-// la fonction decodeUplink exposée à ChirpStack le réinvoque et normalise
-// la sortie au format { data, warnings, errors } attendu par v4 (TR013).
+// decodeUplink et encodeDownlink sont ré-exposés au top-level et
+// normalisés au format TR013 attendu par v4.
 // ─────────────────────────────────────────────────────────────────────
 
 var __opengtb_ttn_decode;
+var __opengtb_ttn_encode;
 (function () {
 	// ─── Source TTN v3 (intact) ─────────────────────────────────────────
 // Constants for bit masks and repeated values
@@ -867,6 +869,11 @@ function encodeDownlink(input) {
 		: (typeof codec !== 'undefined' && codec && typeof codec.decodeUplink === 'function')
 			? codec.decodeUplink
 			: null;
+	__opengtb_ttn_encode = (typeof encodeDownlink === 'function')
+		? encodeDownlink
+		: (typeof codec !== 'undefined' && codec && typeof codec.encodeDownlink === 'function')
+			? codec.encodeDownlink
+			: null;
 })();
 
 function decodeUplink(input) {
@@ -886,3 +893,22 @@ function decodeUplink(input) {
 		errors: Array.isArray(r.errors) ? r.errors : []
 	};
 }
+
+function encodeDownlink(input) {
+	if (typeof __opengtb_ttn_encode !== 'function') {
+		return { bytes: [], fPort: input && input.fPort, warnings: [], errors: ['encodeDownlink TTN introuvable dans le codec source'] };
+	}
+	var r;
+	try {
+		r = __opengtb_ttn_encode(input) || {};
+	} catch (e) {
+		return { bytes: [], fPort: input && input.fPort, warnings: [], errors: [(e && e.message) ? e.message : String(e)] };
+	}
+	return {
+		bytes: Array.isArray(r.bytes) ? r.bytes : [],
+		fPort: typeof r.fPort === 'number' ? r.fPort : (input && input.fPort),
+		warnings: Array.isArray(r.warnings) ? r.warnings : [],
+		errors: Array.isArray(r.errors) ? r.errors : []
+	};
+}
+
