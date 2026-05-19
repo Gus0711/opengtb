@@ -30,35 +30,46 @@
 </script>
 
 <div>
-	<div class="mb-1.5 flex items-center justify-between gap-2">
-		<label
-			for="decode-payload-input"
-			class="text-text-soft block font-mono text-[11.5px] tracking-wide uppercase"
-		>
-			Payload
-		</label>
-		<div role="radiogroup" aria-label="Format de payload" class="inline-flex font-mono text-[11px]">
+	<label
+		for="decode-payload-input"
+		class="text-text-soft mb-1.5 block font-mono text-[11.5px] tracking-wide uppercase"
+	>
+		Payload
+	</label>
+
+	<!-- Format toggle, large et bien marqué : c'est le choix le plus critique avant
+	     de coller la trame. Hex et base64 partagent souvent des caractères. -->
+	<div
+		class="border-border bg-card mb-2 rounded-md border p-1.5"
+		role="radiogroup"
+		aria-label="Format du payload"
+	>
+		<div class="flex items-stretch gap-1.5">
 			<button
 				type="button"
 				role="radio"
 				aria-checked={format === 'hex'}
 				onclick={() => setFormat('hex')}
-				class="rounded-l border px-2 py-1 transition-colors {format === 'hex'
-					? 'bg-primary text-primary-foreground border-primary'
-					: 'border-border text-text-soft hover:text-foreground'}"
+				class="flex flex-1 flex-col items-center justify-center gap-0.5 rounded-sm px-3 py-2 font-mono transition-colors {format ===
+				'hex'
+					? 'bg-primary text-primary-foreground'
+					: 'text-text-soft hover:bg-line-soft/40 hover:text-foreground'}"
 			>
-				hex
+				<span class="text-[13px] font-semibold tracking-wide">hex</span>
+				<span class="text-[10.5px] tabular-nums opacity-80">0a 1f 7d…</span>
 			</button>
 			<button
 				type="button"
 				role="radio"
 				aria-checked={format === 'base64'}
 				onclick={() => setFormat('base64')}
-				class="-ml-px rounded-r border px-2 py-1 transition-colors {format === 'base64'
-					? 'bg-primary text-primary-foreground border-primary'
-					: 'border-border text-text-soft hover:text-foreground'}"
+				class="flex flex-1 flex-col items-center justify-center gap-0.5 rounded-sm px-3 py-2 font-mono transition-colors {format ===
+				'base64'
+					? 'bg-primary text-primary-foreground'
+					: 'text-text-soft hover:bg-line-soft/40 hover:text-foreground'}"
 			>
-				base64
+				<span class="text-[13px] font-semibold tracking-wide">base64</span>
+				<span class="text-[10.5px] opacity-80">Ch99…</span>
 			</button>
 		</div>
 	</div>
@@ -82,7 +93,7 @@
 		aria-live="polite"
 	>
 		{#if parsed.ok}
-			<span class="text-text-dim">{parsed.bytes} octets</span>
+			<span class="text-text-dim">{parsed.bytes} octets · {format}</span>
 		{:else if parsed.error}
 			<span class="text-destructive">{parsed.error}</span>
 		{:else}
