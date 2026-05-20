@@ -4,9 +4,10 @@
 // Vendor       : MClimate
 // Device       : Vicki - Smart Radiator Thermostat
 // fPort(s)     : 1
-// Fonctions    : decodeUplink
+// Fonctions    : decodeUplink + encodeDownlink
 // Source       : TheThingsNetwork/lorawan-devices @ 26f5522b7eb8
 //                https://github.com/TheThingsNetwork/lorawan-devices/blob/26f5522b7eb894f139c68971b9183413aa2b2bea/vendor/mclimate/vicki.js
+//                https://github.com/TheThingsNetwork/lorawan-devices/blob/26f5522b7eb894f139c68971b9183413aa2b2bea/scripts/decode/overrides/mclimate/vicki-encoder.js
 // Adapté par   : OpenGTB — https://opengtb.fr/outils/decode
 // Licence      : Apache-2.0 (per upstream repo)
 //
@@ -16,13 +17,22 @@
 //   3. Coller ce fichier intégralement dans « Codec functions »
 //
 // Note : le codec TTN d'origine est conservé intact dans un IIFE ;
-// decodeUplink est ré-exposé au top-level et
-// normalisé au format TR013 attendu par v4.
+// decodeUplink et encodeDownlink sont ré-exposés au top-level et
+// normalisés au format TR013 attendu par v4.
 // ─────────────────────────────────────────────────────────────────────
 
 var __opengtb_ttn_decode;
+var __opengtb_ttn_encode;
 (function () {
 	// ─── Source TTN v3 (intact) ─────────────────────────────────────────
+// Codec OpenGTB — combinaison decoder + encoder (fichiers TTN distincts).
+// Chaque source TTN est encapsulé dans son propre IIFE pour éviter les
+// collisions quand chaque fichier déclare sa propre `decodeUplink`.
+var __ogtb_decode_uplink;
+var __ogtb_encode_downlink;
+
+// ─── Source decoder (TTN uplinkDecoder) ────────────────────────────
+(function () {
 function decodeUplink(input) {
     var bytes = input.bytes;
     var data = {};
@@ -432,12 +442,173 @@ function normalizeUplink(input) {
     warnings: warnings
   };
 }
+
+	if (typeof decodeUplink === 'function') {
+		__ogtb_decode_uplink = decodeUplink;
+	} else if (typeof codec !== 'undefined' && codec && typeof codec.decodeUplink === 'function') {
+		__ogtb_decode_uplink = codec.decodeUplink;
+	}
+})();
+
+// ─── Source encoder (TTN downlinkEncoder : null) ─────────
+(function () {
+// MClimate Vicki — encoder downlink (override OpenGTB)
+//
+// TTN ne livre pas d'encoder pour la gamme MClimate. Cette implémentation
+// est portée à la main depuis le package public MClimate :
+//   https://github.com/MClimate/mclimate-payload-helper (Licence ISC).
+//
+// Style Milesight-flat pour que l'extracteur de schéma d'opengtb génère
+// automatiquement le formulaire (chaque commande = `if ("X" in payload)` +
+// setter typé `throw new Error("X must be …")`).
+//
+// Commandes couvertes (les plus utilisées en intégration GTB) :
+//   - recalibrate_motor            : recalibre la course du moteur
+//   - force_close                  : ferme la vanne en force (purge)
+//   - device_reset                 : reboot du device
+//   - set_target_temperature       : consigne de température (5–30 °C, 0.1 °C si float)
+//   - set_child_lock               : verrou enfant on/off
+//   - set_keep_alive               : période d'envoi périodique (mn, 0–255)
+//   - set_open_window              : détection fenêtre ouverte (objet)
+//
+// Pour étendre, ajouter un `if ("nouvelle_commande" in payload)` + le setter
+// correspondant. Le schéma sera ré-extrait au prochain `npm run fetch-codecs`.
+
+function encodeDownlink(input) {
+	var payload = (input && input.data) || {};
+	var bytes = [];
+
+	if ("recalibrate_motor" in payload) {
+		bytes = bytes.concat(recalibrateMotor(payload.recalibrate_motor));
+	}
+	if ("force_close" in payload) {
+		bytes = bytes.concat(forceClose(payload.force_close));
+	}
+	if ("device_reset" in payload) {
+		bytes = bytes.concat(deviceReset(payload.device_reset));
+	}
+	if ("set_target_temperature" in payload) {
+		bytes = bytes.concat(setTargetTemperature(payload.set_target_temperature));
+	}
+	if ("set_child_lock" in payload) {
+		bytes = bytes.concat(setChildLock(payload.set_child_lock));
+	}
+	if ("set_keep_alive" in payload) {
+		bytes = bytes.concat(setKeepAlive(payload.set_keep_alive));
+	}
+	if ("set_open_window" in payload) {
+		bytes = bytes.concat(setOpenWindow(payload.set_open_window));
+	}
+
+	return { fPort: 1, bytes: bytes, warnings: [], errors: [] };
+}
+
+function recalibrateMotor(flag) {
+	if (typeof flag !== "boolean") {
+		throw new Error("recalibrate_motor must be a boolean");
+	}
+	return flag ? [0x03] : [];
+}
+
+function forceClose(flag) {
+	if (typeof flag !== "boolean") {
+		throw new Error("force_close must be a boolean");
+	}
+	return flag ? [0x0b] : [];
+}
+
+function deviceReset(flag) {
+	if (typeof flag !== "boolean") {
+		throw new Error("device_reset must be a boolean");
+	}
+	return flag ? [0x30] : [];
+}
+
+function setTargetTemperature(t) {
+	if (typeof t !== "number") {
+		throw new Error("set_target_temperature must be a number");
+	}
+	if (t < 5 || t > 30) {
+		throw new Error("set_target_temperature must be between 5 and 30");
+	}
+	// Entier → commande 0x0e sur 1 octet ; sinon 0x51 sur 2 octets (×10) pour
+	// la précision 0.1 °C, exactement comme la lib MClimate.
+	if (t % 1 === 0) {
+		return [0x0e, t & 0xff];
+	}
+	var v = Math.round(t * 10);
+	return [0x51, (v >> 8) & 0xff, v & 0xff];
+}
+
+function setChildLock(state) {
+	var on_off_map = { 0: "off", 1: "on" };
+	if (state !== "off" && state !== "on") {
+		throw new Error("set_child_lock must be one of off, on");
+	}
+	return [0x07, state === "on" ? 1 : 0];
+}
+
+function setKeepAlive(time) {
+	if (typeof time !== "number") {
+		throw new Error("set_keep_alive must be a number");
+	}
+	if (time < 0 || time > 255) {
+		throw new Error("set_keep_alive must be between 0 and 255");
+	}
+	return [0x02, time & 0xff];
+}
+
+function setOpenWindow(p) {
+	if (typeof p !== "object" || p === null) {
+		throw new Error("set_open_window must be an object");
+	}
+	var enabled = (p.enabled === true || p.enabled === 1) ? 1 : 0;
+	var delta = (typeof p.delta === "number" ? p.delta : 0) & 0x0f;
+	var closeTimeSeconds = typeof p.closeTime === "number" ? p.closeTime : 0;
+	if (closeTimeSeconds < 0 || closeTimeSeconds > 51) {
+		throw new Error("set_open_window.closeTime must be between 0 and 51 (seconds)");
+	}
+	var closeTime = Math.floor(closeTimeSeconds / 5);
+	var motorPosition = typeof p.motorPosition === "number" ? p.motorPosition : 0;
+	if (motorPosition < 0 || motorPosition > 800) {
+		throw new Error("set_open_window.motorPosition must be between 0 and 800");
+	}
+	var motorPosLow = motorPosition & 0xff;
+	var motorPosHigh = (motorPosition >> 8) & 0x0f;
+	return [0x06, enabled, closeTime, motorPosLow, (motorPosHigh << 4) | delta, delta];
+}
+
+	if (typeof encodeDownlink === 'function') {
+		__ogtb_encode_downlink = encodeDownlink;
+	} else if (typeof codec !== 'undefined' && codec && typeof codec.encodeDownlink === 'function') {
+		__ogtb_encode_downlink = codec.encodeDownlink;
+	}
+})();
+
+function decodeUplink(input) {
+	if (typeof __ogtb_decode_uplink !== 'function') {
+		return { data: {}, warnings: [], errors: ['decodeUplink TTN introuvable dans le codec source'] };
+	}
+	return __ogtb_decode_uplink(input);
+}
+
+function encodeDownlink(input) {
+	if (typeof __ogtb_encode_downlink !== 'function') {
+		return { bytes: [], fPort: input && input.fPort, warnings: [], errors: ['encodeDownlink TTN introuvable dans le codec source'] };
+	}
+	return __ogtb_encode_downlink(input);
+}
 	// ─── /Source TTN v3 ─────────────────────────────────────────────────
 
 	__opengtb_ttn_decode = (typeof decodeUplink === 'function')
 		? decodeUplink
 		: (typeof codec !== 'undefined' && codec && typeof codec.decodeUplink === 'function')
 			? codec.decodeUplink
+			: null;
+	__opengtb_ttn_encode = (typeof encodeDownlink === 'function')
+		? encodeDownlink
+		: (typeof codec !== 'undefined' && codec && typeof codec.encodeDownlink === 'function')
+			? codec.encodeDownlink
 			: null;
 })();
 
@@ -454,6 +625,24 @@ function decodeUplink(input) {
 	var data = (r && r.data !== undefined) ? r.data : r;
 	return {
 		data: data,
+		warnings: Array.isArray(r.warnings) ? r.warnings : [],
+		errors: Array.isArray(r.errors) ? r.errors : []
+	};
+}
+
+function encodeDownlink(input) {
+	if (typeof __opengtb_ttn_encode !== 'function') {
+		return { bytes: [], fPort: input && input.fPort, warnings: [], errors: ['encodeDownlink TTN introuvable dans le codec source'] };
+	}
+	var r;
+	try {
+		r = __opengtb_ttn_encode(input) || {};
+	} catch (e) {
+		return { bytes: [], fPort: input && input.fPort, warnings: [], errors: [(e && e.message) ? e.message : String(e)] };
+	}
+	return {
+		bytes: Array.isArray(r.bytes) ? r.bytes : [],
+		fPort: typeof r.fPort === 'number' ? r.fPort : (input && input.fPort),
 		warnings: Array.isArray(r.warnings) ? r.warnings : [],
 		errors: Array.isArray(r.errors) ? r.errors : []
 	};

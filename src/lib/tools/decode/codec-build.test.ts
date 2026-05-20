@@ -226,6 +226,56 @@ describe('downlinkSchema — golden Milesight UC300', () => {
 	});
 });
 
+describe('overrides — MClimate Vicki', () => {
+	const manifestPath = resolve(CODECS_DIR, 'manifest.json');
+	const manifest = existsSync(manifestPath)
+		? (JSON.parse(readFileSync(manifestPath, 'utf8')) as {
+				devices: Array<{
+					slug: string;
+					hasEncoder?: boolean;
+					downlinkExamples?: Array<{
+						description?: string;
+						input: { data: unknown; fPort?: number };
+						output?: { bytes: number[]; fPort?: number };
+					}>;
+					downlinkSchema?: { fields: Array<{ name: string; type: string }> };
+				}>;
+			})
+		: null;
+
+	const vicki = manifest?.devices.find((d) => d.slug === 'mclimate-vicki');
+
+	test.skipIf(!vicki)('Vicki gets hasEncoder=true from local override', () => {
+		expect(vicki!.hasEncoder).toBe(true);
+	});
+
+	test.skipIf(!vicki)('Vicki ships 7 schema fields incl. set_open_window object', () => {
+		const names = vicki!.downlinkSchema!.fields.map((f) => f.name).sort();
+		expect(names).toEqual([
+			'device_reset',
+			'force_close',
+			'recalibrate_motor',
+			'set_child_lock',
+			'set_keep_alive',
+			'set_open_window',
+			'set_target_temperature'
+		]);
+	});
+
+	test.skipIf(!vicki)('Vicki examples encode correctly via the override JS', () => {
+		const src = readArtifact('ttn-v3', 'mclimate-vicki');
+		const fn = new Function(
+			`${src}\n;return (typeof encodeDownlink === 'function') ? encodeDownlink : null;`
+		)() as (input: { data: unknown; fPort: number }) => { bytes: number[] };
+		expect(typeof fn).toBe('function');
+		for (const ex of vicki!.downlinkExamples!) {
+			if (!ex.output) continue;
+			const out = fn({ data: ex.input.data, fPort: ex.input.fPort ?? 1 });
+			expect(out.bytes).toEqual(ex.output.bytes);
+		}
+	});
+});
+
 describe('codec artifacts — encoder execution', () => {
 	const manifestPath = resolve(CODECS_DIR, 'manifest.json');
 	const manifest = existsSync(manifestPath)

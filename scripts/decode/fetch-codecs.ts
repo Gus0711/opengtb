@@ -36,6 +36,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(__dirname, '../..');
 const CACHE_DIR = resolve(REPO_ROOT, '.cache/lorawan-devices');
 const VENDOR_DIR = resolve(CACHE_DIR, 'vendor');
+const OVERRIDES_DIR = resolve(__dirname, 'overrides');
 const OUT_DIR = resolve(REPO_ROOT, 'static/data/lorawan-codecs');
 const OUT_TTN_DIR = resolve(OUT_DIR, 'ttn-v3');
 const OUT_CS_DIR = resolve(OUT_DIR, 'chirpstack-v4');
@@ -613,7 +614,7 @@ async function processDevice(
 	// Beaucoup de vendors (Decentlab par ex.) factorisent l'encoder dans un
 	// fichier commun à toute leur gamme.
 	const downEnc = codecMeta.downlinkEncoder;
-	const downlinkExamples = normalizeDownlinkExamples(downEnc?.examples);
+	let downlinkExamples = normalizeDownlinkExamples(downEnc?.examples);
 	let extraEncoderJs: string | null = null;
 	let encoderSourcePath: string | undefined;
 	if (downEnc?.fileName && downEnc.fileName !== upDec.fileName) {
@@ -626,6 +627,40 @@ async function processDevice(
 				vendor: vendor.id,
 				device: deviceId,
 				reason: `encoder js missing: ${downEnc.fileName}`
+			});
+		}
+	}
+
+	// Overrides locaux : si scripts/decode/overrides/<vendor>/<deviceId>-encoder.js
+	// existe, il fournit ou remplace l'encoder. Utile pour les vendors dont
+	// TTN ne ship pas l'encoder (MClimate, Watteco) ou pour corriger un encoder
+	// défectueux. Le YAML compagnon enrichit downlinkExamples avec des presets.
+	const overrideJsPath = resolve(OVERRIDES_DIR, vendor.id, `${deviceId}-encoder.js`);
+	const overrideYamlPath = resolve(OVERRIDES_DIR, vendor.id, `${deviceId}-encoder.yaml`);
+	let overrideApplied: 'replace' | 'inject' | null = null;
+	if (existsSync(overrideJsPath)) {
+		const overrideJs = await readFile(overrideJsPath, 'utf8');
+		overrideApplied = extraEncoderJs ? 'replace' : 'inject';
+		extraEncoderJs = overrideJs;
+		encoderSourcePath = `scripts/decode/overrides/${vendor.id}/${deviceId}-encoder.js`;
+	}
+	if (existsSync(overrideYamlPath)) {
+		try {
+			const overrideMeta = await readYaml<{ examples?: unknown[] }>(overrideYamlPath);
+			const overrideExamples = normalizeDownlinkExamples(overrideMeta.examples);
+			if (overrideExamples.length > 0) {
+				// Les exemples override remplacent ceux de TTN s'il y en a un override JS,
+				// sinon ils s'y ajoutent.
+				downlinkExamples =
+					overrideApplied === 'replace' || (overrideApplied === 'inject' && downlinkExamples.length === 0)
+						? overrideExamples
+						: [...downlinkExamples, ...overrideExamples];
+			}
+		} catch (e) {
+			warnings.push({
+				vendor: vendor.id,
+				device: deviceId,
+				reason: `override yaml parse error: ${(e as Error).message}`
 			});
 		}
 	}

@@ -1,0 +1,57 @@
+# Exemples downlink pour MClimate Vicki (consommés par opengtb comme chips
+# pré-remplissables dans l'éditeur d'encodage).
+# Référence des byte layouts : MClimate/mclimate-payload-helper (ISC).
+examples:
+  - description: Recalibrer le moteur
+    input:
+      data:
+        recalibrate_motor: true
+    output:
+      bytes: [3]
+      fPort: 1
+  - description: Consigne 21 °C
+    input:
+      data:
+        set_target_temperature: 21
+    output:
+      bytes: [14, 21]
+      fPort: 1
+  - description: Consigne 21.5 °C (précision 0.1°)
+    input:
+      data:
+        set_target_temperature: 21.5
+    output:
+      bytes: [81, 0, 215]
+      fPort: 1
+  - description: Activer le verrou enfant
+    input:
+      data:
+        set_child_lock: "on"
+    output:
+      bytes: [7, 1]
+      fPort: 1
+  - description: Désactiver le verrou enfant
+    input:
+      data:
+        set_child_lock: "off"
+    output:
+      bytes: [7, 0]
+      fPort: 1
+  - description: Période d'envoi 30 minutes
+    input:
+      data:
+        set_keep_alive: 30
+    output:
+      bytes: [2, 30]
+      fPort: 1
+  - description: Détection fenêtre ouverte (Δ=2 °C, fermeture 30 s)
+    input:
+      data:
+        set_open_window:
+          enabled: true
+          delta: 2
+          closeTime: 30
+          motorPosition: 300
+    output:
+      bytes: [6, 1, 6, 44, 18, 2]
+      fPort: 1

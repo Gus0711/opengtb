@@ -44,8 +44,14 @@
 		onChange?.();
 	}
 
+	/**
+	 * IMPORTANT : on lit la propriété directement (et non via
+	 * `hasOwnProperty.call`) pour que la lecture passe par le getter du proxy
+	 * `$state` de Svelte 5 — sans ça, le toggle de la checkbox ne déclenche pas
+	 * la ré-évaluation du snippet, donc les inputs n'apparaissent jamais.
+	 */
 	function isEnabled(obj: Record<string, unknown>, name: string): boolean {
-		return Object.prototype.hasOwnProperty.call(obj, name);
+		return obj[name] !== undefined;
 	}
 
 	function toggleField(field: DownlinkSchemaField, parent: Record<string, unknown>) {

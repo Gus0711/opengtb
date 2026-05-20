@@ -230,26 +230,25 @@ function analyzeSetterBody(body: string, argName: string): SetterAnalysis {
 			nested.push({ name: nm[1], type: 'unknown' });
 		}
 
-		// Pattern B : `var Y = arg.X` (destructure)
-		// On ignore les propriétés built-in d'Array/Object qui ne sont pas
-		// des vrais sous-champs documentés.
+		// Pattern B+ : tout accès `arg.X` quelque part dans le corps. Couvre
+		// les destructures `var X = arg.X` ET les lectures inline du genre
+		// `var enabled = (arg.enabled === true ? 1 : 0)`. Beaucoup plus
+		// robuste face aux différents styles de codage.
 		const BUILTIN_PROPS = new Set([
 			'length',
 			'hasOwnProperty',
 			'toString',
 			'valueOf',
-			'constructor'
+			'constructor',
+			'prototype'
 		]);
-		const destrRe = new RegExp(
-			`var\\s+(\\w+)\\s*=\\s*${escapeRegExp(argName)}\\.([A-Za-z_][A-Za-z0-9_]*)`,
-			'g'
-		);
-		let dm: RegExpExecArray | null;
-		while ((dm = destrRe.exec(body)) !== null) {
-			if (BUILTIN_PROPS.has(dm[2])) continue;
-			if (seen.has(dm[2])) continue;
-			seen.add(dm[2]);
-			nested.push({ name: dm[2], type: 'unknown' });
+		const accessRe = new RegExp(`\\b${escapeRegExp(argName)}\\.([A-Za-z_][A-Za-z0-9_]*)`, 'g');
+		let am: RegExpExecArray | null;
+		while ((am = accessRe.exec(body)) !== null) {
+			if (BUILTIN_PROPS.has(am[1])) continue;
+			if (seen.has(am[1])) continue;
+			seen.add(am[1]);
+			nested.push({ name: am[1], type: 'unknown' });
 		}
 
 		// Pattern C : `for (var k in <map>)` où <map> liste les sous-champs valides
@@ -274,32 +273,58 @@ function analyzeSetterBody(body: string, argName: string): SetterAnalysis {
 			}
 		}
 
-		// Heuristique de type pour chaque sous-champ : inspection rapide du body
+		// Heuristique de type pour chaque sous-champ : inspection rapide du body.
 		for (const nf of nested) {
 			if (nf.type !== 'unknown') continue;
-			// On cherche un mapping ou typeof check spécifique à <arg>.<nf.name>
-			const re1 = new RegExp(
-				`${escapeRegExp(argName)}\\.${escapeRegExp(nf.name)}[^=]*?(?:typeof\\s+\\w+\\s*!==\\s*["'](\\w+)["']|_map\\s*=)`
+
+			// (a) typeof arg.X === "Y" / typeof arg.X !== "Y"
+			const typeofRe = new RegExp(
+				`typeof\\s+${escapeRegExp(argName)}\\.${escapeRegExp(nf.name)}\\s*(?:===|!==)\\s*["'](\\w+)["']`
 			);
-			const m1 = body.match(re1);
-			if (m1?.[1]) {
-				if (m1[1] === 'number') nf.type = 'number';
-				else if (m1[1] === 'string') nf.type = 'string';
-				else if (m1[1] === 'boolean') nf.type = 'boolean';
+			const tm = body.match(typeofRe);
+			if (tm) {
+				if (tm[1] === 'number') nf.type = 'number';
+				else if (tm[1] === 'string') nf.type = 'string';
+				else if (tm[1] === 'boolean') nf.type = 'boolean';
+				else if (tm[1] === 'object') nf.type = 'object';
 			}
 
-			// Cas Milesight ".status" qui est un enum on/off
-			if (/\b(status)\b/i.test(nf.name)) {
-				const onOffRe = /var\s+on_off_map\s*=\s*\{/;
-				if (onOffRe.test(body)) {
-					nf.type = 'string';
-					nf.enum = ['off', 'on'];
+			// (b) arg.X === true / arg.X === false / arg.X === 1
+			if (nf.type === 'unknown') {
+				const boolRe = new RegExp(
+					`${escapeRegExp(argName)}\\.${escapeRegExp(nf.name)}\\s*===\\s*(true|false)\\b`
+				);
+				if (boolRe.test(body)) nf.type = 'boolean';
+			}
+
+			// (c) opérations bit / shift / arithmétique sur arg.X → number
+			if (nf.type === 'unknown') {
+				const numericOpRe = new RegExp(
+					`${escapeRegExp(argName)}\\.${escapeRegExp(nf.name)}\\s*(?:&|\\||\\^|<<|>>|>>>|\\*|/|%|\\+|-)\\s*[\\dA-Fa-fx]`
+				);
+				if (numericOpRe.test(body)) nf.type = 'number';
+			}
+
+			// (d) heuristiques par nom de champ (large mais utile)
+			if (nf.type === 'unknown') {
+				if (/^(enabled?|on|active|disabled?|locked?)$/i.test(nf.name)) {
+					nf.type = 'boolean';
+				} else if (
+					/(duration|timeout|interval|count|delay|period|time|position|motor|delta|threshold|size|length|count|index|id|num|value|temperature|temp|humidity|pressure|voltage|current|power|energy)/i.test(
+						nf.name
+					)
+				) {
+					nf.type = 'number';
+				} else if (/(status|state|mode)$/i.test(nf.name)) {
+					// Milesight on/off map est très répandu pour les status
+					const onOffRe = /var\s+on_off_map\s*=\s*\{/;
+					if (onOffRe.test(body)) {
+						nf.type = 'string';
+						nf.enum = ['off', 'on'];
+					} else {
+						nf.type = 'string';
+					}
 				}
-			}
-
-			// Cas ".duration", ".timeout", ".interval", ".count" → number
-			if (nf.type === 'unknown' && /\b(duration|timeout|interval|count|delay|period)\b/i.test(nf.name)) {
-				nf.type = 'number';
 			}
 		}
 

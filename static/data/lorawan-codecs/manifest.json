@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T13:50:13.010Z",
+  "generatedAt": "2026-05-20T15:17:08.168Z",
   "source": {
     "repo": "https://github.com/TheThingsNetwork/lorawan-devices",
     "commit": "26f5522b7eb894f139c68971b9183413aa2b2bea",
@@ -40967,7 +40967,7 @@
         "ttnV3": "ttn-v3/mclimate-vicki.js",
         "chirpstackV4": "chirpstack-v4/mclimate-vicki.js"
       },
-      "hasEncoder": false,
+      "hasEncoder": true,
       "productURL": "https://docs.mclimate.eu/mclimate-lorawan-devices/devices/mclimate-vicki-lorawan",
       "examples": [
         {
@@ -40985,7 +40985,180 @@
             128
           ]
         }
-      ]
+      ],
+      "downlinkExamples": [
+        {
+          "description": "Recalibrer le moteur",
+          "input": {
+            "data": {
+              "recalibrate_motor": true
+            }
+          },
+          "output": {
+            "bytes": [
+              3
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Consigne 21 °C",
+          "input": {
+            "data": {
+              "set_target_temperature": 21
+            }
+          },
+          "output": {
+            "bytes": [
+              14,
+              21
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Consigne 21.5 °C (précision 0.1°)",
+          "input": {
+            "data": {
+              "set_target_temperature": 21.5
+            }
+          },
+          "output": {
+            "bytes": [
+              81,
+              0,
+              215
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Activer le verrou enfant",
+          "input": {
+            "data": {
+              "set_child_lock": "on"
+            }
+          },
+          "output": {
+            "bytes": [
+              7,
+              1
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Désactiver le verrou enfant",
+          "input": {
+            "data": {
+              "set_child_lock": "off"
+            }
+          },
+          "output": {
+            "bytes": [
+              7,
+              0
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Période d'envoi 30 minutes",
+          "input": {
+            "data": {
+              "set_keep_alive": 30
+            }
+          },
+          "output": {
+            "bytes": [
+              2,
+              30
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Détection fenêtre ouverte (Δ=2 °C, fermeture 30 s)",
+          "input": {
+            "data": {
+              "set_open_window": {
+                "enabled": true,
+                "delta": 2,
+                "closeTime": 30,
+                "motorPosition": 300
+              }
+            }
+          },
+          "output": {
+            "bytes": [
+              6,
+              1,
+              6,
+              44,
+              18,
+              2
+            ],
+            "fPort": 1
+          }
+        }
+      ],
+      "downlinkSchema": {
+        "source": "milesight-if-in-payload",
+        "fields": [
+          {
+            "name": "recalibrate_motor",
+            "type": "boolean"
+          },
+          {
+            "name": "force_close",
+            "type": "boolean"
+          },
+          {
+            "name": "device_reset",
+            "type": "boolean"
+          },
+          {
+            "name": "set_target_temperature",
+            "type": "number",
+            "min": 5
+          },
+          {
+            "name": "set_child_lock",
+            "type": "string",
+            "enum": [
+              "off",
+              "on"
+            ]
+          },
+          {
+            "name": "set_keep_alive",
+            "type": "number",
+            "min": 0
+          },
+          {
+            "name": "set_open_window",
+            "type": "object",
+            "fields": [
+              {
+                "name": "enabled",
+                "type": "boolean"
+              },
+              {
+                "name": "delta",
+                "type": "number"
+              },
+              {
+                "name": "closeTime",
+                "type": "number"
+              },
+              {
+                "name": "motorPosition",
+                "type": "number"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "slug": "mclimate-wireless-thermostat",
@@ -41559,7 +41732,13 @@
           },
           {
             "name": "report_schedule_config",
-            "type": "object"
+            "type": "object",
+            "fields": [
+              {
+                "name": "num",
+                "type": "number"
+              }
+            ]
           },
           {
             "name": "clear_report_schedule",
@@ -41617,7 +41796,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "lora_uplink_enable",
@@ -41625,11 +41804,11 @@
               },
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "weekdays",
@@ -41683,11 +41862,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -41723,7 +41902,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -41890,7 +42069,13 @@
           },
           {
             "name": "report_schedule_config",
-            "type": "object"
+            "type": "object",
+            "fields": [
+              {
+                "name": "num",
+                "type": "number"
+              }
+            ]
           },
           {
             "name": "clear_report_schedule",
@@ -41926,11 +42111,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -41966,7 +42151,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -42139,7 +42324,13 @@
           },
           {
             "name": "report_schedule_config",
-            "type": "object"
+            "type": "object",
+            "fields": [
+              {
+                "name": "num",
+                "type": "number"
+              }
+            ]
           },
           {
             "name": "clear_report_schedule",
@@ -42219,7 +42410,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "lora_uplink_enable",
@@ -42227,11 +42418,11 @@
               },
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "weekdays",
@@ -42285,11 +42476,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -42299,11 +42490,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -42313,15 +42504,15 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "threshold_1",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_2",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -42331,7 +42522,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "period",
@@ -42339,7 +42530,7 @@
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -42349,11 +42540,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -42389,11 +42580,11 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -42562,7 +42753,13 @@
           },
           {
             "name": "report_schedule_config",
-            "type": "object"
+            "type": "object",
+            "fields": [
+              {
+                "name": "num",
+                "type": "number"
+              }
+            ]
           },
           {
             "name": "clear_report_schedule",
@@ -42598,11 +42795,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -42612,11 +42809,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -42626,15 +42823,15 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "threshold_1",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_2",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -42644,7 +42841,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "period",
@@ -42652,7 +42849,7 @@
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -42662,11 +42859,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -42702,11 +42899,11 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -42890,7 +43087,13 @@
           },
           {
             "name": "report_schedule_config",
-            "type": "object"
+            "type": "object",
+            "fields": [
+              {
+                "name": "num",
+                "type": "number"
+              }
+            ]
           },
           {
             "name": "clear_report_schedule",
@@ -42962,7 +43165,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "lora_uplink_enable",
@@ -42970,11 +43173,11 @@
               },
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "weekdays",
@@ -43028,11 +43231,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -43068,11 +43271,11 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -43277,7 +43480,13 @@
           },
           {
             "name": "report_schedule_config",
-            "type": "object"
+            "type": "object",
+            "fields": [
+              {
+                "name": "num",
+                "type": "number"
+              }
+            ]
           },
           {
             "name": "clear_report_schedule",
@@ -43357,7 +43566,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "lora_uplink_enable",
@@ -43365,11 +43574,11 @@
               },
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "weekdays",
@@ -43423,11 +43632,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -43437,11 +43646,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -43451,15 +43660,15 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "threshold_1",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_2",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -43469,7 +43678,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "period",
@@ -43477,7 +43686,7 @@
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -43487,11 +43696,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -43527,11 +43736,11 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -43761,11 +43970,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -43890,7 +44099,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -44124,11 +44333,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -44199,7 +44408,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -44447,11 +44656,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -44584,7 +44793,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -44832,11 +45041,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -44907,7 +45116,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -45151,11 +45360,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -45292,7 +45501,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -45536,11 +45745,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -45677,7 +45886,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -45897,11 +46106,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "num_of_bssid",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "timeout",
@@ -45915,7 +46124,7 @@
             "fields": [
               {
                 "name": "delta_g",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "duration",
@@ -45929,7 +46138,7 @@
             "fields": [
               {
                 "name": "delta_g",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "duration",
@@ -45943,7 +46152,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "interval",
@@ -45983,7 +46192,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "interval",
@@ -45991,7 +46200,7 @@
               },
               {
                 "name": "counts",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -46001,10 +46210,14 @@
             "fields": [
               {
                 "name": "index",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "time",
+                "type": "number"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -46226,11 +46439,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "num_of_bssid",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "timeout",
@@ -46244,7 +46457,7 @@
             "fields": [
               {
                 "name": "delta_g",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "duration",
@@ -46258,7 +46471,7 @@
             "fields": [
               {
                 "name": "delta_g",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "duration",
@@ -46272,7 +46485,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "interval",
@@ -46312,7 +46525,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "interval",
@@ -46320,7 +46533,7 @@
               },
               {
                 "name": "counts",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -46330,10 +46543,14 @@
             "fields": [
               {
                 "name": "index",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "time",
+                "type": "number"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -46491,19 +46708,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_counts",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -46517,11 +46734,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           }
@@ -46662,19 +46879,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_counts",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -46688,11 +46905,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           }
@@ -46833,19 +47050,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_counts",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -46859,11 +47076,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           }
@@ -47019,19 +47236,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_counts",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -47045,19 +47262,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_counts",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -47071,19 +47288,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_counts",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -47097,11 +47314,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           }
@@ -47257,19 +47474,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_counts",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -47283,19 +47500,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_counts",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -47309,19 +47526,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_counts",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -47335,11 +47552,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           }
@@ -47495,19 +47712,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_counts",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -47521,19 +47738,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_counts",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -47547,19 +47764,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_counts",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -47573,11 +47790,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           }
@@ -47745,11 +47962,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -47788,7 +48005,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "duration",
@@ -47802,7 +48019,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "duration",
@@ -47816,7 +48033,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "duration",
@@ -47830,7 +48047,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "water",
@@ -47868,11 +48085,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "lora_uplink_enable",
@@ -47880,6 +48097,10 @@
               },
               {
                 "name": "d2d_cmd",
+                "type": "unknown"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -47924,7 +48145,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -48065,7 +48286,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -48117,11 +48338,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -48131,15 +48352,15 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "report_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "report_times",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -48149,11 +48370,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -48163,11 +48384,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -48177,7 +48398,7 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "report_type",
@@ -48185,6 +48406,10 @@
               },
               {
                 "name": "d2d_cmd",
+                "type": "unknown"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -48309,7 +48534,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -48357,15 +48582,15 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "report_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "report_times",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -48375,7 +48600,7 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "report_type",
@@ -48383,6 +48608,10 @@
               },
               {
                 "name": "d2d_cmd",
+                "type": "unknown"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -48503,7 +48732,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -48555,11 +48784,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -48569,15 +48798,15 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "report_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "report_times",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -48587,11 +48816,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -48601,11 +48830,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -48615,7 +48844,7 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "report_type",
@@ -48740,7 +48969,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -48792,11 +49021,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -48806,11 +49035,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -48820,11 +49049,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -48834,7 +49063,7 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "report_type",
@@ -48842,6 +49071,10 @@
               },
               {
                 "name": "d2d_cmd",
+                "type": "unknown"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -48962,7 +49195,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -49014,11 +49247,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -49028,15 +49261,15 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "report_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "report_times",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -49046,11 +49279,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -49060,11 +49293,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -49074,7 +49307,7 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "report_type",
@@ -49179,19 +49412,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "lock_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "continue_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -49205,19 +49438,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "lock_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "continue_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -49231,19 +49464,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "lock_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "continue_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -49362,19 +49595,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "lock_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "continue_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_release_enable",
@@ -49492,11 +49725,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -49532,11 +49765,11 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -49670,19 +49903,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "report_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "report_times",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -49696,19 +49929,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "report_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "report_times",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -49722,19 +49955,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "report_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "report_times",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -49921,11 +50154,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -49943,11 +50176,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -49957,7 +50190,7 @@
             "fields": [
               {
                 "name": "counts",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "interval",
@@ -50133,11 +50366,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -50155,11 +50388,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -50169,7 +50402,7 @@
             "fields": [
               {
                 "name": "counts",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "interval",
@@ -50339,11 +50572,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -50353,7 +50586,7 @@
             "fields": [
               {
                 "name": "counts",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "interval",
@@ -50528,7 +50761,7 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "number"
+                "type": "string"
               },
               {
                 "name": "max",
@@ -50542,7 +50775,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "condition",
@@ -50550,7 +50783,7 @@
               },
               {
                 "name": "alarm_release_enable",
-                "type": "number"
+                "type": "unknown"
               },
               {
                 "name": "threshold_min",
@@ -50558,7 +50791,7 @@
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -50568,7 +50801,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "alarm_release_enable",
@@ -50586,7 +50819,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "condition",
@@ -50594,7 +50827,7 @@
               },
               {
                 "name": "alarm_release_enable",
-                "type": "number"
+                "type": "unknown"
               },
               {
                 "name": "threshold_min",
@@ -50602,7 +50835,7 @@
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -50612,7 +50845,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "alarm_release_enable",
@@ -50651,11 +50884,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -50966,7 +51199,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "condition",
@@ -50974,11 +51207,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_release_enable",
@@ -51005,11 +51238,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -51019,11 +51252,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "d2d_cmd",
@@ -51031,6 +51264,10 @@
               },
               {
                 "name": "lora_uplink_enable",
+                "type": "unknown"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -51061,7 +51298,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -51300,15 +51537,15 @@
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_release_enable",
@@ -51335,11 +51572,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -51349,11 +51586,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "d2d_cmd",
@@ -51361,6 +51598,10 @@
               },
               {
                 "name": "lora_uplink_enable",
+                "type": "unknown"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -51391,7 +51632,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -51617,15 +51858,15 @@
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -51635,7 +51876,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "mutation",
@@ -51662,11 +51903,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -51676,11 +51917,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "d2d_cmd",
@@ -51688,6 +51929,10 @@
               },
               {
                 "name": "lora_uplink_enable",
+                "type": "unknown"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -51718,7 +51963,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -52017,15 +52262,15 @@
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -52039,15 +52284,15 @@
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -52057,7 +52302,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "mutation",
@@ -52075,15 +52320,15 @@
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -52106,11 +52351,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -52120,11 +52365,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -52134,11 +52379,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -52148,11 +52393,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "d2d_cmd",
@@ -52160,6 +52405,10 @@
               },
               {
                 "name": "lora_uplink_enable",
+                "type": "unknown"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -52190,7 +52439,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -52416,15 +52665,15 @@
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -52447,11 +52696,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -52461,11 +52710,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "d2d_cmd",
@@ -52473,6 +52722,10 @@
               },
               {
                 "name": "lora_uplink_enable",
+                "type": "unknown"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -52503,7 +52756,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -52871,11 +53124,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -52885,11 +53138,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -52899,7 +53152,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "condition",
@@ -52911,19 +53164,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "lock_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "continue_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           }
@@ -53036,11 +53289,11 @@
               },
               {
                 "name": "seconds_of_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "minutes_of_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -53074,14 +53327,26 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
+                "type": "number"
+              },
+              {
+                "name": "item_1",
+                "type": "unknown"
+              },
+              {
+                "name": "item_2",
+                "type": "unknown"
+              },
+              {
+                "name": "item_",
                 "type": "unknown"
               }
             ]
@@ -53121,7 +53386,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "condition",
@@ -53129,11 +53394,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -53143,11 +53408,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -53157,11 +53422,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -53171,11 +53436,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -53185,11 +53450,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -53199,11 +53464,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -53226,11 +53491,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -53240,11 +53505,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -53254,11 +53519,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -53268,11 +53533,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -53282,11 +53547,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -53296,11 +53561,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -53310,11 +53575,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -53367,11 +53632,11 @@
             "fields": [
               {
                 "name": "daylight_saving_time_enable",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "daylight_saving_time_offset",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "start_month",
@@ -53379,7 +53644,7 @@
               },
               {
                 "name": "start_week_num",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "start_week_day",
@@ -53395,7 +53660,7 @@
               },
               {
                 "name": "end_week_num",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_week_day",
@@ -53587,7 +53852,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "condition",
@@ -53595,11 +53860,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -53609,7 +53874,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "mutation",
@@ -53623,11 +53888,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -53645,7 +53910,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -53805,7 +54070,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -53827,7 +54092,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "interval",
@@ -53863,15 +54128,15 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               }
             ]
           },
@@ -53881,11 +54146,11 @@
             "fields": [
               {
                 "name": "threshold",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               }
             ]
           },
@@ -53895,11 +54160,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -53909,11 +54174,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -54118,11 +54383,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -54132,11 +54397,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -54159,7 +54424,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "alarm_release_enable",
@@ -54171,11 +54436,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -54185,7 +54450,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "alarm_release_enable",
@@ -54197,11 +54462,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -54211,7 +54476,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "mutation",
@@ -54229,7 +54494,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "mutation",
@@ -54273,7 +54538,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -54396,11 +54661,11 @@
             "fields": [
               {
                 "name": "channel_id",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "slave_id",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "register_address",
@@ -54417,6 +54682,10 @@
               {
                 "name": "register_type",
                 "type": "unknown"
+              },
+              {
+                "name": "_item",
+                "type": "unknown"
               }
             ]
           },
@@ -54426,7 +54695,7 @@
             "fields": [
               {
                 "name": "channel_id",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "name",
@@ -54440,6 +54709,10 @@
             "fields": [
               {
                 "name": "channel_id",
+                "type": "number"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -54492,7 +54765,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -55151,7 +55424,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -55406,7 +55679,7 @@
             "fields": [
               {
                 "name": "time_rule_enable",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "pulse_rule_enable",
@@ -55414,11 +55687,11 @@
               },
               {
                 "name": "sequence_id",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "valve_status",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "duration",
@@ -55436,7 +55709,7 @@
             "fields": [
               {
                 "name": "time_rule_enable",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "pulse_rule_enable",
@@ -55444,11 +55717,11 @@
               },
               {
                 "name": "sequence_id",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "valve_status",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "duration",
@@ -55746,15 +56019,15 @@
             "fields": [
               {
                 "name": "id",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "valve_status",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "valve_1_enable",
@@ -55824,11 +56097,11 @@
             "fields": [
               {
                 "name": "id",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "condition",
@@ -55862,11 +56135,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -55880,15 +56153,15 @@
             "fields": [
               {
                 "name": "counts",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "control_pulse_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "power_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -55898,11 +56171,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -55928,7 +56201,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -56045,11 +56318,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "max_count",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -56099,7 +56372,7 @@
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "command",
@@ -56117,7 +56390,7 @@
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "command",
@@ -56125,7 +56398,7 @@
               },
               {
                 "name": "delay_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -56143,11 +56416,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "min_dwell_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -56209,11 +56482,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -56263,11 +56536,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "index",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "week_cycle",
@@ -56275,6 +56548,10 @@
               },
               {
                 "name": "time",
+                "type": "number"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -56285,7 +56562,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "detection_type",
@@ -56303,11 +56580,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "people_counting_type",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -56317,7 +56594,7 @@
             "fields": [
               {
                 "name": "people_counting_type",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "period",
@@ -56342,6 +56619,10 @@
               {
                 "name": "end_minute",
                 "type": "unknown"
+              },
+              {
+                "name": "_item",
+                "type": "unknown"
               }
             ]
           },
@@ -56351,11 +56632,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "timestamp",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -56575,7 +56856,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -56605,7 +56886,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "period",
@@ -56619,11 +56900,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "max_count",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -56861,7 +57142,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -56891,7 +57172,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "period",
@@ -56905,11 +57186,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "max_count",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -57088,19 +57369,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "lock_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "continue_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -57114,19 +57395,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "lock_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "continue_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -57140,19 +57421,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "lock_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "continue_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -57174,11 +57455,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "d2d_cmd",
@@ -57190,10 +57471,14 @@
               },
               {
                 "name": "time_enable",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "time",
+                "type": "number"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -57230,7 +57515,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -57373,7 +57658,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "distance",
@@ -57495,7 +57780,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "count",
@@ -57509,11 +57794,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "d2d_cmd",
@@ -57525,10 +57810,14 @@
               },
               {
                 "name": "time_enable",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "time",
+                "type": "number"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -57551,7 +57840,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "separate",
@@ -57559,11 +57848,11 @@
               },
               {
                 "name": "threshold_l",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_h",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -57685,7 +57974,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "count",
@@ -57699,11 +57988,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "d2d_cmd",
@@ -57715,10 +58004,14 @@
               },
               {
                 "name": "time_enable",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "time",
+                "type": "number"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -57741,7 +58034,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "separate",
@@ -57749,11 +58042,11 @@
               },
               {
                 "name": "threshold_l",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_h",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -57973,11 +58266,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -58007,11 +58300,11 @@
               },
               {
                 "name": "threshold_out",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_in",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -58025,11 +58318,11 @@
               },
               {
                 "name": "threshold_out",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_in",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -58043,11 +58336,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -58083,7 +58376,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -58219,11 +58512,11 @@
             "fields": [
               {
                 "name": "weekday",
-                "type": "number"
+                "type": "unknown"
               },
               {
                 "name": "hour",
-                "type": "number"
+                "type": "unknown"
               },
               {
                 "name": "minute",
@@ -58269,11 +58562,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -58291,15 +58584,15 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -58313,11 +58606,11 @@
               },
               {
                 "name": "threshold_out",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_in",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -58331,11 +58624,11 @@
               },
               {
                 "name": "threshold_out",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_in",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -58349,11 +58642,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -58393,11 +58686,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "d2d_cmd",
@@ -58409,10 +58702,14 @@
               },
               {
                 "name": "time_enable",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "time",
+                "type": "number"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -58431,10 +58728,14 @@
             "fields": [
               {
                 "name": "id",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "mask",
+                "type": "unknown"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -58457,11 +58758,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "max_count",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -58511,7 +58812,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -58738,11 +59039,11 @@
             "fields": [
               {
                 "name": "weekday",
-                "type": "number"
+                "type": "unknown"
               },
               {
                 "name": "hour",
-                "type": "number"
+                "type": "unknown"
               },
               {
                 "name": "minute",
@@ -58788,15 +59089,15 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "weekdays",
@@ -58830,11 +59131,11 @@
               },
               {
                 "name": "threshold_out",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_in",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -58848,11 +59149,11 @@
               },
               {
                 "name": "threshold_out",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_in",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -58888,7 +59189,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -59066,7 +59367,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "offset",
@@ -59078,7 +59379,7 @@
               },
               {
                 "name": "start_week_num",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "start_week_day",
@@ -59086,7 +59387,7 @@
               },
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_month",
@@ -59094,7 +59395,7 @@
               },
               {
                 "name": "end_week_num",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_week_day",
@@ -59102,7 +59403,7 @@
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -59150,7 +59451,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "upper_limit",
@@ -59333,7 +59634,7 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "sensitivity",
@@ -59347,15 +59648,15 @@
             "fields": [
               {
                 "name": "confirm_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "delay_report_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_duration",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -59365,11 +59666,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "dwell_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -59379,11 +59680,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "motionless_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -59393,15 +59694,15 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "out_of_bed_enable",
@@ -59409,7 +59710,7 @@
               },
               {
                 "name": "out_of_bed_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -59419,7 +59720,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "min",
@@ -59469,7 +59770,7 @@
             "fields": [
               {
                 "name": "alarm_id",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "action",
@@ -59483,11 +59784,11 @@
             "fields": [
               {
                 "name": "exist_confirm_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "leaved_confirm_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -59608,11 +59909,11 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -59622,11 +59923,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "timestamp",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -59636,11 +59937,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "max_count",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -59658,7 +59959,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "fall",
@@ -60029,11 +60330,11 @@
             "fields": [
               {
                 "name": "index",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "alarm_release_enable",
@@ -60041,6 +60342,10 @@
               },
               {
                 "name": "threshold",
+                "type": "number"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -60051,7 +60356,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "start_time",
@@ -60059,7 +60364,7 @@
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "weekdays",
@@ -60190,7 +60495,7 @@
             "fields": [
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
@@ -60326,11 +60631,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "d2d_cmd",
@@ -60342,10 +60647,14 @@
               },
               {
                 "name": "time_enable",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "time",
+                "type": "number"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -60360,11 +60669,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -60460,7 +60769,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -60802,15 +61111,15 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "alarm_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_count",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -60845,7 +61154,17 @@
           },
           {
             "name": "lora_report_settings",
-            "type": "object"
+            "type": "object",
+            "fields": [
+              {
+                "name": "lora_uplink_enable",
+                "type": "unknown"
+              },
+              {
+                "name": "d2d_uplink_enable",
+                "type": "unknown"
+              }
+            ]
           },
           {
             "name": "d2d_enable",
@@ -60861,7 +61180,7 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "d2d_command",
@@ -60976,7 +61295,7 @@
               },
               {
                 "name": "delay_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "switch_1",
@@ -61011,11 +61330,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "lock_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           }
@@ -61145,7 +61464,7 @@
               },
               {
                 "name": "delay_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "socket_status",
@@ -61171,11 +61490,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "threshold",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -61185,11 +61504,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "trip_current",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -61199,7 +61518,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               }
             ]
           },
@@ -61209,11 +61528,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "lock_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -61255,11 +61574,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -61273,19 +61592,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "alarm_times",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -61444,11 +61763,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "trip_current",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -61458,11 +61777,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "threshold",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -61472,11 +61791,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "lock_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -61819,11 +62138,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -61837,11 +62156,11 @@
             "fields": [
               {
                 "name": "min",
-                "type": "number"
+                "type": "unknown"
               },
               {
                 "name": "max",
-                "type": "number"
+                "type": "unknown"
               }
             ]
           },
@@ -61851,7 +62170,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "temperature_threshold",
@@ -61859,7 +62178,7 @@
               },
               {
                 "name": "time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -61898,11 +62217,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "temperature",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -61933,7 +62252,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "timeout",
@@ -61963,7 +62282,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "offset",
@@ -61975,7 +62294,7 @@
               },
               {
                 "name": "start_week_num",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "start_week_day",
@@ -61983,7 +62302,7 @@
               },
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_month",
@@ -61991,7 +62310,7 @@
               },
               {
                 "name": "end_week_num",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_week_day",
@@ -61999,7 +62318,7 @@
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -62009,7 +62328,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "rate",
@@ -62023,7 +62342,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "start_month",
@@ -62043,7 +62362,7 @@
               },
               {
                 "name": "report_interval",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -62053,30 +62372,34 @@
             "fields": [
               {
                 "name": "index",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "temperature_control_mode",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "value",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "report_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "execute_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "week_recycle",
+                "type": "unknown"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -62264,7 +62587,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "offset",
@@ -62276,7 +62599,7 @@
               },
               {
                 "name": "start_week_num",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "start_week_day",
@@ -62284,7 +62607,7 @@
               },
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_month",
@@ -62292,7 +62615,7 @@
               },
               {
                 "name": "end_week_num",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_week_day",
@@ -62300,7 +62623,7 @@
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -62348,11 +62671,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -62362,11 +62685,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -62390,7 +62713,7 @@
             "fields": [
               {
                 "name": "type",
-                "type": "number"
+                "type": "unknown"
               },
               {
                 "name": "time",
@@ -62398,7 +62721,7 @@
               },
               {
                 "name": "temperature_tolerance",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -62408,7 +62731,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "timeout",
@@ -62426,11 +62749,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "temperature",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -62462,11 +62785,11 @@
             "fields": [
               {
                 "name": "min",
-                "type": "number"
+                "type": "unknown"
               },
               {
                 "name": "max",
-                "type": "number"
+                "type": "unknown"
               }
             ]
           },
@@ -62476,11 +62799,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "temperature_tolerance",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -62490,11 +62813,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "execute_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -62518,7 +62841,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "action_type",
@@ -62602,19 +62925,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "lock_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "continue_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -62680,7 +63003,7 @@
             "fields": [
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_time",
@@ -62883,7 +63206,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "offset",
@@ -62895,7 +63218,7 @@
               },
               {
                 "name": "start_week_num",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "start_week_day",
@@ -62903,7 +63226,7 @@
               },
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_month",
@@ -62911,7 +63234,7 @@
               },
               {
                 "name": "end_week_num",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_week_day",
@@ -62919,7 +63242,7 @@
               },
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -62971,11 +63294,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -62985,11 +63308,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -62999,7 +63322,7 @@
             "fields": [
               {
                 "name": "type",
-                "type": "number"
+                "type": "unknown"
               },
               {
                 "name": "time",
@@ -63007,7 +63330,7 @@
               },
               {
                 "name": "temperature_control_tolerance",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -63053,11 +63376,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "temperature",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -63081,11 +63404,11 @@
             "fields": [
               {
                 "name": "min",
-                "type": "number"
+                "type": "unknown"
               },
               {
                 "name": "max",
-                "type": "number"
+                "type": "unknown"
               }
             ]
           },
@@ -63095,11 +63418,15 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "temperature_control_tolerance",
-                "type": "unknown"
+                "type": "number"
+              },
+              {
+                "name": "temperature_tolerance",
+                "type": "number"
               }
             ]
           },
@@ -63109,11 +63436,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "execute_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -63182,7 +63509,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "action_type",
@@ -63270,19 +63597,19 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "lock_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "continue_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -63344,7 +63671,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "number"
+                "type": "boolean"
               },
               {
                 "name": "duration",
@@ -63358,7 +63685,7 @@
             "fields": [
               {
                 "name": "temperature_control_mode",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "min",
@@ -63414,7 +63741,7 @@
             "fields": [
               {
                 "name": "time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "power_button",
@@ -63444,11 +63771,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "delay_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -63458,11 +63785,11 @@
             "fields": [
               {
                 "name": "delta_1",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "delta_2",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -63598,11 +63925,11 @@
               },
               {
                 "name": "seconds_of_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "minutes_of_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -63616,11 +63943,11 @@
               },
               {
                 "name": "seconds_of_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "minutes_of_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -63643,7 +63970,13 @@
           },
           {
             "name": "intelligent_display_enable",
-            "type": "object"
+            "type": "object",
+            "fields": [
+              {
+                "name": "enable",
+                "type": "boolean"
+              }
+            ]
           },
           {
             "name": "screen_object_settings",
@@ -63651,7 +63984,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "environment_temperature_enable",
@@ -63741,11 +64074,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "temperature_tolerance",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -63779,11 +64112,11 @@
             "fields": [
               {
                 "name": "delta_1",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "delta_2",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -63793,11 +64126,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "delay_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -63807,7 +64140,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "system_button",
@@ -63837,7 +64170,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "condition",
@@ -63845,11 +64178,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -63859,11 +64192,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "delta_temperature",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "duration",
@@ -63877,11 +64210,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "delta_temperature",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "duration",
@@ -63895,11 +64228,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -63909,11 +64242,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -63923,7 +64256,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "name_first",
@@ -63939,6 +64272,10 @@
               },
               {
                 "name": "plan_id",
+                "type": "number"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -63949,6 +64286,18 @@
             "fields": [
               {
                 "name": "mode",
+                "type": "string"
+              },
+              {
+                "name": "four_pipe_two_wire",
+                "type": "unknown"
+              },
+              {
+                "name": "two_pipe_two_wire",
+                "type": "unknown"
+              },
+              {
+                "name": "two_pipe_three_wire",
                 "type": "unknown"
               }
             ]
@@ -63959,7 +64308,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "type",
@@ -63989,7 +64338,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "type",
@@ -63997,7 +64346,7 @@
               },
               {
                 "name": "temperature_detection",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "magnet_detection",
@@ -64011,11 +64360,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "target_temperature",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -64034,6 +64383,10 @@
               {
                 "name": "missing_data_action",
                 "type": "unknown"
+              },
+              {
+                "name": "missing_value_action",
+                "type": "number"
               }
             ]
           },
@@ -64051,7 +64404,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "eui",
@@ -64067,6 +64420,10 @@
               },
               {
                 "name": "index",
+                "type": "number"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -64089,7 +64446,7 @@
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "lora_uplink_enable",
@@ -64101,10 +64458,14 @@
               },
               {
                 "name": "time_enable",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "time",
+                "type": "number"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -64123,11 +64484,11 @@
             "fields": [
               {
                 "name": "index",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "command",
@@ -64135,6 +64496,10 @@
               },
               {
                 "name": "trigger_target",
+                "type": "unknown"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -64145,7 +64510,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "start_cycle_settings",
@@ -64252,7 +64617,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "offset",
@@ -64264,7 +64629,7 @@
               },
               {
                 "name": "start_week_num",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "start_week_day",
@@ -64280,7 +64645,7 @@
               },
               {
                 "name": "end_week_num",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_week_day",
@@ -64306,15 +64671,15 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "retransmission_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "resend_interval",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -64348,11 +64713,11 @@
             "fields": [
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -64547,11 +64912,11 @@
               },
               {
                 "name": "seconds_of_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "minutes_of_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -64565,11 +64930,11 @@
               },
               {
                 "name": "seconds_of_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "minutes_of_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -64592,7 +64957,13 @@
           },
           {
             "name": "intelligent_display_enable",
-            "type": "object"
+            "type": "object",
+            "fields": [
+              {
+                "name": "enable",
+                "type": "boolean"
+              }
+            ]
           },
           {
             "name": "screen_object_settings",
@@ -64600,7 +64971,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "environment_temperature_enable",
@@ -64690,11 +65061,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "temperature_tolerance",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -64728,11 +65099,11 @@
             "fields": [
               {
                 "name": "delta_1",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "delta_2",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -64742,11 +65113,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "delay_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -64756,7 +65127,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "system_button",
@@ -64786,7 +65157,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "condition",
@@ -64794,11 +65165,11 @@
               },
               {
                 "name": "threshold_min",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "threshold_max",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -64808,11 +65179,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "delta_temperature",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "duration",
@@ -64826,11 +65197,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "delta_temperature",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "duration",
@@ -64844,11 +65215,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -64858,11 +65229,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -64872,7 +65243,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "name_first",
@@ -64888,6 +65259,10 @@
               },
               {
                 "name": "plan_id",
+                "type": "number"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -64898,6 +65273,30 @@
             "fields": [
               {
                 "name": "mode",
+                "type": "string"
+              },
+              {
+                "name": "four_pipe_voltage",
+                "type": "number"
+              },
+              {
+                "name": "two_pipe_voltage",
+                "type": "number"
+              },
+              {
+                "name": "two_pipe_voltage_ec",
+                "type": "number"
+              },
+              {
+                "name": "four_pipe_two_wire_ec",
+                "type": "unknown"
+              },
+              {
+                "name": "two_pipe_two_wire_ec",
+                "type": "unknown"
+              },
+              {
+                "name": "two_pipe_three_wire_ec",
                 "type": "unknown"
               }
             ]
@@ -64908,7 +65307,7 @@
             "fields": [
               {
                 "name": "temperature_control_range",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "opening_range",
@@ -64916,7 +65315,7 @@
               },
               {
                 "name": "control_time_interval",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -64926,15 +65325,15 @@
             "fields": [
               {
                 "name": "low_threshold",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "medium_threshold",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "high_threshold",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -64944,7 +65343,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "type",
@@ -64974,7 +65373,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "type",
@@ -64982,7 +65381,7 @@
               },
               {
                 "name": "temperature_detection",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "magnet_detection",
@@ -64996,11 +65395,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "target_temperature",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -65019,6 +65418,10 @@
               {
                 "name": "missing_data_action",
                 "type": "unknown"
+              },
+              {
+                "name": "missing_value_action",
+                "type": "number"
               }
             ]
           },
@@ -65036,7 +65439,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "eui",
@@ -65052,6 +65455,10 @@
               },
               {
                 "name": "index",
+                "type": "number"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -65074,7 +65481,7 @@
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "lora_uplink_enable",
@@ -65086,10 +65493,14 @@
               },
               {
                 "name": "time_enable",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "time",
+                "type": "number"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -65108,11 +65519,11 @@
             "fields": [
               {
                 "name": "index",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "command",
@@ -65120,6 +65531,10 @@
               },
               {
                 "name": "trigger_target",
+                "type": "unknown"
+              },
+              {
+                "name": "_item",
                 "type": "unknown"
               }
             ]
@@ -65130,7 +65545,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "start_cycle_settings",
@@ -65237,7 +65652,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "offset",
@@ -65249,7 +65664,7 @@
               },
               {
                 "name": "start_week_num",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "start_week_day",
@@ -65265,7 +65680,7 @@
               },
               {
                 "name": "end_week_num",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_week_day",
@@ -65291,15 +65706,15 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "retransmission_interval",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "resend_interval",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -65333,11 +65748,11 @@
             "fields": [
               {
                 "name": "end_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "start_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -65533,11 +65948,11 @@
               },
               {
                 "name": "seconds_of_time",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "minutes_of_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -65547,11 +65962,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "minutes_of_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -65637,27 +66052,27 @@
             "fields": [
               {
                 "name": "heat",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "em_heat",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "cool",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "auto",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "auto_heat",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "auto_cool",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -65694,11 +66109,11 @@
             "fields": [
               {
                 "name": "mode",
-                "type": "unknown"
+                "type": "string"
               },
               {
                 "name": "minutes_of_time",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -65708,7 +66123,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "button_1",
@@ -65730,7 +66145,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "temperature_up",
@@ -65834,11 +66249,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -65848,11 +66263,11 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "calibration_value",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -65862,7 +66277,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "name_first",
@@ -65874,7 +66289,7 @@
               },
               {
                 "name": "plan_id",
-                "type": "unknown"
+                "type": "number"
               }
             ]
           },
@@ -65927,7 +66342,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "timeout",
@@ -66025,7 +66440,7 @@
             "fields": [
               {
                 "name": "enable",
-                "type": "unknown"
+                "type": "boolean"
               },
               {
                 "name": "offset",
@@ -66037,7 +66452,7 @@
               },
               {
                 "name": "start_week_num",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "start_week_day",
@@ -66053,7 +66468,7 @@
               },
               {
                 "name": "end_week_num",
-                "type": "unknown"
+                "type": "number"
               },
               {
                 "name": "end_week_day",
