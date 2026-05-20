@@ -1,6 +1,10 @@
 <script lang="ts">
+	import { untrack } from 'svelte';
 	import Sparkles from '@lucide/svelte/icons/sparkles';
 	import RotateCcw from '@lucide/svelte/icons/rotate-ccw';
+	import FormInput from '@lucide/svelte/icons/form-input';
+	import Braces from '@lucide/svelte/icons/braces';
+	import EncoderFormBuilder from './EncoderFormBuilder.svelte';
 	import type { DownlinkExample, ManifestDevice } from '$lib/tools/decode/types';
 
 	let {
@@ -14,16 +18,22 @@
 		device: ManifestDevice;
 		data: string;
 		fPort: number;
-		/**
-		 * Index de l'exemple downlink actuellement appliqué tel quel.
-		 * `null` dès que l'utilisateur modifie le JSON.
-		 */
 		appliedExampleIdx?: number | null;
 		onChange?: () => void;
 		onEncode?: () => void;
 	} = $props();
 
 	const examples = $derived(device.downlinkExamples ?? []);
+	const schema = $derived(device.downlinkSchema);
+	// Form par défaut quand un schéma est disponible ; sinon JSON direct. On
+	// lit `device` une seule fois ici (untrack) — les changements de device
+	// sont gérés par l'effet ci-dessous.
+	let editor = $state<'form' | 'json'>(untrack(() => (device.downlinkSchema ? 'form' : 'json')));
+
+	// Si on change de device et que le nouveau n'a pas de schéma, basculer en JSON
+	$effect(() => {
+		if (!device.downlinkSchema && editor === 'form') editor = 'json';
+	});
 
 	let textareaEl = $state<HTMLTextAreaElement | null>(null);
 
@@ -42,8 +52,10 @@
 		}
 		appliedExampleIdx = idx;
 		onChange?.();
-		// Focus pour signaler que l'utilisateur peut éditer
-		setTimeout(() => textareaEl?.focus(), 0);
+		// En mode JSON on focus la textarea pour signaler l'édition
+		if (editor === 'json') {
+			setTimeout(() => textareaEl?.focus(), 0);
+		}
 	}
 
 	function reformatJson() {
@@ -64,7 +76,11 @@
 
 	function onDataInput(e: Event) {
 		data = (e.target as HTMLTextAreaElement).value;
-		// Si l'utilisateur édite le contenu, on n'est plus "sur" l'exemple
+		appliedExampleIdx = null;
+		onChange?.();
+	}
+
+	function onFormChange() {
 		appliedExampleIdx = null;
 		onChange?.();
 	}
@@ -109,56 +125,105 @@
 				{/each}
 			</div>
 		</div>
-	{:else}
-		<p class="text-text-dim border-line-soft rounded border border-dashed px-3 py-2 text-[12px] italic">
+	{:else if !schema}
+		<p
+			class="text-text-dim border-line-soft rounded border border-dashed px-3 py-2 text-[12px] italic"
+		>
 			Aucun exemple downlink fourni par le vendor pour ce device — saisissez la structure attendue
-			directement (cf. datasheet ou code source du codec).
+			directement (cf. datasheet ou code source du codec téléchargeable).
 		</p>
 	{/if}
 
 	<div>
 		<div class="mb-1.5 flex items-center justify-between gap-2">
 			<label
-				for="encode-data-input"
 				class="text-text-soft block font-mono text-[11.5px] tracking-wide uppercase"
+				for="encode-data-input"
 			>
-				Données à encoder (JSON)
+				Données à encoder
 			</label>
-			<button
-				type="button"
-				onclick={reformatJson}
-				disabled={!jsonValid}
-				class="text-text-dim hover:text-primary focus-visible:ring-ring inline-flex items-center gap-1 rounded px-1.5 py-0.5 font-mono text-[10.5px] transition-colors focus-visible:ring-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
-				title="Reformater le JSON"
-			>
-				<RotateCcw class="size-3" /> reformat
-			</button>
+			<div class="flex items-center gap-1.5">
+				{#if schema}
+					<div
+						class="border-line-soft bg-secondary/40 inline-flex overflow-hidden rounded border"
+						role="radiogroup"
+						aria-label="Mode d'édition"
+					>
+						<button
+							type="button"
+							role="radio"
+							aria-checked={editor === 'form'}
+							onclick={() => (editor = 'form')}
+							class="inline-flex items-center gap-1 px-2 py-1 font-mono text-[11px] transition-colors {editor ===
+							'form'
+								? 'bg-primary text-primary-foreground'
+								: 'text-text-soft hover:text-foreground'}"
+						>
+							<FormInput class="size-3" /> form
+						</button>
+						<button
+							type="button"
+							role="radio"
+							aria-checked={editor === 'json'}
+							onclick={() => (editor = 'json')}
+							class="inline-flex items-center gap-1 px-2 py-1 font-mono text-[11px] transition-colors {editor ===
+							'json'
+								? 'bg-primary text-primary-foreground'
+								: 'text-text-soft hover:text-foreground'}"
+						>
+							<Braces class="size-3" /> json
+						</button>
+					</div>
+				{/if}
+				{#if editor === 'json'}
+					<button
+						type="button"
+						onclick={reformatJson}
+						disabled={!jsonValid}
+						class="text-text-dim hover:text-primary focus-visible:ring-ring inline-flex items-center gap-1 rounded px-1.5 py-0.5 font-mono text-[10.5px] transition-colors focus-visible:ring-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+						title="Reformater le JSON"
+					>
+						<RotateCcw class="size-3" /> reformat
+					</button>
+				{/if}
+			</div>
 		</div>
-		<textarea
-			id="encode-data-input"
-			bind:this={textareaEl}
-			rows="6"
-			spellcheck="false"
-			autocomplete="off"
-			autocapitalize="none"
-			placeholder={'{\n  "exemple": "valeur"\n}'}
-			value={data}
-			oninput={onDataInput}
-			aria-invalid={data.trim() !== '' && !jsonValid}
-			class="border-border bg-background focus-visible:ring-ring w-full min-w-0 resize-y rounded border px-3 py-2 font-mono text-[12.5px] leading-relaxed focus-visible:ring-2 focus-visible:outline-none {data.trim() !==
-				'' && !jsonValid
-				? 'border-amber/60'
-				: ''}"
-		></textarea>
-		<p class="text-text-dim mt-1 font-mono text-[11px]" aria-live="polite">
-			{#if data.trim() === ''}
-				Cliquez un exemple ou saisissez votre payload structuré.
-			{:else if jsonValid}
-				JSON valide.
-			{:else}
-				<span class="text-amber">JSON invalide — vérifiez les virgules / guillemets.</span>
-			{/if}
-		</p>
+
+		{#if editor === 'form' && schema}
+			<EncoderFormBuilder {schema} bind:data onChange={onFormChange} />
+			<p class="text-text-dim mt-2 font-mono text-[11px]" aria-live="polite">
+				Formulaire généré depuis le codec ({schema.fields.length} champ{schema.fields.length > 1
+					? 's'
+					: ''} détecté{schema.fields.length > 1 ? 's' : ''}). Cochez les commandes à inclure puis
+				saisissez leurs valeurs.
+			</p>
+		{:else}
+			<textarea
+				id="encode-data-input"
+				bind:this={textareaEl}
+				rows="6"
+				spellcheck="false"
+				autocomplete="off"
+				autocapitalize="none"
+				placeholder={'{\n  "exemple": "valeur"\n}'}
+				value={data}
+				oninput={onDataInput}
+				aria-invalid={data.trim() !== '' && !jsonValid}
+				class="border-border bg-background focus-visible:ring-ring w-full min-w-0 resize-y rounded border px-3 py-2 font-mono text-[12.5px] leading-relaxed focus-visible:ring-2 focus-visible:outline-none {data.trim() !==
+					'' && !jsonValid
+					? 'border-amber/60'
+					: ''}"
+			></textarea>
+			<p class="text-text-dim mt-1 font-mono text-[11px]" aria-live="polite">
+				{#if data.trim() === ''}
+					Cliquez un exemple ou saisissez votre payload structuré.
+				{:else if jsonValid}
+					JSON valide.
+				{:else}
+					<span class="text-amber">JSON invalide — vérifiez les virgules / guillemets.</span>
+				{/if}
+			</p>
+		{/if}
 	</div>
 
 	<div>

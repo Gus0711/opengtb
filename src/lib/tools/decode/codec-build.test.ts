@@ -163,6 +163,69 @@ describe('manifest', () => {
 	});
 });
 
+describe('downlinkSchema — golden Milesight UC300', () => {
+	const manifestPath = resolve(CODECS_DIR, 'manifest.json');
+	const manifest = existsSync(manifestPath)
+		? (JSON.parse(readFileSync(manifestPath, 'utf8')) as {
+				devices: Array<{
+					slug: string;
+					downlinkSchema?: {
+						source: string;
+						fields: Array<{ name: string; type: string; enum?: unknown[]; fields?: unknown[] }>;
+					};
+				}>;
+			})
+		: null;
+
+	const uc300 = manifest?.devices.find((d) => d.slug === 'milesight-iot-uc300');
+
+	test.skipIf(!uc300)('exposes the 13 documented commands', () => {
+		expect(uc300!.downlinkSchema?.source).toBe('milesight-if-in-payload');
+		const names = uc300!.downlinkSchema!.fields.map((f) => f.name).sort();
+		expect(names).toEqual([
+			'collection_interval',
+			'gpio_output_1',
+			'gpio_output_1_control',
+			'gpio_output_2',
+			'gpio_output_2_control',
+			'jitter_config',
+			'reboot',
+			'rejoin',
+			'report_interval',
+			'report_status',
+			'sync_time',
+			'time_zone',
+			'timestamp'
+		]);
+	});
+
+	test.skipIf(!uc300)('infers gpio_output_1 as enum off/on', () => {
+		const f = uc300!.downlinkSchema!.fields.find((x) => x.name === 'gpio_output_1')!;
+		expect(f.type).toBe('string');
+		expect(f.enum).toEqual(['off', 'on']);
+	});
+
+	test.skipIf(!uc300)('infers gpio_output_1_control as object with duration + status', () => {
+		const f = uc300!.downlinkSchema!.fields.find((x) => x.name === 'gpio_output_1_control')!;
+		expect(f.type).toBe('object');
+		const subs = (f.fields as Array<{ name: string }>).map((s) => s.name).sort();
+		expect(subs).toEqual(['duration', 'status']);
+	});
+
+	test.skipIf(!uc300)('extracts the full time_zone enum from the UTC map', () => {
+		const f = uc300!.downlinkSchema!.fields.find((x) => x.name === 'time_zone')!;
+		expect(f.type).toBe('string');
+		expect((f.enum as string[]).length).toBeGreaterThan(20);
+		expect(f.enum).toContain('UTC');
+		expect(f.enum).toContain('UTC+8');
+	});
+
+	test.skipIf(!manifest)('around 90+ devices have a schema (Milesight + switch-on-cmd)', () => {
+		const withSchema = manifest!.devices.filter((d) => d.downlinkSchema);
+		expect(withSchema.length).toBeGreaterThan(80);
+	});
+});
+
 describe('codec artifacts — encoder execution', () => {
 	const manifestPath = resolve(CODECS_DIR, 'manifest.json');
 	const manifest = existsSync(manifestPath)

@@ -33,6 +33,8 @@ export interface ManifestDevice {
 	examples: PayloadExample[];
 	/** Exemples downlink (presets cliquables pour l'éditeur d'encodage). */
 	downlinkExamples?: DownlinkExample[];
+	/** Schéma d'entrée déduit du code JS (génère un formulaire au lieu du JSON brut). */
+	downlinkSchema?: DownlinkSchema;
 }
 
 export interface PayloadExample {
@@ -52,6 +54,24 @@ export interface DownlinkExample {
 		bytes: number[];
 		fPort?: number;
 	};
+}
+
+/** Schéma d'un champ d'entrée d'un encoder downlink, déduit du code JS. */
+export interface DownlinkSchemaField {
+	name: string;
+	type: 'number' | 'string' | 'boolean' | 'object' | 'unknown';
+	enum?: Array<string | number>;
+	min?: number;
+	max?: number;
+	description?: string;
+	fields?: DownlinkSchemaField[];
+	default?: unknown;
+}
+
+/** Schéma complet d'entrée pour `encodeDownlink({ data })`. */
+export interface DownlinkSchema {
+	source: 'milesight-if-in-payload' | 'switch-on-cmd';
+	fields: DownlinkSchemaField[];
 }
 
 /** Forme de retour standardisée d'un encoder downlink TTN v3 (officielle). */

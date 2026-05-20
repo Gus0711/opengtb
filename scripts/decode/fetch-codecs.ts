@@ -27,6 +27,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
 import { parse as parseYaml } from 'yaml';
+import { extractDownlinkSchema, type DownlinkSchema } from './schema-extractor.ts';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Chemins et constantes
@@ -96,6 +97,8 @@ interface ManifestDevice {
 	examples: ManifestExample[];
 	/** Exemples downlink issus du YAML (presets cliquables pour l'éditeur d'encodage). */
 	downlinkExamples?: ManifestDownlinkExample[];
+	/** Schéma d'entrée déduit du code JS de l'encoder (champs + types + enums). */
+	downlinkSchema?: DownlinkSchema;
 }
 
 interface ManifestWarning {
@@ -633,6 +636,17 @@ async function processDevice(
 	);
 	const hasEncoder = hasEncodeDownlinkFn(combinedSource);
 
+	// Extraction du schéma d'entrée pour générer un form au runtime. On parse
+	// le source encoder dédié quand il est dans un fichier séparé, sinon le
+	// fichier decoder qui contient les deux. Best-effort heuristique : retourne
+	// null si aucun pattern reconnu (l'UI retombera sur l'éditeur JSON brut).
+	let downlinkSchema: DownlinkSchema | undefined;
+	if (hasEncoder) {
+		const schemaSource = extraEncoderJs ?? jsSource;
+		const schema = extractDownlinkSchema(schemaSource);
+		if (schema) downlinkSchema = schema;
+	}
+
 	// ttn-v3 : on génère les deux artefacts téléchargeables.
 	const slug = `${vendor.id}-${deviceId}`;
 	const sourcePath = `vendor/${vendor.id}/${upDec.fileName}`;
@@ -677,7 +691,8 @@ async function processDevice(
 		hasEncoder,
 		productURL: device.productURL,
 		examples,
-		downlinkExamples: downlinkExamples.length > 0 ? downlinkExamples : undefined
+		downlinkExamples: downlinkExamples.length > 0 ? downlinkExamples : undefined,
+		downlinkSchema
 	};
 }
 
