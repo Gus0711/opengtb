@@ -66,11 +66,16 @@ export interface DownlinkSchemaField {
 	description?: string;
 	fields?: DownlinkSchemaField[];
 	default?: unknown;
+	/**
+	 * True si la commande ne lit pas son paramètre (no-param trigger).
+	 * Le formulaire ne montre que la case "activer la commande", pas d'input.
+	 */
+	noParam?: boolean;
 }
 
 /** Schéma complet d'entrée pour `encodeDownlink({ data })`. */
 export interface DownlinkSchema {
-	source: 'milesight-if-in-payload' | 'switch-on-cmd';
+	source: 'milesight-if-in-payload' | 'switch-on-cmd' | 'for-key-switch';
 	fields: DownlinkSchemaField[];
 }
 

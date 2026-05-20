@@ -1,57 +1,80 @@
 # Exemples downlink pour MClimate Vicki (consommés par opengtb comme chips
-# pré-remplissables dans l'éditeur d'encodage).
-# Référence des byte layouts : MClimate/mclimate-payload-helper (ISC).
+# pré-remplissables dans l'éditeur d'encodage). Les keys sont en camelCase
+# car l'encoder fait `switch (key)` sur les Object.keys du payload.
 examples:
   - description: Recalibrer le moteur
     input:
       data:
-        recalibrate_motor: true
+        recalibrateMotor: true
     output:
       bytes: [3]
+      fPort: 1
+  - description: Forcer la fermeture
+    input:
+      data:
+        forceClose: true
+    output:
+      bytes: [11]
+      fPort: 1
+  - description: Reboot du device
+    input:
+      data:
+        deviceReset: true
+    output:
+      bytes: [48]
       fPort: 1
   - description: Consigne 21 °C
     input:
       data:
-        set_target_temperature: 21
+        setTargetTemperature: 21
     output:
       bytes: [14, 21]
-      fPort: 1
-  - description: Consigne 21.5 °C (précision 0.1°)
-    input:
-      data:
-        set_target_temperature: 21.5
-    output:
-      bytes: [81, 0, 215]
       fPort: 1
   - description: Activer le verrou enfant
     input:
       data:
-        set_child_lock: "on"
+        setChildLock: true
     output:
       bytes: [7, 1]
       fPort: 1
   - description: Désactiver le verrou enfant
     input:
       data:
-        set_child_lock: "off"
+        setChildLock: false
     output:
       bytes: [7, 0]
       fPort: 1
   - description: Période d'envoi 30 minutes
     input:
       data:
-        set_keep_alive: 30
+        setKeepAlive: 30
     output:
       bytes: [2, 30]
       fPort: 1
-  - description: Détection fenêtre ouverte (Δ=2 °C, fermeture 30 s)
+  - description: Plage température 15–21 °C
     input:
       data:
-        set_open_window:
-          enabled: true
-          delta: 2
-          closeTime: 30
-          motorPosition: 300
+        setTemperatureRange:
+          min: 15
+          max: 21
     output:
-      bytes: [6, 1, 6, 44, 18, 2]
+      bytes: [8, 15, 21]
+      fPort: 1
+  - description: Ouverture valve à 50 %
+    input:
+      data:
+        setValveOpenness: 50
+    output:
+      bytes: [78, 50]
+      fPort: 1
+  - description: Détection fenêtre ouverte (Δ=3 °C, fermeture 20 s)
+    input:
+      data:
+        setOpenWindow:
+          enabled: true
+          closeTime: 20
+          delta: 3
+          motorPosition: 540
+    output:
+      bytes: [6, 1, 4, 28, 35]
       fPort: 1

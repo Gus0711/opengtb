@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T15:17:08.168Z",
+  "generatedAt": "2026-05-20T15:25:41.356Z",
   "source": {
     "repo": "https://github.com/TheThingsNetwork/lorawan-devices",
     "commit": "26f5522b7eb894f139c68971b9183413aa2b2bea",
@@ -40991,7 +40991,7 @@
           "description": "Recalibrer le moteur",
           "input": {
             "data": {
-              "recalibrate_motor": true
+              "recalibrateMotor": true
             }
           },
           "output": {
@@ -41002,10 +41002,38 @@
           }
         },
         {
+          "description": "Forcer la fermeture",
+          "input": {
+            "data": {
+              "forceClose": true
+            }
+          },
+          "output": {
+            "bytes": [
+              11
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Reboot du device",
+          "input": {
+            "data": {
+              "deviceReset": true
+            }
+          },
+          "output": {
+            "bytes": [
+              48
+            ],
+            "fPort": 1
+          }
+        },
+        {
           "description": "Consigne 21 °C",
           "input": {
             "data": {
-              "set_target_temperature": 21
+              "setTargetTemperature": 21
             }
           },
           "output": {
@@ -41017,26 +41045,10 @@
           }
         },
         {
-          "description": "Consigne 21.5 °C (précision 0.1°)",
-          "input": {
-            "data": {
-              "set_target_temperature": 21.5
-            }
-          },
-          "output": {
-            "bytes": [
-              81,
-              0,
-              215
-            ],
-            "fPort": 1
-          }
-        },
-        {
           "description": "Activer le verrou enfant",
           "input": {
             "data": {
-              "set_child_lock": "on"
+              "setChildLock": true
             }
           },
           "output": {
@@ -41051,7 +41063,7 @@
           "description": "Désactiver le verrou enfant",
           "input": {
             "data": {
-              "set_child_lock": "off"
+              "setChildLock": false
             }
           },
           "output": {
@@ -41066,7 +41078,7 @@
           "description": "Période d'envoi 30 minutes",
           "input": {
             "data": {
-              "set_keep_alive": 30
+              "setKeepAlive": 30
             }
           },
           "output": {
@@ -41078,14 +41090,48 @@
           }
         },
         {
-          "description": "Détection fenêtre ouverte (Δ=2 °C, fermeture 30 s)",
+          "description": "Plage température 15–21 °C",
           "input": {
             "data": {
-              "set_open_window": {
+              "setTemperatureRange": {
+                "min": 15,
+                "max": 21
+              }
+            }
+          },
+          "output": {
+            "bytes": [
+              8,
+              15,
+              21
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Ouverture valve à 50 %",
+          "input": {
+            "data": {
+              "setValveOpenness": 50
+            }
+          },
+          "output": {
+            "bytes": [
+              78,
+              50
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Détection fenêtre ouverte (Δ=3 °C, fermeture 20 s)",
+          "input": {
+            "data": {
+              "setOpenWindow": {
                 "enabled": true,
-                "delta": 2,
-                "closeTime": 30,
-                "motorPosition": 300
+                "closeTime": 20,
+                "delta": 3,
+                "motorPosition": 540
               }
             }
           },
@@ -41093,50 +41139,38 @@
             "bytes": [
               6,
               1,
-              6,
-              44,
-              18,
-              2
+              4,
+              28,
+              35
             ],
             "fPort": 1
           }
         }
       ],
       "downlinkSchema": {
-        "source": "milesight-if-in-payload",
+        "source": "for-key-switch",
         "fields": [
           {
-            "name": "recalibrate_motor",
-            "type": "boolean"
+            "name": "setKeepAlive",
+            "type": "number"
           },
           {
-            "name": "force_close",
-            "type": "boolean"
+            "name": "getKeepAliveTime",
+            "type": "boolean",
+            "noParam": true
           },
           {
-            "name": "device_reset",
-            "type": "boolean"
+            "name": "recalibrateMotor",
+            "type": "boolean",
+            "noParam": true
           },
           {
-            "name": "set_target_temperature",
-            "type": "number",
-            "min": 5
+            "name": "getDeviceVersions",
+            "type": "boolean",
+            "noParam": true
           },
           {
-            "name": "set_child_lock",
-            "type": "string",
-            "enum": [
-              "off",
-              "on"
-            ]
-          },
-          {
-            "name": "set_keep_alive",
-            "type": "number",
-            "min": 0
-          },
-          {
-            "name": "set_open_window",
+            "name": "setOpenWindow",
             "type": "object",
             "fields": [
               {
@@ -41144,11 +41178,11 @@
                 "type": "boolean"
               },
               {
-                "name": "delta",
+                "name": "closeTime",
                 "type": "number"
               },
               {
-                "name": "closeTime",
+                "name": "delta",
                 "type": "number"
               },
               {
@@ -41156,6 +41190,285 @@
                 "type": "number"
               }
             ]
+          },
+          {
+            "name": "getOpenWindowParams",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setChildLock",
+            "type": "boolean"
+          },
+          {
+            "name": "getChildLock",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setTemperatureRange",
+            "type": "object",
+            "fields": [
+              {
+                "name": "min",
+                "type": "number"
+              },
+              {
+                "name": "max",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "getTemperatureRange",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "forceClose",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setInternalAlgoParams",
+            "type": "object",
+            "fields": [
+              {
+                "name": "pFirstLast",
+                "type": "number"
+              },
+              {
+                "name": "pNext",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "getInternalAlgoParams",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setInternalAlgoTdiffParams",
+            "type": "object",
+            "fields": [
+              {
+                "name": "cold",
+                "type": "number"
+              },
+              {
+                "name": "warm",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "getInternalAlgoTdiffParams",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setOperationalMode",
+            "type": "number"
+          },
+          {
+            "name": "getOperationalMode",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setTargetTemperature",
+            "type": "number"
+          },
+          {
+            "name": "setExternalTemperature",
+            "type": "number"
+          },
+          {
+            "name": "setJoinRetryPeriod",
+            "type": "number"
+          },
+          {
+            "name": "getJoinRetryPeriod",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setUplinkType",
+            "type": "number"
+          },
+          {
+            "name": "getUplinkType",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setTargetTemperatureAndMotorPosition",
+            "type": "object",
+            "fields": [
+              {
+                "name": "motorPosition",
+                "type": "number"
+              },
+              {
+                "name": "targetTemperature",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "setWatchDogParams",
+            "type": "object",
+            "fields": [
+              {
+                "name": "confirmedUplinks",
+                "type": "number"
+              },
+              {
+                "name": "unconfirmedUplinks",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "getWatchDogParams",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setPrimaryOperationalMode",
+            "type": "number"
+          },
+          {
+            "name": "getPrimaryOperationalMode",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setProportionalAlgorithmParameters",
+            "type": "object",
+            "fields": [
+              {
+                "name": "coefficient",
+                "type": "number"
+              },
+              {
+                "name": "period",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "getProportionalAlgorithmParameters",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setTemperatureControlAlgorithm",
+            "type": "number"
+          },
+          {
+            "name": "getTemperatureControlAlgorithm",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setMotorPositionOnly",
+            "type": "number"
+          },
+          {
+            "name": "deviceReset",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setChildLockBehavior",
+            "type": "number"
+          },
+          {
+            "name": "getChildLockBehavior",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setProportionalGain",
+            "type": "number"
+          },
+          {
+            "name": "getProportionalGain",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setExternalTemperatureFloat",
+            "type": "number"
+          },
+          {
+            "name": "setIntegralGain",
+            "type": "number"
+          },
+          {
+            "name": "getIntegralGain",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setPiRunPeriod",
+            "type": "number"
+          },
+          {
+            "name": "getPiRunPeriod",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setTempHysteresis",
+            "type": "number"
+          },
+          {
+            "name": "getTempHysteresis",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setOpenWindowPrecisely",
+            "type": "object",
+            "fields": [
+              {
+                "name": "enabled",
+                "type": "boolean"
+              },
+              {
+                "name": "duration",
+                "type": "number"
+              },
+              {
+                "name": "delta",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "getOpenWindowPrecisely",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setForceAttach",
+            "type": "number"
+          },
+          {
+            "name": "setValveOpenness",
+            "type": "number"
+          },
+          {
+            "name": "getForceAttach",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "sendCustomHexCommand",
+            "type": "string"
           }
         ]
       }

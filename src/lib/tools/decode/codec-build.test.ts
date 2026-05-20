@@ -238,7 +238,7 @@ describe('overrides — MClimate Vicki', () => {
 						input: { data: unknown; fPort?: number };
 						output?: { bytes: number[]; fPort?: number };
 					}>;
-					downlinkSchema?: { fields: Array<{ name: string; type: string }> };
+					downlinkSchema?: { source: string; fields: Array<{ name: string; type: string }> };
 				}>;
 			})
 		: null;
@@ -249,17 +249,39 @@ describe('overrides — MClimate Vicki', () => {
 		expect(vicki!.hasEncoder).toBe(true);
 	});
 
-	test.skipIf(!vicki)('Vicki ships 7 schema fields incl. set_open_window object', () => {
-		const names = vicki!.downlinkSchema!.fields.map((f) => f.name).sort();
-		expect(names).toEqual([
-			'device_reset',
-			'force_close',
-			'recalibrate_motor',
-			'set_child_lock',
-			'set_keep_alive',
-			'set_open_window',
-			'set_target_temperature'
-		]);
+	test.skipIf(!vicki)('Vicki ships the full command surface (~50 commands)', () => {
+		expect(vicki!.downlinkSchema?.source).toBe('for-key-switch');
+		expect(vicki!.downlinkSchema!.fields.length).toBeGreaterThan(40);
+		const names = vicki!.downlinkSchema!.fields.map(
+			(f: { name: string }) => f.name
+		);
+		// Quelques commandes clés présentes
+		expect(names).toContain('recalibrateMotor');
+		expect(names).toContain('setTargetTemperature');
+		expect(names).toContain('setChildLock');
+		expect(names).toContain('setOpenWindow');
+		expect(names).toContain('setValveOpenness');
+		expect(names).toContain('sendCustomHexCommand');
+	});
+
+	test.skipIf(!vicki)('Vicki no-param triggers are flagged correctly', () => {
+		const recalibrate = vicki!.downlinkSchema!.fields.find(
+			(f: { name: string }) => f.name === 'recalibrateMotor'
+		)! as { noParam?: boolean };
+		expect(recalibrate.noParam).toBe(true);
+		const forceClose = vicki!.downlinkSchema!.fields.find(
+			(f: { name: string }) => f.name === 'forceClose'
+		)! as { noParam?: boolean };
+		expect(forceClose.noParam).toBe(true);
+	});
+
+	test.skipIf(!vicki)('Vicki setOpenWindow detected as object with 4 sub-fields', () => {
+		const sow = vicki!.downlinkSchema!.fields.find(
+			(f: { name: string }) => f.name === 'setOpenWindow'
+		)! as { type: string; fields?: Array<{ name: string; type: string }> };
+		expect(sow.type).toBe('object');
+		const subs = (sow.fields ?? []).map((s) => s.name).sort();
+		expect(subs).toEqual(['closeTime', 'delta', 'enabled', 'motorPosition']);
 	});
 
 	test.skipIf(!vicki)('Vicki examples encode correctly via the override JS', () => {

@@ -65,6 +65,10 @@
 
 	function defaultValueFor(field: DownlinkSchemaField): unknown {
 		if (field.default !== undefined) return field.default;
+		// Commande sans paramètre : la valeur n'est jamais lue par l'encoder,
+		// mais doit être truthy pour que `key in payload` (et `Object.keys`)
+		// trouve la clé.
+		if (field.noParam) return true;
 		switch (field.type) {
 			case 'boolean':
 				return false;
@@ -109,7 +113,9 @@
 			<span class="min-w-0 flex-1 leading-tight">
 				<span class="text-foreground break-all">{field.name}</span>
 				<span class="text-text-dim ml-1 text-[11px]">
-					{#if field.type === 'object'}
+					{#if field.noParam}
+						commande sans paramètre
+					{:else if field.type === 'object'}
 						objet
 					{:else if field.enum}
 						enum {field.enum.length} valeur{field.enum.length > 1 ? 's' : ''}
@@ -123,7 +129,7 @@
 			</span>
 		</label>
 
-		{#if enabled}
+		{#if enabled && !field.noParam}
 			<div class="border-line-soft border-t px-2.5 py-2">
 				{#if field.type === 'boolean'}
 					<label class="flex items-center gap-2 font-mono text-[12.5px]">

@@ -30,11 +30,13 @@ export type DownlinkSchemaField = {
 	fields?: DownlinkSchemaField[];
 	/** Valeur par défaut suggérée (rare — on essaie d'inférer depuis JSDoc `@example`). */
 	default?: unknown;
+	/** Commande sans paramètre (no-op trigger : la valeur n'est pas lue par l'encoder). */
+	noParam?: boolean;
 };
 
 export interface DownlinkSchema {
 	/** Patron heuristique qui a matché. Utile pour debug et UI tooltip. */
-	source: 'milesight-if-in-payload' | 'switch-on-cmd';
+	source: 'milesight-if-in-payload' | 'switch-on-cmd' | 'for-key-switch';
 	fields: DownlinkSchemaField[];
 }
 
@@ -488,9 +490,161 @@ export function extractSwitchOnCmdSchema(source: string): DownlinkSchema | null 
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
+// Pattern 3 — for-key-switch (MClimate et codecs « éclatés par commande »)
+//
+// Pattern de référence :
+//
+//   for (const key of Object.keys(input.data)) {
+//     switch (key) {
+//       case "recalibrateMotor": { bytes.push(0x03); break; }
+//       case "setKeepAlive":     { bytes.push(0x02); bytes.push(input.data.setKeepAlive); break; }
+//       case "setOpenWindow":    { bytes.push(...input.data.setOpenWindow.enabled...); break; }
+//     }
+//   }
+//
+// Chaque `case "X":` devient un champ. On regarde le contenu du case pour
+// inférer : no-param (pas d'accès à `data.X`), scalaire, objet (accès à
+// `data.X.sub`), ou string (méthodes `.substr`, `.length`).
+
+function analyzeCaseBody(
+	body: string,
+	dataExpr: string,
+	fieldName: string
+): { type: DownlinkSchemaField['type']; noParam?: boolean; subFields?: DownlinkSchemaField[] } {
+	const accessPattern = `${escapeRegExp(dataExpr)}\\.${escapeRegExp(fieldName)}`;
+	const directRe = new RegExp(`${accessPattern}\\b(?!\\.[A-Za-z_])`);
+	const subRe = new RegExp(`${accessPattern}\\.([A-Za-z_][A-Za-z0-9_]*)`, 'g');
+
+	// Récupère tous les sous-champs accédés
+	const subs = new Set<string>();
+	let sm: RegExpExecArray | null;
+	while ((sm = subRe.exec(body)) !== null) {
+		// On ignore les méthodes built-in (.length, .substr, .indexOf…)
+		if (
+			['length', 'substr', 'substring', 'slice', 'indexOf', 'toString', 'charAt', 'toLowerCase', 'toUpperCase', 'trim'].includes(
+				sm[1]
+			)
+		)
+			continue;
+		subs.add(sm[1]);
+	}
+
+	if (subs.size > 0) {
+		// Objet avec sous-champs
+		const subFields: DownlinkSchemaField[] = [];
+		for (const s of subs) {
+			subFields.push({ name: s, type: inferScalarTypeFromBody(body, dataExpr, fieldName + '.' + s) });
+		}
+		return { type: 'object', subFields };
+	}
+
+	// Pas d'accès direct ni via sous-champ → no-param
+	if (!directRe.test(body)) {
+		return { type: 'boolean', noParam: true };
+	}
+
+	// String si on voit des méthodes string sur la valeur (directement, OU via
+	// une variable locale destructurée depuis input.data.X).
+	const stringMethodRe = new RegExp(`${accessPattern}\\.(?:substr|substring|slice|length|indexOf|charAt)\\b`);
+	const destrLocalRe = new RegExp(`var\\s+(\\w+)\\s*=\\s*${accessPattern}\\s*;`);
+	const destrMatch = body.match(destrLocalRe);
+	if (destrMatch) {
+		const localVar = destrMatch[1];
+		const localStringRe = new RegExp(
+			`\\b${escapeRegExp(localVar)}\\.(?:substr|substring|slice|length|indexOf|charAt)\\b`
+		);
+		if (localStringRe.test(body)) return { type: 'string' };
+	}
+	if (stringMethodRe.test(body)) {
+		return { type: 'string' };
+	}
+
+	// Boolean si on voit `Number(input.data.X)` ou comparaison à true/false
+	const numberCoerceRe = new RegExp(`Number\\s*\\(\\s*${accessPattern}\\s*\\)`);
+	const compareBoolRe = new RegExp(`${accessPattern}\\s*===?\\s*(?:true|false)\\b`);
+	const ternaryBoolRe = new RegExp(`${accessPattern}\\s*\\?\\s*\\d+\\s*:\\s*\\d+`);
+	if (numberCoerceRe.test(body) || compareBoolRe.test(body) || ternaryBoolRe.test(body)) {
+		return { type: 'boolean' };
+	}
+
+	// Sinon scalaire — défaut number (raisonnable pour les bytes.push)
+	return { type: 'number' };
+}
+
+function inferScalarTypeFromBody(
+	body: string,
+	dataExpr: string,
+	dottedPath: string // ex "setOpenWindow.enabled"
+): DownlinkSchemaField['type'] {
+	const accessPattern = `${escapeRegExp(dataExpr)}\\.${escapeRegExp(dottedPath)}`;
+	const numberCoerceRe = new RegExp(`Number\\s*\\(\\s*${accessPattern}\\s*\\)`);
+	const compareBoolRe = new RegExp(`${accessPattern}\\s*===?\\s*(?:true|false)\\b`);
+	const ternaryBoolRe = new RegExp(`${accessPattern}\\s*\\?\\s*\\d+\\s*:\\s*\\d+`);
+	if (numberCoerceRe.test(body) || compareBoolRe.test(body) || ternaryBoolRe.test(body)) {
+		return 'boolean';
+	}
+	const stringMethodRe = new RegExp(
+		`${accessPattern}\\.(?:substr|substring|slice|length|indexOf|charAt)\\b`
+	);
+	if (stringMethodRe.test(body)) return 'string';
+	return 'number';
+}
+
+export function extractForKeySwitchSchema(source: string): DownlinkSchema | null {
+	const encBody = findFunctionBody(source, 'encodeDownlink');
+	if (!encBody) return null;
+
+	// for (... of Object.keys(<dataExpr>)) — supporte aussi `Object.keys(input.data)`
+	const forKeyRe =
+		/for\s*\(\s*(?:let|var|const)?\s*(\w+)\s+(?:of|in)\s+Object\.keys\s*\(\s*([A-Za-z_][A-Za-z0-9_]*(?:\.[A-Za-z_][A-Za-z0-9_]*)?)\s*\)/;
+	const fm = forKeyRe.exec(encBody);
+	if (!fm) return null;
+	const keyVar = fm[1];
+	const dataExpr = fm[2];
+
+	const switchRe = new RegExp(`switch\\s*\\(\\s*${escapeRegExp(keyVar)}\\s*\\)\\s*\\{`);
+	const sm = switchRe.exec(encBody);
+	if (!sm) return null;
+	const switchOpen = sm.index + sm[0].length - 1;
+	const switchBody = extractBalancedBlock(encBody, switchOpen);
+
+	// Découpe le switch en cases.
+	// Stratégie simple : scanne les `case "X":` et capture jusqu'au prochain case
+	// ou `default:` ou fin de switch.
+	const caseStartRe = /case\s+["']([^"']+)["']\s*:/g;
+	const caseStarts: { name: string; index: number }[] = [];
+	let cm: RegExpExecArray | null;
+	while ((cm = caseStartRe.exec(switchBody)) !== null) {
+		caseStarts.push({ name: cm[1], index: cm.index });
+	}
+	if (caseStarts.length === 0) return null;
+
+	const fields: DownlinkSchemaField[] = [];
+	const seen = new Set<string>();
+	for (let i = 0; i < caseStarts.length; i++) {
+		const cur = caseStarts[i];
+		if (seen.has(cur.name)) continue;
+		seen.add(cur.name);
+		const nextIdx = i + 1 < caseStarts.length ? caseStarts[i + 1].index : switchBody.length;
+		const caseBody = switchBody.slice(cur.index, nextIdx);
+		const an = analyzeCaseBody(caseBody, dataExpr, cur.name);
+		const field: DownlinkSchemaField = { name: cur.name, type: an.type };
+		if (an.noParam) field.noParam = true;
+		if (an.subFields) field.fields = an.subFields;
+		fields.push(field);
+	}
+
+	return { source: 'for-key-switch', fields };
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
 // Entrée publique
 
 export function extractDownlinkSchema(source: string): DownlinkSchema | null {
 	// Essaie les extracteurs dans l'ordre. Le premier qui matche gagne.
-	return extractMilesightSchema(source) ?? extractSwitchOnCmdSchema(source);
+	return (
+		extractForKeySwitchSchema(source) ??
+		extractMilesightSchema(source) ??
+		extractSwitchOnCmdSchema(source)
+	);
 }
