@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T15:25:41.356Z",
+  "generatedAt": "2026-05-20T15:45:25.252Z",
   "source": {
     "repo": "https://github.com/TheThingsNetwork/lorawan-devices",
     "commit": "26f5522b7eb894f139c68971b9183413aa2b2bea",
@@ -40735,7 +40735,7 @@
         "ttnV3": "ttn-v3/mclimate-fan-coil-thermostat.js",
         "chirpstackV4": "chirpstack-v4/mclimate-fan-coil-thermostat.js"
       },
-      "hasEncoder": false,
+      "hasEncoder": true,
       "productURL": "http://docs.mclimate.eu/mclimate-lorawan-devices/devices/mclimate-fan-coil-thermostat-fct",
       "examples": [
         {
@@ -40755,7 +40755,533 @@
             1
           ]
         }
-      ]
+      ],
+      "downlinkExamples": [
+        {
+          "description": "Consigne 20 °C",
+          "input": {
+            "data": {
+              "setTargetTemperature": 20
+            }
+          },
+          "output": {
+            "bytes": [
+              46,
+              200,
+              0
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Plage température 18–24 °C",
+          "input": {
+            "data": {
+              "setTemperatureRange": {
+                "min": 18,
+                "max": 24
+              }
+            }
+          },
+          "output": {
+            "bytes": [
+              8,
+              18,
+              24
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Verrou clavier ON",
+          "input": {
+            "data": {
+              "setKeysLock": 1
+            }
+          },
+          "output": {
+            "bytes": [
+              7,
+              1
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Vitesse ventilateur 2",
+          "input": {
+            "data": {
+              "SetFanSpeed": 2
+            }
+          },
+          "output": {
+            "bytes": [
+              68,
+              2
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Mode opérationnel FCT — 1 (cooling)",
+          "input": {
+            "data": {
+              "setFctOperationalMode": 1
+            }
+          },
+          "output": {
+            "bytes": [
+              82,
+              1
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Protection antigel activée",
+          "input": {
+            "data": {
+              "setFrostProtection": 1
+            }
+          },
+          "output": {
+            "bytes": [
+              79,
+              1
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Lecture du statut device",
+          "input": {
+            "data": {
+              "getDeviceStatus": true
+            }
+          },
+          "output": {
+            "bytes": [
+              103
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Reboot — lire firmware version",
+          "input": {
+            "data": {
+              "getDeviceVersions": true
+            }
+          },
+          "output": {
+            "bytes": [
+              4
+            ],
+            "fPort": 1
+          }
+        }
+      ],
+      "downlinkSchema": {
+        "source": "for-key-switch",
+        "fields": [
+          {
+            "name": "setKeepAlive",
+            "type": "number"
+          },
+          {
+            "name": "getKeepAliveTime",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "getDeviceVersions",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setTargetTemperature",
+            "type": "number"
+          },
+          {
+            "name": "setTargetTemperatureStep",
+            "type": "number"
+          },
+          {
+            "name": "getTargetTemperatureStep",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setKeysLock",
+            "type": "number"
+          },
+          {
+            "name": "getKeysLock",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setTemperatureRange",
+            "type": "object",
+            "fields": [
+              {
+                "name": "min",
+                "type": "number"
+              },
+              {
+                "name": "max",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "getTemperatureRange",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setJoinRetryPeriod",
+            "type": "number"
+          },
+          {
+            "name": "getJoinRetryPeriod",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setUplinkType",
+            "type": "number"
+          },
+          {
+            "name": "getUplinkType",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setWatchDogParams",
+            "type": "object",
+            "fields": [
+              {
+                "name": "confirmedUplinks",
+                "type": "number"
+              },
+              {
+                "name": "unconfirmedUplinks",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "getWatchDogParams",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "SetValveOpenCloseTime",
+            "type": "number"
+          },
+          {
+            "name": "GetValveOpenCloseTime",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "SetDisplayRefreshPeriod",
+            "type": "number"
+          },
+          {
+            "name": "GetDisplayRefreshPeriod",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "SetCurrentTemperatureVisibility",
+            "type": "number"
+          },
+          {
+            "name": "GetCurrentTemperatureVisibility",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "SetHumidityVisibility",
+            "type": "number"
+          },
+          {
+            "name": "GetHumidityVisibility",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "SetFanSpeed",
+            "type": "number"
+          },
+          {
+            "name": "GetFanSpeed",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "SetFanSpeedLimit",
+            "type": "number"
+          },
+          {
+            "name": "GetFanSpeedLimit",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setEcmVoltageRange",
+            "type": "object",
+            "fields": [
+              {
+                "name": "min",
+                "type": "number"
+              },
+              {
+                "name": "max",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "getEcmVoltageRange",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setEcmStartUpTime",
+            "type": "number"
+          },
+          {
+            "name": "getEcmStartUpTime",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setEcmRelay",
+            "type": "number"
+          },
+          {
+            "name": "getEcmRelay",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setFrostProtection",
+            "type": "number"
+          },
+          {
+            "name": "getFrostProtection",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setFrostProtectionSettings",
+            "type": "object",
+            "fields": [
+              {
+                "name": "threshold",
+                "type": "number"
+              },
+              {
+                "name": "setpoint",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "getFrostProtectionSettings",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setFctOperationalMode",
+            "type": "number"
+          },
+          {
+            "name": "getFctOperationalMode",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setAllowedOperationalModes",
+            "type": "number"
+          },
+          {
+            "name": "getAllowedOperationalModes",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setCoolingSetpointNotOccupied",
+            "type": "number"
+          },
+          {
+            "name": "getCoolingSetpointNotOccupied",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setHeatingSetpointNotOccupied",
+            "type": "number"
+          },
+          {
+            "name": "getHeatingSetpointNotOccupied",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setTempSensorCompensation",
+            "type": "object",
+            "fields": [
+              {
+                "name": "compensation",
+                "type": "number"
+              },
+              {
+                "name": "temperature",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "getTempSensorCompensation",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setFanSpeedNotOccupied",
+            "type": "number"
+          },
+          {
+            "name": "getFanSpeedNotOccupied",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setAutomaticChangeover",
+            "type": "number"
+          },
+          {
+            "name": "getAutomaticChangeover",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setWiringDiagram",
+            "type": "number"
+          },
+          {
+            "name": "getWiringDiagram",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setOccFunction",
+            "type": "number"
+          },
+          {
+            "name": "getOccFunction",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setAutomaticChangeoverThreshold",
+            "type": "object",
+            "fields": [
+              {
+                "name": "coolingThreshold",
+                "type": "number"
+              },
+              {
+                "name": "heatingThreshold",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "getAutomaticChangeoverThreshold",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setDeviceStatus",
+            "type": "number"
+          },
+          {
+            "name": "getDeviceStatus",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setReturnOfPowerOperation",
+            "type": "number"
+          },
+          {
+            "name": "getReturnOfPowerOperation",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setDeltaTemperature1",
+            "type": "number"
+          },
+          {
+            "name": "getDeltaTemperature1",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setDeltaTemperature2and3",
+            "type": "object",
+            "fields": [
+              {
+                "name": "deltaTemperature2",
+                "type": "number"
+              },
+              {
+                "name": "deltaTemperature3",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "getDeltaTemperature2and3",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "getFrostProtectionStatus",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "getOccupancySensorStatusSetPoint",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "getOccupancySensorStatus",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "getDewPointSensorStatus",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "getFilterAlarm",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "sendCustomHexCommand",
+            "type": "string"
+          }
+        ]
+      }
     },
     {
       "slug": "mclimate-flood-sensor",

@@ -594,13 +594,15 @@ export function extractForKeySwitchSchema(source: string): DownlinkSchema | null
 	const encBody = findFunctionBody(source, 'encodeDownlink');
 	if (!encBody) return null;
 
-	// for (... of Object.keys(<dataExpr>)) — supporte aussi `Object.keys(input.data)`
+	// Accepte les deux idiomes équivalents :
+	//   for (var key of Object.keys(input.data)) { ... }
+	//   for (var key in input.data) { ... }
 	const forKeyRe =
-		/for\s*\(\s*(?:let|var|const)?\s*(\w+)\s+(?:of|in)\s+Object\.keys\s*\(\s*([A-Za-z_][A-Za-z0-9_]*(?:\.[A-Za-z_][A-Za-z0-9_]*)?)\s*\)/;
+		/for\s*\(\s*(?:let|var|const)?\s*(\w+)\s+(?:of\s+Object\.keys\s*\(\s*([A-Za-z_][A-Za-z0-9_]*(?:\.[A-Za-z_][A-Za-z0-9_]*)?)\s*\)|in\s+([A-Za-z_][A-Za-z0-9_]*(?:\.[A-Za-z_][A-Za-z0-9_]*)?))/;
 	const fm = forKeyRe.exec(encBody);
 	if (!fm) return null;
 	const keyVar = fm[1];
-	const dataExpr = fm[2];
+	const dataExpr = fm[2] || fm[3];
 
 	const switchRe = new RegExp(`switch\\s*\\(\\s*${escapeRegExp(keyVar)}\\s*\\)\\s*\\{`);
 	const sm = switchRe.exec(encBody);

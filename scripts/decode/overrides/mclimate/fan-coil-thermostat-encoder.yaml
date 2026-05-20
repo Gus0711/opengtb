@@ -1,0 +1,61 @@
+# Exemples downlink pour MClimate Fan Coil Thermostat.
+# camelCase et CamelCase strictement comme dans les cases du switch.
+examples:
+  - description: Consigne 20 °C
+    input:
+      data:
+        setTargetTemperature: 20
+    output:
+      bytes: [46, 200, 0]
+      fPort: 1
+  - description: Plage température 18–24 °C
+    input:
+      data:
+        setTemperatureRange:
+          min: 18
+          max: 24
+    output:
+      bytes: [8, 18, 24]
+      fPort: 1
+  - description: Verrou clavier ON
+    input:
+      data:
+        setKeysLock: 1
+    output:
+      bytes: [7, 1]
+      fPort: 1
+  - description: Vitesse ventilateur 2
+    input:
+      data:
+        SetFanSpeed: 2
+    output:
+      bytes: [68, 2]
+      fPort: 1
+  - description: Mode opérationnel FCT — 1 (cooling)
+    input:
+      data:
+        setFctOperationalMode: 1
+    output:
+      bytes: [82, 1]
+      fPort: 1
+  - description: Protection antigel activée
+    input:
+      data:
+        setFrostProtection: 1
+    output:
+      bytes: [79, 1]
+      fPort: 1
+  - description: Lecture du statut device
+    input:
+      data:
+        getDeviceStatus: true
+    output:
+      bytes: [103]
+      fPort: 1
+  - description: Reboot — lire firmware version
+    input:
+      data:
+        getDeviceVersions: true
+    output:
+      bytes: [4]
+      fPort: 1
