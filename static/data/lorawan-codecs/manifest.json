@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T15:45:25.252Z",
+  "generatedAt": "2026-05-20T16:19:38.528Z",
   "source": {
     "repo": "https://github.com/TheThingsNetwork/lorawan-devices",
     "commit": "26f5522b7eb894f139c68971b9183413aa2b2bea",
@@ -40522,7 +40522,7 @@
         "ttnV3": "ttn-v3/mclimate-16ads.js",
         "chirpstackV4": "chirpstack-v4/mclimate-16ads.js"
       },
-      "hasEncoder": false,
+      "hasEncoder": true,
       "productURL": "https://docs.mclimate.eu/mclimate-lorawan-devices/devices/mclimate-16a-dry-switch-16ads",
       "examples": [
         {
@@ -40534,7 +40534,339 @@
             1
           ]
         }
-      ]
+      ],
+      "downlinkExamples": [
+        {
+          "description": "Activer le relais",
+          "input": {
+            "data": {
+              "setRelayState": 1
+            }
+          },
+          "output": {
+            "bytes": [
+              193,
+              1
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Désactiver le relais",
+          "input": {
+            "data": {
+              "setRelayState": 0
+            }
+          },
+          "output": {
+            "bytes": [
+              193,
+              0
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Lire l'état du relais",
+          "input": {
+            "data": {
+              "getRelayState": true
+            }
+          },
+          "output": {
+            "bytes": [
+              177
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Lire la version firmware",
+          "input": {
+            "data": {
+              "getDeviceVersions": true
+            }
+          },
+          "output": {
+            "bytes": [
+              4
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Pulse 500 ms (relais ON pendant 500 ms)",
+          "input": {
+            "data": {
+              "setRelayTimerMiliseconds": {
+                "state": 1,
+                "time": 500
+              }
+            }
+          },
+          "output": {
+            "bytes": [
+              85,
+              1,
+              1,
+              244
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Pulse 10 s (relais ON pendant 10 s)",
+          "input": {
+            "data": {
+              "setRelayTimerSeconds": {
+                "state": 1,
+                "time": 10
+              }
+            }
+          },
+          "output": {
+            "bytes": [
+              87,
+              1,
+              0,
+              10
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Reprise automatique après surchauffe",
+          "input": {
+            "data": {
+              "setAfterOverheatingProtectionRecovery": 1
+            }
+          },
+          "output": {
+            "bytes": [
+              89,
+              1
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "LED indication mode 1",
+          "input": {
+            "data": {
+              "setLedIndicationMode": 1
+            }
+          },
+          "output": {
+            "bytes": [
+              91,
+              1
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Seuils surchauffe (trigger 80 °C, recovery 60 °C)",
+          "input": {
+            "data": {
+              "setOverheatingThresholds": {
+                "trigger": 80,
+                "recovery": 60
+              }
+            }
+          },
+          "output": {
+            "bytes": [
+              30,
+              80,
+              60
+            ],
+            "fPort": 1
+          }
+        },
+        {
+          "description": "Période keep-alive 30 min",
+          "input": {
+            "data": {
+              "setKeepAlive": 30
+            }
+          },
+          "output": {
+            "bytes": [
+              2,
+              30
+            ],
+            "fPort": 1
+          }
+        }
+      ],
+      "downlinkSchema": {
+        "source": "for-key-switch",
+        "fields": [
+          {
+            "name": "setKeepAlive",
+            "type": "number"
+          },
+          {
+            "name": "getKeepAliveTime",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "getDeviceVersions",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setJoinRetryPeriod",
+            "type": "number"
+          },
+          {
+            "name": "getJoinRetryPeriod",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setUplinkType",
+            "type": "number"
+          },
+          {
+            "name": "getUplinkType",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setWatchDogParams",
+            "type": "object",
+            "fields": [
+              {
+                "name": "confirmedUplinks",
+                "type": "number"
+              },
+              {
+                "name": "unconfirmedUplinks",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "getWatchDogParams",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setOverheatingThresholds",
+            "type": "object",
+            "fields": [
+              {
+                "name": "trigger",
+                "type": "number"
+              },
+              {
+                "name": "recovery",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "getOverheatingThresholds",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "getRelayStateChangeReason",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setRelayTimerMiliseconds",
+            "type": "object",
+            "fields": [
+              {
+                "name": "state",
+                "type": "number"
+              },
+              {
+                "name": "time",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "getRelayTimerMiliseconds",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setRelayTimerSeconds",
+            "type": "object",
+            "fields": [
+              {
+                "name": "state",
+                "type": "number"
+              },
+              {
+                "name": "time",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "name": "getRelayTimerSeconds",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setAfterOverheatingProtectionRecovery",
+            "type": "number"
+          },
+          {
+            "name": "getAfterOverheatingProtectionRecovery",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setLedIndicationMode",
+            "type": "number"
+          },
+          {
+            "name": "getLedIndicationMode",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setRelayRecoveryState",
+            "type": "number"
+          },
+          {
+            "name": "getRelayRecoveryState",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "setRelayState",
+            "type": "number"
+          },
+          {
+            "name": "getRelayState",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "getOverheatingEvents",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "getOverheatingRecoveryTime",
+            "type": "boolean",
+            "noParam": true
+          },
+          {
+            "name": "sendCustomHexCommand",
+            "type": "string"
+          }
+        ]
+      }
     },
     {
       "slug": "mclimate-16aspm",

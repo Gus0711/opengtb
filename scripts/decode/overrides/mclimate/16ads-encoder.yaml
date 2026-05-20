@@ -1,0 +1,79 @@
+# Exemples downlink pour MClimate 16A Dry Switch (16ADS).
+# Issus du bloc d'exemples documenté en bas du encoder upstream MClimate.
+examples:
+  - description: Activer le relais
+    input:
+      data:
+        setRelayState: 1
+    output:
+      bytes: [193, 1]
+      fPort: 1
+  - description: Désactiver le relais
+    input:
+      data:
+        setRelayState: 0
+    output:
+      bytes: [193, 0]
+      fPort: 1
+  - description: Lire l'état du relais
+    input:
+      data:
+        getRelayState: true
+    output:
+      bytes: [177]
+      fPort: 1
+  - description: Lire la version firmware
+    input:
+      data:
+        getDeviceVersions: true
+    output:
+      bytes: [4]
+      fPort: 1
+  - description: Pulse 500 ms (relais ON pendant 500 ms)
+    input:
+      data:
+        setRelayTimerMiliseconds:
+          state: 1
+          time: 500
+    output:
+      bytes: [85, 1, 1, 244]
+      fPort: 1
+  - description: Pulse 10 s (relais ON pendant 10 s)
+    input:
+      data:
+        setRelayTimerSeconds:
+          state: 1
+          time: 10
+    output:
+      bytes: [87, 1, 0, 10]
+      fPort: 1
+  - description: Reprise automatique après surchauffe
+    input:
+      data:
+        setAfterOverheatingProtectionRecovery: 1
+    output:
+      bytes: [89, 1]
+      fPort: 1
+  - description: LED indication mode 1
+    input:
+      data:
+        setLedIndicationMode: 1
+    output:
+      bytes: [91, 1]
+      fPort: 1
+  - description: Seuils surchauffe (trigger 80 °C, recovery 60 °C)
+    input:
+      data:
+        setOverheatingThresholds:
+          trigger: 80
+          recovery: 60
+    output:
+      bytes: [30, 80, 60]
+      fPort: 1
+  - description: Période keep-alive 30 min
+    input:
+      data:
+        setKeepAlive: 30
+    output:
+      bytes: [2, 30]
+      fPort: 1

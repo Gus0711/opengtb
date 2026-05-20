@@ -4,9 +4,10 @@
 // Vendor       : MClimate
 // Device       : 16A Dry Switch (16ADS)
 // fPort(s)     : 2
-// Fonctions    : decodeUplink
+// Fonctions    : decodeUplink + encodeDownlink
 // Source       : TheThingsNetwork/lorawan-devices @ 26f5522b7eb8
 //                https://github.com/TheThingsNetwork/lorawan-devices/blob/26f5522b7eb894f139c68971b9183413aa2b2bea/vendor/mclimate/16ads.js
+//                https://github.com/TheThingsNetwork/lorawan-devices/blob/26f5522b7eb894f139c68971b9183413aa2b2bea/scripts/decode/overrides/mclimate/16ads-encoder.js
 // Préparé par  : OpenGTB — https://opengtb.fr/outils/decode
 // Licence      : Apache-2.0 (per upstream repo)
 //
@@ -14,9 +15,17 @@
 //   1. Console TTN → Application → Payload formatters
 //   2. Type : « Custom JavaScript formatter »
 //   3. Onglet « Uplink » → coller ce fichier intégralement
-//   4. (downlink non fourni par ce vendor)
+//   4. (optionnel) Onglet « Downlink » → encodeDownlink est dans le même fichier
 // ─────────────────────────────────────────────────────────────────────
 
+// Codec OpenGTB — combinaison decoder + encoder (fichiers TTN distincts).
+// Chaque source TTN est encapsulé dans son propre IIFE pour éviter les
+// collisions quand chaque fichier déclare sa propre `decodeUplink`.
+var __ogtb_decode_uplink;
+var __ogtb_encode_downlink;
+
+// ─── Source decoder (TTN uplinkDecoder) ────────────────────────────
+(function () {
 const decodeUplink = (input) => {
     try {
         let { bytes } = input;
@@ -159,3 +168,184 @@ const decodeUplink = (input) => {
         throw new Error('Unhandled data');
     }
 };
+
+	if (typeof decodeUplink === 'function') {
+		__ogtb_decode_uplink = decodeUplink;
+	} else if (typeof codec !== 'undefined' && codec && typeof codec.decodeUplink === 'function') {
+		__ogtb_decode_uplink = codec.decodeUplink;
+	}
+})();
+
+// ─── Source encoder (TTN downlinkEncoder : null) ─────────
+(function () {
+// MClimate 16A Dry Switch (16ADS) — encoder downlink (override OpenGTB)
+//
+// Source : fournie par l'utilisateur, équivalente à la version publique
+// MClimate/mclimate-payload-helper (Licence ISC).
+//
+// Aucun bug upstream à corriger sur cette version : `var key, i;` est
+// déclaré, `hasOwnProperty` guard en place, `Math.floor` utilisé pour
+// la conversion period. Sauvegarde quasi verbatim.
+
+function encodeDownlink(input) {
+	var bytes = [];
+	var key, i;
+	for (key in input.data) {
+		if (input.data.hasOwnProperty(key)) {
+			switch (key) {
+				case "setKeepAlive":
+					bytes.push(0x02);
+					bytes.push(input.data.setKeepAlive);
+					break;
+				case "getKeepAliveTime":
+					bytes.push(0x12);
+					break;
+				case "getDeviceVersions":
+					bytes.push(0x04);
+					break;
+				case "setJoinRetryPeriod":
+					var periodToPass = Math.floor((input.data.setJoinRetryPeriod * 60) / 5);
+					bytes.push(0x10);
+					bytes.push(periodToPass);
+					break;
+				case "getJoinRetryPeriod":
+					bytes.push(0x19);
+					break;
+				case "setUplinkType":
+					bytes.push(0x11);
+					bytes.push(input.data.setUplinkType);
+					break;
+				case "getUplinkType":
+					bytes.push(0x1b);
+					break;
+				case "setWatchDogParams":
+					bytes.push(0x1c);
+					bytes.push(input.data.setWatchDogParams.confirmedUplinks);
+					bytes.push(input.data.setWatchDogParams.unconfirmedUplinks);
+					break;
+				case "getWatchDogParams":
+					bytes.push(0x1d);
+					break;
+				case "setOverheatingThresholds":
+					bytes.push(0x1e);
+					bytes.push(input.data.setOverheatingThresholds.trigger);
+					bytes.push(input.data.setOverheatingThresholds.recovery);
+					break;
+				case "getOverheatingThresholds":
+					bytes.push(0x1f);
+					break;
+				case "getRelayStateChangeReason":
+					bytes.push(0x54);
+					break;
+				case "setRelayTimerMiliseconds": {
+					var stateMs = input.data.setRelayTimerMiliseconds.state;
+					var timeMs = input.data.setRelayTimerMiliseconds.time;
+					var timeMsLow = timeMs & 0xff;
+					var timeMsHigh = (timeMs >> 8) & 0xff;
+					bytes.push(0x55);
+					bytes.push(stateMs);
+					bytes.push(timeMsHigh);
+					bytes.push(timeMsLow);
+					break;
+				}
+				case "getRelayTimerMiliseconds":
+					bytes.push(0x56);
+					break;
+				case "setRelayTimerSeconds": {
+					var stateSec = input.data.setRelayTimerSeconds.state;
+					var timeSec = input.data.setRelayTimerSeconds.time;
+					var timeSecLow = timeSec & 0xff;
+					var timeSecHigh = (timeSec >> 8) & 0xff;
+					bytes.push(0x57);
+					bytes.push(stateSec);
+					bytes.push(timeSecHigh);
+					bytes.push(timeSecLow);
+					break;
+				}
+				case "getRelayTimerSeconds":
+					bytes.push(0x58);
+					break;
+				case "setAfterOverheatingProtectionRecovery":
+					bytes.push(0x59);
+					bytes.push(input.data.setAfterOverheatingProtectionRecovery);
+					break;
+				case "getAfterOverheatingProtectionRecovery":
+					bytes.push(0x5a);
+					break;
+				case "setLedIndicationMode":
+					bytes.push(0x5b);
+					bytes.push(input.data.setLedIndicationMode);
+					break;
+				case "getLedIndicationMode":
+					bytes.push(0x5c);
+					break;
+				case "setRelayRecoveryState":
+					bytes.push(0x5e);
+					bytes.push(input.data.setRelayRecoveryState);
+					break;
+				case "getRelayRecoveryState":
+					bytes.push(0x5f);
+					break;
+				case "setRelayState":
+					bytes.push(0xc1);
+					bytes.push(input.data.setRelayState);
+					break;
+				case "getRelayState":
+					bytes.push(0xb1);
+					break;
+				case "getOverheatingEvents":
+					bytes.push(0x60);
+					break;
+				case "getOverheatingRecoveryTime":
+					bytes.push(0x70);
+					break;
+				case "sendCustomHexCommand":
+					var sendCustomHexCommand = input.data.sendCustomHexCommand;
+					for (i = 0; i < sendCustomHexCommand.length; i += 2) {
+						var b = parseInt(sendCustomHexCommand.substr(i, 2), 16);
+						bytes.push(b);
+					}
+					break;
+				default:
+					break;
+			}
+		}
+	}
+	return {
+		bytes: bytes,
+		fPort: 1,
+		warnings: [],
+		errors: []
+	};
+}
+
+function decodeDownlink(input) {
+	return {
+		data: {
+			bytes: input.bytes
+		},
+		warnings: [],
+		errors: []
+	};
+}
+
+	if (typeof encodeDownlink === 'function') {
+		__ogtb_encode_downlink = encodeDownlink;
+	} else if (typeof codec !== 'undefined' && codec && typeof codec.encodeDownlink === 'function') {
+		__ogtb_encode_downlink = codec.encodeDownlink;
+	}
+})();
+
+function decodeUplink(input) {
+	if (typeof __ogtb_decode_uplink !== 'function') {
+		return { data: {}, warnings: [], errors: ['decodeUplink TTN introuvable dans le codec source'] };
+	}
+	return __ogtb_decode_uplink(input);
+}
+
+function encodeDownlink(input) {
+	if (typeof __ogtb_encode_downlink !== 'function') {
+		return { bytes: [], fPort: input && input.fPort, warnings: [], errors: ['encodeDownlink TTN introuvable dans le codec source'] };
+	}
+	return __ogtb_encode_downlink(input);
+}
