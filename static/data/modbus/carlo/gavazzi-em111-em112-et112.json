@@ -1,0 +1,467 @@
+{
+  "slug": "carlo-gavazzi-em111-em112-et112",
+  "vendor": "carlo",
+  "vendorSlug": "carlo",
+  "model": "gavazzi-em111-em112-et112",
+  "modelSlug": "gavazzi-em111-em112-et112",
+  "name": "carlo gavazzi-em111-em112-et112",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "A",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Ampere",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "W",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "VA",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Var",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "W-dmd",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "W-dmd-peak",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "PF",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "PF",
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "Hz",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "kWh-(+)-TOT",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Kvarh-(+)-TOT",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "kWh-(+)-PARTIAL",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Kvarh-(+)-PARTIAL",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "kWh-(+)-T1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "kWh-(+)-T2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "kWh-(-)-TOT",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Kvarh-(-)-TOT",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "Hour-counter",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "hours",
+      "access": "r"
+    },
+    {
+      "address": 256,
+      "function": "holding",
+      "name": "A",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Ampere",
+      "access": "r"
+    },
+    {
+      "address": 258,
+      "function": "holding",
+      "name": "V-L-N",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 262,
+      "function": "holding",
+      "name": "W",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 264,
+      "function": "holding",
+      "name": "VA",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 266,
+      "function": "holding",
+      "name": "Var",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 268,
+      "function": "holding",
+      "name": "PF",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "PF",
+      "access": "r"
+    },
+    {
+      "address": 272,
+      "function": "holding",
+      "name": "Hz",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 274,
+      "function": "holding",
+      "name": "kWh-(+)-TOT",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 276,
+      "function": "holding",
+      "name": "Kvarh-(+)-TOT",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 278,
+      "function": "holding",
+      "name": "kWh-(-)-TOT",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 280,
+      "function": "holding",
+      "name": "Kvarh-(-)-TOT",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 282,
+      "function": "holding",
+      "name": "kW-dmd",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 284,
+      "function": "holding",
+      "name": "kW-dmd-peak",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 328,
+      "function": "holding",
+      "name": "kWh-(+)-PARTIAL",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 330,
+      "function": "holding",
+      "name": "Kvarh-(+)-PARTIAL",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 338,
+      "function": "holding",
+      "name": "kWh-(+)-T1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 340,
+      "function": "holding",
+      "name": "kWh-(+)-T2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1024,
+      "function": "holding",
+      "name": "kWh-(+)-TOT-INTeger-part",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1026,
+      "function": "holding",
+      "name": "kWh-(+)-TOT-DECimal-part",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1028,
+      "function": "holding",
+      "name": "Kvarh-(+)-TOT-INTeger-part",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 1030,
+      "function": "holding",
+      "name": "Kvarh-(+)-TOT-DECimal-part",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 1032,
+      "function": "holding",
+      "name": "kWh-(-)-TOT-INTeger-part",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1034,
+      "function": "holding",
+      "name": "kWh-(-)-TOT-DECimal-part",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1036,
+      "function": "holding",
+      "name": "Kvarh-(-)-TOT-INTeger-part",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 1038,
+      "function": "holding",
+      "name": "Kvarh-(-)-TOT-DECimal-part",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 1280,
+      "function": "holding",
+      "name": "kWh-(+)-TOT",
+      "dataType": "int64",
+      "size": 4,
+      "access": "r"
+    },
+    {
+      "address": 1284,
+      "function": "holding",
+      "name": "Kvarh-(+)-TOT",
+      "dataType": "int64",
+      "size": 4,
+      "access": "r"
+    },
+    {
+      "address": 1288,
+      "function": "holding",
+      "name": "kWh-(+)-partial",
+      "dataType": "int64",
+      "size": 4,
+      "access": "r"
+    },
+    {
+      "address": 1292,
+      "function": "holding",
+      "name": "Kvarh-(+)-partial",
+      "dataType": "int64",
+      "size": 4,
+      "access": "r"
+    },
+    {
+      "address": 1308,
+      "function": "holding",
+      "name": "kWh-(-)-TOT",
+      "dataType": "int64",
+      "size": 4,
+      "access": "r"
+    },
+    {
+      "address": 1312,
+      "function": "holding",
+      "name": "kWh-(-)-partial",
+      "dataType": "int64",
+      "size": 4,
+      "access": "r"
+    },
+    {
+      "address": 1316,
+      "function": "holding",
+      "name": "Kvarh-(-)-TOT",
+      "dataType": "int64",
+      "size": 4,
+      "access": "r"
+    },
+    {
+      "address": 1320,
+      "function": "holding",
+      "name": "Kvarh-(-)-partial",
+      "dataType": "int64",
+      "size": 4,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/carlo-gavazzi-em111-em112-et112.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

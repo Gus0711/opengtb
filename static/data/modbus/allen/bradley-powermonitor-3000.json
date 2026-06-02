@@ -1,0 +1,461 @@
+{
+  "slug": "allen-bradley-powermonitor-3000",
+  "vendor": "allen",
+  "vendorSlug": "allen",
+  "model": "bradley-powermonitor-3000",
+  "modelSlug": "bradley-powermonitor-3000",
+  "name": "allen bradley-powermonitor-3000",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "L1-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "L2-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "L3-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 106,
+      "function": "holding",
+      "name": "Avg.-Current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 108,
+      "function": "holding",
+      "name": "L1-N-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 110,
+      "function": "holding",
+      "name": "L2-N-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 112,
+      "function": "holding",
+      "name": "L3-N-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 114,
+      "function": "holding",
+      "name": "Avg.-L-N-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 116,
+      "function": "holding",
+      "name": "L1-L2-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 118,
+      "function": "holding",
+      "name": "L2-L3-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 120,
+      "function": "holding",
+      "name": "L3-L1-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 122,
+      "function": "holding",
+      "name": "Avg-L-L-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 124,
+      "function": "holding",
+      "name": "Frequency,-last-cycle",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 126,
+      "function": "holding",
+      "name": "Metering-iteration",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 200,
+      "function": "holding",
+      "name": "L4-(zero-sequence)-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 202,
+      "function": "holding",
+      "name": "Positive-sequence-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 204,
+      "function": "holding",
+      "name": "Negative-sequence-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 206,
+      "function": "holding",
+      "name": "%-current-unbalance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 208,
+      "function": "holding",
+      "name": "Positive-sequence-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 210,
+      "function": "holding",
+      "name": "Negaflvesequencevoltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 212,
+      "function": "holding",
+      "name": "%-voltage-unbalance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 214,
+      "function": "holding",
+      "name": "Phase-rotation",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 216,
+      "function": "holding",
+      "name": "Average-frequency",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 218,
+      "function": "holding",
+      "name": "Frequency-source",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 220,
+      "function": "holding",
+      "name": "Metering-iteration",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 300,
+      "function": "holding",
+      "name": "L1-real-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 302,
+      "function": "holding",
+      "name": "L2-real-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 304,
+      "function": "holding",
+      "name": "L3-real-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 306,
+      "function": "holding",
+      "name": "Total-real-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 308,
+      "function": "holding",
+      "name": "L1-reactive-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 310,
+      "function": "holding",
+      "name": "L2-reactive-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 312,
+      "function": "holding",
+      "name": "L3-reactive-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 314,
+      "function": "holding",
+      "name": "Total-reactive-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 316,
+      "function": "holding",
+      "name": "L1-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 318,
+      "function": "holding",
+      "name": "L2-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 320,
+      "function": "holding",
+      "name": "L3-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 322,
+      "function": "holding",
+      "name": "Total-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 324,
+      "function": "holding",
+      "name": "Metering-iteration",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 400,
+      "function": "holding",
+      "name": "Demand-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 402,
+      "function": "holding",
+      "name": "Demand-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 404,
+      "function": "holding",
+      "name": "Demand-reactive-power",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 406,
+      "function": "holding",
+      "name": "Demand-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 408,
+      "function": "holding",
+      "name": "Projected-demand-I",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 410,
+      "function": "holding",
+      "name": "Projected-demand-W",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 412,
+      "function": "holding",
+      "name": "Projected-demand-var",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 414,
+      "function": "holding",
+      "name": "Projected-demand-va",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 416,
+      "function": "holding",
+      "name": "Elapsed-demand-period-time",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 418,
+      "function": "holding",
+      "name": "Metering-iteration",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 500,
+      "function": "holding",
+      "name": "L1-true-power-factor",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 502,
+      "function": "holding",
+      "name": "L2-true-power-factor",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/allen-bradley-powermonitor-3000.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

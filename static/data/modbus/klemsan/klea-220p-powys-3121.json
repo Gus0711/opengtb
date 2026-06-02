@@ -1,0 +1,426 @@
+{
+  "slug": "klemsan-klea-220p-powys-3121",
+  "vendor": "klemsan",
+  "vendorSlug": "klemsan",
+  "model": "klea-220p-powys-3121",
+  "modelSlug": "klea-220p-powys-3121",
+  "name": "klemsan klea-220p-powys-3121",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Phase-1-2-voltage-(l-l)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Phase-1-current",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Phase-1-cos",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Phase-1-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Phase-1-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Phase-1-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Phase-1-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Phase-1-thdv",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Phase-1-thdi",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Phase-2-voltage-(l-n)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Phase-2-3-voltage-(l-l)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Phase-2-current",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "Phase-2-cos",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Phase-2-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Phase-2-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Phase-2-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Phase-2-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Phase-2-thdv",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Phase-2-thdi",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "Phase-3-voltage-(l-n)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "Phase-3-1-voltage-(l-l)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "Phase-3-current",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Phase-3-cos",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Phase-3-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "Phase-3-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Phase-3-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 54,
+      "function": "holding",
+      "name": "Phase-3-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Phase-3-thdv",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 58,
+      "function": "holding",
+      "name": "Phase-3-thdi",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "Average-voltage-(l-n)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "Average-voltage-(l-l)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 64,
+      "function": "holding",
+      "name": "Total-current",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "holding",
+      "name": "System-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 68,
+      "function": "holding",
+      "name": "Total-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "Total-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "holding",
+      "name": "Total-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "holding",
+      "name": "System-frequency",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 76,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 78,
+      "function": "holding",
+      "name": "Phase-1-voltage-harmonics-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "Phase-1-voltage-harmonics-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 82,
+      "function": "holding",
+      "name": "Phase-1-voltage-harmonics-5",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "Phase-1-voltage-harmonics-7",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "Phase-1-voltage-harmonics-9",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 88,
+      "function": "holding",
+      "name": "Phase-1-voltage-harmonics-11",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 90,
+      "function": "holding",
+      "name": "Phase-1-voltage-harmonics-13",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 92,
+      "function": "holding",
+      "name": "Phase-1-voltage-harmonics-15",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 94,
+      "function": "holding",
+      "name": "Phase-1-voltage-harmonics-17",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 96,
+      "function": "holding",
+      "name": "Phase-1-voltage-harmonics-19",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 98,
+      "function": "holding",
+      "name": "Phase-1-voltage-harmonics-21",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "Phase-1-voltage-harmonics-23",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/klemsan-klea-220p-powys-3121.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

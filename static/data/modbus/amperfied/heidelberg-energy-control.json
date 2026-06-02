@@ -1,0 +1,255 @@
+{
+  "slug": "amperfied-heidelberg-energy-control",
+  "vendor": "Amperfied",
+  "vendorSlug": "amperfied",
+  "model": "Heidelberg Energy Control",
+  "modelSlug": "heidelberg-energy-control",
+  "name": "Heidelberg Energy Control",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 4,
+      "function": "input",
+      "name": "modbus_register_version",
+      "label": "Modbus Register Version",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "input",
+      "name": "status",
+      "label": "Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "input",
+      "name": "current_phase_1",
+      "label": "Current Phase 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "input",
+      "name": "current_phase_2",
+      "label": "Current Phase 2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "input",
+      "name": "current_phase_3",
+      "label": "Current Phase 3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "input",
+      "name": "pcb_temperature",
+      "label": "PCB Temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "input",
+      "name": "voltage_phase_1",
+      "label": "Voltage Phase 1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "input",
+      "name": "voltage_phase_2",
+      "label": "Voltage Phase 2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "input",
+      "name": "voltage_phase_3",
+      "label": "Voltage Phase 3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "input",
+      "name": "external_lock_state",
+      "label": "External Lock State",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "input",
+      "name": "charging_power",
+      "label": "Charging Power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "input",
+      "name": "energy_since_poweron",
+      "label": "Energy since PowerOn",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "input",
+      "name": "energy_since_installation",
+      "label": "Energy since Installation",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "input",
+      "name": "hw_max_current",
+      "label": "HW Max Current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 101,
+      "function": "input",
+      "name": "hw_min_current",
+      "label": "HW Min Current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 200,
+      "function": "input",
+      "name": "hardware_variant",
+      "label": "Hardware Variant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 203,
+      "function": "input",
+      "name": "application_software_version",
+      "label": "Application Software Version",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 258,
+      "function": "holding",
+      "name": "standby_function",
+      "label": "Standby Function",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 259,
+      "function": "holding",
+      "name": "remote_lock",
+      "label": "Remote Lock",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 261,
+      "function": "holding",
+      "name": "actual_max_current",
+      "label": "Actual Max Current",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 261,
+      "function": "holding",
+      "name": "max_current",
+      "label": "Max Current",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "rw"
+    },
+    {
+      "address": 262,
+      "function": "holding",
+      "name": "failsafe_current_raw",
+      "label": "FailSafe Current",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 262,
+      "function": "holding",
+      "name": "failsafe_current",
+      "label": "FailSafe Current",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "rw"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-manager",
+    "ref": "8932e9a23c65e9f9fe333780bcb3477d81a80b7b",
+    "needsReview": true,
+    "reviewReasons": [
+      "Ordre d'octets non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

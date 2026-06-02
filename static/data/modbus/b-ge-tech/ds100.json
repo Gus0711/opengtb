@@ -1,0 +1,145 @@
+{
+  "slug": "b-ge-tech-ds100",
+  "vendor": "B+GE-TECH",
+  "vendorSlug": "b-ge-tech",
+  "model": "DS100",
+  "modelSlug": "ds100",
+  "name": "B+GE-TECH DS100",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 270,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Active energy (consumption)"
+    },
+    {
+      "address": 1024,
+      "function": "holding",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r",
+      "notes": "Voltage of A phase"
+    },
+    {
+      "address": 1026,
+      "function": "holding",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r",
+      "notes": "Voltage of B phase"
+    },
+    {
+      "address": 1028,
+      "function": "holding",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r",
+      "notes": "Voltage of C phase"
+    },
+    {
+      "address": 1040,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r",
+      "notes": "Current of A phase"
+    },
+    {
+      "address": 1042,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r",
+      "notes": "Current of B phase"
+    },
+    {
+      "address": 1044,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r",
+      "notes": "Current of C phase"
+    },
+    {
+      "address": 1050,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Active power of A phase"
+    },
+    {
+      "address": 1052,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Active power of B phase"
+    },
+    {
+      "address": 1054,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Active power of C phase"
+    },
+    {
+      "address": 1056,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Total active power"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

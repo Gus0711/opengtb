@@ -1,0 +1,462 @@
+{
+  "slug": "froling-gmbh-bwp300-pv",
+  "vendor": "Fröling GmbH",
+  "vendorSlug": "froling-gmbh",
+  "model": "BWP300 PV",
+  "modelSlug": "bwp300-pv",
+  "name": "Fröling GmbH BWP300 PV",
+  "equipmentType": "chaudiere",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 0,
+      "function": "holding",
+      "name": "Kontakt 1: Pressostat",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Kontakt 2: SG-Ready",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Temperatur: T Soll",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Temperatur: T min",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Temperatur: T2 min",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Temperatur: T1 (Verdampfer)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Zeitplanung: Zustand",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Temperatur: T2 (Speicher)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Zeitplanung: Start Heizpatrone (Stunde)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Relais 1: Kompressor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Zeitplanung: Start Heizpatrone (Minute)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Relais 2: Heizstab (EL)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Zeitplanung: Stop Heizpatrone (Stunde)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Relais 3: Kessel",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Zeitplanung: Stop Heizpatrone (Minute)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Relais 4: Magnetventil",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Betriebsmodus: Standart",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Aus",
+        "1": "WP",
+        "2": "EL",
+        "3": "WP+EL",
+        "4": "Kessel",
+        "5": "WP+Kessel"
+      }
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Relais 6: Kondensator",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Temperatur: T Legio",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Aus",
+        "1": "60°C",
+        "2": "65°C"
+      }
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Relais 7: Ventilator",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Tmin RL",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "WP_LS",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Niedrig/Aus",
+        "1": "Hoch/EC Niedrig",
+        "2": "EC Mittel",
+        "3": "EC Hoch"
+      }
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "KWL (Raumlüftung)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Aus",
+        "1": "Niedrig",
+        "2": "Mittel",
+        "3": "Hoch"
+      }
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Abwesenheit: Verbleibend",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Tag/e",
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Betriebsmodus: PV/SG",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Aus",
+        "1": "WP",
+        "2": "EL",
+        "3": "WP+EL"
+      }
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Unit Alarm",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Unit Alarm (raw)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Temperatur: T.PV_WP",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Temperatur: T.PV_EL",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Abwesenheit: Zustand",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Aus",
+        "1": "1 Woche",
+        "2": "2 Woche",
+        "3": "3 Woche",
+        "4": "3 Tage",
+        "5": "Manuell"
+      }
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "Abwesenheit: Manuell",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "d",
+      "access": "rw"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Boost",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Lüfterpause",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Off",
+        "1": "30m / 15s",
+        "2": "30m / 30s",
+        "3": "60m / 15s",
+        "4": "60m / 30s",
+        "5": "90m / 15s",
+        "6": "90m / 30s"
+      }
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "Sprache",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "English",
+        "1": "German",
+        "2": "French",
+        "3": "Dutch",
+        "4": "Spanish",
+        "5": "Italian",
+        "6": "Danish",
+        "7": "Swedish",
+        "8": "Norwegian",
+        "9": "Polish",
+        "10": "Slovenian",
+        "11": "Croatian"
+      }
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "Abtauart",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Air",
+        "1": "Gas",
+        "2": "Tmin RF"
+      }
+    },
+    {
+      "address": 27,
+      "function": "holding",
+      "name": "Anode",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Temperatur: T max",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 29,
+      "function": "holding",
+      "name": "Lüftertyp",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "AC",
+        "1": "EC"
+      }
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "EC LS1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 31,
+      "function": "holding",
+      "name": "EC LS2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "EC LS3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Legionellenfunktion: Intervall",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "d",
+      "access": "rw"
+    },
+    {
+      "address": 119,
+      "function": "holding",
+      "name": "FW Version",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-gateway",
+    "ref": "20de1794f20f946fa9d9e81effeee6d47258c3a7",
+    "needsReview": false
+  }
+}

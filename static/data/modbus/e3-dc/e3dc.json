@@ -1,0 +1,79 @@
+{
+  "slug": "e3-dc-e3dc",
+  "vendor": "E3/DC",
+  "vendorSlug": "e3-dc",
+  "model": "e3dc",
+  "modelSlug": "e3dc",
+  "name": "E3/DC e3dc",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 40067,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Photovoltaikleistung in Watt"
+    },
+    {
+      "address": 40069,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Batterieleistung in Watt"
+    },
+    {
+      "address": 40073,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Hausverbrauchsleistung in Watt"
+    },
+    {
+      "address": 40075,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Leistung zusätzlicher Einspeiser in Watt"
+    },
+    {
+      "address": 40082,
+      "function": "holding",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r",
+      "notes": "Batterie-SOC in %"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

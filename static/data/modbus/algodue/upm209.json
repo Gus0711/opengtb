@@ -1,0 +1,462 @@
+{
+  "slug": "algodue-upm209",
+  "vendor": "algodue",
+  "vendorSlug": "algodue",
+  "model": "upm209",
+  "modelSlug": "upm209",
+  "name": "algodue upm209",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 4608,
+      "function": "holding",
+      "name": "Phase-1-N-voltage-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4610,
+      "function": "holding",
+      "name": "Phase-2-N-voltage-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4612,
+      "function": "holding",
+      "name": "Phase-3-N-voltage-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4614,
+      "function": "holding",
+      "name": "Line-12-voltage-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4616,
+      "function": "holding",
+      "name": "Line-23-voltage-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4618,
+      "function": "holding",
+      "name": "Line-31-voltage-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4620,
+      "function": "holding",
+      "name": "System-voltage-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4622,
+      "function": "holding",
+      "name": "Phase-1-current-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4624,
+      "function": "holding",
+      "name": "Phase-2-current-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4626,
+      "function": "holding",
+      "name": "Phase-3-current-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4628,
+      "function": "holding",
+      "name": "Neutral-current-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4630,
+      "function": "holding",
+      "name": "System-current-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4632,
+      "function": "holding",
+      "name": "Phase-1-imported-active-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4634,
+      "function": "holding",
+      "name": "Phase-1-exported-active-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4636,
+      "function": "holding",
+      "name": "Phase-2-imported-active-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4638,
+      "function": "holding",
+      "name": "Phase-2-exported-active-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4640,
+      "function": "holding",
+      "name": "Phase-3-imported-active-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4642,
+      "function": "holding",
+      "name": "Phase-3-exported-active-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4644,
+      "function": "holding",
+      "name": "System-imported-active-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4646,
+      "function": "holding",
+      "name": "System-exported-active-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4648,
+      "function": "holding",
+      "name": "Phase-1-imported-apparent-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4650,
+      "function": "holding",
+      "name": "Phase-1-exported-apparent-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4652,
+      "function": "holding",
+      "name": "Phase-2-imported-apparent-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4654,
+      "function": "holding",
+      "name": "Phase-2-exported-apparent-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4656,
+      "function": "holding",
+      "name": "Phase-3-imported-apparent-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4658,
+      "function": "holding",
+      "name": "Phase-3-exported-apparent-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4660,
+      "function": "holding",
+      "name": "System-imported-apparent-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4662,
+      "function": "holding",
+      "name": "System-exported-apparent-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4664,
+      "function": "holding",
+      "name": "Phase-1-imported-reactive-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4666,
+      "function": "holding",
+      "name": "Phase-1-exported-reactive-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4668,
+      "function": "holding",
+      "name": "Phase-2-imported-reactive-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4670,
+      "function": "holding",
+      "name": "Phase-2-exported-reactive-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4672,
+      "function": "holding",
+      "name": "Phase-3-imported-reactive-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4674,
+      "function": "holding",
+      "name": "Phase-3-exported-reactive-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4676,
+      "function": "holding",
+      "name": "System-imported-reactive-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4678,
+      "function": "holding",
+      "name": "System-exported-reactive-power-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4680,
+      "function": "holding",
+      "name": "Phase-1-inductive-power-factor-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4682,
+      "function": "holding",
+      "name": "Phase-1-capacitive-power-factor-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4684,
+      "function": "holding",
+      "name": "Phase-2-inductive-power-factor-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4686,
+      "function": "holding",
+      "name": "Phase-2-capacitive-power-factor-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4688,
+      "function": "holding",
+      "name": "Phase-3-inductive-power-factor-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4690,
+      "function": "holding",
+      "name": "Phase-3-capacitive-power-factor-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4692,
+      "function": "holding",
+      "name": "System-inductive-power-factor-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4694,
+      "function": "holding",
+      "name": "System-capacitive-power-factor-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4696,
+      "function": "holding",
+      "name": "Phase-1-imported-tangent-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4698,
+      "function": "holding",
+      "name": "Phase-1-exported-tangent-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4700,
+      "function": "holding",
+      "name": "Phase-2-imported-tangent-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4702,
+      "function": "holding",
+      "name": "Phase-2-exported-tangent-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4704,
+      "function": "holding",
+      "name": "Phase-3-imported-tangent-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4706,
+      "function": "holding",
+      "name": "Phase-3-exported-tangent-MAX",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/algodue-upm209.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

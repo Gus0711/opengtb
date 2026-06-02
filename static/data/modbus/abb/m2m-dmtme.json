@@ -1,0 +1,468 @@
+{
+  "slug": "abb-m2m-dmtme",
+  "vendor": "abb",
+  "vendorSlug": "abb",
+  "model": "m2m-dmtme",
+  "modelSlug": "m2m-dmtme",
+  "name": "abb m2m-dmtme",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 4096,
+      "function": "holding",
+      "name": "3-phase-system-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 4098,
+      "function": "holding",
+      "name": "Phase-voltage-L1-N",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 4100,
+      "function": "holding",
+      "name": "Phase-voltage-L2-N",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 4102,
+      "function": "holding",
+      "name": "Phase-voltage-L3-N",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 4104,
+      "function": "holding",
+      "name": "Line-voltage-L1-2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 4106,
+      "function": "holding",
+      "name": "Line-voltage-L2-3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 4108,
+      "function": "holding",
+      "name": "Line-voltage-L3-1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 4110,
+      "function": "holding",
+      "name": "3-phase-system-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4112,
+      "function": "holding",
+      "name": "Line-current-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4114,
+      "function": "holding",
+      "name": "Line-current-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4116,
+      "function": "holding",
+      "name": "Line-current-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4118,
+      "function": "holding",
+      "name": "3-phase-system-power-factor",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4120,
+      "function": "holding",
+      "name": "Power-factor-L1",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4122,
+      "function": "holding",
+      "name": "Power-factor-L2",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4124,
+      "function": "holding",
+      "name": "Power-factor-L3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4126,
+      "function": "holding",
+      "name": "3-phase-system-cos",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4128,
+      "function": "holding",
+      "name": "Phase-cos-1",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4130,
+      "function": "holding",
+      "name": "Phase-cos-2",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4132,
+      "function": "holding",
+      "name": "Phase-cos-3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4134,
+      "function": "holding",
+      "name": "3-phase-system-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4136,
+      "function": "holding",
+      "name": "Apparent-power-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4138,
+      "function": "holding",
+      "name": "Apparent-power-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4140,
+      "function": "holding",
+      "name": "Apparent-power-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4142,
+      "function": "holding",
+      "name": "3-phase-system-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 4144,
+      "function": "holding",
+      "name": "Active-power-L1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 4146,
+      "function": "holding",
+      "name": "Active-power-L2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 4148,
+      "function": "holding",
+      "name": "Active-power-L3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 4150,
+      "function": "holding",
+      "name": "3-phase-system-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 4152,
+      "function": "holding",
+      "name": "Reactive-power-L1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 4154,
+      "function": "holding",
+      "name": "Reactive-power-L2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 4156,
+      "function": "holding",
+      "name": "Reactive-power-L3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 4158,
+      "function": "holding",
+      "name": "3-phase-system-active-energy",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4160,
+      "function": "holding",
+      "name": "3-phase-system-reactive-energy",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VArh",
+      "access": "r"
+    },
+    {
+      "address": 4166,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mHz",
+      "access": "r"
+    },
+    {
+      "address": 4192,
+      "function": "holding",
+      "name": "Max-line-current-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4194,
+      "function": "holding",
+      "name": "Max-line-current-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4196,
+      "function": "holding",
+      "name": "Max-line-current-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4198,
+      "function": "holding",
+      "name": "Max-3-phase-system-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 4200,
+      "function": "holding",
+      "name": "Max-3-phase-system-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4208,
+      "function": "holding",
+      "name": "3-phase-system-active-power-15-aver",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 4210,
+      "function": "holding",
+      "name": "3-phase-system-apparent-power-15-aver",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4212,
+      "function": "holding",
+      "name": "Active-energy-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4214,
+      "function": "holding",
+      "name": "Active-energy-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4216,
+      "function": "holding",
+      "name": "Active-energy-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4218,
+      "function": "holding",
+      "name": "Reactive-energy-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VArh",
+      "access": "r"
+    },
+    {
+      "address": 4220,
+      "function": "holding",
+      "name": "Reactive-energy-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VArh",
+      "access": "r"
+    },
+    {
+      "address": 4222,
+      "function": "holding",
+      "name": "Reactive-energy-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VArh",
+      "access": "r"
+    },
+    {
+      "address": 4224,
+      "function": "holding",
+      "name": "Max-3-phase-system-active-power-15-aver",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 4226,
+      "function": "holding",
+      "name": "Voltage-ThdF-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 4228,
+      "function": "holding",
+      "name": "Voltage-ThdF-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Watt",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/abb-m2m-dmtme.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

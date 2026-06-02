@@ -1,0 +1,467 @@
+{
+  "slug": "meatrol-mp440",
+  "vendor": "meatrol",
+  "vendorSlug": "meatrol",
+  "model": "mp440",
+  "modelSlug": "mp440",
+  "name": "meatrol mp440",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 99,
+      "function": "holding",
+      "name": "0-=-direct-connect-1-=-VT",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "=realvalue*1000",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1000,
+      "function": "holding",
+      "name": "Current-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1002,
+      "function": "holding",
+      "name": "Current-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1004,
+      "function": "holding",
+      "name": "Current-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1006,
+      "function": "holding",
+      "name": "Current-phase-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1008,
+      "function": "holding",
+      "name": "Average-of-IA,-IB,-IC",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1010,
+      "function": "holding",
+      "name": "Voltage-UA-UN",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1012,
+      "function": "holding",
+      "name": "Voltage-UB-UN",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1014,
+      "function": "holding",
+      "name": "Voltage-UC-UN",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1016,
+      "function": "holding",
+      "name": "Voltage-UN-UE",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1018,
+      "function": "holding",
+      "name": "Average-of-UA,-UB,-UC",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1020,
+      "function": "holding",
+      "name": "Voltage-UA-UB",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1022,
+      "function": "holding",
+      "name": "Voltage-UB-UC",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1024,
+      "function": "holding",
+      "name": "Voltage-UC-UA",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1026,
+      "function": "holding",
+      "name": "Average-of-UAB,-UBC,-UCA",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1028,
+      "function": "holding",
+      "name": "Active-power-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1030,
+      "function": "holding",
+      "name": "Active-power-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1032,
+      "function": "holding",
+      "name": "Active-power-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1034,
+      "function": "holding",
+      "name": "Total-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1036,
+      "function": "holding",
+      "name": "Reactive-power-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1038,
+      "function": "holding",
+      "name": "Reactive-power-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1040,
+      "function": "holding",
+      "name": "Reactive-power-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1042,
+      "function": "holding",
+      "name": "Total-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1044,
+      "function": "holding",
+      "name": "Apparent-power-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1046,
+      "function": "holding",
+      "name": "Apparent-power-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1048,
+      "function": "holding",
+      "name": "Apparent-power-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1050,
+      "function": "holding",
+      "name": "Total-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1052,
+      "function": "holding",
+      "name": "Power-factor-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1054,
+      "function": "holding",
+      "name": "Power-factor-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1056,
+      "function": "holding",
+      "name": "Power-factor-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1058,
+      "function": "holding",
+      "name": "Total-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1060,
+      "function": "holding",
+      "name": "Displacement-power-factor-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1062,
+      "function": "holding",
+      "name": "Displacement-power-factor-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1064,
+      "function": "holding",
+      "name": "Displacement-power-factor-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1066,
+      "function": "holding",
+      "name": "Total-displacement-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1068,
+      "function": "holding",
+      "name": "Frequency-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 1070,
+      "function": "holding",
+      "name": "Frequency-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 1072,
+      "function": "holding",
+      "name": "Frequency-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 1074,
+      "function": "holding",
+      "name": "Average-of-FreqA,-FreqB,-FreqC",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 2000,
+      "function": "holding",
+      "name": "Active-energy-import-phase-A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2002,
+      "function": "holding",
+      "name": "Active-energy-import-phase-B",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2004,
+      "function": "holding",
+      "name": "Active-energy-import-phase-C",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2006,
+      "function": "holding",
+      "name": "Total-active-energy-import-phase-all",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2008,
+      "function": "holding",
+      "name": "Active-energy-export-phase-A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2010,
+      "function": "holding",
+      "name": "Active-energy-export-phase-B",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2012,
+      "function": "holding",
+      "name": "Active-energy-export-phase-C",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2014,
+      "function": "holding",
+      "name": "Total-active-energy-export-phase-all",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2016,
+      "function": "holding",
+      "name": "Reactive-energy-import-phase-A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 2018,
+      "function": "holding",
+      "name": "Reactive-energy-import-phase-B",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/meatrol-mp440.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

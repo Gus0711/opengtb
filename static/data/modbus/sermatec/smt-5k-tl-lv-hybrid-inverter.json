@@ -1,0 +1,90 @@
+{
+  "slug": "sermatec-smt-5k-tl-lv-hybrid-inverter",
+  "vendor": "Sermatec",
+  "vendorSlug": "sermatec",
+  "model": "SMT-5K-TL-LV Hybrid Inverter",
+  "modelSlug": "smt-5k-tl-lv-hybrid-inverter",
+  "name": "Sermatec SMT-5K-TL-LV Hybrid Inverter",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 12288,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "Battery voltage"
+    },
+    {
+      "address": 12289,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "Battery current"
+    },
+    {
+      "address": 12291,
+      "function": "holding",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r",
+      "notes": "Battery SOC"
+    },
+    {
+      "address": 16386,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "PV1 power"
+    },
+    {
+      "address": 16389,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "PV2 power"
+    },
+    {
+      "address": 16407,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "Net side active power (negative = import from grid, positive = export to grid)"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

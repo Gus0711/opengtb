@@ -1,0 +1,426 @@
+{
+  "slug": "accuenergy-acurev-1300",
+  "vendor": "accuenergy",
+  "vendorSlug": "accuenergy",
+  "model": "acurev-1300",
+  "modelSlug": "acurev-1300",
+  "name": "accuenergy acurev-1300",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 4132,
+      "function": "holding",
+      "name": "Options",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 4140,
+      "function": "holding",
+      "name": "Version",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 4148,
+      "function": "holding",
+      "name": "Serial-number",
+      "dataType": "string",
+      "size": 12,
+      "access": "r"
+    },
+    {
+      "address": 4164,
+      "function": "holding",
+      "name": "Device-address",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4165,
+      "function": "holding",
+      "name": "Id",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4166,
+      "function": "holding",
+      "name": "Lenth",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4167,
+      "function": "holding",
+      "name": "Amps-(total):-sunspec;-total-current:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4168,
+      "function": "holding",
+      "name": "Amps-phase-a:-sunspec;-phase-A-current:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4169,
+      "function": "holding",
+      "name": "Amps-phase-b:-sunspec;-phase-B-current:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4170,
+      "function": "holding",
+      "name": "Amps-phase-c:-sunspec;-phase-C-current:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4172,
+      "function": "holding",
+      "name": "Voltage-ln-(average):-sunspec;-phase-average-voltage:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4173,
+      "function": "holding",
+      "name": "Phase-voltage-an:-sunspec;-phase-A-voltage:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4174,
+      "function": "holding",
+      "name": "Phase-voltage-bn:-sunspec;-phase-B-voltage:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4175,
+      "function": "holding",
+      "name": "Phase-voltage-cn:-sunspec;-phase-C-voltage:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4176,
+      "function": "holding",
+      "name": "Voltage-ll-(average):-sunspec;-line-average-voltage:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4177,
+      "function": "holding",
+      "name": "Phase-voltage-ab:-sunspec;-line-ab-voltage:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4178,
+      "function": "holding",
+      "name": "Phase-voltage-bc:-sunspec;-line-bc-voltage:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4179,
+      "function": "holding",
+      "name": "Phase-voltage-ca:-sunspec;-line-ca-voltage:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4181,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4183,
+      "function": "holding",
+      "name": "Total-real-power:-sunspec;-total-active-power:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4184,
+      "function": "holding",
+      "name": "Watts-phase-a:-sunspec;-phase-A-active-power:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4185,
+      "function": "holding",
+      "name": "Watts-phase-b:-sunspec;-phase-B-active-power:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4186,
+      "function": "holding",
+      "name": "Watts-phase-c:-sunspec;-phase-C-active-power:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4188,
+      "function": "holding",
+      "name": "Ac-apparent-power-va:-sunspec;-total-apparent-power:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4189,
+      "function": "holding",
+      "name": "Va-phase-a:-sunspec;-phase-A-apparent-power:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4190,
+      "function": "holding",
+      "name": "Va-phase-b:-sunspec;-phase-B-apparent-power:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4191,
+      "function": "holding",
+      "name": "Va-phaseca:-sunspec;-phase-C-apparent-power:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4193,
+      "function": "holding",
+      "name": "Reactive-power-var:-sunspec;-total-reactive-power:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4194,
+      "function": "holding",
+      "name": "Var-phase-a:-sunspec;-phase-A-reactive-power:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4195,
+      "function": "holding",
+      "name": "4195-var-phase-b:-sunspec;-phase-B-reactive-power:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4196,
+      "function": "holding",
+      "name": "Var-phase-c:-sunspec;-phase-C-reactive-power:-acurev-1300",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4198,
+      "function": "holding",
+      "name": "Power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4199,
+      "function": "holding",
+      "name": "Pf-phase-A",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4200,
+      "function": "holding",
+      "name": "Pf-phase-B",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4201,
+      "function": "holding",
+      "name": "Pf-phase-C",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4203,
+      "function": "holding",
+      "name": "Total-real-energy-exported:-sunspec-total-active-energy-exported:-acurev-1300",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4205,
+      "function": "holding",
+      "name": "Total-watt-hours-exported-in-phase-a:-sunspec;-total-active-energy-exported-in-phase-a:-acurev-1300",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4207,
+      "function": "holding",
+      "name": "Total-watt-hours-exported-in-phase-b:-sunspec;-total-active-energy-exported-in-phase-b:-acurev-1300",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4209,
+      "function": "holding",
+      "name": "Total-watt-hours-exported-in-phase-c:-sunspec;-total-active-energy-exported-in-phase-c:-acurev-1300",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4211,
+      "function": "holding",
+      "name": "Total-real-energy-imported:-sunspec;-total-active-energy-imported:-acurev-1300",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4213,
+      "function": "holding",
+      "name": "Total-watt-hours-imported-phase-a:-sunspec;-total-active-energy-imported-in-phase-a:-acurev-1300",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4215,
+      "function": "holding",
+      "name": "Total-watt-hours-imported-phase-b:-sunspec;-total-active-energy-imported-in-phase-b:-acurev-1300",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4217,
+      "function": "holding",
+      "name": "Total-watt-hours-imported-phase-c:-sunspec;-total-active-energy-imported-in-phase-c:-acurev-1300",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4220,
+      "function": "holding",
+      "name": "Total-va-hours-exported:-sunspec;-total-apparent-power-exported:-acurev-1300",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4222,
+      "function": "holding",
+      "name": "Total-va-hours-exported-phase-a:-sunspec;-total-apparent-power-exported-in-phase-a:-acurev-1300",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4224,
+      "function": "holding",
+      "name": "Total-va-hours-exported-phase-b:-sunspec;-total-apparent-power-exported-in-phase-b:-acurev-1300",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4226,
+      "function": "holding",
+      "name": "Total-va-hours-exported-phase-c:-sunspec;-total-apparent-power-exported-in-phase-c:-acurev-1300",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4228,
+      "function": "holding",
+      "name": "Total-va-hours-imported:-sunspec;-total-apparent-power-imported:-acurev-1300",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4230,
+      "function": "holding",
+      "name": "Total-va-hours-imported-phase-a:-sunspec;-total-apparent-power-imported-in-phase-a:-acurev-1300",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4232,
+      "function": "holding",
+      "name": "Total-va-hours-imported-phase-b:-sunspec;-total-apparent-power-imported-in-phase-b:-acurev-1300",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/accuenergy-acurev-1300.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

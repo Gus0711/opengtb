@@ -1,0 +1,471 @@
+{
+  "slug": "entes-mpr7-series",
+  "vendor": "entes",
+  "vendorSlug": "entes",
+  "model": "mpr7-series",
+  "modelSlug": "mpr7-series",
+  "name": "entes mpr7-series",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "L2-phase-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Vot",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "L3-phase-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Vot",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "L1-phase-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Amper",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "L2-phase-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Amper",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "L3-phase-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Amper",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Amper",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "L1-L2-phase-phase-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Vot",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "L2-L3-phase-phase-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Vot",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "L3-L1-phase-phase-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Vot",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "L1-phase-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "L2-phase-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "L3-phase-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "L1-phase-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "L2-phase-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "L3-phase-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "L1-phase-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "L2-phase-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "L3-phase-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "L1-phase-cos",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "L2-phase-cos",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "L3-phase-cos",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "Total-import-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Total-export-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Total-inductive-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "Total-capacitive-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Total-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 54,
+      "function": "holding",
+      "name": "Average-inductive-cos",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Average-capacitive-cos",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 58,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 88,
+      "function": "holding",
+      "name": "Import-active-energy-1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 92,
+      "function": "holding",
+      "name": "Export-active-energy-1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 96,
+      "function": "holding",
+      "name": "Inductive-reactive-energy-1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VArh",
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "Capacitive-reactive-energy-1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VArh",
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "Import-active-energy-2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 108,
+      "function": "holding",
+      "name": "Export-active-energy-2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 112,
+      "function": "holding",
+      "name": "Inductive-reactive-energy-2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VArh",
+      "access": "r"
+    },
+    {
+      "address": 116,
+      "function": "holding",
+      "name": "Capacitive-reactive-energy-2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VArh",
+      "access": "r"
+    },
+    {
+      "address": 118,
+      "function": "holding",
+      "name": "L1-phase-min.-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Vot",
+      "access": "r"
+    },
+    {
+      "address": 120,
+      "function": "holding",
+      "name": "L2-phase-min.-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Vot",
+      "access": "r"
+    },
+    {
+      "address": 122,
+      "function": "holding",
+      "name": "L3-phase-min.-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Vot",
+      "access": "r"
+    },
+    {
+      "address": 124,
+      "function": "holding",
+      "name": "L1-L2-phase-phase-min.-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Vot",
+      "access": "r"
+    },
+    {
+      "address": 126,
+      "function": "holding",
+      "name": "L2-L3-phase-phase-min.-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Vot",
+      "access": "r"
+    },
+    {
+      "address": 128,
+      "function": "holding",
+      "name": "L3-L1-phase-phase-min.-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Vot",
+      "access": "r"
+    },
+    {
+      "address": 130,
+      "function": "holding",
+      "name": "L1-phase-min.-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Amper",
+      "access": "r"
+    },
+    {
+      "address": 132,
+      "function": "holding",
+      "name": "L2-phase-min.-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Amper",
+      "access": "r"
+    },
+    {
+      "address": 134,
+      "function": "holding",
+      "name": "L3-phase-min.-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Amper",
+      "access": "r"
+    },
+    {
+      "address": 136,
+      "function": "holding",
+      "name": "L1-phase-min.-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 138,
+      "function": "holding",
+      "name": "L2-phase-min.-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 140,
+      "function": "holding",
+      "name": "L3-phase-min.-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 142,
+      "function": "holding",
+      "name": "L1-phase-min.-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/entes-mpr7-series.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

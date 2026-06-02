@@ -1,0 +1,475 @@
+{
+  "slug": "ime-nemo-d4-lp",
+  "vendor": "ime",
+  "vendorSlug": "ime",
+  "model": "nemo-d4-lp",
+  "modelSlug": "nemo-d4-lp",
+  "name": "ime nemo-d4-lp",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 200,
+      "function": "holding",
+      "name": "Reset-(r/w)-bit-to-bit-defined",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "(6)",
+      "access": "r"
+    },
+    {
+      "address": 769,
+      "function": "holding",
+      "name": "Phase-1-:-phase-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 773,
+      "function": "holding",
+      "name": "Phase-2-:-phase-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 777,
+      "function": "holding",
+      "name": "Phase-3-:-phase-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 781,
+      "function": "holding",
+      "name": "Phase-1-:-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 785,
+      "function": "holding",
+      "name": "Phase-2-:-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 789,
+      "function": "holding",
+      "name": "Phase-3-:-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 793,
+      "function": "holding",
+      "name": "3-phase-:-active-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W/var/VA",
+      "access": "r"
+    },
+    {
+      "address": 797,
+      "function": "holding",
+      "name": "3-phase-:-reactive-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W/var/VA",
+      "access": "r"
+    },
+    {
+      "address": 801,
+      "function": "holding",
+      "name": "3-phase-:-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W/var/VA",
+      "access": "r"
+    },
+    {
+      "address": 805,
+      "function": "holding",
+      "name": "3-phase-:-positive-active-energy",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 809,
+      "function": "holding",
+      "name": "Chained-voltage-:-L1-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 813,
+      "function": "holding",
+      "name": "Chained-voltage-:-L2-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 817,
+      "function": "holding",
+      "name": "Chained-voltage-:-L3-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 821,
+      "function": "holding",
+      "name": "3-phase-:-partial-positive-active-energy",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 825,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 829,
+      "function": "holding",
+      "name": "3-phase-:-power-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 831,
+      "function": "holding",
+      "name": "3-phase-:-sector-of-power-factor-(cap-or-ind)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "(1)",
+      "access": "r"
+    },
+    {
+      "address": 835,
+      "function": "holding",
+      "name": "3-phase-:-positive-reactive-energy",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 839,
+      "function": "holding",
+      "name": "3-phase-:-sign-of-active-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "(5)",
+      "access": "r"
+    },
+    {
+      "address": 840,
+      "function": "holding",
+      "name": "Time-counter",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "s",
+      "access": "r"
+    },
+    {
+      "address": 844,
+      "function": "holding",
+      "name": "3-phase-:-sign-of-reactive-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "(5)",
+      "access": "r"
+    },
+    {
+      "address": 848,
+      "function": "holding",
+      "name": "3-phase-:-average-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W/var/VA",
+      "access": "r"
+    },
+    {
+      "address": 852,
+      "function": "holding",
+      "name": "3-phase-:-peak-maximum-demand",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W/var/VA",
+      "access": "r"
+    },
+    {
+      "address": 856,
+      "function": "holding",
+      "name": "Time-counter-for-average-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "minutes",
+      "access": "r"
+    },
+    {
+      "address": 857,
+      "function": "holding",
+      "name": "Neutro-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 861,
+      "function": "holding",
+      "name": "Phase-1-:-active-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W/var/VA",
+      "access": "r"
+    },
+    {
+      "address": 865,
+      "function": "holding",
+      "name": "Phase-2-:-active-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W/var/VA",
+      "access": "r"
+    },
+    {
+      "address": 869,
+      "function": "holding",
+      "name": "Phase-3-:-active-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W/var/VA",
+      "access": "r"
+    },
+    {
+      "address": 873,
+      "function": "holding",
+      "name": "Phase-1-:-sign-of-active-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "(5)",
+      "access": "r"
+    },
+    {
+      "address": 874,
+      "function": "holding",
+      "name": "Phase-2-:-sign-of-active-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "(5)",
+      "access": "r"
+    },
+    {
+      "address": 875,
+      "function": "holding",
+      "name": "Phase-3-:-sign-of-active-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "(5)",
+      "access": "r"
+    },
+    {
+      "address": 876,
+      "function": "holding",
+      "name": "Phase-1-:-reactive-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W/var/VA",
+      "access": "r"
+    },
+    {
+      "address": 880,
+      "function": "holding",
+      "name": "Phase-2-:-reactive-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W/var/VA",
+      "access": "r"
+    },
+    {
+      "address": 884,
+      "function": "holding",
+      "name": "Phase-3-:-reactive-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W/var/VA",
+      "access": "r"
+    },
+    {
+      "address": 888,
+      "function": "holding",
+      "name": "Phase-1-:-sign-of-reactive-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "(5)",
+      "access": "r"
+    },
+    {
+      "address": 889,
+      "function": "holding",
+      "name": "Phase-2-:-sign-of-reactive-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "(5)",
+      "access": "r"
+    },
+    {
+      "address": 890,
+      "function": "holding",
+      "name": "Phase-3-:-sign-of-reactive-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "(5)",
+      "access": "r"
+    },
+    {
+      "address": 891,
+      "function": "holding",
+      "name": "Phase-1-:-average-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 895,
+      "function": "holding",
+      "name": "Phase-2-:-average-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 899,
+      "function": "holding",
+      "name": "Phase-3-:-average-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 903,
+      "function": "holding",
+      "name": "Phase-1-:-current-maximum-demand",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 907,
+      "function": "holding",
+      "name": "Phase-2-:-current-maximum-demand",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 911,
+      "function": "holding",
+      "name": "Phase-3-:-current-maximum-demand",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 915,
+      "function": "holding",
+      "name": "Phase-1-:-thd-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 917,
+      "function": "holding",
+      "name": "Phase-2-:-thd-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 919,
+      "function": "holding",
+      "name": "Phase-3-:-thd-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 921,
+      "function": "holding",
+      "name": "Phase-1-:-thd-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 922,
+      "function": "holding",
+      "name": "Phase-2-:-thd-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 924,
+      "function": "holding",
+      "name": "Phase-3-:-thd-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/ime-nemo-d4-lp.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

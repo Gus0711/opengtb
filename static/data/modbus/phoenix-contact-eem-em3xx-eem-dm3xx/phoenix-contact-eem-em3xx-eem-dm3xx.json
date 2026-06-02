@@ -1,0 +1,2173 @@
+{
+  "slug": "phoenix-contact-eem-em3xx-eem-dm3xx-phoenix-contact-eem-em3xx-eem-dm3xx",
+  "vendor": "Phoenix Contact EEM-EM3xx EEM-DM3xx",
+  "vendorSlug": "phoenix-contact-eem-em3xx-eem-dm3xx",
+  "model": "Phoenix Contact EEM-EM3xx EEM-DM3xx",
+  "modelSlug": "phoenix-contact-eem-em3xx-eem-dm3xx",
+  "name": "Phoenix Contact EEM-EM3xx EEM-DM3xx",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1280,
+      "function": "holding",
+      "name": "Seriennummer",
+      "label": "R/o",
+      "dataType": "string",
+      "size": 6,
+      "access": "r"
+    },
+    {
+      "address": 1290,
+      "function": "holding",
+      "name": "Firmware version rEL1",
+      "label": "R/o",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 1292,
+      "function": "holding",
+      "name": "Hardwareversion",
+      "label": "R/o",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1296,
+      "function": "holding",
+      "name": "Aktiver Tarifzähler",
+      "label": "R/o 1 = Tarif 1 aktiv, 2 = Tarif 2 aktiv",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1300,
+      "function": "holding",
+      "name": "Fehlercode",
+      "label": "R/o 0 = kein Fehler, 1 = Phasenfolgefehler, 2 = Speicherfehler, 4 = Echtzeituhr verloren (nur Ethernet)",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1302,
+      "function": "holding",
+      "name": "Primärstrom",
+      "label": "R/o",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1306,
+      "function": "holding",
+      "name": "Sekundärnennstrom",
+      "label": "R/o",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1308,
+      "function": "holding",
+      "name": "Netzart",
+      "label": "R/o 5: 3 Phasen, 4 Leiter, 3 Ströme; 3: 3 Phasen, 3 Leiter, 3 Ströme; 2: 3 Phasen, 3 Leiter, 2 Ströme",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1310,
+      "function": "holding",
+      "name": "Modbus-Adresse",
+      "label": "R/o",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1314,
+      "function": "holding",
+      "name": "Modbus/RTU Baud-Rate",
+      "label": "R/o 0: 2400 Bit/s 1: 4800 Bit/s 2: 9600 Bit/s 3: 19200 Bit/s 4: 38400 Bit/s 5: 57600 Bit/s 8: 300 Bit/s 9: 1200 Bit/s",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1318,
+      "function": "holding",
+      "name": "Konfiguration der Teilenergiezähler",
+      "label": "R/W siehe Handbuch (Seite 124) für konfiguration",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1340,
+      "function": "holding",
+      "name": "Mittelwertbildung",
+      "label": "R/W Intervalldauer und Intervallar siehe Handbuch (Seite 117) für konfiguration",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hex",
+      "access": "r"
+    },
+    {
+      "address": 1341,
+      "function": "holding",
+      "name": "Sync Broadcastbefehl",
+      "label": "W/o Intervalldauer wird synchronisiert durch Schreiben von 0x0001",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hex",
+      "access": "r"
+    },
+    {
+      "address": 4096,
+      "function": "input",
+      "name": "U L1-N",
+      "label": "Leiterspannung (L1<->N) ",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4098,
+      "function": "input",
+      "name": "U L2-N",
+      "label": "Leiterspannung (L2<->N) ",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4100,
+      "function": "input",
+      "name": "U L3-N",
+      "label": "Leiterspannung (L3<->N) ",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4102,
+      "function": "input",
+      "name": "U L1-L2",
+      "label": "Leiterspannung (L1<->L2)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4104,
+      "function": "input",
+      "name": "U L2-L3",
+      "label": "Leiterspannung (L2<->L3)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4106,
+      "function": "input",
+      "name": "U L3-L1",
+      "label": "Leiterspannung (L3<->L1)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4108,
+      "function": "input",
+      "name": "U-SYS",
+      "label": "Mittelwert der Leiterspannungen (U12 + U23 + U31) / 3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4110,
+      "function": "input",
+      "name": "I-L1",
+      "label": "Strom L1",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4112,
+      "function": "input",
+      "name": "I-L2",
+      "label": "Strom L2",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4114,
+      "function": "input",
+      "name": "I-L3",
+      "label": "Strom L3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4116,
+      "function": "input",
+      "name": "I-N",
+      "label": "Strom N",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4118,
+      "function": "input",
+      "name": "I-SYS",
+      "label": "Mittelwert der Ströme (I1 + I2 + I3) / 3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4120,
+      "function": "input",
+      "name": "PF-L1",
+      "label": "Leistungsfaktor L1 -: kapazitiv und +: induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4122,
+      "function": "input",
+      "name": "PF-L2",
+      "label": "Leistungsfaktor L3 -: kapazitiv und +: induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4124,
+      "function": "input",
+      "name": "PF-L3",
+      "label": "Leistungsfaktor L3 -: kapazitiv und +: induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4126,
+      "function": "input",
+      "name": "ΣPF",
+      "label": "Summe Leistungsfaktor -: kapazitiv und +: induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4128,
+      "function": "input",
+      "name": "P-L1",
+      "label": "Wirkleistung L1 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4130,
+      "function": "input",
+      "name": "P-L2",
+      "label": "Wirkleistung L2 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4132,
+      "function": "input",
+      "name": "P-L3",
+      "label": "Wirkleistung L3 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4134,
+      "function": "input",
+      "name": "ΣP",
+      "label": "Summe Wirkleistung +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4136,
+      "function": "input",
+      "name": "S-L1",
+      "label": "Scheinleistung L1 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4138,
+      "function": "input",
+      "name": "S-L2",
+      "label": "Scheinleistung L2 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4140,
+      "function": "input",
+      "name": "S-L3",
+      "label": "Scheinleistung L3 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4142,
+      "function": "input",
+      "name": "ΣS",
+      "label": "Summe Scheinleistung +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4144,
+      "function": "input",
+      "name": "Q-L1",
+      "label": "Blindleistung L1 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4146,
+      "function": "input",
+      "name": "Q-L2",
+      "label": "Blindleistung L2 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4148,
+      "function": "input",
+      "name": "Q-L3",
+      "label": "Blindleistung L3 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4150,
+      "function": "input",
+      "name": "ΣQ",
+      "label": "Summe Blindleistung +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4152,
+      "function": "input",
+      "name": "F",
+      "label": "Frequenz",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 4154,
+      "function": "input",
+      "name": "Phasenfolge",
+      "label": "0,123: (CCW / rechts Drehend) 0,132: (CW / links Drehend) 0: Nicht verfügbar",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4352,
+      "function": "input",
+      "name": "Z P+-L1",
+      "label": "Zähler gesamte Wirkarbeit Bezug L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4354,
+      "function": "input",
+      "name": "Z P+-L2",
+      "label": "Zähler gesamte Wirkarbeit Bezug L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4356,
+      "function": "input",
+      "name": "Z P+-L3",
+      "label": "Zähler gesamte Wirkarbeit Bezug L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4358,
+      "function": "input",
+      "name": "Z ΣP+",
+      "label": "Zähler gesamte Wirkarbeit Bezug Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4360,
+      "function": "input",
+      "name": "Z P--L1",
+      "label": "Zähler gesamte Wirkarbeit Abgabe L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4362,
+      "function": "input",
+      "name": "Z P--L2",
+      "label": "Zähler gesamte Wirkarbeit Abgabe L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4364,
+      "function": "input",
+      "name": "Z P--L3",
+      "label": "Zähler gesamte Wirkarbeit Abgabe L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4366,
+      "function": "input",
+      "name": "Z ΣP-",
+      "label": "Zähler gesamte Wirkarbeit Abgabe Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4368,
+      "function": "input",
+      "name": "Z S+i-L1",
+      "label": "Zähler gesamte Scheinarbeit Bezug induktiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4370,
+      "function": "input",
+      "name": "Z S+i-L2",
+      "label": "Zähler gesamte Scheinarbeit Bezug induktiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4372,
+      "function": "input",
+      "name": "Z S+i-L3",
+      "label": "Zähler gesamte Scheinarbeit Bezug induktiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4374,
+      "function": "input",
+      "name": "Z ΣS+i",
+      "label": "Zähler gesamte Scheinarbeit Bezug induktiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4376,
+      "function": "input",
+      "name": "Z S-i-L1",
+      "label": "Zähler gesamte Scheinarbeit Abgabe induktiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4378,
+      "function": "input",
+      "name": "Z S-i-L2",
+      "label": "Zähler gesamte Scheinarbeit Abgabe induktiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4380,
+      "function": "input",
+      "name": "Z S-i-L3",
+      "label": "Zähler gesamte Scheinarbeit Abgabe induktiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4382,
+      "function": "input",
+      "name": "Z ΣS-i",
+      "label": "Zähler gesamte Scheinarbeit Abgabe induktiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4384,
+      "function": "input",
+      "name": "Z S+k-L1",
+      "label": "Zähler gesamte Scheinarbeit Bezug kapazitiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4386,
+      "function": "input",
+      "name": "Z S+k-L2",
+      "label": "Zähler gesamte Scheinarbeit Bezug kapazitiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4388,
+      "function": "input",
+      "name": "Z S+k-L3",
+      "label": "Zähler gesamte Scheinarbeit Bezug kapazitiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4390,
+      "function": "input",
+      "name": "Z ΣS+k",
+      "label": "Zähler gesamte Scheinarbeit Bezug kapazitiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4392,
+      "function": "input",
+      "name": "Z S-k-L1",
+      "label": "Zähler gesamte Scheinarbeit Abgabe kapazitiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4394,
+      "function": "input",
+      "name": "Z S-k-L2",
+      "label": "Zähler gesamte Scheinarbeit Abgabe kapazitiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4396,
+      "function": "input",
+      "name": "Z S-k-L3",
+      "label": "Zähler gesamte Scheinarbeit Abgabe kapazitiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4398,
+      "function": "input",
+      "name": "Z ΣS-k",
+      "label": "Zähler gesamte Scheinarbeit Abgabe kapazitiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4400,
+      "function": "input",
+      "name": "Z Q+i-L1",
+      "label": "Zähler gesamte Blindarbeit Bezug induktiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4402,
+      "function": "input",
+      "name": "Z Q+i-L2",
+      "label": "Zähler gesamte Blindarbeit Bezug induktiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4404,
+      "function": "input",
+      "name": "Z Q+i-L3",
+      "label": "Zähler gesamte Blindarbeit Bezug induktiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4406,
+      "function": "input",
+      "name": "Z ΣQ+i",
+      "label": "Zähler gesamte Blindarbeit Bezug induktiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4408,
+      "function": "input",
+      "name": "Z Q-i-L1",
+      "label": "Zähler gesamte Blindarbeit Abgabe induktiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4410,
+      "function": "input",
+      "name": "Z Q-i-L2",
+      "label": "Zähler gesamte Blindarbeit Abgabe induktiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4412,
+      "function": "input",
+      "name": "Z Q-i-L3",
+      "label": "Zähler gesamte Blindarbeit Abgabe induktiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4414,
+      "function": "input",
+      "name": "Z ΣSQ-i",
+      "label": "Zähler gesamte Blindarbeit Abgabe induktiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4416,
+      "function": "input",
+      "name": "Z Q+k-L1",
+      "label": "Zähler gesamte Blindarbeit Bezug kapazitiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4418,
+      "function": "input",
+      "name": "Z Q+k-L2",
+      "label": "Zähler gesamte Blindarbeit Bezug kapazitiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4420,
+      "function": "input",
+      "name": "Z Q+k-L3",
+      "label": "Zähler gesamte Blindarbeit Bezug kapazitiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4422,
+      "function": "input",
+      "name": "Z ΣQ+k",
+      "label": "Zähler gesamte Blindarbeit Bezug kapazitiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4424,
+      "function": "input",
+      "name": "Z Q-k-L1",
+      "label": "Zähler gesamte Blindarbeit Abgabe kapazitiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4426,
+      "function": "input",
+      "name": "Z Q-k-L2",
+      "label": "Zähler gesamte Blindarbeit Abgabe kapazitiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4428,
+      "function": "input",
+      "name": "Z Q-k-L3",
+      "label": "Zähler gesamte Blindarbeit Abgabe kapazitiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4430,
+      "function": "input",
+      "name": "Z ΣQ-k",
+      "label": "Zähler gesamte Blindarbeit Abgabe kapazitiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 5120,
+      "function": "input",
+      "name": "T ΣP+",
+      "label": "Teilenergiezähler Wirkarbeit System Bezug",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 5122,
+      "function": "input",
+      "name": "T ΣP-",
+      "label": "Teilenergiezähler Wirkarbeit System Abgabe",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 5124,
+      "function": "input",
+      "name": "T ΣS+i",
+      "label": "Teilenergiezähler Scheinarbeit induktiv System Bezug",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 5126,
+      "function": "input",
+      "name": "T ΣS-i",
+      "label": "Teilenergiezähler Scheinarbeit induktiv System Abgabe",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 5128,
+      "function": "input",
+      "name": "T ΣS+k",
+      "label": "Teilenergiezähler Scheinarbeit kapazitiv System Bezug",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 5130,
+      "function": "input",
+      "name": "T ΣS-k",
+      "label": "Teilenergiezähler Scheinarbeit kapazitiv System Abgabe",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 5132,
+      "function": "input",
+      "name": "T ΣQ+i",
+      "label": "Teilenergiezähler Blindarbeit induktiv System Bezug",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 5134,
+      "function": "input",
+      "name": "T ΣQ-i",
+      "label": "Teilenergiezähler Blindarbeit induktiv System Abgabe",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 5136,
+      "function": "input",
+      "name": "T ΣQ+k",
+      "label": "Teilenergiezähler Blindarbeit kapazitiv System Bezug",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 5138,
+      "function": "input",
+      "name": "T ΣQ-k",
+      "label": "Teilenergiezähler Blindarbeit kapazitiv System Abgabe",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 5140,
+      "function": "input",
+      "name": " B ΣP",
+      "label": "Bilanzierender Energiezähler Wirkarbeit System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 5142,
+      "function": "input",
+      "name": "B ΣSi",
+      "label": "Bilanzierender Energiezähler Scheinarbeit System induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 5144,
+      "function": "input",
+      "name": "B ΣSk",
+      "label": "Bilanzierender Energiezähler Scheinarbeit System kapazitiv",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 5146,
+      "function": "input",
+      "name": "B ΣQi",
+      "label": "Bilanzierender Energiezähler Blindarbeit System induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 5148,
+      "function": "input",
+      "name": "B ΣQk",
+      "label": "Bilanzierender Energiezähler Blindarbeit System kapazitiv",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 5376,
+      "function": "input",
+      "name": "D U L1-L2",
+      "label": "Durchschnitt Leiterspannung (L1<->L2)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5378,
+      "function": "input",
+      "name": "D U L2-L3",
+      "label": "Durchschnitt Leiterspannung (L2<->L3)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5380,
+      "function": "input",
+      "name": "D U L3-L1",
+      "label": "Durchschnitt Leiterspannung (L3<->L1)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5382,
+      "function": "input",
+      "name": "D U L1-N",
+      "label": "Durchschnitt Leiterspannung (L1<->N) ",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5384,
+      "function": "input",
+      "name": "D U L2-N",
+      "label": "Durchschnitt Leiterspannung (L2<->N) ",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5386,
+      "function": "input",
+      "name": "D U L3-N",
+      "label": "Durchschnitt Leiterspannung (L3<->N) ",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5388,
+      "function": "input",
+      "name": "D F",
+      "label": "Durchschnitt Frequenz",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 5390,
+      "function": "input",
+      "name": "D I-L1",
+      "label": "Durchschnitt Strom L1",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5392,
+      "function": "input",
+      "name": "D I-L2",
+      "label": "Durchschnitt Strom L2",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5394,
+      "function": "input",
+      "name": "D I-L3",
+      "label": "Durchschnitt Strom L3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5396,
+      "function": "input",
+      "name": "D I-N",
+      "label": "Durchschnitt Strom N",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5398,
+      "function": "input",
+      "name": "D I-SYS",
+      "label": "Durchschnitt Strom I-SYS",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5400,
+      "function": "input",
+      "name": "D P+L1",
+      "label": "Durchschnitt Wirkleistung Bezug L1",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5402,
+      "function": "input",
+      "name": "D P-L1",
+      "label": "Durchschnitt Wirkleistung Abgabe L1",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5404,
+      "function": "input",
+      "name": "D P+L2",
+      "label": "Durchschnitt Wirkleistung Bezug L2",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5406,
+      "function": "input",
+      "name": "D P-L2",
+      "label": "Durchschnitt Wirkleistung Abgabe L2",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5408,
+      "function": "input",
+      "name": "D P+L3",
+      "label": "Durchschnitt Wirkleistung Bezug L3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5410,
+      "function": "input",
+      "name": "D P-L3",
+      "label": "Durchschnitt Wirkleistung Abgabe L3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5412,
+      "function": "input",
+      "name": "D ΣP+",
+      "label": "Durchschnitt Wirkleistung Bezug System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5414,
+      "function": "input",
+      "name": "D ΣP-",
+      "label": "Durchschnitt Wirkleistung Abgabe System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5416,
+      "function": "input",
+      "name": "D B ΣP",
+      "label": "Bilanzierter Durchschnitt Wirkleistung System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5418,
+      "function": "input",
+      "name": "D S+L1",
+      "label": "Durchschnitt Scheinleistung Bezug L1",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5420,
+      "function": "input",
+      "name": "D S-L1",
+      "label": "Durchschnitt Scheinleistung Abgabe L1",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5422,
+      "function": "input",
+      "name": "D S+L2",
+      "label": "Durchschnitt Scheinleistung Bezug L2",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5424,
+      "function": "input",
+      "name": "D S-L2",
+      "label": "Durchschnitt Scheinleistung Abgabe L2",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5426,
+      "function": "input",
+      "name": "D S+L3",
+      "label": "Durchschnitt Scheinleistung Bezug L3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5428,
+      "function": "input",
+      "name": "D S-L3",
+      "label": "Durchschnitt Scheinleistung Abgabe L3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5430,
+      "function": "input",
+      "name": "D ΣS+",
+      "label": "Durchschnitt Scheinleistung Bezug System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5432,
+      "function": "input",
+      "name": "D ΣS-",
+      "label": "Durchschnitt Scheinleistung Abgabe System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5434,
+      "function": "input",
+      "name": "D B ΣS",
+      "label": "Bilanzierter Durchschnitt Scheinleistung System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5436,
+      "function": "input",
+      "name": "D Q+L1",
+      "label": "Durchschnitt Blindleistung Bezug L1",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5438,
+      "function": "input",
+      "name": "D Q-L1",
+      "label": "Durchschnitt Blindleistung Abgabe L1",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5440,
+      "function": "input",
+      "name": "D Q+L2",
+      "label": "Durchschnitt Blindleistung Bezug L2",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5442,
+      "function": "input",
+      "name": "D Q-L2",
+      "label": "Durchschnitt Blindleistung Abgabe L2",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5444,
+      "function": "input",
+      "name": "D Q+L3",
+      "label": "Durchschnitt Blindleistung Bezug L3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5446,
+      "function": "input",
+      "name": "D Q-L3",
+      "label": "Durchschnitt Blindleistung Abgabe L3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5448,
+      "function": "input",
+      "name": "D ΣQ+",
+      "label": "Durchschnitt Blindleistung Bezug System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5450,
+      "function": "input",
+      "name": "D ΣQ-",
+      "label": "Durchschnitt Blindleistung Abgabe System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5452,
+      "function": "input",
+      "name": "D B ΣQ",
+      "label": "Bilanzierter Durchschnitt Blindleistung System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5454,
+      "function": "input",
+      "name": "D PFi-L1",
+      "label": "Durchschnitt Leistungsfaktor L1 induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 5456,
+      "function": "input",
+      "name": "D PFk-L1",
+      "label": "Durchschnitt Leistungsfaktor L1 kapazitiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 5458,
+      "function": "input",
+      "name": "D PFi-L2",
+      "label": "Durchschnitt Leistungsfaktor L2 induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 5460,
+      "function": "input",
+      "name": "D PFk-L2",
+      "label": "Durchschnitt Leistungsfaktor L2 kapazitiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 5462,
+      "function": "input",
+      "name": "D PFi-L3",
+      "label": "Durchschnitt Leistungsfaktor L3 induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 5464,
+      "function": "input",
+      "name": "D PFk-L3",
+      "label": "Durchschnitt Leistungsfaktor L3 kapazitiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 5466,
+      "function": "input",
+      "name": "D ΣPFi",
+      "label": "Durchschnitt Leistungsfaktor System induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 5468,
+      "function": "input",
+      "name": "D ΣPFk",
+      "label": "Durchschnitt Leistungsfaktor System kapazitiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50512,
+      "function": "input",
+      "name": "Hour",
+      "label": "Betriebsstundenzähler ",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "h",
+      "access": "r"
+    },
+    {
+      "address": 50514,
+      "function": "input",
+      "name": "U L1-L2",
+      "label": "Leiterspannung (L1<->L2)",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 50516,
+      "function": "input",
+      "name": "U L2-L3",
+      "label": "Leiterspannung (L2<->L3)",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 50518,
+      "function": "input",
+      "name": "U L3-L1",
+      "label": "Leiterspannung (L3<->L1)",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 50520,
+      "function": "input",
+      "name": "U L1-N",
+      "label": "Leiterspannung (L1<->N) ",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 50522,
+      "function": "input",
+      "name": "U L2-N",
+      "label": "Leiterspannung (L2<->N) ",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 50524,
+      "function": "input",
+      "name": "U L3-N",
+      "label": "Leiterspannung (L3<->N) ",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 50526,
+      "function": "input",
+      "name": "F",
+      "label": "Frequenz",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 50528,
+      "function": "input",
+      "name": "I-L1",
+      "label": "Strom L1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 50530,
+      "function": "input",
+      "name": "I-L2",
+      "label": "Strom L2",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 50532,
+      "function": "input",
+      "name": "I-L3",
+      "label": "Strom L3",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 50534,
+      "function": "input",
+      "name": "I-N",
+      "label": "Strom N",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 50536,
+      "function": "input",
+      "name": "ΣP",
+      "label": "Summe Wirkleistung +/-",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 10,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 50538,
+      "function": "input",
+      "name": "ΣQ",
+      "label": "Summe Blindleistung +/-",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 10,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 50540,
+      "function": "input",
+      "name": "ΣS",
+      "label": "Summe Scheinleistung +/-",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 10,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 50542,
+      "function": "input",
+      "name": "ΣPF",
+      "label": "Summe Leistungsfaktor -: kapazitiv und +: induktiv",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 50544,
+      "function": "input",
+      "name": "P-L1",
+      "label": "Wirkleistung L1 +/-",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 10,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 50546,
+      "function": "input",
+      "name": "P-L2",
+      "label": "Wirkleistung L2 +/-",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 10,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 50548,
+      "function": "input",
+      "name": "P-L3",
+      "label": "Wirkleistung L3 +/-",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 10,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 50550,
+      "function": "input",
+      "name": "Q-L1",
+      "label": "Blindleistung L1 +/-",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 10,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 50552,
+      "function": "input",
+      "name": "Q-L2",
+      "label": "Blindleistung L2 +/-",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 10,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 50554,
+      "function": "input",
+      "name": "Q-L3",
+      "label": "Blindleistung L3 +/-",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 10,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 50556,
+      "function": "input",
+      "name": "S-L1",
+      "label": "Scheinleistung L1 +/-",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 10,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 50558,
+      "function": "input",
+      "name": "S-L2",
+      "label": "Scheinleistung L2 +/-",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 10,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 50560,
+      "function": "input",
+      "name": "S-L3",
+      "label": "Scheinleistung L3 +/-",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 10,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 50562,
+      "function": "input",
+      "name": "PF-L1",
+      "label": "Leistungsfaktor L1 -: kapazitiv und +: induktiv",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 50564,
+      "function": "input",
+      "name": "PF-L2",
+      "label": "Leistungsfaktor L3 -: kapazitiv und +: induktiv",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 50566,
+      "function": "input",
+      "name": "PF-L3",
+      "label": "Leistungsfaktor L3 -: kapazitiv und +: induktiv",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 50568,
+      "function": "input",
+      "name": "I-SYS",
+      "label": "Mittelwert der Ströme (I1 + I2 + I3) / 3",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 50570,
+      "function": "input",
+      "name": "U-SYS",
+      "label": "Mittelwert der Leiterspannungen (U12 + U23 + U31) / 3",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 50572,
+      "function": "input",
+      "name": "V-SYS",
+      "label": "Mittelwert der Leiterspannungen gegen N (V1 + V2 + V3) / 3",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 50768,
+      "function": "input",
+      "name": "Hour",
+      "label": "Betriebsstundenzähler",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "h",
+      "access": "r"
+    },
+    {
+      "address": 50770,
+      "function": "input",
+      "name": "ΣP+",
+      "label": "Gesamt Wirkarbeit System Bezug",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 50772,
+      "function": "input",
+      "name": "ΣQi",
+      "label": "Gesamt Blindarbeit System induktiv ",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 50774,
+      "function": "input",
+      "name": "ΣS",
+      "label": "Gesamt Scheinarbeit System",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 50776,
+      "function": "input",
+      "name": "ΣP-",
+      "label": "Gesamt Wirkarbeit System Abgabe ",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 50778,
+      "function": "input",
+      "name": "ΣQk",
+      "label": "Gesamt Blindenergie System kapazitiv",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 50780,
+      "function": "input",
+      "name": "T ΣP+",
+      "label": "Teilenergiezähler Wirkarbeit System Bezug",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 50782,
+      "function": "input",
+      "name": "T ΣQi",
+      "label": "Teilenergiezähler Blindarbeit System induktiv",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 50784,
+      "function": "input",
+      "name": "T ΣS",
+      "label": "Teilenergiezähler Scheinarbeit System",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 50786,
+      "function": "input",
+      "name": "T ΣP-",
+      "label": "Teilenergiezähler Wirkarbeit System Abgabe",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 50788,
+      "function": "input",
+      "name": "T ΣQk",
+      "label": "Teilenergiezähler Blindarbeit System kapazitiv",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 51070,
+      "function": "input",
+      "name": "Dmax I-L1",
+      "label": "max Durchschnitt Strom L1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 51072,
+      "function": "input",
+      "name": "Dmax I-L2",
+      "label": "max Durchschnitt Strom L2",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 51074,
+      "function": "input",
+      "name": "Dmax I-L3",
+      "label": "max Durchschnitt Strom L3",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 51076,
+      "function": "input",
+      "name": "Dmax I-N",
+      "label": "max Durchschnitt Strom N",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 51078,
+      "function": "input",
+      "name": "Dmax ΣP+",
+      "label": "max Durchschnitt Wirkleistung Bezug System",
+      "dataType": "uint32",
+      "size": 4,
+      "scale": 0,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 51080,
+      "function": "input",
+      "name": "Dmax ΣP-",
+      "label": "max Durchschnitt Wirkleistung Abgabe System",
+      "dataType": "uint32",
+      "size": 4,
+      "scale": 0,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 51082,
+      "function": "input",
+      "name": "Dmax ΣQ+",
+      "label": "max Durchschnitt Blindleistung Bezug System",
+      "dataType": "uint32",
+      "size": 4,
+      "scale": 0,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 51084,
+      "function": "input",
+      "name": "Dmax ΣQ-",
+      "label": "max Durchschnitt Blindleistung Abgabe System",
+      "dataType": "uint32",
+      "size": 4,
+      "scale": 0,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 51086,
+      "function": "input",
+      "name": "Dmax ΣS+",
+      "label": "max Durchschnitt Scheinleistung Bezug System",
+      "dataType": "uint32",
+      "size": 4,
+      "scale": 0,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 51088,
+      "function": "input",
+      "name": "Dmax ΣS-",
+      "label": "max Durchschnitt Scheinleistung Abgabe System",
+      "dataType": "uint32",
+      "size": 4,
+      "scale": 0,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 57616,
+      "function": "holding",
+      "name": "IP-A",
+      "label": "R/W Ethernet IP-Adresse A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57617,
+      "function": "holding",
+      "name": "IP-B",
+      "label": "R/W Ethernet IP-Adresse A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57618,
+      "function": "holding",
+      "name": "IP-C",
+      "label": "R/W Ethernet IP-Adresse A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57619,
+      "function": "holding",
+      "name": "IP-D",
+      "label": "R/W Ethernet IP-Adresse A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57620,
+      "function": "holding",
+      "name": "GW-A",
+      "label": "R/W Ethernet Gateway-Adresse A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57621,
+      "function": "holding",
+      "name": "GW-B",
+      "label": "R/W Ethernet Gateway-Adresse A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57622,
+      "function": "holding",
+      "name": "GW-C",
+      "label": "R/W Ethernet Gateway-Adresse A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57623,
+      "function": "holding",
+      "name": "GW-D",
+      "label": "R/W Ethernet Gateway-Adresse A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57624,
+      "function": "holding",
+      "name": "SUB-A",
+      "label": "R/W Ethernet Subnetzmaske A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57625,
+      "function": "holding",
+      "name": "SUB-B",
+      "label": "R/W Ethernet Subnetzmaske A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57626,
+      "function": "holding",
+      "name": "SUB-C",
+      "label": "R/W Ethernet Subnetzmaske A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57627,
+      "function": "holding",
+      "name": "SUB-D",
+      "label": "R/W Ethernet Subnetzmaske A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57628,
+      "function": "holding",
+      "name": "DHCP",
+      "label": "R/W DHCP aktiv: 1, inaktiv: 0",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57631,
+      "function": "holding",
+      "name": "Modbus/RTU Baud-Rate",
+      "label": "R/W 0: 2400 Bit/s 1: 4800 Bit/s 2: 9600 Bit/s 3: 19200 Bit/s 4: 38400 Bit/s 5: 57600 Bit/s 8: 300 Bit/s 9: 1200 Bit/s",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 57633,
+      "function": "holding",
+      "name": "Modbus/RTU Parität",
+      "label": "R/W 0: keine; 1: gerade; 2: ungerade",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57634,
+      "function": "holding",
+      "name": "Modbus/RTU Stoppbit",
+      "label": "R/W 0: 1 Bit; 1: 2 Bits",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57636,
+      "function": "holding",
+      "name": "Modbus/RTU Slave-Adresse",
+      "label": "R/W bei Modbus/TCP fixiert auf 255",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57856,
+      "function": "holding",
+      "name": "Speichern / Neustart der Konfiguration",
+      "label": "W/o 161: Zwischenspeicherung in den EEPROM; 178: Konfiguration laden aus dem EEPROM",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

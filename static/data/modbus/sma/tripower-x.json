@@ -1,0 +1,550 @@
+{
+  "slug": "sma-tripower-x",
+  "vendor": "SMA",
+  "vendorSlug": "sma",
+  "model": "Tripower X",
+  "modelSlug": "tripower-x",
+  "name": "SMA Tripower X",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 30005,
+      "function": "input",
+      "name": "Parameter.Seriennummer",
+      "label": "Seriennummer",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 30201,
+      "function": "input",
+      "name": "Measurement.Operation.Health",
+      "label": "Zustand",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 30219,
+      "function": "input",
+      "name": "Grund der Leistungsreduzierung",
+      "label": "Measurement.Operation.DrtStt",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 30225,
+      "function": "input",
+      "name": "Measurement.Isolation.LeakRis",
+      "label": "Isolationswiderstand",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.000001,
+      "unit": "MOhm",
+      "access": "r"
+    },
+    {
+      "address": 30513,
+      "function": "input",
+      "name": "Measurement.TotWhOut",
+      "label": "Gesamtertrag",
+      "dataType": "uint64",
+      "size": 4,
+      "scale": 0,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 30521,
+      "function": "input",
+      "name": "Measurement.Metering.TotOpTms",
+      "label": "Betriebszeit",
+      "dataType": "uint64",
+      "size": 4,
+      "unit": "s",
+      "access": "r"
+    },
+    {
+      "address": 30525,
+      "function": "input",
+      "name": "Einspeisezeit",
+      "label": "Measurement.Metering.TotFeedTms",
+      "dataType": "uint64",
+      "size": 4,
+      "unit": "s",
+      "access": "r"
+    },
+    {
+      "address": 30769,
+      "function": "input",
+      "name": "Measurement.DcMs.Amp.A",
+      "label": "DC Strom Eingang A",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 30771,
+      "function": "input",
+      "name": "Measurement.DcMs.Vol.A",
+      "label": "DC Spannung Eingang A",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 30773,
+      "function": "input",
+      "name": "Measurement.DcMs.Watt.A",
+      "label": "DC Leistung Eingang A",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 30775,
+      "function": "input",
+      "name": "Measurement.GridMs.TotW",
+      "label": "Leistung",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 30777,
+      "function": "input",
+      "name": "Measurement.GridMs.W.phsA",
+      "label": "Leistung L1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 30779,
+      "function": "input",
+      "name": "Measurement.GridMs.W.phsB",
+      "label": "Leistung L2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 30781,
+      "function": "input",
+      "name": "Measurement.GridMs.W.phsC",
+      "label": "Leistung L2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 30783,
+      "function": "input",
+      "name": "Measurement.GridMs.PhV.phsA",
+      "label": "Netzspannung Phase L1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 30785,
+      "function": "input",
+      "name": "Measurement.GridMs.PhV.phsB",
+      "label": "Netzspannung Phase L2",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 30787,
+      "function": "input",
+      "name": "Measurement.GridMs.PhV.phsC",
+      "label": "Netzspannung Phase L3",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 30789,
+      "function": "input",
+      "name": "Measurement.GridMs.PhV.phsA2B",
+      "label": "Netzspannung Phase L1 gegen L2",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 30791,
+      "function": "input",
+      "name": "Measurement.GridMs.PhV.phsB2C",
+      "label": "Netzspannung Phase L2 gegen L3",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 30793,
+      "function": "input",
+      "name": "Measurement.GridMs.PhV.phsC2A",
+      "label": "Netzspannung Phase L3 gegen L1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 30795,
+      "function": "input",
+      "name": "Measurement.GridMs.TotA",
+      "label": "Netzstrom",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 30797,
+      "function": "input",
+      "name": "Measurement.GridMs.A.phsA",
+      "label": "Netzstrom L1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 30799,
+      "function": "input",
+      "name": "Measurement.GridMs.A.phsB",
+      "label": "Netzstrom L2",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 30801,
+      "function": "input",
+      "name": "Measurement.GridMs.A.phsC",
+      "label": "Netzstrom L3",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 30803,
+      "function": "input",
+      "name": "Measurement.GridMs.Hz",
+      "label": "Netzfrequenz",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 30805,
+      "function": "input",
+      "name": "Measurement.GridMs.TotVAr",
+      "label": "Blindleistung",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 30807,
+      "function": "input",
+      "name": "Measurement.GridMs.VAr.phsA",
+      "label": "Blindleistung L1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 30809,
+      "function": "input",
+      "name": "Measurement.GridMs.VAr.phsB",
+      "label": "Blindleistung L2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 30811,
+      "function": "input",
+      "name": "Measurement.GridMs.VAr.phsC",
+      "label": "Blindleistung L3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 30813,
+      "function": "input",
+      "name": "Measurement.GridMs.TotVA",
+      "label": "Scheinleistung",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 30815,
+      "function": "input",
+      "name": "Measurement.GridMs.VA.phsA",
+      "label": "Scheinleistung L1",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 30817,
+      "function": "input",
+      "name": "Measurement.GridMs.VA.phsB",
+      "label": "Scheinleistung L2",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 30819,
+      "function": "input",
+      "name": "Measurement.GridMs.VA.phsC",
+      "label": "Scheinleistung L3",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 30953,
+      "function": "input",
+      "name": "Innentemperatur",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 30957,
+      "function": "input",
+      "name": "Measurement.DcMs.Amp.B",
+      "label": "DC Strom Eingang B",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 30959,
+      "function": "input",
+      "name": "Measurement.DcMs.Vol.B",
+      "label": "DC Spannung Eingang B",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 30961,
+      "function": "input",
+      "name": "Measurement.DcMs.Watt.B",
+      "label": "DC Leistung Eingang B",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 30963,
+      "function": "input",
+      "name": "Measurement.DcMs.Amp.C",
+      "label": "DC Strom Eingang C",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 30965,
+      "function": "input",
+      "name": "Measurement.DcMs.Vol.C",
+      "label": "DC Spannung Eingang C",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 30967,
+      "function": "input",
+      "name": "Measurement.DcMs.Watt.C",
+      "label": "DC Leistung Eingang C",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 30975,
+      "function": "input",
+      "name": "Measurement.Inverter.DclVol",
+      "label": "Zwischenkreisspannung",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 30977,
+      "function": "input",
+      "name": "Measurement.GridMs.A.phsA",
+      "label": "Netzstrom Phase L1",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 30979,
+      "function": "input",
+      "name": "Measurement.GridMs.A.phsB",
+      "label": "Netzstrom Phase L2",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 30981,
+      "function": "input",
+      "name": "Measurement.GridMs.A.phsC",
+      "label": "Netzstrom Phase L3",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 31247,
+      "function": "input",
+      "name": "Measurement.Isolation.FltA",
+      "label": "Fehlerstrom DC",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 32209,
+      "function": "input",
+      "name": "Measurement.DcMs.TotDcEnCntWh.A",
+      "label": "DC Energie A",
+      "dataType": "uint64",
+      "size": 4,
+      "scale": 0,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 32213,
+      "function": "input",
+      "name": "Measurement.DcMs.TotDcEnCntWh.B",
+      "label": "DC Energie B",
+      "dataType": "uint64",
+      "size": 4,
+      "scale": 0,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 32217,
+      "function": "input",
+      "name": "Measurement.DcMs.TotDcEnCntWh.C",
+      "label": "DC Energie C",
+      "dataType": "uint64",
+      "size": 4,
+      "scale": 0,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 33001,
+      "function": "input",
+      "name": "Measurement.Operation.StandbyStt",
+      "label": "Standby-Status",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40029,
+      "function": "holding",
+      "name": "Measurement.Operation.OpStt",
+      "label": "Allgemeiner Betriebszustand",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

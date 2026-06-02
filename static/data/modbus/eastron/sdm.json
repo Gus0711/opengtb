@@ -1,0 +1,513 @@
+{
+  "slug": "eastron-sdm",
+  "vendor": "Eastron",
+  "vendorSlug": "eastron",
+  "model": "SDM",
+  "modelSlug": "sdm",
+  "name": "Eastron SDM",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 0,
+      "function": "input",
+      "name": "VoltageL1",
+      "label": "Tension L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "input",
+      "name": "VoltageL2",
+      "label": "Tension L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "input",
+      "name": "VoltageL3",
+      "label": "Tension L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "input",
+      "name": "CurrentL1",
+      "label": "Courant L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "input",
+      "name": "CurrentL2",
+      "label": "Courant L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "input",
+      "name": "CurrentL3",
+      "label": "Courant L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "input",
+      "name": "PowerL1",
+      "label": "Puissance active L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "input",
+      "name": "PowerL2",
+      "label": "Puissance active L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "input",
+      "name": "PowerL3",
+      "label": "Puissance active L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "input",
+      "name": "ApparentPowerL1",
+      "label": "Puissance apparente L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "input",
+      "name": "ApparentPowerL2",
+      "label": "Puissance apparente L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "input",
+      "name": "ApparentPowerL3",
+      "label": "Puissance apparente L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "input",
+      "name": "ReactivePowerL1",
+      "label": "Puissance réactive L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "input",
+      "name": "ReactivePowerL2",
+      "label": "Puissance réactive L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "input",
+      "name": "ReactivePowerL3",
+      "label": "Puissance réactive L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "input",
+      "name": "CosphiL1",
+      "label": "Cos φ L1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "input",
+      "name": "CosphiL2",
+      "label": "Cos φ L2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "input",
+      "name": "CosphiL3",
+      "label": "Cos φ L3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "input",
+      "name": "Power",
+      "label": "Puissance active",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "input",
+      "name": "ApparentPower",
+      "label": "Puissance apparente",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "input",
+      "name": "ReactivePower",
+      "label": "Puissance réactive",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "input",
+      "name": "Cosphi",
+      "label": "Cos φ",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "input",
+      "name": "PhaseAngle",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "input",
+      "name": "Frequency",
+      "label": "Fréquence",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "input",
+      "name": "Import",
+      "label": "Énergie active importée",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "input",
+      "name": "Export",
+      "label": "Énergie active exportée",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 76,
+      "function": "input",
+      "name": "ReactiveImport",
+      "label": "Énergie réactive importée",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 78,
+      "function": "input",
+      "name": "ReactiveExport",
+      "label": "Énergie réactive exportée",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 234,
+      "function": "input",
+      "name": "THDL1",
+      "label": "THD courant L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 236,
+      "function": "input",
+      "name": "THDL2",
+      "label": "THD courant L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 238,
+      "function": "input",
+      "name": "THDL3",
+      "label": "THD courant L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 248,
+      "function": "input",
+      "name": "THD",
+      "label": "THD courant",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 342,
+      "function": "input",
+      "name": "Sum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 344,
+      "function": "input",
+      "name": "ReactiveSum",
+      "label": "Énergie réactive (somme)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 346,
+      "function": "input",
+      "name": "ImportL1",
+      "label": "Énergie active importée L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 348,
+      "function": "input",
+      "name": "ImportL2",
+      "label": "Énergie active importée L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 350,
+      "function": "input",
+      "name": "ImportL3",
+      "label": "Énergie active importée L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 352,
+      "function": "input",
+      "name": "ExportL1",
+      "label": "Énergie active exportée L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 354,
+      "function": "input",
+      "name": "ExportL2",
+      "label": "Énergie active exportée L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 356,
+      "function": "input",
+      "name": "ExportL3",
+      "label": "Énergie active exportée L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 358,
+      "function": "input",
+      "name": "SumL1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 360,
+      "function": "input",
+      "name": "SumL2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 362,
+      "function": "input",
+      "name": "SumL3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 364,
+      "function": "input",
+      "name": "ReactiveImportL1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 366,
+      "function": "input",
+      "name": "ReactiveImportL2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 368,
+      "function": "input",
+      "name": "ReactiveImportL3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 370,
+      "function": "input",
+      "name": "ReactiveExportL1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 372,
+      "function": "input",
+      "name": "ReactiveExportL2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 374,
+      "function": "input",
+      "name": "ReactiveExportL3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 376,
+      "function": "input",
+      "name": "ReactiveSumL1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 378,
+      "function": "input",
+      "name": "ReactiveSumL2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 380,
+      "function": "input",
+      "name": "ReactiveSumL3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "doc": "Importé depuis volkszaehler/mbmd (BSD-3-Clause). Description amont : Eastron SDM630.",
+  "upstream": {
+    "source": "mbmd",
+    "ref": "c71dfb268a7a9a3d608dbb990c1c26d6d67fd9d9",
+    "needsReview": true,
+    "reviewReasons": [
+      "Type float32 et ordre AB-CD supposés (convention mbmd). Vérifier sur la datasheet SDM."
+    ]
+  }
+}

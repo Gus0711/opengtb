@@ -1,0 +1,249 @@
+{
+  "slug": "phoenix-contact-eem-em3xx-eem-dm3xx-coils",
+  "vendor": "Phoenix Contact EEM-EM3xx EEM-DM3xx",
+  "vendorSlug": "phoenix-contact-eem-em3xx-eem-dm3xx",
+  "model": "Coils",
+  "modelSlug": "coils",
+  "name": "Phoenix Contact EEM-EM3xx EEM-DM3xx Coils",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 0,
+      "function": "coil",
+      "name": "Überspannung System",
+      "label": "OVL-N: 240 V +20 %",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1,
+      "function": "coil",
+      "name": "Überspannung L1 ",
+      "label": "OVL-N: 240 V +20 %",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "coil",
+      "name": "Überspannung L2",
+      "label": "OVL-N: 240 V +20 %",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "coil",
+      "name": "Überspannung L3",
+      "label": "OVL-N: 240 V +20 %",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "coil",
+      "name": "Unterspannung System ",
+      "label": "UVL-N: 230 V -20 %",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "coil",
+      "name": "Unterspannung L1",
+      "label": "UVL-N: 230 V -20 %",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "coil",
+      "name": "Unterspannung L2",
+      "label": "UVL-N: 230 V -20 %",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "coil",
+      "name": "Unterspannung L3",
+      "label": "UVL-N: 230 V -20 %",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "coil",
+      "name": "Überspannung L1-2",
+      "label": "OVL-L: 415 V +20 %",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "coil",
+      "name": "Überspannung L2-3",
+      "label": "OVL-L: 415 V +20 %",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "coil",
+      "name": "Überspannung L3-1",
+      "label": "OVL-L: 415 V +20 %",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "coil",
+      "name": "Unterspannung L1-2",
+      "label": "UVL-L: 400 V -20 %",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "coil",
+      "name": "Unterspannung L2-3",
+      "label": "UVL-L: 400 V -20 %",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "coil",
+      "name": "Unterspannung L3-1",
+      "label": "UVL-L: 400 V -20 %",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "coil",
+      "name": "Unterstrom I3",
+      "label": "Strombereich < 0,001 A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "coil",
+      "name": "Unterstrom IN",
+      "label": "Strombereich < 0,001 A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "coil",
+      "name": "Überstrom Isys",
+      "label": "Strombereich > 1 A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "coil",
+      "name": "Überstrom I1",
+      "label": "Strombereich > 1 A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "coil",
+      "name": "Überstrom I2",
+      "label": "Strombereich > 1 A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 27,
+      "function": "coil",
+      "name": "Überstrom I3",
+      "label": "Strombereich > 1 A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "coil",
+      "name": "Überstrom IN",
+      "label": "Strombereich > 1 A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 29,
+      "function": "coil",
+      "name": "Unterstrom Isys",
+      "label": "Strombereich < 0,001 A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "coil",
+      "name": "Unterstrom I1",
+      "label": "Strombereich < 0,001 A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 31,
+      "function": "coil",
+      "name": "Unterstrom I2",
+      "label": "Strombereich < 0,001 A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "coil",
+      "name": "Frequenzbereich verlassen",
+      "label": "Frequenzbereich: 45 Hz ... 65 Hz",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

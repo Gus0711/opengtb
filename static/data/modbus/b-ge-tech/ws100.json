@@ -1,0 +1,46 @@
+{
+  "slug": "b-ge-tech-ws100",
+  "vendor": "B+GE-TECH",
+  "vendorSlug": "b-ge-tech",
+  "model": "WS100",
+  "modelSlug": "ws100",
+  "name": "B+GE-TECH WS100",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 260,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Total active power"
+    },
+    {
+      "address": 270,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Active energy (consumption)"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

@@ -1,0 +1,426 @@
+{
+  "slug": "schneider-electric-em1000-em1100-em1200",
+  "vendor": "schneider",
+  "vendorSlug": "schneider",
+  "model": "electric-em1000-em1100-em1200",
+  "modelSlug": "electric-em1000-em1100-em1200",
+  "name": "schneider electric-em1000-em1100-em1200",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2500,
+      "function": "holding",
+      "name": "Current,-phase-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2502,
+      "function": "holding",
+      "name": "Current,-phase-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2504,
+      "function": "holding",
+      "name": "Current,-phase-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2506,
+      "function": "holding",
+      "name": "Current-average",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2508,
+      "function": "holding",
+      "name": "Voltage(ll),-phase-1-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2510,
+      "function": "holding",
+      "name": "Voltage(ll),-phase-2-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2512,
+      "function": "holding",
+      "name": "Voltage(ll),-phase-3-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2514,
+      "function": "holding",
+      "name": "Voltage-(ll)-average",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2516,
+      "function": "holding",
+      "name": "Voltage(ln),-phase-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2518,
+      "function": "holding",
+      "name": "Voltage(ln),-phase-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2520,
+      "function": "holding",
+      "name": "Voltage(ln),-phase-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2522,
+      "function": "holding",
+      "name": "Voltage(ln)-average",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2530,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2540,
+      "function": "holding",
+      "name": "Active-power,-phase-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2546,
+      "function": "holding",
+      "name": "Active-power,-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3000,
+      "function": "holding",
+      "name": "Apparent-power,-phase-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3002,
+      "function": "holding",
+      "name": "Active-power,-phase-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3004,
+      "function": "holding",
+      "name": "Reactive-power,-phase-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3006,
+      "function": "holding",
+      "name": "Power-factor,-phase-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3008,
+      "function": "holding",
+      "name": "Current,-phase-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3010,
+      "function": "holding",
+      "name": "Voltage(ll),-phase-1-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3012,
+      "function": "holding",
+      "name": "Voltage(ln),-phase-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3016,
+      "function": "holding",
+      "name": "Apparent-power,-phase-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3018,
+      "function": "holding",
+      "name": "Active-power,-phase-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3020,
+      "function": "holding",
+      "name": "Reactive-power,-phase-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3022,
+      "function": "holding",
+      "name": "Power-factor,-phase-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3024,
+      "function": "holding",
+      "name": "Current,-phase-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3026,
+      "function": "holding",
+      "name": "Voltage(ll),-phase-2-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3028,
+      "function": "holding",
+      "name": "Voltage(ln),-phase-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3032,
+      "function": "holding",
+      "name": "Apparent-power,-phase-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3034,
+      "function": "holding",
+      "name": "Active-power,-phase-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3036,
+      "function": "holding",
+      "name": "Reactive-power,-phase-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3038,
+      "function": "holding",
+      "name": "Power-factor,-phase-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3040,
+      "function": "holding",
+      "name": "Current,-phase-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3042,
+      "function": "holding",
+      "name": "Voltage(ll),-phase-3-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3044,
+      "function": "holding",
+      "name": "Voltage(ln),-phase-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3048,
+      "function": "holding",
+      "name": "Apparent-power,-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3050,
+      "function": "holding",
+      "name": "Active-power,-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3052,
+      "function": "holding",
+      "name": "Reactive-power,-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3054,
+      "function": "holding",
+      "name": "Power-factor-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3056,
+      "function": "holding",
+      "name": "Current-average",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3058,
+      "function": "holding",
+      "name": "Voltage-(ll)-average",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3060,
+      "function": "holding",
+      "name": "Voltage(ln)-average",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3062,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3200,
+      "function": "holding",
+      "name": "Forward-apparent-energy",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3202,
+      "function": "holding",
+      "name": "Forward-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3204,
+      "function": "holding",
+      "name": "Forward-reactive-energy",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3264,
+      "function": "holding",
+      "name": "Forward-run-seconds",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3266,
+      "function": "holding",
+      "name": "On-seconds",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3268,
+      "function": "holding",
+      "name": "Number-of-input-voltage-interruptions",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/schneider-electric-em1000-em1100-em1200.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

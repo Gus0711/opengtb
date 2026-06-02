@@ -1,0 +1,468 @@
+{
+  "slug": "saci-ang96",
+  "vendor": "saci",
+  "vendorSlug": "saci",
+  "model": "ang96",
+  "modelSlug": "ang96",
+  "name": "saci ang96",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Current-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "THD%-current-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "THD%-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Active-power-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Reactive-power-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Kvar",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Apparent-power-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KVA",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Current-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "THD%-current-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "THD%-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "Active-power-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "Reactive-power-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Kvar",
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Apparent-power-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KVA",
+      "access": "r"
+    },
+    {
+      "address": 54,
+      "function": "holding",
+      "name": "Voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 64,
+      "function": "holding",
+      "name": "Current-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "holding",
+      "name": "THD%-current-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 68,
+      "function": "holding",
+      "name": "THD%-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "Active-power-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "holding",
+      "name": "Power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "Reactive-power-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Kvar",
+      "access": "r"
+    },
+    {
+      "address": 82,
+      "function": "holding",
+      "name": "Apparent-power-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KVA",
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 88,
+      "function": "holding",
+      "name": "Power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 96,
+      "function": "holding",
+      "name": "Apparent-power-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KVA",
+      "access": "r"
+    },
+    {
+      "address": 98,
+      "function": "holding",
+      "name": "Active-power-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "Reactive-power-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Kvar",
+      "access": "r"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "Import-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "Export-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 112,
+      "function": "holding",
+      "name": "Reactive-energy.-inductive",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 114,
+      "function": "holding",
+      "name": "Reactive-energy.-capacitive",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 116,
+      "function": "holding",
+      "name": "Generator-mode.-import-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 118,
+      "function": "holding",
+      "name": "Generator-mode.-export-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 120,
+      "function": "holding",
+      "name": "Generator-mode.-reactive-energy.-inductive",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 128,
+      "function": "holding",
+      "name": "Generator-mode.-reactive-energy.-capacitive",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 130,
+      "function": "holding",
+      "name": "Import-active-energy-time-counter",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 132,
+      "function": "holding",
+      "name": "Export-active-energy-time-counter",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 134,
+      "function": "holding",
+      "name": "Generator-mode.-import-active-energy-time-counter",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 136,
+      "function": "holding",
+      "name": "Generator-model.-export-active-energy-time-counter",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 256,
+      "function": "holding",
+      "name": "Current-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 258,
+      "function": "holding",
+      "name": "Current-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 260,
+      "function": "holding",
+      "name": "Current-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 262,
+      "function": "holding",
+      "name": "Current-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 264,
+      "function": "holding",
+      "name": "Current-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 272,
+      "function": "holding",
+      "name": "Current-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/saci-ang96.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

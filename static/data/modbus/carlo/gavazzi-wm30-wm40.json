@@ -1,0 +1,426 @@
+{
+  "slug": "carlo-gavazzi-wm30-wm40",
+  "vendor": "carlo",
+  "vendorSlug": "carlo",
+  "model": "gavazzi-wm30-wm40",
+  "modelSlug": "gavazzi-wm30-wm40",
+  "name": "carlo gavazzi-wm30-wm40",
+  "equipmentType": "gateway",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Communication-module-firmware-version-(only-in-case-mceth-or-mcbacip-modules)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Analogue-output-module-firmware-version-(position-1-only-in-case-moa2-or-mov2-modules)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Advanced-six-channel-digital-inputs-+-four-channel-outputs-module-firmware-version-(only-in-case-mfi6r4-or-mfi6o6)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Process-module-(only-in-case-matp-or-matpn)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Analogue-output-module-firmware-version-(position-2-only-in-case-moa2-or-mov2-modules)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Carlo-gavazzi-controls-identification-code",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Letter-1-(from-sx)-letter-2-(from-sx)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Letter-3-(from-sx)-letter-4-(from-sx)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Letter-5-(from-sx)-letter-6-(from-sx)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 35,
+      "function": "holding",
+      "name": "Letter-7-(from-sx)-letter-8-(from-sx)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Letter-9-(from-sx)-letter-10-(from-sx)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 37,
+      "function": "holding",
+      "name": "Letter-11-(from-sx)-letter-12-(from-sx)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Letter-13-(from-sx)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "V-L1-N",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 82,
+      "function": "holding",
+      "name": "V-L2-N",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "V-L3-N",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "V-L-N",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 88,
+      "function": "holding",
+      "name": "V-L1-L2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 90,
+      "function": "holding",
+      "name": "V-L2-L3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 92,
+      "function": "holding",
+      "name": "V-L3-L1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 94,
+      "function": "holding",
+      "name": "V-L-L",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 96,
+      "function": "holding",
+      "name": "A-L1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 98,
+      "function": "holding",
+      "name": "A-L2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "A-L3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "A-N",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "W-L1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 106,
+      "function": "holding",
+      "name": "W-L2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 108,
+      "function": "holding",
+      "name": "W-L3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 110,
+      "function": "holding",
+      "name": "W",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 112,
+      "function": "holding",
+      "name": "Va-L1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 114,
+      "function": "holding",
+      "name": "Va-L2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 116,
+      "function": "holding",
+      "name": "Va-L3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 118,
+      "function": "holding",
+      "name": "Va",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 120,
+      "function": "holding",
+      "name": "Var-L1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 122,
+      "function": "holding",
+      "name": "Var-L2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 124,
+      "function": "holding",
+      "name": "Var-L3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 126,
+      "function": "holding",
+      "name": "Var",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 128,
+      "function": "holding",
+      "name": "Pf-L1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 130,
+      "function": "holding",
+      "name": "Pf-L2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 132,
+      "function": "holding",
+      "name": "Pf-L3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 134,
+      "function": "holding",
+      "name": "Pf",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 136,
+      "function": "holding",
+      "name": "Hz",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 138,
+      "function": "holding",
+      "name": "Asymmetry-L-N",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 140,
+      "function": "holding",
+      "name": "Asymmetry-L-L",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 142,
+      "function": "holding",
+      "name": "Phase-sequence",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 144,
+      "function": "holding",
+      "name": "K-factor-L1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 146,
+      "function": "holding",
+      "name": "K-factor-L2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 148,
+      "function": "holding",
+      "name": "K-factor-L3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 150,
+      "function": "holding",
+      "name": "Temperature",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 152,
+      "function": "holding",
+      "name": "Analogue-input",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/carlo-gavazzi-wm30-wm40.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

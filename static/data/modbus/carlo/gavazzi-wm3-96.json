@@ -1,0 +1,438 @@
+{
+  "slug": "carlo-gavazzi-wm3-96",
+  "vendor": "carlo",
+  "vendorSlug": "carlo",
+  "model": "gavazzi-wm3-96",
+  "modelSlug": "gavazzi-wm3-96",
+  "name": "carlo gavazzi-wm3-96",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "A-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "W-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "V-L2-N",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "A-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "W-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "V-L3-N",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "A-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "W-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "V-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "V-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "V-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "VA-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Var-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "PF-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "VA-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 64,
+      "function": "holding",
+      "name": "Var-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 68,
+      "function": "holding",
+      "name": "PF-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "holding",
+      "name": "VA-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 76,
+      "function": "holding",
+      "name": "Var-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "PF-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "V",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 88,
+      "function": "holding",
+      "name": "A-N",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 92,
+      "function": "holding",
+      "name": "W",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 96,
+      "function": "holding",
+      "name": "VA",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "Var",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "PF",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 108,
+      "function": "holding",
+      "name": "THD-V1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 112,
+      "function": "holding",
+      "name": "THDe-V1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 116,
+      "function": "holding",
+      "name": "THDo-V1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 120,
+      "function": "holding",
+      "name": "THD-V2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 124,
+      "function": "holding",
+      "name": "THDe-V2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 128,
+      "function": "holding",
+      "name": "THDo-V2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 132,
+      "function": "holding",
+      "name": "THD-V3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 136,
+      "function": "holding",
+      "name": "THDe-V3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 140,
+      "function": "holding",
+      "name": "THDo-V3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 144,
+      "function": "holding",
+      "name": "THD-A1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 148,
+      "function": "holding",
+      "name": "THDe-A1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 152,
+      "function": "holding",
+      "name": "THDo-A1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 156,
+      "function": "holding",
+      "name": "THD-A2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 160,
+      "function": "holding",
+      "name": "THDe-A2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 164,
+      "function": "holding",
+      "name": "THDo-A2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 168,
+      "function": "holding",
+      "name": "THD-A3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 172,
+      "function": "holding",
+      "name": "THDe-A3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 176,
+      "function": "holding",
+      "name": "THDo-A3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 180,
+      "function": "holding",
+      "name": "A-dmd",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 184,
+      "function": "holding",
+      "name": "VA-dmd",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 188,
+      "function": "holding",
+      "name": "TPF-avg",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 192,
+      "function": "holding",
+      "name": "W-dmd",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 196,
+      "function": "holding",
+      "name": "Hz",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 200,
+      "function": "holding",
+      "name": "ASY",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/carlo-gavazzi-wm3-96.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

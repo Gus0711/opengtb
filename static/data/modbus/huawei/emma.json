@@ -1,0 +1,198 @@
+{
+  "slug": "huawei-emma",
+  "vendor": "Huawei",
+  "vendorSlug": "huawei",
+  "model": "EMMA",
+  "modelSlug": "emma",
+  "name": "Huawei EMMA",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 30312,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Total discharge"
+    },
+    {
+      "address": 30344,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "E-Total"
+    },
+    {
+      "address": 30354,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Active power"
+    },
+    {
+      "address": 30360,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 30368,
+      "function": "holding",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 31639,
+      "function": "holding",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r",
+      "notes": "Huawei phase A grid voltage"
+    },
+    {
+      "address": 31641,
+      "function": "holding",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r",
+      "notes": "Huawei phase B grid voltage"
+    },
+    {
+      "address": 31643,
+      "function": "holding",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r",
+      "notes": "Huawei phase C grid voltage"
+    },
+    {
+      "address": 31651,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r",
+      "notes": "Huawei phase A grid current"
+    },
+    {
+      "address": 31653,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r",
+      "notes": "Huawei phase B grid current"
+    },
+    {
+      "address": 31655,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r",
+      "notes": "Huawei phase C grid current"
+    },
+    {
+      "address": 31657,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Active power of built-in electric energy sensor"
+    },
+    {
+      "address": 31665,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Huawei phase A grid power"
+    },
+    {
+      "address": 31667,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Huawei phase B grid power"
+    },
+    {
+      "address": 31669,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Huawei phase C grid power"
+    },
+    {
+      "address": 31679,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Total negative active energy of built-in electric energy sensor"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

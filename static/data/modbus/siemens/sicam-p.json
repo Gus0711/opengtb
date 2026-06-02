@@ -1,0 +1,467 @@
+{
+  "slug": "siemens-sicam-p",
+  "vendor": "siemens",
+  "vendorSlug": "siemens",
+  "model": "sicam-p",
+  "modelSlug": "sicam-p",
+  "name": "siemens sicam-p",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 199,
+      "function": "holding",
+      "name": "Overflow-voltage-L1-N-(ov-UL1)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 200,
+      "function": "holding",
+      "name": "Voltage-L-N-(u-L1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 202,
+      "function": "holding",
+      "name": "Voltage-L-N-(u-L2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 204,
+      "function": "holding",
+      "name": "Voltage-L-N-(u-L3)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 206,
+      "function": "holding",
+      "name": "Sum-of-voltages-L-N-(calculated)-(u-ne)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 208,
+      "function": "holding",
+      "name": "Current-(i-L1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 210,
+      "function": "holding",
+      "name": "Current-(i-L2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 212,
+      "function": "holding",
+      "name": "Current-(i-L3)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 214,
+      "function": "holding",
+      "name": "Current-(i-ne)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 216,
+      "function": "holding",
+      "name": "Voltage-L-L-(u-L12)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 218,
+      "function": "holding",
+      "name": "Voltage-L-L-(u-L23)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 220,
+      "function": "holding",
+      "name": "Voltage-L-L-(u-L31)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 222,
+      "function": "holding",
+      "name": "Voltage-sum-(u-sum)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 224,
+      "function": "holding",
+      "name": "Current-sum-(i-sum)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 226,
+      "function": "holding",
+      "name": "Active-power-(p-L1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 228,
+      "function": "holding",
+      "name": "Active-power-(p-L2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 230,
+      "function": "holding",
+      "name": "Active-power-(p-L3)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 232,
+      "function": "holding",
+      "name": "Active-power-(p)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 234,
+      "function": "holding",
+      "name": "Reactive-power-(q-L1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 236,
+      "function": "holding",
+      "name": "Reactive-power-(q-L2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 238,
+      "function": "holding",
+      "name": "Reactive-power-(q-L3)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 240,
+      "function": "holding",
+      "name": "Reactive-power-(q)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 242,
+      "function": "holding",
+      "name": "Apparent-power-(s-L1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 244,
+      "function": "holding",
+      "name": "Apparent-power-(s-L2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 246,
+      "function": "holding",
+      "name": "Apparent-power-(s-L3)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 248,
+      "function": "holding",
+      "name": "Apparent-power-(s)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 250,
+      "function": "holding",
+      "name": "Active-factor-cos-(cos-phi-L1)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 252,
+      "function": "holding",
+      "name": "Active-factor-cos-(cos-phi-L2)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 254,
+      "function": "holding",
+      "name": "Active-factor-cos-(cos-phi-L3)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 256,
+      "function": "holding",
+      "name": "Active-factor-cos-(cos-phi)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 258,
+      "function": "holding",
+      "name": "Power-factor-(pf-L1)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 260,
+      "function": "holding",
+      "name": "Power-factor-(pf-L2)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 262,
+      "function": "holding",
+      "name": "Power-factor-(pf-L3)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 264,
+      "function": "holding",
+      "name": "Power-factor-(pf)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 266,
+      "function": "holding",
+      "name": "Phase-angle-(phi-L1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "D (degree)",
+      "access": "r"
+    },
+    {
+      "address": 268,
+      "function": "holding",
+      "name": "Phase-angle-(phi-L2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "D (degree)",
+      "access": "r"
+    },
+    {
+      "address": 270,
+      "function": "holding",
+      "name": "Phase-angle-(phi-L3)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "D (degree)",
+      "access": "r"
+    },
+    {
+      "address": 272,
+      "function": "holding",
+      "name": "Phase-angle-(phi-sum)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "D (degree)",
+      "access": "r"
+    },
+    {
+      "address": 274,
+      "function": "holding",
+      "name": "Frequency-(f)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 276,
+      "function": "holding",
+      "name": "Voltage-unbalance-(asym-U)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 278,
+      "function": "holding",
+      "name": "Current-unbalance-(asym-I)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 280,
+      "function": "holding",
+      "name": "Thd-voltage-(thdu-L1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 282,
+      "function": "holding",
+      "name": "Thd-voltage-(thdu-L2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 284,
+      "function": "holding",
+      "name": "Thd-voltage-(thdu-L3)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 286,
+      "function": "holding",
+      "name": "Thd-current-(thdi-L1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 288,
+      "function": "holding",
+      "name": "Thd-current-(thdi-L2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 290,
+      "function": "holding",
+      "name": "Thd-current-(thdi-L3)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 292,
+      "function": "holding",
+      "name": "Harmonic-voltage,-5th-harmonic-wave-(hu-L1-5)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 294,
+      "function": "holding",
+      "name": "Harmonic-voltage,-5th-harmonic-wave-(hu-L2-5)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 296,
+      "function": "holding",
+      "name": "Harmonic-voltage,-5th-harmonic-wave-(hu-L3-5)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/siemens-sicam-p.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

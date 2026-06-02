@@ -24,14 +24,14 @@
 			/>
 		{:else}
 			<div class="flex h-full w-full items-center justify-center">
-				<span class="font-mono text-[11px] text-primary">#{article.tags[0] ?? 'article'}</span>
+				<span class="font-mono text-[11px] text-amber">#{article.tags[0] ?? 'article'}</span>
 			</div>
 		{/if}
 	</div>
 
 	<div class="min-w-0">
 		{#if article.tags.length > 0}
-			<span class="mb-1 inline-block font-mono text-[11px] text-primary"
+			<span class="mb-1 inline-block font-mono text-[11px] text-amber"
 				>#{article.tags[0]}</span
 			>
 		{/if}

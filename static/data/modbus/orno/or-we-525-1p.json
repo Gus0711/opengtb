@@ -1,0 +1,352 @@
+{
+  "slug": "orno-or-we-525-1p",
+  "vendor": "Orno",
+  "vendorSlug": "orno",
+  "model": "OR-WE-525 (1P)",
+  "modelSlug": "or-we-525-1p",
+  "name": "Orno OR-WE-525 (1P)",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 256,
+      "function": "input",
+      "name": "Voltage",
+      "label": "Tension",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 258,
+      "function": "input",
+      "name": "Current",
+      "label": "Courant",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 260,
+      "function": "input",
+      "name": "Power",
+      "label": "Puissance active",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 262,
+      "function": "input",
+      "name": "ApparentPower",
+      "label": "Puissance apparente",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 264,
+      "function": "input",
+      "name": "ReactivePower",
+      "label": "Puissance réactive",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 266,
+      "function": "input",
+      "name": "Frequency",
+      "label": "Fréquence",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 267,
+      "function": "input",
+      "name": "Cosphi",
+      "label": "Cos φ",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 270,
+      "function": "input",
+      "name": "Import",
+      "label": "Énergie active importée",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 272,
+      "function": "input",
+      "name": "ImportT1",
+      "label": "Énergie active importée T1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 274,
+      "function": "input",
+      "name": "ImportT2",
+      "label": "Énergie active importée T2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 276,
+      "function": "input",
+      "name": "ImportT3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 278,
+      "function": "input",
+      "name": "ImportT4",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 280,
+      "function": "input",
+      "name": "Export",
+      "label": "Énergie active exportée",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 282,
+      "function": "input",
+      "name": "ExportT1",
+      "label": "Énergie active exportée T1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 284,
+      "function": "input",
+      "name": "ExportT2",
+      "label": "Énergie active exportée T2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 286,
+      "function": "input",
+      "name": "ExportT3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 288,
+      "function": "input",
+      "name": "ExportT4",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 290,
+      "function": "input",
+      "name": "Sum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 292,
+      "function": "input",
+      "name": "SumT1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 294,
+      "function": "input",
+      "name": "SumT2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 296,
+      "function": "input",
+      "name": "SumT3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 298,
+      "function": "input",
+      "name": "SumT4",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 300,
+      "function": "input",
+      "name": "ReactiveImport",
+      "label": "Énergie réactive importée",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 302,
+      "function": "input",
+      "name": "ReactiveImportT1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 304,
+      "function": "input",
+      "name": "ReactiveImportT2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 306,
+      "function": "input",
+      "name": "ReactiveImportT3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 308,
+      "function": "input",
+      "name": "ReactiveImportT4",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 310,
+      "function": "input",
+      "name": "ReactiveExport",
+      "label": "Énergie réactive exportée",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 312,
+      "function": "input",
+      "name": "ReactiveExportT1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 314,
+      "function": "input",
+      "name": "ReactiveExportT2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 316,
+      "function": "input",
+      "name": "ReactiveExportT3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 318,
+      "function": "input",
+      "name": "ReactiveExportT4",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 320,
+      "function": "input",
+      "name": "ReactiveSum",
+      "label": "Énergie réactive (somme)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 322,
+      "function": "input",
+      "name": "ReactiveSumT1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 324,
+      "function": "input",
+      "name": "ReactiveSumT2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 326,
+      "function": "input",
+      "name": "ReactiveSumT3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 328,
+      "function": "input",
+      "name": "ReactiveSumT4",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "doc": "Importé depuis volkszaehler/mbmd (BSD-3-Clause). Description amont : ORNO WE-525 & WE-526.",
+  "upstream": {
+    "source": "mbmd",
+    "ref": "c71dfb268a7a9a3d608dbb990c1c26d6d67fd9d9",
+    "needsReview": true,
+    "reviewReasons": [
+      "Type float32 et ordre AB-CD supposés (convention mbmd). Vérifier sur la datasheet ORNO1p525."
+    ]
+  }
+}

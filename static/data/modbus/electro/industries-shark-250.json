@@ -1,0 +1,461 @@
+{
+  "slug": "electro-industries-shark-250",
+  "vendor": "electro",
+  "vendorSlug": "electro",
+  "model": "industries-shark-250",
+  "modelSlug": "industries-shark-250",
+  "name": "electro industries-shark-250",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1000,
+      "function": "holding",
+      "name": "V-A-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1002,
+      "function": "holding",
+      "name": "V-B-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1004,
+      "function": "holding",
+      "name": "V-C-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1006,
+      "function": "holding",
+      "name": "V-A-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1008,
+      "function": "holding",
+      "name": "V-B-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1010,
+      "function": "holding",
+      "name": "V-C-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1012,
+      "function": "holding",
+      "name": "I-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1014,
+      "function": "holding",
+      "name": "I-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1016,
+      "function": "holding",
+      "name": "I-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1018,
+      "function": "holding",
+      "name": "W,-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1020,
+      "function": "holding",
+      "name": "Var,-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1022,
+      "function": "holding",
+      "name": "Va,-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1024,
+      "function": "holding",
+      "name": "Pf,-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1026,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 1028,
+      "function": "holding",
+      "name": "I-neutral",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1030,
+      "function": "holding",
+      "name": "W,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1032,
+      "function": "holding",
+      "name": "W,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1034,
+      "function": "holding",
+      "name": "W,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1036,
+      "function": "holding",
+      "name": "Var,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1038,
+      "function": "holding",
+      "name": "Var,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1040,
+      "function": "holding",
+      "name": "Var,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1042,
+      "function": "holding",
+      "name": "Va,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1044,
+      "function": "holding",
+      "name": "Va,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1046,
+      "function": "holding",
+      "name": "Va,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1048,
+      "function": "holding",
+      "name": "Pf,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1050,
+      "function": "holding",
+      "name": "Pf,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1052,
+      "function": "holding",
+      "name": "Pf,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1054,
+      "function": "holding",
+      "name": "Symmetrical-component-magnitude,-0-sequence-component",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1056,
+      "function": "holding",
+      "name": "Symmetrical-component-magnitude,-positive-sequence",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1058,
+      "function": "holding",
+      "name": "Symmetrical-component-magnitude,-negative-sequence-component",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1060,
+      "function": "holding",
+      "name": "Symmetrical-component-phase,-zero-sequence-component",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1061,
+      "function": "holding",
+      "name": "Symmetrical-component-phase,-positive-sequence-component",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1062,
+      "function": "holding",
+      "name": "Symmetrical-component-phase,-negative-sequence-component",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1063,
+      "function": "holding",
+      "name": "Voltage-unbalance,-zero-sequence-component-component",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1064,
+      "function": "holding",
+      "name": "Voltage-unbalance,-negative-sequence-component",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1065,
+      "function": "holding",
+      "name": "Current-unbalance",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1066,
+      "function": "holding",
+      "name": "Quadrant-indicator",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1067,
+      "function": "holding",
+      "name": "Q-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1069,
+      "function": "holding",
+      "name": "Q-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1071,
+      "function": "holding",
+      "name": "Q-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1073,
+      "function": "holding",
+      "name": "Q-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1500,
+      "function": "holding",
+      "name": "Wh,-(q1+q4)",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 1502,
+      "function": "holding",
+      "name": "Wh,-(q2+q3)",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 1504,
+      "function": "holding",
+      "name": "Wh,-net",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 1506,
+      "function": "holding",
+      "name": "Wh,-total",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 1508,
+      "function": "holding",
+      "name": "Varh,-(q1+q2)",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VARh",
+      "access": "r"
+    },
+    {
+      "address": 1510,
+      "function": "holding",
+      "name": "Varh,-(q3+q4)",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VARh",
+      "access": "r"
+    },
+    {
+      "address": 1512,
+      "function": "holding",
+      "name": "Varh,-net",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VARh",
+      "access": "r"
+    },
+    {
+      "address": 1514,
+      "function": "holding",
+      "name": "Varh,-total",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VARh",
+      "access": "r"
+    },
+    {
+      "address": 1516,
+      "function": "holding",
+      "name": "Vah,-total",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/electro-industries-shark-250.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

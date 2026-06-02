@@ -1,0 +1,145 @@
+{
+  "slug": "acrel-adw300",
+  "vendor": "Acrel",
+  "vendorSlug": "acrel",
+  "model": "ADW300",
+  "modelSlug": "adw300",
+  "name": "Acrel ADW300",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r",
+      "notes": "Voltage of A phase"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r",
+      "notes": "Voltage of B phase"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r",
+      "notes": "Voltage of C phase"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Electricity of A phase"
+    },
+    {
+      "address": 27,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Electricity of B phase"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Electricity of C phase"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Active power of A phase"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Active power of B phase"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Active power of C phase"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Total active power"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Forward active energy consumption"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

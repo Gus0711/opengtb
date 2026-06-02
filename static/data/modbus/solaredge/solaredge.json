@@ -1,0 +1,500 @@
+{
+  "slug": "solaredge-solaredge",
+  "vendor": "SolarEdge",
+  "vendorSlug": "solaredge",
+  "model": "SolarEdge",
+  "modelSlug": "solaredge",
+  "name": "SolarEdge",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 40000,
+      "function": "holding",
+      "name": "C_SunSpec_ID",
+      "label": "\"Wert = \"\"SunS\"\" (0x53756e53). Identifiziert dies eindeutig als eine SunSpec Modbus-Karte\"",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40002,
+      "function": "holding",
+      "name": "C_SunSpec_DID",
+      "label": "Wert = 0x0001. Identifiziert dies eindeutig als einen SunSpec “Common Block“",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40003,
+      "function": "holding",
+      "name": "C_SunSpec_Länge",
+      "label": "65 = Länge eines Blocks in 16-bit Registern",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40004,
+      "function": "holding",
+      "name": "C_Hersteller",
+      "label": "\"Bei SunSpec eingetragener Wert = \"\"SolarEdge\"\"\"",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 40020,
+      "function": "holding",
+      "name": "C_Modell",
+      "label": "Spezifischer SolarEdge Wert",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 40044,
+      "function": "holding",
+      "name": "C_Version",
+      "label": "Spezifischer SolarEdge Wert",
+      "dataType": "string",
+      "size": 8,
+      "access": "r"
+    },
+    {
+      "address": 40052,
+      "function": "holding",
+      "name": "C_Seriennummer",
+      "label": "Eindeutiger SolarEdge Wert",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 40068,
+      "function": "holding",
+      "name": "C_DeviceAddress ",
+      "label": "MODBUS Unit ID",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40069,
+      "function": "holding",
+      "name": "C_SunSpec_DID",
+      "label": "101 = Einphasig, 102 = Spaltphase, 103 = Dreiphasig",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40071,
+      "function": "holding",
+      "name": "I_AC_Strom",
+      "label": "AC-Gesamtstromwert",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40072,
+      "function": "holding",
+      "name": "I_AC_StromA",
+      "label": "AC-Phase A (L1) Stromwert",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40073,
+      "function": "holding",
+      "name": "I_AC_StromB",
+      "label": "AC-Phase B (L2) Stromwert",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40074,
+      "function": "holding",
+      "name": "I_AC_StromC",
+      "label": "AC-Phase C (L3) Stromwert",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40075,
+      "function": "holding",
+      "name": "I_AC_Strom_SF",
+      "label": "AC-Strom Skalierungsfaktor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "SF",
+      "access": "r"
+    },
+    {
+      "address": 40083,
+      "function": "holding",
+      "name": "I_AC_Leistung",
+      "label": "AC-Leistungswert",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40084,
+      "function": "holding",
+      "name": "I_AC_Leistung_SF",
+      "label": "AC-Leistung Skalierungsfaktor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "SF",
+      "access": "r"
+    },
+    {
+      "address": 40087,
+      "function": "holding",
+      "name": "I_AC_VA",
+      "label": "Scheinleistung",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40088,
+      "function": "holding",
+      "name": "I_AC_VA_SF",
+      "label": "Scheinleistung Skalierungsfaktor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "SF",
+      "access": "r"
+    },
+    {
+      "address": 40089,
+      "function": "holding",
+      "name": "I_AC_VAR",
+      "label": "Blindleistung",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 40090,
+      "function": "holding",
+      "name": "I_AC_VAR_SF",
+      "label": "Blindleistung Skalierungsfaktor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "SF",
+      "access": "r"
+    },
+    {
+      "address": 40091,
+      "function": "holding",
+      "name": "I_AC_PF",
+      "label": "Leistungsfaktor",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 40092,
+      "function": "holding",
+      "name": "I_AC_PF_SF",
+      "label": "Leistungsfaktor Skalierungsfaktor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "SF",
+      "access": "r"
+    },
+    {
+      "address": 40093,
+      "function": "holding",
+      "name": "I_AC_Energie_WH",
+      "label": "AC Gesamt-Energieproduktion",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 40095,
+      "function": "holding",
+      "name": "I_AC_Energie_WH_SF",
+      "label": "AC Gesamtenergie Skalierungsfaktor",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "SF",
+      "access": "r"
+    },
+    {
+      "address": 40096,
+      "function": "holding",
+      "name": "I_DC_Strom",
+      "label": "DC-Stromwert",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40097,
+      "function": "holding",
+      "name": "I_DC_Strom_SF",
+      "label": "DC-Strom Skalierungsfaktor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "SF",
+      "access": "r"
+    },
+    {
+      "address": 40098,
+      "function": "holding",
+      "name": "I_DC_Spannung",
+      "label": "DC-Spannungswert",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40099,
+      "function": "holding",
+      "name": "I_DC_Spannung_SF",
+      "label": "DC-Spannung Skalierungsfaktor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "SF",
+      "access": "r"
+    },
+    {
+      "address": 40100,
+      "function": "holding",
+      "name": "I_DC_Leistung",
+      "label": "DC-Leistungswert",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40101,
+      "function": "holding",
+      "name": "I_DC_Leistung_SF",
+      "label": "DC-Leistung Skalierungsfaktor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "SF",
+      "access": "r"
+    },
+    {
+      "address": 40103,
+      "function": "holding",
+      "name": "I_Temp_Kühler",
+      "label": "Kühlkörpertemperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 40106,
+      "function": "holding",
+      "name": "I_Temp_SF",
+      "label": "Kühlkörpertemperatur Skalierungsfaktor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "SF",
+      "access": "r"
+    },
+    {
+      "address": 40107,
+      "function": "holding",
+      "name": "I_Status",
+      "label": "Betriebszustand (1 = Aus, 2 = Schlafen (Automatisches Herunterfahren) – Nachtmodus, 3 = Aufwachen/Starten, 4 = Wechselrichter ist AN und wandelt Energie, 5 = Begrenzte Produktion, 6 = Herunterfahren, 7 = Fehler, 8 = Wartung/Setup)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40108,
+      "function": "holding",
+      "name": "I_Status_Anbieter",
+      "label": "Anbieter-spezifischer Betriebszustand sowie Fehlercodes: 1 = Aus, 2 = Schlafen (Automatisches Herunterfahren) – Nachtmodus, 3 = Aufwachen/Starten, 4 = Wechselrichter ist AN und wandelt Energie, 5 = Begrenzte Produktion, 6 = Herunterfahren, 7 = Fehler, 8 = Wartung/Setup",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40123,
+      "function": "holding",
+      "name": "C_Manufacturer",
+      "label": "Meter manufacturer",
+      "dataType": "string",
+      "size": 32,
+      "access": "r"
+    },
+    {
+      "address": 40139,
+      "function": "holding",
+      "name": "C_Model",
+      "label": "Meter model",
+      "dataType": "string",
+      "size": 32,
+      "access": "r"
+    },
+    {
+      "address": 40155,
+      "function": "holding",
+      "name": "C_Option",
+      "label": "Export + Import, Production, consumption",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 40190,
+      "function": "holding",
+      "name": "M_AC_Current",
+      "label": "AC Current (sum of active phases)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40191,
+      "function": "holding",
+      "name": "M_AC_Current_A",
+      "label": "Phase A AC Current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40192,
+      "function": "holding",
+      "name": "M_AC_Current_B",
+      "label": "Phase B AC Current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40193,
+      "function": "holding",
+      "name": "M_AC_Current_C",
+      "label": "Phase C AC Current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40194,
+      "function": "holding",
+      "name": "M_AC_Current_S F",
+      "label": "AC Current Scale Factor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "SF",
+      "access": "r"
+    },
+    {
+      "address": 40206,
+      "function": "holding",
+      "name": "M_AC_Power",
+      "label": "Total Real Power (sum of active phases)",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40210,
+      "function": "holding",
+      "name": "M_AC_Power_SF",
+      "label": "AC Real Power Scale Factor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "SF",
+      "access": "r"
+    },
+    {
+      "address": 40221,
+      "function": "holding",
+      "name": "M_AC_PF",
+      "label": "Average Power Factor (average of active phases)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 40225,
+      "function": "holding",
+      "name": "M_AC_PF_SF",
+      "label": "AC Power Factor Scale Factor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "SF",
+      "access": "r"
+    },
+    {
+      "address": 40226,
+      "function": "holding",
+      "name": "M_Exported",
+      "label": "Total Exported Real Energy",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 40234,
+      "function": "holding",
+      "name": "M_Imported",
+      "label": "Total Imported Real Energy",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 40242,
+      "function": "holding",
+      "name": "M_Energy_W_SF",
+      "label": "Real Energy Scale Factor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "SF",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

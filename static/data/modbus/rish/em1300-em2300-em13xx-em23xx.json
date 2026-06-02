@@ -1,0 +1,426 @@
+{
+  "slug": "rish-em1300-em2300-em13xx-em23xx",
+  "vendor": "rish",
+  "vendorSlug": "rish",
+  "model": "em1300-em2300-em13xx-em23xx",
+  "modelSlug": "em1300-em2300-em13xx-em23xx",
+  "name": "rish em1300-em2300-em13xx-em23xx",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Volts-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Volts-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Current-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Current-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Current-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "W1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "W2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "W3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "VA-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "VA-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "VA-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "VAR-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "VAR-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "VAR-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "PF-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "PF-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "PF-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Phase-angle-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Phase-angle-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "Phase-angle-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "Volts-av-g",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "Volts-sum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Current-avg",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Current-sum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "Watt-avg",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Watt-sum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 54,
+      "function": "holding",
+      "name": "VA-av-g",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "VA-sum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 58,
+      "function": "holding",
+      "name": "VAR-av-g",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "VAR-sum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "PF-avg",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 64,
+      "function": "holding",
+      "name": "PF-sum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "holding",
+      "name": "Phase-angle-avg",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 68,
+      "function": "holding",
+      "name": "Phase-angle-sum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "Freq",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "holding",
+      "name": "Wh-import-/-utility",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "holding",
+      "name": "Wh-export-/-gen",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 76,
+      "function": "holding",
+      "name": "Capacitive-/-utility-VARh",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 78,
+      "function": "holding",
+      "name": "Inductive-/-gen-VARh",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "VAh-/-vah-utility",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 82,
+      "function": "holding",
+      "name": "VAh-gen-(Only-2340)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "W-demand-(Import-/-utility-/-gen)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "W-max-demand-(Import-/-utility)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 88,
+      "function": "holding",
+      "name": "W-demand-(Export)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 90,
+      "function": "holding",
+      "name": "W-max-demand-(Export-/-gen)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 92,
+      "function": "holding",
+      "name": "Old-W-max-demand-(Import-/-utility)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 94,
+      "function": "holding",
+      "name": "Old-W-max-demand-(Export-/-gen)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 96,
+      "function": "holding",
+      "name": "Old-VA-utility-max-demand",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 98,
+      "function": "holding",
+      "name": "Old-A-utility-max-demand",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "VA-demand-(Utility-/-gen)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/rish-em1300-em2300-em13xx-em23xx.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

@@ -1,0 +1,511 @@
+{
+  "slug": "kaco-new-energy-holding-registers-blueplanet-nx3-m2",
+  "vendor": "KACO new energy",
+  "vendorSlug": "kaco-new-energy",
+  "model": "holding-registers_blueplanet_nx3_m2",
+  "modelSlug": "holding-registers-blueplanet-nx3-m2",
+  "name": "KACO new energy holding-registers_blueplanet_nx3_m2",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 40004,
+      "function": "holding",
+      "name": "Mn",
+      "label": "Manufacturer",
+      "dataType": "string",
+      "size": 30,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40020,
+      "function": "holding",
+      "name": "Md",
+      "label": "Model",
+      "dataType": "string",
+      "size": 30,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40044,
+      "function": "holding",
+      "name": "Vr",
+      "label": "Version",
+      "dataType": "string",
+      "size": 30,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40052,
+      "function": "holding",
+      "name": "SN",
+      "label": "Serial Number",
+      "dataType": "string",
+      "size": 30,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40072,
+      "function": "holding",
+      "name": "A",
+      "label": "Amps",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40073,
+      "function": "holding",
+      "name": "AphA",
+      "label": "Amps PhaseA",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40074,
+      "function": "holding",
+      "name": "AphB",
+      "label": "Amps PhaseB",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40075,
+      "function": "holding",
+      "name": "AphC",
+      "label": "Amps PhaseC",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40077,
+      "function": "holding",
+      "name": "PPVphAB",
+      "label": "Phase Voltage AB",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40078,
+      "function": "holding",
+      "name": "PPVphBC",
+      "label": "Phase Voltage BC",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40079,
+      "function": "holding",
+      "name": "PPVphCA",
+      "label": "Phase Voltage CA",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40080,
+      "function": "holding",
+      "name": "PhVphA",
+      "label": "Phase Voltage AN",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40081,
+      "function": "holding",
+      "name": "PhVphB",
+      "label": "Phase Voltage BN",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40082,
+      "function": "holding",
+      "name": "PhVphC",
+      "label": "Phase Voltage CN",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40084,
+      "function": "holding",
+      "name": "W",
+      "label": "Watts",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 10,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40086,
+      "function": "holding",
+      "name": "Hz",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 40088,
+      "function": "holding",
+      "name": "VA",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 10,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40092,
+      "function": "holding",
+      "name": "PF",
+      "label": "Power Factor",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 40094,
+      "function": "holding",
+      "name": "WH",
+      "label": "WattHours",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40277,
+      "function": "holding",
+      "name": "TotWhInj",
+      "label": "Total Energy Injected",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40294,
+      "function": "holding",
+      "name": "TmpCab",
+      "label": "Cabinet Temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 40295,
+      "function": "holding",
+      "name": "TmpSnk",
+      "label": "Heat Sink Temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 40299,
+      "function": "holding",
+      "name": "WL1",
+      "label": "Watts L1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 10,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40300,
+      "function": "holding",
+      "name": "VAL1",
+      "label": "VA L1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40303,
+      "function": "holding",
+      "name": "AL1",
+      "label": "Amps L1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40304,
+      "function": "holding",
+      "name": "V1L2",
+      "label": "Phase Voltage L1-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40305,
+      "function": "holding",
+      "name": "VL1",
+      "label": "Phase Voltage L1-N",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40322,
+      "function": "holding",
+      "name": "WL2",
+      "label": "Watts L2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 10,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40323,
+      "function": "holding",
+      "name": "VAL2",
+      "label": "VA L2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40326,
+      "function": "holding",
+      "name": "AL2",
+      "label": "Amps L1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40327,
+      "function": "holding",
+      "name": "V2L3",
+      "label": "Phase Voltage L2-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40328,
+      "function": "holding",
+      "name": "VL1",
+      "label": "Phase Voltage L2-N",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40345,
+      "function": "holding",
+      "name": "WL3",
+      "label": "Watts L3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 10,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40346,
+      "function": "holding",
+      "name": "VAL3",
+      "label": "VA L3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 10,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40349,
+      "function": "holding",
+      "name": "AL3",
+      "label": "Amps L3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40350,
+      "function": "holding",
+      "name": "V2L3",
+      "label": "Phase Voltage L3-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40351,
+      "function": "holding",
+      "name": "VL1",
+      "label": "Phase Voltage L3-N",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40562,
+      "function": "holding",
+      "name": "DCA1",
+      "label": "DC Current String 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40563,
+      "function": "holding",
+      "name": "DCV1",
+      "label": "DC Voltage String 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40564,
+      "function": "holding",
+      "name": "DCW1",
+      "label": "DC Power String 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 10,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40573,
+      "function": "holding",
+      "name": "Tmp1",
+      "label": "DC Port Temperatur 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 40587,
+      "function": "holding",
+      "name": "DCA2",
+      "label": "DC Current String 2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40588,
+      "function": "holding",
+      "name": "DCV2",
+      "label": "DC Voltage String 2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40589,
+      "function": "holding",
+      "name": "DCW2",
+      "label": "DC Power String 2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 10,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40598,
+      "function": "holding",
+      "name": "Tmp2",
+      "label": "DC Port Temperature 2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "°C",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

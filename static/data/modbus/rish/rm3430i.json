@@ -1,0 +1,426 @@
+{
+  "slug": "rish-rm3430i",
+  "vendor": "rish",
+  "vendorSlug": "rish",
+  "model": "rm3430i",
+  "modelSlug": "rm3430i",
+  "name": "rish rm3430i",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Volts-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Volts-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Current-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Current-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Current-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "W1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "W2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "W3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "VA1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "VA2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "VA3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Var1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "Var2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Var3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "PF1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "PF2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "PF3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Phase-angle-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Phase-angle-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "Phase-angle-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "Volts-ave",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "Volts-sum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Current-ave",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Current-sum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "Watts-ave",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Watts-sum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 54,
+      "function": "holding",
+      "name": "Va-ave",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Va-sum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 58,
+      "function": "holding",
+      "name": "Var-ave",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "Var-sum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "Pf-ave",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 64,
+      "function": "holding",
+      "name": "Pf-sum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "holding",
+      "name": "Phase-angle-ave",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 68,
+      "function": "holding",
+      "name": "Phase-angle-sum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "Freq",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "holding",
+      "name": "Wh-import",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "holding",
+      "name": "Wh-export",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 76,
+      "function": "holding",
+      "name": "Varh-import",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 78,
+      "function": "holding",
+      "name": "Varh-export",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "Vah",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 132,
+      "function": "holding",
+      "name": "Volts-ave-max",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 134,
+      "function": "holding",
+      "name": "Volts-ave-min",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 140,
+      "function": "holding",
+      "name": "Current-ave-max",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 142,
+      "function": "holding",
+      "name": "Current-ave-min",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 144,
+      "function": "holding",
+      "name": "Active-import-energy(wh)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 146,
+      "function": "holding",
+      "name": "Active-export-energy-(wh)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 148,
+      "function": "holding",
+      "name": "Reactive-import-energy-(varh)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 150,
+      "function": "holding",
+      "name": "Reactive-export-energy-(varh)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 152,
+      "function": "holding",
+      "name": "Apparent-energy-(vah)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 200,
+      "function": "holding",
+      "name": "Vl-1-2-(-calculated-)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/rish-rm3430i.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

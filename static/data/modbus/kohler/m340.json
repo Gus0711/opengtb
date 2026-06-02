@@ -1,0 +1,425 @@
+{
+  "slug": "kohler-m340",
+  "vendor": "kohler",
+  "vendorSlug": "kohler",
+  "model": "m340",
+  "modelSlug": "m340",
+  "name": "kohler m340",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "System-time",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Day-of-week",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Month",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Day",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Year",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Week-of-month",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Time-not-in-normal-since-reset",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Time-not-in-normal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "Time-in-emergency",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Days-of-operation",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Transfers",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Month-in-operation",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Day-in-operation",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Year-in-operation",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "Voltage-A-B-normal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Voltage-B-C-normal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Voltage-ca-normal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Freq.-Ac-normal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "Voltage-A-B-emerg",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "Voltage-B-C-emerg",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 27,
+      "function": "holding",
+      "name": "Voltage-ca-emerg",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Freq.-Ac-emerg",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 29,
+      "function": "holding",
+      "name": "Exerciser-time-remaining",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Month-of-last-exercise",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 31,
+      "function": "holding",
+      "name": "Day-of-last-exercise",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Year-of-last-exercise",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Time-of-last-outage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Month-of-last-outage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 35,
+      "function": "holding",
+      "name": "Day-of-last-outage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Year-of-last-outage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 37,
+      "function": "holding",
+      "name": "Duration-of-last-outage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "History-event-#1-code",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39,
+      "function": "holding",
+      "name": "History-event-#2-code",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "History-event-#2-month",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 41,
+      "function": "holding",
+      "name": "History-event-#2-day",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "History-event-#2-year",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 43,
+      "function": "holding",
+      "name": "History-event-#3-code",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "History-event-#3-month",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 45,
+      "function": "holding",
+      "name": "History-event-#3-day",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "History-event-#3-year",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 47,
+      "function": "holding",
+      "name": "History-event-#4-code",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "History-event-#4-month",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 49,
+      "function": "holding",
+      "name": "History-event-#4-day",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "History-event-#4-year",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 51,
+      "function": "holding",
+      "name": "Alert-code",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 77,
+      "function": "holding",
+      "name": "Off-to-emergency-time-delay",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 78,
+      "function": "holding",
+      "name": "Off-to-normal-time-delay",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 79,
+      "function": "holding",
+      "name": "Engine-start-time-delay",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "Normal-to-emerg.-Time-delay",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 81,
+      "function": "holding",
+      "name": "Emerg.-To-normal-time-delay",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/kohler-m340.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont"
+    ]
+  }
+}

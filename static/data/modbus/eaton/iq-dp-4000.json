@@ -1,0 +1,473 @@
+{
+  "slug": "eaton-iq-dp-4000",
+  "vendor": "eaton",
+  "vendorSlug": "eaton",
+  "model": "iq-dp-4000",
+  "modelSlug": "iq-dp-4000",
+  "name": "eaton iq-dp-4000",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 3000,
+      "function": "holding",
+      "name": "Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4002,
+      "function": "holding",
+      "name": "Vab",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4004,
+      "function": "holding",
+      "name": "Vbc",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4006,
+      "function": "holding",
+      "name": "Vca",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4010,
+      "function": "holding",
+      "name": "Van",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4012,
+      "function": "holding",
+      "name": "Vbn",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4014,
+      "function": "holding",
+      "name": "Vcn",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5002,
+      "function": "holding",
+      "name": "La",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5004,
+      "function": "holding",
+      "name": "Ib",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5006,
+      "function": "holding",
+      "name": "Ic",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5014,
+      "function": "holding",
+      "name": "Peak-demand-la",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5016,
+      "function": "holding",
+      "name": "Peak-demand-lb",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5018,
+      "function": "holding",
+      "name": "Peak-demand-ic",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5250,
+      "function": "holding",
+      "name": "Demand-la",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5252,
+      "function": "holding",
+      "name": "Demand-ib",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5254,
+      "function": "holding",
+      "name": "Demand-ic",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 6006,
+      "function": "holding",
+      "name": "Real-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 6070,
+      "function": "holding",
+      "name": "Apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 6134,
+      "function": "holding",
+      "name": "Reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 6218,
+      "function": "holding",
+      "name": "Pf-displacement",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 6220,
+      "function": "holding",
+      "name": "Pf-apparent",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 7004,
+      "function": "holding",
+      "name": "Forward-real-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 7006,
+      "function": "holding",
+      "name": "Reverse-real-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 7008,
+      "function": "holding",
+      "name": "Net-real-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 7010,
+      "function": "holding",
+      "name": "Leading-reactive-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Varh",
+      "access": "r"
+    },
+    {
+      "address": 7012,
+      "function": "holding",
+      "name": "Lagging-reactive-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Varh",
+      "access": "r"
+    },
+    {
+      "address": 7014,
+      "function": "holding",
+      "name": "Net-reactive-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "reactive-hours",
+      "access": "r"
+    },
+    {
+      "address": 7016,
+      "function": "holding",
+      "name": "Apparent-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "hours",
+      "access": "r"
+    },
+    {
+      "address": 7023,
+      "function": "holding",
+      "name": "Demand-watts",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 7029,
+      "function": "holding",
+      "name": "Demand-vars",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA- reactive",
+      "access": "r"
+    },
+    {
+      "address": 7035,
+      "function": "holding",
+      "name": "Demand-vas",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 7040,
+      "function": "holding",
+      "name": "Peak-demand-watts",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 7045,
+      "function": "holding",
+      "name": "Peak-demand-vars",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 7050,
+      "function": "holding",
+      "name": "Peak-demand-vas",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAs",
+      "access": "r"
+    },
+    {
+      "address": 7220,
+      "function": "holding",
+      "name": "Demand-forward-watts",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 7222,
+      "function": "holding",
+      "name": "Peak-demand-forward-watts",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 7262,
+      "function": "holding",
+      "name": "Demand-reverse-watts",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 7264,
+      "function": "holding",
+      "name": "Peak-demand-reverse-watts",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 7303,
+      "function": "holding",
+      "name": "Demand-lagging-vars",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA- reactive",
+      "access": "r"
+    },
+    {
+      "address": 7305,
+      "function": "holding",
+      "name": "Peak-demand-lagging-vars",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 7345,
+      "function": "holding",
+      "name": "Demand-leading-vars",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "reactive",
+      "access": "r"
+    },
+    {
+      "address": 7347,
+      "function": "holding",
+      "name": "Peak-demand-leading-vars",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 7628,
+      "function": "holding",
+      "name": "Total-reactive-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "reactive-hours",
+      "access": "r"
+    },
+    {
+      "address": 7679,
+      "function": "holding",
+      "name": "Total-real-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 8148,
+      "function": "holding",
+      "name": "Percent-thd-vab",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 8150,
+      "function": "holding",
+      "name": "Percent-thd-vbc",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 8152,
+      "function": "holding",
+      "name": "Percent-thd-vca",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 9436,
+      "function": "holding",
+      "name": "Percent-thd-la",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 9438,
+      "function": "holding",
+      "name": "Percent-thd-lb",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 9440,
+      "function": "holding",
+      "name": "Percent-thd-ic",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/eaton-iq-dp-4000.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

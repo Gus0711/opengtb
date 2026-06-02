@@ -1,0 +1,365 @@
+{
+  "slug": "deye-holding-registers-oeve",
+  "vendor": "Deye",
+  "vendorSlug": "deye",
+  "model": "holding-registers-oeve",
+  "modelSlug": "holding-registers-oeve",
+  "name": "Deye holding-registers-oeve",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "1",
+      "label": "Seriennummer",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 5,
+      "unit": "Seriennummer",
+      "access": "rw"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "1",
+      "label": "Batteriekapazitaet",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Batteriekapazitaet",
+      "access": "rw"
+    },
+    {
+      "address": 108,
+      "function": "holding",
+      "name": "1",
+      "label": "BatterieLadestromMax",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Maximaler Ladestrom der Batterie",
+      "access": "rw"
+    },
+    {
+      "address": 109,
+      "function": "holding",
+      "name": "1",
+      "label": "BatterieEntladungMax",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Max A Entladung",
+      "access": "rw"
+    },
+    {
+      "address": 122,
+      "function": "holding",
+      "name": "1",
+      "label": "GEN_Laufzeit",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Gen-Cool-Time",
+      "access": "rw"
+    },
+    {
+      "address": 500,
+      "function": "holding",
+      "name": "1",
+      "label": "Status",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Status (Standby, check, norm, altert, fault)",
+      "access": "rw"
+    },
+    {
+      "address": 501,
+      "function": "holding",
+      "name": "1",
+      "label": "Energie pro Tag",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Power per Day",
+      "access": "rw"
+    },
+    {
+      "address": 526,
+      "function": "holding",
+      "name": "1",
+      "label": "Load_Tagesenergie",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Tagesenergie Load",
+      "access": "rw"
+    },
+    {
+      "address": 530,
+      "function": "holding",
+      "name": "1",
+      "label": "PV1_Power pro Tag",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Day_PV-1_Power kWh",
+      "access": "rw"
+    },
+    {
+      "address": 531,
+      "function": "holding",
+      "name": "1",
+      "label": "PV2_Power pro Tag",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Day_PV-2_Power kWh",
+      "access": "rw"
+    },
+    {
+      "address": 541,
+      "function": "holding",
+      "name": "1",
+      "label": "AC_Temperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "AC_Temp",
+      "access": "rw"
+    },
+    {
+      "address": 553,
+      "function": "holding",
+      "name": "1",
+      "label": "Warnhinweis1",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Warning message word 1",
+      "access": "rw"
+    },
+    {
+      "address": 586,
+      "function": "holding",
+      "name": "1",
+      "label": "Batterietemperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "battery temperature",
+      "access": "rw"
+    },
+    {
+      "address": 587,
+      "function": "holding",
+      "name": "1",
+      "label": "Batteriespannung",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "battery voltage",
+      "access": "rw"
+    },
+    {
+      "address": 588,
+      "function": "holding",
+      "name": "1",
+      "label": "Batteriekapazitaet SOC",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "battery capacity",
+      "access": "rw"
+    },
+    {
+      "address": 590,
+      "function": "holding",
+      "name": "1",
+      "label": "Batterieausgangsleistung",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Battery output power",
+      "access": "rw"
+    },
+    {
+      "address": 591,
+      "function": "holding",
+      "name": "1",
+      "label": "Batterieausgangsstrom",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Battery output current",
+      "access": "rw"
+    },
+    {
+      "address": 627,
+      "function": "holding",
+      "name": "1",
+      "label": "WR-Ausgangsspannung L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Inverter output phase voltage A",
+      "access": "rw"
+    },
+    {
+      "address": 628,
+      "function": "holding",
+      "name": "1",
+      "label": "WR-Ausgangsspannung L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Inverter output phase voltage B",
+      "access": "rw"
+    },
+    {
+      "address": 629,
+      "function": "holding",
+      "name": "1",
+      "label": "WR-Ausgangsspannung L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Inverter output phase voltage C",
+      "access": "rw"
+    },
+    {
+      "address": 630,
+      "function": "holding",
+      "name": "1",
+      "label": "WR-Ausgangsstrom L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Inverter output phase current A",
+      "access": "rw"
+    },
+    {
+      "address": 631,
+      "function": "holding",
+      "name": "1",
+      "label": "WR-Ausgangsstrom L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Inverter output phase current B",
+      "access": "rw"
+    },
+    {
+      "address": 632,
+      "function": "holding",
+      "name": "1",
+      "label": "WR-Ausgangsstrom L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Inverter output phase current C",
+      "access": "rw"
+    },
+    {
+      "address": 636,
+      "function": "holding",
+      "name": "1",
+      "label": "WR-Gesamtleistung",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Inverter output total power",
+      "access": "rw"
+    },
+    {
+      "address": 637,
+      "function": "holding",
+      "name": "1",
+      "label": "WR-Scheinleistung gesamt",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Inverter output total apparent power",
+      "access": "rw"
+    },
+    {
+      "address": 638,
+      "function": "holding",
+      "name": "1",
+      "label": "WR-Frequenz",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Inverter frequency",
+      "access": "rw"
+    },
+    {
+      "address": 667,
+      "function": "holding",
+      "name": "1",
+      "label": "GEN_Gesamtleistung",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Gesamtleistung des Gen-Ports",
+      "access": "rw"
+    },
+    {
+      "address": 672,
+      "function": "holding",
+      "name": "1",
+      "label": "PV1 Erzeugungsleistung",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "PV1 Erzeugungsleistung",
+      "access": "rw"
+    },
+    {
+      "address": 673,
+      "function": "holding",
+      "name": "1",
+      "label": "PV2 Erzeugungsleistung",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "PV2 Erzeugungsleistung",
+      "access": "rw"
+    },
+    {
+      "address": 676,
+      "function": "holding",
+      "name": "1",
+      "label": "PV1 DC Spannung",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Dc voltage 1",
+      "access": "rw"
+    },
+    {
+      "address": 677,
+      "function": "holding",
+      "name": "1",
+      "label": "PV1 DC Strom",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Dc current 1",
+      "access": "rw"
+    },
+    {
+      "address": 678,
+      "function": "holding",
+      "name": "1",
+      "label": "PV2 DC Spannung",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Dc voltage 2",
+      "access": "rw"
+    },
+    {
+      "address": 679,
+      "function": "holding",
+      "name": "1",
+      "label": "PV2 DC Strom",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Dc current 2",
+      "access": "rw"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

@@ -1,0 +1,468 @@
+{
+  "slug": "hager-ecn-ecp-ect-ecm-ecr-eca",
+  "vendor": "hager",
+  "vendorSlug": "hager",
+  "model": "ecn-ecp-ect-ecm-ecr-eca",
+  "modelSlug": "ecn-ecp-ect-ecm-ecr-eca",
+  "name": "hager ecn-ecp-ect-ecm-ecr-eca",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 45056,
+      "function": "holding",
+      "name": "V,-L1-N",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 45057,
+      "function": "holding",
+      "name": "V,-L2-N",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 45058,
+      "function": "holding",
+      "name": "V,-L3-N",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 45059,
+      "function": "holding",
+      "name": "V,-L1-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 45060,
+      "function": "holding",
+      "name": "V,-L2-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 45061,
+      "function": "holding",
+      "name": "V,-L3-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 45062,
+      "function": "holding",
+      "name": "F",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 45063,
+      "function": "holding",
+      "name": "Not-used",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 45064,
+      "function": "holding",
+      "name": "Not-used",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 45065,
+      "function": "holding",
+      "name": "I,-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 45067,
+      "function": "holding",
+      "name": "I,-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 45069,
+      "function": "holding",
+      "name": "I,-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 45071,
+      "function": "holding",
+      "name": "I,-neutral",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 45073,
+      "function": "holding",
+      "name": "P,-sum-L",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 45075,
+      "function": "holding",
+      "name": "Q,-sum-L",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 45077,
+      "function": "holding",
+      "name": "S,-sum-L",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "KvA",
+      "access": "r"
+    },
+    {
+      "address": 45079,
+      "function": "holding",
+      "name": "Pf,-sum-L-iec",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 45080,
+      "function": "holding",
+      "name": "Pf,-sum-L-ieee",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 45081,
+      "function": "holding",
+      "name": "P,-L1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 45083,
+      "function": "holding",
+      "name": "P,-L2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 45085,
+      "function": "holding",
+      "name": "P,-L3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 45087,
+      "function": "holding",
+      "name": "Q,-L1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 45089,
+      "function": "holding",
+      "name": "Q,-L2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 45091,
+      "function": "holding",
+      "name": "Q,-L3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 45093,
+      "function": "holding",
+      "name": "S,-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "KvA",
+      "access": "r"
+    },
+    {
+      "address": 45095,
+      "function": "holding",
+      "name": "S,-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "KvA",
+      "access": "r"
+    },
+    {
+      "address": 45097,
+      "function": "holding",
+      "name": "S,-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "KvA",
+      "access": "r"
+    },
+    {
+      "address": 45099,
+      "function": "holding",
+      "name": "Pf,-L1-iec",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 45100,
+      "function": "holding",
+      "name": "Pf,-L2-iec",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 45101,
+      "function": "holding",
+      "name": "Pf,-L3-iec",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 45102,
+      "function": "holding",
+      "name": "Pf,-L1-ieee",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 45103,
+      "function": "holding",
+      "name": "Pf,-L2-ieee",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 45104,
+      "function": "holding",
+      "name": "Pf,-L3-ieee",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 45152,
+      "function": "holding",
+      "name": "Ea+,-sum-T",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 45154,
+      "function": "holding",
+      "name": "Er+,-sum-T",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 45156,
+      "function": "holding",
+      "name": "Ea-,-sum-T",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 45158,
+      "function": "holding",
+      "name": "Er-,-sum-T",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 45160,
+      "function": "holding",
+      "name": "P_ea+,-sum-T",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 45162,
+      "function": "holding",
+      "name": "P_ea-,-sum-T",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 45184,
+      "function": "holding",
+      "name": "Ea+,-m1,-sum-T",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 45186,
+      "function": "holding",
+      "name": "Ea+,-m2,-sum-T",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 45188,
+      "function": "holding",
+      "name": "Ea+,-m3,-sum-T",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 45190,
+      "function": "holding",
+      "name": "Ea-,-m1,-sum-T",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 45192,
+      "function": "holding",
+      "name": "Ea-,-m2,-sum-T",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 45194,
+      "function": "holding",
+      "name": "Ea-,-m3,-sum-T",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 45196,
+      "function": "holding",
+      "name": "P_ea+,-m1,-sum-T",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 45198,
+      "function": "holding",
+      "name": "P_ea+,-m2,-sum-T",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 45200,
+      "function": "holding",
+      "name": "P_ea+,-m3,-sum-T",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 45202,
+      "function": "holding",
+      "name": "P_ea-,-m1,-sum-T",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 45204,
+      "function": "holding",
+      "name": "P_ea-,-m2,-sum-T",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/hager-ecn-ecp-ect-ecm-ecr-eca.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

@@ -1,0 +1,461 @@
+{
+  "slug": "schneider-electric-powerlogic-ion7400",
+  "vendor": "schneider",
+  "vendorSlug": "schneider",
+  "model": "electric-powerlogic-ion7400",
+  "modelSlug": "electric-powerlogic-ion7400",
+  "name": "schneider electric-powerlogic-ion7400",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Meter-name",
+      "dataType": "string",
+      "size": 40,
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "Meter-model",
+      "dataType": "string",
+      "size": 40,
+      "access": "r"
+    },
+    {
+      "address": 1717,
+      "function": "holding",
+      "name": "Current-version",
+      "dataType": "string",
+      "size": 12,
+      "access": "r"
+    },
+    {
+      "address": 1837,
+      "function": "holding",
+      "name": "Year",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "year",
+      "access": "r"
+    },
+    {
+      "address": 1838,
+      "function": "holding",
+      "name": "Month",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "month",
+      "access": "r"
+    },
+    {
+      "address": 1839,
+      "function": "holding",
+      "name": "Day",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "days",
+      "access": "r"
+    },
+    {
+      "address": 1840,
+      "function": "holding",
+      "name": "Hour",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "hours",
+      "access": "r"
+    },
+    {
+      "address": 1841,
+      "function": "holding",
+      "name": "Minute",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "minutes",
+      "access": "r"
+    },
+    {
+      "address": 1842,
+      "function": "holding",
+      "name": "Second",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "seconds",
+      "access": "r"
+    },
+    {
+      "address": 1844,
+      "function": "holding",
+      "name": "Day-of-week",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2400,
+      "function": "holding",
+      "name": "Digital-input-status-validity-base-unit",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2402,
+      "function": "holding",
+      "name": "Digital-output-status-validity-base-unit",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2420,
+      "function": "holding",
+      "name": "Setpoint-status-validity",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2550,
+      "function": "holding",
+      "name": "Digital-input-status-validity-option-slot-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2552,
+      "function": "holding",
+      "name": "Digital-input-status-validity-option-slot-B",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2554,
+      "function": "holding",
+      "name": "Digital-input-status-validity-option-slot-C",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2556,
+      "function": "holding",
+      "name": "Digital-input-status-validity-option-slot-D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2566,
+      "function": "holding",
+      "name": "Digital-output-status-validity-option-slot-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2568,
+      "function": "holding",
+      "name": "Digital-output-status-validity-option-slot-B",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2570,
+      "function": "holding",
+      "name": "Digital-output-status-validity-option-slot-C",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2572,
+      "function": "holding",
+      "name": "Digital-output-status-validity-option-slot-D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2700,
+      "function": "holding",
+      "name": "Active-energy-delivered-(into-load)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2702,
+      "function": "holding",
+      "name": "Active-energy-received-(out-of-load)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2704,
+      "function": "holding",
+      "name": "Active-energy-delivered-+-received",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2706,
+      "function": "holding",
+      "name": "Active-energy-delivered-received",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2708,
+      "function": "holding",
+      "name": "Reactive-energy-delivered",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 2710,
+      "function": "holding",
+      "name": "Reactive-energy-received",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 2712,
+      "function": "holding",
+      "name": "Reactive-energy-delivered-+-received",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 2714,
+      "function": "holding",
+      "name": "Reactive-energy-delivered-received",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 2716,
+      "function": "holding",
+      "name": "Apparent-energy-delivered",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 2718,
+      "function": "holding",
+      "name": "Apparent-energy-received",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 2720,
+      "function": "holding",
+      "name": "Apparent-energy-delivered-+-received",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 2722,
+      "function": "holding",
+      "name": "Apparent-energy-delivered-received",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 2724,
+      "function": "holding",
+      "name": "Active-energy-in-quadrant-I",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2726,
+      "function": "holding",
+      "name": "Active-energy-in-quadrant-ii",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2728,
+      "function": "holding",
+      "name": "Active-energy-in-quadrant-iii",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2730,
+      "function": "holding",
+      "name": "Active-energy-in-quadrant-iv",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2732,
+      "function": "holding",
+      "name": "Reactive-energy-in-quadrant-I",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 2734,
+      "function": "holding",
+      "name": "Reactive-energy-in-quadrant-ii",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 2736,
+      "function": "holding",
+      "name": "Reactive-energy-in-quadrant-iii",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 2738,
+      "function": "holding",
+      "name": "Reactive-energy-in-quadrant-iv",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 2740,
+      "function": "holding",
+      "name": "Apparent-energy-in-quadrant-I",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 2742,
+      "function": "holding",
+      "name": "Apparent-energy-in-quadrant-ii",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 2744,
+      "function": "holding",
+      "name": "Apparent-energy-in-quadrant-iii",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 2746,
+      "function": "holding",
+      "name": "Apparent-energy-in-quadrant-iv",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 2748,
+      "function": "holding",
+      "name": "Conditional-active-energy-delivered-(into-load)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2750,
+      "function": "holding",
+      "name": "Conditional-active-energy-received-(out-of-load)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2754,
+      "function": "holding",
+      "name": "Active-energy-delivered-received,-conditional",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2756,
+      "function": "holding",
+      "name": "Conditional-reactive-energy-in-(delivered)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 2758,
+      "function": "holding",
+      "name": "Conditional-reactive-energy-out-(received)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/schneider-electric-powerlogic-ion7400.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

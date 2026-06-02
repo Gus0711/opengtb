@@ -1,0 +1,608 @@
+{
+  "slug": "growatt-mic-2500tl-x",
+  "vendor": "Growatt",
+  "vendorSlug": "growatt",
+  "model": "MIC 2500TL-X",
+  "modelSlug": "mic-2500tl-x",
+  "name": "Growatt MIC 2500TL-X",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 0,
+      "function": "holding",
+      "name": "Remote On/Off",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Max output active power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Firmware version",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "rw"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Control firmware version",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "rw"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "LCD language",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Italian",
+        "1": "English",
+        "2": "German",
+        "3": "Spanish",
+        "4": "French",
+        "5": "Chinese",
+        "6": "Polish",
+        "7": "Portuguese",
+        "8": "Hungarian"
+      }
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Communicate address",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 3000,
+      "function": "holding",
+      "name": "Inverter Machine Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3000,
+      "function": "holding",
+      "name": "Inverter Run Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3001,
+      "function": "holding",
+      "name": "Serial Number",
+      "dataType": "uint64",
+      "size": 4,
+      "access": "rw"
+    },
+    {
+      "address": 3001,
+      "function": "holding",
+      "name": "PV total power",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 3003,
+      "function": "holding",
+      "name": "PV1 voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 3004,
+      "function": "holding",
+      "name": "PV1 input current",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 3005,
+      "function": "holding",
+      "name": "PV1 power",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 3007,
+      "function": "holding",
+      "name": "PV2 voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 3008,
+      "function": "holding",
+      "name": "PV2 input current",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 3009,
+      "function": "holding",
+      "name": "PV2 power",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 3023,
+      "function": "holding",
+      "name": "Output power",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 3025,
+      "function": "holding",
+      "name": "Grid frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 3026,
+      "function": "holding",
+      "name": "Grid voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 3027,
+      "function": "holding",
+      "name": "Grid output current",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 3028,
+      "function": "holding",
+      "name": "Grid output watt VA",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "VoltAmps",
+      "access": "r"
+    },
+    {
+      "address": 3030,
+      "function": "holding",
+      "name": "Three phase grid voltage (2)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 3031,
+      "function": "holding",
+      "name": "Three phase grid output current (2)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 3032,
+      "function": "holding",
+      "name": "Three phase grid output power (2)",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "VoltAmps",
+      "access": "r"
+    },
+    {
+      "address": 3034,
+      "function": "holding",
+      "name": "Three phase grid voltage (3)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 3035,
+      "function": "holding",
+      "name": "Three phase grid output current (3)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 3036,
+      "function": "holding",
+      "name": "Three phase grid output power (3)",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "VoltAmps",
+      "access": "r"
+    },
+    {
+      "address": 3038,
+      "function": "holding",
+      "name": "Three phase grid voltage (RS)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 3039,
+      "function": "holding",
+      "name": "Three phase grid voltage (ST)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 3040,
+      "function": "holding",
+      "name": "Three phase grid voltage (TR)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 3041,
+      "function": "holding",
+      "name": "Total forward power",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 3043,
+      "function": "holding",
+      "name": "Total reverse power",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 3045,
+      "function": "holding",
+      "name": "Total load power",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 3047,
+      "function": "holding",
+      "name": "Work time total",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.5,
+      "unit": "Seconds",
+      "access": "r"
+    },
+    {
+      "address": 3049,
+      "function": "holding",
+      "name": "Today generate energy",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 3051,
+      "function": "holding",
+      "name": "Total generate energy",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 3053,
+      "function": "holding",
+      "name": "PV Energy total",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 3055,
+      "function": "holding",
+      "name": "PV1Energy today",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 3057,
+      "function": "holding",
+      "name": "PV1 Energy total",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 3059,
+      "function": "holding",
+      "name": "PV2Energy today",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 3061,
+      "function": "holding",
+      "name": "PV2 Energy total",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 3067,
+      "function": "holding",
+      "name": "Today energy to user",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 3069,
+      "function": "holding",
+      "name": "Total energy to user",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 3071,
+      "function": "holding",
+      "name": "Today energy to grid",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 3073,
+      "function": "holding",
+      "name": "Total energy to grid",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 3075,
+      "function": "holding",
+      "name": "Today energy of user load",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 3077,
+      "function": "holding",
+      "name": "Total energy of user load",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 3086,
+      "function": "holding",
+      "name": "Derating Mode",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3093,
+      "function": "holding",
+      "name": "Inverter temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Celsius",
+      "access": "r"
+    },
+    {
+      "address": 3094,
+      "function": "holding",
+      "name": "IPM Inverter temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Celsius",
+      "access": "r"
+    },
+    {
+      "address": 3095,
+      "function": "holding",
+      "name": "Boost temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Celsius",
+      "access": "r"
+    },
+    {
+      "address": 3097,
+      "function": "holding",
+      "name": "Communications board temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Celsius",
+      "access": "r"
+    },
+    {
+      "address": 3098,
+      "function": "holding",
+      "name": "P Bus inside voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 3099,
+      "function": "holding",
+      "name": "N Bus inside voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 3100,
+      "function": "holding",
+      "name": "Inverter output Power Factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3101,
+      "function": "holding",
+      "name": "Real output power percent",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 3102,
+      "function": "holding",
+      "name": "Output Maxpower Limited",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 3104,
+      "function": "holding",
+      "name": "Inverter standby flag",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3105,
+      "function": "holding",
+      "name": "Fault code",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3106,
+      "function": "holding",
+      "name": "Warning code",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-gateway",
+    "ref": "20de1794f20f946fa9d9e81effeee6d47258c3a7",
+    "needsReview": true,
+    "reviewReasons": [
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

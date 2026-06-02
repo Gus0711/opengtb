@@ -1,0 +1,431 @@
+{
+  "slug": "fronius-gen24-series-dynamic",
+  "vendor": "Fronius",
+  "vendorSlug": "fronius",
+  "model": "GEN24 Series Dynamic",
+  "modelSlug": "gen24-series-dynamic",
+  "name": "Fronius GEN24 Series Inverter",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 258,
+      "function": "holding",
+      "name": "grid_voltage_l1",
+      "label": "Grid Voltage L1",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 260,
+      "function": "holding",
+      "name": "grid_voltage_l2",
+      "label": "Grid Voltage L2",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 262,
+      "function": "holding",
+      "name": "grid_voltage_l3",
+      "label": "Grid Voltage L3",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 264,
+      "function": "holding",
+      "name": "grid_current_l1",
+      "label": "Grid Current L1",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 266,
+      "function": "holding",
+      "name": "grid_current_l2",
+      "label": "Grid Current L2",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 268,
+      "function": "holding",
+      "name": "grid_current_l3",
+      "label": "Grid Current L3",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 270,
+      "function": "holding",
+      "name": "grid_power_l1",
+      "label": "Grid Power L1",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 272,
+      "function": "holding",
+      "name": "grid_power_l2",
+      "label": "Grid Power L2",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 274,
+      "function": "holding",
+      "name": "grid_power_l3",
+      "label": "Grid Power L3",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 276,
+      "function": "holding",
+      "name": "grid_frequency",
+      "label": "Grid Frequency",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 286,
+      "function": "holding",
+      "name": "phase_a_voltage",
+      "label": "Phase A Voltage",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 288,
+      "function": "holding",
+      "name": "phase_a_current",
+      "label": "Phase A Current",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 290,
+      "function": "holding",
+      "name": "phase_a_power",
+      "label": "Phase A Power",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 292,
+      "function": "holding",
+      "name": "phase_a_power_factor",
+      "label": "Phase A Power Factor",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.001,
+      "unit": "",
+      "access": "r"
+    },
+    {
+      "address": 294,
+      "function": "holding",
+      "name": "phase_b_voltage",
+      "label": "Phase B Voltage",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 296,
+      "function": "holding",
+      "name": "phase_b_current",
+      "label": "Phase B Current",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 298,
+      "function": "holding",
+      "name": "phase_b_power",
+      "label": "Phase B Power",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 300,
+      "function": "holding",
+      "name": "phase_b_power_factor",
+      "label": "Phase B Power Factor",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.001,
+      "unit": "",
+      "access": "r"
+    },
+    {
+      "address": 302,
+      "function": "holding",
+      "name": "phase_c_voltage",
+      "label": "Phase C Voltage",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 304,
+      "function": "holding",
+      "name": "phase_c_current",
+      "label": "Phase C Current",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 306,
+      "function": "holding",
+      "name": "phase_c_power",
+      "label": "Phase C Power",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 308,
+      "function": "holding",
+      "name": "phase_c_power_factor",
+      "label": "Phase C Power Factor",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.001,
+      "unit": "",
+      "access": "r"
+    },
+    {
+      "address": 1024,
+      "function": "holding",
+      "name": "energy_consumed_total",
+      "label": "Energy Consumed Total",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1028,
+      "function": "holding",
+      "name": "energy_produced_total",
+      "label": "Energy Produced Total",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 40002,
+      "function": "holding",
+      "name": "battery_voltage",
+      "label": "Battery Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40003,
+      "function": "holding",
+      "name": "battery_current",
+      "label": "Battery Current",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40004,
+      "function": "holding",
+      "name": "battery_power",
+      "label": "Battery Power",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40006,
+      "function": "holding",
+      "name": "battery_soc",
+      "label": "Battery SOC",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 40097,
+      "function": "holding",
+      "name": "pv_dc_voltage",
+      "label": "PV DC Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40098,
+      "function": "holding",
+      "name": "pv_dc_current",
+      "label": "PV DC Current",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40099,
+      "function": "holding",
+      "name": "pv_dc_power",
+      "label": "PV DC Power",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40255,
+      "function": "holding",
+      "name": "pv_mppt1_voltage",
+      "label": "PV MPPT1 Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40256,
+      "function": "holding",
+      "name": "pv_mppt1_current",
+      "label": "PV MPPT1 Current",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40257,
+      "function": "holding",
+      "name": "pv_mppt1_power",
+      "label": "PV MPPT1 Power",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40260,
+      "function": "holding",
+      "name": "pv_mppt2_voltage",
+      "label": "PV MPPT2 Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40261,
+      "function": "holding",
+      "name": "pv_mppt2_current",
+      "label": "PV MPPT2 Current",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40262,
+      "function": "holding",
+      "name": "pv_mppt2_power",
+      "label": "PV MPPT2 Power",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-manager",
+    "ref": "8932e9a23c65e9f9fe333780bcb3477d81a80b7b",
+    "needsReview": true,
+    "reviewReasons": [
+      "Ordre d'octets non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

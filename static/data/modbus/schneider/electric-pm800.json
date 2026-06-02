@@ -1,0 +1,465 @@
+{
+  "slug": "schneider-electric-pm800",
+  "vendor": "schneider",
+  "vendorSlug": "schneider",
+  "model": "electric-pm800",
+  "modelSlug": "electric-pm800",
+  "name": "schneider electric-pm800",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 628,
+      "function": "holding",
+      "name": "Ethernet-physical-connection",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 629,
+      "function": "holding",
+      "name": "Baud-rate",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 630,
+      "function": "holding",
+      "name": "Parity",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 631,
+      "function": "holding",
+      "name": "Wire-mode",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 632,
+      "function": "holding",
+      "name": "Port-protocol-mode",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 633,
+      "function": "holding",
+      "name": "PM8ECC-reset-counter",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 634,
+      "function": "holding",
+      "name": "Frame-type",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1100,
+      "function": "holding",
+      "name": "Current,-phase-A",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Amps/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1101,
+      "function": "holding",
+      "name": "Current,-phase-B",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Amps/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1102,
+      "function": "holding",
+      "name": "Current,-phase-C",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Amps/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1103,
+      "function": "holding",
+      "name": "Current,-neutral",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Amps/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1104,
+      "function": "holding",
+      "name": "Current,-ground",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Amps/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1105,
+      "function": "holding",
+      "name": "Current,-3-phase-average",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Amps/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1107,
+      "function": "holding",
+      "name": "Current,-unbalance,-phase-A",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1108,
+      "function": "holding",
+      "name": "Current,-unbalance,-phase-B",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1109,
+      "function": "holding",
+      "name": "Current,-unbalance,-phase-C",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1110,
+      "function": "holding",
+      "name": "Current,-unbalance,-max",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1120,
+      "function": "holding",
+      "name": "Voltage,-A-B",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Volts/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1121,
+      "function": "holding",
+      "name": "Voltage,-B-C",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Volts/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1122,
+      "function": "holding",
+      "name": "Voltage,-C-A",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Volts/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1123,
+      "function": "holding",
+      "name": "Voltage,-L-L-average",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Volts/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1124,
+      "function": "holding",
+      "name": "Voltage,-A-N",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Volts/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1125,
+      "function": "holding",
+      "name": "Voltage,-B-N",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Volts/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1126,
+      "function": "holding",
+      "name": "Voltage,-C-N",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Volts/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1127,
+      "function": "holding",
+      "name": "Voltage,-N-R",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Volts/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1128,
+      "function": "holding",
+      "name": "Voltage,-L-N-average",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Volts/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1129,
+      "function": "holding",
+      "name": "Voltage,-unbalance,-A-B",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1130,
+      "function": "holding",
+      "name": "Voltage,-unbalance,-B-C",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1131,
+      "function": "holding",
+      "name": "Voltage,-unbalance,-C-A",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1132,
+      "function": "holding",
+      "name": "Voltage,-unbalance,-max-L-L",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1133,
+      "function": "holding",
+      "name": "Voltage,-unbalance,-A-N",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1134,
+      "function": "holding",
+      "name": "Voltage,-unbalance,-B-N",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1135,
+      "function": "holding",
+      "name": "Voltage,-unbalance,-C-N",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1136,
+      "function": "holding",
+      "name": "Voltage,-unbalance,-max-L-N",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1140,
+      "function": "holding",
+      "name": "Real-power,-phase-A",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1141,
+      "function": "holding",
+      "name": "Real-power,-phase-B",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1142,
+      "function": "holding",
+      "name": "Real-power,-phase-C",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1143,
+      "function": "holding",
+      "name": "Real-power,-total",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1144,
+      "function": "holding",
+      "name": "Reactive-power,-phase-A",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAr/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1145,
+      "function": "holding",
+      "name": "Reactive-power,-phase-B",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAr/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1146,
+      "function": "holding",
+      "name": "Reactive-power,-phase-C",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAr/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1147,
+      "function": "holding",
+      "name": "Reactive-power,-total",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAr/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1148,
+      "function": "holding",
+      "name": "Apparent-power,-phase-A",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1149,
+      "function": "holding",
+      "name": "Apparent-power,-phase-B",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1150,
+      "function": "holding",
+      "name": "Apparent-power,-phase-C",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1151,
+      "function": "holding",
+      "name": "Apparent-power,-total",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA/Scale",
+      "access": "r"
+    },
+    {
+      "address": 1160,
+      "function": "holding",
+      "name": "True-power-factor,-phase-A",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1161,
+      "function": "holding",
+      "name": "True-power-factor,-phase-B",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1162,
+      "function": "holding",
+      "name": "True-power-factor,-phase-C",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1163,
+      "function": "holding",
+      "name": "True-power-factor,-total",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/schneider-electric-pm800.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

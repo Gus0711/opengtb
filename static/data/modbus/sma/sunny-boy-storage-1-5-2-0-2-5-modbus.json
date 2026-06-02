@@ -1,0 +1,54 @@
+{
+  "slug": "sma-sunny-boy-storage-1-5-2-0-2-5-modbus",
+  "vendor": "SMA",
+  "vendorSlug": "sma",
+  "model": "Sunny Boy Storage 1.5/2.0/2.5 (Modbus)",
+  "modelSlug": "sunny-boy-storage-1-5-2-0-2-5-modbus",
+  "name": "SMA Sunny Boy Storage 1.5/2.0/2.5 (Modbus)",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 30513,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 30775,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 30845,
+      "function": "holding",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

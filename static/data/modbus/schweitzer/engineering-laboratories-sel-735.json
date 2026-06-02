@@ -1,0 +1,426 @@
+{
+  "slug": "schweitzer-engineering-laboratories-sel-735",
+  "vendor": "schweitzer",
+  "vendorSlug": "schweitzer",
+  "model": "engineering-laboratories-sel-735",
+  "modelSlug": "engineering-laboratories-sel-735",
+  "name": "schweitzer engineering-laboratories-sel-735",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 350,
+      "function": "holding",
+      "name": "Ia",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 352,
+      "function": "holding",
+      "name": "Ib",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 354,
+      "function": "holding",
+      "name": "Ic",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 356,
+      "function": "holding",
+      "name": "In",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 358,
+      "function": "holding",
+      "name": "Va",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 360,
+      "function": "holding",
+      "name": "Vc",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 362,
+      "function": "holding",
+      "name": "Vb",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 364,
+      "function": "holding",
+      "name": "Vab",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 366,
+      "function": "holding",
+      "name": "Vbc",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 368,
+      "function": "holding",
+      "name": "Vca",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 370,
+      "function": "holding",
+      "name": "W3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 372,
+      "function": "holding",
+      "name": "U3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 374,
+      "function": "holding",
+      "name": "Q3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 376,
+      "function": "holding",
+      "name": "Wa",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 378,
+      "function": "holding",
+      "name": "Wb",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 380,
+      "function": "holding",
+      "name": "Wc",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 382,
+      "function": "holding",
+      "name": "Ua",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 384,
+      "function": "holding",
+      "name": "Ub",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 386,
+      "function": "holding",
+      "name": "Uc",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 388,
+      "function": "holding",
+      "name": "Qa",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 390,
+      "function": "holding",
+      "name": "Qb",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 392,
+      "function": "holding",
+      "name": "Qc",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 400,
+      "function": "holding",
+      "name": "WD3-del",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 402,
+      "function": "holding",
+      "name": "WD3-rec",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 404,
+      "function": "holding",
+      "name": "UD3-del",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 406,
+      "function": "holding",
+      "name": "UD3-rec",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 408,
+      "function": "holding",
+      "name": "QD3-del",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 410,
+      "function": "holding",
+      "name": "QD3-rec",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 412,
+      "function": "holding",
+      "name": "Ida",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 414,
+      "function": "holding",
+      "name": "Idb",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 416,
+      "function": "holding",
+      "name": "Idc",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 418,
+      "function": "holding",
+      "name": "Idn",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 420,
+      "function": "holding",
+      "name": "3i0d",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 422,
+      "function": "holding",
+      "name": "3i2d",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 424,
+      "function": "holding",
+      "name": "Wda-del",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 426,
+      "function": "holding",
+      "name": "Wdb-del",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 428,
+      "function": "holding",
+      "name": "Wdc-del",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 430,
+      "function": "holding",
+      "name": "Wda-rec",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 432,
+      "function": "holding",
+      "name": "Wdb-rec",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 434,
+      "function": "holding",
+      "name": "Wdc-rec",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 436,
+      "function": "holding",
+      "name": "Uda-del",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 438,
+      "function": "holding",
+      "name": "Udb-del",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 440,
+      "function": "holding",
+      "name": "Udc-del",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 442,
+      "function": "holding",
+      "name": "Uda-rec",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 444,
+      "function": "holding",
+      "name": "Udb-rec",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 446,
+      "function": "holding",
+      "name": "Ucd-rec",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 448,
+      "function": "holding",
+      "name": "Qda-del",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 450,
+      "function": "holding",
+      "name": "Qdb-del",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 452,
+      "function": "holding",
+      "name": "Qdc-rec",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 454,
+      "function": "holding",
+      "name": "Qda-rec",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/schweitzer-engineering-laboratories-sel-735.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

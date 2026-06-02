@@ -13,6 +13,7 @@
 		"test": "vitest run",
 		"test:watch": "vitest",
 		"fetch-codecs": "node scripts/decode/fetch-codecs.ts",
+		"build-modbus": "node scripts/modbus/build.ts",
 		"dju:stations": "node --env-file=.env scripts/dju/fetch-stations.ts",
 		"dju:data": "node --env-file=.env scripts/dju/fetch-data.ts",
 		"dju:fetch": "npm run dju:stations && npm run dju:data"

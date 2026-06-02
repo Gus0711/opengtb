@@ -1,0 +1,425 @@
+{
+  "slug": "siemens-sem3-single-phase",
+  "vendor": "siemens",
+  "vendorSlug": "siemens",
+  "model": "sem3-single-phase",
+  "modelSlug": "sem3-single-phase",
+  "name": "siemens sem3-single-phase",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Monitor-2-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Monitor-3-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Monitor-4-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Monitor-5-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Monitor-6-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Monitor-7-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Monitor-8-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Monitor-9-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Monitor-10-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Monitor-11-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Monitor-12-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Monitor-13-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Monitor-14-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Monitor-15-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "Monitor-16-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Monitor-17-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Monitor-18-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Monitor-19-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Monitor-20-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Monitor-21-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "Monitor-22-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Monitor-23-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Monitor-24-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Monitor-25-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "Monitor-26-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "Monitor-27-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 27,
+      "function": "holding",
+      "name": "Monitor-28-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Monitor-29-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 29,
+      "function": "holding",
+      "name": "Monitor-30-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Monitor-31-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 31,
+      "function": "holding",
+      "name": "Monitor-32-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Monitor-33-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Monitor-34-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Monitor-35-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 35,
+      "function": "holding",
+      "name": "Monitor-36-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Monitor-37-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 37,
+      "function": "holding",
+      "name": "Monitor-38-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Monitor-39-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39,
+      "function": "holding",
+      "name": "Monitor-40-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "Monitor-41-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 41,
+      "function": "holding",
+      "name": "Monitor-42-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "Monitor-43-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 43,
+      "function": "holding",
+      "name": "Monitor-44-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "Monitor-45-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 45,
+      "function": "holding",
+      "name": "Monitor-46-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Monitor-47-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 47,
+      "function": "holding",
+      "name": "Monitor-48-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Monitor-49-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 49,
+      "function": "holding",
+      "name": "Monitor-50-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "Monitor-51-alarm-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/siemens-sem3-single-phase.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont"
+    ]
+  }
+}

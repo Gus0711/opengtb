@@ -1,0 +1,472 @@
+{
+  "slug": "powerscout-3-8-viewpoint",
+  "vendor": "powerscout",
+  "vendorSlug": "powerscout",
+  "model": "3-8-viewpoint",
+  "modelSlug": "3-8-viewpoint",
+  "name": "powerscout 3-8-viewpoint",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 4000,
+      "function": "holding",
+      "name": "kWh-System-LSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4001,
+      "function": "holding",
+      "name": "kWh-System-MSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4002,
+      "function": "holding",
+      "name": "kW-System",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 4003,
+      "function": "holding",
+      "name": "kW-Demand-System-Max",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 4004,
+      "function": "holding",
+      "name": "kW-Demand-System-Now",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 4005,
+      "function": "holding",
+      "name": "kW-System-Max",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 4006,
+      "function": "holding",
+      "name": "kW-System-Min",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 4007,
+      "function": "holding",
+      "name": "kVARh-System-LSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4008,
+      "function": "holding",
+      "name": "kVARh-System-MSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4009,
+      "function": "holding",
+      "name": "kVAR-System",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4010,
+      "function": "holding",
+      "name": "kVAh-System-LSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4011,
+      "function": "holding",
+      "name": "kVAh-System-MSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4012,
+      "function": "holding",
+      "name": "kVA-System",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4013,
+      "function": "holding",
+      "name": "Displacement-PF-System",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4014,
+      "function": "holding",
+      "name": "Apparent-PF-System",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4015,
+      "function": "holding",
+      "name": "Amps-System-Avg",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 4016,
+      "function": "holding",
+      "name": "Volts-Line-to-Line-Avg",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 4017,
+      "function": "holding",
+      "name": "Volts-Line-to-Neutral-Avg",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 4018,
+      "function": "holding",
+      "name": "Volts-L1-to-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 4019,
+      "function": "holding",
+      "name": "Volts-L2-to-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 4020,
+      "function": "holding",
+      "name": "Volts-L1-to-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 4021,
+      "function": "holding",
+      "name": "Line-Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 4022,
+      "function": "holding",
+      "name": "kWh-L1-LSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4023,
+      "function": "holding",
+      "name": "kWh-L1-MSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4024,
+      "function": "holding",
+      "name": "kWh-L2-LSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4025,
+      "function": "holding",
+      "name": "kWh-L2-MSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4026,
+      "function": "holding",
+      "name": "kWh-L3-LSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4027,
+      "function": "holding",
+      "name": "kWh-L3-MSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4028,
+      "function": "holding",
+      "name": "kW-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 4029,
+      "function": "holding",
+      "name": "kW-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 4030,
+      "function": "holding",
+      "name": "kW-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 4031,
+      "function": "holding",
+      "name": "kVARh-L1-LSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4032,
+      "function": "holding",
+      "name": "kVARh-L1-MSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4033,
+      "function": "holding",
+      "name": "kVARh-L2-LSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4034,
+      "function": "holding",
+      "name": "kVARh-L2-MSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4035,
+      "function": "holding",
+      "name": "kVARh-L3-LSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4036,
+      "function": "holding",
+      "name": "kVARh-L3-MSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4037,
+      "function": "holding",
+      "name": "kVAR-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4038,
+      "function": "holding",
+      "name": "kVAR-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4039,
+      "function": "holding",
+      "name": "kVAR-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4040,
+      "function": "holding",
+      "name": "kVAh-L1-LSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4041,
+      "function": "holding",
+      "name": "kVAh-L1-MSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4042,
+      "function": "holding",
+      "name": "kVAh-L2-LSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4043,
+      "function": "holding",
+      "name": "kVAh-L2-MSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4044,
+      "function": "holding",
+      "name": "kVAh-L3-LSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4045,
+      "function": "holding",
+      "name": "kVAh-L3-MSW",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4046,
+      "function": "holding",
+      "name": "kVA-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4047,
+      "function": "holding",
+      "name": "kVA-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4048,
+      "function": "holding",
+      "name": "kVA-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4049,
+      "function": "holding",
+      "name": "Displacement-PF-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/powerscout-3-8-viewpoint.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont"
+    ]
+  }
+}

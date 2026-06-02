@@ -1,0 +1,123 @@
+{
+  "slug": "sigenergy-sigen-hybrid",
+  "vendor": "Sigenergy",
+  "vendorSlug": "sigenergy",
+  "model": "Sigen Hybrid",
+  "modelSlug": "sigen-hybrid",
+  "name": "Sigenergy Sigen Hybrid",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 30005,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "[Grid sensor] Active power"
+    },
+    {
+      "address": 30014,
+      "function": "holding",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r",
+      "notes": "Energy storage system SOC"
+    },
+    {
+      "address": 30035,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Photovoltaic power"
+    },
+    {
+      "address": 30037,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Battery power"
+    },
+    {
+      "address": 30562,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Accumulated import energy"
+    },
+    {
+      "address": 30574,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Battery accumulated discharge energy"
+    },
+    {
+      "address": 31017,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r",
+      "notes": "Phase A current"
+    },
+    {
+      "address": 31019,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r",
+      "notes": "Phase B current"
+    },
+    {
+      "address": 31021,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r",
+      "notes": "Phase C current"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

@@ -1,0 +1,453 @@
+{
+  "slug": "socomec-diris-a40-a41-rs485",
+  "vendor": "socomec",
+  "vendorSlug": "socomec",
+  "model": "diris-a40-a41-rs485",
+  "modelSlug": "diris-a40-a41-rs485",
+  "name": "socomec diris-a40-a41-rs485",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 10511,
+      "function": "holding",
+      "name": "Hour-meter",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "1",
+      "access": "r"
+    },
+    {
+      "address": 10513,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage-u12",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10515,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage-u23",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10517,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage-u31",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10519,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage-phase-1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10521,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage-phase-2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10523,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage-phase-3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10525,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 10527,
+      "function": "holding",
+      "name": "Phase-current-1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10529,
+      "function": "holding",
+      "name": "Phase-current-2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10531,
+      "function": "holding",
+      "name": "Phase-current-3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10533,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10535,
+      "function": "holding",
+      "name": "--active-power-+/-",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 10537,
+      "function": "holding",
+      "name": "--reactive-power-+/-",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 10539,
+      "function": "holding",
+      "name": "--apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 10541,
+      "function": "holding",
+      "name": "--power-factor--:-leading-and-+-:-lagging",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10543,
+      "function": "holding",
+      "name": "Active-power-phase-1-+/-",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 10545,
+      "function": "holding",
+      "name": "Active-power-phase-2-+/-",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 10547,
+      "function": "holding",
+      "name": "Active-power-phase-3-+/-",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 10549,
+      "function": "holding",
+      "name": "Reactive-power-phase-1-+/-",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 10551,
+      "function": "holding",
+      "name": "Reactive-power-phase-2-+/-",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 10553,
+      "function": "holding",
+      "name": "Reactive-power-phase-3-+/-",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 10555,
+      "function": "holding",
+      "name": "Apparent-power-phase-1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 10557,
+      "function": "holding",
+      "name": "Apparent-power-phase-2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 10559,
+      "function": "holding",
+      "name": "Apparent-power-phase-3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 10561,
+      "function": "holding",
+      "name": "Power-factor-phase-1--:-leading-and-+-:-lagging",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10563,
+      "function": "holding",
+      "name": "Power-factor-phase-2--:-leading-and-+-:-lagging",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10565,
+      "function": "holding",
+      "name": "Power-factor-phase-3--:-leading-and-+-:-lagging",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10767,
+      "function": "holding",
+      "name": "Hour-meter",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "1",
+      "access": "r"
+    },
+    {
+      "address": 10769,
+      "function": "holding",
+      "name": "Active-energy-+",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10773,
+      "function": "holding",
+      "name": "Apparent-apparente",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10775,
+      "function": "holding",
+      "name": "Active-energy--",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10777,
+      "function": "holding",
+      "name": "Active-energy-+",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10779,
+      "function": "holding",
+      "name": "No.-compteurs-d'impulsions",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10783,
+      "function": "holding",
+      "name": "Pulse-meter-2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10785,
+      "function": "holding",
+      "name": "Pulse-meter-3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10787,
+      "function": "holding",
+      "name": "Pulse-meter-4",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10789,
+      "function": "holding",
+      "name": "Pulse-meter-5",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10803,
+      "function": "holding",
+      "name": "S-predicted-reactive-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 10805,
+      "function": "holding",
+      "name": "S-predicted-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 10807,
+      "function": "holding",
+      "name": "Ea+-between-2-tops",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10809,
+      "function": "holding",
+      "name": "Ea--between-2-tops",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10813,
+      "function": "holding",
+      "name": "Er--between-2-tops",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 11029,
+      "function": "holding",
+      "name": "Avg-v1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 11033,
+      "function": "holding",
+      "name": "Avg-v3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 11035,
+      "function": "holding",
+      "name": "Avg-f",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 11037,
+      "function": "holding",
+      "name": "Avg-i1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 11039,
+      "function": "holding",
+      "name": "Avg-i2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 11043,
+      "function": "holding",
+      "name": "Avg-in",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 11045,
+      "function": "holding",
+      "name": "Avg---active-power-+",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/socomec-diris-a40-a41-rs485.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

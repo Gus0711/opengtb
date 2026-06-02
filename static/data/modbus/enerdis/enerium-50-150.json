@@ -1,0 +1,446 @@
+{
+  "slug": "enerdis-enerium-50-150",
+  "vendor": "enerdis",
+  "vendorSlug": "enerdis",
+  "model": "enerium-50-150",
+  "modelSlug": "enerium-50-150",
+  "name": "enerdis enerium-50-150",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1300,
+      "function": "holding",
+      "name": "In",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1302,
+      "function": "holding",
+      "name": "P1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1304,
+      "function": "holding",
+      "name": "P2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1306,
+      "function": "holding",
+      "name": "P3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1308,
+      "function": "holding",
+      "name": "Pt",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1310,
+      "function": "holding",
+      "name": "Q1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 1312,
+      "function": "holding",
+      "name": "Q2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 1314,
+      "function": "holding",
+      "name": "Q3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 1316,
+      "function": "holding",
+      "name": "Qt",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 1318,
+      "function": "holding",
+      "name": "S1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1320,
+      "function": "holding",
+      "name": "S2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1322,
+      "function": "holding",
+      "name": "S3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1324,
+      "function": "holding",
+      "name": "St",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1326,
+      "function": "holding",
+      "name": "FP1",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1327,
+      "function": "holding",
+      "name": "Quadrant-FP1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1328,
+      "function": "holding",
+      "name": "FP2",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1329,
+      "function": "holding",
+      "name": "Quadrant-FP2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1330,
+      "function": "holding",
+      "name": "FP3",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1331,
+      "function": "holding",
+      "name": "Quadrant-FP3",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1332,
+      "function": "holding",
+      "name": "Fpt",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1333,
+      "function": "holding",
+      "name": "Quadrant-fpt",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1334,
+      "function": "holding",
+      "name": "Cos-phi-phase-1",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1335,
+      "function": "holding",
+      "name": "Quadrant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1336,
+      "function": "holding",
+      "name": "Cos-phi-phase-2",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1337,
+      "function": "holding",
+      "name": "Quadrant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1338,
+      "function": "holding",
+      "name": "Cos-phi-phase-3",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1339,
+      "function": "holding",
+      "name": "Quadrant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1340,
+      "function": "holding",
+      "name": "Cos-phi-three-phase",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1341,
+      "function": "holding",
+      "name": "Quadrant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1342,
+      "function": "holding",
+      "name": "V1-crest-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1343,
+      "function": "holding",
+      "name": "V2-crest-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1344,
+      "function": "holding",
+      "name": "V3-crest-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1345,
+      "function": "holding",
+      "name": "I1-crest-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1346,
+      "function": "holding",
+      "name": "I2-crest-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1347,
+      "function": "holding",
+      "name": "I3-crest-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1348,
+      "function": "holding",
+      "name": "Unbalance-of-the-voltages",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1349,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 1350,
+      "function": "holding",
+      "name": "Total-tan-phi",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2788,
+      "function": "holding",
+      "name": "Minima-of-V1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2790,
+      "function": "holding",
+      "name": "Date-of-the-minimum-of-V1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2792,
+      "function": "holding",
+      "name": "Minima-of-V2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2794,
+      "function": "holding",
+      "name": "Date-of-the-minimum-of-V2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2796,
+      "function": "holding",
+      "name": "Minima-of-V3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2798,
+      "function": "holding",
+      "name": "Date-of-the-minimum-of-V3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2800,
+      "function": "holding",
+      "name": "Minima-of-vt",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2802,
+      "function": "holding",
+      "name": "Date-of-the-minimum-of-vt",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2804,
+      "function": "holding",
+      "name": "Minima-of-U12",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2806,
+      "function": "holding",
+      "name": "Date-of-the-minimum-of-U12",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2808,
+      "function": "holding",
+      "name": "Minima-of-U23",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2810,
+      "function": "holding",
+      "name": "Date-of-the-minimum-of-U23",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/enerdis-enerium-50-150.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

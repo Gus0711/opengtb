@@ -1,0 +1,476 @@
+{
+  "slug": "mikro-dpm680",
+  "vendor": "mikro",
+  "vendorSlug": "mikro",
+  "model": "dpm680",
+  "modelSlug": "dpm680",
+  "name": "mikro dpm680",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Device-type-sub",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "x0000",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Version-number-main",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "x0000 ; 0x0002",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Version-number-sub",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "x0000 ; 0x0000",
+      "access": "r"
+    },
+    {
+      "address": 1001,
+      "function": "holding",
+      "name": "Parity-selection",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "=none, 1 stop bit 1=none, 2 stop bit 2=odd, 1 stop bit 3=even, 1 stop bit",
+      "access": "r"
+    },
+    {
+      "address": 1002,
+      "function": "holding",
+      "name": "Baudrate-selection",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "=300 2=600 3=1200 4=2400 5=4800 6=9600 7=19200 8=38400",
+      "access": "r"
+    },
+    {
+      "address": 1003,
+      "function": "holding",
+      "name": "Ip-address",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "x00 | 0x00 ; 0x00 | 0x00",
+      "access": "r"
+    },
+    {
+      "address": 1005,
+      "function": "holding",
+      "name": "Subnet-mask",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "x00 | 0x00 ; 0x00 | 0x00",
+      "access": "r"
+    },
+    {
+      "address": 4000,
+      "function": "holding",
+      "name": "Real-energy",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4004,
+      "function": "holding",
+      "name": "Apparent-energy",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4008,
+      "function": "holding",
+      "name": "Reactive-energy",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "VArh",
+      "access": "r"
+    },
+    {
+      "address": 4012,
+      "function": "holding",
+      "name": "Total-real-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4014,
+      "function": "holding",
+      "name": "Total-apparent-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4016,
+      "function": "holding",
+      "name": "Total-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 4018,
+      "function": "holding",
+      "name": "Total-power-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "1",
+      "access": "r"
+    },
+    {
+      "address": 4019,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 4020,
+      "function": "holding",
+      "name": "Instantaneous-current-A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4022,
+      "function": "holding",
+      "name": "Instantaneous-current-B",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4024,
+      "function": "holding",
+      "name": "Instantaneous-current-C",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4026,
+      "function": "holding",
+      "name": "Instantaneous-current-N",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4028,
+      "function": "holding",
+      "name": "Voltage-line-ab",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4030,
+      "function": "holding",
+      "name": "Voltage-line-bc",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4032,
+      "function": "holding",
+      "name": "Voltage-line-ac",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4034,
+      "function": "holding",
+      "name": "Voltage-phase-an",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4036,
+      "function": "holding",
+      "name": "Voltage-phase-bn",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4038,
+      "function": "holding",
+      "name": "Voltage-phase-cn",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4040,
+      "function": "holding",
+      "name": "Real-power-A",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4042,
+      "function": "holding",
+      "name": "Real-power-B",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4044,
+      "function": "holding",
+      "name": "Real-power-C",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4046,
+      "function": "holding",
+      "name": "Apparent-power-A",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4048,
+      "function": "holding",
+      "name": "Apparent-power-B",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4050,
+      "function": "holding",
+      "name": "Apparent-power-C",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4052,
+      "function": "holding",
+      "name": "Reactive-power-A",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 4054,
+      "function": "holding",
+      "name": "Reactive-power-B",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 4056,
+      "function": "holding",
+      "name": "Reactive-power-C",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 4058,
+      "function": "holding",
+      "name": "Current-demand-A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Arms",
+      "access": "r"
+    },
+    {
+      "address": 4060,
+      "function": "holding",
+      "name": "Current-demand-B",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Arms",
+      "access": "r"
+    },
+    {
+      "address": 4062,
+      "function": "holding",
+      "name": "Current-demand-C",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Arms",
+      "access": "r"
+    },
+    {
+      "address": 4064,
+      "function": "holding",
+      "name": "Real-power-demand",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4066,
+      "function": "holding",
+      "name": "Reactive-power-demand",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 4068,
+      "function": "holding",
+      "name": "Apparent-power-demand",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4070,
+      "function": "holding",
+      "name": "Positive-sequence-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4072,
+      "function": "holding",
+      "name": "Negative-sequence-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4074,
+      "function": "holding",
+      "name": "Zero-sequence-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4076,
+      "function": "holding",
+      "name": "Positive-sequence-phase-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4078,
+      "function": "holding",
+      "name": "Negative-sequence-phase-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4080,
+      "function": "holding",
+      "name": "Zero-sequence-phase-voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4082,
+      "function": "holding",
+      "name": "Current-thd-A",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 4083,
+      "function": "holding",
+      "name": "Current-thd-B",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 4084,
+      "function": "holding",
+      "name": "Current-thd-C",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 4085,
+      "function": "holding",
+      "name": "Voltage-thd-A",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/mikro-dpm680.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

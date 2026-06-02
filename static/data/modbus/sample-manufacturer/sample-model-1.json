@@ -1,0 +1,85 @@
+{
+  "slug": "sample-manufacturer-sample-model-1",
+  "vendor": "Sample Manufacturer",
+  "vendorSlug": "sample-manufacturer",
+  "model": "Sample Model 1",
+  "modelSlug": "sample-model-1",
+  "name": "Sample Manufacturer Sample Model 1",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {
+    "rtu": {
+      "baudrate": 9600,
+      "parity": "(none | even | odd)",
+      "dataBits": 8,
+      "stopBits": 1,
+      "slaveIdDefault": 1
+    },
+    "tcp": {
+      "port": 502,
+      "unitIdDefault": 1
+    }
+  },
+  "registers": [
+    {
+      "address": 1,
+      "function": "coil",
+      "name": "Motor Start",
+      "label": "Start the motor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 10001,
+      "function": "holding",
+      "name": "Switch Status",
+      "label": "Whether the switch is on or off",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 30001,
+      "function": "holding",
+      "name": "Temperature",
+      "label": "Current temperature reading",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "offset": 0,
+      "unit": "celsius",
+      "access": "r"
+    },
+    {
+      "address": 40001,
+      "function": "holding",
+      "name": "Setpoint Temperature",
+      "label": "Setpoint temperature for the thermostat",
+      "dataType": "float32",
+      "size": 2,
+      "scale": 0.1,
+      "offset": 0,
+      "unit": "celsius",
+      "access": "rw"
+    }
+  ],
+  "datasheets": [
+    {
+      "label": "Doc constructeur",
+      "url": "http://www.example.com"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "http://www.example.com",
+    "needsReview": true,
+    "reviewReasons": [
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

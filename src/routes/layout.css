@@ -36,7 +36,9 @@
 	--line-strong: #c0c0b9;
 	--accent-dim: #1e6a1e;
 	--accent-glow: rgba(42, 138, 42, 0.1);
-	--amber: #c98a1f;
+	--amber: #b07418;
+	--amber-dim: #8a5a10;
+	--amber-glow: rgba(176, 116, 24, 0.08);
 	--cyan: #2a8aa3;
 	--red-signal: #c0413f;
 
@@ -85,6 +87,8 @@
 	--accent-dim: #4ab048;
 	--accent-glow: rgba(108, 226, 108, 0.16);
 	--amber: #f5b94a;
+	--amber-dim: #c8932e;
+	--amber-glow: rgba(245, 185, 74, 0.12);
 	--cyan: #67cae0;
 	--red-signal: #f47174;
 
@@ -127,6 +131,8 @@
 	--color-accent-dim: var(--accent-dim);
 	--color-accent-glow: var(--accent-glow);
 	--color-amber: var(--amber);
+	--color-amber-dim: var(--amber-dim);
+	--color-amber-glow: var(--amber-glow);
 	--color-cyan: var(--cyan);
 	--color-red-signal: var(--red-signal);
 

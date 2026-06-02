@@ -1,0 +1,343 @@
+{
+  "slug": "solax-qcells-solax-qcells",
+  "vendor": "Solax-QCells",
+  "vendorSlug": "solax-qcells",
+  "model": "Solax-QCells",
+  "modelSlug": "solax-qcells",
+  "name": "Solax-QCells",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 0,
+      "function": "holding",
+      "name": "InverterSN",
+      "label": "Seriennummer WR",
+      "dataType": "string",
+      "size": 7,
+      "access": "r"
+    },
+    {
+      "address": 0,
+      "function": "input",
+      "name": "GridVoltage",
+      "label": "Netz Spannung",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1,
+      "function": "input",
+      "name": "GridCurrent",
+      "label": "Netz Strom",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "input",
+      "name": "GridPower",
+      "label": "Netz Leistung",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "input",
+      "name": "PvVoltage1",
+      "label": "PV Spannung String 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "input",
+      "name": "PvCurrent1",
+      "label": "PV Strom String 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "FactoryName",
+      "label": "Hersteller",
+      "dataType": "string",
+      "size": 7,
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "input",
+      "name": "GridFrequency",
+      "label": "Netz Frequenz",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "input",
+      "name": "Temperature",
+      "label": "Temperatur",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "�C",
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "input",
+      "name": "RunMode",
+      "label": "Betriebsmodus",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "input",
+      "name": "Powerdc1",
+      "label": "DC-Leistung String 1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "input",
+      "name": "BatVoltage_Charge1",
+      "label": "Batterie Ladespannung",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "input",
+      "name": "BatCurrent_Charge1",
+      "label": "Batterie Ladestrom",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "input",
+      "name": "Batpower_Charge1",
+      "label": "Batterie Ladeleistung",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "input",
+      "name": "BMS_Connect_State",
+      "label": "0:Disconnected 1:Connected",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "input",
+      "name": "TemperatureBat",
+      "label": "Batterie Temperatur",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "�C",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "input",
+      "name": "BatteryCapacity",
+      "label": "Batterie Ladezustand (SoC)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 35,
+      "function": "input",
+      "name": "InputEnergy_Charge_today",
+      "label": "Ladung Tag",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "input",
+      "name": "feedin_power",
+      "label": "Bezug/Einspeisung (+/-)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "input",
+      "name": "feedin_energy_total",
+      "label": "Einspeisung",
+      "dataType": "uint16",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "input",
+      "name": "consum_energy_total",
+      "label": "Bezug",
+      "dataType": "uint16",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "input",
+      "name": "Etoday_togrid",
+      "label": "Einspeisung Tag",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 82,
+      "function": "input",
+      "name": "Etotal_togrid",
+      "label": "Einspeisung Gesamt",
+      "dataType": "uint16",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 139,
+      "function": "holding",
+      "name": "SolarChargerUseMode",
+      "label": "Ladestrategie: 0 = Self use mode, 1 = Feedin Priority, 2 = Back up mode, 3 = Manual mode",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 141,
+      "function": "holding",
+      "name": "wBattery1_Type",
+      "label": "Batterietyp: 0 = Blei/S�ure, 1 = Lithium ",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 148,
+      "function": "input",
+      "name": "SolarEnergyTotal",
+      "label": "Solarertrag Gesamt",
+      "dataType": "uint16",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 150,
+      "function": "input",
+      "name": "SolarEnergyToday",
+      "label": "Solarertrag Tag",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 152,
+      "function": "input",
+      "name": "feedin_energy_today",
+      "label": "Einspeisung Tag",
+      "dataType": "uint16",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 154,
+      "function": "input",
+      "name": "consum_energy_today",
+      "label": "Bezug Tag",
+      "dataType": "uint16",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 170,
+      "function": "holding",
+      "name": "RegistrationCode",
+      "label": "Registrierungsnummer Dongle",
+      "dataType": "string",
+      "size": 5,
+      "access": "r"
+    },
+    {
+      "address": 186,
+      "function": "holding",
+      "name": "inverterType",
+      "label": "WR Typ",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

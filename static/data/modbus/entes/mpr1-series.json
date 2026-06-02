@@ -1,0 +1,465 @@
+{
+  "slug": "entes-mpr1-series",
+  "vendor": "entes",
+  "vendorSlug": "entes",
+  "model": "mpr1-series",
+  "modelSlug": "mpr1-series",
+  "name": "entes mpr1-series",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Voltage-L2-N",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V/10",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Voltage-L3-N",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V/10",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Voltage-L4-N",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V/10",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Voltage-L1-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V/10",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Voltage-L2-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V/10",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Voltage-L3-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V/10",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Current-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Current-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Current-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Current-L4",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Neutral-current-=-il1+il2+il3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Measured-frequency",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Hz / 100",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "Active-power-L1-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Active-power-L2-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Active-power-L3-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Active-power-L4-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Total-import-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Total-export-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Active-power-+/-=-P-=p1+p2+p3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "Reactive-power-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "Reactive-power-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "Reactive-power-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Reactive-power-L4",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Quadrant-1-total-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "Quadrant-2-total-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Quadrant-3-total-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 54,
+      "function": "holding",
+      "name": "Quadrant-4-total-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Reactive-power-+/-=-q=q1+q2+q3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 58,
+      "function": "holding",
+      "name": "Apparent-power-L1-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "Apparent-power-L2-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "Apparent-power-L3-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 64,
+      "function": "holding",
+      "name": "Apparent-power-L4-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "holding",
+      "name": "Total-import-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 68,
+      "function": "holding",
+      "name": "Total-export-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "Apparent-power-+/-=-s=s1+s2+s3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "holding",
+      "name": "Power-factor-L1",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "holding",
+      "name": "Power-factor-L2",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 76,
+      "function": "holding",
+      "name": "Power-factor-L3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 78,
+      "function": "holding",
+      "name": "Power-factor-L4",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "Power-factor-+/-=-pf=pfl1+pfl2+pfl3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 82,
+      "function": "holding",
+      "name": "Cosphi-L1",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "Cosphi-L2",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "Cosphi-L3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 88,
+      "function": "holding",
+      "name": "Cosphi-L4",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 90,
+      "function": "holding",
+      "name": "Cos-phi-=-cos_l1-+-cos_l2-+-cos_l3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 92,
+      "function": "holding",
+      "name": "Rotation-field;-1=right,-0=none,-1=left",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 94,
+      "function": "holding",
+      "name": "Voltage-unbalance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 96,
+      "function": "holding",
+      "name": "Current-unbalance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 98,
+      "function": "holding",
+      "name": "L1-phase-voltage-angle",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "Angle",
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "L2-phase-voltage-angle",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "Angle",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/entes-mpr1-series.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

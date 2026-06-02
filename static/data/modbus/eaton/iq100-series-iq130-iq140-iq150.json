@@ -1,0 +1,475 @@
+{
+  "slug": "eaton-iq100-series-iq130-iq140-iq150",
+  "vendor": "eaton",
+  "vendorSlug": "eaton",
+  "model": "iq100-series-iq130-iq140-iq150",
+  "modelSlug": "iq100-series-iq130-iq140-iq150",
+  "name": "eaton iq100-series-iq130-iq140-iq150",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Meter-type",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "bit-mapped",
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Firmware-version",
+      "dataType": "string",
+      "size": 4,
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Map-version",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0 to 65535",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Meter-configuration",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "bit-mapped",
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "Asic-version",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-65535",
+      "access": "r"
+    },
+    {
+      "address": 899,
+      "function": "holding",
+      "name": "Watts,-3-ph-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 901,
+      "function": "holding",
+      "name": "Vars,-3-ph-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VARs",
+      "access": "r"
+    },
+    {
+      "address": 903,
+      "function": "holding",
+      "name": "Vas,-3-ph-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAs",
+      "access": "r"
+    },
+    {
+      "address": 999,
+      "function": "holding",
+      "name": "Voits-A-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "voIts",
+      "access": "r"
+    },
+    {
+      "address": 1001,
+      "function": "holding",
+      "name": "Voits-B-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 1003,
+      "function": "holding",
+      "name": "Voits-C-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "voIts",
+      "access": "r"
+    },
+    {
+      "address": 1005,
+      "function": "holding",
+      "name": "Voits-A-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 1007,
+      "function": "holding",
+      "name": "Voits-B-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 1009,
+      "function": "holding",
+      "name": "Voits-C-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 1011,
+      "function": "holding",
+      "name": "Amps-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 1013,
+      "function": "holding",
+      "name": "Amps-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 1015,
+      "function": "holding",
+      "name": "Amps-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 1017,
+      "function": "holding",
+      "name": "Watts,-3-ph-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 1019,
+      "function": "holding",
+      "name": "Vars,-3-ph-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VARs",
+      "access": "r"
+    },
+    {
+      "address": 1021,
+      "function": "holding",
+      "name": "Vas,-3-ph-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAs",
+      "access": "r"
+    },
+    {
+      "address": 1025,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 1027,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 1099,
+      "function": "holding",
+      "name": "W-hours,-received",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 1101,
+      "function": "holding",
+      "name": "W-hours,-delivered",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 1103,
+      "function": "holding",
+      "name": "W-hours,-net",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 1105,
+      "function": "holding",
+      "name": "W-hours,-total",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 1107,
+      "function": "holding",
+      "name": "Var-hours,-positive",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VARh",
+      "access": "r"
+    },
+    {
+      "address": 1109,
+      "function": "holding",
+      "name": "Var-hours,-negative",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VARh",
+      "access": "r"
+    },
+    {
+      "address": 1111,
+      "function": "holding",
+      "name": "Var-hours,-net",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VARh",
+      "access": "r"
+    },
+    {
+      "address": 1113,
+      "function": "holding",
+      "name": "Var-hours,-total",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VARh",
+      "access": "r"
+    },
+    {
+      "address": 1115,
+      "function": "holding",
+      "name": "Va-hours,-total",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "0 to 99999999",
+      "access": "r"
+    },
+    {
+      "address": 1999,
+      "function": "holding",
+      "name": "Amps-a,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 2001,
+      "function": "holding",
+      "name": "Amps-b,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 2003,
+      "function": "holding",
+      "name": "Amps-c,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 2005,
+      "function": "holding",
+      "name": "Positive-watts,-3-ph,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 2007,
+      "function": "holding",
+      "name": "Positive-vars,-3-ph,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VARs",
+      "access": "r"
+    },
+    {
+      "address": 2009,
+      "function": "holding",
+      "name": "Negative-watts,-3-ph,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 2011,
+      "function": "holding",
+      "name": "Negative-vars,-3-ph,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VARs",
+      "access": "r"
+    },
+    {
+      "address": 2013,
+      "function": "holding",
+      "name": "Vas,-3-ph,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "-9999 M to +9999 M",
+      "access": "r"
+    },
+    {
+      "address": 2015,
+      "function": "holding",
+      "name": "Positive-pf,-3-ph,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "-1.00 to +1.00",
+      "access": "r"
+    },
+    {
+      "address": 2017,
+      "function": "holding",
+      "name": "Negative-pf,-3-pf,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "-1.00 to +1.00",
+      "access": "r"
+    },
+    {
+      "address": 3001,
+      "function": "holding",
+      "name": "Volts-B-n,-minimum",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 3129,
+      "function": "holding",
+      "name": "Negative-power-factor,-3-ph,-maximum-avg-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "-1.00 to +1.00",
+      "access": "r"
+    },
+    {
+      "address": 4099,
+      "function": "holding",
+      "name": "Phase-A-current",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "-1800 to +1800",
+      "access": "r"
+    },
+    {
+      "address": 4100,
+      "function": "holding",
+      "name": "Phase-B-current",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "-1800 to +1800",
+      "access": "r"
+    },
+    {
+      "address": 4101,
+      "function": "holding",
+      "name": "Phase-C-current",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "-1800 to +1800",
+      "access": "r"
+    },
+    {
+      "address": 4102,
+      "function": "holding",
+      "name": "Angle,-volts-A-B",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "-1800 to +1800",
+      "access": "r"
+    },
+    {
+      "address": 4103,
+      "function": "holding",
+      "name": "Angle,-volts-B-C",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "-1800 to +1800",
+      "access": "r"
+    },
+    {
+      "address": 4104,
+      "function": "holding",
+      "name": "Angle,-volts-C-A",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "-1800 to +1800",
+      "access": "r"
+    },
+    {
+      "address": 4999,
+      "function": "holding",
+      "name": "Meter-status",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "bit-mapped",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/eaton-iq100-series-iq130-iq140-iq150.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

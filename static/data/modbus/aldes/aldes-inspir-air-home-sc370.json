@@ -1,0 +1,378 @@
+{
+  "slug": "aldes-aldes-inspir-air-home-sc370",
+  "vendor": "Aldes",
+  "vendorSlug": "aldes",
+  "model": "Aldes Inspir Air Home SC370",
+  "modelSlug": "aldes-inspir-air-home-sc370",
+  "name": "Aldes Aldes Inspir Air Home SC370",
+  "equipmentType": "vmc",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 40002,
+      "function": "holding",
+      "name": "ID_Code",
+      "label": "ID-Code Anlage",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40004,
+      "function": "holding",
+      "name": "Seriennummer",
+      "label": "Aldes Seriennummer",
+      "dataType": "uint64",
+      "size": 4,
+      "access": "r"
+    },
+    {
+      "address": 40013,
+      "function": "holding",
+      "name": "Version",
+      "label": "Software Version",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40021,
+      "function": "holding",
+      "name": "Reihenfolge_Datensicherung",
+      "label": "Reihenfolge Datensicherung",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40257,
+      "function": "holding",
+      "name": "Regelungsmodus",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40258,
+      "function": "holding",
+      "name": "Luftgeschwindigkeit",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40259,
+      "function": "holding",
+      "name": "Nächtliche_Durchlüftung",
+      "label": "Nächtliche Durchlüftung",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40260,
+      "function": "holding",
+      "name": "Verwaltung_Wärmetauscher_Bypass",
+      "label": "Verwaltung Wärmetauscher-Bypass",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40261,
+      "function": "holding",
+      "name": "Regelungsverfahren",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40265,
+      "function": "holding",
+      "name": "Dauer_Minimal",
+      "label": "Dauer Minimal",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 5,
+      "unit": "Min",
+      "access": "r"
+    },
+    {
+      "address": 40266,
+      "function": "holding",
+      "name": "Dauer_Boost",
+      "label": "Dauer Boost",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 5,
+      "unit": "Min",
+      "access": "r"
+    },
+    {
+      "address": 40267,
+      "function": "holding",
+      "name": "Dauer_Maximal",
+      "label": "Dauer Maximal",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 5,
+      "unit": "Min",
+      "access": "r"
+    },
+    {
+      "address": 40268,
+      "function": "holding",
+      "name": "Lebensdauer_des_Filters",
+      "label": "Lebensdauer des Filters",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Mon",
+      "access": "r"
+    },
+    {
+      "address": 40269,
+      "function": "holding",
+      "name": "Dauer_Aux1",
+      "label": "Dauer Aux1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 5,
+      "unit": "Min",
+      "access": "r"
+    },
+    {
+      "address": 40270,
+      "function": "holding",
+      "name": "Dauer_Aux2",
+      "label": "Dauer Aux2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 5,
+      "unit": "Min",
+      "access": "r"
+    },
+    {
+      "address": 40273,
+      "function": "holding",
+      "name": "Sollwert_Abluft_Fördermenge",
+      "label": "Sollwert Abluft-Fördermenge",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40274,
+      "function": "holding",
+      "name": "Sollwert_Zuluft_Fördermenge",
+      "label": "Sollwert Zuluft-Fördermenge",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40275,
+      "function": "holding",
+      "name": "Drucksollwert_Abluft",
+      "label": "Drucksollwert Abluft",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40276,
+      "function": "holding",
+      "name": "Drucksollwert_Zuluft",
+      "label": "Drucksollwert Zuluft",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40277,
+      "function": "holding",
+      "name": "Sollwert_Abluft_Geschwindigkeit",
+      "label": "Sollwert Abluft-Geschwindigkeit",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40278,
+      "function": "holding",
+      "name": "Sollwert_Zuluft_Geschwindigkeit",
+      "label": "Sollwert Zuluft-Geschwindigkeit",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40279,
+      "function": "holding",
+      "name": "Balance",
+      "label": "Balance Zuluft-/Abluft-Fördermenge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 40283,
+      "function": "holding",
+      "name": "Sollwert_Komforttemperatur",
+      "label": "Sollwert Komforttemperatur Sommer",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 40284,
+      "function": "holding",
+      "name": "Unknown",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40285,
+      "function": "holding",
+      "name": "Parameter_U1",
+      "label": "Parameter 0-10V U1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40286,
+      "function": "holding",
+      "name": "Parameter_U2",
+      "label": "Parameter 0-10V U2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40337,
+      "function": "holding",
+      "name": "Status_Eingänge",
+      "label": "Status der Eingänge",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40338,
+      "function": "holding",
+      "name": "Versorgungsspannung",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40339,
+      "function": "holding",
+      "name": "Eingang_10V",
+      "label": "Eingang 0-10V",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40340,
+      "function": "holding",
+      "name": "Schalterstatus",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40347,
+      "function": "holding",
+      "name": "Filterstatus",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40348,
+      "function": "holding",
+      "name": "Filterstatus",
+      "label": "Filterstatus Std",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Std",
+      "access": "r"
+    },
+    {
+      "address": 40349,
+      "function": "holding",
+      "name": "Bypass_Status",
+      "label": "Bypass Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40350,
+      "function": "holding",
+      "name": "Bypass_Strom",
+      "label": "Vom Bypass aufgenommener Strom",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40351,
+      "function": "holding",
+      "name": "Frischlufttemperatur",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 40352,
+      "function": "holding",
+      "name": "Innenlufttemperatur",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 40385,
+      "function": "holding",
+      "name": "Code_Störung",
+      "label": "Code der aktuellen Störung",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40393,
+      "function": "holding",
+      "name": "Störungscode_N4",
+      "label": "Störungscode N-4",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

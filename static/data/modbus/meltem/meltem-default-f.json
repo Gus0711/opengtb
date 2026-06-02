@@ -1,0 +1,256 @@
+{
+  "slug": "meltem-meltem-default-f",
+  "vendor": "Meltem",
+  "vendorSlug": "meltem",
+  "model": "meltem_default_F",
+  "modelSlug": "meltem-default-f",
+  "name": "Meltem meltem_default_F",
+  "equipmentType": "vmc",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 41000,
+      "function": "holding",
+      "name": "2",
+      "label": "Extract air temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "unit": "Extract air temperature",
+      "access": "rw"
+    },
+    {
+      "address": 41002,
+      "function": "holding",
+      "name": "2",
+      "label": "Outdoor air temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "unit": "Outdoor air temperature",
+      "access": "rw"
+    },
+    {
+      "address": 41004,
+      "function": "holding",
+      "name": "2",
+      "label": "Exhaust air temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "unit": "Exhaust air temperature",
+      "access": "rw"
+    },
+    {
+      "address": 41006,
+      "function": "holding",
+      "name": "2",
+      "label": "Humidity extract air",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Humidity, extract air",
+      "access": "rw"
+    },
+    {
+      "address": 41009,
+      "function": "holding",
+      "name": "2",
+      "label": "Supply air temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "unit": "Supply air temperature",
+      "access": "rw"
+    },
+    {
+      "address": 41011,
+      "function": "holding",
+      "name": "2",
+      "label": "Humidity supply air",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Humidity, supply air",
+      "access": "rw"
+    },
+    {
+      "address": 41016,
+      "function": "holding",
+      "name": "2",
+      "label": "Error message",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Error message: 0 = device OK; 1 = error",
+      "access": "rw"
+    },
+    {
+      "address": 41017,
+      "function": "holding",
+      "name": "2",
+      "label": "Air filter change indicator",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Air filter change indicator: 0 = time not elapsed; 1 = elapsed",
+      "access": "rw"
+    },
+    {
+      "address": 41018,
+      "function": "holding",
+      "name": "2",
+      "label": "Frost protection function",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Frost protection function: 0 = not active; 1 = active",
+      "access": "rw"
+    },
+    {
+      "address": 41020,
+      "function": "holding",
+      "name": "2",
+      "label": "Ventilation level extract air",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Ventilation level for extract air",
+      "access": "rw"
+    },
+    {
+      "address": 41021,
+      "function": "holding",
+      "name": "2",
+      "label": "Ventilation level supply air",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Ventilation level for supply air",
+      "access": "rw"
+    },
+    {
+      "address": 41027,
+      "function": "holding",
+      "name": "2",
+      "label": "Time until air filter change",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Time until air filter change",
+      "access": "rw"
+    },
+    {
+      "address": 41030,
+      "function": "holding",
+      "name": "2",
+      "label": "Ventilation unit operating hours",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Ventilation unit operating hours",
+      "access": "rw"
+    },
+    {
+      "address": 41032,
+      "function": "holding",
+      "name": "2",
+      "label": "Fan motors operating hours",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Fan motors operating hours",
+      "access": "rw"
+    },
+    {
+      "address": 41100,
+      "function": "holding",
+      "name": "2",
+      "label": "Mode",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 41101,
+      "function": "holding",
+      "name": "2",
+      "label": "Mode Zuluft",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 41102,
+      "function": "holding",
+      "name": "2",
+      "label": "Mode Abluft",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 41120,
+      "function": "holding",
+      "name": "2",
+      "label": "setModeType",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "1: Off, 2: Automatic Modes, 3: Balanced Ventilation Level, 4: Unbalanced Ventilation Level",
+      "access": "r"
+    },
+    {
+      "address": 41121,
+      "function": "holding",
+      "name": "2",
+      "label": "setModeSubType",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Automatic Modes: 112=Humidity control (F & FC units), 144=CO2 control (FC unit), 16=Automatic mode (FC unit); Balanced ventilation level: 0-200 (=0-100m³ on both fans); Unbalanced Ventilation Level: 0-200 (=0-100m³ on supply air fan)",
+      "access": "r"
+    },
+    {
+      "address": 41122,
+      "function": "holding",
+      "name": "2",
+      "label": "setModeExhaustFan",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Only for Unbalanced Ventilation Level: 0-200 (=0-100m³ on exhaust air fan)",
+      "access": "r"
+    },
+    {
+      "address": 41132,
+      "function": "holding",
+      "name": "2",
+      "label": "setModeConfirmWrite",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Registers 41120, 41121 (and 41122 for unbalanced ventilation) and 41132 must be written in succession. Register 41132 must always be written last",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

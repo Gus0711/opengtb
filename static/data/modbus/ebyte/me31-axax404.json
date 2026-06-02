@@ -1,0 +1,85 @@
+{
+  "slug": "ebyte-me31-axax404",
+  "vendor": "ebyte",
+  "vendorSlug": "ebyte",
+  "model": "ME31-AXAX404",
+  "modelSlug": "me31-axax404",
+  "name": "ebyte ME31-AXAX404",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 0,
+      "function": "coil",
+      "name": "coil1",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 0,
+      "function": "coil",
+      "name": "ebyte_ip1",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1,
+      "function": "coil",
+      "name": "coil2",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1,
+      "function": "coil",
+      "name": "ebyte_ip2",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 2,
+      "function": "coil",
+      "name": "coil3",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 2,
+      "function": "coil",
+      "name": "ebyte_ip3",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 3,
+      "function": "coil",
+      "name": "coil4",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 3,
+      "function": "coil",
+      "name": "ebyte_ip4",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-gateway",
+    "ref": "20de1794f20f946fa9d9e81effeee6d47258c3a7",
+    "needsReview": false
+  }
+}

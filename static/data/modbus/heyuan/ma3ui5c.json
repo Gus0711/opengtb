@@ -1,0 +1,425 @@
+{
+  "slug": "heyuan-ma3ui5c",
+  "vendor": "heyuan",
+  "vendorSlug": "heyuan",
+  "model": "ma3ui5c",
+  "modelSlug": "ma3ui5c",
+  "name": "heyuan ma3ui5c",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 4096,
+      "function": "holding",
+      "name": "Phase-A-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4097,
+      "function": "holding",
+      "name": "Phase-B-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4098,
+      "function": "holding",
+      "name": "Phase-C-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4099,
+      "function": "holding",
+      "name": "Phase-voltage-mean-value",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4100,
+      "function": "holding",
+      "name": "Zero-sequence-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4101,
+      "function": "holding",
+      "name": "Line-voltage-(A-b)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4102,
+      "function": "holding",
+      "name": "Line-voltage-(B-c)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4103,
+      "function": "holding",
+      "name": "Line-voltage-(C-a)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4104,
+      "function": "holding",
+      "name": "Line-voltage-mean-value",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4105,
+      "function": "holding",
+      "name": "Phase/line-current-of-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4106,
+      "function": "holding",
+      "name": "Phase/line-current-of-phase-B",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4107,
+      "function": "holding",
+      "name": "Phase/line-current-of-phase-C",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4108,
+      "function": "holding",
+      "name": "Phase/line-current-mean-value",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4109,
+      "function": "holding",
+      "name": "Zero-sequence-current",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4110,
+      "function": "holding",
+      "name": "Active-power-of-phase-A",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4111,
+      "function": "holding",
+      "name": "Active-power-of-phase-B",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4112,
+      "function": "holding",
+      "name": "Active-power-of-phase-C",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4113,
+      "function": "holding",
+      "name": "Total-three-phase-active-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4114,
+      "function": "holding",
+      "name": "Reactive-power-of-phase-A",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4115,
+      "function": "holding",
+      "name": "Reactive-power-of-phase-B",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4116,
+      "function": "holding",
+      "name": "Reactive-power-of-phase-C",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4117,
+      "function": "holding",
+      "name": "Total-three-phase-reactive-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4118,
+      "function": "holding",
+      "name": "Apparent-power-of-phase-A",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4119,
+      "function": "holding",
+      "name": "Apparent-power-of-phase-B",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4120,
+      "function": "holding",
+      "name": "Apparent-power-of-phase-C",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4121,
+      "function": "holding",
+      "name": "Total-three-phase-apparent-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4122,
+      "function": "holding",
+      "name": "Power-factor-of-phase-A",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4123,
+      "function": "holding",
+      "name": "Power-factor-of-phase-B",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4124,
+      "function": "holding",
+      "name": "Power-factor-of-phase-C",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4125,
+      "function": "holding",
+      "name": "Total-three-phase-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4126,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4127,
+      "function": "holding",
+      "name": "Voltage-unbalance-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4128,
+      "function": "holding",
+      "name": "Current-unbalance-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4129,
+      "function": "holding",
+      "name": "Inductance-capacitance-resistance-（L/C/R",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4352,
+      "function": "holding",
+      "name": "Line/phase-voltage-THD-of-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4353,
+      "function": "holding",
+      "name": "Line/phase-voltage-THD-of-phase-B",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4354,
+      "function": "holding",
+      "name": "Line/phase-voltage-THD-of-phase-C",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4355,
+      "function": "holding",
+      "name": "Line/phase-voltage-mean-value-THD",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4356,
+      "function": "holding",
+      "name": "Current-THD-of-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4357,
+      "function": "holding",
+      "name": "Current-THD-of-phase-B",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4358,
+      "function": "holding",
+      "name": "Current-THD-of-phase-C",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4359,
+      "function": "holding",
+      "name": "Current-mean-value-THD",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4360,
+      "function": "holding",
+      "name": "3rd-line/phase-voltage-harmonic-content-of-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4361,
+      "function": "holding",
+      "name": "5th-line/phase-voltage-harmonic-content-of-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4362,
+      "function": "holding",
+      "name": "7th-line/phase-voltage-harmonic-content-of-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4363,
+      "function": "holding",
+      "name": "9th-line/phase-voltage-harmonic-content-of-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4364,
+      "function": "holding",
+      "name": "11th-line/phase-voltage-harmonic-content-of-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4365,
+      "function": "holding",
+      "name": "13th-line/phase-voltage-harmonic-content-of-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4366,
+      "function": "holding",
+      "name": "15th-line/phase-voltage-harmonic-content-of-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4367,
+      "function": "holding",
+      "name": "17th-line/phase-voltage-harmonic-content-of-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/heyuan-ma3ui5c.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont"
+    ]
+  }
+}

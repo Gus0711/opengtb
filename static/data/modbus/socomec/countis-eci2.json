@@ -1,0 +1,426 @@
+{
+  "slug": "socomec-countis-eci2",
+  "vendor": "socomec",
+  "vendorSlug": "socomec",
+  "model": "countis-eci2",
+  "modelSlug": "countis-eci2",
+  "name": "socomec countis-eci2",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 37072,
+      "function": "holding",
+      "name": "Label-of-custom-unit",
+      "dataType": "string",
+      "size": 4,
+      "access": "r"
+    },
+    {
+      "address": 40192,
+      "function": "holding",
+      "name": "Name",
+      "dataType": "string",
+      "size": 10,
+      "access": "r"
+    },
+    {
+      "address": 40197,
+      "function": "holding",
+      "name": "Mode:-0:-disabled-1:-logical-state-2:-analogical-value-3:-combination",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40198,
+      "function": "holding",
+      "name": "Operand1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40199,
+      "function": "holding",
+      "name": "Operand2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40200,
+      "function": "holding",
+      "name": "Severity:-0:-none-1:-information-2:-warning-3:-default",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40201,
+      "function": "holding",
+      "name": "Logical-mode:-0:-low-state-1:-high-state-2:-falling-edge-3:-rising-edge-4:-both-falling-and-rising-edge",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40202,
+      "function": "holding",
+      "name": "Combination-mode:-0:-OR-1:-AND",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40203,
+      "function": "holding",
+      "name": "Analogical-value-comparison-type:-0:-low-and-high-comparison-1:-only-high-2:-only-low-3:-match-with-high-level-on-rising-4:-match-with-low-level-on-falling",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40204,
+      "function": "holding",
+      "name": "AnaValHyst",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40205,
+      "function": "holding",
+      "name": "AnaValLow",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40207,
+      "function": "holding",
+      "name": "AnaValHigh",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40209,
+      "function": "holding",
+      "name": "Name",
+      "dataType": "string",
+      "size": 10,
+      "access": "r"
+    },
+    {
+      "address": 40214,
+      "function": "holding",
+      "name": "Mode:-0:-disabled-1:-logical-state-2:-analogical-value-3:-combination",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40215,
+      "function": "holding",
+      "name": "Operand1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40216,
+      "function": "holding",
+      "name": "Operand2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40217,
+      "function": "holding",
+      "name": "Severity:-0:-none-1:-information-2:-warning-3:-default",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40218,
+      "function": "holding",
+      "name": "Logical-mode:-0:-low-state-1:-high-state-2:-falling-edge-3:-rising-edge-4:-both-falling-and-rising-edge",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40219,
+      "function": "holding",
+      "name": "Combination-mode:-0:-OR-1:-AND",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40220,
+      "function": "holding",
+      "name": "Analogical-value-comparison-type:-0:-low-and-high-comparison-1:-only-high-2:-only-low-3:-match-with-high-level-on-rising-4:-match-with-low-level-on-falling",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40221,
+      "function": "holding",
+      "name": "AnaValHyst",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40222,
+      "function": "holding",
+      "name": "AnaValLow",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40224,
+      "function": "holding",
+      "name": "AnaValHigh",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40226,
+      "function": "holding",
+      "name": "Name",
+      "dataType": "string",
+      "size": 10,
+      "access": "r"
+    },
+    {
+      "address": 40231,
+      "function": "holding",
+      "name": "Mode:-0:-disabled-1:-logical-state-2:-analogical-value-3:-combination",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40232,
+      "function": "holding",
+      "name": "Operand1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40233,
+      "function": "holding",
+      "name": "Operand2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40234,
+      "function": "holding",
+      "name": "Severity:-0:-none-1:-information-2:-warning-3:-default",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40235,
+      "function": "holding",
+      "name": "Logical-mode:-0:-low-state-1:-high-state-2:-falling-edge-3:-rising-edge-4:-both-falling-and-rising-edge",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40236,
+      "function": "holding",
+      "name": "Combination-mode:-0:-OR-1:-AND",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40237,
+      "function": "holding",
+      "name": "Analogical-value-comparison-type:-0:-low-and-high-comparison-1:-only-high-2:-only-low-3:-match-with-high-level-on-rising-4:-match-with-low-level-on-falling",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40238,
+      "function": "holding",
+      "name": "AnaValHyst",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40239,
+      "function": "holding",
+      "name": "AnaValLow",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40241,
+      "function": "holding",
+      "name": "AnaValHigh",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40243,
+      "function": "holding",
+      "name": "Name",
+      "dataType": "string",
+      "size": 10,
+      "access": "r"
+    },
+    {
+      "address": 40248,
+      "function": "holding",
+      "name": "Mode:-0:-disabled-1:-logical-state-2:-analogical-value-3:-combination",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40249,
+      "function": "holding",
+      "name": "Operand1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40250,
+      "function": "holding",
+      "name": "Operand2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40251,
+      "function": "holding",
+      "name": "Severity:-0:-none-1:-information-2:-warning-3:-default",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40252,
+      "function": "holding",
+      "name": "Logical-mode:-0:-low-state-1:-high-state-2:-falling-edge-3:-rising-edge-4:-both-falling-and-rising-edge",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40253,
+      "function": "holding",
+      "name": "Combination-mode:-0:-OR-1:-AND",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40254,
+      "function": "holding",
+      "name": "Analogical-value-comparison-type:-0:-low-and-high-comparison-1:-only-high-2:-only-low-3:-match-with-high-level-on-rising-4:-match-with-low-level-on-falling",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40255,
+      "function": "holding",
+      "name": "AnaValHyst",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40256,
+      "function": "holding",
+      "name": "AnaValLow",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40258,
+      "function": "holding",
+      "name": "AnaValHigh",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40260,
+      "function": "holding",
+      "name": "Name",
+      "dataType": "string",
+      "size": 10,
+      "access": "r"
+    },
+    {
+      "address": 40265,
+      "function": "holding",
+      "name": "Mode:-0:-disabled-1:-logical-state-2:-analogical-value-3:-combination",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40266,
+      "function": "holding",
+      "name": "Operand1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40267,
+      "function": "holding",
+      "name": "Operand2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 45058,
+      "function": "holding",
+      "name": "Save-context-count",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/socomec-countis-eci2.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

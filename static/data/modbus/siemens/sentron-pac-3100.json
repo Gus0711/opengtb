@@ -1,0 +1,474 @@
+{
+  "slug": "siemens-sentron-pac-3100",
+  "vendor": "siemens",
+  "vendorSlug": "siemens",
+  "model": "sentron-pac-3100",
+  "modelSlug": "sentron-pac-3100",
+  "name": "siemens sentron-pac-3100",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Voltage-a-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Voltage-b-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Voltage-c-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Voltage-a-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Voltage-b-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Voltage-c-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Current-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "Current-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Current-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Apparent-power-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "Apparent-power-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Apparent-power-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "Active-power-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 27,
+      "function": "holding",
+      "name": "Active-power-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 29,
+      "function": "holding",
+      "name": "Active-power-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 31,
+      "function": "holding",
+      "name": "Reactive-power-a-(VAR1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Reactive-power-b-(VAR1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 35,
+      "function": "holding",
+      "name": "Reactive-power-c-(VAR1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 37,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 39,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 47,
+      "function": "holding",
+      "name": "Total-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 49,
+      "function": "holding",
+      "name": "Total-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 51,
+      "function": "holding",
+      "name": "Total-reactive-power-(VAR1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 53,
+      "function": "holding",
+      "name": "Total-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 55,
+      "function": "holding",
+      "name": "Maximum-voltage-a-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 57,
+      "function": "holding",
+      "name": "Maximum-voltage-b-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 59,
+      "function": "holding",
+      "name": "Maximum-voltage-c-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 61,
+      "function": "holding",
+      "name": "Max.-voltage-a-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 63,
+      "function": "holding",
+      "name": "Max.-voltage-b-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 65,
+      "function": "holding",
+      "name": "Max.-voltage-c-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 67,
+      "function": "holding",
+      "name": "Maximum-current-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 69,
+      "function": "holding",
+      "name": "Maximum-current-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 71,
+      "function": "holding",
+      "name": "Maximum-current-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 73,
+      "function": "holding",
+      "name": "Maximum-apparent-power-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 75,
+      "function": "holding",
+      "name": "Maximum-apparent-power-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 77,
+      "function": "holding",
+      "name": "Maximum-apparent-power-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 79,
+      "function": "holding",
+      "name": "Maximum-active-power-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 81,
+      "function": "holding",
+      "name": "Maximum-active-power-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 83,
+      "function": "holding",
+      "name": "Maximum-active-power-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 85,
+      "function": "holding",
+      "name": "Max.-reactive-power-a-(VAR1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 87,
+      "function": "holding",
+      "name": "Max.-reactive-power-b-(VAR1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 89,
+      "function": "holding",
+      "name": "Max.-reactive-power-c-(VAR1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 91,
+      "function": "holding",
+      "name": "Max.-neutral-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 93,
+      "function": "holding",
+      "name": "Max.-frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 101,
+      "function": "holding",
+      "name": "Max.-total-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 103,
+      "function": "holding",
+      "name": "Max.-total-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 105,
+      "function": "holding",
+      "name": "Max.-total-reactive-power-(VAR1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 107,
+      "function": "holding",
+      "name": "Max.-total-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 109,
+      "function": "holding",
+      "name": "Minimum-voltage-a-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 111,
+      "function": "holding",
+      "name": "Minimum-voltage-b-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/siemens-sentron-pac-3100.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

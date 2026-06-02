@@ -1,0 +1,324 @@
+{
+  "slug": "victron-ev-charging-station",
+  "vendor": "Victron",
+  "vendorSlug": "victron",
+  "model": "EV Charging Station",
+  "modelSlug": "ev-charging-station",
+  "name": "Victron EV Charging Station",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 5000,
+      "function": "holding",
+      "name": "id",
+      "label": "Product ID",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5001,
+      "function": "holding",
+      "name": "serial_number",
+      "label": "Serial Number",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5007,
+      "function": "holding",
+      "name": "firmware_version_raw",
+      "label": "Firmware Version (raw)",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 5009,
+      "function": "holding",
+      "name": "charging_mode",
+      "label": "Charging Mode",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 5010,
+      "function": "holding",
+      "name": "charging_enable",
+      "label": "Charging Enabled",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 5011,
+      "function": "holding",
+      "name": "power_phase_1",
+      "label": "Power Phase 1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5012,
+      "function": "holding",
+      "name": "power_phase_2",
+      "label": "Power Phase 2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5013,
+      "function": "holding",
+      "name": "power_phase_3",
+      "label": "Power Phase 3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5014,
+      "function": "holding",
+      "name": "power",
+      "label": "Power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5015,
+      "function": "holding",
+      "name": "status_raw",
+      "label": "Status (raw)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5015,
+      "function": "holding",
+      "name": "status",
+      "label": "Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5016,
+      "function": "holding",
+      "name": "charging_current_setpoint",
+      "label": "Charging Current Setpoint",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "rw"
+    },
+    {
+      "address": 5017,
+      "function": "holding",
+      "name": "charging_current_maximum",
+      "label": "Charging Current (Maximum)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5018,
+      "function": "holding",
+      "name": "current",
+      "label": "Current",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5019,
+      "function": "holding",
+      "name": "session_time",
+      "label": "Session Charging Time",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "s",
+      "access": "r"
+    },
+    {
+      "address": 5021,
+      "function": "holding",
+      "name": "session_energy",
+      "label": "Session Energy",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 5023,
+      "function": "holding",
+      "name": "total_energy",
+      "label": "Total Energy",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 5027,
+      "function": "holding",
+      "name": "device_name",
+      "label": "Device Name",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5049,
+      "function": "holding",
+      "name": "charging_autostart",
+      "label": "Charging Auto-start",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 5050,
+      "function": "holding",
+      "name": "display_controlled",
+      "label": "Control via display",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 5051,
+      "function": "holding",
+      "name": "backlight_active",
+      "label": "Display Backlight (Active)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 5052,
+      "function": "holding",
+      "name": "backlight_idle",
+      "label": "Display Backlight (Idle)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 5053,
+      "function": "holding",
+      "name": "backlight_timeout",
+      "label": "Display Timeout",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "s",
+      "access": "rw"
+    },
+    {
+      "address": 5062,
+      "function": "holding",
+      "name": "charging_current_minimum",
+      "label": "Charging Current (Minimum)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "rw"
+    },
+    {
+      "address": 5063,
+      "function": "holding",
+      "name": "power_calibration",
+      "label": "Power Calibration",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "access": "rw"
+    },
+    {
+      "address": 5064,
+      "function": "holding",
+      "name": "restart",
+      "label": "Restart",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 5111,
+      "function": "holding",
+      "name": "uptime",
+      "label": "Uptime",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "s",
+      "access": "r"
+    },
+    {
+      "address": 5113,
+      "function": "holding",
+      "name": "reboot_count",
+      "label": "Reboot Count",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5114,
+      "function": "holding",
+      "name": "last_reboot_reason",
+      "label": "Last Reboot Reason",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5127,
+      "function": "holding",
+      "name": "temperature_power_supply",
+      "label": "Power Supply Temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 5132,
+      "function": "holding",
+      "name": "light_ring_brightness",
+      "label": "Light Ring Brightness Limit",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "rw"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-manager",
+    "ref": "8932e9a23c65e9f9fe333780bcb3477d81a80b7b",
+    "needsReview": true,
+    "reviewReasons": [
+      "Ordre d'octets non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

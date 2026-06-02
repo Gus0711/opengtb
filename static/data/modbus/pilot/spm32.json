@@ -1,0 +1,465 @@
+{
+  "slug": "pilot-spm32",
+  "vendor": "pilot",
+  "vendorSlug": "pilot",
+  "model": "spm32",
+  "modelSlug": "spm32",
+  "name": "pilot spm32",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Vb-(ph-n)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Vc-(ph-n)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Vab-(ph-ph)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Vbc-(ph-ph)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Vca-(ph-ph)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Ia",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Ib",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Ic",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Total-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Total-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Total-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "Phase-A-active-power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Phase-B-active-power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Phase-C-active-power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Phase-A-reactive-power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Phase-B-reactive-power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Phase-C-reactive-power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "Phase-A-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Phase-B-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Phase-C-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "Total-kwh",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 27,
+      "function": "holding",
+      "name": "Total-kvarh",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 29,
+      "function": "holding",
+      "name": "Import.-kwh",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 31,
+      "function": "holding",
+      "name": "Export.-kwh",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Import-kvarh",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 35,
+      "function": "holding",
+      "name": "Export.-kvarh",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 37,
+      "function": "holding",
+      "name": "Digital-input-(on-off-status)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Relay-status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39,
+      "function": "holding",
+      "name": "Alarm-status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "Ct-ratio",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 41,
+      "function": "holding",
+      "name": "Pt-ratio",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "Average-voltage-(ph-n)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 43,
+      "function": "holding",
+      "name": "Average-voltage-(ph-ph)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "Average-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 45,
+      "function": "holding",
+      "name": "Current-unbalance-rate",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Phase-A-apparent-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 47,
+      "function": "holding",
+      "name": "Phase-B-apparent-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Phase-C-apparent-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 49,
+      "function": "holding",
+      "name": "Total-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 51,
+      "function": "holding",
+      "name": "Total-apparent-energy",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 700,
+      "function": "holding",
+      "name": "Demand-for-ia",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 701,
+      "function": "holding",
+      "name": "Demand-for-ib",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 702,
+      "function": "holding",
+      "name": "Demand-for-ic",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 703,
+      "function": "holding",
+      "name": "Demand-for-pa",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 704,
+      "function": "holding",
+      "name": "Demand-for-pb",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 705,
+      "function": "holding",
+      "name": "Demand-for-pc",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 706,
+      "function": "holding",
+      "name": "Demand-for-ptot-(low)",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 708,
+      "function": "holding",
+      "name": "Max.-demand-for-ia",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/pilot-spm32.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

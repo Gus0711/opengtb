@@ -1,0 +1,101 @@
+{
+  "slug": "marstek-venus-d",
+  "vendor": "Marstek",
+  "vendorSlug": "marstek",
+  "model": "Venus D",
+  "modelSlug": "venus-d",
+  "name": "Marstek Venus D",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 30001,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "Battery power (W)"
+    },
+    {
+      "address": 30037,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "MPPT1 power (W)"
+    },
+    {
+      "address": 30038,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "MPPT2 power (W)"
+    },
+    {
+      "address": 30039,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "MPPT3 power (W)"
+    },
+    {
+      "address": 30040,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "MPPT4 power (W)"
+    },
+    {
+      "address": 32104,
+      "function": "holding",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r",
+      "notes": "Battery SOC (%)"
+    },
+    {
+      "address": 33002,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Total energy discharged from battery (kWh)"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

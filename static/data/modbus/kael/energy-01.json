@@ -1,0 +1,466 @@
+{
+  "slug": "kael-energy-01",
+  "vendor": "kael",
+  "vendorSlug": "kael",
+  "model": "energy-01",
+  "modelSlug": "energy-01",
+  "name": "kael energy-01",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Company-code",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Product-code",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Barcode-check",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Program-communication-version",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "User-define-number-H",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "User-define-number-L",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4095,
+      "function": "holding",
+      "name": "Voltage-transformer-ratio",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4096,
+      "function": "holding",
+      "name": "Current-transformer-ratio",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4097,
+      "function": "holding",
+      "name": "Device-working-information-bits",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4098,
+      "function": "holding",
+      "name": "Input-voltage-phase1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 4099,
+      "function": "holding",
+      "name": "Input-voltage-phase2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 4100,
+      "function": "holding",
+      "name": "Input-voltage-phase3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 4101,
+      "function": "holding",
+      "name": "Input-current-phase1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 4102,
+      "function": "holding",
+      "name": "Input-current-phase2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 4103,
+      "function": "holding",
+      "name": "Input-current-phase3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 4104,
+      "function": "holding",
+      "name": "Input-active-power-phase1",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "watt",
+      "access": "r"
+    },
+    {
+      "address": 4105,
+      "function": "holding",
+      "name": "Input-active-power-phase2",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "watt",
+      "access": "r"
+    },
+    {
+      "address": 4106,
+      "function": "holding",
+      "name": "Input-active-power-phase3",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "watt",
+      "access": "r"
+    },
+    {
+      "address": 4107,
+      "function": "holding",
+      "name": "Input-reactive-power-phase1",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 4108,
+      "function": "holding",
+      "name": "Input-reactive-power-phase2",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 4109,
+      "function": "holding",
+      "name": "Input-reactive-power-phase3",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 4110,
+      "function": "holding",
+      "name": "Input-appearent-power-phase1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4111,
+      "function": "holding",
+      "name": "Input-appearent-power-phase2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4112,
+      "function": "holding",
+      "name": "Input-appearent-power-phase3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4113,
+      "function": "holding",
+      "name": "Cos-phase1",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "0.001",
+      "access": "r"
+    },
+    {
+      "address": 4114,
+      "function": "holding",
+      "name": "Cos-phase2",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "0.001",
+      "access": "r"
+    },
+    {
+      "address": 4115,
+      "function": "holding",
+      "name": "Cos-phase3",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "0.001",
+      "access": "r"
+    },
+    {
+      "address": 4116,
+      "function": "holding",
+      "name": "SUM-cos",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "0.001",
+      "access": "r"
+    },
+    {
+      "address": 4117,
+      "function": "holding",
+      "name": "PF-phase1",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "0.01",
+      "access": "r"
+    },
+    {
+      "address": 4118,
+      "function": "holding",
+      "name": "PF-phase2",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "0.01",
+      "access": "r"
+    },
+    {
+      "address": 4119,
+      "function": "holding",
+      "name": "PF-phase3",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "0.01",
+      "access": "r"
+    },
+    {
+      "address": 4120,
+      "function": "holding",
+      "name": "SUM-PF",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "0.01",
+      "access": "r"
+    },
+    {
+      "address": 4121,
+      "function": "holding",
+      "name": "Total-active-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "watt",
+      "access": "r"
+    },
+    {
+      "address": 4122,
+      "function": "holding",
+      "name": "Total-inductive-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 4123,
+      "function": "holding",
+      "name": "Total-capacitive-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 4124,
+      "function": "holding",
+      "name": "SUM-reactive-power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 4125,
+      "function": "holding",
+      "name": "SUM-appearent-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4126,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 4127,
+      "function": "holding",
+      "name": "Frequency-measure-order",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "012",
+      "access": "r"
+    },
+    {
+      "address": 4133,
+      "function": "holding",
+      "name": "Phase-connection-and-no-current-alerts",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4134,
+      "function": "holding",
+      "name": "Voltage1-ZeroCrossOverAngle",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Degree",
+      "access": "r"
+    },
+    {
+      "address": 4135,
+      "function": "holding",
+      "name": "Current1-ZeroCrossOverAngle",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Degree",
+      "access": "r"
+    },
+    {
+      "address": 4136,
+      "function": "holding",
+      "name": "Voltage2-ZeroCrossOverAngle",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Degree",
+      "access": "r"
+    },
+    {
+      "address": 4137,
+      "function": "holding",
+      "name": "Current2-ZeroCrossOverAngle",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Degree",
+      "access": "r"
+    },
+    {
+      "address": 4138,
+      "function": "holding",
+      "name": "Voltage3-ZeroCrossOverAngle",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Degree",
+      "access": "r"
+    },
+    {
+      "address": 4139,
+      "function": "holding",
+      "name": "Current3-ZeroCrossOverAngle",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Degree",
+      "access": "r"
+    },
+    {
+      "address": 4140,
+      "function": "holding",
+      "name": "Input-voltage-phase1-2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 4141,
+      "function": "holding",
+      "name": "Input-voltage-phase2-3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 4142,
+      "function": "holding",
+      "name": "Input-voltage-phase3-1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 4143,
+      "function": "holding",
+      "name": "Notr-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amp",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/kael-energy-01.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

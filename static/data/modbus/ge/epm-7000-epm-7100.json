@@ -1,0 +1,426 @@
+{
+  "slug": "ge-epm-7000-epm-7100",
+  "vendor": "ge",
+  "vendorSlug": "ge",
+  "model": "epm-7000-epm-7100",
+  "modelSlug": "epm-7000-epm-7100",
+  "name": "ge epm-7000-epm-7100",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Meter-SerialNumber",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Meter-type",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Firmware-version",
+      "dataType": "string",
+      "size": 4,
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Map-version",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "MeterConfiguration",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "ASIC-version",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Boot-Firmware-Version",
+      "dataType": "string",
+      "size": 4,
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Option-slot-1Usage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "Option-slot-2Usage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "Meter-type-name",
+      "dataType": "string",
+      "size": 8,
+      "access": "r"
+    },
+    {
+      "address": 278,
+      "function": "holding",
+      "name": "Integer-readings-block-occupies-these-registers,-see-below",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 279,
+      "function": "holding",
+      "name": "Volts-B-N",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 280,
+      "function": "holding",
+      "name": "Volts-C-N",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 281,
+      "function": "holding",
+      "name": "Volts-A-B",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 282,
+      "function": "holding",
+      "name": "Volts-B-C",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 283,
+      "function": "holding",
+      "name": "Volts-C-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 284,
+      "function": "holding",
+      "name": "Amps-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 285,
+      "function": "holding",
+      "name": "Amps-B",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 286,
+      "function": "holding",
+      "name": "Amps-C",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 289,
+      "function": "holding",
+      "name": "VARs,-3-Ph-total",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 290,
+      "function": "holding",
+      "name": "VAs,-3-Ph-total",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 291,
+      "function": "holding",
+      "name": "Power-factor,-3-Phtotal",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 294,
+      "function": "holding",
+      "name": "Watts,-phase-B",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 295,
+      "function": "holding",
+      "name": "Watts,-phase-C",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 296,
+      "function": "holding",
+      "name": "VARs,-phase-A",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 297,
+      "function": "holding",
+      "name": "VARs,-phase-B",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 298,
+      "function": "holding",
+      "name": "VARs,-phase-C",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 299,
+      "function": "holding",
+      "name": "VAs,-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 300,
+      "function": "holding",
+      "name": "VAs,-phase-B",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 303,
+      "function": "holding",
+      "name": "Power-Factor,Phase-B",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 304,
+      "function": "holding",
+      "name": "Power-Factor,Phase-C",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 999,
+      "function": "holding",
+      "name": "Volts-A-N",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1001,
+      "function": "holding",
+      "name": "Volts-B-N",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1003,
+      "function": "holding",
+      "name": "Volts-C-N",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1005,
+      "function": "holding",
+      "name": "Volts-A-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1007,
+      "function": "holding",
+      "name": "Volts-B-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1009,
+      "function": "holding",
+      "name": "Volts-C-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1011,
+      "function": "holding",
+      "name": "Amps-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1013,
+      "function": "holding",
+      "name": "Amps-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1015,
+      "function": "holding",
+      "name": "Amps-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1017,
+      "function": "holding",
+      "name": "Watts,-3-Ph-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1019,
+      "function": "holding",
+      "name": "VARs,-3-Ph-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1021,
+      "function": "holding",
+      "name": "VAs,-3-Ph-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1023,
+      "function": "holding",
+      "name": "Power-factor,-3-Phtotal",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1025,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1027,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1029,
+      "function": "holding",
+      "name": "Watts,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1031,
+      "function": "holding",
+      "name": "Watts,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1033,
+      "function": "holding",
+      "name": "Watts,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1035,
+      "function": "holding",
+      "name": "VARs,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/ge-epm-7000-epm-7100.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

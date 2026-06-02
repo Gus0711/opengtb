@@ -1,0 +1,448 @@
+{
+  "slug": "socomec-diris-a20-modbus",
+  "vendor": "socomec",
+  "vendorSlug": "socomec",
+  "model": "diris-a20-modbus",
+  "modelSlug": "diris-a20-modbus",
+  "name": "socomec diris-a20-modbus",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 768,
+      "function": "holding",
+      "name": "Phase-1-current",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 770,
+      "function": "holding",
+      "name": "Phase-2-current",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 772,
+      "function": "holding",
+      "name": "Phase-3-current",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 774,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 776,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage-U12",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 778,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage-U23",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 780,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage-U31",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 782,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage-phase-1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 784,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage-phase-2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 786,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage-phase-3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 788,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 790,
+      "function": "holding",
+      "name": "E-active-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 792,
+      "function": "holding",
+      "name": "E-reactive-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 794,
+      "function": "holding",
+      "name": "E-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 796,
+      "function": "holding",
+      "name": "E-power-factor",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 838,
+      "function": "holding",
+      "name": "Average-value-I1-max",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 840,
+      "function": "holding",
+      "name": "Average-value-I2-max",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 842,
+      "function": "holding",
+      "name": "Average-value-I3-max",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 844,
+      "function": "holding",
+      "name": "E-active-power--+-max",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 856,
+      "function": "holding",
+      "name": "Active-energy-+",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 858,
+      "function": "holding",
+      "name": "Reactive-energy-+",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 916,
+      "function": "holding",
+      "name": "Average-value-in-max",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1792,
+      "function": "holding",
+      "name": "Phase-1-current",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1793,
+      "function": "holding",
+      "name": "Phase-2-current",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1794,
+      "function": "holding",
+      "name": "Phase-3-current",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1795,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1796,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage-U12",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1797,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage-U23",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1798,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage-U31",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1799,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage-phase-1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1800,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage-phase-2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1801,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage-phase-3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1802,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 1803,
+      "function": "holding",
+      "name": "E-active-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1804,
+      "function": "holding",
+      "name": "E-reactive-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 1805,
+      "function": "holding",
+      "name": "E-apparent-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1806,
+      "function": "holding",
+      "name": "E-power-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1827,
+      "function": "holding",
+      "name": "Average-value-I1-max",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1828,
+      "function": "holding",
+      "name": "Average-value-I2-max",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1829,
+      "function": "holding",
+      "name": "Average-value-I3-max",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1830,
+      "function": "holding",
+      "name": "E-active-power--+-average-value-max",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1835,
+      "function": "holding",
+      "name": "Active-power-+-&lt;-10-000",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1836,
+      "function": "holding",
+      "name": "Active-power-+",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1837,
+      "function": "holding",
+      "name": "Reactive-power-+-&lt;-10-000",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1838,
+      "function": "holding",
+      "name": "Reactive-power-+",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1891,
+      "function": "holding",
+      "name": "Average-value-in-max",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2816,
+      "function": "holding",
+      "name": "Phase-1-current",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2817,
+      "function": "holding",
+      "name": "Phase-2-current",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2818,
+      "function": "holding",
+      "name": "Phase-2-current",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2819,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/socomec-diris-a20-modbus.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

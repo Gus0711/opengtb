@@ -1,0 +1,491 @@
+{
+  "slug": "arch-meter-pa33",
+  "vendor": "arch",
+  "vendorSlug": "arch",
+  "model": "meter-pa33",
+  "modelSlug": "meter-pa33",
+  "name": "arch meter-pa33",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "S(s-t)-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "T(t-r)-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "R-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "S-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "T-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Pf",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "PF",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Kw",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Kvar",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Kwh",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Kvarh",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 4098,
+      "function": "holding",
+      "name": "Meter-ratio",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4099,
+      "function": "holding",
+      "name": "Pt-ratio",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4100,
+      "function": "holding",
+      "name": "Ct-ratio",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4106,
+      "function": "holding",
+      "name": "Wiring-mode",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4352,
+      "function": "holding",
+      "name": "V-a",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4354,
+      "function": "holding",
+      "name": "I-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 4356,
+      "function": "holding",
+      "name": "Kw_a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 4358,
+      "function": "holding",
+      "name": "Kvar-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 4360,
+      "function": "holding",
+      "name": "Kva_a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4362,
+      "function": "holding",
+      "name": "Pf-a",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4364,
+      "function": "holding",
+      "name": "Kwh_a",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4366,
+      "function": "holding",
+      "name": "Kvarh_a",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4368,
+      "function": "holding",
+      "name": "Kvah_a",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4370,
+      "function": "holding",
+      "name": "V-b",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4372,
+      "function": "holding",
+      "name": "I_b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 4374,
+      "function": "holding",
+      "name": "Kw-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 4376,
+      "function": "holding",
+      "name": "Kvar-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 4378,
+      "function": "holding",
+      "name": "Kva_b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4380,
+      "function": "holding",
+      "name": "Pf_b",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4382,
+      "function": "holding",
+      "name": "Kwh-b",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4384,
+      "function": "holding",
+      "name": "Kvarh-b",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4386,
+      "function": "holding",
+      "name": "Kvah_b",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4388,
+      "function": "holding",
+      "name": "V_c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 4390,
+      "function": "holding",
+      "name": "I-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 4392,
+      "function": "holding",
+      "name": "Kw-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 4394,
+      "function": "holding",
+      "name": "Kvar-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 4396,
+      "function": "holding",
+      "name": "Kva-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4398,
+      "function": "holding",
+      "name": "Pf_c",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4400,
+      "function": "holding",
+      "name": "Kwh-c",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4402,
+      "function": "holding",
+      "name": "Kvarh-c",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4406,
+      "function": "holding",
+      "name": "V_avg(v_d)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 4408,
+      "function": "holding",
+      "name": "I-avg(i-d)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 4410,
+      "function": "holding",
+      "name": "Kw_tot(kw_d)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 4412,
+      "function": "holding",
+      "name": "Kvar_tot(kvar_d)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 4414,
+      "function": "holding",
+      "name": "Kva-tot(kva-d)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 4416,
+      "function": "holding",
+      "name": "Pf-tot(pf-d)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4418,
+      "function": "holding",
+      "name": "Kwh-tot(kwh-d)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4420,
+      "function": "holding",
+      "name": "Kvarh-totkvarh-d)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4422,
+      "function": "holding",
+      "name": "Kvah-tot(kvah-d)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4608,
+      "function": "holding",
+      "name": "V_a",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 4610,
+      "function": "holding",
+      "name": "I_a",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4612,
+      "function": "holding",
+      "name": "Kw_a",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 4614,
+      "function": "holding",
+      "name": "Kvar-a",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/arch-meter-pa33.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "slug": "finder-7m-38",
+  "vendor": "Finder",
+  "vendorSlug": "finder",
+  "model": "7M.38",
+  "modelSlug": "7m-38",
+  "name": "Finder 7M.38",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 462,
+      "function": "holding",
+      "name": "Counter N1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 464,
+      "function": "holding",
+      "name": "Counter N2",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 466,
+      "function": "holding",
+      "name": "Counter N3",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 468,
+      "function": "holding",
+      "name": "Counter N4",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 470,
+      "function": "holding",
+      "name": "Counter C1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 472,
+      "function": "holding",
+      "name": "Counter C2",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 474,
+      "function": "holding",
+      "name": "Counter C3",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 476,
+      "function": "holding",
+      "name": "Counter C4",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 478,
+      "function": "holding",
+      "name": "Counter C5",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 480,
+      "function": "holding",
+      "name": "Counter C6",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 482,
+      "function": "holding",
+      "name": "Counter C7",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 484,
+      "function": "holding",
+      "name": "Counter C8",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 2498,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 2500,
+      "function": "holding",
+      "name": "L1 Voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 2502,
+      "function": "holding",
+      "name": "L2 Voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 2504,
+      "function": "holding",
+      "name": "L3 Voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 2516,
+      "function": "holding",
+      "name": "L1 Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 2518,
+      "function": "holding",
+      "name": "L2 Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 2520,
+      "function": "holding",
+      "name": "L3 Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 2530,
+      "function": "holding",
+      "name": "L1 active Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 2532,
+      "function": "holding",
+      "name": "L2 active Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 2534,
+      "function": "holding",
+      "name": "L3 active Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 2536,
+      "function": "holding",
+      "name": "Total active Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 2538,
+      "function": "holding",
+      "name": "L1 reactive Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 2540,
+      "function": "holding",
+      "name": "L2 reactive Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 2542,
+      "function": "holding",
+      "name": "L3 reactive Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 2544,
+      "function": "holding",
+      "name": "Total reactive Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 2546,
+      "function": "holding",
+      "name": "L1 apparent Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VoltAmps",
+      "access": "r"
+    },
+    {
+      "address": 2548,
+      "function": "holding",
+      "name": "L2 apparent Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VoltAmps",
+      "access": "r"
+    },
+    {
+      "address": 2550,
+      "function": "holding",
+      "name": "L3 apparent Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VoltAmps",
+      "access": "r"
+    },
+    {
+      "address": 2552,
+      "function": "holding",
+      "name": "Total apparent Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VoltAmps",
+      "access": "r"
+    },
+    {
+      "address": 2554,
+      "function": "holding",
+      "name": "L1 Power Factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2556,
+      "function": "holding",
+      "name": "L2 Power Factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2558,
+      "function": "holding",
+      "name": "L3 Power Factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2560,
+      "function": "holding",
+      "name": "Total Power Factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-gateway",
+    "ref": "20de1794f20f946fa9d9e81effeee6d47258c3a7",
+    "needsReview": true,
+    "reviewReasons": [
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

@@ -1,0 +1,470 @@
+{
+  "slug": "veris-e34",
+  "vendor": "veris",
+  "vendorSlug": "veris",
+  "model": "e34",
+  "modelSlug": "e34",
+  "name": "veris e34",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 10101,
+      "function": "holding",
+      "name": "Total-kwh-(msw)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 10109,
+      "function": "holding",
+      "name": "Total-kw",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 10113,
+      "function": "holding",
+      "name": "Total-kva",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 10115,
+      "function": "holding",
+      "name": "Total-pf",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "PF",
+      "access": "r"
+    },
+    {
+      "address": 10119,
+      "function": "holding",
+      "name": "Average-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amperes",
+      "access": "r"
+    },
+    {
+      "address": 10121,
+      "function": "holding",
+      "name": "Present-kw-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 10127,
+      "function": "holding",
+      "name": "Present-current-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amperes",
+      "access": "r"
+    },
+    {
+      "address": 10129,
+      "function": "holding",
+      "name": "Max-kw-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 10135,
+      "function": "holding",
+      "name": "Max-current-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amperes",
+      "access": "r"
+    },
+    {
+      "address": 10137,
+      "function": "holding",
+      "name": "Max-kw",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 10143,
+      "function": "holding",
+      "name": "Max-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amperes",
+      "access": "r"
+    },
+    {
+      "address": 10145,
+      "function": "holding",
+      "name": "Voltage,-L-l,-average-of-3-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 10147,
+      "function": "holding",
+      "name": "Voltage,-L-n,-average-of-3-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 10149,
+      "function": "holding",
+      "name": "Frequency-(derived-from-phase-a)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hertz",
+      "access": "r"
+    },
+    {
+      "address": 10151,
+      "function": "holding",
+      "name": "Thd-current,-weighted-average-of-3-phases",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10153,
+      "function": "holding",
+      "name": "Thd-voltage-L-l,-weighted-average-of-3-phases",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10155,
+      "function": "holding",
+      "name": "Thd-voltage-L-n,-weighted-average-of-3-phases",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10157,
+      "function": "holding",
+      "name": "Snapshot-kwh-(msw)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 10301,
+      "function": "holding",
+      "name": "Kwh-(msw)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 10309,
+      "function": "holding",
+      "name": "Kw",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 10313,
+      "function": "holding",
+      "name": "Kva",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 10315,
+      "function": "holding",
+      "name": "Pf",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "PF",
+      "access": "r"
+    },
+    {
+      "address": 10317,
+      "function": "holding",
+      "name": "Current-angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "degrees-angular",
+      "access": "r"
+    },
+    {
+      "address": 10319,
+      "function": "holding",
+      "name": "Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amperes",
+      "access": "r"
+    },
+    {
+      "address": 10321,
+      "function": "holding",
+      "name": "Present-kw-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 10327,
+      "function": "holding",
+      "name": "Present-current-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amperes",
+      "access": "r"
+    },
+    {
+      "address": 10329,
+      "function": "holding",
+      "name": "Max-kw-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 10335,
+      "function": "holding",
+      "name": "Max-current-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amperes",
+      "access": "r"
+    },
+    {
+      "address": 10337,
+      "function": "holding",
+      "name": "Max-kw",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 10343,
+      "function": "holding",
+      "name": "Max-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amperes",
+      "access": "r"
+    },
+    {
+      "address": 10345,
+      "function": "holding",
+      "name": "Voltage,-L-L",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 10347,
+      "function": "holding",
+      "name": "Voltage,-L-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 10349,
+      "function": "holding",
+      "name": "Frequency-(derived-from-phase-a)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hertz",
+      "access": "r"
+    },
+    {
+      "address": 10351,
+      "function": "holding",
+      "name": "Thd-current",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10353,
+      "function": "holding",
+      "name": "Thd-voltage-L-L",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10355,
+      "function": "holding",
+      "name": "Thd-voltage-L-N",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10357,
+      "function": "holding",
+      "name": "Kwh-snapshot-(msw)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 10501,
+      "function": "holding",
+      "name": "Kwh-(msw)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 10509,
+      "function": "holding",
+      "name": "Kw",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 10513,
+      "function": "holding",
+      "name": "Kva",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 10515,
+      "function": "holding",
+      "name": "Pf",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "PF",
+      "access": "r"
+    },
+    {
+      "address": 10517,
+      "function": "holding",
+      "name": "Current-angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "degrees-angular",
+      "access": "r"
+    },
+    {
+      "address": 10519,
+      "function": "holding",
+      "name": "Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amperes",
+      "access": "r"
+    },
+    {
+      "address": 10521,
+      "function": "holding",
+      "name": "Present-kw-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 10527,
+      "function": "holding",
+      "name": "Present-current-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amperes",
+      "access": "r"
+    },
+    {
+      "address": 10529,
+      "function": "holding",
+      "name": "Max-kw-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 10535,
+      "function": "holding",
+      "name": "Max-current-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amperes",
+      "access": "r"
+    },
+    {
+      "address": 10537,
+      "function": "holding",
+      "name": "Max-kw",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 10543,
+      "function": "holding",
+      "name": "Max-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amperes",
+      "access": "r"
+    },
+    {
+      "address": 10545,
+      "function": "holding",
+      "name": "Voltage,-L-L",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/veris-e34.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

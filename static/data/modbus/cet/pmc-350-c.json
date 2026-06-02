@@ -1,0 +1,459 @@
+{
+  "slug": "cet-pmc-350-c",
+  "vendor": "cet",
+  "vendorSlug": "cet",
+  "model": "pmc-350-c",
+  "modelSlug": "pmc-350-c",
+  "name": "cet pmc-350-c",
+  "equipmentType": "chaudiere",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Ubn",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Ucn",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Uln-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Uab",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Ubc",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Uca",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Ull-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Ia",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Ib",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Ic",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "I-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "kWa",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "kWb",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "kWc",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "kW-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Kvara",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Kvarb",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Kvarc",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Kvar-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "kVAa",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "kVAb",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "kVAc",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "kVA-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "PFa",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "PFb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "PFc",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 54,
+      "function": "holding",
+      "name": "PF-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 58,
+      "function": "holding",
+      "name": "Uan/Uab-(3P3W)-angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "D",
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "Ubn/Ubc-(3P3W)-angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "D",
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "Ucn/Uca-(3P3W)-angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "D",
+      "access": "r"
+    },
+    {
+      "address": 64,
+      "function": "holding",
+      "name": "Ia-angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "D",
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "holding",
+      "name": "Ib-angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "D",
+      "access": "r"
+    },
+    {
+      "address": 68,
+      "function": "holding",
+      "name": "Ic-angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "D",
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "In-(Calculated)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "holding",
+      "name": "IR1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "holding",
+      "name": "Displacement-PFa",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 76,
+      "function": "holding",
+      "name": "Displacement-PFb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 78,
+      "function": "holding",
+      "name": "Displacement-PFc",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "Displacement-PF-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "TC11",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 88,
+      "function": "holding",
+      "name": "TC21",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 90,
+      "function": "holding",
+      "name": "TC31",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 92,
+      "function": "holding",
+      "name": "TC41",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 96,
+      "function": "holding",
+      "name": "DI-status1,-2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 98,
+      "function": "holding",
+      "name": "DO-status-1,-3",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "Setpoint-alarm-status4",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 101,
+      "function": "holding",
+      "name": "Wiring-diagnostic-status5",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "SOE-pointer6",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "Device-operating-time7",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Hour",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/cet-pmc-350-c.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

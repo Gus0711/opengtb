@@ -1,0 +1,123 @@
+{
+  "slug": "solinteg-solinteg",
+  "vendor": "Solinteg",
+  "vendorSlug": "solinteg",
+  "model": "solinteg",
+  "modelSlug": "solinteg",
+  "name": "Solinteg solinteg",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 10994,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Phase A Power on Meter"
+    },
+    {
+      "address": 10996,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Phase B Power on Meter"
+    },
+    {
+      "address": 10998,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Phase C Power on Meter"
+    },
+    {
+      "address": 11010,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Grid Phase A Current"
+    },
+    {
+      "address": 11012,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Grid Phase B Current"
+    },
+    {
+      "address": 11014,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Grid Phase C Current"
+    },
+    {
+      "address": 11028,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "PV Input Total Power"
+    },
+    {
+      "address": 30258,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Battery power"
+    },
+    {
+      "address": 33000,
+      "function": "holding",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r",
+      "notes": "SOC"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

@@ -1,0 +1,1227 @@
+{
+  "slug": "deye-deye",
+  "vendor": "Deye",
+  "vendorSlug": "deye",
+  "model": "Deye",
+  "modelSlug": "deye",
+  "name": "Deye",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 40001,
+      "function": "holding",
+      "name": "Device type",
+      "label": "Gerätetyp",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40004,
+      "function": "holding",
+      "name": "Seriennummer",
+      "dataType": "string",
+      "size": 5,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40061,
+      "function": "holding",
+      "name": "Fernsperre",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40081,
+      "function": "holding",
+      "name": "SchalterModus",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40105,
+      "function": "holding",
+      "name": "ZeroExport power",
+      "label": "ZeroExport-Leistung",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40109,
+      "function": "holding",
+      "name": "Max A Charge",
+      "label": "Maximaler Ladestrom der Batterie",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40110,
+      "function": "holding",
+      "name": "Max A discharge",
+      "label": "Max A Entladung",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40116,
+      "function": "holding",
+      "name": "ShutDown battery capacity ShutDown",
+      "label": "Abschalten Batteriekapazität Herunterfahren",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 40117,
+      "function": "holding",
+      "name": "Restart battery capacityRestart",
+      "label": "Neu starten BatteriekapazitätNeustart",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 40118,
+      "function": "holding",
+      "name": "LowBatt battery capacityLowBatt",
+      "label": "Low Batterie Anzeige zum Abschalten der Batterie",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 40130,
+      "function": "holding",
+      "name": "Generator is charged to enable",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40131,
+      "function": "holding",
+      "name": "Grid is charged to enable",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40144,
+      "function": "holding",
+      "name": "Max Limit Power Output Grid Connection",
+      "label": "Begrenzen Sie die maximale Ausgangsleistung des Netzes",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40145,
+      "function": "holding",
+      "name": "\"External",
+      "label": "current",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "sensor clamp phase\"",
+      "access": "r"
+    },
+    {
+      "address": 40146,
+      "function": "holding",
+      "name": "Solar sell",
+      "label": "  Verkauf von Solar",
+      "dataType": "uint16",
+      "size": 2,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40149,
+      "function": "holding",
+      "name": "Sell mode time point 1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40150,
+      "function": "holding",
+      "name": "Sell mode time point 2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40151,
+      "function": "holding",
+      "name": "Sell mode time point 3",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40152,
+      "function": "holding",
+      "name": "Sell mode time point 4",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40153,
+      "function": "holding",
+      "name": "Sell mode time point 5",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40154,
+      "function": "holding",
+      "name": "Sell mode time point 6",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40155,
+      "function": "holding",
+      "name": "Sell mode Watt time 1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40156,
+      "function": "holding",
+      "name": "Sell mode Watt time 2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40157,
+      "function": "holding",
+      "name": "Sell mode Watt time 3",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40158,
+      "function": "holding",
+      "name": "Sell mode Watt time 4",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40159,
+      "function": "holding",
+      "name": "Sell mode Watt time 5",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40160,
+      "function": "holding",
+      "name": "Sell mode Watt time 6",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40167,
+      "function": "holding",
+      "name": "TOF_Cell SOC 1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 40168,
+      "function": "holding",
+      "name": "TOF_Cell SOC 2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 40169,
+      "function": "holding",
+      "name": "TOF_Cell SOC 3",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 40170,
+      "function": "holding",
+      "name": "TOF_Cell SOC 4",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 40171,
+      "function": "holding",
+      "name": "TOF_Cell SOC 5",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 40172,
+      "function": "holding",
+      "name": "TOF_Cell SOC 6",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 40173,
+      "function": "holding",
+      "name": "Time point 1 charge enable",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40174,
+      "function": "holding",
+      "name": "Time point 2 charge enable",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40175,
+      "function": "holding",
+      "name": "Time point 3 charge enable",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40176,
+      "function": "holding",
+      "name": "Time point 4 charge enable",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40177,
+      "function": "holding",
+      "name": "Time point 5 charge enable",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40178,
+      "function": "holding",
+      "name": "Time point 6 charge enable",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40341,
+      "function": "holding",
+      "name": "Max Solar Sell Power at Zero grid",
+      "label": "Maximale Solarverkaufsleistung bei null einspeisung",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40501,
+      "function": "holding",
+      "name": "Status",
+      "label": "Status (Standby, check, norm, altert, fault)",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40521,
+      "function": "holding",
+      "name": "Day Grid Buy Power Wh",
+      "label": "Tag Netzabnahme Strom Wh",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "kwh",
+      "access": "r"
+    },
+    {
+      "address": 40522,
+      "function": "holding",
+      "name": "Day_GridSell_Power Wh",
+      "label": "Tages Verkaufs leistung",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "kwh",
+      "access": "r"
+    },
+    {
+      "address": 40530,
+      "function": "holding",
+      "name": "Day_PV_Power Wh",
+      "label": "Tagesproduzierte leistung",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "kwh",
+      "access": "r"
+    },
+    {
+      "address": 40535,
+      "function": "holding",
+      "name": "Total PV power Wh low word",
+      "label": "Gesamt-PV-Leistung Wh niedriges Wort",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "kwh",
+      "access": "r"
+    },
+    {
+      "address": 40553,
+      "function": "holding",
+      "name": "AC Relay",
+      "label": "AC relay",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 40587,
+      "function": "holding",
+      "name": "battery temperature",
+      "label": "Batterietemperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 40588,
+      "function": "holding",
+      "name": "battery voltage",
+      "label": "Batteriespannung",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40589,
+      "function": "holding",
+      "name": "battery capacity",
+      "label": "Batteriekapazität",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 40591,
+      "function": "holding",
+      "name": "Battery output power",
+      "label": "Ausgangsleistung der Batterie",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40592,
+      "function": "holding",
+      "name": "Battery output current",
+      "label": "Ausgangsstrom der Batterie",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40593,
+      "function": "holding",
+      "name": "Corrected AH",
+      "label": "AH korrigiert",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "AH",
+      "access": "r"
+    },
+    {
+      "address": 40599,
+      "function": "holding",
+      "name": "Grid phase voltage A",
+      "label": "Netzphasenspannung L1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40600,
+      "function": "holding",
+      "name": "Grid phase voltage B",
+      "label": "Netzphasenspannung L2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40601,
+      "function": "holding",
+      "name": "Grid phase voltage C",
+      "label": "Netzphasenspannung L3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40605,
+      "function": "holding",
+      "name": "L1 phase power on the inner side of the grid",
+      "label": "L1 Phasenleistung auf der Innenseite des Netzes",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40606,
+      "function": "holding",
+      "name": "L2 phase power on the inner side of the grid",
+      "label": "L2 Phasenleistung auf der Innenseite des Netzes",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40607,
+      "function": "holding",
+      "name": "L3 phase power on the inner side of the grid",
+      "label": "L3 Phasenleistung auf der Innenseite des Netzes",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40608,
+      "function": "holding",
+      "name": "active power from side to side of the grid",
+      "label": "Wirkleistung von Seite zu Seite des Netzes",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40609,
+      "function": "holding",
+      "name": "Grid side - inside total apparent power",
+      "label": "Netzseite – innere Gesamtscheinleistung",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40610,
+      "function": "holding",
+      "name": "Grid-side frequency",
+      "label": "Grid Seite Frequenz",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 40611,
+      "function": "holding",
+      "name": "grid side inner current L1",
+      "label": "netzseitiger Innenstrom L1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40612,
+      "function": "holding",
+      "name": "grid side inner current L2",
+      "label": "netzseitiger Innenstrom L2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40613,
+      "function": "holding",
+      "name": "grid side inner current L3",
+      "label": "netzseitiger Innenstrom L3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40614,
+      "function": "holding",
+      "name": "Out-of-grid - current L1",
+      "label": "Außerhalb des Netzes – aktuelles L1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40615,
+      "function": "holding",
+      "name": "Out-of-grid - current L2",
+      "label": "Außerhalb des Netzes – aktuelles L2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40616,
+      "function": "holding",
+      "name": "Out-of-grid - current L3",
+      "label": "Außerhalb des Netzes – aktuelles L3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40617,
+      "function": "holding",
+      "name": "A Out-of-grid -power L1",
+      "label": "A Außerhalb des Netzes - Strom L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40618,
+      "function": "holding",
+      "name": "A Out-of-grid -power L2",
+      "label": "A Außerhalb des Netzes - Strom L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40619,
+      "function": "holding",
+      "name": "A Out-of-grid -power L3",
+      "label": "A Außerhalb des Netzes - Strom L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40620,
+      "function": "holding",
+      "name": "Out-of-grid –total power",
+      "label": "Außerhalb des Netzes – Gesamtleistung",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40621,
+      "function": "holding",
+      "name": "Out-of-grid –total apparent power",
+      "label": "Außerhalb des Netzes – Gesamtscheinleistung",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40622,
+      "function": "holding",
+      "name": "Grid-connected power factor PF",
+      "label": "Netzgekoppelter Leistungsfaktor PF",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40623,
+      "function": "holding",
+      "name": "Grid side A-phase power",
+      "label": "Netzseitiger L1-Phasen-Strom",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40624,
+      "function": "holding",
+      "name": "Grid side B-phase power",
+      "label": "Netzseitiger L2-Phasen-Strom",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40625,
+      "function": "holding",
+      "name": "Grid side C-phase power",
+      "label": "Netzseitiger L3-Phasen-Strom",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40626,
+      "function": "holding",
+      "name": "Grid side total power",
+      "label": "Netzseitige Gesamtleistung",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40628,
+      "function": "holding",
+      "name": "Inverter output phase voltage A",
+      "label": "Wechselrichter-Ausgangsphasenspannung L1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40629,
+      "function": "holding",
+      "name": "Inverter output phase voltage B",
+      "label": "Wechselrichter-Ausgangsphasenspannung L2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40630,
+      "function": "holding",
+      "name": "Inverter output phase voltage C",
+      "label": "Wechselrichter-Ausgangsphasenspannung L3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40631,
+      "function": "holding",
+      "name": "Inverter output phase current A",
+      "label": "Ausgangsphasenstrom des Wechselrichters L1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40632,
+      "function": "holding",
+      "name": "Inverter output phase current B",
+      "label": "Ausgangsphasenstrom des Wechselrichters L2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40633,
+      "function": "holding",
+      "name": "Inverter output phase current C",
+      "label": "Ausgangsphasenstrom des Wechselrichters L3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40634,
+      "function": "holding",
+      "name": "Inverter output phase power A",
+      "label": "  Ausgangsphase des Wechselrichters Macht L1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40635,
+      "function": "holding",
+      "name": "Inverter output phase power B",
+      "label": "Ausgangsphase des Wechselrichters Macht L2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40636,
+      "function": "holding",
+      "name": "Inverter output phase power C",
+      "label": "Ausgangsphase des Wechselrichters Leistung L3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40637,
+      "function": "holding",
+      "name": "Inverter output total power",
+      "label": "Gesamtleistung des Wechselrichters Leistung",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40638,
+      "function": "holding",
+      "name": "Inverter output total apparent power",
+      "label": "Gesamtleistung des Wechselrichters Scheinleistung",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40639,
+      "function": "holding",
+      "name": "Inverter frequency",
+      "label": "Wechselrichter frequenz",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 40641,
+      "function": "holding",
+      "name": "UPS load-side phase power A",
+      "label": "USV-lastseitige Phasenleistung L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40642,
+      "function": "holding",
+      "name": "UPS load-side phase power B",
+      "label": "USV-lastseitige Phasenleistung L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40643,
+      "function": "holding",
+      "name": "UPS load-side phase power C",
+      "label": "USV-lastseitige Phasenleistung L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40644,
+      "function": "holding",
+      "name": "UPS load-sidetotal power",
+      "label": "Lastseitige Gesamtleistung der USV",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40645,
+      "function": "holding",
+      "name": "Load phase voltage A",
+      "label": "Load phasenspannung L1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40646,
+      "function": "holding",
+      "name": "Load phase voltage B",
+      "label": "Load phasenspannung L2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40647,
+      "function": "holding",
+      "name": "Load phase voltage C",
+      "label": "Load phasenspannung L3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40648,
+      "function": "holding",
+      "name": "Load phase current A",
+      "label": "Load phasenstrom L1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40649,
+      "function": "holding",
+      "name": "Load phase current B",
+      "label": "Load phasenstrom L2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40650,
+      "function": "holding",
+      "name": "Load phase current C",
+      "label": "Load phasenstrom L3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40651,
+      "function": "holding",
+      "name": "Load phase power A",
+      "label": "Load phase Leistung L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40652,
+      "function": "holding",
+      "name": "Load phase power B",
+      "label": "Load phase Leistung L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40653,
+      "function": "holding",
+      "name": "Load phase power C",
+      "label": "Load phase Leistung L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40654,
+      "function": "holding",
+      "name": "Load totalpower",
+      "label": "Load Gesamtleistung",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40655,
+      "function": "holding",
+      "name": "Load phase apparent power",
+      "label": "Scheinleistung der Lastphase",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40656,
+      "function": "holding",
+      "name": "Load frequency",
+      "label": "Load Frequenz",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 40662,
+      "function": "holding",
+      "name": "Phase voltage of Gen port A",
+      "label": "Phasenspannung von Gen-Port L1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40663,
+      "function": "holding",
+      "name": "Phase voltage of Gen port B",
+      "label": "Phasenspannung von Gen-Port L2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40664,
+      "function": "holding",
+      "name": "Phase voltage of Gen port C",
+      "label": "Phasenspannung von Gen-Port L3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40665,
+      "function": "holding",
+      "name": "Phase power of Gen port A",
+      "label": "Phasenleistung von Gen-Port L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40666,
+      "function": "holding",
+      "name": "Phase power of Gen port B",
+      "label": "Phasenleistung von Gen-Port L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40667,
+      "function": "holding",
+      "name": "Phase power of Gen port C",
+      "label": "Phasenleistung von Gen-Port L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40668,
+      "function": "holding",
+      "name": "total power of Gen port",
+      "label": "Gesamtleistung des Gen-Ports",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40673,
+      "function": "holding",
+      "name": "PV1 input power",
+      "label": "PV1 Eingangsleistung",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40674,
+      "function": "holding",
+      "name": "PV2 input power",
+      "label": "PV2 Eingangsleistung",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40677,
+      "function": "holding",
+      "name": "Dc voltage 1",
+      "label": "Gleichspannung 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40678,
+      "function": "holding",
+      "name": "Dc current 1",
+      "label": "Gleichstrom 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40679,
+      "function": "holding",
+      "name": "Dc voltage 2",
+      "label": "Gleichspannung 2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40680,
+      "function": "holding",
+      "name": "Dc current 2",
+      "label": "Gleichstrom 2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0,
+      "unit": "A",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

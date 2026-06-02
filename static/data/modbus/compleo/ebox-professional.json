@@ -1,0 +1,370 @@
+{
+  "slug": "compleo-ebox-professional",
+  "vendor": "Compleo",
+  "vendorSlug": "compleo",
+  "model": "eBox Professional",
+  "modelSlug": "ebox-professional",
+  "name": "Compleo eBox Professional",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 0,
+      "function": "input",
+      "name": "id",
+      "label": "ID",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "input",
+      "name": "serial_number",
+      "label": "Serial Number",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "input",
+      "name": "active_protocol",
+      "label": "Active Protocol",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "input",
+      "name": "manufacturer",
+      "label": "Manufacturer",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 125,
+      "function": "input",
+      "name": "platform_type",
+      "label": "Platform Type",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 150,
+      "function": "input",
+      "name": "product_type",
+      "label": "Product Type",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 175,
+      "function": "input",
+      "name": "modbus_table_version",
+      "label": "Modbus Table Version",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 200,
+      "function": "input",
+      "name": "firmware",
+      "label": "Firmware",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 225,
+      "function": "input",
+      "name": "number_of_sockets",
+      "label": "Number Of Sockets",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 250,
+      "function": "input",
+      "name": "ocpp_state",
+      "label": "Ocpp State",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 275,
+      "function": "input",
+      "name": "status",
+      "label": "Status",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 300,
+      "function": "input",
+      "name": "cable_status",
+      "label": "Cable Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 301,
+      "function": "input",
+      "name": "voltage_phase_1",
+      "label": "Voltage Phase 1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 303,
+      "function": "input",
+      "name": "voltage_phase_2",
+      "label": "Voltage Phase 2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 305,
+      "function": "input",
+      "name": "voltage_phase_3",
+      "label": "Voltage Phase 3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 307,
+      "function": "input",
+      "name": "energy_meter_reading",
+      "label": "Energy Meter Reading",
+      "dataType": "float32",
+      "size": 2,
+      "scale": 1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1000,
+      "function": "input",
+      "name": "actual_max_current_phase_1",
+      "label": "Actual Max Current Phase 1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1002,
+      "function": "input",
+      "name": "actual_max_current_phase_2",
+      "label": "Actual Max Current Phase 2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1004,
+      "function": "input",
+      "name": "actual_max_current_phase_3",
+      "label": "Actual Max Current Phase 3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1006,
+      "function": "input",
+      "name": "current_phase_1",
+      "label": "Current Phase 1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1008,
+      "function": "input",
+      "name": "current_phase_2",
+      "label": "Current Phase 2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1010,
+      "function": "input",
+      "name": "current_phase_3",
+      "label": "Current Phase 3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1012,
+      "function": "holding",
+      "name": "max_current_phase_1",
+      "label": "Max Current Phase 1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1012,
+      "function": "holding",
+      "name": "max_current_phase_1",
+      "label": "Max Current Phase 1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "rw"
+    },
+    {
+      "address": 1014,
+      "function": "holding",
+      "name": "max_current_phase_2",
+      "label": "Max Current Phase 2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1014,
+      "function": "holding",
+      "name": "max_current_phase_2",
+      "label": "Max Current Phase 2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "rw"
+    },
+    {
+      "address": 1016,
+      "function": "holding",
+      "name": "max_current_phase_3",
+      "label": "Max Current Phase 3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1016,
+      "function": "holding",
+      "name": "max_current_phase_3",
+      "label": "Max Current Phase 3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "rw"
+    },
+    {
+      "address": 1018,
+      "function": "holding",
+      "name": "fallback_max_current_phase_1",
+      "label": "Fallback Max Current Phase 1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1020,
+      "function": "holding",
+      "name": "fallback_max_current_phase_2",
+      "label": "Fallback Max Current Phase 2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1022,
+      "function": "holding",
+      "name": "fallback_max_current_phase_3",
+      "label": "Fallback Max Current Phase 3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1024,
+      "function": "holding",
+      "name": "remaining_time_before_fallback",
+      "label": "Remaining Time Before Fallback",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "s",
+      "access": "r"
+    },
+    {
+      "address": 1025,
+      "function": "holding",
+      "name": "station_phase_setup_l1",
+      "label": "Station Phase Setup L1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1026,
+      "function": "holding",
+      "name": "station_phase_setup_l2",
+      "label": "Station Phase Setup L2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1027,
+      "function": "holding",
+      "name": "station_phase_setup_l3",
+      "label": "Station Phase Setup L3",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1028,
+      "function": "holding",
+      "name": "availability",
+      "label": "Availability",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-manager",
+    "ref": "8932e9a23c65e9f9fe333780bcb3477d81a80b7b",
+    "needsReview": true,
+    "reviewReasons": [
+      "Ordre d'octets non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

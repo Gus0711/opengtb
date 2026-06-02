@@ -1,0 +1,467 @@
+{
+  "slug": "kohler-decision-maker-340",
+  "vendor": "kohler",
+  "vendorSlug": "kohler",
+  "model": "decision-maker-340",
+  "modelSlug": "decision-maker-340",
+  "name": "kohler decision-maker-340",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "System-time",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Day-of-week",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Month",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "112",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Day",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "131",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Year",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Week-of-month",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Voltage-l1l2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Voltage-l2l3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Voltage-l3l1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Voltage-l1l0",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Voltage-l2l0",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Voltage-l3l0",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Alert-code",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "AeRGode",
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "Engine-speed",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Coolant-temp",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Oil-pressure",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Battery-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VDC",
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "L1-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "L2-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "L3-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Power-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "100",
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Total-real-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Percent-of-max.-Power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Status",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "01: Sw. Position (00=open; 01=auto; 10=run; 11=off)",
+      "access": "r"
+    },
+    {
+      "address": 47,
+      "function": "holding",
+      "name": "Engine-start-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Crank-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 49,
+      "function": "holding",
+      "name": "Crank-pause-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "Num-of-crank-cycles",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 51,
+      "function": "holding",
+      "name": "Engine-cooldown-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Over-voltage-time-delay",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 53,
+      "function": "holding",
+      "name": "Under-voltage-time-delay",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 54,
+      "function": "holding",
+      "name": "Starting-aid-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 55,
+      "function": "holding",
+      "name": "Aux-1-inhibit-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Aux-1-delay-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 57,
+      "function": "holding",
+      "name": "Aux-2-inhibit-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 58,
+      "function": "holding",
+      "name": "Aux-2-delay-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 59,
+      "function": "holding",
+      "name": "Aux-3-inhibit-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "Aux-3-delay-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 61,
+      "function": "holding",
+      "name": "Aux-4-inhibit-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "Aux-4-delay-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 63,
+      "function": "holding",
+      "name": "Over-voltage-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 64,
+      "function": "holding",
+      "name": "Under-voltage-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 65,
+      "function": "holding",
+      "name": "Over-freq-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "holding",
+      "name": "Under-freq-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 67,
+      "function": "holding",
+      "name": "Over-speed-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 68,
+      "function": "holding",
+      "name": "Low-battery-voltage-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VDC",
+      "access": "r"
+    },
+    {
+      "address": 69,
+      "function": "holding",
+      "name": "High-battery-voltage-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VDC",
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "System-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts, 105-14600",
+      "access": "r"
+    },
+    {
+      "address": 71,
+      "function": "holding",
+      "name": "System-frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz, 48-62",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/kohler-decision-maker-340.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont"
+    ]
+  }
+}

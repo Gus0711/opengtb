@@ -1,0 +1,2131 @@
+{
+  "slug": "phoenix-contact-eem-em3xx-eem-dm3xx-input-register-float",
+  "vendor": "Phoenix Contact EEM-EM3xx EEM-DM3xx",
+  "vendorSlug": "phoenix-contact-eem-em3xx-eem-dm3xx",
+  "model": "Input Register- Float",
+  "modelSlug": "input-register-float",
+  "name": "Phoenix Contact EEM-EM3xx EEM-DM3xx Input Register- Float",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 4096,
+      "function": "coil",
+      "name": "U L1-N",
+      "label": "Leiterspannung (L1<->N) ",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4098,
+      "function": "coil",
+      "name": "U L2-N",
+      "label": "Leiterspannung (L2<->N) ",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4100,
+      "function": "coil",
+      "name": "U L3-N",
+      "label": "Leiterspannung (L3<->N) ",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4102,
+      "function": "coil",
+      "name": "U L1-L2",
+      "label": "Leiterspannung (L1<->L2)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4104,
+      "function": "coil",
+      "name": "U L2-L3",
+      "label": "Leiterspannung (L2<->L3)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4106,
+      "function": "coil",
+      "name": "U L3-L1",
+      "label": "Leiterspannung (L3<->L1)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4108,
+      "function": "coil",
+      "name": "U-SYS",
+      "label": "Mittelwert der Leiterspannungen (U12 + U23 + U31) / 3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4110,
+      "function": "coil",
+      "name": "I-L1",
+      "label": "Strom L1",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4112,
+      "function": "coil",
+      "name": "I-L2",
+      "label": "Strom L2",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4114,
+      "function": "coil",
+      "name": "I-L3",
+      "label": "Strom L3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4116,
+      "function": "coil",
+      "name": "I-N",
+      "label": "Strom N",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4118,
+      "function": "coil",
+      "name": "I-SYS",
+      "label": "Mittelwert der Ströme (I1 + I2 + I3) / 3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4120,
+      "function": "coil",
+      "name": "PF-L1",
+      "label": "Leistungsfaktor L1 -: kapazitiv und +: induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4122,
+      "function": "coil",
+      "name": "PF-L2",
+      "label": "Leistungsfaktor L3 -: kapazitiv und +: induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4124,
+      "function": "coil",
+      "name": "PF-L3",
+      "label": "Leistungsfaktor L3 -: kapazitiv und +: induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4126,
+      "function": "coil",
+      "name": "ΣPF",
+      "label": "Summe Leistungsfaktor -: kapazitiv und +: induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4128,
+      "function": "coil",
+      "name": "P-L1",
+      "label": "Wirkleistung L1 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4130,
+      "function": "coil",
+      "name": "P-L2",
+      "label": "Wirkleistung L2 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4132,
+      "function": "coil",
+      "name": "P-L3",
+      "label": "Wirkleistung L3 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4134,
+      "function": "coil",
+      "name": "ΣP",
+      "label": "Summe Wirkleistung +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4136,
+      "function": "coil",
+      "name": "S-L1",
+      "label": "Scheinleistung L1 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4138,
+      "function": "coil",
+      "name": "S-L2",
+      "label": "Scheinleistung L2 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4140,
+      "function": "coil",
+      "name": "S-L3",
+      "label": "Scheinleistung L3 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4142,
+      "function": "coil",
+      "name": "ΣS",
+      "label": "Summe Scheinleistung +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4144,
+      "function": "coil",
+      "name": "Q-L1",
+      "label": "Blindleistung L1 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4146,
+      "function": "coil",
+      "name": "Q-L2",
+      "label": "Blindleistung L2 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4148,
+      "function": "coil",
+      "name": "Q-L3",
+      "label": "Blindleistung L3 +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4150,
+      "function": "coil",
+      "name": "ΣQ",
+      "label": "Summe Blindleistung +/-",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4152,
+      "function": "coil",
+      "name": "F",
+      "label": "Frequenz",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 4154,
+      "function": "coil",
+      "name": "Phasenfolge",
+      "label": "0,123: (CCW / rechts Drehend) 0,132: (CW / links Drehend) 0: Nicht verfügbar",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4352,
+      "function": "coil",
+      "name": "Z P+-L1",
+      "label": "Zähler gesamte Wirkarbeit Bezug L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4354,
+      "function": "coil",
+      "name": "Z P+-L2",
+      "label": "Zähler gesamte Wirkarbeit Bezug L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4356,
+      "function": "coil",
+      "name": "Z P+-L3",
+      "label": "Zähler gesamte Wirkarbeit Bezug L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4358,
+      "function": "coil",
+      "name": "Z ΣP+",
+      "label": "Zähler gesamte Wirkarbeit Bezug Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4360,
+      "function": "coil",
+      "name": "Z P--L1",
+      "label": "Zähler gesamte Wirkarbeit Abgabe L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4362,
+      "function": "coil",
+      "name": "Z P--L2",
+      "label": "Zähler gesamte Wirkarbeit Abgabe L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4364,
+      "function": "coil",
+      "name": "Z P--L3",
+      "label": "Zähler gesamte Wirkarbeit Abgabe L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4366,
+      "function": "coil",
+      "name": "Z ΣP-",
+      "label": "Zähler gesamte Wirkarbeit Abgabe Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4368,
+      "function": "coil",
+      "name": "Z S+i-L1",
+      "label": "Zähler gesamte Scheinarbeit Bezug induktiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4370,
+      "function": "coil",
+      "name": "Z S+i-L2",
+      "label": "Zähler gesamte Scheinarbeit Bezug induktiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4372,
+      "function": "coil",
+      "name": "Z S+i-L3",
+      "label": "Zähler gesamte Scheinarbeit Bezug induktiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4374,
+      "function": "coil",
+      "name": "Z ΣS+i",
+      "label": "Zähler gesamte Scheinarbeit Bezug induktiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4376,
+      "function": "coil",
+      "name": "Z S-i-L1",
+      "label": "Zähler gesamte Scheinarbeit Abgabe induktiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4378,
+      "function": "coil",
+      "name": "Z S-i-L2",
+      "label": "Zähler gesamte Scheinarbeit Abgabe induktiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4380,
+      "function": "coil",
+      "name": "Z S-i-L3",
+      "label": "Zähler gesamte Scheinarbeit Abgabe induktiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4382,
+      "function": "coil",
+      "name": "Z ΣS-i",
+      "label": "Zähler gesamte Scheinarbeit Abgabe induktiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4384,
+      "function": "coil",
+      "name": "Z S+k-L1",
+      "label": "Zähler gesamte Scheinarbeit Bezug kapazitiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4386,
+      "function": "coil",
+      "name": "Z S+k-L2",
+      "label": "Zähler gesamte Scheinarbeit Bezug kapazitiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4388,
+      "function": "coil",
+      "name": "Z S+k-L3",
+      "label": "Zähler gesamte Scheinarbeit Bezug kapazitiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4390,
+      "function": "coil",
+      "name": "Z ΣS+k",
+      "label": "Zähler gesamte Scheinarbeit Bezug kapazitiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4392,
+      "function": "coil",
+      "name": "Z S-k-L1",
+      "label": "Zähler gesamte Scheinarbeit Abgabe kapazitiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4394,
+      "function": "coil",
+      "name": "Z S-k-L2",
+      "label": "Zähler gesamte Scheinarbeit Abgabe kapazitiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4396,
+      "function": "coil",
+      "name": "Z S-k-L3",
+      "label": "Zähler gesamte Scheinarbeit Abgabe kapazitiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4398,
+      "function": "coil",
+      "name": "Z ΣS-k",
+      "label": "Zähler gesamte Scheinarbeit Abgabe kapazitiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4400,
+      "function": "coil",
+      "name": "Z Q+i-L1",
+      "label": "Zähler gesamte Blindarbeit Bezug induktiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4402,
+      "function": "coil",
+      "name": "Z Q+i-L2",
+      "label": "Zähler gesamte Blindarbeit Bezug induktiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4404,
+      "function": "coil",
+      "name": "Z Q+i-L3",
+      "label": "Zähler gesamte Blindarbeit Bezug induktiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4406,
+      "function": "coil",
+      "name": "Z ΣQ+i",
+      "label": "Zähler gesamte Blindarbeit Bezug induktiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4408,
+      "function": "coil",
+      "name": "Z Q-i-L1",
+      "label": "Zähler gesamte Blindarbeit Abgabe induktiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4410,
+      "function": "coil",
+      "name": "Z Q-i-L2",
+      "label": "Zähler gesamte Blindarbeit Abgabe induktiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4412,
+      "function": "coil",
+      "name": "Z Q-i-L3",
+      "label": "Zähler gesamte Blindarbeit Abgabe induktiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4414,
+      "function": "coil",
+      "name": "Z ΣSQ-i",
+      "label": "Zähler gesamte Blindarbeit Abgabe induktiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4416,
+      "function": "coil",
+      "name": "Z Q+k-L1",
+      "label": "Zähler gesamte Blindarbeit Bezug kapazitiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4418,
+      "function": "coil",
+      "name": "Z Q+k-L2",
+      "label": "Zähler gesamte Blindarbeit Bezug kapazitiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4420,
+      "function": "coil",
+      "name": "Z Q+k-L3",
+      "label": "Zähler gesamte Blindarbeit Bezug kapazitiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4422,
+      "function": "coil",
+      "name": "Z ΣQ+k",
+      "label": "Zähler gesamte Blindarbeit Bezug kapazitiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4424,
+      "function": "coil",
+      "name": "Z Q-k-L1",
+      "label": "Zähler gesamte Blindarbeit Abgabe kapazitiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4426,
+      "function": "coil",
+      "name": "Z Q-k-L2",
+      "label": "Zähler gesamte Blindarbeit Abgabe kapazitiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4428,
+      "function": "coil",
+      "name": "Z Q-k-L3",
+      "label": "Zähler gesamte Blindarbeit Abgabe kapazitiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4430,
+      "function": "coil",
+      "name": "Z ΣQ-k",
+      "label": "Zähler gesamte Blindarbeit Abgabe kapazitiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4608,
+      "function": "coil",
+      "name": "Z1 P+-L1",
+      "label": "Zählertarif 1 Wirkarbeit Bezug L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4610,
+      "function": "coil",
+      "name": "Z1 P+-L2",
+      "label": "Zählertarif 1 Wirkarbeit Bezug L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4612,
+      "function": "coil",
+      "name": "Z1 P+-L3",
+      "label": "Zählertarif 1 Wirkarbeit Bezug L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4614,
+      "function": "coil",
+      "name": "Z1 ΣP+",
+      "label": "Zählertarif 1 Wirkarbeit Bezug Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4616,
+      "function": "coil",
+      "name": "Z1 P--L1",
+      "label": "Zählertarif 1 Wirkarbeit Abgabe L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4618,
+      "function": "coil",
+      "name": "Z1 P--L2",
+      "label": "Zählertarif 1 Wirkarbeit Abgabe L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4620,
+      "function": "coil",
+      "name": "Z1 P--L3",
+      "label": "Zählertarif 1 Wirkarbeit Abgabe L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4622,
+      "function": "coil",
+      "name": "Z1 ΣP-",
+      "label": "Zählertarif 1 Wirkarbeit Abgabe Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4624,
+      "function": "coil",
+      "name": "Z1 S+i-L1",
+      "label": "Zählertarif 1 Scheinarbeit Bezug induktiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4626,
+      "function": "coil",
+      "name": "Z1 S+i-L2",
+      "label": "Zählertarif 1 Scheinarbeit Bezug induktiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4628,
+      "function": "coil",
+      "name": "Z1 S+i-L3",
+      "label": "Zählertarif 1 Scheinarbeit Bezug induktiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4630,
+      "function": "coil",
+      "name": "Z1 ΣS+i",
+      "label": "Zählertarif 1 Scheinarbeit Bezug induktiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4632,
+      "function": "coil",
+      "name": "Z1 S-i-L1",
+      "label": "Zählertarif 1 Scheinarbeit Abgabe induktiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4634,
+      "function": "coil",
+      "name": "Z1 S-i-L2",
+      "label": "Zählertarif 1 Scheinarbeit Abgabe induktiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4636,
+      "function": "coil",
+      "name": "Z1 S-i-L3",
+      "label": "Zählertarif 1 Scheinarbeit Abgabe induktiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4638,
+      "function": "coil",
+      "name": "Z1 ΣS-i",
+      "label": "Zählertarif 1 Scheinarbeit Abgabe induktiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4640,
+      "function": "coil",
+      "name": "Z1 S+k-L1",
+      "label": "Zählertarif 1 Scheinarbeit Bezug kapazitiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4642,
+      "function": "coil",
+      "name": "Z1 S+k-L2",
+      "label": "Zählertarif 1 Scheinarbeit Bezug kapazitiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4644,
+      "function": "coil",
+      "name": "Z1 S+k-L3",
+      "label": "Zählertarif 1 Scheinarbeit Bezug kapazitiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4646,
+      "function": "coil",
+      "name": "Z1 ΣS+k",
+      "label": "Zählertarif 1 Scheinarbeit Bezug kapazitiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4648,
+      "function": "coil",
+      "name": "Z1 S-k-L1",
+      "label": "Zählertarif 1 Scheinarbeit Abgabe kapazitiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4650,
+      "function": "coil",
+      "name": "Z1 S-k-L2",
+      "label": "Zählertarif 1 Scheinarbeit Abgabe kapazitiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4652,
+      "function": "coil",
+      "name": "Z1 S-k-L3",
+      "label": "Zählertarif 1 Scheinarbeit Abgabe kapazitiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4654,
+      "function": "coil",
+      "name": "Z1 ΣS-k",
+      "label": "Zählertarif 1 Scheinarbeit Abgabe kapazitiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4656,
+      "function": "coil",
+      "name": "Z1 Q+i-L1",
+      "label": "Zählertarif 1 Blindarbeit Bezug induktiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4658,
+      "function": "coil",
+      "name": "Z1 Q+i-L2",
+      "label": "Zählertarif 1 Blindarbeit Bezug induktiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4660,
+      "function": "coil",
+      "name": "Z1 Q+i-L3",
+      "label": "Zählertarif 1 Blindarbeit Bezug induktiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4662,
+      "function": "coil",
+      "name": "Z1 ΣQ+i",
+      "label": "Zählertarif 1 Blindarbeit Bezug induktiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4664,
+      "function": "coil",
+      "name": "Z1 Q-i-L1",
+      "label": "Zählertarif 1 Blindarbeit Abgabe induktiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4666,
+      "function": "coil",
+      "name": "Z1 Q-i-L2",
+      "label": "Zählertarif 1 Blindarbeit Abgabe induktiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4668,
+      "function": "coil",
+      "name": "Z1 Q-i-L3",
+      "label": "Zählertarif 1 Blindarbeit Abgabe induktiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4670,
+      "function": "coil",
+      "name": "Z1 ΣSQ-i",
+      "label": "Zählertarif 1 Blindarbeit Abgabe induktiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4672,
+      "function": "coil",
+      "name": "Z1 Q+k-L1",
+      "label": "Zählertarif 1 Blindarbeit Bezug kapazitiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4674,
+      "function": "coil",
+      "name": "Z1 Q+k-L2",
+      "label": "Zählertarif 1 Blindarbeit Bezug kapazitiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4676,
+      "function": "coil",
+      "name": "Z1 Q+k-L3",
+      "label": "Zählertarif 1 Blindarbeit Bezug kapazitiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4678,
+      "function": "coil",
+      "name": "Z1 ΣQ+k",
+      "label": "Zählertarif 1 Blindarbeit Bezug kapazitiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4680,
+      "function": "coil",
+      "name": "Z1 Q-k-L1",
+      "label": "Zählertarif 1 Blindarbeit Abgabe kapazitiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4682,
+      "function": "coil",
+      "name": "Z1 Q-k-L2",
+      "label": "Zählertarif 1 Blindarbeit Abgabe kapazitiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4684,
+      "function": "coil",
+      "name": "Z1 Q-k-L3",
+      "label": "Zählertarif 1 Blindarbeit Abgabe kapazitiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4686,
+      "function": "coil",
+      "name": "Z1 ΣQ-k",
+      "label": "Zählertarif 1 Blindarbeit Abgabe kapazitiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4864,
+      "function": "coil",
+      "name": "Z2 P+-L1",
+      "label": "Zählertarif 2 Wirkarbeit Bezug L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4866,
+      "function": "coil",
+      "name": "Z2 P+-L2",
+      "label": "Zählertarif 2 Wirkarbeit Bezug L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4868,
+      "function": "coil",
+      "name": "Z2 P+-L3",
+      "label": "Zählertarif 2 Wirkarbeit Bezug L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4870,
+      "function": "coil",
+      "name": "Z2 ΣP+",
+      "label": "Zählertarif 2 Wirkarbeit Bezug Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4872,
+      "function": "coil",
+      "name": "Z2 P--L1",
+      "label": "Zählertarif 2 Wirkarbeit Abgabe L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4874,
+      "function": "coil",
+      "name": "Z2 P--L2",
+      "label": "Zählertarif 2 Wirkarbeit Abgabe L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4876,
+      "function": "coil",
+      "name": "Z2 P--L3",
+      "label": "Zählertarif 2 Wirkarbeit Abgabe L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4878,
+      "function": "coil",
+      "name": "Z2 ΣP-",
+      "label": "Zählertarif 2 Wirkarbeit Abgabe Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4880,
+      "function": "coil",
+      "name": "Z2 S+i-L1",
+      "label": "Zählertarif 2 Scheinarbeit Bezug induktiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4882,
+      "function": "coil",
+      "name": "Z2 S+i-L2",
+      "label": "Zählertarif 2 Scheinarbeit Bezug induktiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4884,
+      "function": "coil",
+      "name": "Z2 S+i-L3",
+      "label": "Zählertarif 2 Scheinarbeit Bezug induktiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4886,
+      "function": "coil",
+      "name": "Z2 ΣS+i",
+      "label": "Zählertarif 2 Scheinarbeit Bezug induktiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4888,
+      "function": "coil",
+      "name": "Z2 S-i-L1",
+      "label": "Zählertarif 2 Scheinarbeit Abgabe induktiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4890,
+      "function": "coil",
+      "name": "Z2 S-i-L2",
+      "label": "Zählertarif 2 Scheinarbeit Abgabe induktiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4892,
+      "function": "coil",
+      "name": "Z2 S-i-L3",
+      "label": "Zählertarif 2 Scheinarbeit Abgabe induktiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4894,
+      "function": "coil",
+      "name": "Z2 ΣS-i",
+      "label": "Zählertarif 2 Scheinarbeit Abgabe induktiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4896,
+      "function": "coil",
+      "name": "Z2 S+k-L1",
+      "label": "Zählertarif 2 Scheinarbeit Bezug kapazitiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4898,
+      "function": "coil",
+      "name": "Z2 S+k-L2",
+      "label": "Zählertarif 2 Scheinarbeit Bezug kapazitiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4900,
+      "function": "coil",
+      "name": "Z2 S+k-L3",
+      "label": "Zählertarif 2 Scheinarbeit Bezug kapazitiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4902,
+      "function": "coil",
+      "name": "Z2 ΣS+k",
+      "label": "Zählertarif 2 Scheinarbeit Bezug kapazitiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4904,
+      "function": "coil",
+      "name": "Z2 S-k-L1",
+      "label": "Zählertarif 2 Scheinarbeit Abgabe kapazitiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4906,
+      "function": "coil",
+      "name": "Z2 S-k-L2",
+      "label": "Zählertarif 2 Scheinarbeit Abgabe kapazitiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4908,
+      "function": "coil",
+      "name": "Z2 S-k-L3",
+      "label": "Zählertarif 2 Scheinarbeit Abgabe kapazitiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4910,
+      "function": "coil",
+      "name": "Z2 ΣS-k",
+      "label": "Zählertarif 2 Scheinarbeit Abgabe kapazitiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4912,
+      "function": "coil",
+      "name": "Z2 Q+i-L1",
+      "label": "Zählertarif 2 Blindarbeit Bezug induktiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4914,
+      "function": "coil",
+      "name": "Z2 Q+i-L2",
+      "label": "Zählertarif 2 Blindarbeit Bezug induktiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4916,
+      "function": "coil",
+      "name": "Z2 Q+i-L3",
+      "label": "Zählertarif 2 Blindarbeit Bezug induktiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4918,
+      "function": "coil",
+      "name": "Z2 ΣQ+i",
+      "label": "Zählertarif 2 Blindarbeit Bezug induktiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4920,
+      "function": "coil",
+      "name": "Z2 Q-i-L1",
+      "label": "Zählertarif 2 Blindarbeit Abgabe induktiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4922,
+      "function": "coil",
+      "name": "Z2 Q-i-L2",
+      "label": "Zählertarif 2 Blindarbeit Abgabe induktiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4924,
+      "function": "coil",
+      "name": "Z2 Q-i-L3",
+      "label": "Zählertarif 2 Blindarbeit Abgabe induktiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4926,
+      "function": "coil",
+      "name": "Z2 ΣSQ-i",
+      "label": "Zählertarif 2 Blindarbeit Abgabe induktiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4928,
+      "function": "coil",
+      "name": "Z2 Q+k-L1",
+      "label": "Zählertarif 2 Blindarbeit Bezug kapazitiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4930,
+      "function": "coil",
+      "name": "Z2 Q+k-L2",
+      "label": "Zählertarif 2 Blindarbeit Bezug kapazitiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4932,
+      "function": "coil",
+      "name": "Z2 Q+k-L3",
+      "label": "Zählertarif 2 Blindarbeit Bezug kapazitiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4934,
+      "function": "coil",
+      "name": "Z2 ΣQ+k",
+      "label": "Zählertarif 2 Blindarbeit Bezug kapazitiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4936,
+      "function": "coil",
+      "name": "Z2 Q-k-L1",
+      "label": "Zählertarif 2 Blindarbeit Abgabe kapazitiv L1 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4938,
+      "function": "coil",
+      "name": "Z2 Q-k-L2",
+      "label": "Zählertarif 2 Blindarbeit Abgabe kapazitiv L2 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4940,
+      "function": "coil",
+      "name": "Z2 Q-k-L3",
+      "label": "Zählertarif 2 Blindarbeit Abgabe kapazitiv L3 (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4942,
+      "function": "coil",
+      "name": "Z2 ΣQ-k",
+      "label": "Zählertarif 2 Blindarbeit Abgabe kapazitiv Σ (nicht zurücksetzbar)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 5120,
+      "function": "coil",
+      "name": "T ΣP+",
+      "label": "Teilenergiezähler Wirkarbeit System Bezug",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 5122,
+      "function": "coil",
+      "name": "T ΣP-",
+      "label": "Teilenergiezähler Wirkarbeit System Abgabe",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 5124,
+      "function": "coil",
+      "name": "T ΣS+i",
+      "label": "Teilenergiezähler Scheinarbeit induktiv System Bezug",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 5126,
+      "function": "coil",
+      "name": "T ΣS-i",
+      "label": "Teilenergiezähler Scheinarbeit induktiv System Abgabe",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 5128,
+      "function": "coil",
+      "name": "T ΣS+k",
+      "label": "Teilenergiezähler Scheinarbeit kapazitiv System Bezug",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 5130,
+      "function": "coil",
+      "name": "T ΣS-k",
+      "label": "Teilenergiezähler Scheinarbeit kapazitiv System Abgabe",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 5132,
+      "function": "coil",
+      "name": "T ΣQ+i",
+      "label": "Teilenergiezähler Blindarbeit induktiv System Bezug",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 5134,
+      "function": "coil",
+      "name": "T ΣQ-i",
+      "label": "Teilenergiezähler Blindarbeit induktiv System Abgabe",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 5136,
+      "function": "coil",
+      "name": "T ΣQ+k",
+      "label": "Teilenergiezähler Blindarbeit kapazitiv System Bezug",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 5138,
+      "function": "coil",
+      "name": "T ΣQ-k",
+      "label": "Teilenergiezähler Blindarbeit kapazitiv System Abgabe",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 5140,
+      "function": "coil",
+      "name": " B ΣP",
+      "label": "Bilanzierender Energiezähler Wirkarbeit System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 5142,
+      "function": "coil",
+      "name": "B ΣSi",
+      "label": "Bilanzierender Energiezähler Scheinarbeit System induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 5144,
+      "function": "coil",
+      "name": "B ΣSk",
+      "label": "Bilanzierender Energiezähler Scheinarbeit System kapazitiv",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 5146,
+      "function": "coil",
+      "name": "B ΣQi",
+      "label": "Bilanzierender Energiezähler Blindarbeit System induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 5148,
+      "function": "coil",
+      "name": "B ΣQk",
+      "label": "Bilanzierender Energiezähler Blindarbeit System kapazitiv",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 5376,
+      "function": "coil",
+      "name": "D U L1-L2",
+      "label": "Durchschnitt Leiterspannung (L1<->L2)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5378,
+      "function": "coil",
+      "name": "D U L2-L3",
+      "label": "Durchschnitt Leiterspannung (L2<->L3)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5380,
+      "function": "coil",
+      "name": "D U L3-L1",
+      "label": "Durchschnitt Leiterspannung (L3<->L1)",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5382,
+      "function": "coil",
+      "name": "D U L1-N",
+      "label": "Durchschnitt Leiterspannung (L1<->N) ",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5384,
+      "function": "coil",
+      "name": "D U L2-N",
+      "label": "Durchschnitt Leiterspannung (L2<->N) ",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5386,
+      "function": "coil",
+      "name": "D U L3-N",
+      "label": "Durchschnitt Leiterspannung (L3<->N) ",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5388,
+      "function": "coil",
+      "name": "D F",
+      "label": "Durchschnitt Frequenz",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 5390,
+      "function": "coil",
+      "name": "D I-L1",
+      "label": "Durchschnitt Strom L1",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5392,
+      "function": "coil",
+      "name": "D I-L2",
+      "label": "Durchschnitt Strom L2",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5394,
+      "function": "coil",
+      "name": "D I-L3",
+      "label": "Durchschnitt Strom L3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5396,
+      "function": "coil",
+      "name": "D I-N",
+      "label": "Durchschnitt Strom N",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5398,
+      "function": "coil",
+      "name": "D I-SYS",
+      "label": "Durchschnitt Strom I-SYS",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5400,
+      "function": "coil",
+      "name": "D P+L1",
+      "label": "Durchschnitt Wirkleistung Bezug L1",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5402,
+      "function": "coil",
+      "name": "D P-L1",
+      "label": "Durchschnitt Wirkleistung Abgabe L1",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5404,
+      "function": "coil",
+      "name": "D P+L2",
+      "label": "Durchschnitt Wirkleistung Bezug L2",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5406,
+      "function": "coil",
+      "name": "D P-L2",
+      "label": "Durchschnitt Wirkleistung Abgabe L2",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5408,
+      "function": "coil",
+      "name": "D P+L3",
+      "label": "Durchschnitt Wirkleistung Bezug L3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5410,
+      "function": "coil",
+      "name": "D P-L3",
+      "label": "Durchschnitt Wirkleistung Abgabe L3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5412,
+      "function": "coil",
+      "name": "D ΣP+",
+      "label": "Durchschnitt Wirkleistung Bezug System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5414,
+      "function": "coil",
+      "name": "D ΣP-",
+      "label": "Durchschnitt Wirkleistung Abgabe System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5416,
+      "function": "coil",
+      "name": "D B ΣP",
+      "label": "Bilanzierter Durchschnitt Wirkleistung System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5418,
+      "function": "coil",
+      "name": "D S+L1",
+      "label": "Durchschnitt Scheinleistung Bezug L1",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5420,
+      "function": "coil",
+      "name": "D S-L1",
+      "label": "Durchschnitt Scheinleistung Abgabe L1",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5422,
+      "function": "coil",
+      "name": "D S+L2",
+      "label": "Durchschnitt Scheinleistung Bezug L2",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5424,
+      "function": "coil",
+      "name": "D S-L2",
+      "label": "Durchschnitt Scheinleistung Abgabe L2",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5426,
+      "function": "coil",
+      "name": "D S+L3",
+      "label": "Durchschnitt Scheinleistung Bezug L3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5428,
+      "function": "coil",
+      "name": "D S-L3",
+      "label": "Durchschnitt Scheinleistung Abgabe L3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5430,
+      "function": "coil",
+      "name": "D ΣS+",
+      "label": "Durchschnitt Scheinleistung Bezug System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5432,
+      "function": "coil",
+      "name": "D ΣS-",
+      "label": "Durchschnitt Scheinleistung Abgabe System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5434,
+      "function": "coil",
+      "name": "D B ΣS",
+      "label": "Bilanzierter Durchschnitt Scheinleistung System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5436,
+      "function": "coil",
+      "name": "D Q+L1",
+      "label": "Durchschnitt Blindleistung Bezug L1",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5438,
+      "function": "coil",
+      "name": "D Q-L1",
+      "label": "Durchschnitt Blindleistung Abgabe L1",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5440,
+      "function": "coil",
+      "name": "D Q+L2",
+      "label": "Durchschnitt Blindleistung Bezug L2",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5442,
+      "function": "coil",
+      "name": "D Q-L2",
+      "label": "Durchschnitt Blindleistung Abgabe L2",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5444,
+      "function": "coil",
+      "name": "D Q+L3",
+      "label": "Durchschnitt Blindleistung Bezug L3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5446,
+      "function": "coil",
+      "name": "D Q-L3",
+      "label": "Durchschnitt Blindleistung Abgabe L3",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5448,
+      "function": "coil",
+      "name": "D ΣQ+",
+      "label": "Durchschnitt Blindleistung Bezug System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5450,
+      "function": "coil",
+      "name": "D ΣQ-",
+      "label": "Durchschnitt Blindleistung Abgabe System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5452,
+      "function": "coil",
+      "name": "D B ΣQ",
+      "label": "Bilanzierter Durchschnitt Blindleistung System",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5454,
+      "function": "coil",
+      "name": "D PFi-L1",
+      "label": "Durchschnitt Leistungsfaktor L1 induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 5456,
+      "function": "coil",
+      "name": "D PFk-L1",
+      "label": "Durchschnitt Leistungsfaktor L1 kapazitiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 5458,
+      "function": "coil",
+      "name": "D PFi-L2",
+      "label": "Durchschnitt Leistungsfaktor L2 induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 5460,
+      "function": "coil",
+      "name": "D PFk-L2",
+      "label": "Durchschnitt Leistungsfaktor L2 kapazitiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 5462,
+      "function": "coil",
+      "name": "D PFi-L3",
+      "label": "Durchschnitt Leistungsfaktor L3 induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 5464,
+      "function": "coil",
+      "name": "D PFk-L3",
+      "label": "Durchschnitt Leistungsfaktor L3 kapazitiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 5466,
+      "function": "coil",
+      "name": "D ΣPFi",
+      "label": "Durchschnitt Leistungsfaktor System induktiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 5468,
+      "function": "coil",
+      "name": "D ΣPFk",
+      "label": "Durchschnitt Leistungsfaktor System kapazitiv",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

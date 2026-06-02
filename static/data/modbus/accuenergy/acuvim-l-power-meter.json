@@ -1,0 +1,426 @@
+{
+  "slug": "accuenergy-acuvim-l-power-meter",
+  "vendor": "accuenergy",
+  "vendorSlug": "accuenergy",
+  "model": "acuvim-l-power-meter",
+  "modelSlug": "acuvim-l-power-meter",
+  "name": "accuenergy acuvim-l-power-meter",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 342,
+      "function": "holding",
+      "name": "Import-energy-ep-imp",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 344,
+      "function": "holding",
+      "name": "Export-energy-ep-exp",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 346,
+      "function": "holding",
+      "name": "Import-reactive-energy-eq-imp",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 348,
+      "function": "holding",
+      "name": "Export-reactive-energy-eq-exp",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 350,
+      "function": "holding",
+      "name": "Apparent-energy-es",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 352,
+      "function": "holding",
+      "name": "Phase-A-import-energy-ep-imp",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 354,
+      "function": "holding",
+      "name": "Phase-A-export-energy-ep_exp",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 356,
+      "function": "holding",
+      "name": "Phase-B-import-energy-ep_imp",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 358,
+      "function": "holding",
+      "name": "Phase-B-export-energy-ep_exp",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1024,
+      "function": "holding",
+      "name": "Total-harmonic-distortion-of-v1-or-v12",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1025,
+      "function": "holding",
+      "name": "Total-harmonic-distortion-of-v2-or-v23",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1026,
+      "function": "holding",
+      "name": "Total-harmonic-distortion-of-v3-or-v31",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1027,
+      "function": "holding",
+      "name": "Total-harmonic-distortion-of-i1-THD_-i1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1028,
+      "function": "holding",
+      "name": "Total-harmonic-distortion-of-i2-THD_-i2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1029,
+      "function": "holding",
+      "name": "Total-harmonic-distortion-of-i3-THD_-i3",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1536,
+      "function": "holding",
+      "name": "Frequency-F",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1538,
+      "function": "holding",
+      "name": "Phase-voltage-v1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1540,
+      "function": "holding",
+      "name": "Phase-voltage-v2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1542,
+      "function": "holding",
+      "name": "Phase-voltage-v3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1544,
+      "function": "holding",
+      "name": "Line-voltage-v12",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1546,
+      "function": "holding",
+      "name": "Line-voltage-v23",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1548,
+      "function": "holding",
+      "name": "Line-voltage-v31",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1550,
+      "function": "holding",
+      "name": "Phase-(line)-current-i1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1552,
+      "function": "holding",
+      "name": "Phase-(line)-current-i2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1554,
+      "function": "holding",
+      "name": "Phase-(line)-current-i3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1556,
+      "function": "holding",
+      "name": "Neutral-line-current-in",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1558,
+      "function": "holding",
+      "name": "Phase-power-pa",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1560,
+      "function": "holding",
+      "name": "Phase-power-pb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1562,
+      "function": "holding",
+      "name": "Phase-power-pc",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1564,
+      "function": "holding",
+      "name": "System-power-psum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1566,
+      "function": "holding",
+      "name": "Phase-reactive-power-qa",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1568,
+      "function": "holding",
+      "name": "Phase-reactive-power-qb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1570,
+      "function": "holding",
+      "name": "Phase-reactive-power-qc",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1572,
+      "function": "holding",
+      "name": "System-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1574,
+      "function": "holding",
+      "name": "System-apparent-ssum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1576,
+      "function": "holding",
+      "name": "Phase-power-factor-PFa",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1578,
+      "function": "holding",
+      "name": "Phase-power-factor-PFb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1580,
+      "function": "holding",
+      "name": "Phase-power-factor-PFc",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1582,
+      "function": "holding",
+      "name": "System-power-PFsum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1584,
+      "function": "holding",
+      "name": "Voltage-unbalance-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1586,
+      "function": "holding",
+      "name": "Current-unbalance-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1590,
+      "function": "holding",
+      "name": "Phase-apparent-power-sa",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1592,
+      "function": "holding",
+      "name": "Phase-apparent-power-sb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1594,
+      "function": "holding",
+      "name": "Phase-apparent-power-sc",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1598,
+      "function": "holding",
+      "name": "Apparent-power-demand",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1600,
+      "function": "holding",
+      "name": "Power-demand-P_Dmd",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1602,
+      "function": "holding",
+      "name": "Reactive-power-demand",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1604,
+      "function": "holding",
+      "name": "Phase-A-current-demand",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1606,
+      "function": "holding",
+      "name": "Phase-A-current-demand",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1608,
+      "function": "holding",
+      "name": "Phase-C-current-demand",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/accuenergy-acuvim-l-power-meter.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

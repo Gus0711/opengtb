@@ -1,0 +1,450 @@
+{
+  "slug": "elnet-gr-pq-lt-ltp-mc-pic-lte-ltc",
+  "vendor": "elnet",
+  "vendorSlug": "elnet",
+  "model": "gr-pq-lt-ltp-mc-pic-lte-ltc",
+  "modelSlug": "gr-pq-lt-ltp-mc-pic-lte-ltc",
+  "name": "elnet gr-pq-lt-ltp-mc-pic-lte-ltc",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Voltage-line-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Voltage-line-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Voltage-between-line-1-and-line-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Voltage-between-line-2-and-line-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Voltage-between-line-3-and-line-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Current-in-line-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Current-in-line-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Current-in-line-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Active-power-line-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Active-power-line-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Active-power-line-3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watt",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Combined-active-power-line-1+2-+3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watt",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "Apparent-power-line-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Apparent-power-line-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Apparent-power-line-3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Combined-apparent-power-line-1+2+3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Reactive-power-line-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Reactive-power-line-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Reactive-power-line-3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "Combined-reactive-power-line-1+2+3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "Power-factor-line-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "PF",
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "Power-factor-line-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "PF",
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Power-factor-line-3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "PF",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Combined-power-factor-for-line-1+2+3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "Frequency-line-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hrz",
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Frequency-line-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hrz",
+      "access": "r"
+    },
+    {
+      "address": 54,
+      "function": "holding",
+      "name": "Frequency-line-3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hrz",
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Current-neutral-line",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 58,
+      "function": "holding",
+      "name": "Power-factor-line-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "L and C",
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "Power-factor-line-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "L and C",
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "Power-factor-line-3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "L and C",
+      "access": "r"
+    },
+    {
+      "address": 64,
+      "function": "holding",
+      "name": "Combined-power-factor-for-line-1+2+3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "L and C",
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "holding",
+      "name": "Total-current-in-line-1+2+3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 76,
+      "function": "holding",
+      "name": "Tou-(taoz)-rate",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 78,
+      "function": "holding",
+      "name": "Active-total-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "Reactive-total-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VARh",
+      "access": "r"
+    },
+    {
+      "address": 82,
+      "function": "holding",
+      "name": "Apparent-total-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Vah",
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "Date-time",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Win Format",
+      "access": "r"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "Time-from-01-01-2000-in-seconds",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 88,
+      "function": "holding",
+      "name": "Address",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 90,
+      "function": "holding",
+      "name": "Baud-rate",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 92,
+      "function": "holding",
+      "name": "Parity",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 94,
+      "function": "holding",
+      "name": "Current-transformer-ratio",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 96,
+      "function": "holding",
+      "name": "Timed-average-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 98,
+      "function": "holding",
+      "name": "Timed-average-current",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "Timed-average-power",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "Timed-avaerge-frequqncy",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "Thd-for-volts-line-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 106,
+      "function": "holding",
+      "name": "Thd-for-volts-line-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 108,
+      "function": "holding",
+      "name": "Thd-for-volts-line-3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/elnet-gr-pq-lt-ltp-mc-pic-lte-ltc.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

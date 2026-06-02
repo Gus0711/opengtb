@@ -1,0 +1,426 @@
+{
+  "slug": "elster-a1140-a1700",
+  "vendor": "elster",
+  "vendorSlug": "elster",
+  "model": "a1140-a1700",
+  "modelSlug": "a1140-a1700",
+  "name": "elster a1140-a1700",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Va",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Vb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Vc",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "La",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Lb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Ic",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Pa",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "Pb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Pc",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Qa",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "Ob",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Qc",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "So",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 27,
+      "function": "holding",
+      "name": "Sb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 29,
+      "function": "holding",
+      "name": "Sc",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 31,
+      "function": "holding",
+      "name": "Pfa",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Pfb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 35,
+      "function": "holding",
+      "name": "Pfc",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 37,
+      "function": "holding",
+      "name": "Psum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 39,
+      "function": "holding",
+      "name": "QSUM",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 41,
+      "function": "holding",
+      "name": "SSUM",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 43,
+      "function": "holding",
+      "name": "pfsUM",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 45,
+      "function": "holding",
+      "name": "Freqa",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 47,
+      "function": "holding",
+      "name": "Freqb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 49,
+      "function": "holding",
+      "name": "Freqc",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 53,
+      "function": "holding",
+      "name": "kWhTotalExport",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 55,
+      "function": "holding",
+      "name": "kVarhImportLag",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 57,
+      "function": "holding",
+      "name": "kVarhImportLead",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 59,
+      "function": "holding",
+      "name": "kVarhExportLag",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 63,
+      "function": "holding",
+      "name": "VAhTotal",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 65,
+      "function": "holding",
+      "name": "Cust1",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 67,
+      "function": "holding",
+      "name": "Cust2",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 69,
+      "function": "holding",
+      "name": "Cust3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 71,
+      "function": "holding",
+      "name": "TOU1",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 73,
+      "function": "holding",
+      "name": "TOU2",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 75,
+      "function": "holding",
+      "name": "TOU3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 77,
+      "function": "holding",
+      "name": "TOU4",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 79,
+      "function": "holding",
+      "name": "HistTOUl",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 81,
+      "function": "holding",
+      "name": "HistTOU2",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 83,
+      "function": "holding",
+      "name": "HistTOU3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 85,
+      "function": "holding",
+      "name": "HistTOU4",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 95,
+      "function": "holding",
+      "name": "LastEnergyRead",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 96,
+      "function": "holding",
+      "name": "LastInstRead",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 97,
+      "function": "holding",
+      "name": "HIST-kWhTotalImport",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 99,
+      "function": "holding",
+      "name": "HIST-kWhTotalExport",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 101,
+      "function": "holding",
+      "name": "HIST-kVarhImportLag",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 103,
+      "function": "holding",
+      "name": "HIST-kVarhImportLead",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 105,
+      "function": "holding",
+      "name": "HIST-kVarhExportLag",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 107,
+      "function": "holding",
+      "name": "HIST-kVarhExportLead",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 109,
+      "function": "holding",
+      "name": "HIST-VAh-Total",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/elster-a1140-a1700.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

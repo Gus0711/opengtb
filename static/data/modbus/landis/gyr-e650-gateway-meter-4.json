@@ -1,0 +1,426 @@
+{
+  "slug": "landis-gyr-e650-gateway-meter-4",
+  "vendor": "landis",
+  "vendorSlug": "landis",
+  "model": "gyr-e650-gateway-meter-4",
+  "modelSlug": "gyr-e650-gateway-meter-4",
+  "name": "landis gyr-e650-gateway-meter-4",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 40615,
+      "function": "holding",
+      "name": "Hours:-format-hhmmss",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40617,
+      "function": "holding",
+      "name": "Data-format-aammgg",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40619,
+      "function": "holding",
+      "name": "Meter-serial-number-(read-by-dlms)",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40621,
+      "function": "holding",
+      "name": "Reset-meter-count",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40623,
+      "function": "holding",
+      "name": "Total-active-energy-a+",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40625,
+      "function": "holding",
+      "name": "Total-active-energy-previous-month-A-+",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40627,
+      "function": "holding",
+      "name": "Total-active-energy-slot-1-a+",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40629,
+      "function": "holding",
+      "name": "Total-active-energy-slot-1-previous-month-A-+",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40631,
+      "function": "holding",
+      "name": "Total-active-energy-slot-2-a+",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40633,
+      "function": "holding",
+      "name": "Total-active-energy-slot-2-previous-month-A-+",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40635,
+      "function": "holding",
+      "name": "Total-active-energy-slot-3-a+",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40637,
+      "function": "holding",
+      "name": "Total-active-energy-slot-3-previous-month-A-+",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40639,
+      "function": "holding",
+      "name": "Total-active-energy-slot-4-a+",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40641,
+      "function": "holding",
+      "name": "Total-active-energy-slot-4-previous-month-A-+",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40643,
+      "function": "holding",
+      "name": "Total-active-energy-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40645,
+      "function": "holding",
+      "name": "Total-active-energy-previous-month-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40647,
+      "function": "holding",
+      "name": "Total-active-energy-slot-1-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40649,
+      "function": "holding",
+      "name": "Total-active-energy-slot-1-previous-month-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40651,
+      "function": "holding",
+      "name": "Total-active-energy-slot-2-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40653,
+      "function": "holding",
+      "name": "Total-active-energy-slot-2-previous-month-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40655,
+      "function": "holding",
+      "name": "Total-active-energy-slot-3-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40657,
+      "function": "holding",
+      "name": "Total-active-energy-slot-3-previous-month-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40659,
+      "function": "holding",
+      "name": "Total-active-energy-slot-4-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40661,
+      "function": "holding",
+      "name": "Total-active-energy-slot-4-previous-month-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40663,
+      "function": "holding",
+      "name": "Reactive-total-energy-Q1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40665,
+      "function": "holding",
+      "name": "Reactive-total-energy-previous-month-Q1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40667,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-1-Q1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40669,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-1-previous-month-Q1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40671,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-2-Q1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40673,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-2-previous-month-Q1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40675,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-3-Q1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40677,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-3-previous-month-Q1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40679,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-4-Q1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40681,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-4-previous-month-Q1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40683,
+      "function": "holding",
+      "name": "Reactive-total-energy-Q2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40685,
+      "function": "holding",
+      "name": "Reactive-total-energy-previous-month-Q2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40687,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-1-Q2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40689,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-1-previous-month-Q2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40691,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-2-Q2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40693,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-2-previous-month-Q2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40695,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-3-Q2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40697,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-3-previous-month-Q2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40699,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-4-Q2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40701,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-4-previous-month-Q2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40703,
+      "function": "holding",
+      "name": "Reactive-total-energy-Q3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40705,
+      "function": "holding",
+      "name": "Reactive-total-energy-previous-month-Q3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40707,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-1-Q3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40709,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-1-previous-month-Q3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40711,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-2-Q3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40713,
+      "function": "holding",
+      "name": "Reactive-total-energy-slot-2-previous-month-Q3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/landis-gyr-e650-gateway-meter-4.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

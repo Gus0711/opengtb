@@ -1,0 +1,476 @@
+{
+  "slug": "crompton-integra-1200",
+  "vendor": "crompton",
+  "vendorSlug": "crompton",
+  "model": "integra-1200",
+  "modelSlug": "integra-1200",
+  "name": "crompton integra-1200",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Phase-2-line-to-neutral-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Phase-3-line-to-neutral-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Line-1-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Line-2-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Line-3-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Phase-1-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Phase-2-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Phase-3-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Phase-1-VA",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Phase-2-VA",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Phase-3-VA",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Phase-1-VAr",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "Phase-2-VAr",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Phase-3-VAr",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Phase-1-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "None",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Phase-2-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "None",
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Phase-3-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "None",
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Phase-1-phase-angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Phase-2-phase-angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "Phase-3-phase-angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "Average-line-to-neutral-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Average-line-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Sum-of-line-currents",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Sum-of-phase-powers",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Sum-of-phase-VAs",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "Sum-of-phase-VArs",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "Total-system-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "None",
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "holding",
+      "name": "Total-system-phase-angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "System-frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "holding",
+      "name": "Import-watt-hours",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watt Hours",
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "holding",
+      "name": "Export-watt-hours",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watt Hours",
+      "access": "r"
+    },
+    {
+      "address": 76,
+      "function": "holding",
+      "name": "Import-VAr-hours",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr Hours",
+      "access": "r"
+    },
+    {
+      "address": 78,
+      "function": "holding",
+      "name": "Export-VAr-hours",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr Hours",
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "VA-hours",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA Hours",
+      "access": "r"
+    },
+    {
+      "address": 82,
+      "function": "holding",
+      "name": "Current-sum-hours",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A Hours",
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "Import-power-sum-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "Maximum-import-power-sum-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 88,
+      "function": "holding",
+      "name": "Import-active-power-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 90,
+      "function": "holding",
+      "name": "Import-active-power-max-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 92,
+      "function": "holding",
+      "name": "Export-active-power-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 94,
+      "function": "holding",
+      "name": "Export-active-power-max-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "VA-sum-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "Maximum-VA-sum-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "Neutral-current-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 106,
+      "function": "holding",
+      "name": "Maximum-neutral-current-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 108,
+      "function": "holding",
+      "name": "Total-system-reactive-power-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 110,
+      "function": "holding",
+      "name": "Maximum-total-system-reactive-power-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 160,
+      "function": "holding",
+      "name": "Voltage-phase-sequence-normal=1-reverse=2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "None",
+      "access": "r"
+    },
+    {
+      "address": 162,
+      "function": "holding",
+      "name": "Current-phase-sequence-normal=1-reverse=2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "None",
+      "access": "r"
+    },
+    {
+      "address": 192,
+      "function": "holding",
+      "name": "Nature-of-the-load-resistive-=1-inductive-=2-capacitive-=3)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "None",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/crompton-integra-1200.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

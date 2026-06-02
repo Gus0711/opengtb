@@ -1,0 +1,465 @@
+{
+  "slug": "siemens-sentron-pac-2200",
+  "vendor": "siemens",
+  "vendorSlug": "siemens",
+  "model": "sentron-pac-2200",
+  "modelSlug": "sentron-pac-2200",
+  "name": "siemens sentron-pac-2200",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Voltage-VL1-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Voltage-vlz",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Voltage-vl-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Voltage-VL1-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Voltage-vlz-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Voltage-vl-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Current-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "Current-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Current-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Apparent-power-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "Apparent-power-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Apparent-power-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "Active-power-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 27,
+      "function": "holding",
+      "name": "Active-power-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 29,
+      "function": "holding",
+      "name": "Active-power-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 31,
+      "function": "holding",
+      "name": "Reactive-power-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Reactive-power-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 35,
+      "function": "holding",
+      "name": "Reactive-power-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 37,
+      "function": "holding",
+      "name": "Power-factor-L1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 39,
+      "function": "holding",
+      "name": "Power-factor-L2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 41,
+      "function": "holding",
+      "name": "Power-factor-L3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 55,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 57,
+      "function": "holding",
+      "name": "Average-voltage-V-L-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 59,
+      "function": "holding",
+      "name": "Average-voltage-V-L-L",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 61,
+      "function": "holding",
+      "name": "Average-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 63,
+      "function": "holding",
+      "name": "Total-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 65,
+      "function": "holding",
+      "name": "Total-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 67,
+      "function": "holding",
+      "name": "Total-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 69,
+      "function": "holding",
+      "name": "Total-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 205,
+      "function": "holding",
+      "name": "Device-diagnostics-and-device-status",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 207,
+      "function": "holding",
+      "name": "Status-of-the-digital-outputs",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 209,
+      "function": "holding",
+      "name": "Status-of-the-digital-inputs",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 211,
+      "function": "holding",
+      "name": "Active-tariff",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 215,
+      "function": "holding",
+      "name": "Universal-counter",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 217,
+      "function": "holding",
+      "name": "Relevant-parameter-changes-counter",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 219,
+      "function": "holding",
+      "name": "Counter-all-parameter-changes",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 501,
+      "function": "holding",
+      "name": "Cumulated-active-power-import",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 503,
+      "function": "holding",
+      "name": "Cumulated-reactive-power-import",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 505,
+      "function": "holding",
+      "name": "Cumulated-active-power-export",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 507,
+      "function": "holding",
+      "name": "Cumulated-reactive-power-export",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 509,
+      "function": "holding",
+      "name": "Maximum-active-power-reading-during-the-period",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 511,
+      "function": "holding",
+      "name": "Minimum-active-power-reading-during-the-period",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 513,
+      "function": "holding",
+      "name": "Maximum-reactive-power-reading-dur-ing-the-period",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 515,
+      "function": "holding",
+      "name": "Minimum-reactive-power-reading-dur-ing-the-period",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 517,
+      "function": "holding",
+      "name": "Length-of-the-current-measuring-period",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "s",
+      "access": "r"
+    },
+    {
+      "address": 519,
+      "function": "holding",
+      "name": "Time-since-start-of-the-active-demand-period",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "s",
+      "access": "r"
+    },
+    {
+      "address": 801,
+      "function": "holding",
+      "name": "Active-energy-import-tariff-1",
+      "dataType": "float64",
+      "size": 4,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 805,
+      "function": "holding",
+      "name": "Active-energy-import-tariff-2",
+      "dataType": "float64",
+      "size": 4,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 809,
+      "function": "holding",
+      "name": "Active-energy-export-tariff-1",
+      "dataType": "float64",
+      "size": 4,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 813,
+      "function": "holding",
+      "name": "Active-energy-export-tariff-2",
+      "dataType": "float64",
+      "size": 4,
+      "unit": "Wh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/siemens-sentron-pac-2200.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

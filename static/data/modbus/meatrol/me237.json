@@ -1,0 +1,468 @@
+{
+  "slug": "meatrol-me237",
+  "vendor": "meatrol",
+  "vendorSlug": "meatrol",
+  "model": "me237",
+  "modelSlug": "me237",
+  "name": "meatrol me237",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1000,
+      "function": "holding",
+      "name": "Voltage-value-of-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1002,
+      "function": "holding",
+      "name": "Voltage-value-of-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1004,
+      "function": "holding",
+      "name": "Voltage-value-of-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1006,
+      "function": "holding",
+      "name": "Average-phase-voltage-value",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1008,
+      "function": "holding",
+      "name": "Voltage-value-of-line-A-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1010,
+      "function": "holding",
+      "name": "Voltage-value-of-line-B-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1012,
+      "function": "holding",
+      "name": "Voltage-value-of-line-C-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1014,
+      "function": "holding",
+      "name": "Average-line-voltage-value",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1016,
+      "function": "holding",
+      "name": "Current-value-of-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1018,
+      "function": "holding",
+      "name": "Current-value-of-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1020,
+      "function": "holding",
+      "name": "Current-value-of-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1022,
+      "function": "holding",
+      "name": "Average-value-of-three-phase-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1026,
+      "function": "holding",
+      "name": "Active-power-of-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1028,
+      "function": "holding",
+      "name": "Active-power-of-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1030,
+      "function": "holding",
+      "name": "Active-power-of-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1032,
+      "function": "holding",
+      "name": "Sum-of-three-phase-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1034,
+      "function": "holding",
+      "name": "Reactive-power-of-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 1036,
+      "function": "holding",
+      "name": "Reactive-power-of-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 1038,
+      "function": "holding",
+      "name": "Reactive-power-of-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 1040,
+      "function": "holding",
+      "name": "Sum-of-three-phase-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 1042,
+      "function": "holding",
+      "name": "Apparent-power-of-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Va",
+      "access": "r"
+    },
+    {
+      "address": 1044,
+      "function": "holding",
+      "name": "Apparent-power-of-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Va",
+      "access": "r"
+    },
+    {
+      "address": 1046,
+      "function": "holding",
+      "name": "Apparent-power-of-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Va",
+      "access": "r"
+    },
+    {
+      "address": 1048,
+      "function": "holding",
+      "name": "Sum-of-three-phase-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Va",
+      "access": "r"
+    },
+    {
+      "address": 1050,
+      "function": "holding",
+      "name": "Power-factor-of-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1052,
+      "function": "holding",
+      "name": "Power-factor-of-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1054,
+      "function": "holding",
+      "name": "Power-factor-of-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1056,
+      "function": "holding",
+      "name": "Average-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1058,
+      "function": "holding",
+      "name": "Fundamental-power-factor-of-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1060,
+      "function": "holding",
+      "name": "Fundamental-power-factor-of-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1062,
+      "function": "holding",
+      "name": "Fundamental-power-factor-of-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1064,
+      "function": "holding",
+      "name": "Average-fundamental-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1066,
+      "function": "holding",
+      "name": "Grid-frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 2000,
+      "function": "holding",
+      "name": "Percentage-of-total-harmonic-of-voltage-of-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2002,
+      "function": "holding",
+      "name": "Percentage-of-total-harmonic-of-voltage-of-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2004,
+      "function": "holding",
+      "name": "Percentage-of-total-harmonic-of-voltage-of-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2006,
+      "function": "holding",
+      "name": "Three-phase-voltage-total-harmonic-percentage-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2008,
+      "function": "holding",
+      "name": "Percentage-of-total-harmonic-current-of-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2010,
+      "function": "holding",
+      "name": "Percentage-of-total-harmonic-current-of-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2012,
+      "function": "holding",
+      "name": "Percentage-of-total-harmonic-current-of-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2014,
+      "function": "holding",
+      "name": "Percentage-average-value-of-total-harmonic-of-three-phase-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 4000,
+      "function": "holding",
+      "name": "Positive-active-energy-of-phase-A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "0.1kWh",
+      "access": "r"
+    },
+    {
+      "address": 4002,
+      "function": "holding",
+      "name": "Positive-active-energy-of-phase-B",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "0.1kWh",
+      "access": "r"
+    },
+    {
+      "address": 4004,
+      "function": "holding",
+      "name": "Positive-active-energy-of-phase-C",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "0.1kWh",
+      "access": "r"
+    },
+    {
+      "address": 4006,
+      "function": "holding",
+      "name": "Sum-of-three-phase-positive-active-energy",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "0.1kWh",
+      "access": "r"
+    },
+    {
+      "address": 4008,
+      "function": "holding",
+      "name": "Reverse-active-electric-energy-of-phase-A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "0.1kWh",
+      "access": "r"
+    },
+    {
+      "address": 4010,
+      "function": "holding",
+      "name": "Reverse-active-electric-energy-of-phase-B",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "0.1kWh",
+      "access": "r"
+    },
+    {
+      "address": 4012,
+      "function": "holding",
+      "name": "Reverse-active-electric-energy-of-phase-C",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "0.1kWh",
+      "access": "r"
+    },
+    {
+      "address": 4014,
+      "function": "holding",
+      "name": "Sum-of-three-phase-reverse-active-energy",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "0.1kWh",
+      "access": "r"
+    },
+    {
+      "address": 4024,
+      "function": "holding",
+      "name": "Positive-reactive-energy-of-phase-A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "0.1kVarh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/meatrol-me237.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

@@ -1,0 +1,589 @@
+{
+  "slug": "inepro-pro380",
+  "vendor": "Inepro",
+  "vendorSlug": "inepro",
+  "model": "PRO380",
+  "modelSlug": "pro380",
+  "name": "Inepro PRO380",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 20480,
+      "function": "holding",
+      "name": "Voltage",
+      "label": "Tension",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 20482,
+      "function": "holding",
+      "name": "VoltageL1",
+      "label": "Tension L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 20484,
+      "function": "holding",
+      "name": "VoltageL2",
+      "label": "Tension L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 20486,
+      "function": "holding",
+      "name": "VoltageL3",
+      "label": "Tension L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 20488,
+      "function": "holding",
+      "name": "Frequency",
+      "label": "Fréquence",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 20490,
+      "function": "holding",
+      "name": "Current",
+      "label": "Courant",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 20492,
+      "function": "holding",
+      "name": "CurrentL1",
+      "label": "Courant L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 20494,
+      "function": "holding",
+      "name": "CurrentL2",
+      "label": "Courant L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 20496,
+      "function": "holding",
+      "name": "CurrentL3",
+      "label": "Courant L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 20498,
+      "function": "holding",
+      "name": "Power",
+      "label": "Puissance active",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 20500,
+      "function": "holding",
+      "name": "PowerL1",
+      "label": "Puissance active L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 20502,
+      "function": "holding",
+      "name": "PowerL2",
+      "label": "Puissance active L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 20504,
+      "function": "holding",
+      "name": "PowerL3",
+      "label": "Puissance active L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 20506,
+      "function": "holding",
+      "name": "ReactivePower",
+      "label": "Puissance réactive",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 20508,
+      "function": "holding",
+      "name": "ReactivePowerL1",
+      "label": "Puissance réactive L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 20510,
+      "function": "holding",
+      "name": "ReactivePowerL2",
+      "label": "Puissance réactive L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 20512,
+      "function": "holding",
+      "name": "ReactivePowerL3",
+      "label": "Puissance réactive L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 20514,
+      "function": "holding",
+      "name": "ApparentPower",
+      "label": "Puissance apparente",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 20516,
+      "function": "holding",
+      "name": "ApparentPowerL1",
+      "label": "Puissance apparente L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 20518,
+      "function": "holding",
+      "name": "ApparentPowerL2",
+      "label": "Puissance apparente L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 20520,
+      "function": "holding",
+      "name": "ApparentPowerL3",
+      "label": "Puissance apparente L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 20522,
+      "function": "holding",
+      "name": "Cosphi",
+      "label": "Cos φ",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 20524,
+      "function": "holding",
+      "name": "CosphiL1",
+      "label": "Cos φ L1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 20526,
+      "function": "holding",
+      "name": "CosphiL2",
+      "label": "Cos φ L2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 20528,
+      "function": "holding",
+      "name": "CosphiL3",
+      "label": "Cos φ L3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24576,
+      "function": "holding",
+      "name": "Sum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24578,
+      "function": "holding",
+      "name": "SumT1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24580,
+      "function": "holding",
+      "name": "SumT2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24582,
+      "function": "holding",
+      "name": "SumL1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24584,
+      "function": "holding",
+      "name": "SumL2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24586,
+      "function": "holding",
+      "name": "SumL3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24588,
+      "function": "holding",
+      "name": "Import",
+      "label": "Énergie active importée",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 24590,
+      "function": "holding",
+      "name": "ImportT1",
+      "label": "Énergie active importée T1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 24592,
+      "function": "holding",
+      "name": "ImportT2",
+      "label": "Énergie active importée T2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 24594,
+      "function": "holding",
+      "name": "ImportL1",
+      "label": "Énergie active importée L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 24596,
+      "function": "holding",
+      "name": "ImportL2",
+      "label": "Énergie active importée L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 24598,
+      "function": "holding",
+      "name": "ImportL3",
+      "label": "Énergie active importée L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 24600,
+      "function": "holding",
+      "name": "Export",
+      "label": "Énergie active exportée",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 24602,
+      "function": "holding",
+      "name": "ExportT1",
+      "label": "Énergie active exportée T1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 24604,
+      "function": "holding",
+      "name": "ExportT2",
+      "label": "Énergie active exportée T2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 24606,
+      "function": "holding",
+      "name": "ExportL1",
+      "label": "Énergie active exportée L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 24608,
+      "function": "holding",
+      "name": "ExportL2",
+      "label": "Énergie active exportée L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 24610,
+      "function": "holding",
+      "name": "ExportL3",
+      "label": "Énergie active exportée L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 24612,
+      "function": "holding",
+      "name": "ReactiveSum",
+      "label": "Énergie réactive (somme)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 24614,
+      "function": "holding",
+      "name": "ReactiveSumT1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24616,
+      "function": "holding",
+      "name": "ReactiveSumT2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24618,
+      "function": "holding",
+      "name": "ReactiveSumL1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24620,
+      "function": "holding",
+      "name": "ReactiveSumL2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24622,
+      "function": "holding",
+      "name": "ReactiveSumL3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24624,
+      "function": "holding",
+      "name": "ReactiveImport",
+      "label": "Énergie réactive importée",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 24626,
+      "function": "holding",
+      "name": "ReactiveImportT1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24628,
+      "function": "holding",
+      "name": "ReactiveImportT2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24630,
+      "function": "holding",
+      "name": "ReactiveImportL1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24632,
+      "function": "holding",
+      "name": "ReactiveImportL2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24634,
+      "function": "holding",
+      "name": "ReactiveImportL3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24636,
+      "function": "holding",
+      "name": "ReactiveExport",
+      "label": "Énergie réactive exportée",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 24638,
+      "function": "holding",
+      "name": "ReactiveExportT1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24640,
+      "function": "holding",
+      "name": "ReactiveExportT2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24642,
+      "function": "holding",
+      "name": "ReactiveExportL1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24644,
+      "function": "holding",
+      "name": "ReactiveExportL2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24646,
+      "function": "holding",
+      "name": "ReactiveExportL3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "doc": "Importé depuis volkszaehler/mbmd (BSD-3-Clause). Description amont : Inepro Metering Pro 380.",
+  "upstream": {
+    "source": "mbmd",
+    "ref": "c71dfb268a7a9a3d608dbb990c1c26d6d67fd9d9",
+    "needsReview": true,
+    "reviewReasons": [
+      "Type float32 et ordre AB-CD supposés (convention mbmd). Vérifier sur la datasheet INEPRO."
+    ]
+  }
+}

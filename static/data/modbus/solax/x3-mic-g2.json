@@ -1,0 +1,134 @@
+{
+  "slug": "solax-x3-mic-g2",
+  "vendor": "Solax",
+  "vendorSlug": "solax",
+  "model": "X3-MIC G2",
+  "modelSlug": "x3-mic-g2",
+  "name": "Solax X3-MIC G2",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1028,
+      "function": "input",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r",
+      "notes": "0x404 Vac_R"
+    },
+    {
+      "address": 1029,
+      "function": "input",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r",
+      "notes": "0x405 Vac_S"
+    },
+    {
+      "address": 1030,
+      "function": "input",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r",
+      "notes": "0x406 Vac_T"
+    },
+    {
+      "address": 1034,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "0x40A Iac_R"
+    },
+    {
+      "address": 1035,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "0x40B Iac_S"
+    },
+    {
+      "address": 1036,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "0x40C Iac_T"
+    },
+    {
+      "address": 1038,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "0x40E Pac"
+    },
+    {
+      "address": 1059,
+      "function": "input",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "0x423 yield_total"
+    },
+    {
+      "address": 1083,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "0x43B Grid_Power"
+    },
+    {
+      "address": 1087,
+      "function": "input",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "0x43F Consume Energy"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

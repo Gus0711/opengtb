@@ -1,0 +1,156 @@
+{
+  "slug": "growatt-tl-x-h-hybrid-inverter",
+  "vendor": "Growatt",
+  "vendorSlug": "growatt",
+  "model": "TL-X(H) Hybrid Inverter",
+  "modelSlug": "tl-x-h-hybrid-inverter",
+  "name": "Growatt TL-X(H) Hybrid Inverter",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 3005,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "PV1 power"
+    },
+    {
+      "address": 3009,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "PV2 power"
+    },
+    {
+      "address": 3013,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "PV3 power"
+    },
+    {
+      "address": 3017,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "PV4 power"
+    },
+    {
+      "address": 3041,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Total forward power"
+    },
+    {
+      "address": 3043,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Total reverse power"
+    },
+    {
+      "address": 3053,
+      "function": "input",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "PV energy total"
+    },
+    {
+      "address": 3069,
+      "function": "input",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Total energy to user"
+    },
+    {
+      "address": 3127,
+      "function": "input",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Total discharge energy"
+    },
+    {
+      "address": 3171,
+      "function": "input",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r",
+      "notes": "SOC"
+    },
+    {
+      "address": 3178,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Discharge power"
+    },
+    {
+      "address": 3180,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Pcharge1 Charge power"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

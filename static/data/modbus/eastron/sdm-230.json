@@ -1,0 +1,251 @@
+{
+  "slug": "eastron-sdm-230",
+  "vendor": "Eastron",
+  "vendorSlug": "eastron",
+  "model": "SDM-230",
+  "modelSlug": "sdm-230",
+  "name": "Eastron SDM-230",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 0,
+      "function": "holding",
+      "name": "Voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Active Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Apparent Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VoltAmps",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Communicate address",
+      "dataType": "float32",
+      "size": 2,
+      "access": "rw"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Reactive Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Baud Rate",
+      "dataType": "float32",
+      "size": 2,
+      "access": "rw",
+      "enum": {
+        "0": "2400 bps",
+        "1": "4800 bps",
+        "2": "9600 bps",
+        "5": "1200 bps"
+      }
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Power Factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Phase Angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "holding",
+      "name": "Import Active Energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "holding",
+      "name": "Export Active Energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 76,
+      "function": "holding",
+      "name": "Import Reactive Energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVArh",
+      "access": "r"
+    },
+    {
+      "address": 78,
+      "function": "holding",
+      "name": "Export Reactive Energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVArh",
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "Total system power demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "Maximum total system power demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 88,
+      "function": "holding",
+      "name": "Current system import power demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 90,
+      "function": "holding",
+      "name": "Maximum system import power demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 92,
+      "function": "holding",
+      "name": "Current system export power demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 94,
+      "function": "holding",
+      "name": "Maximum system export power demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 258,
+      "function": "holding",
+      "name": "Current demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 264,
+      "function": "holding",
+      "name": "Maximum current Demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 342,
+      "function": "holding",
+      "name": "Total Active Energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 344,
+      "function": "holding",
+      "name": "Total Reactive Energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVArh",
+      "access": "r"
+    },
+    {
+      "address": 64512,
+      "function": "holding",
+      "name": "Serial Number",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "rw"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-gateway",
+    "ref": "20de1794f20f946fa9d9e81effeee6d47258c3a7",
+    "needsReview": true,
+    "reviewReasons": [
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

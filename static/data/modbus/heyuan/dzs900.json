@@ -1,0 +1,425 @@
+{
+  "slug": "heyuan-dzs900",
+  "vendor": "heyuan",
+  "vendorSlug": "heyuan",
+  "model": "dzs900",
+  "modelSlug": "dzs900",
+  "name": "heyuan dzs900",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 4096,
+      "function": "holding",
+      "name": "Phase-A-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4097,
+      "function": "holding",
+      "name": "Phase-B-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4098,
+      "function": "holding",
+      "name": "Phase-C-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4099,
+      "function": "holding",
+      "name": "Phase-voltage-mean-value",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4100,
+      "function": "holding",
+      "name": "Zero-sequence-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4101,
+      "function": "holding",
+      "name": "Phase/line-A-current",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4102,
+      "function": "holding",
+      "name": "Phase/line-B-current",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4103,
+      "function": "holding",
+      "name": "Phase/line-C-current",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4104,
+      "function": "holding",
+      "name": "Zero-sequence-phase/line-current",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4105,
+      "function": "holding",
+      "name": "Phase-A-active-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4106,
+      "function": "holding",
+      "name": "Phase-B-active-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4107,
+      "function": "holding",
+      "name": "Phase-C-active-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4108,
+      "function": "holding",
+      "name": "Total-three-phase-active-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4109,
+      "function": "holding",
+      "name": "Phase-A-reactive-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4110,
+      "function": "holding",
+      "name": "Phase-B-reactive-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4111,
+      "function": "holding",
+      "name": "Phase-C-reactive-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4112,
+      "function": "holding",
+      "name": "Total-three-phase-reactive-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4113,
+      "function": "holding",
+      "name": "Phase-A-apparent-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4114,
+      "function": "holding",
+      "name": "Phase-B-apparent-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4115,
+      "function": "holding",
+      "name": "Phase-C-apparent-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4116,
+      "function": "holding",
+      "name": "Total-three-phase-apparent-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4117,
+      "function": "holding",
+      "name": "Phase-A-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4118,
+      "function": "holding",
+      "name": "Phase-B-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4119,
+      "function": "holding",
+      "name": "Phase-C-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4120,
+      "function": "holding",
+      "name": "Total-three-phase-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4121,
+      "function": "holding",
+      "name": "Phase/line-A-current",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4122,
+      "function": "holding",
+      "name": "Phase/line-B-current",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4123,
+      "function": "holding",
+      "name": "Phase/line-C-current",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4124,
+      "function": "holding",
+      "name": "Zero-sequence-phase/line-current",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4125,
+      "function": "holding",
+      "name": "Phase-A-active-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4126,
+      "function": "holding",
+      "name": "Phase-B-active-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4127,
+      "function": "holding",
+      "name": "Phase-C-active-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4128,
+      "function": "holding",
+      "name": "Total-three-phase-active-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4129,
+      "function": "holding",
+      "name": "Phase-A-reactive-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4130,
+      "function": "holding",
+      "name": "Phase-B-reactive-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4131,
+      "function": "holding",
+      "name": "Phase-C-reactive-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4132,
+      "function": "holding",
+      "name": "Total-three-phase-reactive-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4133,
+      "function": "holding",
+      "name": "Phase-A-apparent-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4134,
+      "function": "holding",
+      "name": "Phase-B-apparent-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4135,
+      "function": "holding",
+      "name": "Phase-C-apparent-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4136,
+      "function": "holding",
+      "name": "Total-three-phase-apparent-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4137,
+      "function": "holding",
+      "name": "Phase-A-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4138,
+      "function": "holding",
+      "name": "Phase-B-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4139,
+      "function": "holding",
+      "name": "Phase-C-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4140,
+      "function": "holding",
+      "name": "Total-three-phase-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4141,
+      "function": "holding",
+      "name": "Phase/line-A-current",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4142,
+      "function": "holding",
+      "name": "Phase/line-B-current",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4143,
+      "function": "holding",
+      "name": "Phase/line-C-current",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4144,
+      "function": "holding",
+      "name": "Zero-sequence-phase/line-current",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4145,
+      "function": "holding",
+      "name": "Phase-A-active-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/heyuan-dzs900.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont"
+    ]
+  }
+}

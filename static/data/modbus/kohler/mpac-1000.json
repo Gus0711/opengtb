@@ -1,0 +1,475 @@
+{
+  "slug": "kohler-mpac-1000",
+  "vendor": "kohler",
+  "vendorSlug": "kohler",
+  "model": "mpac-1000",
+  "modelSlug": "mpac-1000",
+  "name": "kohler mpac-1000",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Sourcea-line-neutral-L1-l0",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Sourcea-line-neutral-L2-l0",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Sourcea-line-neutral-L3-l0",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Sourceb-line-neutral-L1-l0",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Sourceb-line-neutral-L2-l0",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Sourceb-line-neutral-L3-l0",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Sourcea-line-voltage-L1-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Sourcea-line-voltage-L2-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Sourcea-line-voltage-L3-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Sourceb-line-voltage-L1-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Sourceb-line-voltage-L2-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Sourceb-line-voltage-L3-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Sourcea-frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Sourceb-frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Sourcea-nominal-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Sourceb-nominal-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "Sourcea-nominal-frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "Sourceb-nominal-frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 27,
+      "function": "holding",
+      "name": "Sourcea-number-of-phases",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "1 or 3",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Sourceb-number-of-phases",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "1 or 3",
+      "access": "r"
+    },
+    {
+      "address": 29,
+      "function": "holding",
+      "name": "Rated-amperage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-4000",
+      "access": "r"
+    },
+    {
+      "address": 31,
+      "function": "holding",
+      "name": "Sourcea-engine-start-time-delay-(id-0x0001)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-6 sec",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Sourceb-engine-start-time-delay-(id-0x0002)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-6 sec",
+      "access": "r"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Sourcea-ext-engine-start-time-delay-(id-0x0003)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-5999 sec",
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Sourceb-ext-engine-start-time-delay-(id-0x0004)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-5999 sec",
+      "access": "r"
+    },
+    {
+      "address": 35,
+      "function": "holding",
+      "name": "Sourcea-engine-cooldown-time-delay-(id-0x0005)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-5999 sec",
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Sourceb-engine-cooldown-time-delay-(id-0x0006)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-5999 sec",
+      "access": "r"
+    },
+    {
+      "address": 37,
+      "function": "holding",
+      "name": "Preferred-to-standby-time-delay-(id-0x0007)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-5999 sec",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Standby-to-preferred-time-delay-(id-0x0008)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-5999 sec",
+      "access": "r"
+    },
+    {
+      "address": 39,
+      "function": "holding",
+      "name": "Off-to-preferred-time-delay-(id-0x0009)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-5999.9 sec",
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "Off-to-standby-time-delay-(id-0x000a)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-5999.9 sec",
+      "access": "r"
+    },
+    {
+      "address": 41,
+      "function": "holding",
+      "name": "Acquire-standby-source-(id-0x000b)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "1-5999 sec",
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "Inphase-monitor-synch-(id-0x000c)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "1-5999 sec",
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "Sourcea-over-volt-dropout-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "105 - 135) % of rated source voltage",
+      "access": "r"
+    },
+    {
+      "address": 45,
+      "function": "holding",
+      "name": "Sourcea-over-volt-pickup-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "95 - 100)% of over voltage dropout point",
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Sourcea-under-volt-pickup-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "85 - 100) % of rated source voltage",
+      "access": "r"
+    },
+    {
+      "address": 47,
+      "function": "holding",
+      "name": "Sourcea-under-volt-dropout-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "75 - 98) % of overvoltage pickup point",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Sourcea-voltage-debounce-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 49,
+      "function": "holding",
+      "name": "Sourceb-over-volt-dropout-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "105 - 135) % of rated source voltage",
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "Sourceb-over-volt-pickup-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "95 - 100)% of over voltage dropout point",
+      "access": "r"
+    },
+    {
+      "address": 51,
+      "function": "holding",
+      "name": "Sourceb-under-volt-pickup-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "85 - 100) % of rated source voltage",
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Sourceb-under-volt-dropout-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "75 - 98) % of overvoltage pickup point",
+      "access": "r"
+    },
+    {
+      "address": 53,
+      "function": "holding",
+      "name": "Sourceb-voltage-debounce-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 54,
+      "function": "holding",
+      "name": "Sourcea-over-freq-dropout-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "101 -105) % of overfreq pickup point",
+      "access": "r"
+    },
+    {
+      "address": 55,
+      "function": "holding",
+      "name": "Sourcea-over-freq-pickup-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "105 - 120) % of rated source freq",
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Sourcea-under-freq-dropout-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "95 - 99) % of underfreq pickup point",
+      "access": "r"
+    },
+    {
+      "address": 57,
+      "function": "holding",
+      "name": "Sourcea-under-freq-pickup-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "80 - 95)% of rated system frequency",
+      "access": "r"
+    },
+    {
+      "address": 58,
+      "function": "holding",
+      "name": "Sourcea-freq-dropout-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Sec",
+      "access": "r"
+    },
+    {
+      "address": 59,
+      "function": "holding",
+      "name": "Sourceb-over-freq-dropout-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "101 -105) % of overfreq pickup point",
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "Sourceb-over-freq-pickup-trip-point",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "105 - 120) % of rated source freq",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/kohler-mpac-1000.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont"
+    ]
+  }
+}

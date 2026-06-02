@@ -1,0 +1,200 @@
+{
+  "slug": "sofarsolar-hyd-5-20k-3ph",
+  "vendor": "SofarSolar",
+  "vendorSlug": "sofarsolar",
+  "model": "HYD 5…20K-3PH",
+  "modelSlug": "hyd-5-20k-3ph",
+  "name": "SofarSolar HYD 5…20K-3PH",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1160,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "ActivePower_PCC_Total"
+    },
+    {
+      "address": 1170,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Current_PCC_R"
+    },
+    {
+      "address": 1171,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "ActivePower_PCC_R"
+    },
+    {
+      "address": 1181,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Current_PCC_S"
+    },
+    {
+      "address": 1182,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "ActivePower_PCC_S"
+    },
+    {
+      "address": 1192,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Current_PCC_T"
+    },
+    {
+      "address": 1193,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "ActivePower_PCC_T"
+    },
+    {
+      "address": 1198,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "ActivePower_PV_Ext"
+    },
+    {
+      "address": 1414,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "Power_PV1"
+    },
+    {
+      "address": 1417,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "Power_PV2"
+    },
+    {
+      "address": 1420,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "Power_PV3"
+    },
+    {
+      "address": 1422,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "Power_PV4"
+    },
+    {
+      "address": 1591,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "Power_Bat8"
+    },
+    {
+      "address": 1593,
+      "function": "holding",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r",
+      "notes": "SOC_Bat8"
+    },
+    {
+      "address": 1670,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "PV_Generation_Total"
+    },
+    {
+      "address": 1678,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Energy_Purchase_Total"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

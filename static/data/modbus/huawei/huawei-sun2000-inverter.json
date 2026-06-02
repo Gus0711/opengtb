@@ -1,0 +1,46 @@
+{
+  "slug": "huawei-huawei-sun2000-inverter",
+  "vendor": "Huawei",
+  "vendorSlug": "huawei",
+  "model": "huawei-sun2000-inverter",
+  "modelSlug": "huawei-sun2000-inverter",
+  "name": "Huawei huawei-sun2000-inverter",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 32080,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "Active generation power AC"
+    },
+    {
+      "address": 32106,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Accumulated energy yield"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

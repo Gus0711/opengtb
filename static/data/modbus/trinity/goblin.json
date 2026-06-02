@@ -1,0 +1,426 @@
+{
+  "slug": "trinity-goblin",
+  "vendor": "trinity",
+  "vendorSlug": "trinity",
+  "model": "goblin",
+  "modelSlug": "goblin",
+  "name": "trinity goblin",
+  "equipmentType": "chaudiere",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 199,
+      "function": "holding",
+      "name": "Vln-R",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 201,
+      "function": "holding",
+      "name": "Vin-Y",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 203,
+      "function": "holding",
+      "name": "Vin-B",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 205,
+      "function": "holding",
+      "name": "Vin-avg",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 207,
+      "function": "holding",
+      "name": "Vii-ry",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 209,
+      "function": "holding",
+      "name": "Vii-yb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 211,
+      "function": "holding",
+      "name": "Vii-br",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 213,
+      "function": "holding",
+      "name": "Vii-avg",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 215,
+      "function": "holding",
+      "name": "Ir",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 217,
+      "function": "holding",
+      "name": "Iy",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 219,
+      "function": "holding",
+      "name": "Lb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 221,
+      "function": "holding",
+      "name": "Lavg",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 223,
+      "function": "holding",
+      "name": "I-neutral",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 229,
+      "function": "holding",
+      "name": "Hz",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 231,
+      "function": "holding",
+      "name": "System-pf",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 233,
+      "function": "holding",
+      "name": "Pfr",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 235,
+      "function": "holding",
+      "name": "Pfy",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 237,
+      "function": "holding",
+      "name": "Pfb",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 239,
+      "function": "holding",
+      "name": "System-kw",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 241,
+      "function": "holding",
+      "name": "System-kvar",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 243,
+      "function": "holding",
+      "name": "System-kva",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 245,
+      "function": "holding",
+      "name": "Kwr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 247,
+      "function": "holding",
+      "name": "Kwy",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 249,
+      "function": "holding",
+      "name": "Kwb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 251,
+      "function": "holding",
+      "name": "Kvar-r",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 253,
+      "function": "holding",
+      "name": "Kvar-y",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 255,
+      "function": "holding",
+      "name": "Kvar-b",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 257,
+      "function": "holding",
+      "name": "Kva-r",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 259,
+      "function": "holding",
+      "name": "Kva-y",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 261,
+      "function": "holding",
+      "name": "Kva-b",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 263,
+      "function": "holding",
+      "name": "Kw-demand",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 265,
+      "function": "holding",
+      "name": "Md-kw",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 269,
+      "function": "holding",
+      "name": "Md-kva",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 275,
+      "function": "holding",
+      "name": "Sys-kwh",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 277,
+      "function": "holding",
+      "name": "Sys-kvarh",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 279,
+      "function": "holding",
+      "name": "Sys.-Kvarh-lg",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 281,
+      "function": "holding",
+      "name": "Sys.-Kvarh-ld",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 283,
+      "function": "holding",
+      "name": "Sys-kvah",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 285,
+      "function": "holding",
+      "name": "3rd-hvr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 287,
+      "function": "holding",
+      "name": "Sth-hvr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 289,
+      "function": "holding",
+      "name": "7th-hvr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 291,
+      "function": "holding",
+      "name": "8th-hvr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 293,
+      "function": "holding",
+      "name": "9th-hvr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 295,
+      "function": "holding",
+      "name": "11th-hvr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 297,
+      "function": "holding",
+      "name": "15th-hvr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 299,
+      "function": "holding",
+      "name": "Thd-hvr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 301,
+      "function": "holding",
+      "name": "3rd-hlr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 303,
+      "function": "holding",
+      "name": "Sth-hlr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 305,
+      "function": "holding",
+      "name": "7th-hlr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 307,
+      "function": "holding",
+      "name": "8th-hlr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/trinity-goblin.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

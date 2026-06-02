@@ -1,0 +1,1604 @@
+{
+  "slug": "bticino-f4n200",
+  "vendor": "BTicino",
+  "vendorSlug": "bticino",
+  "model": "F4N200",
+  "modelSlug": "f4n200",
+  "name": "BTicino F4N200",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {
+    "rtu": {
+      "baudrate": 9600,
+      "parity": "none",
+      "dataBits": 8,
+      "stopBits": 1,
+      "slaveIdDefault": 1
+    }
+  },
+  "registers": [
+    {
+      "address": 257,
+      "function": "holding",
+      "name": "Write Current transformer ratio - CT",
+      "label": "CT = I prim / I sec ex: 500 A / 5 A  CT = 100",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 259,
+      "function": "holding",
+      "name": "Write Voltage transformer ratio - VT",
+      "label": "VT = V prim / V sec ex: 600 V /100 V VT = 6.00  WRITE 600 --- If tranformer not present VT = 1.00  WRITE 100",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "access": "rw"
+    },
+    {
+      "address": 260,
+      "function": "holding",
+      "name": "Energy mode accumulation",
+      "label": "0: Asyn 1: Syn 2: Tariff 3: Pulse Counting",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 769,
+      "function": "holding",
+      "name": "Device identifier",
+      "label": "The device returns 0006h",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "access": "r"
+    },
+    {
+      "address": 4097,
+      "function": "holding",
+      "name": "Phase 1 : phase voltage",
+      "label": "Measures",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 4099,
+      "function": "holding",
+      "name": "Phase 2 : phase voltage",
+      "label": "Measures",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 4101,
+      "function": "holding",
+      "name": "Phase 3 : phase voltage",
+      "label": "Measures",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 4103,
+      "function": "holding",
+      "name": "Phase 1 : current",
+      "label": "Measures",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4105,
+      "function": "holding",
+      "name": "Phase 2 : current",
+      "label": "Measures",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4107,
+      "function": "holding",
+      "name": "Phase 3 : current",
+      "label": "Measures",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4109,
+      "function": "holding",
+      "name": "Neutral current",
+      "label": "Measures",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4111,
+      "function": "holding",
+      "name": "Chained voltage : L1-L2",
+      "label": "Measures",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 4113,
+      "function": "holding",
+      "name": "Chained voltage : L2-L3",
+      "label": "Measures",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 4115,
+      "function": "holding",
+      "name": "Chained voltage : L3-L1",
+      "label": "Measures",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 4117,
+      "function": "holding",
+      "name": "3-phase : active power",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4119,
+      "function": "holding",
+      "name": "3-phase : reactive power",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4121,
+      "function": "holding",
+      "name": "3-phase : apparent power",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4123,
+      "function": "holding",
+      "name": "3-phase : sign of active power",
+      "label": "0=positive, 1=negative",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4124,
+      "function": "holding",
+      "name": "3-phase : sign of reactive power",
+      "label": "0=positive, 1=negative",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4125,
+      "function": "holding",
+      "name": "3-phase : positive active energy",
+      "label": "See Note 2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4127,
+      "function": "holding",
+      "name": "3-phase : positive reactive energy",
+      "label": "See Note 2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4129,
+      "function": "holding",
+      "name": "3-phase : negative active energy",
+      "label": "See Note 2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4131,
+      "function": "holding",
+      "name": "3-phase : negative reactive energy",
+      "label": "See Note 2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4133,
+      "function": "holding",
+      "name": "3-phase : power factor",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.01,
+      "access": "r"
+    },
+    {
+      "address": 4134,
+      "function": "holding",
+      "name": "3-phase : sector of power factor (cap or ind)",
+      "label": "0=\"PF=1\", 1=\"ind\" (L), 2=\"cap\" (C)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4135,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 4136,
+      "function": "holding",
+      "name": "3-phase : average power",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4138,
+      "function": "holding",
+      "name": "3-phase : peak maximum demand",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4140,
+      "function": "holding",
+      "name": "Time counter for average power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "min",
+      "access": "r"
+    },
+    {
+      "address": 4141,
+      "function": "holding",
+      "name": "Phase 1 : active power",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4143,
+      "function": "holding",
+      "name": "Phase 2 : active power",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4145,
+      "function": "holding",
+      "name": "Phase 3 : active power",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4147,
+      "function": "holding",
+      "name": "Phase 1 : sign of active power",
+      "label": "0=positive, 1=negative",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4148,
+      "function": "holding",
+      "name": "Phase 2: sign of active power",
+      "label": "0=positive, 1=negative",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4149,
+      "function": "holding",
+      "name": "Phase 3: sign of active power",
+      "label": "0=positive, 1=negative",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4150,
+      "function": "holding",
+      "name": "Phase 1: reactive power",
+      "label": "See Note 1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4152,
+      "function": "holding",
+      "name": "Phase 2: reactive power",
+      "label": "See Note 1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4154,
+      "function": "holding",
+      "name": "Phase 3: reactive power",
+      "label": "See Note 1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4156,
+      "function": "holding",
+      "name": "Phase 1: sign of reactive power",
+      "label": "0=positive, 1=negative",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4157,
+      "function": "holding",
+      "name": "Phase 2: sign of reactive power",
+      "label": "0=positive, 1=negative",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4158,
+      "function": "holding",
+      "name": "Phase 3: sign of reactive power",
+      "label": "0=positive, 1=negative",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4159,
+      "function": "holding",
+      "name": "Phase 1: apparent power",
+      "label": "See Note 1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4161,
+      "function": "holding",
+      "name": "Phase 2: apparent power",
+      "label": "See Note 1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4163,
+      "function": "holding",
+      "name": "Phase 3: apparent power",
+      "label": "See Note 1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4165,
+      "function": "holding",
+      "name": "Phase 1: power factor",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.01,
+      "access": "r"
+    },
+    {
+      "address": 4166,
+      "function": "holding",
+      "name": "Phase 2: power factor",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.01,
+      "access": "r"
+    },
+    {
+      "address": 4167,
+      "function": "holding",
+      "name": "Phase 3: power factor",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.01,
+      "access": "r"
+    },
+    {
+      "address": 4168,
+      "function": "holding",
+      "name": "Phase 1: sector of power factor (cap or ind)",
+      "label": "0=\"PF=1\", 1=\"ind\" (L), 2=\"cap\" (C)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4169,
+      "function": "holding",
+      "name": "Phase 2: sector of power factor (cap or ind)",
+      "label": "0=\"PF=1\", 1=\"ind\" (L), 2=\"cap\" (C)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4170,
+      "function": "holding",
+      "name": "Phase 3: sector of power factor (cap or ind)",
+      "label": "0=\"PF=1\", 1=\"ind\" (L), 2=\"cap\" (C)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4171,
+      "function": "holding",
+      "name": "Phase 1: THD V1",
+      "label": "See Note 4",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 4172,
+      "function": "holding",
+      "name": "Phase 2: THD V2",
+      "label": "See Note 4",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 4173,
+      "function": "holding",
+      "name": "Phase 3: THD V3",
+      "label": "See Note 4",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 4174,
+      "function": "holding",
+      "name": "Phase 1: THD I1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 4175,
+      "function": "holding",
+      "name": "Phase 2: THD I2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 4176,
+      "function": "holding",
+      "name": "Phase 3: THD I3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 4177,
+      "function": "holding",
+      "name": "Phase 1: I1 average",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4179,
+      "function": "holding",
+      "name": "Phase 2: I2 average",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4181,
+      "function": "holding",
+      "name": "Phase 3: I3 average",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4183,
+      "function": "holding",
+      "name": "Phase 1: I1 peak Max.",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4185,
+      "function": "holding",
+      "name": "Phase 2: I2 peak Max.",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4187,
+      "function": "holding",
+      "name": "Phase 3: I3 peak Max.",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4189,
+      "function": "holding",
+      "name": "3-phase: I average",
+      "label": "(I1+I2+I3)/3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 4191,
+      "function": "holding",
+      "name": "Phase 1: V1 min.",
+      "label": "See Note 4",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 4193,
+      "function": "holding",
+      "name": "Phase 2: V2 min.",
+      "label": "See Note 4",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 4195,
+      "function": "holding",
+      "name": "Phase 3: V3 min.",
+      "label": "See Note 4",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 4197,
+      "function": "holding",
+      "name": "Phase 1: V1 Max.",
+      "label": "See Note 4",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 4199,
+      "function": "holding",
+      "name": "Phase 2: V2 Max.",
+      "label": "See Note 4",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 4201,
+      "function": "holding",
+      "name": "Phase 3: V3 Max.",
+      "label": "See Note 4",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 4203,
+      "function": "holding",
+      "name": "3-phase: partial active energy",
+      "label": "See Note 2",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1000,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4205,
+      "function": "holding",
+      "name": "3-phase: partial reactive energy",
+      "label": "See Note 2",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1000,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4207,
+      "function": "holding",
+      "name": "Operating timer counter",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "h",
+      "access": "r"
+    },
+    {
+      "address": 4208,
+      "function": "holding",
+      "name": "Alarm status | Output Remote Command",
+      "label": "0: No active alarm, 1: Alarm active | 0: Deactivate 1: Activate",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 4209,
+      "function": "holding",
+      "name": "3-phase: average active power",
+      "label": "See Note 1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4211,
+      "function": "holding",
+      "name": "3-phase: average reactive power",
+      "label": "See Note 1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4213,
+      "function": "holding",
+      "name": "3-phase: average apparent power",
+      "label": "See Note 1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4215,
+      "function": "holding",
+      "name": "3-phase: active PMD power",
+      "label": "See Note 1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4217,
+      "function": "holding",
+      "name": "3-phase: reactive PMD power",
+      "label": "See Note 1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4219,
+      "function": "holding",
+      "name": "3-phase: apparent PMD power",
+      "label": "See Note 1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4609,
+      "function": "holding",
+      "name": "Current transformer ratio (CT)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4610,
+      "function": "holding",
+      "name": "Voltage transformer ratio (VT)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "access": "r"
+    },
+    {
+      "address": 4615,
+      "function": "holding",
+      "name": "Digital Inputs Status",
+      "label": "See Note 3",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4689,
+      "function": "holding",
+      "name": "3-phase: Positive total active energy",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1000,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4691,
+      "function": "holding",
+      "name": "3-phase: Positive total reactive energy",
+      "label": "See Note 2",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1000,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4693,
+      "function": "holding",
+      "name": "3-phase: Negative total active energy",
+      "label": "See Note 2",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1000,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4695,
+      "function": "holding",
+      "name": "3-phase: Negative total reactive energy",
+      "label": "See Note 2",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1000,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4697,
+      "function": "holding",
+      "name": "3-phase Positive partial active energy or tariff 1 active energy (if option tariffs)",
+      "label": "See Note 2",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1000,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4699,
+      "function": "holding",
+      "name": "3-phase Negative partial active energy or tariff 2 active energy (if option tariffs)",
+      "label": "See Note 2",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1000,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4701,
+      "function": "holding",
+      "name": "3-phase Positive partial reactive energy or tariff 3 active energy (if option tariffs)",
+      "label": "See Note 2",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1000,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4703,
+      "function": "holding",
+      "name": "3-phase Negative partial reactive energy or tariff 4 active energy (if option tariffs)",
+      "label": "See Note 2",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1000,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 4865,
+      "function": "holding",
+      "name": "3-phase: active average power",
+      "label": "See Note 1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4867,
+      "function": "holding",
+      "name": "3-phase: reactive average power",
+      "label": "See Note 1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.01,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4869,
+      "function": "holding",
+      "name": "3-phase : apparent average power",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4871,
+      "function": "holding",
+      "name": "3-phase : active average power tarifs 1",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4873,
+      "function": "holding",
+      "name": "3-phase : reactive average power tarifs 1",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4875,
+      "function": "holding",
+      "name": "3-phase : apparent average power tarifs 1",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4877,
+      "function": "holding",
+      "name": "3-phase : active average power tarifs 2",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4879,
+      "function": "holding",
+      "name": "3-phase : reactive average power tarifs 2",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4881,
+      "function": "holding",
+      "name": "3-phase : apparent average power tarifs 2",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4883,
+      "function": "holding",
+      "name": "3-phase : active average power tarifs 3",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4885,
+      "function": "holding",
+      "name": "3-phase : reactive average power tarifs 3",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4887,
+      "function": "holding",
+      "name": "3-phase : apparent average power tarifs 3",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4889,
+      "function": "holding",
+      "name": "3-phase : active average power tarifs 4",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4891,
+      "function": "holding",
+      "name": "3-phase : reactive average power tarifs 4",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4893,
+      "function": "holding",
+      "name": "3-phase : apparent average power tarifs 4",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5425,
+      "function": "holding",
+      "name": "Total Apparent power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5427,
+      "function": "holding",
+      "name": "3-phase : average active power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5429,
+      "function": "holding",
+      "name": "3-phase : average reactive power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5431,
+      "function": "holding",
+      "name": "3-phase : average apparent power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5433,
+      "function": "holding",
+      "name": "3-phase : max active power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 5435,
+      "function": "holding",
+      "name": "3-phase : max reactive power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 5437,
+      "function": "holding",
+      "name": "3-phase : max apparent power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 5505,
+      "function": "holding",
+      "name": "Phase1 voltage crest factor",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.001,
+      "access": "r"
+    },
+    {
+      "address": 5506,
+      "function": "holding",
+      "name": "Phase2 voltage crest factor",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.001,
+      "access": "r"
+    },
+    {
+      "address": 5507,
+      "function": "holding",
+      "name": "Phase3 voltage crest factor",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.001,
+      "access": "r"
+    },
+    {
+      "address": 5508,
+      "function": "holding",
+      "name": "Phase1 current crest factor",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.001,
+      "access": "r"
+    },
+    {
+      "address": 5509,
+      "function": "holding",
+      "name": "Phase2 current crest factor",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.001,
+      "access": "r"
+    },
+    {
+      "address": 5510,
+      "function": "holding",
+      "name": "Phase3 current crest factor",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.001,
+      "access": "r"
+    },
+    {
+      "address": 5511,
+      "function": "holding",
+      "name": "Phase1-2 voltage crest factor",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.001,
+      "access": "r"
+    },
+    {
+      "address": 5512,
+      "function": "holding",
+      "name": "Phase2-3 voltage crest factor",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.001,
+      "access": "r"
+    },
+    {
+      "address": 5513,
+      "function": "holding",
+      "name": "Phase3-1 voltage crest factor",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.001,
+      "access": "r"
+    },
+    {
+      "address": 5633,
+      "function": "holding",
+      "name": "phase displacement V1-V2 (V12-V23)",
+      "label": "See Note 4",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°",
+      "access": "r"
+    },
+    {
+      "address": 5634,
+      "function": "holding",
+      "name": "phase displacement V2-V3 (V23-V31)",
+      "label": "See Note 4",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°",
+      "access": "r"
+    },
+    {
+      "address": 5635,
+      "function": "holding",
+      "name": "phase displacement V3-V1 (V31-V12)",
+      "label": "See Note 4",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°",
+      "access": "r"
+    },
+    {
+      "address": 5636,
+      "function": "holding",
+      "name": "phase displacement I1-I2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°",
+      "access": "r"
+    },
+    {
+      "address": 5637,
+      "function": "holding",
+      "name": "phase displacement I2-I3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°",
+      "access": "r"
+    },
+    {
+      "address": 5638,
+      "function": "holding",
+      "name": "phase displacement I3-I1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°",
+      "access": "r"
+    },
+    {
+      "address": 5639,
+      "function": "holding",
+      "name": "phase displacement V1-I1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°",
+      "access": "r"
+    },
+    {
+      "address": 5640,
+      "function": "holding",
+      "name": "phase displacement V2-I2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°",
+      "access": "r"
+    },
+    {
+      "address": 5641,
+      "function": "holding",
+      "name": "phase displacement V3-I3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°",
+      "access": "r"
+    },
+    {
+      "address": 5642,
+      "function": "holding",
+      "name": "phase displacement total",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°",
+      "access": "r"
+    },
+    {
+      "address": 8193,
+      "function": "holding",
+      "name": "Standard Setup parameters",
+      "label": "write 16 byte at once",
+      "dataType": "uint16",
+      "size": 16,
+      "access": "rw"
+    },
+    {
+      "address": 8197,
+      "function": "holding",
+      "name": "Percentage of rated 3phase active power run hour meter",
+      "label": "50 ÷ 5000 means (0.5% ÷ 50.00%)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 8198,
+      "function": "holding",
+      "name": "Run hour meter active on",
+      "label": "0: Voltages, 1 Power",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8201,
+      "function": "holding",
+      "name": "Backlight intensity",
+      "label": "0: 0% 1: 35% 2: 70% 3: 100%",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8203,
+      "function": "holding",
+      "name": "Power Averaging time",
+      "label": "0: 5min 1: 8min 2: 10min 3: 15min 4: 20min 5: 30min 6: 60min",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8204,
+      "function": "holding",
+      "name": "Insertion type",
+      "label": "0: 3N-3E 1: 3-3E 2: 3-2E 3: 1N-1E 4: 3N-1E 5: 3-1E",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8205,
+      "function": "holding",
+      "name": "Measure on line 1 of custom page",
+      "label": "0:V1 1:V12 2:I1 3:In 4:P 5:Q 6:S 7:P1 8:Q1 9:S1 10:PF 3-phase",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8206,
+      "function": "holding",
+      "name": "Measure on line 2 of custom page",
+      "label": "0:V2 1:V23 2:I2 3:P 4:Q 5:S 6:P2 7:Q2 8:S2 9:Freq 10:I1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8207,
+      "function": "holding",
+      "name": "Measure on line 3 of custom page",
+      "label": "0:V3 1:V31 2:I3 3:P 4:Q 5:S 6:P3 7:Q3 8:S3 9:P1 10:I1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8705,
+      "function": "holding",
+      "name": "Output option Setup parameters",
+      "label": "write 24 byte at once",
+      "dataType": "uint16",
+      "size": 24,
+      "access": "rw"
+    },
+    {
+      "address": 8715,
+      "function": "holding",
+      "name": "W10 Output type",
+      "label": "0: Pulse out 1: Alarm out 2: Dual stable Remote command 3: Timed Remote command",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8716,
+      "function": "holding",
+      "name": "W11 Pulse duration",
+      "label": "0: 50 ms 1: 100 ms 2: 200 ms 3: 300 ms 4: 400 ms 5: 500ms",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8717,
+      "function": "holding",
+      "name": "W12 Pulse weight",
+      "label": "0: 0.01 kWh 1: 0.10 kWh 2: 1.00 kWh 3: 10.0 kWh 4: 0.10 MWh 5: 1.00 MWh 6: 10.0 MWh",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8718,
+      "function": "holding",
+      "name": "W13 Pulse active on",
+      "label": "0: Active Energy 1: Reactive Energy",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8719,
+      "function": "holding",
+      "name": "W14 Alarm deactivation delay or Relay closing time",
+      "label": "if Output type = Timed Remote command",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "s",
+      "access": "rw"
+    },
+    {
+      "address": 8720,
+      "function": "holding",
+      "name": "W15 Alarm activation delay",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "s",
+      "access": "rw"
+    },
+    {
+      "address": 8721,
+      "function": "holding",
+      "name": "W16 Hysteresis",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 8722,
+      "function": "holding",
+      "name": "W17 Relay (NO/NC)",
+      "label": "0: NO 1: NC",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8723,
+      "function": "holding",
+      "name": "W18 Alarm on Min Value or Max Value",
+      "label": "0: Min 1: Max",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8724,
+      "function": "holding",
+      "name": "W19 Alarm setpoint",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8725,
+      "function": "holding",
+      "name": "W20",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8726,
+      "function": "holding",
+      "name": "W21 Unit of setpoint",
+      "label": "0: X.XXX 1: XX.XX 2: XXX.X 3: X.XXX k 4: XX.XX k 5: XXX.X k 6: X.XXX M 7: XX.XX M 8: XXX.X M",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8727,
+      "function": "holding",
+      "name": "W22 Sign of Alarm setpoint",
+      "label": "0: '+' 1: '-'",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8728,
+      "function": "holding",
+      "name": "W23 Type of measure",
+      "label": "0:V1 1:V2 2:V3 3:V12 4:V23 5:V31 6:I1 7:I2 8:I3 9:Freq 10:Active Power 11:Reactive Power",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 9217,
+      "function": "holding",
+      "name": "Reset parameters",
+      "label": "See Note 1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 9729,
+      "function": "holding",
+      "name": "Saving parameters",
+      "label": "See Note 2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 9985,
+      "function": "holding",
+      "name": "Enable writing",
+      "label": "See Note 2 & Note 3",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 10241,
+      "function": "holding",
+      "name": "Restore default parameters",
+      "label": "See Note 3",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    }
+  ],
+  "datasheets": [
+    {
+      "label": "Doc constructeur",
+      "url": "https://dar.bticino.it/asset/Documents/IDP000050EN_02.pdf"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://dar.bticino.it/asset/Documents/IDP000050EN_02.pdf",
+    "needsReview": true,
+    "reviewReasons": [
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

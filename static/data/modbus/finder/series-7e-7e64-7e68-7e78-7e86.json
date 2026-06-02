@@ -1,0 +1,471 @@
+{
+  "slug": "finder-series-7e-7e64-7e68-7e78-7e86",
+  "vendor": "finder",
+  "vendorSlug": "finder",
+  "model": "series-7e-7e64-7e68-7e78-7e86",
+  "modelSlug": "series-7e-7e64-7e68-7e78-7e86",
+  "name": "finder series-7e-7e64-7e68-7e78-7e86",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 4096,
+      "function": "holding",
+      "name": "Ph-1-N-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4098,
+      "function": "holding",
+      "name": "Ph-2-N-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4100,
+      "function": "holding",
+      "name": "Ph-3-N-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4102,
+      "function": "holding",
+      "name": "L-1-2-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4104,
+      "function": "holding",
+      "name": "L-2-3-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4106,
+      "function": "holding",
+      "name": "L-3-1-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4108,
+      "function": "holding",
+      "name": "System-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4110,
+      "function": "holding",
+      "name": "Ph1-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4112,
+      "function": "holding",
+      "name": "Ph2-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4114,
+      "function": "holding",
+      "name": "Ph3-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4116,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4118,
+      "function": "holding",
+      "name": "System-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4120,
+      "function": "holding",
+      "name": "Ph1-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4122,
+      "function": "holding",
+      "name": "Ph2-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4124,
+      "function": "holding",
+      "name": "Ph3-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4126,
+      "function": "holding",
+      "name": "Sys-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4128,
+      "function": "holding",
+      "name": "Ph1-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4130,
+      "function": "holding",
+      "name": "Ph2-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4132,
+      "function": "holding",
+      "name": "Ph3-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4134,
+      "function": "holding",
+      "name": "Sys-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4136,
+      "function": "holding",
+      "name": "Ph1-appare-nt-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4138,
+      "function": "holding",
+      "name": "Ph2-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4140,
+      "function": "holding",
+      "name": "Ph3-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4142,
+      "function": "holding",
+      "name": "Sys-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4144,
+      "function": "holding",
+      "name": "Ph1-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4146,
+      "function": "holding",
+      "name": "Ph2-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4148,
+      "function": "holding",
+      "name": "Ph3-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4150,
+      "function": "holding",
+      "name": "Sys-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4152,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 4154,
+      "function": "holding",
+      "name": "Phase-seque-nce",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4352,
+      "function": "holding",
+      "name": "Ph1-imp.-Active-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4354,
+      "function": "holding",
+      "name": "Ph2-imp.-Active-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4356,
+      "function": "holding",
+      "name": "Ph3-imp.-Active-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4358,
+      "function": "holding",
+      "name": "Sys-imp.-Active-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4360,
+      "function": "holding",
+      "name": "Ph1-exp.-Active-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4362,
+      "function": "holding",
+      "name": "Ph2-exp.-Active-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4364,
+      "function": "holding",
+      "name": "Ph3-exp.-Active-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4366,
+      "function": "holding",
+      "name": "Sys-exp.-Active-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4368,
+      "function": "holding",
+      "name": "Ph1-imp.-Lag.-Apparent-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4370,
+      "function": "holding",
+      "name": "Ph2-imp.-Lag.-Apparent-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4372,
+      "function": "holding",
+      "name": "Ph3-imp.-Lag.-Apparent-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4374,
+      "function": "holding",
+      "name": "Sys-imp.-Lag.-Apparent-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4376,
+      "function": "holding",
+      "name": "Ph1-exp.-Lag.-Apparent-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4378,
+      "function": "holding",
+      "name": "Ph2-exp.-Lag.-Apparent-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4380,
+      "function": "holding",
+      "name": "Ph3-exp.-Lag.-Apparent-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4382,
+      "function": "holding",
+      "name": "Sys-exp.-Lag.-Apparent-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4384,
+      "function": "holding",
+      "name": "Ph1-imp.-Lead.-Apparent-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4386,
+      "function": "holding",
+      "name": "Ph2-imp.-Lead.-Apparent-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4388,
+      "function": "holding",
+      "name": "Ph3-imp.-Lead.-Apparent-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4390,
+      "function": "holding",
+      "name": "Sys-imp.-Lead.-Apparent-en",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/finder-series-7e-7e64-7e68-7e78-7e86.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

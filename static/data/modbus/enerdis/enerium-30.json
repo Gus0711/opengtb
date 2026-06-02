@@ -1,0 +1,467 @@
+{
+  "slug": "enerdis-enerium-30",
+  "vendor": "enerdis",
+  "vendorSlug": "enerdis",
+  "model": "enerium-30",
+  "modelSlug": "enerium-30",
+  "name": "enerdis enerium-30",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1280,
+      "function": "holding",
+      "name": "V1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1282,
+      "function": "holding",
+      "name": "V2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1284,
+      "function": "holding",
+      "name": "V3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1288,
+      "function": "holding",
+      "name": "U12",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1290,
+      "function": "holding",
+      "name": "U23",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1292,
+      "function": "holding",
+      "name": "U31",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1294,
+      "function": "holding",
+      "name": "I1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1296,
+      "function": "holding",
+      "name": "I2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1298,
+      "function": "holding",
+      "name": "I3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1300,
+      "function": "holding",
+      "name": "In",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1302,
+      "function": "holding",
+      "name": "P1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1304,
+      "function": "holding",
+      "name": "P2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1306,
+      "function": "holding",
+      "name": "P3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1308,
+      "function": "holding",
+      "name": "Pt",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1310,
+      "function": "holding",
+      "name": "Q1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 1312,
+      "function": "holding",
+      "name": "Q2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 1314,
+      "function": "holding",
+      "name": "Q3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 1316,
+      "function": "holding",
+      "name": "Qt",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 1318,
+      "function": "holding",
+      "name": "S1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1320,
+      "function": "holding",
+      "name": "S2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1322,
+      "function": "holding",
+      "name": "S3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1324,
+      "function": "holding",
+      "name": "St",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1326,
+      "function": "holding",
+      "name": "FP1",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1327,
+      "function": "holding",
+      "name": "Quadrant-FP1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1328,
+      "function": "holding",
+      "name": "FP2",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1329,
+      "function": "holding",
+      "name": "Quadrant-FP2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1330,
+      "function": "holding",
+      "name": "FP3",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1331,
+      "function": "holding",
+      "name": "Quadrant-FP3",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1332,
+      "function": "holding",
+      "name": "Fpt",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1333,
+      "function": "holding",
+      "name": "Quadrant,-fpt",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1348,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 1350,
+      "function": "holding",
+      "name": "Total-tan-phi",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2832,
+      "function": "holding",
+      "name": "Minima-of-pt-receiver",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 2836,
+      "function": "holding",
+      "name": "Minima-of-pt-generator",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 2868,
+      "function": "holding",
+      "name": "Maxima-of-V1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2872,
+      "function": "holding",
+      "name": "Maxima-of-V2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2876,
+      "function": "holding",
+      "name": "Maxima-of-V3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2880,
+      "function": "holding",
+      "name": "Maxima-of-vt",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2884,
+      "function": "holding",
+      "name": "Maxima-of-U12",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2888,
+      "function": "holding",
+      "name": "Maxima-of-U23",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2892,
+      "function": "holding",
+      "name": "Maxima-of-U31",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2896,
+      "function": "holding",
+      "name": "Maxima-dofi1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 2900,
+      "function": "holding",
+      "name": "Maxima-of-I2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 2904,
+      "function": "holding",
+      "name": "Maxima-of-I3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 2908,
+      "function": "holding",
+      "name": "Maxima-of-in",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 2936,
+      "function": "holding",
+      "name": "Maxima-of-pt-receiver",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 2940,
+      "function": "holding",
+      "name": "Maxima-of-pt-generator",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 2968,
+      "function": "holding",
+      "name": "Maxima-of-qt-receiver",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 2972,
+      "function": "holding",
+      "name": "Maxima-of-qt-generator",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 3140,
+      "function": "holding",
+      "name": "Minima-of-st",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/enerdis-enerium-30.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

@@ -1,0 +1,440 @@
+{
+  "slug": "schrack-na96",
+  "vendor": "schrack",
+  "vendorSlug": "schrack",
+  "model": "na96",
+  "modelSlug": "na96",
+  "name": "schrack na96",
+  "equipmentType": "gateway",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 51,
+      "function": "holding",
+      "name": "Chained-voltage-l3ll",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 769,
+      "function": "holding",
+      "name": "Phase-1-phase-voltage",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 773,
+      "function": "holding",
+      "name": "Phase-2-phase-voltage",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 777,
+      "function": "holding",
+      "name": "Phase-3-phase-voltage",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 781,
+      "function": "holding",
+      "name": "Phase-1-current",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 785,
+      "function": "holding",
+      "name": "Phase-2-current",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 789,
+      "function": "holding",
+      "name": "Phase-3-current",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 793,
+      "function": "holding",
+      "name": "3phase-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 797,
+      "function": "holding",
+      "name": "3phase-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 801,
+      "function": "holding",
+      "name": "3phase-apparent-power",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 805,
+      "function": "holding",
+      "name": "3phase-positive-active-enerqy",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 809,
+      "function": "holding",
+      "name": "Chained-voltage-l1l2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 813,
+      "function": "holding",
+      "name": "Chained-voltage-l2l3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 821,
+      "function": "holding",
+      "name": "3phase-negative-active-enerqy",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 825,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 827,
+      "function": "holding",
+      "name": "Operatinq-timer-counter",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 829,
+      "function": "holding",
+      "name": "3phase-power-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 833,
+      "function": "holding",
+      "name": "Output-relay-status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 835,
+      "function": "holding",
+      "name": "3phase-positive-reactive-energy",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 840,
+      "function": "holding",
+      "name": "3phase-negative-reactive-energy",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 848,
+      "function": "holding",
+      "name": "3phase-average-power",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 852,
+      "function": "holding",
+      "name": "3phase-peak-maximum-demand",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 857,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 861,
+      "function": "holding",
+      "name": "Phase-1-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 865,
+      "function": "holding",
+      "name": "Phase-2-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 869,
+      "function": "holding",
+      "name": "Phase-3-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 876,
+      "function": "holding",
+      "name": "Phase-1-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 880,
+      "function": "holding",
+      "name": "Phase-2-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 884,
+      "function": "holding",
+      "name": "Phase-3-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 891,
+      "function": "holding",
+      "name": "Phase-1-apparent-power",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 895,
+      "function": "holding",
+      "name": "Phase-2-apparent-power",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 899,
+      "function": "holding",
+      "name": "Phase-3-apparent-power",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 903,
+      "function": "holding",
+      "name": "Phase-1-power-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 912,
+      "function": "holding",
+      "name": "Phase-1-thd-vl",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 914,
+      "function": "holding",
+      "name": "Phase-2-thd-V2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 916,
+      "function": "holding",
+      "name": "Phase-3-:-thd-V3",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 918,
+      "function": "holding",
+      "name": "Phase-1-:-thd-I1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 920,
+      "function": "holding",
+      "name": "Phase-2-thd-12",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 922,
+      "function": "holding",
+      "name": "Phase-3-thd-13",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 924,
+      "function": "holding",
+      "name": "Phase-1-il-averaqe",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 928,
+      "function": "holding",
+      "name": "Phase-2-12-averaqe",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 932,
+      "function": "holding",
+      "name": "Phase-3-13-averaqe",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 936,
+      "function": "holding",
+      "name": "Phase-1-il-peak-maximum",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 940,
+      "function": "holding",
+      "name": "Phase-2-12-peak-maximum",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 944,
+      "function": "holding",
+      "name": "Phase-3-13-peak-maximum",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 948,
+      "function": "holding",
+      "name": "(i1+i2+13)/3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 952,
+      "function": "holding",
+      "name": "Phase-1-vl-min",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 956,
+      "function": "holding",
+      "name": "Phase-2-V2-min",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 960,
+      "function": "holding",
+      "name": "Phase-3-:-V3-min",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    },
+    {
+      "address": 964,
+      "function": "holding",
+      "name": "Phase-1-:-vl-max",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "mV",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/schrack-na96-.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

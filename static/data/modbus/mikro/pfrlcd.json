@@ -1,0 +1,472 @@
+{
+  "slug": "mikro-pfrlcd",
+  "vendor": "mikro",
+  "vendorSlug": "mikro",
+  "model": "pfrlcd",
+  "modelSlug": "pfrlcd",
+  "name": "mikro pfrlcd",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Phase-voltage-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Vrms",
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "Phase-voltage-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Vrms",
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Phase-voltage-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Vrms",
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "Phase-current-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Irms",
+      "access": "r"
+    },
+    {
+      "address": 27,
+      "function": "holding",
+      "name": "Phase-current-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Irms",
+      "access": "r"
+    },
+    {
+      "address": 29,
+      "function": "holding",
+      "name": "Phase-current-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Irms",
+      "access": "r"
+    },
+    {
+      "address": 31,
+      "function": "holding",
+      "name": "Active-power-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Reactive-power-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 35,
+      "function": "holding",
+      "name": "Apparent-power-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 37,
+      "function": "holding",
+      "name": "Power-factor-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 39,
+      "function": "holding",
+      "name": "Active-power-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 41,
+      "function": "holding",
+      "name": "Reactive-power-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 43,
+      "function": "holding",
+      "name": "Apparent-power-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 45,
+      "function": "holding",
+      "name": "Power-factor-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 47,
+      "function": "holding",
+      "name": "Active-power-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 49,
+      "function": "holding",
+      "name": "Reactive-power-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 51,
+      "function": "holding",
+      "name": "Apparent-power-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 53,
+      "function": "holding",
+      "name": "Power-factor-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 55,
+      "function": "holding",
+      "name": "Total-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 57,
+      "function": "holding",
+      "name": "Total-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 59,
+      "function": "holding",
+      "name": "Total-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 61,
+      "function": "holding",
+      "name": "Total-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 63,
+      "function": "holding",
+      "name": "Fundamental-active-power-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 65,
+      "function": "holding",
+      "name": "Fundamental-active-power-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 67,
+      "function": "holding",
+      "name": "Fundamental-active-power-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 69,
+      "function": "holding",
+      "name": "Fundamental-reactive-power-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 71,
+      "function": "holding",
+      "name": "Fundamental-reactive-power-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 73,
+      "function": "holding",
+      "name": "Fundamental-reactive-power-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 75,
+      "function": "holding",
+      "name": "Harmonic-active-power-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 77,
+      "function": "holding",
+      "name": "Harmonic-active-power-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 79,
+      "function": "holding",
+      "name": "Harmonic-active-power-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 81,
+      "function": "holding",
+      "name": "Harmonic-reactive-power-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 83,
+      "function": "holding",
+      "name": "Harmonic-reactive-power-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 85,
+      "function": "holding",
+      "name": "Harmonic-reactive-power-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 87,
+      "function": "holding",
+      "name": "Total-voltage-harmonic-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Vrms",
+      "access": "r"
+    },
+    {
+      "address": 89,
+      "function": "holding",
+      "name": "Total-voltage-harmonic-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Vrms",
+      "access": "r"
+    },
+    {
+      "address": 91,
+      "function": "holding",
+      "name": "Total-voltage-harmonic-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Vrms",
+      "access": "r"
+    },
+    {
+      "address": 93,
+      "function": "holding",
+      "name": "Total-current-harmonic-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Irms",
+      "access": "r"
+    },
+    {
+      "address": 95,
+      "function": "holding",
+      "name": "Total-current-harmonic-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Irms",
+      "access": "r"
+    },
+    {
+      "address": 97,
+      "function": "holding",
+      "name": "Total-current-harmonic-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Irms",
+      "access": "r"
+    },
+    {
+      "address": 99,
+      "function": "holding",
+      "name": "Voltage-A-harmonics-0",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "Voltage-A-harmonics-1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 101,
+      "function": "holding",
+      "name": "Voltage-A-harmonics-2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "Voltage-A-harmonics-3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 103,
+      "function": "holding",
+      "name": "Voltage-A-harmonics-4",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "Voltage-A-harmonics-5",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 105,
+      "function": "holding",
+      "name": "Voltage-A-harmonics-6",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 106,
+      "function": "holding",
+      "name": "Voltage-A-harmonics-7",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 107,
+      "function": "holding",
+      "name": "Voltage-A-harmonics-8",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/mikro-pfrlcd.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

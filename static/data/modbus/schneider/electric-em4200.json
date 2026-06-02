@@ -1,0 +1,476 @@
+{
+  "slug": "schneider-electric-em4200",
+  "vendor": "schneider",
+  "vendorSlug": "schneider",
+  "model": "electric-em4200",
+  "modelSlug": "electric-em4200",
+  "name": "schneider electric-em4200",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Total-instantaneous-real-power-(3-phase-total)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Total-instantaneous-reactive-power-(3-phase-total)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Total-instantaneous-apparent-power-(3-phase-total)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Total-power-factor-(total-kw-/-total-kva)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Ratio",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Voltage,-line-to-line,-average-of-phases",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Voltage,-line-to-neutral,-average-of-phases",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Current,-average-of-phases",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Real-power,-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Real-power,-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Real-power,-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Power-factor,-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Ratio",
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Power-factor,-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Ratio",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Power-factor,-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Ratio",
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "Voltage,-L1-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Voltage,-L2-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Voltage,-L3-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Voltage,-L1-N",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Voltage,-L2-N",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Voltage,-L3-N",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "Current,-instantaneous,-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Current,-instantaneous,-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Current,-instantaneous,-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Present-demand-sub-interval",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "Minimum-demand",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "Maximum-demand",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 27,
+      "function": "holding",
+      "name": "Present-demand",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Peak-demand",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Ct-size-(100,-300,-etc.)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 31,
+      "function": "holding",
+      "name": "Count-of-kwh-resets",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Count",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Count-of-peak-demand-resets",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Count",
+      "access": "r"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Count-of-sub-intervals",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Count",
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Count-of-number-readings-in-present-sub-interval",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Count",
+      "access": "r"
+    },
+    {
+      "address": 35,
+      "function": "holding",
+      "name": "System-type:-see-manual",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "integer",
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Sub-interval-length:-sets-the-length-of-a-sub-interval.-value-is-the-number-of-seconds-times-5-(for-example,-15-minutes-is-4500).-for-sync-to-comms,-set-this-to-zero",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "integer",
+      "access": "r"
+    },
+    {
+      "address": 37,
+      "function": "holding",
+      "name": "Number-of-sub-intervals-per-demand-interval.-sets-the-number-of-sub-intervals-that-make-a-single-demand-interval.-legal-values-are-1-to-6.-for-block-demand,-set-this-to-1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "integer",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Command",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "bit map",
+      "access": "r"
+    },
+    {
+      "address": 256,
+      "function": "holding",
+      "name": "Real-energy-consumption",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 258,
+      "function": "holding",
+      "name": "Real-energy-consumption-(redundant)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 260,
+      "function": "holding",
+      "name": "Total-instantaneous-real-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 262,
+      "function": "holding",
+      "name": "Total-instantaneous-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 264,
+      "function": "holding",
+      "name": "Total-instantaneous-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 266,
+      "function": "holding",
+      "name": "Total-power-factor-(total-kw-/-total-kva)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ratio",
+      "access": "r"
+    },
+    {
+      "address": 268,
+      "function": "holding",
+      "name": "Voltage,-line-to-line,-average-of-3-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 270,
+      "function": "holding",
+      "name": "Voltage,-line-to-neutral,-average-of-3-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 272,
+      "function": "holding",
+      "name": "Current,-average-of-3-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 274,
+      "function": "holding",
+      "name": "Real-power,-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 276,
+      "function": "holding",
+      "name": "Real-power,-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 278,
+      "function": "holding",
+      "name": "Real-power,-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 280,
+      "function": "holding",
+      "name": "Power-factor,-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ratio",
+      "access": "r"
+    },
+    {
+      "address": 282,
+      "function": "holding",
+      "name": "Power-factor,-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ratio",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/schneider-electric-em4200.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

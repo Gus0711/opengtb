@@ -1,0 +1,444 @@
+{
+  "slug": "acrel-acr10r",
+  "vendor": "acrel",
+  "vendorSlug": "acrel",
+  "model": "acr10r",
+  "modelSlug": "acr10r",
+  "name": "acrel acr10r",
+  "equipmentType": "gateway",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Communication-speed",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "bps",
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Communication-check-mod",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Wiring-mode",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "wire",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Secondary-side-rated-voltage-ue",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Secondary-side-rated-current-value-ie",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Primary-side-rated-voltage-PU",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kV",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Backlight-delay-time",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Relay-1-delay-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "second",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Voltage-primary-side-and",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Primary-side-and-secondary-side-coefficient-of-current",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Power,-primary-and-secondary-side-coefficients",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 53,
+      "function": "holding",
+      "name": "First-channel-switching-input",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 61,
+      "function": "holding",
+      "name": "First-channel-switching-output",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "Second-channel-switching-output",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 63,
+      "function": "holding",
+      "name": "Third-channel-switching-output",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 64,
+      "function": "holding",
+      "name": "Fourth-channel-switching-output",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 133,
+      "function": "holding",
+      "name": "Second",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 242,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 243,
+      "function": "holding",
+      "name": "Phase-voltage-uan",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 244,
+      "function": "holding",
+      "name": "Phase-voltage-ubn",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 245,
+      "function": "holding",
+      "name": "Phase-voltage-ucn",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 246,
+      "function": "holding",
+      "name": "Line-voltage-uab",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 247,
+      "function": "holding",
+      "name": "Line-voltage-ubc",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 248,
+      "function": "holding",
+      "name": "Line-voltage-uca",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 249,
+      "function": "holding",
+      "name": "Phase-current-ia",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 250,
+      "function": "holding",
+      "name": "Phase-current-ib",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 251,
+      "function": "holding",
+      "name": "Phase-current-ic",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 252,
+      "function": "holding",
+      "name": "Frequency-F",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 253,
+      "function": "holding",
+      "name": "Phase-A-active-power-pa",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 255,
+      "function": "holding",
+      "name": "Phase-B-active-power-pb",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 257,
+      "function": "holding",
+      "name": "Phase-C-active-power-pc",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 259,
+      "function": "holding",
+      "name": "Total.Active-power-PTotal",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 261,
+      "function": "holding",
+      "name": "Phase-A-reactive-power-qa",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 263,
+      "function": "holding",
+      "name": "Phase-B-reactive-power-qb",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 265,
+      "function": "holding",
+      "name": "Phase-C-reactive-power-qc",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 267,
+      "function": "holding",
+      "name": "TotalReactive-power-QTotal",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 269,
+      "function": "holding",
+      "name": "Phase-A-apparent-powerSa",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 271,
+      "function": "holding",
+      "name": "Phase-B-apparent-powerSb",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 273,
+      "function": "holding",
+      "name": "Phase-C-apparent-powerSc",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 275,
+      "function": "holding",
+      "name": "TotalApparent-power-STotal",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 277,
+      "function": "holding",
+      "name": "Phase-A-power-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 278,
+      "function": "holding",
+      "name": "Phase-B-power-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 279,
+      "function": "holding",
+      "name": "Phase-C-power-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 280,
+      "function": "holding",
+      "name": "Total-power-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 287,
+      "function": "holding",
+      "name": "Phase-A-current-K-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 288,
+      "function": "holding",
+      "name": "Phase-B-current-K-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 289,
+      "function": "holding",
+      "name": "Phase-C-current-K-factor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 299,
+      "function": "holding",
+      "name": "Unbalance-factor-of-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 300,
+      "function": "holding",
+      "name": "Unbalance-factor-of-current",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 301,
+      "function": "holding",
+      "name": "Maximum-demand",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/acrel-acr10r.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

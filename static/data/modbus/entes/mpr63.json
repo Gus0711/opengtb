@@ -1,0 +1,470 @@
+{
+  "slug": "entes-mpr63",
+  "vendor": "entes",
+  "vendorSlug": "entes",
+  "model": "mpr63",
+  "modelSlug": "mpr63",
+  "name": "entes mpr63",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 16384,
+      "function": "holding",
+      "name": "Voltage-LN1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16386,
+      "function": "holding",
+      "name": "Voltage-LN2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16388,
+      "function": "holding",
+      "name": "Voltage-LN3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16390,
+      "function": "holding",
+      "name": "Current-LN1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 16392,
+      "function": "holding",
+      "name": "Current-LN2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 16394,
+      "function": "holding",
+      "name": "Current-LN3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 16396,
+      "function": "holding",
+      "name": "Total-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 16398,
+      "function": "holding",
+      "name": "Active-power-L1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 16400,
+      "function": "holding",
+      "name": "Active-power-L2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 16402,
+      "function": "holding",
+      "name": "Active-power-L3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 16404,
+      "function": "holding",
+      "name": "Reactive-power-L1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 16406,
+      "function": "holding",
+      "name": "Reactive-power-L2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 16408,
+      "function": "holding",
+      "name": "Reactive-power-L3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 16410,
+      "function": "holding",
+      "name": "Apparent-power-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 16412,
+      "function": "holding",
+      "name": "Apparent-power-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 16414,
+      "function": "holding",
+      "name": "Apparent-power-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 16416,
+      "function": "holding",
+      "name": "Power-factor-L1",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16418,
+      "function": "holding",
+      "name": "Power-factor-L2",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16420,
+      "function": "holding",
+      "name": "Power-factor-L3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16422,
+      "function": "holding",
+      "name": "Cos-L1",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16424,
+      "function": "holding",
+      "name": "Cos-L2",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16426,
+      "function": "holding",
+      "name": "Cos-L3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16428,
+      "function": "holding",
+      "name": "Voltage-L12",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16430,
+      "function": "holding",
+      "name": "Voltage-L23",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16432,
+      "function": "holding",
+      "name": "Voltage-L31",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16434,
+      "function": "holding",
+      "name": "Voltage-ln",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16436,
+      "function": "holding",
+      "name": "Voltage-ll",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16438,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 16440,
+      "function": "holding",
+      "name": "Total-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 16442,
+      "function": "holding",
+      "name": "Total-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 16444,
+      "function": "holding",
+      "name": "Total-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 16446,
+      "function": "holding",
+      "name": "Thd-V1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 16448,
+      "function": "holding",
+      "name": "Thd-V2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 16450,
+      "function": "holding",
+      "name": "Thd-V3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 16452,
+      "function": "holding",
+      "name": "Thd-v3p",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 16454,
+      "function": "holding",
+      "name": "Thd-I1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 16456,
+      "function": "holding",
+      "name": "Thd-I2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 16458,
+      "function": "holding",
+      "name": "Thd-I3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 16460,
+      "function": "holding",
+      "name": "Thd-i3p",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 16462,
+      "function": "holding",
+      "name": "Voltage-high-LN1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16464,
+      "function": "holding",
+      "name": "Voltage-high-LN2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16466,
+      "function": "holding",
+      "name": "Voltage-high-LN3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16468,
+      "function": "holding",
+      "name": "Voltage-low-LN1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16470,
+      "function": "holding",
+      "name": "Voltage-low-LN2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16472,
+      "function": "holding",
+      "name": "Voltage-low-LN3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16474,
+      "function": "holding",
+      "name": "Demand-current-high-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 16476,
+      "function": "holding",
+      "name": "Demand-current-high-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 16478,
+      "function": "holding",
+      "name": "Demand-current-high-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 16480,
+      "function": "holding",
+      "name": "Demand-current-low-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 16482,
+      "function": "holding",
+      "name": "Demand-current-low-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/entes-mpr63.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

@@ -1,0 +1,444 @@
+{
+  "slug": "farnell-iem3100-iem3200",
+  "vendor": "farnell",
+  "vendorSlug": "farnell",
+  "model": "iem3100-iem3200",
+  "modelSlug": "iem3100-iem3200",
+  "name": "farnell iem3100-iem3200",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 130,
+      "function": "holding",
+      "name": "Serial-Number",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1637,
+      "function": "holding",
+      "name": "Present-Firmware-Version-(DLF-format):-X.Y.ZTT",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2004,
+      "function": "holding",
+      "name": "Meter-Operation-Timer",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Secon",
+      "access": "r"
+    },
+    {
+      "address": 2014,
+      "function": "holding",
+      "name": "Number-of-Phases",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2015,
+      "function": "holding",
+      "name": "Number-of-Wires",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2016,
+      "function": "holding",
+      "name": "Power-System",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2017,
+      "function": "holding",
+      "name": "Nominal-Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 2025,
+      "function": "holding",
+      "name": "Number-VTs",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2026,
+      "function": "holding",
+      "name": "VT-Primary",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2028,
+      "function": "holding",
+      "name": "VT-Secondary",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2029,
+      "function": "holding",
+      "name": "Number-CTs",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2030,
+      "function": "holding",
+      "name": "CT-Primary",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 2031,
+      "function": "holding",
+      "name": "CT-Secondary",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 2036,
+      "function": "holding",
+      "name": "VT-Connection-Type",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2129,
+      "function": "holding",
+      "name": "Energy-Pulse-Duration",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Millisecond",
+      "access": "r"
+    },
+    {
+      "address": 2131,
+      "function": "holding",
+      "name": "Digital-Output-Association",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2132,
+      "function": "holding",
+      "name": "Pulse-Weight",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "pulse/kWh",
+      "access": "r"
+    },
+    {
+      "address": 3000,
+      "function": "holding",
+      "name": "I1:-phase-1-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3002,
+      "function": "holding",
+      "name": "I2:-phase-2-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3004,
+      "function": "holding",
+      "name": "I3:-phase-3-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3010,
+      "function": "holding",
+      "name": "Current-Avg-Voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3020,
+      "function": "holding",
+      "name": "Voltage-L1-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3022,
+      "function": "holding",
+      "name": "Voltage-L2-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3024,
+      "function": "holding",
+      "name": "Voltage-L3-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3026,
+      "function": "holding",
+      "name": "Voltage-L-L-Avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3028,
+      "function": "holding",
+      "name": "Voltage-L1-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3030,
+      "function": "holding",
+      "name": "Voltage-L2-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3032,
+      "function": "holding",
+      "name": "Voltage-L3-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3036,
+      "function": "holding",
+      "name": "Voltage-L-N-Avg-Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3054,
+      "function": "holding",
+      "name": "Active-Power-Phase-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 3056,
+      "function": "holding",
+      "name": "Active-Power-Phase-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 3058,
+      "function": "holding",
+      "name": "Active-Power-Phase-3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 3060,
+      "function": "holding",
+      "name": "Total-Active-Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 3068,
+      "function": "holding",
+      "name": "Total-Reactive-Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 5250,
+      "function": "holding",
+      "name": "Requested-Command",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5252,
+      "function": "holding",
+      "name": "Command-Parameter-001",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5374,
+      "function": "holding",
+      "name": "Command-Parameter-123",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5375,
+      "function": "holding",
+      "name": "Command-Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5376,
+      "function": "holding",
+      "name": "Command--Result-codes:",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5377,
+      "function": "holding",
+      "name": "Command-Data-001",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 5499,
+      "function": "holding",
+      "name": "Command-Data-123",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 6500,
+      "function": "holding",
+      "name": "Protocol",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 6501,
+      "function": "holding",
+      "name": "Address",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 6502,
+      "function": "holding",
+      "name": "Baud-Rate:",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 6503,
+      "function": "holding",
+      "name": "Parity:",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 7052,
+      "function": "holding",
+      "name": "Pulse-Constant",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "pulse/unit",
+      "access": "r"
+    },
+    {
+      "address": 7055,
+      "function": "holding",
+      "name": "Digital-Input-Association",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 7274,
+      "function": "holding",
+      "name": "Digital-Input-Control-Mode:",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 9673,
+      "function": "holding",
+      "name": "Digital-Output-Control-Mode-Status:",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/farnell-iem3100-iem3200.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

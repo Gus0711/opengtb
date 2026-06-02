@@ -1,0 +1,426 @@
+{
+  "slug": "seneca-s203",
+  "vendor": "seneca",
+  "vendorSlug": "seneca",
+  "model": "s203",
+  "modelSlug": "s203",
+  "name": "seneca s203",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 134,
+      "function": "holding",
+      "name": "Voltage-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 136,
+      "function": "holding",
+      "name": "Voltage-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 138,
+      "function": "holding",
+      "name": "Voltage-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 140,
+      "function": "holding",
+      "name": "Voltage-3ph",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 142,
+      "function": "holding",
+      "name": "Current-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 144,
+      "function": "holding",
+      "name": "Current-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 146,
+      "function": "holding",
+      "name": "Current-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 148,
+      "function": "holding",
+      "name": "Current-3ph",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 150,
+      "function": "holding",
+      "name": "Active-pow-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 152,
+      "function": "holding",
+      "name": "Active-pow-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 154,
+      "function": "holding",
+      "name": "Active-pow-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 156,
+      "function": "holding",
+      "name": "Active-pow-3ph",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 158,
+      "function": "holding",
+      "name": "Reactive-pow-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 160,
+      "function": "holding",
+      "name": "Reactive-pow-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 162,
+      "function": "holding",
+      "name": "Reactive-pow-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 164,
+      "function": "holding",
+      "name": "Reactive-pow-3-ph",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 166,
+      "function": "holding",
+      "name": "Apparent-pow-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 168,
+      "function": "holding",
+      "name": "Apparent-pow-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 170,
+      "function": "holding",
+      "name": "Apparent-pow-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 172,
+      "function": "holding",
+      "name": "Apparent-pow-3-ph",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 174,
+      "function": "holding",
+      "name": "Cos-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 176,
+      "function": "holding",
+      "name": "Cos-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 178,
+      "function": "holding",
+      "name": "Cos-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 180,
+      "function": "holding",
+      "name": "Cos-3ph",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 184,
+      "function": "holding",
+      "name": "Energy-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 186,
+      "function": "holding",
+      "name": "Energy-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 188,
+      "function": "holding",
+      "name": "Energy-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 190,
+      "function": "holding",
+      "name": "Energy-3ph",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 192,
+      "function": "holding",
+      "name": "Voltage-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 193,
+      "function": "holding",
+      "name": "Voltage-B",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 194,
+      "function": "holding",
+      "name": "Voltage-C",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 195,
+      "function": "holding",
+      "name": "Voltage-3ph",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 196,
+      "function": "holding",
+      "name": "Current-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 197,
+      "function": "holding",
+      "name": "Current-B",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 198,
+      "function": "holding",
+      "name": "Current-C",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 199,
+      "function": "holding",
+      "name": "Current-3ph",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 200,
+      "function": "holding",
+      "name": "Active-pow-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 201,
+      "function": "holding",
+      "name": "Active-pow-B",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 202,
+      "function": "holding",
+      "name": "Active-pow-C",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 203,
+      "function": "holding",
+      "name": "Active-pow-3ph",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 204,
+      "function": "holding",
+      "name": "Reactive-pow-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 205,
+      "function": "holding",
+      "name": "Reactive-pow-B",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 206,
+      "function": "holding",
+      "name": "Reactive-pow-C",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 207,
+      "function": "holding",
+      "name": "Reactive-pow-3-ph",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 208,
+      "function": "holding",
+      "name": "Apparent-pow-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 209,
+      "function": "holding",
+      "name": "Apparent-pow-B",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 210,
+      "function": "holding",
+      "name": "Apparent-pow-C",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 211,
+      "function": "holding",
+      "name": "Apparent-pow-3-ph",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 212,
+      "function": "holding",
+      "name": "Cos-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 213,
+      "function": "holding",
+      "name": "Cos-B",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/seneca-s203.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "slug": "goodwe-et-eh-bh-bt-hybrid-inverter",
+  "vendor": "GoodWe",
+  "vendorSlug": "goodwe",
+  "model": "ET/EH/BH/BT Hybrid Inverter",
+  "modelSlug": "et-eh-bh-bt-hybrid-inverter",
+  "name": "GoodWe ET/EH/BH/BT Hybrid Inverter",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 36019,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Meter Active Power R, W"
+    },
+    {
+      "address": 36021,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Meter Active Power S, W"
+    },
+    {
+      "address": 36023,
+      "function": "holding",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Meter Active Power T, W"
+    },
+    {
+      "address": 36055,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Meter Current R, A"
+    },
+    {
+      "address": 36056,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Meter Current S, A"
+    },
+    {
+      "address": 36057,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Meter Current T, A"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

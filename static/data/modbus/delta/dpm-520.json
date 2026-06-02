@@ -1,0 +1,468 @@
+{
+  "slug": "delta-dpm-520",
+  "vendor": "delta",
+  "vendorSlug": "delta",
+  "model": "dpm-520",
+  "modelSlug": "dpm-520",
+  "name": "delta dpm-520",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 256,
+      "function": "holding",
+      "name": "Voltage-A-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 258,
+      "function": "holding",
+      "name": "Voltage-B-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 260,
+      "function": "holding",
+      "name": "Voltage-C-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 262,
+      "function": "holding",
+      "name": "Voltage-L-N-avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 264,
+      "function": "holding",
+      "name": "Voltage-A-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 266,
+      "function": "holding",
+      "name": "Voltage-B-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 268,
+      "function": "holding",
+      "name": "Voltage-C-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 270,
+      "function": "holding",
+      "name": "Voltage-L-L-avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 272,
+      "function": "holding",
+      "name": "Voltage-unbalance-A-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 274,
+      "function": "holding",
+      "name": "Voltage-unbalance-B-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 276,
+      "function": "holding",
+      "name": "Voltage-unbalance-C-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 278,
+      "function": "holding",
+      "name": "Voltage-unbalance-L-N-avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 280,
+      "function": "holding",
+      "name": "Voltage-unbalance-A-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 282,
+      "function": "holding",
+      "name": "Voltage-unbalance-B-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 284,
+      "function": "holding",
+      "name": "Voltage-unbalance-C-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 286,
+      "function": "holding",
+      "name": "Voltage-unbalance-L-L-avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 288,
+      "function": "holding",
+      "name": "Current-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 290,
+      "function": "holding",
+      "name": "Current-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 292,
+      "function": "holding",
+      "name": "Current-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 294,
+      "function": "holding",
+      "name": "Current-avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 296,
+      "function": "holding",
+      "name": "Current-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 298,
+      "function": "holding",
+      "name": "Current-unbalance-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 300,
+      "function": "holding",
+      "name": "Current-unbalance-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 302,
+      "function": "holding",
+      "name": "Current-unbalance-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 304,
+      "function": "holding",
+      "name": "Current-unbalance-avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 306,
+      "function": "holding",
+      "name": "Power-factor-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 308,
+      "function": "holding",
+      "name": "Power-factor-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 310,
+      "function": "holding",
+      "name": "Power-factor-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 312,
+      "function": "holding",
+      "name": "Power-factor-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 314,
+      "function": "holding",
+      "name": "Displacement-power-factor-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 316,
+      "function": "holding",
+      "name": "Displacement-power-factor-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 318,
+      "function": "holding",
+      "name": "Displacement-power-factor-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 320,
+      "function": "holding",
+      "name": "Displacement-power-factor-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 322,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 324,
+      "function": "holding",
+      "name": "Active-power-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 326,
+      "function": "holding",
+      "name": "Active-power-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 328,
+      "function": "holding",
+      "name": "Active-power-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 330,
+      "function": "holding",
+      "name": "Active-power-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 332,
+      "function": "holding",
+      "name": "Reactive-power-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 334,
+      "function": "holding",
+      "name": "Reactive-power-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 336,
+      "function": "holding",
+      "name": "Reactive-power-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 338,
+      "function": "holding",
+      "name": "Reactive-power-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 340,
+      "function": "holding",
+      "name": "Apparent-power-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 342,
+      "function": "holding",
+      "name": "Apparent-power-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 344,
+      "function": "holding",
+      "name": "Apparent-power-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 346,
+      "function": "holding",
+      "name": "Apparent-power-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 348,
+      "function": "holding",
+      "name": "Active-energy-delivered",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 350,
+      "function": "holding",
+      "name": "Active-energy-received",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 352,
+      "function": "holding",
+      "name": "Reactive-energy-delivered",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VARh",
+      "access": "r"
+    },
+    {
+      "address": 354,
+      "function": "holding",
+      "name": "Reactive-energy-received",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VARh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/delta-dpm-520.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

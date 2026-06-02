@@ -1,0 +1,68 @@
+{
+  "slug": "foxess-h1-series-hybrid-inverter",
+  "vendor": "FoxESS",
+  "vendorSlug": "foxess",
+  "model": "H1 Series Hybrid Inverter",
+  "modelSlug": "h1-series-hybrid-inverter",
+  "name": "FoxESS H1 Series Hybrid Inverter",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 11002,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "PV1"
+    },
+    {
+      "address": 11005,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "PV2"
+    },
+    {
+      "address": 11008,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "Battery charge/discharge"
+    },
+    {
+      "address": 11036,
+      "function": "input",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "%",
+      "access": "r",
+      "notes": "Soc"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

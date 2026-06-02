@@ -1,0 +1,189 @@
+{
+  "slug": "victron-energy",
+  "vendor": "Victron",
+  "vendorSlug": "victron",
+  "model": "Energy",
+  "modelSlug": "energy",
+  "name": "Victron Energy",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 808,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "ACout pv power L1"
+    },
+    {
+      "address": 809,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "ACout pv power L2"
+    },
+    {
+      "address": 810,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "ACout pv power L3"
+    },
+    {
+      "address": 811,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "ACin pv power L1"
+    },
+    {
+      "address": 812,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "ACin pv power L2"
+    },
+    {
+      "address": 813,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "ACin pv power L3"
+    },
+    {
+      "address": 820,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "L1 grid power"
+    },
+    {
+      "address": 821,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "L2 grid power"
+    },
+    {
+      "address": 822,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "L3 grid power"
+    },
+    {
+      "address": 842,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "active DC power"
+    },
+    {
+      "address": 843,
+      "function": "input",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r",
+      "notes": "Soc"
+    },
+    {
+      "address": 850,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "DC pv power"
+    },
+    {
+      "address": 2617,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "L1 grid current"
+    },
+    {
+      "address": 2619,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "L2 grid current"
+    },
+    {
+      "address": 2621,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "L3 grid current"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

@@ -1,0 +1,582 @@
+{
+  "slug": "stiebel-eltron-isg",
+  "vendor": "Stiebel Eltron",
+  "vendorSlug": "stiebel-eltron",
+  "model": "ISG (WPM/LWZ)",
+  "modelSlug": "isg",
+  "name": "Stiebel Eltron ISG (WPM / LWZ)",
+  "equipmentType": "pac",
+  "transport": [
+    "tcp"
+  ],
+  "defaults": {
+    "tcp": {
+      "port": 502,
+      "unitIdDefault": 1
+    }
+  },
+  "registers": [
+    {
+      "address": 0,
+      "function": "input",
+      "name": "actual_room_temperature_hc1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 1,
+      "function": "input",
+      "name": "set_room_temperature_hc1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "input",
+      "name": "relative_humidity_hc1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "input",
+      "name": "actual_room_temperature_hc2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "input",
+      "name": "set_room_temperature_hc2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "input",
+      "name": "relative_humidity_hc2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "input",
+      "name": "outside_temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "input",
+      "name": "actual_value_hc1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "input",
+      "name": "set_value_hc1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "input",
+      "name": "actual_value_hc2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "input",
+      "name": "set_value_hc2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "input",
+      "name": "flow_temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "input",
+      "name": "return_temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "input",
+      "name": "pressure_heating_circuit",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "input",
+      "name": "flow_rate",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "input",
+      "name": "actual_dhw_temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "input",
+      "name": "set_dhw_temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "input",
+      "name": "ventilation_air_actual_fan_speed",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "input",
+      "name": "ventilation_air_set_flow_rate",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "input",
+      "name": "extract_air_actual_fan_speed",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "input",
+      "name": "extract_air_set_flow_rate",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "input",
+      "name": "extract_air_humidity",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "input",
+      "name": "extract_air_temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "input",
+      "name": "extract_air_dew_point",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "input",
+      "name": "dew_point_temperatur_hc1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "input",
+      "name": "dew_point_temperatur_hc2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "input",
+      "name": "collector_temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 27,
+      "function": "input",
+      "name": "hot_gas_temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "input",
+      "name": "high_pressure",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.01,
+      "access": "r"
+    },
+    {
+      "address": 29,
+      "function": "input",
+      "name": "low_pressure",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.01,
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "input",
+      "name": "compressor_starts",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 31,
+      "function": "input",
+      "name": "compressor_speed",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "input",
+      "name": "mixed_water_amount",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1000,
+      "function": "holding",
+      "name": "operating_mode",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1001,
+      "function": "holding",
+      "name": "room_temp_heat_day_hc1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "rw"
+    },
+    {
+      "address": 1002,
+      "function": "holding",
+      "name": "room_temp_heat_night_hc1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "rw"
+    },
+    {
+      "address": 1003,
+      "function": "holding",
+      "name": "manual_set_temp_hc1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "rw"
+    },
+    {
+      "address": 1004,
+      "function": "holding",
+      "name": "room_temp_heat_day_hc2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "rw"
+    },
+    {
+      "address": 1005,
+      "function": "holding",
+      "name": "room_temp_heat_night_hc2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "rw"
+    },
+    {
+      "address": 1006,
+      "function": "holding",
+      "name": "manual_set_teamp_hc2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "rw"
+    },
+    {
+      "address": 1007,
+      "function": "holding",
+      "name": "gradient_hc1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.01,
+      "access": "rw"
+    },
+    {
+      "address": 1008,
+      "function": "holding",
+      "name": "low_end_hc1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "rw"
+    },
+    {
+      "address": 1009,
+      "function": "holding",
+      "name": "gradient_hc2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.01,
+      "access": "rw"
+    },
+    {
+      "address": 1010,
+      "function": "holding",
+      "name": "low_end_hc2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "rw"
+    },
+    {
+      "address": 1011,
+      "function": "holding",
+      "name": "dhw_temp_set_day",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "rw"
+    },
+    {
+      "address": 1012,
+      "function": "holding",
+      "name": "dhw_temp_set_night",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "rw"
+    },
+    {
+      "address": 1013,
+      "function": "holding",
+      "name": "dhw_temp_set_manual",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "rw"
+    },
+    {
+      "address": 1014,
+      "function": "holding",
+      "name": "mwm_set_day",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1015,
+      "function": "holding",
+      "name": "mwm_set_night",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1016,
+      "function": "holding",
+      "name": "mwm_set_manual",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1017,
+      "function": "holding",
+      "name": "day_stage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1018,
+      "function": "holding",
+      "name": "night_stage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1019,
+      "function": "holding",
+      "name": "party_stage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1020,
+      "function": "holding",
+      "name": "manual_stage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1021,
+      "function": "holding",
+      "name": "room_temp_cool_day_hc1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "rw"
+    },
+    {
+      "address": 1022,
+      "function": "holding",
+      "name": "room_temp_cool_night_hc1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "rw"
+    },
+    {
+      "address": 1023,
+      "function": "holding",
+      "name": "room_temp_cool_day_hc2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "rw"
+    },
+    {
+      "address": 1024,
+      "function": "holding",
+      "name": "room_temp_cool_night_hc2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "rw"
+    },
+    {
+      "address": 1025,
+      "function": "holding",
+      "name": "reset",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1026,
+      "function": "holding",
+      "name": "restart_isg",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 2000,
+      "function": "input",
+      "name": "operating_status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2001,
+      "function": "input",
+      "name": "fault_status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2002,
+      "function": "input",
+      "name": "bus_status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "doc": "Passerelle ISG Web pour PAC Stiebel Eltron WPM / LWZ (et Tecalor TTL/TTE). Tables Modbus extraites de fucm/python-stiebel-eltron (MIT), conformes au PDF officiel 'ISG Modbus Bedienungsanleitung'.",
+  "datasheets": [
+    {
+      "label": "ISG Modbus — Bedienungsanleitung (officiel Stiebel)",
+      "url": "https://www.stiebel-eltron.de/content/dam/ste/de/de/home/services/Downloadlisten/ISG%20Modbus_Stiebel_Bedienungsanleitung.pdf"
+    }
+  ],
+  "upstream": {
+    "source": "stiebel-eltron",
+    "ref": "1da602dd4e0c8d2e2290024539c3eb6b4c924221",
+    "needsReview": true,
+    "reviewReasons": [
+      "Plusieurs modèles (WPM, LWZ, …) partagent ces registres. Vérifier la disponibilité de chaque registre selon votre modèle exact."
+    ]
+  }
+}

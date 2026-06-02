@@ -1,0 +1,459 @@
+{
+  "slug": "kostal-piko-iq-plenticore",
+  "vendor": "kostal",
+  "vendorSlug": "kostal",
+  "model": "piko-iq-plenticore",
+  "modelSlug": "piko-iq-plenticore",
+  "name": "kostal piko-iq-plenticore",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Modbus-unit-id",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Inverter-article-number",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Inverter-serial-number",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Number-of-bidirectional-converter",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Number-of-ac-phases",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Number-of-pv-strings",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Hardware-version",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Software-version-maincontroller-(mc)",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Software-version-io-controller-(ioc)",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 54,
+      "function": "holding",
+      "name": "Power-id",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Inverter-state2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "Total-dc-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "State-of-energy-manager3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 106,
+      "function": "holding",
+      "name": "Home-own-consumption-from-battery",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 108,
+      "function": "holding",
+      "name": "Home-own-consumption-from-grid",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 110,
+      "function": "holding",
+      "name": "Total-home-consumption-battery",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 112,
+      "function": "holding",
+      "name": "Total-home-consumption-grid",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 114,
+      "function": "holding",
+      "name": "Total-home-consumption-pv",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 116,
+      "function": "holding",
+      "name": "Home-own-consumption-from-pv",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 118,
+      "function": "holding",
+      "name": "Total-home-consumption",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 120,
+      "function": "holding",
+      "name": "Isolation-resistance",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ohm",
+      "access": "r"
+    },
+    {
+      "address": 122,
+      "function": "holding",
+      "name": "Power-limit-from-evu",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 124,
+      "function": "holding",
+      "name": "Total-home-consumption-rate",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 144,
+      "function": "holding",
+      "name": "Worktime",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "s",
+      "access": "r"
+    },
+    {
+      "address": 150,
+      "function": "holding",
+      "name": "Actual-cos",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 152,
+      "function": "holding",
+      "name": "Grid-frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 154,
+      "function": "holding",
+      "name": "Current-phase-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 156,
+      "function": "holding",
+      "name": "Active-power-phase-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 158,
+      "function": "holding",
+      "name": "Voltage-phase-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 160,
+      "function": "holding",
+      "name": "Current-phase-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 162,
+      "function": "holding",
+      "name": "Active-power-phase-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 164,
+      "function": "holding",
+      "name": "Voltage-phase-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 166,
+      "function": "holding",
+      "name": "Current-phase-3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 168,
+      "function": "holding",
+      "name": "Active-power-phase-3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 170,
+      "function": "holding",
+      "name": "Voltage-phase-3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 172,
+      "function": "holding",
+      "name": "Total-ac-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 174,
+      "function": "holding",
+      "name": "Total-ac-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 178,
+      "function": "holding",
+      "name": "Total-ac-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 190,
+      "function": "holding",
+      "name": "Battery-charge-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 194,
+      "function": "holding",
+      "name": "Number-of-battery-cycles",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 200,
+      "function": "holding",
+      "name": "Actual-battery-charge-()-/-discharge-(+)-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 202,
+      "function": "holding",
+      "name": "Pssb-fuse-state5",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 208,
+      "function": "holding",
+      "name": "Battery-ready-flag",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 210,
+      "function": "holding",
+      "name": "Act.-State-of-charge",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 214,
+      "function": "holding",
+      "name": "Battery-temperature",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "DC",
+      "access": "r"
+    },
+    {
+      "address": 216,
+      "function": "holding",
+      "name": "Battery-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 218,
+      "function": "holding",
+      "name": "Cos-(powermeter)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 220,
+      "function": "holding",
+      "name": "Frequency-(powermeter)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 222,
+      "function": "holding",
+      "name": "Current-phase-1-(powermeter)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 224,
+      "function": "holding",
+      "name": "Active-power-phase-1-(powermeter)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/kostal-piko-iq-plenticore.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

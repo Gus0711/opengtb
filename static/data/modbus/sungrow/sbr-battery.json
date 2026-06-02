@@ -1,0 +1,523 @@
+{
+  "slug": "sungrow-sbr-battery",
+  "vendor": "Sungrow",
+  "vendorSlug": "sungrow",
+  "model": "SBR Battery",
+  "modelSlug": "sbr-battery",
+  "name": "Sungrow SBR Battery",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 10740,
+      "function": "input",
+      "name": "battery_1_voltage",
+      "label": "Battery 1 Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10741,
+      "function": "input",
+      "name": "battery_1_current",
+      "label": "Battery 1 Current",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 10742,
+      "function": "input",
+      "name": "battery_1_temperature",
+      "label": "Battery 1 Temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 10743,
+      "function": "input",
+      "name": "battery_1_soc",
+      "label": "Battery 1 SOC",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 10744,
+      "function": "input",
+      "name": "battery_1_soh",
+      "label": "Battery 1 SOH",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 10745,
+      "function": "input",
+      "name": "battery_1_total_battery_charge",
+      "label": "Battery 1 Total Battery Charge",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 10747,
+      "function": "input",
+      "name": "battery_1_total_battery_discharge",
+      "label": "Battery 1 Total Battery Discharge",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 10756,
+      "function": "input",
+      "name": "battery_1_max_voltage_of_cell",
+      "label": "Battery 1 Max Voltage of Cell",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10757,
+      "function": "input",
+      "name": "battery_1_position_of_max_voltage_cell",
+      "label": "Battery 1 Position of Max Voltage Cell",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "access": "r"
+    },
+    {
+      "address": 10758,
+      "function": "input",
+      "name": "battery_1_min_voltage_of_cell",
+      "label": "Battery 1 Min Voltage of Cell",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10759,
+      "function": "input",
+      "name": "battery_1_position_of_min_voltage_cell",
+      "label": "Battery 1 Position of Min Voltage Cell",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "access": "r"
+    },
+    {
+      "address": 10760,
+      "function": "input",
+      "name": "battery_1_max_temperature_of_module",
+      "label": "Battery 1 Max Temperature of Module",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 10761,
+      "function": "input",
+      "name": "battery_1_position_of_max_temperature_of_module",
+      "label": "Battery 1 Position of Max Temperature of Module",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "access": "r"
+    },
+    {
+      "address": 10762,
+      "function": "input",
+      "name": "battery_1_min_temperature_of_module",
+      "label": "Battery 1 Min Temperature of Module",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 10763,
+      "function": "input",
+      "name": "battery_1_position_of_min_temperature_of_module",
+      "label": "Battery 1 Position of Min Temperature of Module",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "access": "r"
+    },
+    {
+      "address": 10764,
+      "function": "input",
+      "name": "battery_1_max_cell_voltage_of_module_1",
+      "label": "Battery 1 Max Cell Voltage of Module 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10765,
+      "function": "input",
+      "name": "battery_1_max_cell_voltage_of_module_2",
+      "label": "Battery 1 Max Cell Voltage of Module 2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10766,
+      "function": "input",
+      "name": "battery_1_max_cell_voltage_of_module_3",
+      "label": "Battery 1 Max Cell Voltage of Module 3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10767,
+      "function": "input",
+      "name": "battery_1_max_cell_voltage_of_module_4",
+      "label": "Battery 1 Max Cell Voltage of Module 4",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10768,
+      "function": "input",
+      "name": "battery_1_max_cell_voltage_of_module_5",
+      "label": "Battery 1 Max Cell Voltage of Module 5",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10769,
+      "function": "input",
+      "name": "battery_1_max_cell_voltage_of_module_6",
+      "label": "Battery 1 Max Cell Voltage of Module 6",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10770,
+      "function": "input",
+      "name": "battery_1_max_cell_voltage_of_module_7",
+      "label": "Battery 1 Max Cell Voltage of Module 7",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10771,
+      "function": "input",
+      "name": "battery_1_max_cell_voltage_of_module_8",
+      "label": "Battery 1 Max Cell Voltage of Module 8",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10772,
+      "function": "input",
+      "name": "battery_1_min_cell_voltage_of_module_1",
+      "label": "Battery 1 Min Cell Voltage of Module 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10773,
+      "function": "input",
+      "name": "battery_1_min_cell_voltage_of_module_2",
+      "label": "Battery 1 Min Cell Voltage of Module 2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10774,
+      "function": "input",
+      "name": "battery_1_min_cell_voltage_of_module_3",
+      "label": "Battery 1 Min Cell Voltage of Module 3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10775,
+      "function": "input",
+      "name": "battery_1_min_cell_voltage_of_module_4",
+      "label": "Battery 1 Min Cell Voltage of Module 4",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10776,
+      "function": "input",
+      "name": "battery_1_min_cell_voltage_of_module_5",
+      "label": "Battery 1 Min Cell Voltage of Module 5",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10777,
+      "function": "input",
+      "name": "battery_1_min_cell_voltage_of_module_6",
+      "label": "Battery 1 Min Cell Voltage of Module 6",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10778,
+      "function": "input",
+      "name": "battery_1_min_cell_voltage_of_module_7",
+      "label": "Battery 1 Min Cell Voltage of Module 7",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10779,
+      "function": "input",
+      "name": "battery_1_min_cell_voltage_of_module_8",
+      "label": "Battery 1 Min Cell Voltage of Module 8",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.0001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 10780,
+      "function": "input",
+      "name": "battery_1_cell_type_of_module_1",
+      "label": "Battery 1 Cell Type of Module 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "access": "r"
+    },
+    {
+      "address": 10781,
+      "function": "input",
+      "name": "battery_1_cell_type_of_module_2",
+      "label": "Battery 1 Cell Type of Module 2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "access": "r"
+    },
+    {
+      "address": 10782,
+      "function": "input",
+      "name": "battery_1_cell_type_of_module_3",
+      "label": "Battery 1 Cell Type of Module 3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "access": "r"
+    },
+    {
+      "address": 10783,
+      "function": "input",
+      "name": "battery_1_cell_type_of_module_4",
+      "label": "Battery 1 Cell Type of Module 4",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "access": "r"
+    },
+    {
+      "address": 10784,
+      "function": "input",
+      "name": "battery_1_cell_type_of_module_5",
+      "label": "Battery 1 Cell Type of Module 5",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "access": "r"
+    },
+    {
+      "address": 10785,
+      "function": "input",
+      "name": "battery_1_cell_type_of_module_6",
+      "label": "Battery 1 Cell Type of Module 6",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "access": "r"
+    },
+    {
+      "address": 10786,
+      "function": "input",
+      "name": "battery_1_cell_type_of_module_7",
+      "label": "Battery 1 Cell Type of Module 7",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "access": "r"
+    },
+    {
+      "address": 10787,
+      "function": "input",
+      "name": "battery_1_cell_type_of_module_8",
+      "label": "Battery 1 Cell Type of Module 8",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "access": "r"
+    },
+    {
+      "address": 10788,
+      "function": "input",
+      "name": "battery_1_state_of_dc_switch",
+      "label": "Battery 1 State of DC Switch",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "access": "r"
+    },
+    {
+      "address": 10821,
+      "function": "input",
+      "name": "battery_1_module_1_sn",
+      "label": "Battery 1 module 1 serial number",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 10830,
+      "function": "input",
+      "name": "battery_1_module_2_sn",
+      "label": "Battery 1 module 2 serial number",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 10839,
+      "function": "input",
+      "name": "battery_1_module_3_sn",
+      "label": "Battery 1 module 3 serial number",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 10848,
+      "function": "input",
+      "name": "battery_1_module_4_sn",
+      "label": "Battery 1 module 4 serial number",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 10857,
+      "function": "input",
+      "name": "battery_1_module_5_sn",
+      "label": "Battery 1 module 5 serial number",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 10866,
+      "function": "input",
+      "name": "battery_1_module_6_sn",
+      "label": "Battery 1 module 6 serial number",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 10875,
+      "function": "input",
+      "name": "battery_1_module_7_sn",
+      "label": "Battery 1 module 7 serial number",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 10884,
+      "function": "input",
+      "name": "battery_1_module_8_sn",
+      "label": "Battery 1 module 8 serial number",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-manager",
+    "ref": "8932e9a23c65e9f9fe333780bcb3477d81a80b7b",
+    "needsReview": true,
+    "reviewReasons": [
+      "Ordre d'octets non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

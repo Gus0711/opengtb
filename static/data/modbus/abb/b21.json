@@ -1,0 +1,476 @@
+{
+  "slug": "abb-b21",
+  "vendor": "abb",
+  "vendorSlug": "abb",
+  "model": "b21",
+  "modelSlug": "b21",
+  "name": "abb b21",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 20480,
+      "function": "holding",
+      "name": "Active-import",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20484,
+      "function": "holding",
+      "name": "Active-export",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20488,
+      "function": "holding",
+      "name": "Active-net",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20492,
+      "function": "holding",
+      "name": "Reactive-import",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20496,
+      "function": "holding",
+      "name": "Reactive-export",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20500,
+      "function": "holding",
+      "name": "Reactive-net",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20504,
+      "function": "holding",
+      "name": "Apparent-import",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 20508,
+      "function": "holding",
+      "name": "Apparent-export",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 20512,
+      "function": "holding",
+      "name": "Apparent-net",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 20516,
+      "function": "holding",
+      "name": "Active-import-CO2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kg",
+      "access": "r"
+    },
+    {
+      "address": 20532,
+      "function": "holding",
+      "name": "Active-import-currency",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "currency",
+      "access": "r"
+    },
+    {
+      "address": 20848,
+      "function": "holding",
+      "name": "Active-import-tariff-1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20852,
+      "function": "holding",
+      "name": "Active-import-tariff-2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20856,
+      "function": "holding",
+      "name": "Active-import-tariff-3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20860,
+      "function": "holding",
+      "name": "Active-import-tariff-4",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20880,
+      "function": "holding",
+      "name": "Active-export-tariff-1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20884,
+      "function": "holding",
+      "name": "Active-export-tariff-2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20888,
+      "function": "holding",
+      "name": "Active-export-tariff-3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20892,
+      "function": "holding",
+      "name": "Active-export-tariff-4",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20912,
+      "function": "holding",
+      "name": "Reactive-import-tariff-1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20916,
+      "function": "holding",
+      "name": "Reactive-import-tariff-2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20920,
+      "function": "holding",
+      "name": "Reactive-import-tariff-3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20924,
+      "function": "holding",
+      "name": "Reactive-import-tariff-4",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20944,
+      "function": "holding",
+      "name": "Reactive-export-tariff-1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20948,
+      "function": "holding",
+      "name": "Reactive-export-tariff-2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20952,
+      "function": "holding",
+      "name": "Reactive-export-tariff-3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20956,
+      "function": "holding",
+      "name": "Reactive-export-tariff-4",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21600,
+      "function": "holding",
+      "name": "Active-import-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21604,
+      "function": "holding",
+      "name": "Active-import-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21608,
+      "function": "holding",
+      "name": "Active-import-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21612,
+      "function": "holding",
+      "name": "Active-export-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21616,
+      "function": "holding",
+      "name": "Active-export-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21620,
+      "function": "holding",
+      "name": "Active-export-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21624,
+      "function": "holding",
+      "name": "Active-net-L1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21628,
+      "function": "holding",
+      "name": "Active-net-L2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21632,
+      "function": "holding",
+      "name": "Active-net-L3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21636,
+      "function": "holding",
+      "name": "Reactive-import-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21640,
+      "function": "holding",
+      "name": "Reactive-import-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21644,
+      "function": "holding",
+      "name": "Reactive-import-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21648,
+      "function": "holding",
+      "name": "Reactive-export-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21652,
+      "function": "holding",
+      "name": "Reactive-export-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21656,
+      "function": "holding",
+      "name": "Reactive-export-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21660,
+      "function": "holding",
+      "name": "Reactive-net-L1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21664,
+      "function": "holding",
+      "name": "Reactive-net-L2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21668,
+      "function": "holding",
+      "name": "Reactive-net-L3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21672,
+      "function": "holding",
+      "name": "Apparent-import-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 21676,
+      "function": "holding",
+      "name": "Apparent-import-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 21680,
+      "function": "holding",
+      "name": "Apparent-import-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 21684,
+      "function": "holding",
+      "name": "Apparent-export-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 21688,
+      "function": "holding",
+      "name": "Apparent-export-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/abb-b21.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

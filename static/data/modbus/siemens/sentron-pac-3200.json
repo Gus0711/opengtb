@@ -1,0 +1,476 @@
+{
+  "slug": "siemens-sentron-pac-3200",
+  "vendor": "siemens",
+  "vendorSlug": "siemens",
+  "model": "sentron-pac-3200",
+  "modelSlug": "sentron-pac-3200",
+  "name": "siemens sentron-pac-3200",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Voltage-Va-n",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Voltage-Vb-n",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Voltage-Vc-n",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Voltage-Va-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Voltage-Vb-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Voltage-Vc-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Current-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "Current-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Current-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Apparent-Power-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "Apparent-Power-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Apparent-Power-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "Active-Power-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 27,
+      "function": "holding",
+      "name": "Active-Power-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 29,
+      "function": "holding",
+      "name": "Active-Power-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 31,
+      "function": "holding",
+      "name": "Reactive-Power-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "v",
+      "access": "r"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Reactive-Power-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "v",
+      "access": "r"
+    },
+    {
+      "address": 35,
+      "function": "holding",
+      "name": "Reactive-Power-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "v",
+      "access": "r"
+    },
+    {
+      "address": 37,
+      "function": "holding",
+      "name": "Power-Factor-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "-",
+      "access": "r"
+    },
+    {
+      "address": 39,
+      "function": "holding",
+      "name": "Power-Factor-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "-",
+      "access": "r"
+    },
+    {
+      "address": 41,
+      "function": "holding",
+      "name": "Power-Factor-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "-",
+      "access": "r"
+    },
+    {
+      "address": 43,
+      "function": "holding",
+      "name": "THD-R-Voltage-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 45,
+      "function": "holding",
+      "name": "THD-R-Voltage-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 47,
+      "function": "holding",
+      "name": "THD-R-Voltage-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 49,
+      "function": "holding",
+      "name": "THD-R-Current-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 51,
+      "function": "holding",
+      "name": "THD-R-Current-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 53,
+      "function": "holding",
+      "name": "THD-R-Current-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 55,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "H",
+      "access": "r"
+    },
+    {
+      "address": 57,
+      "function": "holding",
+      "name": "Average-Voltage-Vph-n",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 59,
+      "function": "holding",
+      "name": "Average-Voltage-Vph-ph",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 61,
+      "function": "holding",
+      "name": "Average-Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 63,
+      "function": "holding",
+      "name": "Total-Apparent-Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 65,
+      "function": "holding",
+      "name": "Total-Active-Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 67,
+      "function": "holding",
+      "name": "Total-Reactive-Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "v",
+      "access": "r"
+    },
+    {
+      "address": 69,
+      "function": "holding",
+      "name": "Total-Power-Factor",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "-",
+      "access": "r"
+    },
+    {
+      "address": 71,
+      "function": "holding",
+      "name": "Amplitude-Unbalance---Voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 73,
+      "function": "holding",
+      "name": "Amplitude-Unbalance---Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 75,
+      "function": "holding",
+      "name": "Maximum-Voltage-Va-n",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 77,
+      "function": "holding",
+      "name": "Maximum-Voltage-Vb-n",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 79,
+      "function": "holding",
+      "name": "Maximum-Voltage-Vc-n",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 81,
+      "function": "holding",
+      "name": "Max.-Voltage-Va-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 83,
+      "function": "holding",
+      "name": "Max.-Voltage-Vb-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 85,
+      "function": "holding",
+      "name": "Max.-Voltage-Vc-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 87,
+      "function": "holding",
+      "name": "Maximum-Current-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 89,
+      "function": "holding",
+      "name": "Maximum-Current-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 91,
+      "function": "holding",
+      "name": "Maximum-Current-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 93,
+      "function": "holding",
+      "name": "Maximum-Apparent-Power-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 95,
+      "function": "holding",
+      "name": "Maximum-Apparent-Power-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 97,
+      "function": "holding",
+      "name": "Maximum-Apparent-Power-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 99,
+      "function": "holding",
+      "name": "Maximum-Active-Power-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/siemens-sentron-pac-3200.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

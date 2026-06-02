@@ -1,0 +1,293 @@
+{
+  "slug": "sungrow-ac011e-01",
+  "vendor": "Sungrow",
+  "vendorSlug": "sungrow",
+  "model": "AC011E-01",
+  "modelSlug": "ac011e-01",
+  "name": "Sungrow AC011E Wallbox",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 21202,
+      "function": "holding",
+      "name": "output_current",
+      "label": "Output Current",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "rw"
+    },
+    {
+      "address": 21203,
+      "function": "holding",
+      "name": "phase_mode",
+      "label": "Phase Mode",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 21210,
+      "function": "holding",
+      "name": "charger_enable",
+      "label": "Charger Enable",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 21211,
+      "function": "holding",
+      "name": "remote_control",
+      "label": "Remote Control",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 21211,
+      "function": "holding",
+      "name": "start_charging",
+      "label": "Start Charging",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 21211,
+      "function": "holding",
+      "name": "stop_charging",
+      "label": "Stop Charging",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 21223,
+      "function": "input",
+      "name": "device_type_code",
+      "label": "Device Type Code",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 21224,
+      "function": "input",
+      "name": "power_phases",
+      "label": "Power Phases",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 21231,
+      "function": "holding",
+      "name": "mileage_per_kwh_set",
+      "label": "Mileage per kWh",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "km/kWh",
+      "access": "rw"
+    },
+    {
+      "address": 21261,
+      "function": "input",
+      "name": "rated_voltage",
+      "label": "Rated Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 21262,
+      "function": "holding",
+      "name": "working_mode",
+      "label": "Working Mode",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 21269,
+      "function": "input",
+      "name": "phase_switching_status_raw",
+      "label": "Phase Switching Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 21271,
+      "function": "input",
+      "name": "minimum_charging_power",
+      "label": "Minimum Charging Power",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 21272,
+      "function": "input",
+      "name": "maximum_charging_power",
+      "label": "Maximum Charging Power",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 21299,
+      "function": "input",
+      "name": "total_energy",
+      "label": "Total Energy",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 21301,
+      "function": "input",
+      "name": "phase_a_charging_voltage",
+      "label": "Phase A Charging Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 21302,
+      "function": "input",
+      "name": "phase_a_charging_current",
+      "label": "Phase A Charging Current",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 21303,
+      "function": "input",
+      "name": "phase_b_charging_voltage",
+      "label": "Phase B Charging Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 21304,
+      "function": "input",
+      "name": "phase_b_charging_current",
+      "label": "Phase B Charging Current",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 21305,
+      "function": "input",
+      "name": "phase_c_charging_voltage",
+      "label": "Phase C Charging Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 21306,
+      "function": "input",
+      "name": "phase_c_charging_current",
+      "label": "Phase C Charging Current",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 21307,
+      "function": "input",
+      "name": "charging_power",
+      "label": "Charging Power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 21309,
+      "function": "input",
+      "name": "charging_energy",
+      "label": "Charging Energy",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 21313,
+      "function": "input",
+      "name": "start_mode_raw",
+      "label": "Start Mode",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 21316,
+      "function": "input",
+      "name": "charging_status_raw",
+      "label": "Charging Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 21317,
+      "function": "input",
+      "name": "charging_start_time_raw",
+      "label": "Charging Start Time",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 21319,
+      "function": "input",
+      "name": "charging_end_time_raw",
+      "label": "Charging End Time",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-manager",
+    "ref": "8932e9a23c65e9f9fe333780bcb3477d81a80b7b",
+    "needsReview": true,
+    "reviewReasons": [
+      "Ordre d'octets non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

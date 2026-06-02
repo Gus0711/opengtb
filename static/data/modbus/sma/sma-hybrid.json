@@ -1,0 +1,233 @@
+{
+  "slug": "sma-sma-hybrid",
+  "vendor": "SMA",
+  "vendorSlug": "sma",
+  "model": "sma-hybrid",
+  "modelSlug": "sma-hybrid",
+  "name": "SMA sma-hybrid",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 30581,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "SMA Modbus Profile: Metering.GridMs.TotWhIn"
+    },
+    {
+      "address": 30773,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "SMA Modbus Profile: DcMs.Watt [0]"
+    },
+    {
+      "address": 30845,
+      "function": "holding",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r",
+      "notes": "SMA Modbus Profile: Bat.ChaStt"
+    },
+    {
+      "address": 30865,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "SMA Modbus Profile: Metering.GridMs.TotWIn"
+    },
+    {
+      "address": 30867,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "SMA Modbus Profile: Metering.GridMs.TotWOut"
+    },
+    {
+      "address": 30961,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "SMA Modbus Profile: DcMs.Watt [1]"
+    },
+    {
+      "address": 30967,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "SMA Modbus Profile: DcMs.Watt [2]"
+    },
+    {
+      "address": 31259,
+      "function": "input",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "SMA Modbus Profile: Metering.GridMs.W.phsA # Power grid feeding L1, unsigned, zero if no feeding"
+    },
+    {
+      "address": 31261,
+      "function": "input",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "SMA Modbus Profile: Metering.GridMs.W.phsB # Power grid feeding L2, unsigned, zero if no feeding"
+    },
+    {
+      "address": 31263,
+      "function": "input",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "SMA Modbus Profile: Metering.GridMs.W.phsC # Power grid feeding L3, unsigned, zero if no feeding"
+    },
+    {
+      "address": 31265,
+      "function": "input",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "SMA Modbus Profile: Metering.GridMs.WIn.phsA # Power drawn from grid phase L1, unsigned, zero if no consumption"
+    },
+    {
+      "address": 31267,
+      "function": "input",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "SMA Modbus Profile: Metering.GridMs.WIn.phsB # Power drawn from grid phase L2, unsigned, zero if no consumption"
+    },
+    {
+      "address": 31269,
+      "function": "input",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "SMA Modbus Profile: Metering.GridMs.WIn.phsC # Power drawn from grid phase L3, unsigned, zero if no consumption"
+    },
+    {
+      "address": 31393,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "SMA Modbus Profile: BatChrg.CurBatCha"
+    },
+    {
+      "address": 31395,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "SMA Modbus Profile: BatDsch.CurBatDsch"
+    },
+    {
+      "address": 31401,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "SMA Modbus Profile: CmpBMS.GetBatDschWh"
+    },
+    {
+      "address": 31435,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "SMA Modbus Profile: Metering.GridMs.A.phsA # Grid current phase L1, unsigned (independent of flow direction)"
+    },
+    {
+      "address": 31437,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "SMA Modbus Profile: Metering.GridMs.A.phsB # Grid current phase L2, unsigned (independent of flow direction)"
+    },
+    {
+      "address": 31439,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "SMA Modbus Profile: Metering.GridMs.A.phsC # Grid current phase L3, unsigned (independent of flow direction)"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

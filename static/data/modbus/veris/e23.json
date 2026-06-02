@@ -1,0 +1,474 @@
+{
+  "slug": "veris-e23",
+  "vendor": "veris",
+  "vendorSlug": "veris",
+  "model": "e23",
+  "modelSlug": "e23",
+  "name": "veris e23",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1537,
+      "function": "holding",
+      "name": "Real-energy-(ph)-consumption",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1539,
+      "function": "holding",
+      "name": "Reactive-energy-(qh)-consumption",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 1541,
+      "function": "holding",
+      "name": "Apparent-energy-(sh)-consumption",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 1543,
+      "function": "holding",
+      "name": "Total-instantaneous-real-power-(p)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1545,
+      "function": "holding",
+      "name": "Total-instantaneous-reactive-power-(q)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1547,
+      "function": "holding",
+      "name": "Total-instantaneous-apparent-power-(s)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1549,
+      "function": "holding",
+      "name": "Average-power-factor-(pf:-total-kw-/-total-kva)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ratio",
+      "access": "r"
+    },
+    {
+      "address": 1551,
+      "function": "holding",
+      "name": "Voltage-line-to-line-(u),-average-of-active-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1553,
+      "function": "holding",
+      "name": "Voltageline-to-neutral-(v),-average-of-active-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1555,
+      "function": "holding",
+      "name": "Current,-average-of-active-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1557,
+      "function": "holding",
+      "name": "Frequency-(derived-from-phase-a,-b,-or-C-in-that-order)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 1559,
+      "function": "holding",
+      "name": "Total-real-power-present-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1561,
+      "function": "holding",
+      "name": "Total-reactive-power-present-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1563,
+      "function": "holding",
+      "name": "Total-apparent-power-present-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1565,
+      "function": "holding",
+      "name": "Total-real-power-max-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1567,
+      "function": "holding",
+      "name": "Total-reactive-power-max-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1569,
+      "function": "holding",
+      "name": "Total-apparent-power-max-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1577,
+      "function": "holding",
+      "name": "Pulse-counter-1-(real-energy)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1579,
+      "function": "holding",
+      "name": "Pulse-counter-2-(reactive-energy)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1589,
+      "function": "holding",
+      "name": "Real-energy-consumption,-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1591,
+      "function": "holding",
+      "name": "Real-energy-consumption,-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1593,
+      "function": "holding",
+      "name": "Real-energy-consumption,-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1595,
+      "function": "holding",
+      "name": "Reactive-energy-consumption,-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1597,
+      "function": "holding",
+      "name": "Reactive-energy-consumption,-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1599,
+      "function": "holding",
+      "name": "Reactive-energy-consumption,-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1601,
+      "function": "holding",
+      "name": "Apparent-energy-consumption,-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1603,
+      "function": "holding",
+      "name": "Apparent-energy-consumption,-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1605,
+      "function": "holding",
+      "name": "Apparent-energy-consumption,-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1607,
+      "function": "holding",
+      "name": "Real-power,-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1609,
+      "function": "holding",
+      "name": "Real-power,-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1611,
+      "function": "holding",
+      "name": "Real-power,-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1613,
+      "function": "holding",
+      "name": "Reactive-power,-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1615,
+      "function": "holding",
+      "name": "Reactive-power,-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1617,
+      "function": "holding",
+      "name": "Reactive-power,-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1619,
+      "function": "holding",
+      "name": "Apparent-power,-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1621,
+      "function": "holding",
+      "name": "Apparent-power,-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1623,
+      "function": "holding",
+      "name": "Apparent-power,-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1625,
+      "function": "holding",
+      "name": "Power-factor,-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ratio",
+      "access": "r"
+    },
+    {
+      "address": 1627,
+      "function": "holding",
+      "name": "Power-factor,-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ratio",
+      "access": "r"
+    },
+    {
+      "address": 1629,
+      "function": "holding",
+      "name": "Power-factor,-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ratio",
+      "access": "r"
+    },
+    {
+      "address": 1631,
+      "function": "holding",
+      "name": "Voltage,-L1-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1633,
+      "function": "holding",
+      "name": "Voltage,-L2-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1635,
+      "function": "holding",
+      "name": "Voltage,-L3-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1637,
+      "function": "holding",
+      "name": "Voltage,-L1-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1639,
+      "function": "holding",
+      "name": "Voltage,-L2-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1641,
+      "function": "holding",
+      "name": "Voltage,-L3-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1643,
+      "function": "holding",
+      "name": "Current,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1645,
+      "function": "holding",
+      "name": "Current,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1647,
+      "function": "holding",
+      "name": "Current,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1649,
+      "function": "holding",
+      "name": "Current,-neutral",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/veris-e23.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

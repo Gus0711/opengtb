@@ -1,0 +1,462 @@
+{
+  "slug": "power-one-inverter-pvi-aurora-central",
+  "vendor": "power",
+  "vendorSlug": "power",
+  "model": "one-inverter-pvi-aurora-central",
+  "modelSlug": "one-inverter-pvi-aurora-central",
+  "name": "power one-inverter-pvi-aurora-central",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 129,
+      "function": "holding",
+      "name": "PN5-module-01",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 130,
+      "function": "holding",
+      "name": "Type-of-module-(Master-or-slave)",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 131,
+      "function": "holding",
+      "name": "Status0-module-01-(Global-state)",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 132,
+      "function": "holding",
+      "name": "Status1-module-01-(Inverter-state)",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 133,
+      "function": "holding",
+      "name": "Status2-module-01-(Alarm-state)",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 136,
+      "function": "holding",
+      "name": "Daily-energy-module-01",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 138,
+      "function": "holding",
+      "name": "Total-energy-module-01",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 140,
+      "function": "holding",
+      "name": "Partial-energy-module-01",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 142,
+      "function": "holding",
+      "name": "Week-energy-module-01",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 144,
+      "function": "holding",
+      "name": "Monthly-energy-module-01",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 146,
+      "function": "holding",
+      "name": "Yearly-energy-module-01",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 148,
+      "function": "holding",
+      "name": "3-phases-grid-voltage-module-01-(Slave)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt Rms",
+      "access": "r"
+    },
+    {
+      "address": 150,
+      "function": "holding",
+      "name": "3-phases-grid-current-module-01-(Slave)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ampere Rms",
+      "access": "r"
+    },
+    {
+      "address": 152,
+      "function": "holding",
+      "name": "3-phases-grid-power-module-01-(Slave)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWatt",
+      "access": "r"
+    },
+    {
+      "address": 154,
+      "function": "holding",
+      "name": "3-phases-frequence-module-01-(Slave)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 156,
+      "function": "holding",
+      "name": "Input-power-module-01-(Slave)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWatt",
+      "access": "r"
+    },
+    {
+      "address": 158,
+      "function": "holding",
+      "name": "Input-voltage-module-01-(Slave)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 160,
+      "function": "holding",
+      "name": "Input-current-module-01-(Slave)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ampere",
+      "access": "r"
+    },
+    {
+      "address": 162,
+      "function": "holding",
+      "name": "Supervisor-temperature-module-01",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Celsius Degree",
+      "access": "r"
+    },
+    {
+      "address": 164,
+      "function": "holding",
+      "name": "Power-supply-temperature-module-01",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Celsius Degree",
+      "access": "r"
+    },
+    {
+      "address": 166,
+      "function": "holding",
+      "name": "Headsink-module-01",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Celsius Degree",
+      "access": "r"
+    },
+    {
+      "address": 168,
+      "function": "holding",
+      "name": "T2-module-01",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Celsius Degree",
+      "access": "r"
+    },
+    {
+      "address": 170,
+      "function": "holding",
+      "name": "T3-module-01",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Celsius Degree",
+      "access": "r"
+    },
+    {
+      "address": 172,
+      "function": "holding",
+      "name": "Daily-energy-module-01-(Rack-energy)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 174,
+      "function": "holding",
+      "name": "Total-energy-module-01-(Rack-energy)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 176,
+      "function": "holding",
+      "name": "Partial-energy-module-01-(Rack-energy)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 178,
+      "function": "holding",
+      "name": "Week-energy-module-01-(Rack-energy)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 180,
+      "function": "holding",
+      "name": "Monthly-energy-module-01-(Rack-energy)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 182,
+      "function": "holding",
+      "name": "Yearly-energy-module-01-(Rack-energy)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 184,
+      "function": "holding",
+      "name": "Grid-voltage-module-01-(Master-mean-of-3-phases-global-measurements)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 186,
+      "function": "holding",
+      "name": "Grid-current-module-01-(Master-mean-of-3-phases-global-measurements)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ampere",
+      "access": "r"
+    },
+    {
+      "address": 188,
+      "function": "holding",
+      "name": "Grid-power-module-01-(Master-mean-of-3-phases-global-measurements)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWatt",
+      "access": "r"
+    },
+    {
+      "address": 190,
+      "function": "holding",
+      "name": "Input-power-module-01-(Master-global-measurements)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWatt",
+      "access": "r"
+    },
+    {
+      "address": 192,
+      "function": "holding",
+      "name": "Input-voltage-module-01-(Master-global-measurements)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 194,
+      "function": "holding",
+      "name": "Input-current-module-01-(Master-global-measurements)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ampere",
+      "access": "r"
+    },
+    {
+      "address": 3650,
+      "function": "holding",
+      "name": "Modbus-interface-type",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3651,
+      "function": "holding",
+      "name": "Firmware-major-release",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3652,
+      "function": "holding",
+      "name": "Firmware-minor-release",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3653,
+      "function": "holding",
+      "name": "Firmware-build-release",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3700,
+      "function": "holding",
+      "name": "Collection-daily-energy-of-all-modules",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 3702,
+      "function": "holding",
+      "name": "Collection-total-energy-of-all-modules",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 3704,
+      "function": "holding",
+      "name": "Collection-partial-energy-of-all-modules",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 3706,
+      "function": "holding",
+      "name": "Collection-week-energy-of-all-modules",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 3708,
+      "function": "holding",
+      "name": "Collection-monthly-energy-of-all-modules",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 3710,
+      "function": "holding",
+      "name": "Collection-yearly-energy-of-all-modules",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWattHour",
+      "access": "r"
+    },
+    {
+      "address": 4100,
+      "function": "holding",
+      "name": "Numbers-junction-box-presents-in-the-system-(Total)",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4101,
+      "function": "holding",
+      "name": "RackNumber-of-the-module-that-manages-the-junction-box",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4102,
+      "function": "holding",
+      "name": "Address-of-the-module-that-manages-the-junction-box",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4103,
+      "function": "holding",
+      "name": "Junction-box-present-in-the-rack",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4104,
+      "function": "holding",
+      "name": "Address-junction-box-01",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/power-one-inverter-pvi-aurora-central.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

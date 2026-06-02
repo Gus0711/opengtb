@@ -1,0 +1,104 @@
+{
+  "slug": "siemens-7kt1665",
+  "vendor": "Siemens",
+  "vendorSlug": "siemens",
+  "model": "7KT1665",
+  "modelSlug": "7kt1665",
+  "name": "Siemens 7KT1665",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "input",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "input",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "input",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 57,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 6687,
+      "function": "input",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

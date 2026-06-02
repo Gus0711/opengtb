@@ -1,0 +1,437 @@
+{
+  "slug": "fronius-inverter-110-111",
+  "vendor": "fronius",
+  "vendorSlug": "fronius",
+  "model": "inverter-110-111",
+  "modelSlug": "inverter-110-111",
+  "name": "fronius inverter-110-111",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 40005,
+      "function": "holding",
+      "name": "Manufacturer",
+      "dataType": "string",
+      "size": 32,
+      "access": "r"
+    },
+    {
+      "address": 40021,
+      "function": "holding",
+      "name": "Device-model",
+      "dataType": "string",
+      "size": 32,
+      "access": "r"
+    },
+    {
+      "address": 40037,
+      "function": "holding",
+      "name": "Options",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 40045,
+      "function": "holding",
+      "name": "Sw-version-of-inverter",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 40053,
+      "function": "holding",
+      "name": "Serialnumber-of-the-inverter",
+      "dataType": "string",
+      "size": 32,
+      "access": "r"
+    },
+    {
+      "address": 40069,
+      "function": "holding",
+      "name": "Modbus-device-address",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40072,
+      "function": "holding",
+      "name": "Ac-total-current-value",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40074,
+      "function": "holding",
+      "name": "Ac-phase-A-current-value",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40076,
+      "function": "holding",
+      "name": "Ac-phase-B-current-value",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40078,
+      "function": "holding",
+      "name": "Ac-phase-C-current-value",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40080,
+      "function": "holding",
+      "name": "Ac-voltage-phase-ab-value",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40082,
+      "function": "holding",
+      "name": "Ac-voltage-phase-bc-value",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40084,
+      "function": "holding",
+      "name": "Ac-voltage-phase-ca-value",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40086,
+      "function": "holding",
+      "name": "Ac-voltage-phase-A-to-neutral-value",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40088,
+      "function": "holding",
+      "name": "Ac-voltage-phase-B-to-neutral-value",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40090,
+      "function": "holding",
+      "name": "Ac-voltage-phase-C-to-neutral-value",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40092,
+      "function": "holding",
+      "name": "Ac-power-value",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40094,
+      "function": "holding",
+      "name": "Ac-frequency-value",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 40096,
+      "function": "holding",
+      "name": "Apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40098,
+      "function": "holding",
+      "name": "Reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 40100,
+      "function": "holding",
+      "name": "Power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40102,
+      "function": "holding",
+      "name": "Ac-lifetime-energy-production",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40108,
+      "function": "holding",
+      "name": "Dc-power-value",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40120,
+      "function": "holding",
+      "name": "Event-flags-(bits-0-31)",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40122,
+      "function": "holding",
+      "name": "Event-flags-(bits-32-63)",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40124,
+      "function": "holding",
+      "name": "Vendor-defined-event-flags-(bits-0-31)",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40126,
+      "function": "holding",
+      "name": "Vendor-defined-event-flags-(bits-32-63)",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40128,
+      "function": "holding",
+      "name": "Vendor-defined-event-flags-(bits-64-95)",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40130,
+      "function": "holding",
+      "name": "Vendor-defined-event-flags-(bits-96-127)",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40133,
+      "function": "holding",
+      "name": "Length-of-nameplate-model",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40135,
+      "function": "holding",
+      "name": "Continuous-power-output-capability-of-the-inverter",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40137,
+      "function": "holding",
+      "name": "Continuous-volt-ampere-capability-of-the-inverter",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40139,
+      "function": "holding",
+      "name": "Continuous-var-capability-of-the-inverter-in-quadrant-1",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 40142,
+      "function": "holding",
+      "name": "Continuous-var-capability-of-the-inverter-in-quadrant-4",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 40144,
+      "function": "holding",
+      "name": "Maximum-rms-ac-current-level-capability-of-the-inverter",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40146,
+      "function": "holding",
+      "name": "Minimum-power-factor-capability-of-the-inverter-in-quadrant-1",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40149,
+      "function": "holding",
+      "name": "Minimum-power-factor-capability-of-the-inverter-in-quadrant-4",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40151,
+      "function": "holding",
+      "name": "Nominal-energy-rating-of-storage-device",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40155,
+      "function": "holding",
+      "name": "Maximum-rate-of-energy-transfer-into-the-storage-device",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40157,
+      "function": "holding",
+      "name": "Maximum-rate-of-energy-transfer-out-of-the-storage-device",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40161,
+      "function": "holding",
+      "name": "Length-of-basic-settings-model",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40162,
+      "function": "holding",
+      "name": "Setting-for-maximum-power-output.-Default-to-i_wrtg",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40163,
+      "function": "holding",
+      "name": "Voltage-at-the-pcc",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40164,
+      "function": "holding",
+      "name": "Offset-from-pcc-to-inverter",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40167,
+      "function": "holding",
+      "name": "Setpoint-for-maximum-apparent-power.-Default-to-i_vartg",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40168,
+      "function": "holding",
+      "name": "Setting-for-maximum-reactive-power-in-quadrant-1.-Default-to-varrtgq1",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 40171,
+      "function": "holding",
+      "name": "Setting-for-maximum-reactive-power-in-quadrant-4-default-to-varrtgq4",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 40173,
+      "function": "holding",
+      "name": "Setpoint-for-minimum-power-factor-value-in-quadrant-1.-Default-to-pfrtgq1",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40176,
+      "function": "holding",
+      "name": "Setpoint-for-minimum-power-factor-value-in-quadrant-4.-Default-to-pfrtgq4",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40193,
+      "function": "holding",
+      "name": "Length-of-measurements_status-model",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/fronius-inverter-110-111.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

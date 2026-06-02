@@ -1,0 +1,112 @@
+{
+  "slug": "sma-sunny-tripower-boy-series-dynamic",
+  "vendor": "SMA",
+  "vendorSlug": "sma",
+  "model": "Sunny Tripower/Boy Series Dynamic",
+  "modelSlug": "sunny-tripower-boy-series-dynamic",
+  "name": "SMA Sunny Tripower/Boy Series Inverter",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 30529,
+      "function": "input",
+      "name": "solar_production_total",
+      "label": "Solar Production Total",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 30769,
+      "function": "input",
+      "name": "dc_current",
+      "label": "DC Current",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.001,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 30771,
+      "function": "input",
+      "name": "dc_voltage",
+      "label": "DC Voltage",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.001,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 30773,
+      "function": "input",
+      "name": "dc_power",
+      "label": "DC Power",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 30775,
+      "function": "input",
+      "name": "ac_power_total",
+      "label": "AC Power Total",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 30777,
+      "function": "input",
+      "name": "ac_power_l1",
+      "label": "AC Power L1",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 30779,
+      "function": "input",
+      "name": "ac_power_l2",
+      "label": "AC Power L2",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 30781,
+      "function": "input",
+      "name": "ac_power_l3",
+      "label": "AC Power L3",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-manager",
+    "ref": "8932e9a23c65e9f9fe333780bcb3477d81a80b7b",
+    "needsReview": true,
+    "reviewReasons": [
+      "Ordre d'octets non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

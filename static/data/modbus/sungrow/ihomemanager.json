@@ -1,0 +1,475 @@
+{
+  "slug": "sungrow-ihomemanager",
+  "vendor": "Sungrow",
+  "vendorSlug": "sungrow",
+  "model": "iHomeManager",
+  "modelSlug": "ihomemanager",
+  "name": "Sungrow iHomeManager",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 7999,
+      "function": "input",
+      "name": "device_type_code",
+      "label": "Device Type Code",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8000,
+      "function": "input",
+      "name": "protocol_number",
+      "label": "Protocol Number",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8002,
+      "function": "input",
+      "name": "protocol_version_raw",
+      "label": "Protocol Version Raw",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 8004,
+      "function": "input",
+      "name": "total_devices_connected",
+      "label": "Total Devices Connected",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8005,
+      "function": "input",
+      "name": "devices_in_fault",
+      "label": "Devices in Fault",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8023,
+      "function": "holding",
+      "name": "ems_mode_selection",
+      "label": "EMS Mode Selection",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8024,
+      "function": "holding",
+      "name": "charging_discharging_command",
+      "label": "Charging/Discharging Command",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8025,
+      "function": "holding",
+      "name": "charging_discharging_power",
+      "label": "Charging/Discharging Power",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kW",
+      "access": "rw"
+    },
+    {
+      "address": 8027,
+      "function": "holding",
+      "name": "feed_in_power_limitation",
+      "label": "Feed-in Power Limitation",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8030,
+      "function": "holding",
+      "name": "feed_in_power_limit_ratio",
+      "label": "Feed-in Power Limit Ratio",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 8046,
+      "function": "holding",
+      "name": "power_on_off",
+      "label": "Power-on/off",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8047,
+      "function": "holding",
+      "name": "charger_charging_modes",
+      "label": "Charger Charging Modes",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8048,
+      "function": "holding",
+      "name": "charger_enable",
+      "label": "Charger Enable",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8049,
+      "function": "holding",
+      "name": "charger_grid_power_draw",
+      "label": "Charger Grid Power Draw",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8050,
+      "function": "holding",
+      "name": "active_power_limitation",
+      "label": "Active Power Limitation",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8051,
+      "function": "holding",
+      "name": "active_power_limit_ratio",
+      "label": "Active Power Limit Ratio",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 8144,
+      "function": "input",
+      "name": "total_nominal_active_power",
+      "label": "Total Nominal Active Power",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 8146,
+      "function": "input",
+      "name": "total_battery_rated_capacity",
+      "label": "Total Battery Rated Capacity",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 8148,
+      "function": "input",
+      "name": "battery_charge_discharge_limit",
+      "label": "Battery Charge/Discharge Limit",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 8150,
+      "function": "input",
+      "name": "battery_max_charge_power",
+      "label": "Battery Max Charge Power",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 8151,
+      "function": "input",
+      "name": "battery_min_charge_power",
+      "label": "Battery Min Charge Power",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 8152,
+      "function": "input",
+      "name": "battery_max_discharge_power",
+      "label": "Battery Max Discharge Power",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 8153,
+      "function": "input",
+      "name": "battery_min_discharge_power",
+      "label": "Battery Min Discharge Power",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 8154,
+      "function": "input",
+      "name": "total_active_power",
+      "label": "Total Active Power",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 10,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 8156,
+      "function": "input",
+      "name": "meter_active_power_raw",
+      "label": "Meter Active Power Raw",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 10,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 8158,
+      "function": "input",
+      "name": "load_power",
+      "label": "Load Power",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 10,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 8160,
+      "function": "input",
+      "name": "battery_power",
+      "label": "Battery Power",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 10,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 8162,
+      "function": "input",
+      "name": "battery_level",
+      "label": "Battery Level SOC",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 8175,
+      "function": "input",
+      "name": "grid_import_energy",
+      "label": "Grid Import Energy",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 8177,
+      "function": "input",
+      "name": "grid_export_energy",
+      "label": "Grid Export Energy",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 8317,
+      "function": "input",
+      "name": "application_software_version",
+      "label": "Application Software Version",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8551,
+      "function": "input",
+      "name": "charger_status_raw",
+      "label": "Charger Status Raw",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8553,
+      "function": "input",
+      "name": "output_type_raw",
+      "label": "Output Type Raw",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 8554,
+      "function": "input",
+      "name": "phase_a_voltage",
+      "label": "Phase A Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 8555,
+      "function": "input",
+      "name": "phase_b_voltage",
+      "label": "Phase B Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 8556,
+      "function": "input",
+      "name": "phase_c_voltage",
+      "label": "Phase C Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 8557,
+      "function": "input",
+      "name": "grid_frequency",
+      "label": "Grid Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 8558,
+      "function": "input",
+      "name": "meter_phase_a_active_power_raw",
+      "label": "Meter Phase A Active Power Raw",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 8560,
+      "function": "input",
+      "name": "meter_phase_b_active_power_raw",
+      "label": "Meter Phase B Active Power Raw",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 8562,
+      "function": "input",
+      "name": "meter_phase_c_active_power_raw",
+      "label": "Meter Phase C Active Power Raw",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 8567,
+      "function": "input",
+      "name": "grid_frequency_ch2",
+      "label": "Grid Frequency Ch2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 8568,
+      "function": "input",
+      "name": "phase_a_active_power_ch2",
+      "label": "Phase A Active Power Ch2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 8570,
+      "function": "input",
+      "name": "phase_b_active_power_ch2",
+      "label": "Phase B Active Power Ch2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 8572,
+      "function": "input",
+      "name": "phase_c_active_power_ch2",
+      "label": "Phase C Active Power Ch2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-manager",
+    "ref": "8932e9a23c65e9f9fe333780bcb3477d81a80b7b",
+    "needsReview": true,
+    "reviewReasons": [
+      "Ordre d'octets non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

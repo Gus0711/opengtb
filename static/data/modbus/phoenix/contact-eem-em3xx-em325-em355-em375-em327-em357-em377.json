@@ -1,0 +1,471 @@
+{
+  "slug": "phoenix-contact-eem-em3xx-em325-em355-em375-em327-em357-em377",
+  "vendor": "phoenix",
+  "vendorSlug": "phoenix",
+  "model": "contact-eem-em3xx-em325-em355-em375-em327-em357-em377",
+  "modelSlug": "contact-eem-em3xx-em325-em355-em375-em327-em357-em377",
+  "name": "phoenix contact-eem-em3xx-em325-em355-em375-em327-em357-em377",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 4096,
+      "function": "holding",
+      "name": "Conductor-voltage-to-N-U1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4098,
+      "function": "holding",
+      "name": "Conductor-voltage-to-N-U2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4100,
+      "function": "holding",
+      "name": "Conductor-voltage-to-N-U3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4102,
+      "function": "holding",
+      "name": "Conductor-voltage-to-conductor-U12",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4104,
+      "function": "holding",
+      "name": "Conductor-voltage-to-conductor-U23",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4106,
+      "function": "holding",
+      "name": "Conductor-voltage-to-conductor-U31",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4108,
+      "function": "holding",
+      "name": "External-conductor-voltage-system",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4110,
+      "function": "holding",
+      "name": "Current-in-conductor-I1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4112,
+      "function": "holding",
+      "name": "Current-in-conductor-I2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4114,
+      "function": "holding",
+      "name": "Current-in-conductor-I3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4116,
+      "function": "holding",
+      "name": "Current-in-conductor-in",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4118,
+      "function": "holding",
+      "name": "System-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4120,
+      "function": "holding",
+      "name": "Power-factor-phase-1-+/-",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4122,
+      "function": "holding",
+      "name": "Power-factor-phase-2-+/-",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4124,
+      "function": "holding",
+      "name": "Power-factor-phase-3-+/-",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4126,
+      "function": "holding",
+      "name": "System-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4128,
+      "function": "holding",
+      "name": "Active-power-phase-1-+/-",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4130,
+      "function": "holding",
+      "name": "Active-power-phase-2-+/-",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4132,
+      "function": "holding",
+      "name": "Active-power-phase-3-+/-",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4134,
+      "function": "holding",
+      "name": "Total-active-power-+/-",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 4136,
+      "function": "holding",
+      "name": "Apparent-power-phase-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4138,
+      "function": "holding",
+      "name": "Apparent-power-phase-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4140,
+      "function": "holding",
+      "name": "Apparent-power-phase-3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4142,
+      "function": "holding",
+      "name": "Total-apparent-power-+/-",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 4144,
+      "function": "holding",
+      "name": "Reactive-power-phase-1-+/-",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4146,
+      "function": "holding",
+      "name": "Reactive-power-phase-2-+/-",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4148,
+      "function": "holding",
+      "name": "Reactive-power-phase-3-+/-",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4150,
+      "function": "holding",
+      "name": "Total-reactive-power-+/-",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 4152,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 4154,
+      "function": "holding",
+      "name": "Phase-sequence-0.123",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4352,
+      "function": "holding",
+      "name": "Total-active-energy-procurement-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4354,
+      "function": "holding",
+      "name": "Total-active-energy-procurement-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4356,
+      "function": "holding",
+      "name": "Total-active-energy-procurement-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4358,
+      "function": "holding",
+      "name": "Total-active-energy-procurement-sum",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4360,
+      "function": "holding",
+      "name": "Total-active-energy-supply-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4362,
+      "function": "holding",
+      "name": "Total-active-energy-supply-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4364,
+      "function": "holding",
+      "name": "Total-active-energy-supply-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4366,
+      "function": "holding",
+      "name": "Total-active-energy-supply-sum",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 4368,
+      "function": "holding",
+      "name": "Total-inductive-apparent-energy-procurement-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4370,
+      "function": "holding",
+      "name": "Total-inductive-apparent-energy-procurement-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4372,
+      "function": "holding",
+      "name": "Total-inductive-apparent-energy-procurement-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4376,
+      "function": "holding",
+      "name": "Total-inductive-apparent-energy-supply-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4378,
+      "function": "holding",
+      "name": "Total-inductive-apparent-energy-supply-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4380,
+      "function": "holding",
+      "name": "Total-inductive-apparent-energy-supply-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4382,
+      "function": "holding",
+      "name": "Total-inductive-apparent-energy-supply-sum",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4384,
+      "function": "holding",
+      "name": "Total-capacitive-apparent-energy-procurement-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4386,
+      "function": "holding",
+      "name": "Total-capacitive-apparent-energy-procurement-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4388,
+      "function": "holding",
+      "name": "Total-capacitive-apparent-energy-procurement-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4390,
+      "function": "holding",
+      "name": "Total-capacitive-apparent-energy-procurement-sum",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 4392,
+      "function": "holding",
+      "name": "Total-capacitive-apparent-energy-supply-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/phoenix-contact-eem-em3xx-em325-em355-em375-em327-em357-em377.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

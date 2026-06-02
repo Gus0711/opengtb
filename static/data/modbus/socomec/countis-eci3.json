@@ -1,0 +1,426 @@
+{
+  "slug": "socomec-countis-eci3",
+  "vendor": "socomec",
+  "vendorSlug": "socomec",
+  "model": "countis-eci3",
+  "modelSlug": "countis-eci3",
+  "name": "socomec countis-eci3",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 37072,
+      "function": "holding",
+      "name": "Label-of-custom-unit",
+      "dataType": "string",
+      "size": 4,
+      "access": "r"
+    },
+    {
+      "address": 38020,
+      "function": "holding",
+      "name": "Input-1-absolute-value",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 38023,
+      "function": "holding",
+      "name": "Input-2-absolute-value",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 38027,
+      "function": "holding",
+      "name": "Input-1-value-for-0mA",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 38029,
+      "function": "holding",
+      "name": "Input-1-value-for-20mA",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 38033,
+      "function": "holding",
+      "name": "Input-2-value-for-0mA",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 38035,
+      "function": "holding",
+      "name": "Input-2-value-for-20mA",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 39170,
+      "function": "holding",
+      "name": "Integration-period",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39172,
+      "function": "holding",
+      "name": "Numerator-rate",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39173,
+      "function": "holding",
+      "name": "Denominator-rate",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39177,
+      "function": "holding",
+      "name": "Value-without-CT*VT-rate",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39314,
+      "function": "holding",
+      "name": "Integration-period",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39316,
+      "function": "holding",
+      "name": "Numerator-rate",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39317,
+      "function": "holding",
+      "name": "Denominator-rate",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39321,
+      "function": "holding",
+      "name": "Value-without-CT*VT-rate",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39869,
+      "function": "holding",
+      "name": "Load-curves-base-integration-time",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39872,
+      "function": "holding",
+      "name": "External-synchro-type:-0:-disabled-1:-input-7-2:-COM",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39873,
+      "function": "holding",
+      "name": "External-synchro-period",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39874,
+      "function": "holding",
+      "name": "Currency-unit:-0:-euro-1:-US-dollar-2:-GB-pound-3:-yuan-4:-other",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39936,
+      "function": "holding",
+      "name": "Name",
+      "dataType": "string",
+      "size": 10,
+      "access": "r"
+    },
+    {
+      "address": 39941,
+      "function": "holding",
+      "name": "Mode:-0:-disabled-1:-0-20mA-2:-4-20mA",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39942,
+      "function": "holding",
+      "name": "Unit:-0:-A-1:-V-2:-W-3:-kW-4:-VAR-5:-kVAR-6:-VA-7:-kVA-8:-C-9:-F-10:-mbar-11:-bar-12:-custom-unit",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39943,
+      "function": "holding",
+      "name": "Integration-time",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39944,
+      "function": "holding",
+      "name": "Synchro-type:-0:-RTC-1:-external",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39945,
+      "function": "holding",
+      "name": "X_Pt1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39946,
+      "function": "holding",
+      "name": "Y_Pt1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 39948,
+      "function": "holding",
+      "name": "X_Pt2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39949,
+      "function": "holding",
+      "name": "Y_Pt2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 39951,
+      "function": "holding",
+      "name": "X_Pt3",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39952,
+      "function": "holding",
+      "name": "Y_Pt3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 39954,
+      "function": "holding",
+      "name": "X_Pt4",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39955,
+      "function": "holding",
+      "name": "Y_Pt4",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 39957,
+      "function": "holding",
+      "name": "X_Pt5",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39958,
+      "function": "holding",
+      "name": "Y_Pt5",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 39960,
+      "function": "holding",
+      "name": "Name",
+      "dataType": "string",
+      "size": 10,
+      "access": "r"
+    },
+    {
+      "address": 39965,
+      "function": "holding",
+      "name": "Mode:-0:-disabled-1:-0-20mA-2:-4-20mA",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39966,
+      "function": "holding",
+      "name": "Unit:-0:-A-1:-V-2:-W-3:-kW-4:-VAR-5:-kVAR-6:-VA-7:-kVA-8:-C-9:-F-10:-mbar-11:-bar-12:-custom-unit",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39967,
+      "function": "holding",
+      "name": "Integration-time",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39968,
+      "function": "holding",
+      "name": "Synchro-type:-0:-RTC-1:-external",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39969,
+      "function": "holding",
+      "name": "X_Pt1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39970,
+      "function": "holding",
+      "name": "Y_Pt1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 39972,
+      "function": "holding",
+      "name": "X_Pt2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39973,
+      "function": "holding",
+      "name": "Y_Pt2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 39975,
+      "function": "holding",
+      "name": "X_Pt3",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39976,
+      "function": "holding",
+      "name": "Y_Pt3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 39978,
+      "function": "holding",
+      "name": "X_Pt4",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39979,
+      "function": "holding",
+      "name": "Y_Pt4",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 39981,
+      "function": "holding",
+      "name": "X_Pt5",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39982,
+      "function": "holding",
+      "name": "Y_Pt5",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 45058,
+      "function": "holding",
+      "name": "Save-context-count",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/socomec-countis-eci3.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

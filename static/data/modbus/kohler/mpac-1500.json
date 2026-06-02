@@ -1,0 +1,474 @@
+{
+  "slug": "kohler-mpac-1500",
+  "vendor": "kohler",
+  "vendorSlug": "kohler",
+  "model": "mpac-1500",
+  "modelSlug": "mpac-1500",
+  "name": "kohler mpac-1500",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Source-N-line-neutral-l1l0",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Source-N-line-neutral-L2-l0",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Source-N-line-neutral-l3l0",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Source-E-line-neutral-L1-l0",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Source-E-lineneutral-l2l0",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Source-E-line-neutral-L3-l0",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Source-N-line-voltage-L1-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Source-N-line-voltage-L2-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Source-N-line-voltage-L3-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Source-E-line-voltage-L1-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Source-E-line-voltage-l2l3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Source-E-line-voltage-L3-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Source-N-frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Source-E-frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "Current-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Current-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Current-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Closed-transition-in-phase-degree-delta",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Closed-programmed-transition-override-mode",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0 = Auto Override, 1 = Non-Automatic",
+      "access": "r"
+    },
+    {
+      "address": 39,
+      "function": "holding",
+      "name": "Password-for-writing-register-40042",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-32768",
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "Synchronous-voltage-phase-angle",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-10 degrees",
+      "access": "r"
+    },
+    {
+      "address": 41,
+      "function": "holding",
+      "name": "Synchronous-voltage-differential",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0%-5%",
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "Synchronous-frequency-differential",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0.0Hz.-0.3Hz.",
+      "access": "r"
+    },
+    {
+      "address": 43,
+      "function": "holding",
+      "name": "Service-entrance-type",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0 = None; 1 = Insulated Case Circuit Breaker, 2 = Molded Case Circuit Breaker, 3 = Contactor",
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "Phase-rotation-actual",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0 = disabled; 1 = ABC; 2 = CBA",
+      "access": "r"
+    },
+    {
+      "address": 45,
+      "function": "holding",
+      "name": "Phase-rotation-expected",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0 = disabled; 1 = ABC; 2 = CBA",
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Nominal-normal-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 47,
+      "function": "holding",
+      "name": "Nominal-emergency-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Nominal-normal-frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 49,
+      "function": "holding",
+      "name": "Nominal-emergency-frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "Normal-number-of-phases",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "1 or 3",
+      "access": "r"
+    },
+    {
+      "address": 51,
+      "function": "holding",
+      "name": "Emergency-number-of-phases",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "1 or 3",
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Rated-amperage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "04000",
+      "access": "r"
+    },
+    {
+      "address": 57,
+      "function": "holding",
+      "name": "Password-for-writing-register-40057",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0 32768",
+      "access": "r"
+    },
+    {
+      "address": 58,
+      "function": "holding",
+      "name": "Normal-engine-start-time-delay",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-10 sec",
+      "access": "r"
+    },
+    {
+      "address": 59,
+      "function": "holding",
+      "name": "Emergency-engine-start-time-delay",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "010 sec",
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "Normal-ext.-Engine-start-time-delay",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-3600 sec",
+      "access": "r"
+    },
+    {
+      "address": 61,
+      "function": "holding",
+      "name": "Emergency-ext.-Engine-start-time-delay",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "03600 sec",
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "Normal-engine-cooldown",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-3600 sec",
+      "access": "r"
+    },
+    {
+      "address": 63,
+      "function": "holding",
+      "name": "Emergency-engine-cooldown",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "03600 sec",
+      "access": "r"
+    },
+    {
+      "address": 64,
+      "function": "holding",
+      "name": "Standby-to-preferred",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-3600 sec",
+      "access": "r"
+    },
+    {
+      "address": 65,
+      "function": "holding",
+      "name": "Preferred-to-standby",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "03600 sec",
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "holding",
+      "name": "Off-(preferred-to-standby-prog.-Transition)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0-3600 sec",
+      "access": "r"
+    },
+    {
+      "address": 67,
+      "function": "holding",
+      "name": "Off-(standby-to-preferred-prog.-Transition)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "03600 sec",
+      "access": "r"
+    },
+    {
+      "address": 68,
+      "function": "holding",
+      "name": "Fail-to-acquire-preferred",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "1 -3600 sec",
+      "access": "r"
+    },
+    {
+      "address": 69,
+      "function": "holding",
+      "name": "Fail-to-acquire-standby",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "13600 sec",
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "Fail-to-synchronize",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "1 -3600 sec",
+      "access": "r"
+    },
+    {
+      "address": 71,
+      "function": "holding",
+      "name": "Fail-to-synch.-Enable",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0 = disabled; 1 = enabled",
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "holding",
+      "name": "Active-time-delay",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 75,
+      "function": "holding",
+      "name": "Active-time-delay-remaining",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Seconds",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/kohler-mpac-1500.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont"
+    ]
+  }
+}

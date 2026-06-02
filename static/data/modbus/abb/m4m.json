@@ -1,0 +1,476 @@
+{
+  "slug": "abb-m4m",
+  "vendor": "abb",
+  "vendorSlug": "abb",
+  "model": "m4m",
+  "modelSlug": "m4m",
+  "name": "abb m4m",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 20480,
+      "function": "holding",
+      "name": "Active-energy---import",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20484,
+      "function": "holding",
+      "name": "Active-energy---export",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20488,
+      "function": "holding",
+      "name": "Active-energy---net",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20492,
+      "function": "holding",
+      "name": "Reactive-energy---import",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20496,
+      "function": "holding",
+      "name": "Reactive-energy---export",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20500,
+      "function": "holding",
+      "name": "Reactive-energy---net",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20504,
+      "function": "holding",
+      "name": "Apparent-energy---import",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 20508,
+      "function": "holding",
+      "name": "Apparent-energy---export",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 20512,
+      "function": "holding",
+      "name": "Apparent-energy---net",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 20516,
+      "function": "holding",
+      "name": "Active-energy---import,-CO2-conversion-factor",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kg / kWh",
+      "access": "r"
+    },
+    {
+      "address": 20532,
+      "function": "holding",
+      "name": "Active-energy---import,-currency-conversion-factor",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "Currency / kWh",
+      "access": "r"
+    },
+    {
+      "address": 20848,
+      "function": "holding",
+      "name": "Active-energy---import-(Tariffs),-1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20852,
+      "function": "holding",
+      "name": "Active-energy---import-(Tariffs),-2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20856,
+      "function": "holding",
+      "name": "Active-energy---import-(Tariffs),-3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20860,
+      "function": "holding",
+      "name": "Active-energy---import-(Tariffs),-4",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20864,
+      "function": "holding",
+      "name": "Active-energy---import-(Tariffs),-5",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20868,
+      "function": "holding",
+      "name": "Active-energy---import-(Tariffs),-6",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20880,
+      "function": "holding",
+      "name": "Active-energy---export-(Tariffs),-1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20884,
+      "function": "holding",
+      "name": "Active-energy---export-(Tariffs),-2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20888,
+      "function": "holding",
+      "name": "Active-energy---export-(Tariffs),-3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20892,
+      "function": "holding",
+      "name": "Active-energy---export-(Tariffs),-4",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20896,
+      "function": "holding",
+      "name": "Active-energy---export-(Tariffs),-5",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20900,
+      "function": "holding",
+      "name": "Active-energy---export-(Tariffs),-6",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20912,
+      "function": "holding",
+      "name": "Reactive-energy---import-(Tariffs),-1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20916,
+      "function": "holding",
+      "name": "Reactive-energy---import-(Tariffs),-2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20920,
+      "function": "holding",
+      "name": "Reactive-energy---import-(Tariffs),-3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20924,
+      "function": "holding",
+      "name": "Reactive-energy---import-(Tariffs),-4",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20928,
+      "function": "holding",
+      "name": "Reactive-energy---import-(Tariffs),-5",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20932,
+      "function": "holding",
+      "name": "Reactive-energy---import-(Tariffs),-6",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20944,
+      "function": "holding",
+      "name": "Reactive-energy---export-(Tariffs),-1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20948,
+      "function": "holding",
+      "name": "Reactive-energy---export-(Tariffs),-2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20952,
+      "function": "holding",
+      "name": "Reactive-energy---export-(Tariffs),-3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20956,
+      "function": "holding",
+      "name": "Reactive-energy---export-(Tariffs),-4",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20960,
+      "function": "holding",
+      "name": "Reactive-energy---export-(Tariffs),-5",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20964,
+      "function": "holding",
+      "name": "Reactive-energy---export-(Tariffs),-6",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21600,
+      "function": "holding",
+      "name": "Active-energy---import,-L1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21604,
+      "function": "holding",
+      "name": "Active-energy---import,-L2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21608,
+      "function": "holding",
+      "name": "Active-energy---import,-L3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21612,
+      "function": "holding",
+      "name": "Active-energy---export,-L1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21616,
+      "function": "holding",
+      "name": "Active-energy---export,-L2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21620,
+      "function": "holding",
+      "name": "Active-energy---export,-L3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21624,
+      "function": "holding",
+      "name": "Active-energy---net,-L1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21628,
+      "function": "holding",
+      "name": "Active-energy---net,-L2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21632,
+      "function": "holding",
+      "name": "Active-energy---net,-L3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21636,
+      "function": "holding",
+      "name": "Reactive-energy---import,-L1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21640,
+      "function": "holding",
+      "name": "Reactive-energy---import,-L2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21644,
+      "function": "holding",
+      "name": "Reactive-energy---import,-L3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21648,
+      "function": "holding",
+      "name": "Reactive-energy---export,-L1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21652,
+      "function": "holding",
+      "name": "Reactive-energy---export,-L2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21656,
+      "function": "holding",
+      "name": "Reactive-energy---export,-L3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/abb-m4m.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

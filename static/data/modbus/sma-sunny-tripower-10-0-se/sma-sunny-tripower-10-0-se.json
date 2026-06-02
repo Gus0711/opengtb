@@ -1,0 +1,452 @@
+{
+  "slug": "sma-sunny-tripower-10-0-se-sma-sunny-tripower-10-0-se",
+  "vendor": "SMA SUNNY TRIPOWER 10.0 SE",
+  "vendorSlug": "sma-sunny-tripower-10-0-se",
+  "model": "SMA SUNNY TRIPOWER 10.0 SE",
+  "modelSlug": "sma-sunny-tripower-10-0-se",
+  "name": "SMA SUNNY TRIPOWER 10.0 SE",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 30053,
+      "function": "input",
+      "name": "3",
+      "label": "DevTypeId",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 30193,
+      "function": "input",
+      "name": "3",
+      "label": "Systemzeit als trigger",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 30203,
+      "function": "input",
+      "name": "3",
+      "label": "WR Wirkleistung Max",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 30517,
+      "function": "input",
+      "name": "3",
+      "label": "Tag Verbrauch gesamt",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 4,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 30529,
+      "function": "input",
+      "name": "3",
+      "label": "AC-Gesamtertrag",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 0.001,
+      "access": "r"
+    },
+    {
+      "address": 30531,
+      "function": "input",
+      "name": "3",
+      "label": "AC-Gesamtertrag",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 30533,
+      "function": "input",
+      "name": "3",
+      "label": "AC-Gesamtertrag",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 30581,
+      "function": "input",
+      "name": "3",
+      "label": "Gekaufte Energie",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 30769,
+      "function": "input",
+      "name": "3",
+      "label": "DC-Strom 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 0.001,
+      "access": "r"
+    },
+    {
+      "address": 30771,
+      "function": "input",
+      "name": "3",
+      "label": "DC-Spannung 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 0.01,
+      "access": "r"
+    },
+    {
+      "address": 30773,
+      "function": "input",
+      "name": "3",
+      "label": "DC-Leistung 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 30775,
+      "function": "input",
+      "name": "3",
+      "label": "AC Leistung",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 30837,
+      "function": "input",
+      "name": "3",
+      "label": "Wirkleistungsbegrenzung W",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 30839,
+      "function": "input",
+      "name": "3",
+      "label": "Wirkleistungsbegrenzung %",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 30845,
+      "function": "input",
+      "name": "3",
+      "label": "Batterie Prozent",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 30847,
+      "function": "input",
+      "name": "3",
+      "label": "Diagnose Aktuelle Kapazit�t",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 30849,
+      "function": "input",
+      "name": "3",
+      "label": "Batterie Temperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "access": "r"
+    },
+    {
+      "address": 30865,
+      "function": "input",
+      "name": "3",
+      "label": "Aktueller Netzbezug",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 30867,
+      "function": "input",
+      "name": "3",
+      "label": "Aktuelle Netzeinspeisung",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 30953,
+      "function": "input",
+      "name": "3",
+      "label": "Temperatur WR",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 0.1,
+      "access": "r"
+    },
+    {
+      "address": 30955,
+      "function": "input",
+      "name": "3",
+      "label": "Batterie Zustand",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 30957,
+      "function": "input",
+      "name": "3",
+      "label": "DC-Strom 2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 0.001,
+      "access": "r"
+    },
+    {
+      "address": 30959,
+      "function": "input",
+      "name": "3",
+      "label": "DC-Spannung 2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 0.01,
+      "access": "r"
+    },
+    {
+      "address": 30961,
+      "function": "input",
+      "name": "3",
+      "label": "DC-Leistung 2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 31061,
+      "function": "input",
+      "name": "3",
+      "label": "Steuerung verf�gbar",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 31379,
+      "function": "input",
+      "name": "3",
+      "label": "Batterietyp",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 31391,
+      "function": "input",
+      "name": "3",
+      "label": "Batterie Status",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 31393,
+      "function": "input",
+      "name": "3",
+      "label": "Momentane Batterieladung",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 31395,
+      "function": "input",
+      "name": "3",
+      "label": "Momentane Batterieentladung",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 31397,
+      "function": "input",
+      "name": "3",
+      "label": "Batterieladung",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 4,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 31401,
+      "function": "input",
+      "name": "3",
+      "label": "Batterieentladung",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 4,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 32385,
+      "function": "input",
+      "name": "3",
+      "label": "WR Status",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 32405,
+      "function": "input",
+      "name": "3",
+      "label": "Verbleibende Laufzeit bis WR Neustart",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 40149,
+      "function": "holding",
+      "name": "3",
+      "label": "Wirkleistungvorgabe",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 40151,
+      "function": "holding",
+      "name": "3",
+      "label": "Kommunikation",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 40189,
+      "function": "holding",
+      "name": "3",
+      "label": "max Ladeleistung BatWR",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 40191,
+      "function": "holding",
+      "name": "3",
+      "label": "max Entladeleistung BatWR",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 40795,
+      "function": "holding",
+      "name": "3",
+      "label": "Maximale Batterieladeleistung",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 40799,
+      "function": "holding",
+      "name": "3",
+      "label": "Maximale Batterieentladeleistung",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

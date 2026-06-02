@@ -1,0 +1,456 @@
+{
+  "slug": "inepro-metering-pro2",
+  "vendor": "inepro",
+  "vendorSlug": "inepro",
+  "model": "metering-pro2",
+  "modelSlug": "metering-pro2",
+  "name": "inepro metering-pro2",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 16387,
+      "function": "holding",
+      "name": "Modbus-ID",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16388,
+      "function": "holding",
+      "name": "Baud-rate",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16389,
+      "function": "holding",
+      "name": "Protocol-version",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16391,
+      "function": "holding",
+      "name": "Software-version",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16393,
+      "function": "holding",
+      "name": "Hardware-version",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16395,
+      "function": "holding",
+      "name": "Meter-amps",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 16397,
+      "function": "holding",
+      "name": "S0-output-rate",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "imp/kWh",
+      "access": "r"
+    },
+    {
+      "address": 16399,
+      "function": "holding",
+      "name": "Combination-code",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16401,
+      "function": "holding",
+      "name": "Parity-setting",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16402,
+      "function": "holding",
+      "name": "Current-direction",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16403,
+      "function": "holding",
+      "name": "L2-current-direction",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16404,
+      "function": "holding",
+      "name": "L3-current-direction",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16405,
+      "function": "holding",
+      "name": "Error-code",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16406,
+      "function": "holding",
+      "name": "Power-down-counter",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16407,
+      "function": "holding",
+      "name": "Present-quadrant",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16408,
+      "function": "holding",
+      "name": "L1-quadrant",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16409,
+      "function": "holding",
+      "name": "L2-quadrant",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16410,
+      "function": "holding",
+      "name": "L3-quadrant",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16415,
+      "function": "holding",
+      "name": "CT-mode",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 20480,
+      "function": "holding",
+      "name": "Voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 20482,
+      "function": "holding",
+      "name": "L1-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 20484,
+      "function": "holding",
+      "name": "L2-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 20486,
+      "function": "holding",
+      "name": "L3-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 20488,
+      "function": "holding",
+      "name": "Grid-frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 20490,
+      "function": "holding",
+      "name": "Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 20492,
+      "function": "holding",
+      "name": "L1-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 20494,
+      "function": "holding",
+      "name": "L2-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 20496,
+      "function": "holding",
+      "name": "L3-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 20498,
+      "function": "holding",
+      "name": "Total-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 20500,
+      "function": "holding",
+      "name": "L1-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 20502,
+      "function": "holding",
+      "name": "L2-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 20504,
+      "function": "holding",
+      "name": "L3-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 20506,
+      "function": "holding",
+      "name": "Total-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 20508,
+      "function": "holding",
+      "name": "L1-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 20510,
+      "function": "holding",
+      "name": "L2-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 20512,
+      "function": "holding",
+      "name": "L3-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 20514,
+      "function": "holding",
+      "name": "Total-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 20516,
+      "function": "holding",
+      "name": "L1-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 20518,
+      "function": "holding",
+      "name": "L2-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 20520,
+      "function": "holding",
+      "name": "L3-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 20522,
+      "function": "holding",
+      "name": "Power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 20524,
+      "function": "holding",
+      "name": "L1-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 20526,
+      "function": "holding",
+      "name": "L2-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 20528,
+      "function": "holding",
+      "name": "L3-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24576,
+      "function": "holding",
+      "name": "Total-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 24578,
+      "function": "holding",
+      "name": "T1-total-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 24580,
+      "function": "holding",
+      "name": "T2-total-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 24582,
+      "function": "holding",
+      "name": "L1-total-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 24584,
+      "function": "holding",
+      "name": "L2-total-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 24586,
+      "function": "holding",
+      "name": "L3-total-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/inepro-metering-pro2.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

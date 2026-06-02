@@ -1,0 +1,101 @@
+{
+  "slug": "saj-h1-series-hybrid-solar-inverter",
+  "vendor": "SAJ",
+  "vendorSlug": "saj",
+  "model": "H1 Series Hybrid Solar Inverter",
+  "modelSlug": "h1-series-hybrid-solar-inverter",
+  "name": "SAJ H1 Series Hybrid Solar Inverter",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 16495,
+      "function": "holding",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r",
+      "notes": "BatEnergyPercent"
+    },
+    {
+      "address": 16545,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "SmartMeterTotalGridPowerWatt (undocumented)"
+    },
+    {
+      "address": 16549,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "TotalPVPower"
+    },
+    {
+      "address": 16550,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "TotalBatteryPower"
+    },
+    {
+      "address": 16581,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Total PVEnergy"
+    },
+    {
+      "address": 16597,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Total BatDisEnergy"
+    },
+    {
+      "address": 16637,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Total_FeedInEnergy"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

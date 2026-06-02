@@ -1,0 +1,134 @@
+{
+  "slug": "meltem-meltem-optional-config",
+  "vendor": "Meltem",
+  "vendorSlug": "meltem",
+  "model": "meltem_optional_config",
+  "modelSlug": "meltem-optional-config",
+  "name": "Meltem meltem_optional_config",
+  "equipmentType": "vmc",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 42000,
+      "function": "holding",
+      "name": "2",
+      "label": "Relative humidity starting point",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 42001,
+      "function": "holding",
+      "name": "2",
+      "label": "Min ventilation level for humidity control",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 42002,
+      "function": "holding",
+      "name": "2",
+      "label": "Max ventilation level for humidity control",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 42003,
+      "function": "holding",
+      "name": "2",
+      "label": "CO2 starting point",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 42004,
+      "function": "holding",
+      "name": "2",
+      "label": "Min ventilation level for CO2 control",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 42005,
+      "function": "holding",
+      "name": "2",
+      "label": "Max ventilation level for CO2 control",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 42006,
+      "function": "holding",
+      "name": "2",
+      "label": "unknown",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 42007,
+      "function": "holding",
+      "name": "2",
+      "label": "Ventilation level for external control input",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 42008,
+      "function": "holding",
+      "name": "2",
+      "label": "delay for external control input",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 42009,
+      "function": "holding",
+      "name": "2",
+      "label": "Runon time for external control input",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "r"
+    },
+    {
+      "address": 42010,
+      "function": "holding",
+      "name": "2",
+      "label": "unknown",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

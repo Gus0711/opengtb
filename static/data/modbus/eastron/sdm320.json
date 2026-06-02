@@ -1,0 +1,476 @@
+{
+  "slug": "eastron-sdm320",
+  "vendor": "eastron",
+  "vendorSlug": "eastron",
+  "model": "sdm320",
+  "modelSlug": "sdm320",
+  "name": "eastron sdm320",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Volt-amps",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VoltAmps",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Volt-amps-reactive",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "None",
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Phase-angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "Frequency-of-supply-voltages",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "holding",
+      "name": "Import-wh-since-last-reset",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh/MWh",
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "holding",
+      "name": "Export-wh-since-last-reset",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWH/MWh",
+      "access": "r"
+    },
+    {
+      "address": 342,
+      "function": "holding",
+      "name": "Total-kwh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kwh",
+      "access": "r"
+    },
+    {
+      "address": 529,
+      "function": "holding",
+      "name": "Total-last-1-month-energy,-Total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 533,
+      "function": "holding",
+      "name": "Total-last-1-month-energy,-Rate-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 537,
+      "function": "holding",
+      "name": "Total-last-1-month-energy,-Rate-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 545,
+      "function": "holding",
+      "name": "Total-last-2-month-energy,-Total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 549,
+      "function": "holding",
+      "name": "Total-last-2-month-energy,-Rate-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 553,
+      "function": "holding",
+      "name": "Total-last-2-month-energy,-Rate-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 561,
+      "function": "holding",
+      "name": "Total-last-3-month-energy,-Total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 565,
+      "function": "holding",
+      "name": "Total-last-3-month-energy,-Rate-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 569,
+      "function": "holding",
+      "name": "Total-last-3-month-energy,-Rate-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 577,
+      "function": "holding",
+      "name": "Total-last-4-month-energy,-Total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 581,
+      "function": "holding",
+      "name": "Total-last-4-month-energy,-Rate-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 585,
+      "function": "holding",
+      "name": "Total-last-4-month-energy,-Rate-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 593,
+      "function": "holding",
+      "name": "Total-last-5-month-energy,-Total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 597,
+      "function": "holding",
+      "name": "Total-last-5-month-energy,-Rate-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 601,
+      "function": "holding",
+      "name": "Total-last-5-month-energy,-Rate-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 609,
+      "function": "holding",
+      "name": "Total-last-6-month-energy,-Total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 613,
+      "function": "holding",
+      "name": "Total-last-6-month-energy,-Rate-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 617,
+      "function": "holding",
+      "name": "Total-last-6-month-energy,-Rate-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 625,
+      "function": "holding",
+      "name": "Total-last-7-month-energy,-Total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 629,
+      "function": "holding",
+      "name": "Total-last-7-month-energy,-Rate-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 633,
+      "function": "holding",
+      "name": "Total-last-7-month-energy,-Rate-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 641,
+      "function": "holding",
+      "name": "Total-last-8-month-energy,-Total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 645,
+      "function": "holding",
+      "name": "Total-last-8-month-energy,-Rate-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 649,
+      "function": "holding",
+      "name": "Total-last-8-month-energy,-Rate-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 657,
+      "function": "holding",
+      "name": "Total-last-9-month-energy,-Total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 661,
+      "function": "holding",
+      "name": "Total-last-9-month-energy,-Rate-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 665,
+      "function": "holding",
+      "name": "Total-last-9-month-energy,-Rate-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 673,
+      "function": "holding",
+      "name": "Total-last-10-month-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 689,
+      "function": "holding",
+      "name": "Total-last-11-month-energy,-Total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 693,
+      "function": "holding",
+      "name": "Total-last-11-month-energy,-Rate-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 697,
+      "function": "holding",
+      "name": "Total-last-11-month-energy,-Rate-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 705,
+      "function": "holding",
+      "name": "Total-last-12-month-energy,-Total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 709,
+      "function": "holding",
+      "name": "Total-last-12-month-energy,-Rate-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 713,
+      "function": "holding",
+      "name": "Total-last-12-month-energy,-Rate-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 2000,
+      "function": "holding",
+      "name": "Import-energy-rate-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2002,
+      "function": "holding",
+      "name": "Import-energy-rate-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2004,
+      "function": "holding",
+      "name": "Import-energy-rate-3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2006,
+      "function": "holding",
+      "name": "Import-energy-rate-4",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2256,
+      "function": "holding",
+      "name": "Export-energy-rate-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2258,
+      "function": "holding",
+      "name": "Export-energy-rate-2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/eastron-sdm320.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

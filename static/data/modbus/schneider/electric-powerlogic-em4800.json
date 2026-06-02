@@ -1,0 +1,426 @@
+{
+  "slug": "schneider-electric-powerlogic-em4800",
+  "vendor": "schneider",
+  "vendorSlug": "schneider",
+  "model": "electric-powerlogic-em4800",
+  "modelSlug": "electric-powerlogic-em4800",
+  "name": "schneider electric-powerlogic-em4800",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Meter-2-WH-delivered",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Meter-3-WH-delivered",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Meter-4-WH-delivered",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Meter-5-WH-delivered",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Meter-6-WH-delivered",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Meter-7-WH-delivered",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Meter-8-WH-delivered",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "Meter-1-wh-received",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "Meter-2-wh-received",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "Meter-3-wh-received",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 106,
+      "function": "holding",
+      "name": "Meter-4-wh-received",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 108,
+      "function": "holding",
+      "name": "Meter-5-wh-received",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 110,
+      "function": "holding",
+      "name": "Meter-6-wh-received",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 112,
+      "function": "holding",
+      "name": "Meter-7-wh-received",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 114,
+      "function": "holding",
+      "name": "Meter-8-wh-received",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 200,
+      "function": "holding",
+      "name": "Meter-1-VARh-delivered",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 202,
+      "function": "holding",
+      "name": "Meter-2-VARh-delivered",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 204,
+      "function": "holding",
+      "name": "Meter-3-VARh-delivered",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 206,
+      "function": "holding",
+      "name": "Meter-4-VARh-delivered",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 208,
+      "function": "holding",
+      "name": "Meter-5-VARh-delivered",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 210,
+      "function": "holding",
+      "name": "Meter-6-VARh-delivered",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 212,
+      "function": "holding",
+      "name": "Meter-7-VARh-delivered",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 214,
+      "function": "holding",
+      "name": "Meter-8-VARh-delivered",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 300,
+      "function": "holding",
+      "name": "Meter-1-VARh-received",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 302,
+      "function": "holding",
+      "name": "Meter-2-VARh-received",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 304,
+      "function": "holding",
+      "name": "Meter-3-VARh-received",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 306,
+      "function": "holding",
+      "name": "Meter-4-VARh-received",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 308,
+      "function": "holding",
+      "name": "Meter-5-VARh-received",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 310,
+      "function": "holding",
+      "name": "Meter-6-VARh-received",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 312,
+      "function": "holding",
+      "name": "Meter-7-VARh-received",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 314,
+      "function": "holding",
+      "name": "Meter-8-VARh-received",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 400,
+      "function": "holding",
+      "name": "Meter-1-VAh",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 402,
+      "function": "holding",
+      "name": "Meter-2-VAh",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 404,
+      "function": "holding",
+      "name": "Meter-3-VAh",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 406,
+      "function": "holding",
+      "name": "Meter-4-VAh",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 408,
+      "function": "holding",
+      "name": "Meter-5-VAh",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 410,
+      "function": "holding",
+      "name": "Meter-6-VAh",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 412,
+      "function": "holding",
+      "name": "Meter-7-VAh",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 414,
+      "function": "holding",
+      "name": "Meter-8-VAh",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 600,
+      "function": "holding",
+      "name": "Meter-1-watts",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 602,
+      "function": "holding",
+      "name": "Meter-2-watts",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 604,
+      "function": "holding",
+      "name": "Meter-3-watts",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 606,
+      "function": "holding",
+      "name": "Meter-4-watts",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 608,
+      "function": "holding",
+      "name": "Meter-5-watts",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 610,
+      "function": "holding",
+      "name": "Meter-6-watts",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 612,
+      "function": "holding",
+      "name": "Meter-7-watts",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 614,
+      "function": "holding",
+      "name": "Meter-8-watts",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 700,
+      "function": "holding",
+      "name": "Meter-1-VAR",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 702,
+      "function": "holding",
+      "name": "Meter-2-VAR",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 704,
+      "function": "holding",
+      "name": "Meter-3-VAR",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/schneider-electric-powerlogic-em4800.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

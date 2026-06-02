@@ -1,0 +1,426 @@
+{
+  "slug": "eaton-power-xpert-meter-pxm-1000",
+  "vendor": "eaton",
+  "vendorSlug": "eaton",
+  "model": "power-xpert-meter-pxm-1000",
+  "modelSlug": "power-xpert-meter-pxm-1000",
+  "name": "eaton power-xpert-meter-pxm-1000",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 12289,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12291,
+      "function": "holding",
+      "name": "Phase-voltage-V1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12293,
+      "function": "holding",
+      "name": "Phase-voltage-V2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12295,
+      "function": "holding",
+      "name": "Phase-voltage-V3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12297,
+      "function": "holding",
+      "name": "Average-voltage-vavg",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12299,
+      "function": "holding",
+      "name": "Line-voltage-V12",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12301,
+      "function": "holding",
+      "name": "Line-voltage-V23",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12303,
+      "function": "holding",
+      "name": "Line-voltage-V31",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12305,
+      "function": "holding",
+      "name": "Average-line-voltage-vlavg",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12307,
+      "function": "holding",
+      "name": "Current-I1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12309,
+      "function": "holding",
+      "name": "Current-I2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12311,
+      "function": "holding",
+      "name": "Current-I3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12313,
+      "function": "holding",
+      "name": "Average-current-iavg",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12315,
+      "function": "holding",
+      "name": "Neutral-current-in",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12317,
+      "function": "holding",
+      "name": "Phase-A-power-pa",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12319,
+      "function": "holding",
+      "name": "Phase-B-power-pb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12321,
+      "function": "holding",
+      "name": "Phase-C-power-pc",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12323,
+      "function": "holding",
+      "name": "System-power-psum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12325,
+      "function": "holding",
+      "name": "Phase-A-reactive-power-qa",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12327,
+      "function": "holding",
+      "name": "Phase-B-reactive-power-qb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12329,
+      "function": "holding",
+      "name": "Phase-C-reactive-power-qc",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12331,
+      "function": "holding",
+      "name": "System-reactive-power-qsum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12333,
+      "function": "holding",
+      "name": "Phase-A-apparent-power-sa",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12335,
+      "function": "holding",
+      "name": "Phase-B-apparent-power-sb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12337,
+      "function": "holding",
+      "name": "Phase-C-apparent-power-sc",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12339,
+      "function": "holding",
+      "name": "System-S-apparent-power-ssum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12341,
+      "function": "holding",
+      "name": "Phase-A-power-factor-PFa",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12343,
+      "function": "holding",
+      "name": "Phase-B-power-factor-PFb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12345,
+      "function": "holding",
+      "name": "Phase-C-power-factor-PFc",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12347,
+      "function": "holding",
+      "name": "System-power-factor-PFsum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16385,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16387,
+      "function": "holding",
+      "name": "Phase-voltage-V1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16389,
+      "function": "holding",
+      "name": "Phase-voltage-V2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16391,
+      "function": "holding",
+      "name": "Phase-voltage-V3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16393,
+      "function": "holding",
+      "name": "Average-voltage-vavg",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16395,
+      "function": "holding",
+      "name": "Line-voltage-V12",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16397,
+      "function": "holding",
+      "name": "Line-voltage-V23",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16399,
+      "function": "holding",
+      "name": "Line-voltage-V31",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16401,
+      "function": "holding",
+      "name": "Average-line-voltage-vlavg",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16403,
+      "function": "holding",
+      "name": "Current-I1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16405,
+      "function": "holding",
+      "name": "Current-I2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16407,
+      "function": "holding",
+      "name": "Current-I3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16409,
+      "function": "holding",
+      "name": "Average-current-iavg",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16411,
+      "function": "holding",
+      "name": "Neutral-current-in",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16413,
+      "function": "holding",
+      "name": "Phase-A-power-pa",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16415,
+      "function": "holding",
+      "name": "Phase-B-power-pb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16417,
+      "function": "holding",
+      "name": "Phase-C-power-pc",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16419,
+      "function": "holding",
+      "name": "System-power-psum",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16421,
+      "function": "holding",
+      "name": "Phase-A-reactive-power-qa",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16423,
+      "function": "holding",
+      "name": "Phase-B-reactive-power-qb",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/eaton-power-xpert-meter-pxm-1000.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

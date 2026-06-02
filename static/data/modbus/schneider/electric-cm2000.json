@@ -1,0 +1,467 @@
+{
+  "slug": "schneider-electric-cm2000",
+  "vendor": "schneider",
+  "vendorSlug": "schneider",
+  "model": "electric-cm2000",
+  "modelSlug": "electric-cm2000",
+  "name": "schneider electric-cm2000",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1000,
+      "function": "holding",
+      "name": "Update-interval",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "second",
+      "access": "r"
+    },
+    {
+      "address": 1001,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hertz",
+      "access": "r"
+    },
+    {
+      "address": 1002,
+      "function": "holding",
+      "name": "Temperature-inside-CM-enclosure",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Degrees C",
+      "access": "r"
+    },
+    {
+      "address": 1003,
+      "function": "holding",
+      "name": "Current,-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 1004,
+      "function": "holding",
+      "name": "Current,-phase-B",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 1005,
+      "function": "holding",
+      "name": "Current,-phase-C",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 1006,
+      "function": "holding",
+      "name": "Current,-neutral",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 1007,
+      "function": "holding",
+      "name": "Current,-ground",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 1008,
+      "function": "holding",
+      "name": "Current,-3-phase-average",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 1009,
+      "function": "holding",
+      "name": "Current,-apparent-rms",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 1010,
+      "function": "holding",
+      "name": "Current-unbalance,-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Percent",
+      "access": "r"
+    },
+    {
+      "address": 1011,
+      "function": "holding",
+      "name": "Current-unbalance,-phase-B",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Percent",
+      "access": "r"
+    },
+    {
+      "address": 1012,
+      "function": "holding",
+      "name": "Current-unbalance,-phase-C",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Percent",
+      "access": "r"
+    },
+    {
+      "address": 1013,
+      "function": "holding",
+      "name": "Current-unbalance,-worst",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Percent",
+      "access": "r"
+    },
+    {
+      "address": 1014,
+      "function": "holding",
+      "name": "Voltage,-phase-A-to-B",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 1015,
+      "function": "holding",
+      "name": "Voltage,-phase-B-to-C",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 1016,
+      "function": "holding",
+      "name": "Voltage,-phase-C-to-A",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 1017,
+      "function": "holding",
+      "name": "Voltage-L-L,-3-phase-average",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 1018,
+      "function": "holding",
+      "name": "Voltage,-phase-A-to-neutral",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 1019,
+      "function": "holding",
+      "name": "Voltage,-phase-B-to-neutral",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 1020,
+      "function": "holding",
+      "name": "Voltage,-phase-C-to-neutral",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 1021,
+      "function": "holding",
+      "name": "Voltage-L-N,-3-phase-average",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 1022,
+      "function": "holding",
+      "name": "Voltage-unbalance,-phase-A-B",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Percent",
+      "access": "r"
+    },
+    {
+      "address": 1023,
+      "function": "holding",
+      "name": "Voltage-unbalance,-phase-B-C",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Percent",
+      "access": "r"
+    },
+    {
+      "address": 1024,
+      "function": "holding",
+      "name": "Voltage-unbalance,-phase-C-A",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Percent",
+      "access": "r"
+    },
+    {
+      "address": 1025,
+      "function": "holding",
+      "name": "Voltage-unbalance,-L-L-worst",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Percent",
+      "access": "r"
+    },
+    {
+      "address": 1026,
+      "function": "holding",
+      "name": "Voltage-unbalance,-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Percent",
+      "access": "r"
+    },
+    {
+      "address": 1027,
+      "function": "holding",
+      "name": "Voltage-unbalance,-phase-B",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Percent",
+      "access": "r"
+    },
+    {
+      "address": 1028,
+      "function": "holding",
+      "name": "Voltage-unbalance,-phase-C",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Percent",
+      "access": "r"
+    },
+    {
+      "address": 1029,
+      "function": "holding",
+      "name": "Voltage-unbalance,-L-N-worst",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Percent",
+      "access": "r"
+    },
+    {
+      "address": 1031,
+      "function": "holding",
+      "name": "True-power-factor,-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1032,
+      "function": "holding",
+      "name": "True-power-factor,-phase-B",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1033,
+      "function": "holding",
+      "name": "True-power-factor,-phase-C",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1034,
+      "function": "holding",
+      "name": "True-power-factor,-3-phase-total",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1035,
+      "function": "holding",
+      "name": "Displacement-power-factor,-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1036,
+      "function": "holding",
+      "name": "Displacement-power-factor,-phase-B",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1037,
+      "function": "holding",
+      "name": "Displacement-power-factor,-phase-C",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1038,
+      "function": "holding",
+      "name": "Displacement-power-factor,-3-phase-total",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1039,
+      "function": "holding",
+      "name": "Real-power,-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1040,
+      "function": "holding",
+      "name": "Real-power,-phase-B",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1041,
+      "function": "holding",
+      "name": "Real-power,-phase-C",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1042,
+      "function": "holding",
+      "name": "Real-power,-3-phase-total",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1043,
+      "function": "holding",
+      "name": "Reactive-power,-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVAr",
+      "access": "r"
+    },
+    {
+      "address": 1044,
+      "function": "holding",
+      "name": "Reactive-power,-phase-B",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVAr",
+      "access": "r"
+    },
+    {
+      "address": 1045,
+      "function": "holding",
+      "name": "Reactive-power,-phase-C",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVAr",
+      "access": "r"
+    },
+    {
+      "address": 1046,
+      "function": "holding",
+      "name": "Reactive-power,-3-phase-total",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVAr",
+      "access": "r"
+    },
+    {
+      "address": 1047,
+      "function": "holding",
+      "name": "Apparent-power,-phase-A",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1048,
+      "function": "holding",
+      "name": "Apparent-power,-phase-B",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1049,
+      "function": "holding",
+      "name": "Apparent-power,-phase-C",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1050,
+      "function": "holding",
+      "name": "Apparent-power,-3-phase-total",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/schneider-electric-cm2000.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont"
+    ]
+  }
+}

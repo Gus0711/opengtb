@@ -1,0 +1,760 @@
+{
+  "slug": "lambda-wp-lambda-wp",
+  "vendor": "Lambda-WP",
+  "vendorSlug": "lambda-wp",
+  "model": "Lambda-WP",
+  "modelSlug": "lambda-wp",
+  "name": "Lambda-WP",
+  "equipmentType": "pac",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 40001,
+      "function": "holding",
+      "name": "Ambient_Error",
+      "label": "General Ambient error number",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40002,
+      "function": "holding",
+      "name": "Ambient_State",
+      "label": "General Ambient Operating State",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40003,
+      "function": "holding",
+      "name": "Ambient_Temp",
+      "label": "General Ambient actual ambient temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 40004,
+      "function": "holding",
+      "name": "Ambient_1h_Temp",
+      "label": "General Ambient average ambient temp. 1h ",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 40005,
+      "function": "holding",
+      "name": "Ambient_Calculated_Temp",
+      "label": "General Ambient calculated ambient temp. ",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 40101,
+      "function": "holding",
+      "name": "E_Manager_Error",
+      "label": "E-Manager error number",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40102,
+      "function": "holding",
+      "name": "E_Manager_State",
+      "label": "E-Manager Operating state ",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40103,
+      "function": "holding",
+      "name": "E-Manager_ExcessPower",
+      "label": "E-Manager actual PV excess power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "rw"
+    },
+    {
+      "address": 40104,
+      "function": "holding",
+      "name": "E_Manager_Actual",
+      "label": "E-Manager actual power consumption of all configurated heat pumps",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40105,
+      "function": "holding",
+      "name": "E_Manager_Setpoint",
+      "label": "E-Manager power consumtion setpoint as a sum for for all heat pumps",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 41001,
+      "function": "holding",
+      "name": "HP1_Error_State",
+      "label": "Heatpump 1 error state",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 41002,
+      "function": "holding",
+      "name": "HP1_Error",
+      "label": "Heatpump 1 error number",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 41003,
+      "function": "holding",
+      "name": "HP1_State",
+      "label": "Heatpump 1 state",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 41004,
+      "function": "holding",
+      "name": "HP1_OperatingState",
+      "label": "Heatpump 1 operating state",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 41005,
+      "function": "holding",
+      "name": "HP1_T_Flow",
+      "label": "Heatpump 1 flow line temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 41006,
+      "function": "holding",
+      "name": "HP1_T_Return",
+      "label": "Heatpump 1 return line temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 41007,
+      "function": "holding",
+      "name": "HP1_Vol_Sink",
+      "label": "Heatpump 1 volume flow heat sink",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "l/h",
+      "access": "r"
+    },
+    {
+      "address": 41008,
+      "function": "holding",
+      "name": "HP1_T_EQin",
+      "label": "Heatpump 1 energy source inlet temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 41009,
+      "function": "holding",
+      "name": "HP1_T_EQout",
+      "label": "Heatpump 1 energy sorurce outlet temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 41010,
+      "function": "holding",
+      "name": "HP1_Vol_Source",
+      "label": "Heatpump 1 volume flow energy source",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "l/h",
+      "access": "r"
+    },
+    {
+      "address": 41011,
+      "function": "holding",
+      "name": "HP1_CompressorRating",
+      "label": "Heatpump 1 compressor unit rating",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 41012,
+      "function": "holding",
+      "name": "HP1_QpHeating",
+      "label": "Heatpump 1 actual heating capacity",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 41013,
+      "function": "holding",
+      "name": "HP1_FI_PowerConsumption",
+      "label": "Heatpump 1 frequency inverter actual power consumption",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 41014,
+      "function": "holding",
+      "name": "HP1_COP",
+      "label": "Heatpump 1 coefficient of performance",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.01,
+      "access": "r"
+    },
+    {
+      "address": 41015,
+      "function": "holding",
+      "name": "HP1_ReleasePassword",
+      "label": "Heatpump 1 password register to release modbus request registers",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 41016,
+      "function": "holding",
+      "name": "HP1_RequestType",
+      "label": "Heatpump 1 request type",
+      "dataType": "int16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 41017,
+      "function": "holding",
+      "name": "HP1_RequestT_Flow",
+      "label": "Heatpump 1 requested flow line temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 41018,
+      "function": "holding",
+      "name": "HP1_RequestT_Return",
+      "label": "Heatpump 1 requested return line temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 41019,
+      "function": "holding",
+      "name": "HP1_RequestT_Diff",
+      "label": "Heatpump 1 requested temperature difference between flow line and return line",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "K",
+      "access": "rw"
+    },
+    {
+      "address": 41020,
+      "function": "holding",
+      "name": "HP1_RelaisState",
+      "label": "Heatpump 1 relais state for 2nd heating stage",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 41021,
+      "function": "holding",
+      "name": "HP1_VdA_E",
+      "label": "Heatpump 1 accumulated electrical energy consumption of compressor unit since last statistic reset",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.001,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 41023,
+      "function": "holding",
+      "name": "HP1_VdA_Q",
+      "label": "Heatpump 1 accumulated thermal energy output of compressor unit since last statistic reset",
+      "dataType": "int32",
+      "size": 2,
+      "scale": 0.001,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 41051,
+      "function": "holding",
+      "name": "HP1_SetErrorQuitt",
+      "label": "Heatpump 1 quit all active heat pump errors ",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 42002,
+      "function": "holding",
+      "name": "Boiler1_OperatingState",
+      "label": "Boiler 1 operating state",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 42003,
+      "function": "holding",
+      "name": "Boiler1_ActualHighTemp",
+      "label": "Boiler 1 actual temperature boiler high sensor",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 42004,
+      "function": "holding",
+      "name": "Boiler1_ActualLowTemp",
+      "label": "Boiler 1 actual temperature boiler low sensor",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 42051,
+      "function": "holding",
+      "name": "Boiler1_MaximumTemp",
+      "label": "Boiler 1 setting for maximum boiler temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 43001,
+      "function": "holding",
+      "name": "Buffer1_Error",
+      "label": "Buffer 1 error number",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 43002,
+      "function": "holding",
+      "name": "Buffer1_OperatingState",
+      "label": "Buffer 1 operating state",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 43003,
+      "function": "holding",
+      "name": "Buffer1_ActualHighTemp",
+      "label": "Buffer 1 actual temperature buffer high sensor",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 43004,
+      "function": "holding",
+      "name": "Buffer1_ActualLowTemp",
+      "label": "Buffer 1 actual temperature buffer low sensor",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 43051,
+      "function": "holding",
+      "name": "Buffer1_MaximumTemp",
+      "label": "Buffer 1 setting for maximum buffer temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "access": "rw"
+    },
+    {
+      "address": 45001,
+      "function": "holding",
+      "name": "Heating1_Error",
+      "label": "Heating 1 error number",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 45002,
+      "function": "holding",
+      "name": "Heating1_OperatingState",
+      "label": "Heating 1 operating state",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 45003,
+      "function": "holding",
+      "name": "Heating1_T_Flow",
+      "label": "Heating 1 actual temperature flow line sensor",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 45004,
+      "function": "holding",
+      "name": "Heating1_T_Return",
+      "label": "Heating 1 actual temperature return line sensor",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 45005,
+      "function": "holding",
+      "name": "Heating1_RoomTemp",
+      "label": "Heating 1 actual temperature room device sensor",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 45006,
+      "function": "holding",
+      "name": "Heating1_RequestT_Flow",
+      "label": "Heating 1 setpoint temperature flow line",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 45007,
+      "function": "holding",
+      "name": "Heating1_OperatingMode",
+      "label": "Heating 1 operating mode",
+      "dataType": "int16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 45051,
+      "function": "holding",
+      "name": "Heating1_OffsetFlowLineTemp",
+      "label": "Heating 1 setting for flow line temperature setpoint offset",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "K",
+      "access": "rw"
+    },
+    {
+      "address": 45052,
+      "function": "holding",
+      "name": "Heating1_RoomHeatingTemp",
+      "label": "Heating 1 setting for heating mode room setpoint temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 45053,
+      "function": "holding",
+      "name": "Heating1_RoomCoolingTemp",
+      "label": "Heating 1 setting for cooling mode room setpoint temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 45101,
+      "function": "holding",
+      "name": "Heating2_Error",
+      "label": "Heating 2 error number",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 45102,
+      "function": "holding",
+      "name": "Heating2_OperatingState",
+      "label": "Heating 2 operating state",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 45103,
+      "function": "holding",
+      "name": "Heating2_T_Flow",
+      "label": "Heating 2 actual temperature flow line sensor",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 45104,
+      "function": "holding",
+      "name": "Heating2_T_Return",
+      "label": "Heating 2 actual temperature return line sensor",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 45105,
+      "function": "holding",
+      "name": "Heating2_RoomTemp",
+      "label": "Heating 2 actual temperature room device sensor",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 45106,
+      "function": "holding",
+      "name": "Heating2_RequestT_Flow",
+      "label": "Heating 2 setpoint temperature flow line",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 45107,
+      "function": "holding",
+      "name": "Heating2_OperatingMode",
+      "label": "Heating 2 operating mode",
+      "dataType": "int16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 45151,
+      "function": "holding",
+      "name": "Heating2_OffsetFlowLineTemp",
+      "label": "Heating 2 setting for flow line temperature setpoint offset",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "K",
+      "access": "rw"
+    },
+    {
+      "address": 45152,
+      "function": "holding",
+      "name": "Heating2_RoomHeatingTemp",
+      "label": "Heating 2 setting for heating mode room setpoint temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 45153,
+      "function": "holding",
+      "name": "Heating2_RoomCoolingTemp",
+      "label": "Heating 2 setting for cooling mode room setpoint temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 45201,
+      "function": "holding",
+      "name": "Heating3_Error",
+      "label": "Heating 3 error number",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 45202,
+      "function": "holding",
+      "name": "Heating3_OperatingState",
+      "label": "Heating 3 operating state",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 45203,
+      "function": "holding",
+      "name": "Heating3_T_Flow",
+      "label": "Heating 3 actual temperature flow line sensor",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 45204,
+      "function": "holding",
+      "name": "Heating3_T_Return",
+      "label": "Heating 3 actual temperature return line sensor",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 45205,
+      "function": "holding",
+      "name": "Heating3_RoomTemp",
+      "label": "Heating 3 actual temperature room device sensor",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 45206,
+      "function": "holding",
+      "name": "Heating3_RequestT_Flow",
+      "label": "Heating 3 setpoint temperature flow line",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 45207,
+      "function": "holding",
+      "name": "Heating3_OperatingMode",
+      "label": "Heating 3 operating mode",
+      "dataType": "int16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 45251,
+      "function": "holding",
+      "name": "Heating3_OffsetFlowLineTemp",
+      "label": "Heating 3 setting for flow line temperature setpoint offset",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "K",
+      "access": "rw"
+    },
+    {
+      "address": 45252,
+      "function": "holding",
+      "name": "Heating3_RoomHeatingTemp",
+      "label": "Heating 3 setting for heating mode room setpoint temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 45253,
+      "function": "holding",
+      "name": "Heating3_RoomCoolingTemp",
+      "label": "Heating 3 setting for cooling mode room setpoint temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

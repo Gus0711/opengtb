@@ -1,0 +1,178 @@
+{
+  "slug": "solax-hybrid-x1-x3-g3-g4",
+  "vendor": "Solax",
+  "vendorSlug": "solax",
+  "model": "Hybrid X1/X3 G3/G4",
+  "modelSlug": "hybrid-x1-x3-g3-g4",
+  "name": "Solax Hybrid X1/X3 G3/G4",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 10,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "0x000A Powerdc1"
+    },
+    {
+      "address": 11,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "0x000B Powerdc2"
+    },
+    {
+      "address": 70,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "0x0046 feedin_power(meter)"
+    },
+    {
+      "address": 74,
+      "function": "input",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "0x004A consum_energy_total(meter)"
+    },
+    {
+      "address": 148,
+      "function": "input",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "0x0094 SolarEnergyTotal"
+    },
+    {
+      "address": 202,
+      "function": "input",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r",
+      "notes": "0x00CA GridVoltage_R_Meter"
+    },
+    {
+      "address": 203,
+      "function": "input",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r",
+      "notes": "0x00CB GridVoltage_S_Meter"
+    },
+    {
+      "address": 204,
+      "function": "input",
+      "name": "voltages",
+      "label": "Tension",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r",
+      "notes": "0x00CC GridVoltage_T_Meter"
+    },
+    {
+      "address": 206,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "0x00CE GridCurrent_R_Meter"
+    },
+    {
+      "address": 207,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "0x00CF GridCurrent_S_Meter"
+    },
+    {
+      "address": 208,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "0x00D0 GridCurrent_T_Meter"
+    },
+    {
+      "address": 292,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "0x0124 Powerdc3"
+    },
+    {
+      "address": 297,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "0x0129 Batpower_Charge2"
+    },
+    {
+      "address": 301,
+      "function": "input",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r",
+      "notes": "0x012D Battery 2 Capacity"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

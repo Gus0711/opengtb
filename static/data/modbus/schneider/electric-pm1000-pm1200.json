@@ -1,0 +1,426 @@
+{
+  "slug": "schneider-electric-pm1000-pm1200",
+  "vendor": "schneider",
+  "vendorSlug": "schneider",
+  "model": "electric-pm1000-pm1200",
+  "modelSlug": "electric-pm1000-pm1200",
+  "name": "schneider electric-pm1000-pm1200",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 3861,
+      "function": "holding",
+      "name": "Voltage-THD,-phase-1-(%V1)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3863,
+      "function": "holding",
+      "name": "Voltage-THD,-phase-2-(%V2)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3865,
+      "function": "holding",
+      "name": "Voltage-THD,-phase-3-(%V3)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3867,
+      "function": "holding",
+      "name": "Current-THD,-phase-1-(%A1)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3869,
+      "function": "holding",
+      "name": "Current-THD,-phase-2-(%A2)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3871,
+      "function": "holding",
+      "name": "Current-THD,-phase-3-(%A3)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3901,
+      "function": "holding",
+      "name": "Apparent-power,-total-(VA)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3903,
+      "function": "holding",
+      "name": "Active-power,-total-(W)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3905,
+      "function": "holding",
+      "name": "Reactive-power,-total-(VAR)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3907,
+      "function": "holding",
+      "name": "Power-factor-average-(PF)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3909,
+      "function": "holding",
+      "name": "Line-to-line-average-voltage-(VLL)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3911,
+      "function": "holding",
+      "name": "Line-to-neutral-voltage-(VLN)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3913,
+      "function": "holding",
+      "name": "Current-average-(A)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3915,
+      "function": "holding",
+      "name": "Frequency,-hz-(F)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3917,
+      "function": "holding",
+      "name": "Apparent-power,-phase-1-(VA1)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3919,
+      "function": "holding",
+      "name": "Active-power,-phase-1-(W1)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3921,
+      "function": "holding",
+      "name": "Reactive-power,-phase-1-(VAR1)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3923,
+      "function": "holding",
+      "name": "Power-factor,-phase-1-(PF1)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3925,
+      "function": "holding",
+      "name": "Voltage-phase-1-to-phase-2-(V12)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3927,
+      "function": "holding",
+      "name": "Voltage-phase-1-to-neutral-(V1)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3929,
+      "function": "holding",
+      "name": "Current,-phase-1-(A1)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3931,
+      "function": "holding",
+      "name": "Apparent-power,-phase-2-(VA2)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3933,
+      "function": "holding",
+      "name": "Active-power,-phase-2-(W2)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3935,
+      "function": "holding",
+      "name": "Reactive-power,-phase-2-(VAR2)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3937,
+      "function": "holding",
+      "name": "Power-factor,-phase-2-(PF2)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3939,
+      "function": "holding",
+      "name": "Voltage-phase-2-to-phase-3-(V23)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3941,
+      "function": "holding",
+      "name": "Voltage-phase-2-to-neutral-(V2)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3943,
+      "function": "holding",
+      "name": "Current,-phase-2-(A2)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3945,
+      "function": "holding",
+      "name": "Apparent-power,-phase-3-(VA3)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3947,
+      "function": "holding",
+      "name": "Active-power,-phase-3-(W3)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3949,
+      "function": "holding",
+      "name": "Reactive-power,-phase3-(VAR3)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3951,
+      "function": "holding",
+      "name": "Power-factor,-phase-3-(PF3)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3953,
+      "function": "holding",
+      "name": "Voltage-phase-3-to-phase-1-(V31)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3955,
+      "function": "holding",
+      "name": "Voltage-phase-3-to-neutral-(V3)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3957,
+      "function": "holding",
+      "name": "Current,-phase-3-(A3)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3959,
+      "function": "holding",
+      "name": "Forward-apparent-energy-(FwdVAh)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3961,
+      "function": "holding",
+      "name": "Forward-active-energy-(FwdWh)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3963,
+      "function": "holding",
+      "name": "Forward-reactive-inductive-energy-(FwdVARh)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3965,
+      "function": "holding",
+      "name": "Forward-reactive-capacitive-energy-(FwdVARh)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3967,
+      "function": "holding",
+      "name": "Reverse-apparent-energy-(RevVAh)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3969,
+      "function": "holding",
+      "name": "Reverse-active-energy-(RevWh)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3971,
+      "function": "holding",
+      "name": "Reverse-reactive-inductive-energy-(RevVARh)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3973,
+      "function": "holding",
+      "name": "Reverse-reactive-capacitive-energy-(RevVARh)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3975,
+      "function": "holding",
+      "name": "Present-demand-(Present-demand)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3977,
+      "function": "holding",
+      "name": "Rising-demand-(Rising-demand)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3979,
+      "function": "holding",
+      "name": "Maximum-demand-(Max-MD)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3993,
+      "function": "holding",
+      "name": "On-hours-(On-hrs)",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3995,
+      "function": "holding",
+      "name": "Forward-run-seconds-(FwdRun-secs)",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3997,
+      "function": "holding",
+      "name": "Reverse-run-seconds-(RevRun-secs)",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3999,
+      "function": "holding",
+      "name": "Number-of-power-interruptions-(Intr)",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/schneider-electric-pm1000-pm1200.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "slug": "alpha-ess-storion-smile",
+  "vendor": "Alpha ESS",
+  "vendorSlug": "alpha-ess",
+  "model": "Storion SMILE",
+  "modelSlug": "storion-smile",
+  "name": "Alpha ESS Storion SMILE",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "0x12 Total energy consumed from grid (Grid)"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "0x17 Current of A phase"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "0x18 Current of B phase"
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "0x19 Current of C phase"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "0x21 Total Active power (Grid Meter)"
+    },
+    {
+      "address": 161,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "0xA1 Total Active power (PV Meter)"
+    },
+    {
+      "address": 258,
+      "function": "holding",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r",
+      "notes": "0x102 Battery SOC"
+    },
+    {
+      "address": 290,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "0x122 Battery discharge energy"
+    },
+    {
+      "address": 294,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "0x126 Battery Power"
+    },
+    {
+      "address": 1055,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "0x41f PV1 power"
+    },
+    {
+      "address": 1059,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "0x423 PV2 power"
+    },
+    {
+      "address": 1063,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "0x427 PV3 power"
+    },
+    {
+      "address": 1067,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "0x42b PV4 power"
+    },
+    {
+      "address": 1071,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "0x42f PV5 power"
+    },
+    {
+      "address": 1075,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "0x433 PV6 power"
+    },
+    {
+      "address": 1086,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "0x43E Inverter Total PV Energy"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

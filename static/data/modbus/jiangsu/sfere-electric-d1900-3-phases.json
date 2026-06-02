@@ -1,0 +1,466 @@
+{
+  "slug": "jiangsu-sfere-electric-d1900-3-phases",
+  "vendor": "jiangsu",
+  "vendorSlug": "jiangsu",
+  "model": "sfere-electric-d1900-3-phases",
+  "modelSlug": "sfere-electric-d1900-3-phases",
+  "name": "jiangsu sfere-electric-d1900-3-phases",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 290,
+      "function": "holding",
+      "name": "Active-energy-of-this-month-[total/tip/peak/level/valley",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 300,
+      "function": "holding",
+      "name": "Active-energy-of-last-month-[total/tip/peak/level/valley",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 310,
+      "function": "holding",
+      "name": "Active-energy-of-the-month-before-last-[total/tip/peak/level/valley",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 512,
+      "function": "holding",
+      "name": "Phase-A-voltage",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 513,
+      "function": "holding",
+      "name": "Phase-B-voltage",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 514,
+      "function": "holding",
+      "name": "Phase-C-voltage",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 515,
+      "function": "holding",
+      "name": "Ab-line-voltage",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 516,
+      "function": "holding",
+      "name": "Bc-line-voltage",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 517,
+      "function": "holding",
+      "name": "Ca-line-voltage",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 518,
+      "function": "holding",
+      "name": "Phase-A-current",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 519,
+      "function": "holding",
+      "name": "Phase-B-current",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 520,
+      "function": "holding",
+      "name": "Phase-C-current",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 521,
+      "function": "holding",
+      "name": "Phase-A-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 522,
+      "function": "holding",
+      "name": "Phase-B-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 523,
+      "function": "holding",
+      "name": "Phase-C-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 524,
+      "function": "holding",
+      "name": "Total-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 525,
+      "function": "holding",
+      "name": "Phase-A-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 526,
+      "function": "holding",
+      "name": "Phase-B-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 527,
+      "function": "holding",
+      "name": "Phase-C-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 528,
+      "function": "holding",
+      "name": "Total-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 529,
+      "function": "holding",
+      "name": "Phase-A-apparent-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 530,
+      "function": "holding",
+      "name": "Phase-B-apparent-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 531,
+      "function": "holding",
+      "name": "Phase-C-apparent-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 532,
+      "function": "holding",
+      "name": "Total-apparent-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 533,
+      "function": "holding",
+      "name": "Phase-A-power-factor",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 534,
+      "function": "holding",
+      "name": "Phase-B-power-factor",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 535,
+      "function": "holding",
+      "name": "Phase-C-power-factor",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 536,
+      "function": "holding",
+      "name": "Total-power-factor",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 537,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 538,
+      "function": "holding",
+      "name": "Phase-A-(ab-line)-voltage-thd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 539,
+      "function": "holding",
+      "name": "Phase-B-voltage-thd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 540,
+      "function": "holding",
+      "name": "Phase-C-(cb-line)-voltage-thd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 541,
+      "function": "holding",
+      "name": "Phase-A-current-thd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 542,
+      "function": "holding",
+      "name": "Phase-B-current-thd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 543,
+      "function": "holding",
+      "name": "Phase-C-current-thd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 544,
+      "function": "holding",
+      "name": "Phase-A-(ab-line)-voltage-harmonic-content",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 545,
+      "function": "holding",
+      "name": "Phase-B-voltage-harmonic-content",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 546,
+      "function": "holding",
+      "name": "Phase-C-(cb-line)-voltage-harmonic-content",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 547,
+      "function": "holding",
+      "name": "Phase-A-current-harmonic-content",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 548,
+      "function": "holding",
+      "name": "Phase-B-current-harmonic-content",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 549,
+      "function": "holding",
+      "name": "Phase-C-current-harmonic-content",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1536,
+      "function": "holding",
+      "name": "Max.-phase-voltage-value",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1537,
+      "function": "holding",
+      "name": "Max.-line-voltage-value",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1538,
+      "function": "holding",
+      "name": "Max.-current-value",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1539,
+      "function": "holding",
+      "name": "Max.-active-power-value",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1540,
+      "function": "holding",
+      "name": "Max.-reactive-power-value",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 1541,
+      "function": "holding",
+      "name": "Max.-apparent-power-value",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1542,
+      "function": "holding",
+      "name": "Max.-active-power-demand-value",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1543,
+      "function": "holding",
+      "name": "Max.-reactive-power-demand-value",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 1544,
+      "function": "holding",
+      "name": "Max.-apparent-power-demand-value",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/jiangsu-sfere-electric-d1900-3-phases.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

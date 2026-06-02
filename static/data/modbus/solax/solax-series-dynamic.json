@@ -1,0 +1,266 @@
+{
+  "slug": "solax-solax-series-dynamic",
+  "vendor": "SolaX",
+  "vendorSlug": "solax",
+  "model": "SolaX Series Dynamic",
+  "modelSlug": "solax-series-dynamic",
+  "name": "SolaX Inverter Series",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 0,
+      "function": "input",
+      "name": "pv_voltage_1",
+      "label": "PV Voltage 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 0,
+      "function": "holding",
+      "name": "export_power_limit",
+      "label": "Export Power Limit",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "W",
+      "access": "rw"
+    },
+    {
+      "address": 1,
+      "function": "input",
+      "name": "pv_current_1",
+      "label": "PV Current 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "battery_charge_power_limit",
+      "label": "Battery Charge Power Limit",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "W",
+      "access": "rw"
+    },
+    {
+      "address": 2,
+      "function": "input",
+      "name": "pv_power_1",
+      "label": "PV Power 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "battery_discharge_power_limit",
+      "label": "Battery Discharge Power Limit",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "W",
+      "access": "rw"
+    },
+    {
+      "address": 3,
+      "function": "input",
+      "name": "pv_voltage_2",
+      "label": "PV Voltage 2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "battery_soc_min",
+      "label": "Battery SOC Min",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 4,
+      "function": "input",
+      "name": "pv_current_2",
+      "label": "PV Current 2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "input",
+      "name": "pv_power_2",
+      "label": "PV Power 2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "input",
+      "name": "grid_voltage",
+      "label": "Grid Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "input",
+      "name": "grid_current",
+      "label": "Grid Current",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "input",
+      "name": "grid_power",
+      "label": "Grid Power",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "input",
+      "name": "grid_frequency",
+      "label": "Grid Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 41,
+      "function": "input",
+      "name": "inverter_power",
+      "label": "Inverter Power",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "input",
+      "name": "inverter_temperature",
+      "label": "Inverter Temperature",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 61,
+      "function": "input",
+      "name": "battery_voltage",
+      "label": "Battery Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "input",
+      "name": "battery_current",
+      "label": "Battery Current",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 63,
+      "function": "input",
+      "name": "battery_power",
+      "label": "Battery Power",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 64,
+      "function": "input",
+      "name": "battery_soc",
+      "label": "Battery SOC",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 81,
+      "function": "input",
+      "name": "pv_energy_today",
+      "label": "PV Energy Today",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 83,
+      "function": "input",
+      "name": "pv_energy_total",
+      "label": "PV Energy Total",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "kWh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-manager",
+    "ref": "8932e9a23c65e9f9fe333780bcb3477d81a80b7b",
+    "needsReview": true,
+    "reviewReasons": [
+      "Ordre d'octets non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

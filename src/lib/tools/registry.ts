@@ -44,12 +44,12 @@ export const TOOLS: Tool[] = [
 	{
 		slug: 'modbus',
 		name: 'modbus',
-		title: 'Tables Modbus',
-		description: 'Tables Modbus — registres, types, échelles, CRC-16.',
+		title: 'Catalogue Modbus',
+		description: 'Catalogue ouvert de devices Modbus — registres, types, échelles, RTU/TCP.',
 		sector: 'briques-techniques',
 		icon: Table2,
-		tags: ['rtu', 'tcp', 'csv'],
-		status: 'todo'
+		tags: ['rtu', 'tcp', 'registres'],
+		status: 'done'
 	},
 	{
 		slug: 'conv',
@@ -79,7 +79,7 @@ export const TOOLS: Tool[] = [
 		sector: 'reglementaire',
 		icon: ShieldCheck,
 		tags: ['décret 2020-887', 'iso 52120'],
-		external: 'https://www.conformbacs.fr',
+		external: 'https://conformbacs.datagtb.com',
 		status: 'done'
 	},
 	{

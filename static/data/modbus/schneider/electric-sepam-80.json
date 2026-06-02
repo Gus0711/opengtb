@@ -1,0 +1,449 @@
+{
+  "slug": "schneider-electric-sepam-80",
+  "vendor": "schneider",
+  "vendorSlug": "schneider",
+  "model": "electric-sepam-80",
+  "modelSlug": "electric-sepam-80",
+  "name": "schneider electric-sepam-80",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 512,
+      "function": "holding",
+      "name": "Phase-current-I1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 514,
+      "function": "holding",
+      "name": "Phase-current-I2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 516,
+      "function": "holding",
+      "name": "Phase-current-I3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 518,
+      "function": "holding",
+      "name": "Residual-current-i0",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 520,
+      "function": "holding",
+      "name": "Residual-current-i0",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 522,
+      "function": "holding",
+      "name": "Demand-current-Im1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 524,
+      "function": "holding",
+      "name": "Demand-current-Im2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 526,
+      "function": "holding",
+      "name": "Demand-current-Im3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 528,
+      "function": "holding",
+      "name": "Peak-demand-current-IM1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 530,
+      "function": "holding",
+      "name": "Peak-demand-current-IM2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 532,
+      "function": "holding",
+      "name": "Peak-demand-current-IM3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 534,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage-U21",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 536,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage-U32",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 538,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage-U13",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 540,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage-V1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 542,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage-V2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 544,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage-V3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 546,
+      "function": "holding",
+      "name": "Residual-voltage-v0",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 548,
+      "function": "holding",
+      "name": "Positive-sequence-voltage-vd",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 550,
+      "function": "holding",
+      "name": "Negative-sequence-voltage-vi",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 552,
+      "function": "holding",
+      "name": "Frequency-f",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 554,
+      "function": "holding",
+      "name": "Active-power-P",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 556,
+      "function": "holding",
+      "name": "Reactive-power-Q",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 558,
+      "function": "holding",
+      "name": "Apparent-power-S",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 560,
+      "function": "holding",
+      "name": "Power-factor-cos",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 562,
+      "function": "holding",
+      "name": "Peak-demand-active-power-pm",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 564,
+      "function": "holding",
+      "name": "Peak-demand-reactive-power-qm",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 566,
+      "function": "holding",
+      "name": "Active-power-P-phase-1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 568,
+      "function": "holding",
+      "name": "Active-power-P-phase-2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 570,
+      "function": "holding",
+      "name": "Active-power-P-phase-3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 572,
+      "function": "holding",
+      "name": "Reactive-power-Q-phase-1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 574,
+      "function": "holding",
+      "name": "Reactive-power-Q-phase-2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 576,
+      "function": "holding",
+      "name": "Reactive-power-Q-phase-3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 578,
+      "function": "holding",
+      "name": "Apparent-power-S-phase-1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 580,
+      "function": "holding",
+      "name": "Apparent-power-S-phase-2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 582,
+      "function": "holding",
+      "name": "Apparent-power-S-phase-3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 584,
+      "function": "holding",
+      "name": "Positive-active-energy-ea+",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 586,
+      "function": "holding",
+      "name": "Negative-active-energy-ea",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 588,
+      "function": "holding",
+      "name": "Positive-reactive-energy-er+",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 590,
+      "function": "holding",
+      "name": "Negative-reactive-energy-er",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 592,
+      "function": "holding",
+      "name": "Ext.-positive-active-energy-ea+",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 594,
+      "function": "holding",
+      "name": "Ext.-negative-active-energy-ea",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 596,
+      "function": "holding",
+      "name": "Ext.-positive-reactive-energy-ea+",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 598,
+      "function": "holding",
+      "name": "Ext.-negative-reactive-energy-ea",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 600,
+      "function": "holding",
+      "name": "Neutral-point-voltage-vnt",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 602,
+      "function": "holding",
+      "name": "H3-neutral-point-voltage-v3nt",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 604,
+      "function": "holding",
+      "name": "H3-residual-voltage-v3r",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 606,
+      "function": "holding",
+      "name": "Phase-current-i-1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 608,
+      "function": "holding",
+      "name": "Phase-current-i-2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 610,
+      "function": "holding",
+      "name": "Phase-current-i-3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/schneider-electric-sepam-80.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

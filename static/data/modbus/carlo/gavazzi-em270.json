@@ -1,0 +1,431 @@
+{
+  "slug": "carlo-gavazzi-em270",
+  "vendor": "carlo",
+  "vendorSlug": "carlo",
+  "model": "gavazzi-em270",
+  "modelSlug": "gavazzi-em270",
+  "name": "carlo gavazzi-em270",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "V-L2-N",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "V-L3-N",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "V-L1-L2",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "V-L2-L3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "V-L3-L1",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "A-L1",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "A-L2",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "A-L3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "W",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Va",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Var",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Kwh(+)tot",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "Kvarh(+)tot",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "W-dmd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Va-dmd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "W-maxdmd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Va-maxdmd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 268,
+      "function": "holding",
+      "name": "A-L1-tcda",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 270,
+      "function": "holding",
+      "name": "A-L2-tcda",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 272,
+      "function": "holding",
+      "name": "A-L3-tcda",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 274,
+      "function": "holding",
+      "name": "W-L1-tcda",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 276,
+      "function": "holding",
+      "name": "W-L2-tcda",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 278,
+      "function": "holding",
+      "name": "W-L3-tcda",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 280,
+      "function": "holding",
+      "name": "W-tot-tcda",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 282,
+      "function": "holding",
+      "name": "Va-tot-tcda",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 284,
+      "function": "holding",
+      "name": "Var-tot-tcda",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 286,
+      "function": "holding",
+      "name": "Kwh(+)tcda-tot",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 288,
+      "function": "holding",
+      "name": "Kvarh-(+)tcda-tot",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 290,
+      "function": "holding",
+      "name": "W-tot-tcda-dmd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 292,
+      "function": "holding",
+      "name": "Va-tot-tcda-dmd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 294,
+      "function": "holding",
+      "name": "W-tot-tcda-maxdmd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 296,
+      "function": "holding",
+      "name": "Va-tot-tcda-maxdmd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 298,
+      "function": "holding",
+      "name": "Kwh(+)-L1-tcda",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 300,
+      "function": "holding",
+      "name": "Kwh(+)-L2-tcda",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 302,
+      "function": "holding",
+      "name": "Kwh(+)-L3-tcda",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 304,
+      "function": "holding",
+      "name": "W-L1-tcda-dmd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 306,
+      "function": "holding",
+      "name": "W-L2-tcda-dmd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 308,
+      "function": "holding",
+      "name": "W-L3-tcda-dmd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 310,
+      "function": "holding",
+      "name": "W-L1-tcda-maxdmd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 312,
+      "function": "holding",
+      "name": "W-L2-tcda-maxdmd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 314,
+      "function": "holding",
+      "name": "W-L3-tcda-maxdmd",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 524,
+      "function": "holding",
+      "name": "A-L1-tcdb",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 526,
+      "function": "holding",
+      "name": "A-L2-tcdb",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 528,
+      "function": "holding",
+      "name": "A-L3-tcdb",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 530,
+      "function": "holding",
+      "name": "W-L1-tcdb",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 532,
+      "function": "holding",
+      "name": "W-L2-tcdb",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 534,
+      "function": "holding",
+      "name": "W-L3-tcdb",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 536,
+      "function": "holding",
+      "name": "W-tot-tcdb",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 538,
+      "function": "holding",
+      "name": "Va-tot-tcdb",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 540,
+      "function": "holding",
+      "name": "Var-tot-tcdb",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/carlo-gavazzi-em270.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

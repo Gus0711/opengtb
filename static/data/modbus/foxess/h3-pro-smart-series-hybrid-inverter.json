@@ -1,0 +1,156 @@
+{
+  "slug": "foxess-h3-pro-smart-series-hybrid-inverter",
+  "vendor": "FoxESS",
+  "vendorSlug": "foxess",
+  "model": "H3-Pro/Smart Series Hybrid Inverter",
+  "modelSlug": "h3-pro-smart-series-hybrid-inverter",
+  "name": "FoxESS H3-Pro/Smart Series Hybrid Inverter",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 37612,
+      "function": "holding",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "%",
+      "access": "r",
+      "notes": "Soc"
+    },
+    {
+      "address": 38816,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Meter Power R"
+    },
+    {
+      "address": 38818,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Meter Power S"
+    },
+    {
+      "address": 38820,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Meter Power T"
+    },
+    {
+      "address": 39237,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Battery Charge/Discharge"
+    },
+    {
+      "address": 39279,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "PV1"
+    },
+    {
+      "address": 39281,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "PV2"
+    },
+    {
+      "address": 39283,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "PV3"
+    },
+    {
+      "address": 39285,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "PV4"
+    },
+    {
+      "address": 39287,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "PV5"
+    },
+    {
+      "address": 39289,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "PV6"
+    },
+    {
+      "address": 39617,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Grid Consumption Total"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

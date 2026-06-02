@@ -1,0 +1,461 @@
+{
+  "slug": "fronius-symo-20",
+  "vendor": "fronius",
+  "vendorSlug": "fronius",
+  "model": "symo-20",
+  "modelSlug": "symo-20",
+  "name": "fronius symo-20",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 40069,
+      "function": "holding",
+      "name": "AC-Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40071,
+      "function": "holding",
+      "name": "Phase-A-Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40073,
+      "function": "holding",
+      "name": "Phase-B-Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40075,
+      "function": "holding",
+      "name": "Phase-C-Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40077,
+      "function": "holding",
+      "name": "Phase-Voltage-AB",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40079,
+      "function": "holding",
+      "name": "Phase-Voltage-BC",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40081,
+      "function": "holding",
+      "name": "Phase-Voltage-CA",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40083,
+      "function": "holding",
+      "name": "Phase-Voltage-AN",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40085,
+      "function": "holding",
+      "name": "Phase-Voltage-BN",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40087,
+      "function": "holding",
+      "name": "Phase-Voltage-CN",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40089,
+      "function": "holding",
+      "name": "AC-Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40091,
+      "function": "holding",
+      "name": "Line-Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 40093,
+      "function": "holding",
+      "name": "AC-Apparent-Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40095,
+      "function": "holding",
+      "name": "AC-Reactive-Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 40097,
+      "function": "holding",
+      "name": "AC-Power-Factor",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Pct",
+      "access": "r"
+    },
+    {
+      "address": 40099,
+      "function": "holding",
+      "name": "AC-Energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40101,
+      "function": "holding",
+      "name": "DC-Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40103,
+      "function": "holding",
+      "name": "DC-Voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40105,
+      "function": "holding",
+      "name": "DC-Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40107,
+      "function": "holding",
+      "name": "Cabinet-Temperature",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "C",
+      "access": "r"
+    },
+    {
+      "address": 40109,
+      "function": "holding",
+      "name": "Heat-Sink-Temperature",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "C",
+      "access": "r"
+    },
+    {
+      "address": 40111,
+      "function": "holding",
+      "name": "Transformer-Temperature",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "C",
+      "access": "r"
+    },
+    {
+      "address": 40113,
+      "function": "holding",
+      "name": "Other-Temperature",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "C",
+      "access": "r"
+    },
+    {
+      "address": 40115,
+      "function": "holding",
+      "name": "Enumerated-value.--Operating-state",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40116,
+      "function": "holding",
+      "name": "Vendor-specific-operating-state-code",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40117,
+      "function": "holding",
+      "name": "Bitmask-value.-Event-fields",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40119,
+      "function": "holding",
+      "name": "Reserved-for-future-use",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40121,
+      "function": "holding",
+      "name": "Vendor-defined-events",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40123,
+      "function": "holding",
+      "name": "Vendor-defined-events",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40125,
+      "function": "holding",
+      "name": "Vendor-defined-events",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40127,
+      "function": "holding",
+      "name": "Vendor-defined-events",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40131,
+      "function": "holding",
+      "name": "Type-of-DER-device.-Default-value-is-4-to-indicate-PV-device.",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40132,
+      "function": "holding",
+      "name": "Continuous-power-output-capability-of-the-inverter.",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40133,
+      "function": "holding",
+      "name": "Scale-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40134,
+      "function": "holding",
+      "name": "Continuous-Volt-Ampere-capability-of-the-inverter.",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40135,
+      "function": "holding",
+      "name": "Scale-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40136,
+      "function": "holding",
+      "name": "Continuous-VAR-capability-of-the-inverter-in-quadrant-1.",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 40137,
+      "function": "holding",
+      "name": "Continuous-VAR-capability-of-the-inverter-in-quadrant-2.",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 40138,
+      "function": "holding",
+      "name": "Continuous-VAR-capability-of-the-inverter-in-quadrant-3.",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 40139,
+      "function": "holding",
+      "name": "Continuous-VAR-capability-of-the-inverter-in-quadrant-4.",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 40140,
+      "function": "holding",
+      "name": "Scale-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40141,
+      "function": "holding",
+      "name": "Maximum-RMS-AC-current-level-capability-of-the-inverter.",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40142,
+      "function": "holding",
+      "name": "Scale-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40143,
+      "function": "holding",
+      "name": "Minimum-power-factor-capability-of-the-inverter-in-quadrant-1.",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "cos()",
+      "access": "r"
+    },
+    {
+      "address": 40144,
+      "function": "holding",
+      "name": "Minimum-power-factor-capability-of-the-inverter-in-quadrant-2.",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "cos()",
+      "access": "r"
+    },
+    {
+      "address": 40145,
+      "function": "holding",
+      "name": "Minimum-power-factor-capability-of-the-inverter-in-quadrant-3.",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "cos()",
+      "access": "r"
+    },
+    {
+      "address": 40146,
+      "function": "holding",
+      "name": "Minimum-power-factor-capability-of-the-inverter-in-quadrant-4.",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "cos()",
+      "access": "r"
+    },
+    {
+      "address": 40147,
+      "function": "holding",
+      "name": "Scale-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40148,
+      "function": "holding",
+      "name": "Nominal-energy-rating-of-storage-device.",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40149,
+      "function": "holding",
+      "name": "Scale-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/fronius-symo-20.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "slug": "varmann-qtherm",
+  "vendor": "Varmann",
+  "vendorSlug": "varmann",
+  "model": "Qtherm",
+  "modelSlug": "qtherm",
+  "name": "Varmann Qtherm",
+  "equipmentType": "variateur",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 0,
+      "function": "holding",
+      "name": "Slave Address",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Temperature NTC",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Required Temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Heat/Chill Mode",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Heating",
+        "1": "Cooling",
+        "2": "Auto"
+      }
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Integration time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "s",
+      "access": "rw"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Regulation profile",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Required Fan speed",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Heating valve",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Cooling valve",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Incoming temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "LAN communication timeout",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "s",
+      "access": "rw"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "ADC value",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Fan speed",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Heating valve state",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Cooling valve state",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "Alarm status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "DIP Switch 1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "DIP Switch 2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Operating mode",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Manual control",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Motor drive frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "rw"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "Motor drive amplitude",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "rw"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Motor current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "rw"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Motor nominal current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "rw"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-gateway",
+    "ref": "20de1794f20f946fa9d9e81effeee6d47258c3a7",
+    "needsReview": false
+  }
+}

@@ -1,0 +1,472 @@
+{
+  "slug": "socomec-multis-l20-multis-l40",
+  "vendor": "socomec",
+  "vendorSlug": "socomec",
+  "model": "multis-l20-multis-l40",
+  "modelSlug": "multis-l20-multis-l40",
+  "name": "socomec multis-l20-multis-l40",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Voltage,-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Voltage,-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Current,-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Current,-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Current,-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Current,-L-N",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Voltage,-L1-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Voltage,-L2-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Voltage,-L1-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Active-power,-L1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Active-power,-L2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Active-power,-L3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "Reactive-power,-L1",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Reactive-power,-L2",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Reactive-power,-L3",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Apparent-power,-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Apparent-power,-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Apparent-power,-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Power-factor,-L1",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "Power-factor,-L1",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "Power-factor,-L1",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "Total-import-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Total-export-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Total-inductive-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "Total-capacitive-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Total-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 54,
+      "function": "holding",
+      "name": "Average-inductive-CosF",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Average-capacitive-CosF",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 58,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "Voltage-angle,-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Deg",
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "Voltage-angle,-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Deg",
+      "access": "r"
+    },
+    {
+      "address": 64,
+      "function": "holding",
+      "name": "Voltage-angle,-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Deg",
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "holding",
+      "name": "Current-angle,-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Deg",
+      "access": "r"
+    },
+    {
+      "address": 68,
+      "function": "holding",
+      "name": "Current-angle,-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Deg",
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "Current-angle,-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Deg",
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "Digital-inputs",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "Import-active-energy-1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 90,
+      "function": "holding",
+      "name": "Export-active-energy-1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 94,
+      "function": "holding",
+      "name": "Inductive-reactive-energy-1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "VArh",
+      "access": "r"
+    },
+    {
+      "address": 98,
+      "function": "holding",
+      "name": "Capacitive-reactive-energy-1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "VArh",
+      "access": "r"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "Import-active-energy-2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 106,
+      "function": "holding",
+      "name": "Export-active-energy-2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 110,
+      "function": "holding",
+      "name": "Inductive-reactive-energy-2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "VArh",
+      "access": "r"
+    },
+    {
+      "address": 114,
+      "function": "holding",
+      "name": "Capacitive-reactive-energy-2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "VArh",
+      "access": "r"
+    },
+    {
+      "address": 118,
+      "function": "holding",
+      "name": "Voltage,-min,-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 120,
+      "function": "holding",
+      "name": "Voltage,-min,-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 122,
+      "function": "holding",
+      "name": "Voltage,-min,-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 124,
+      "function": "holding",
+      "name": "Voltage,-min,-L1-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 126,
+      "function": "holding",
+      "name": "Voltage,-min,-L2-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 128,
+      "function": "holding",
+      "name": "Voltage,-min,-L3-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/socomec-multis-l20-multis-l40.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

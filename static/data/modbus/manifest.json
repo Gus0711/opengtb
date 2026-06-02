@@ -1,0 +1,6252 @@
+{
+  "generatedAt": "2026-05-26T15:17:03.128Z",
+  "sources": {
+    "jibrilsharafi": {
+      "sha": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+      "deviceCount": 274
+    },
+    "ha": {
+      "sha": "20de1794f20f946fa9d9e81effeee6d47258c3a7",
+      "deviceCount": 19
+    },
+    "mbmd": {
+      "sha": "c71dfb268a7a9a3d608dbb990c1c26d6d67fd9d9",
+      "deviceCount": 20
+    },
+    "haModbusManager": {
+      "sha": "8932e9a23c65e9f9fe333780bcb3477d81a80b7b",
+      "deviceCount": 12
+    },
+    "stiebel": {
+      "sha": "1da602dd4e0c8d2e2290024539c3eb6b4c924221",
+      "deviceCount": 1
+    },
+    "evcc": {
+      "sha": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+      "deviceCount": 67
+    },
+    "iobroker": {
+      "sha": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+      "deviceCount": 31
+    },
+    "overrides": {
+      "deviceCount": 0
+    }
+  },
+  "devices": [
+    {
+      "slug": "abb-3p81",
+      "vendor": "abb",
+      "vendorSlug": "abb",
+      "model": "3p81",
+      "modelSlug": "3p81",
+      "name": "abb 3p81",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "abb-3p86",
+      "vendor": "abb",
+      "vendorSlug": "abb",
+      "model": "3p86",
+      "modelSlug": "3p86",
+      "name": "abb 3p86",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "abb-3p88",
+      "vendor": "abb",
+      "vendorSlug": "abb",
+      "model": "3p88",
+      "modelSlug": "3p88",
+      "name": "abb 3p88",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "abb-3q4200",
+      "vendor": "abb",
+      "vendorSlug": "abb",
+      "model": "3q4200",
+      "modelSlug": "3q4200",
+      "name": "abb 3q4200",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "abb-a-b-series",
+      "vendor": "ABB",
+      "vendorSlug": "abb",
+      "model": "A/B-Series",
+      "modelSlug": "a-b-series",
+      "name": "ABB A/B-Series",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 23,
+      "needsReview": true
+    },
+    {
+      "slug": "abb-a41-a42",
+      "vendor": "abb",
+      "vendorSlug": "abb",
+      "model": "a41-a42",
+      "modelSlug": "a41-a42",
+      "name": "abb a41-a42",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "abb-a43-a44",
+      "vendor": "abb",
+      "vendorSlug": "abb",
+      "model": "a43-a44",
+      "modelSlug": "a43-a44",
+      "name": "abb a43-a44",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "abb-b21",
+      "vendor": "abb",
+      "vendorSlug": "abb",
+      "model": "b21",
+      "modelSlug": "b21",
+      "name": "abb b21",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "abb-b23-b24",
+      "vendor": "abb",
+      "vendorSlug": "abb",
+      "model": "b23-b24",
+      "modelSlug": "b23-b24",
+      "name": "abb b23-b24",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "abb-m2m-dmtme",
+      "vendor": "abb",
+      "vendorSlug": "abb",
+      "model": "m2m-dmtme",
+      "modelSlug": "m2m-dmtme",
+      "name": "abb m2m-dmtme",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "abb-m4m",
+      "vendor": "abb",
+      "vendorSlug": "abb",
+      "model": "m4m",
+      "modelSlug": "m4m",
+      "name": "abb m4m",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "abb-uno-dm-plus",
+      "vendor": "abb",
+      "vendorSlug": "abb",
+      "model": "uno-dm-plus",
+      "modelSlug": "uno-dm-plus",
+      "name": "abb uno-dm-plus",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "accuenergy-acurev-1300",
+      "vendor": "accuenergy",
+      "vendorSlug": "accuenergy",
+      "model": "acurev-1300",
+      "modelSlug": "acurev-1300",
+      "name": "accuenergy acurev-1300",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "accuenergy-acuvim-ii",
+      "vendor": "accuenergy",
+      "vendorSlug": "accuenergy",
+      "model": "acuvim-ii",
+      "modelSlug": "acuvim-ii",
+      "name": "accuenergy acuvim-ii",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "accuenergy-acuvim-l-power-meter",
+      "vendor": "accuenergy",
+      "vendorSlug": "accuenergy",
+      "model": "acuvim-l-power-meter",
+      "modelSlug": "acuvim-l-power-meter",
+      "name": "accuenergy acuvim-l-power-meter",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "acrel-acr10r",
+      "vendor": "acrel",
+      "vendorSlug": "acrel",
+      "model": "acr10r",
+      "modelSlug": "acr10r",
+      "name": "acrel acr10r",
+      "equipmentType": "gateway",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "acrel-adw300",
+      "vendor": "Acrel",
+      "vendorSlug": "acrel",
+      "model": "ADW300",
+      "modelSlug": "adw300",
+      "name": "Acrel ADW300",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 11,
+      "needsReview": true
+    },
+    {
+      "slug": "ads-tec-storaxe",
+      "vendor": "Ads-tec",
+      "vendorSlug": "ads-tec",
+      "model": "StoraXe",
+      "modelSlug": "storaxe",
+      "name": "Ads-tec StoraXe",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 9,
+      "needsReview": true
+    },
+    {
+      "slug": "afore-hybrid-inverter",
+      "vendor": "Afore",
+      "vendorSlug": "afore",
+      "model": "Hybrid Inverter",
+      "modelSlug": "hybrid-inverter",
+      "name": "Afore Hybrid Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 3,
+      "needsReview": true
+    },
+    {
+      "slug": "aldes-aldes-inspir-air-home-sc370",
+      "vendor": "Aldes",
+      "vendorSlug": "aldes",
+      "model": "Aldes Inspir Air Home SC370",
+      "modelSlug": "aldes-inspir-air-home-sc370",
+      "name": "Aldes Aldes Inspir Air Home SC370",
+      "equipmentType": "vmc",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 38,
+      "needsReview": true
+    },
+    {
+      "slug": "algodue-upm209",
+      "vendor": "algodue",
+      "vendorSlug": "algodue",
+      "model": "upm209",
+      "modelSlug": "upm209",
+      "name": "algodue upm209",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "algodue-upm215-upm310-upm315-upm3060-upm3080",
+      "vendor": "algodue",
+      "vendorSlug": "algodue",
+      "model": "upm215-upm310-upm315-upm3060-upm3080",
+      "modelSlug": "upm215-upm310-upm315-upm3060-upm3080",
+      "name": "algodue upm215-upm310-upm315-upm3060-upm3080",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "algodue-upm309",
+      "vendor": "algodue",
+      "vendorSlug": "algodue",
+      "model": "upm309",
+      "modelSlug": "upm309",
+      "name": "algodue upm309",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "allen-bradley-powermonitor-3000",
+      "vendor": "allen",
+      "vendorSlug": "allen",
+      "model": "bradley-powermonitor-3000",
+      "modelSlug": "bradley-powermonitor-3000",
+      "name": "allen bradley-powermonitor-3000",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "alpha-ess-storion-smile",
+      "vendor": "Alpha ESS",
+      "vendorSlug": "alpha-ess",
+      "model": "Storion SMILE",
+      "modelSlug": "storion-smile",
+      "name": "Alpha ESS Storion SMILE",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 16,
+      "needsReview": true
+    },
+    {
+      "slug": "amperfied-heidelberg-energy-control",
+      "vendor": "Amperfied",
+      "vendorSlug": "amperfied",
+      "model": "Heidelberg Energy Control",
+      "modelSlug": "heidelberg-energy-control",
+      "name": "Heidelberg Energy Control",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 23,
+      "needsReview": true
+    },
+    {
+      "slug": "anker-solix-x1-hybrid-inverter",
+      "vendor": "Anker",
+      "vendorSlug": "anker",
+      "model": "SOLIX X1 Hybrid Inverter",
+      "modelSlug": "solix-x1-hybrid-inverter",
+      "name": "Anker SOLIX X1 Hybrid Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 16,
+      "needsReview": true
+    },
+    {
+      "slug": "arch-meter-pa310",
+      "vendor": "arch",
+      "vendorSlug": "arch",
+      "model": "meter-pa310",
+      "modelSlug": "meter-pa310",
+      "name": "arch meter-pa310",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "arch-meter-pa33",
+      "vendor": "arch",
+      "vendorSlug": "arch",
+      "model": "meter-pa33",
+      "modelSlug": "meter-pa33",
+      "name": "arch meter-pa33",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 54,
+      "needsReview": true
+    },
+    {
+      "slug": "atmoce-mg100-m-gateway",
+      "vendor": "Atmoce",
+      "vendorSlug": "atmoce",
+      "model": "MG100 M-gateway",
+      "modelSlug": "mg100-m-gateway",
+      "name": "Atmoce MG100 M-gateway",
+      "equipmentType": "gateway",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 13,
+      "needsReview": true
+    },
+    {
+      "slug": "b-ge-tech-ds100",
+      "vendor": "B+GE-TECH",
+      "vendorSlug": "b-ge-tech",
+      "model": "DS100",
+      "modelSlug": "ds100",
+      "name": "B+GE-TECH DS100",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 11,
+      "needsReview": true
+    },
+    {
+      "slug": "b-ge-tech-ws100",
+      "vendor": "B+GE-TECH",
+      "vendorSlug": "b-ge-tech",
+      "model": "WS100",
+      "modelSlug": "ws100",
+      "name": "B+GE-TECH WS100",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 2,
+      "needsReview": true
+    },
+    {
+      "slug": "bg-tech-ds100",
+      "vendor": "BG-Tech",
+      "vendorSlug": "bg-tech",
+      "model": "DS100",
+      "modelSlug": "ds100",
+      "name": "BG-Tech DS100",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 37,
+      "needsReview": true
+    },
+    {
+      "slug": "bticino-f4n200",
+      "vendor": "BTicino",
+      "vendorSlug": "bticino",
+      "model": "F4N200",
+      "modelSlug": "f4n200",
+      "name": "BTicino F4N200",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 159,
+      "needsReview": true
+    },
+    {
+      "slug": "byd-battery-box",
+      "vendor": "BYD",
+      "vendorSlug": "byd",
+      "model": "Battery Box",
+      "modelSlug": "battery-box",
+      "name": "BYD Battery Box",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 14,
+      "needsReview": false
+    },
+    {
+      "slug": "bytronic-by4100",
+      "vendor": "bytronic",
+      "vendorSlug": "bytronic",
+      "model": "by4100",
+      "modelSlug": "by4100",
+      "name": "bytronic by4100",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "carlo-gavazzi-em110-111-112",
+      "vendor": "Carlo Gavazzi",
+      "vendorSlug": "carlo-gavazzi",
+      "model": "EM110/111/112",
+      "modelSlug": "em110-111-112",
+      "name": "Carlo Gavazzi EM110/111/112",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 2,
+      "needsReview": true
+    },
+    {
+      "slug": "carlo-gavazzi-em111-em112-et112",
+      "vendor": "carlo",
+      "vendorSlug": "carlo",
+      "model": "gavazzi-em111-em112-et112",
+      "modelSlug": "gavazzi-em111-em112-et112",
+      "name": "carlo gavazzi-em111-em112-et112",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "carlo-gavazzi-em24",
+      "vendor": "Carlo Gavazzi",
+      "vendorSlug": "carlo-gavazzi",
+      "model": "EM24",
+      "modelSlug": "em24",
+      "name": "Carlo Gavazzi EM24",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 20,
+      "needsReview": true
+    },
+    {
+      "slug": "carlo-gavazzi-em24-e1",
+      "vendor": "Carlo Gavazzi",
+      "vendorSlug": "carlo-gavazzi",
+      "model": "EM24 E1",
+      "modelSlug": "em24-e1",
+      "name": "Carlo Gavazzi EM24 E1",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 20,
+      "needsReview": true
+    },
+    {
+      "slug": "carlo-gavazzi-em26",
+      "vendor": "carlo",
+      "vendorSlug": "carlo",
+      "model": "gavazzi-em26",
+      "modelSlug": "gavazzi-em26",
+      "name": "carlo gavazzi-em26",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "carlo-gavazzi-em270",
+      "vendor": "carlo",
+      "vendorSlug": "carlo",
+      "model": "gavazzi-em270",
+      "modelSlug": "gavazzi-em270",
+      "name": "carlo gavazzi-em270",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "carlo-gavazzi-em271",
+      "vendor": "carlo",
+      "vendorSlug": "carlo",
+      "model": "gavazzi-em271",
+      "modelSlug": "gavazzi-em271",
+      "name": "carlo gavazzi-em271",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "carlo-gavazzi-em300-et300",
+      "vendor": "carlo",
+      "vendorSlug": "carlo",
+      "model": "gavazzi-em300-et300",
+      "modelSlug": "gavazzi-em300-et300",
+      "name": "carlo gavazzi-em300-et300",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "carlo-gavazzi-ex3x0",
+      "vendor": "Carlo Gavazzi",
+      "vendorSlug": "carlo-gavazzi",
+      "model": "EX3x0",
+      "modelSlug": "ex3x0",
+      "name": "Carlo Gavazzi EX3x0",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 20,
+      "needsReview": true
+    },
+    {
+      "slug": "carlo-gavazzi-wm14-cpt-a",
+      "vendor": "carlo",
+      "vendorSlug": "carlo",
+      "model": "gavazzi-wm14-cpt-a",
+      "modelSlug": "gavazzi-wm14-cpt-a",
+      "name": "carlo gavazzi-wm14-cpt-a",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "carlo-gavazzi-wm3-96",
+      "vendor": "carlo",
+      "vendorSlug": "carlo",
+      "model": "gavazzi-wm3-96",
+      "modelSlug": "gavazzi-wm3-96",
+      "name": "carlo gavazzi-wm3-96",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "carlo-gavazzi-wm30-wm40",
+      "vendor": "carlo",
+      "vendorSlug": "carlo",
+      "model": "gavazzi-wm30-wm40",
+      "modelSlug": "gavazzi-wm30-wm40",
+      "name": "carlo gavazzi-wm30-wm40",
+      "equipmentType": "gateway",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "cet-pmc-350-c",
+      "vendor": "cet",
+      "vendorSlug": "cet",
+      "model": "pmc-350-c",
+      "modelSlug": "pmc-350-c",
+      "name": "cet pmc-350-c",
+      "equipmentType": "chaudiere",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "cet-pmc-53",
+      "vendor": "cet",
+      "vendorSlug": "cet",
+      "model": "pmc-53",
+      "modelSlug": "pmc-53",
+      "name": "cet pmc-53",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "cet-pmc-53a",
+      "vendor": "cet",
+      "vendorSlug": "cet",
+      "model": "pmc-53a",
+      "modelSlug": "pmc-53a",
+      "name": "cet pmc-53a",
+      "equipmentType": "chaudiere",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "cet-pmc-d726m",
+      "vendor": "cet",
+      "vendorSlug": "cet",
+      "model": "pmc-d726m",
+      "modelSlug": "pmc-d726m",
+      "name": "cet pmc-d726m",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "cewe-cdm",
+      "vendor": "cewe",
+      "vendorSlug": "cewe",
+      "model": "cdm",
+      "modelSlug": "cdm",
+      "name": "cewe cdm",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "cewe-prometer",
+      "vendor": "cewe",
+      "vendorSlug": "cewe",
+      "model": "prometer",
+      "modelSlug": "prometer",
+      "name": "cewe prometer",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "cewe-prometer-100",
+      "vendor": "cewe",
+      "vendorSlug": "cewe",
+      "model": "prometer-100",
+      "modelSlug": "prometer-100",
+      "name": "cewe prometer-100",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "cfos-cfos",
+      "vendor": "Cfos",
+      "vendorSlug": "cfos",
+      "model": "Cfos",
+      "modelSlug": "cfos",
+      "name": "Cfos",
+      "equipmentType": "wallbox",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 45,
+      "needsReview": true
+    },
+    {
+      "slug": "chint-dtsu666",
+      "vendor": "CHINT",
+      "vendorSlug": "chint",
+      "model": "DTSU666",
+      "modelSlug": "dtsu666",
+      "name": "CHINT DTSU666",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 27,
+      "needsReview": true
+    },
+    {
+      "slug": "chint-instrument-ddsu666-h",
+      "vendor": "chint",
+      "vendorSlug": "chint",
+      "model": "instrument-ddsu666-h",
+      "modelSlug": "instrument-ddsu666-h",
+      "name": "chint instrument-ddsu666-h",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "circutor-cvm-c10",
+      "vendor": "circutor",
+      "vendorSlug": "circutor",
+      "model": "cvm-c10",
+      "modelSlug": "cvm-c10",
+      "name": "circutor cvm-c10",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "circutor-cvm144",
+      "vendor": "circutor",
+      "vendorSlug": "circutor",
+      "model": "cvm144",
+      "modelSlug": "cvm144",
+      "name": "circutor cvm144",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "compleo-ebox-professional",
+      "vendor": "Compleo",
+      "vendorSlug": "compleo",
+      "model": "eBox Professional",
+      "modelSlug": "ebox-professional",
+      "name": "Compleo eBox Professional",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 36,
+      "needsReview": true
+    },
+    {
+      "slug": "continental-control-systems-wattnode",
+      "vendor": "continental",
+      "vendorSlug": "continental",
+      "model": "control-systems-wattnode",
+      "modelSlug": "control-systems-wattnode",
+      "name": "continental control-systems-wattnode",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "crompton-integra-1200",
+      "vendor": "crompton",
+      "vendorSlug": "crompton",
+      "model": "integra-1200",
+      "modelSlug": "integra-1200",
+      "name": "crompton integra-1200",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "delab-pqm",
+      "vendor": "delab",
+      "vendorSlug": "delab",
+      "model": "pqm",
+      "modelSlug": "pqm",
+      "name": "delab pqm",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "delta-dpm-520",
+      "vendor": "delta",
+      "vendorSlug": "delta",
+      "model": "dpm-520",
+      "modelSlug": "dpm-520",
+      "name": "delta dpm-520",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "delta-dpm-530",
+      "vendor": "delta",
+      "vendorSlug": "delta",
+      "model": "dpm-530",
+      "modelSlug": "dpm-530",
+      "name": "delta dpm-530",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "dent-instruments-powerscount-3037",
+      "vendor": "dent",
+      "vendorSlug": "dent",
+      "model": "instruments-powerscount-3037",
+      "modelSlug": "instruments-powerscount-3037",
+      "name": "dent instruments-powerscount-3037",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "deye-3p-hybrid-inverter",
+      "vendor": "Deye",
+      "vendorSlug": "deye",
+      "model": "3p hybrid inverter",
+      "modelSlug": "3p-hybrid-inverter",
+      "name": "Deye 3p hybrid inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 15,
+      "needsReview": true
+    },
+    {
+      "slug": "deye-deye",
+      "vendor": "Deye",
+      "vendorSlug": "deye",
+      "model": "Deye",
+      "modelSlug": "deye",
+      "name": "Deye",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 118,
+      "needsReview": true
+    },
+    {
+      "slug": "deye-holding-registers-oeve",
+      "vendor": "Deye",
+      "vendorSlug": "deye",
+      "model": "holding-registers-oeve",
+      "modelSlug": "holding-registers-oeve",
+      "name": "Deye holding-registers-oeve",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 33,
+      "needsReview": true
+    },
+    {
+      "slug": "deye-micro-inverter",
+      "vendor": "Deye",
+      "vendorSlug": "deye",
+      "model": "Micro inverter",
+      "modelSlug": "micro-inverter",
+      "name": "Deye Micro inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 2,
+      "needsReview": true
+    },
+    {
+      "slug": "deye-storage-hybrid-inverter",
+      "vendor": "Deye",
+      "vendorSlug": "deye",
+      "model": "Storage (hybrid) inverter",
+      "modelSlug": "storage-hybrid-inverter",
+      "name": "Deye Storage (hybrid) inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 11,
+      "needsReview": true
+    },
+    {
+      "slug": "deye-string-inverter",
+      "vendor": "Deye",
+      "vendorSlug": "deye",
+      "model": "String inverter",
+      "modelSlug": "string-inverter",
+      "name": "Deye String inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 2,
+      "needsReview": true
+    },
+    {
+      "slug": "dimplex-sole-wasser-warmepumpe-si-11tu",
+      "vendor": "Dimplex",
+      "vendorSlug": "dimplex",
+      "model": "Sole/Wasser-Wärmepumpe SI 11TU",
+      "modelSlug": "sole-wasser-warmepumpe-si-11tu",
+      "name": "Dimplex Sole/Wasser-Wärmepumpe SI 11TU",
+      "equipmentType": "pac",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 49,
+      "needsReview": false
+    },
+    {
+      "slug": "dzg-dvh4013",
+      "vendor": "DZG",
+      "vendorSlug": "dzg",
+      "model": "DVH4013",
+      "modelSlug": "dvh4013",
+      "name": "DZG DVH4013",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 28,
+      "needsReview": true
+    },
+    {
+      "slug": "e3-dc-e3dc",
+      "vendor": "E3/DC",
+      "vendorSlug": "e3-dc",
+      "model": "e3dc",
+      "modelSlug": "e3dc",
+      "name": "E3/DC e3dc",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 5,
+      "needsReview": true
+    },
+    {
+      "slug": "eastron-eastron-sdm72dm-v2",
+      "vendor": "EASTRON",
+      "vendorSlug": "eastron",
+      "model": "Eastron SDM72dm-v2",
+      "modelSlug": "eastron-sdm72dm-v2",
+      "name": "EASTRON Eastron SDM72dm-v2",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 41,
+      "needsReview": true
+    },
+    {
+      "slug": "eastron-input-registers-sdm630modbus",
+      "vendor": "EASTRON",
+      "vendorSlug": "eastron",
+      "model": "input-registers_sdm630Modbus",
+      "modelSlug": "input-registers-sdm630modbus",
+      "name": "EASTRON input-registers_sdm630Modbus",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 85,
+      "needsReview": true
+    },
+    {
+      "slug": "eastron-sdm",
+      "vendor": "Eastron",
+      "vendorSlug": "eastron",
+      "model": "SDM",
+      "modelSlug": "sdm",
+      "name": "Eastron SDM",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 52,
+      "needsReview": true
+    },
+    {
+      "slug": "eastron-sdm-230",
+      "vendor": "Eastron",
+      "vendorSlug": "eastron",
+      "model": "SDM-230",
+      "modelSlug": "sdm-230",
+      "name": "Eastron SDM-230",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 25,
+      "needsReview": true
+    },
+    {
+      "slug": "eastron-sdm-630",
+      "vendor": "Eastron",
+      "vendorSlug": "eastron",
+      "model": "SDM-630",
+      "modelSlug": "sdm-630",
+      "name": "Eastron SDM-630",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 85,
+      "needsReview": true
+    },
+    {
+      "slug": "eastron-sdm120-modbus",
+      "vendor": "Eastron",
+      "vendorSlug": "eastron",
+      "model": "SDM120-Modbus",
+      "modelSlug": "sdm120-modbus",
+      "name": "Eastron SDM120-Modbus",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 2,
+      "needsReview": true
+    },
+    {
+      "slug": "eastron-sdm230",
+      "vendor": "Eastron",
+      "vendorSlug": "eastron",
+      "model": "SDM230",
+      "modelSlug": "sdm230",
+      "name": "Eastron SDM230",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 14,
+      "needsReview": true
+    },
+    {
+      "slug": "eastron-sdm320",
+      "vendor": "eastron",
+      "vendorSlug": "eastron",
+      "model": "sdm320",
+      "modelSlug": "sdm320",
+      "name": "eastron sdm320",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "eastron-sdm630",
+      "vendor": "eastron",
+      "vendorSlug": "eastron",
+      "model": "sdm630",
+      "modelSlug": "sdm630",
+      "name": "eastron sdm630",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "eastron-sdm630-eastron-sdm630",
+      "vendor": "Eastron SDM630",
+      "vendorSlug": "eastron-sdm630",
+      "model": "Eastron SDM630",
+      "modelSlug": "eastron-sdm630",
+      "name": "Eastron SDM630",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 85,
+      "needsReview": true
+    },
+    {
+      "slug": "eastron-sdm72",
+      "vendor": "Eastron",
+      "vendorSlug": "eastron",
+      "model": "SDM72",
+      "modelSlug": "sdm72",
+      "name": "Eastron SDM72",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 4,
+      "needsReview": true
+    },
+    {
+      "slug": "eastron-x96",
+      "vendor": "eastron",
+      "vendorSlug": "eastron",
+      "model": "x96",
+      "modelSlug": "x96",
+      "name": "eastron x96",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "eaton-iq-dp-4000",
+      "vendor": "eaton",
+      "vendorSlug": "eaton",
+      "model": "iq-dp-4000",
+      "modelSlug": "iq-dp-4000",
+      "name": "eaton iq-dp-4000",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "eaton-iq100-series-iq130-iq140-iq150",
+      "vendor": "eaton",
+      "vendorSlug": "eaton",
+      "model": "iq100-series-iq130-iq140-iq150",
+      "modelSlug": "iq100-series-iq130-iq140-iq150",
+      "name": "eaton iq100-series-iq130-iq140-iq150",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "eaton-iq250-iq260-power-meter",
+      "vendor": "eaton",
+      "vendorSlug": "eaton",
+      "model": "iq250-iq260-power-meter",
+      "modelSlug": "iq250-iq260-power-meter",
+      "name": "eaton iq250-iq260-power-meter",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "eaton-power-xpert-meter-pxm-1000",
+      "vendor": "eaton",
+      "vendorSlug": "eaton",
+      "model": "power-xpert-meter-pxm-1000",
+      "modelSlug": "power-xpert-meter-pxm-1000",
+      "name": "eaton power-xpert-meter-pxm-1000",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "eaton-pxm-2000",
+      "vendor": "eaton",
+      "vendorSlug": "eaton",
+      "model": "pxm-2000",
+      "modelSlug": "pxm-2000",
+      "name": "eaton pxm-2000",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "ebyte-me31-axax404",
+      "vendor": "ebyte",
+      "vendorSlug": "ebyte",
+      "model": "ME31-AXAX404",
+      "modelSlug": "me31-axax404",
+      "name": "ebyte ME31-AXAX404",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 8,
+      "needsReview": false
+    },
+    {
+      "slug": "electrex-exa",
+      "vendor": "electrex",
+      "vendorSlug": "electrex",
+      "model": "exa",
+      "modelSlug": "exa",
+      "name": "electrex exa",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "electrex-femto",
+      "vendor": "electrex",
+      "vendorSlug": "electrex",
+      "model": "femto",
+      "modelSlug": "femto",
+      "name": "electrex femto",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "electrex-flash-96",
+      "vendor": "electrex",
+      "vendorSlug": "electrex",
+      "model": "flash-96",
+      "modelSlug": "flash-96",
+      "name": "electrex flash-96",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "electrex-flash-d",
+      "vendor": "electrex",
+      "vendorSlug": "electrex",
+      "model": "flash-d",
+      "modelSlug": "flash-d",
+      "name": "electrex flash-d",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "electro-industries-shark-200",
+      "vendor": "electro",
+      "vendorSlug": "electro",
+      "model": "industries-shark-200",
+      "modelSlug": "industries-shark-200",
+      "name": "electro industries-shark-200",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "electro-industries-shark-250",
+      "vendor": "electro",
+      "vendorSlug": "electro",
+      "model": "industries-shark-250",
+      "modelSlug": "industries-shark-250",
+      "name": "electro industries-shark-250",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "electro-industries-shark-50",
+      "vendor": "electro",
+      "vendorSlug": "electro",
+      "model": "industries-shark-50",
+      "modelSlug": "industries-shark-50",
+      "name": "electro industries-shark-50",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "elmeasure-mps8000-mpu5110",
+      "vendor": "elmeasure",
+      "vendorSlug": "elmeasure",
+      "model": "mps8000-mpu5110",
+      "modelSlug": "mps8000-mpu5110",
+      "name": "elmeasure mps8000-mpu5110",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "elnet-gr-pq-lt-ltp-mc-pic-lte-ltc",
+      "vendor": "elnet",
+      "vendorSlug": "elnet",
+      "model": "gr-pq-lt-ltp-mc-pic-lte-ltc",
+      "modelSlug": "gr-pq-lt-ltp-mc-pic-lte-ltc",
+      "name": "elnet gr-pq-lt-ltp-mc-pic-lte-ltc",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "elspec-eqc-acr",
+      "vendor": "elspec",
+      "vendorSlug": "elspec",
+      "model": "eqc-acr",
+      "modelSlug": "eqc-acr",
+      "name": "elspec eqc-acr",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "elspec-g4400",
+      "vendor": "elspec",
+      "vendorSlug": "elspec",
+      "model": "g4400",
+      "modelSlug": "g4400",
+      "name": "elspec g4400",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "elster-a1140-a1700",
+      "vendor": "elster",
+      "vendorSlug": "elster",
+      "model": "a1140-a1700",
+      "modelSlug": "a1140-a1700",
+      "name": "elster a1140-a1700",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "enerdis-enerium-100-200",
+      "vendor": "enerdis",
+      "vendorSlug": "enerdis",
+      "model": "enerium-100-200",
+      "modelSlug": "enerium-100-200",
+      "name": "enerdis enerium-100-200",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "enerdis-enerium-30",
+      "vendor": "enerdis",
+      "vendorSlug": "enerdis",
+      "model": "enerium-30",
+      "modelSlug": "enerium-30",
+      "name": "enerdis enerium-30",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "enerdis-enerium-50-150",
+      "vendor": "enerdis",
+      "vendorSlug": "enerdis",
+      "model": "enerium-50-150",
+      "modelSlug": "enerium-50-150",
+      "name": "enerdis enerium-50-150",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "enerdis-enerium-power-monitor-100-200-300",
+      "vendor": "enerdis",
+      "vendorSlug": "enerdis",
+      "model": "enerium-power-monitor-100-200-300",
+      "modelSlug": "enerium-power-monitor-100-200-300",
+      "name": "enerdis enerium-power-monitor-100-200-300",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "entes-emm",
+      "vendor": "entes",
+      "vendorSlug": "entes",
+      "model": "emm",
+      "modelSlug": "emm",
+      "name": "entes emm",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "entes-epm-07",
+      "vendor": "entes",
+      "vendorSlug": "entes",
+      "model": "epm-07",
+      "modelSlug": "epm-07",
+      "name": "entes epm-07",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "entes-epr04",
+      "vendor": "entes",
+      "vendorSlug": "entes",
+      "model": "epr04",
+      "modelSlug": "epr04",
+      "name": "entes epr04",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "entes-mpr1-series",
+      "vendor": "entes",
+      "vendorSlug": "entes",
+      "model": "mpr1-series",
+      "modelSlug": "mpr1-series",
+      "name": "entes mpr1-series",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "entes-mpr2-series",
+      "vendor": "entes",
+      "vendorSlug": "entes",
+      "model": "mpr2-series",
+      "modelSlug": "mpr2-series",
+      "name": "entes mpr2-series",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "entes-mpr3-series-mpr4-series",
+      "vendor": "entes",
+      "vendorSlug": "entes",
+      "model": "mpr3-series-mpr4-series",
+      "modelSlug": "mpr3-series-mpr4-series",
+      "name": "entes mpr3-series-mpr4-series",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "entes-mpr60",
+      "vendor": "entes",
+      "vendorSlug": "entes",
+      "model": "mpr60",
+      "modelSlug": "mpr60",
+      "name": "entes mpr60",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "entes-mpr63",
+      "vendor": "entes",
+      "vendorSlug": "entes",
+      "model": "mpr63",
+      "modelSlug": "mpr63",
+      "name": "entes mpr63",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "entes-mpr7-series",
+      "vendor": "entes",
+      "vendorSlug": "entes",
+      "model": "mpr7-series",
+      "modelSlug": "mpr7-series",
+      "name": "entes mpr7-series",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "farnell-iem3100-iem3200",
+      "vendor": "farnell",
+      "vendorSlug": "farnell",
+      "model": "iem3100-iem3200",
+      "modelSlug": "iem3100-iem3200",
+      "name": "farnell iem3100-iem3200",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 49,
+      "needsReview": true
+    },
+    {
+      "slug": "ff-le-03mq",
+      "vendor": "ff",
+      "vendorSlug": "ff",
+      "model": "le-03mq",
+      "modelSlug": "le-03mq",
+      "name": "ff le-03mq",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "finder-7m-24",
+      "vendor": "Finder",
+      "vendorSlug": "finder",
+      "model": "7M.24",
+      "modelSlug": "7m-24",
+      "name": "Finder 7M.24",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 19,
+      "needsReview": true
+    },
+    {
+      "slug": "finder-7m-38",
+      "vendor": "Finder",
+      "vendorSlug": "finder",
+      "model": "7M.38",
+      "modelSlug": "7m-38",
+      "name": "Finder 7M.38",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 35,
+      "needsReview": true
+    },
+    {
+      "slug": "finder-series-7e-7e64-7e68-7e78-7e86",
+      "vendor": "finder",
+      "vendorSlug": "finder",
+      "model": "series-7e-7e64-7e68-7e78-7e86",
+      "modelSlug": "series-7e-7e64-7e68-7e78-7e86",
+      "name": "finder series-7e-7e64-7e68-7e78-7e86",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "finder-typ-7m-finder-typ-7m",
+      "vendor": "Finder Typ 7M",
+      "vendorSlug": "finder-typ-7m",
+      "model": "Finder Typ 7M",
+      "modelSlug": "finder-typ-7m",
+      "name": "Finder Typ 7M",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 93,
+      "needsReview": true
+    },
+    {
+      "slug": "forlong-drt-301m",
+      "vendor": "forlong",
+      "vendorSlug": "forlong",
+      "model": "drt-301m",
+      "modelSlug": "drt-301m",
+      "name": "forlong drt-301m",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "foxess-avocado",
+      "vendor": "FoxESS",
+      "vendorSlug": "foxess",
+      "model": "Avocado",
+      "modelSlug": "avocado",
+      "name": "FoxESS Avocado",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 13,
+      "needsReview": true
+    },
+    {
+      "slug": "foxess-h1-series-hybrid-inverter",
+      "vendor": "FoxESS",
+      "vendorSlug": "foxess",
+      "model": "H1 Series Hybrid Inverter",
+      "modelSlug": "h1-series-hybrid-inverter",
+      "name": "FoxESS H1 Series Hybrid Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 4,
+      "needsReview": true
+    },
+    {
+      "slug": "foxess-h3-pro-smart-series-hybrid-inverter",
+      "vendor": "FoxESS",
+      "vendorSlug": "foxess",
+      "model": "H3-Pro/Smart Series Hybrid Inverter",
+      "modelSlug": "h3-pro-smart-series-hybrid-inverter",
+      "name": "FoxESS H3-Pro/Smart Series Hybrid Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 12,
+      "needsReview": true
+    },
+    {
+      "slug": "foxess-h3-series-hybrid-inverter",
+      "vendor": "FoxESS",
+      "vendorSlug": "foxess",
+      "model": "H3 Series Hybrid Inverter",
+      "modelSlug": "h3-series-hybrid-inverter",
+      "name": "FoxESS H3 Series Hybrid Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 8,
+      "needsReview": true
+    },
+    {
+      "slug": "frako-ema1496",
+      "vendor": "frako",
+      "vendorSlug": "frako",
+      "model": "ema1496",
+      "modelSlug": "ema1496",
+      "name": "frako ema1496",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "froling-gmbh-bwp300-pv",
+      "vendor": "Fröling GmbH",
+      "vendorSlug": "froling-gmbh",
+      "model": "BWP300 PV",
+      "modelSlug": "bwp300-pv",
+      "name": "Fröling GmbH BWP300 PV",
+      "equipmentType": "chaudiere",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 44,
+      "needsReview": false
+    },
+    {
+      "slug": "fronius-gen24-register",
+      "vendor": "Fronius",
+      "vendorSlug": "fronius",
+      "model": "Gen24 register",
+      "modelSlug": "gen24-register",
+      "name": "Fronius Gen24 register",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 44,
+      "needsReview": true
+    },
+    {
+      "slug": "fronius-gen24-series-dynamic",
+      "vendor": "Fronius",
+      "vendorSlug": "fronius",
+      "model": "GEN24 Series Dynamic",
+      "modelSlug": "gen24-series-dynamic",
+      "name": "Fronius GEN24 Series Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 37,
+      "needsReview": true
+    },
+    {
+      "slug": "fronius-inverter-110-111",
+      "vendor": "fronius",
+      "vendorSlug": "fronius",
+      "model": "inverter-110-111",
+      "modelSlug": "inverter-110-111",
+      "name": "fronius inverter-110-111",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "fronius-power-meter-210-211",
+      "vendor": "fronius",
+      "vendorSlug": "fronius",
+      "model": "power-meter-210-211",
+      "modelSlug": "power-meter-210-211",
+      "name": "fronius power-meter-210-211",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "fronius-primo-4",
+      "vendor": "fronius",
+      "vendorSlug": "fronius",
+      "model": "primo-4",
+      "modelSlug": "primo-4",
+      "name": "fronius primo-4",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "fronius-primo-5",
+      "vendor": "fronius",
+      "vendorSlug": "fronius",
+      "model": "primo-5",
+      "modelSlug": "primo-5",
+      "name": "fronius primo-5",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "fronius-symo-10",
+      "vendor": "fronius",
+      "vendorSlug": "fronius",
+      "model": "symo-10",
+      "modelSlug": "symo-10",
+      "name": "fronius symo-10",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "fronius-symo-20",
+      "vendor": "fronius",
+      "vendorSlug": "fronius",
+      "model": "symo-20",
+      "modelSlug": "symo-20",
+      "name": "fronius symo-20",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "fronius-symo-6",
+      "vendor": "fronius",
+      "vendorSlug": "fronius",
+      "model": "symo-6",
+      "modelSlug": "symo-6",
+      "name": "fronius symo-6",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "ge-epm-5100",
+      "vendor": "ge",
+      "vendorSlug": "ge",
+      "model": "epm-5100",
+      "modelSlug": "epm-5100",
+      "name": "ge epm-5100",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 80,
+      "needsReview": true
+    },
+    {
+      "slug": "ge-epm-5300",
+      "vendor": "ge",
+      "vendorSlug": "ge",
+      "model": "epm-5300",
+      "modelSlug": "epm-5300",
+      "name": "ge epm-5300",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "ge-epm-6000",
+      "vendor": "ge",
+      "vendorSlug": "ge",
+      "model": "epm-6000",
+      "modelSlug": "epm-6000",
+      "name": "ge epm-6000",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "ge-epm-7000-epm-7100",
+      "vendor": "ge",
+      "vendorSlug": "ge",
+      "model": "epm-7000-epm-7100",
+      "modelSlug": "epm-7000-epm-7100",
+      "name": "ge epm-7000-epm-7100",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "ginlong-solis-hybrid-inverter-rhi-series",
+      "vendor": "Ginlong",
+      "vendorSlug": "ginlong",
+      "model": "Solis Hybrid Inverter (RHI series)",
+      "modelSlug": "solis-hybrid-inverter-rhi-series",
+      "name": "Ginlong Solis Hybrid Inverter (RHI series)",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 13,
+      "needsReview": true
+    },
+    {
+      "slug": "ginlong-solis-hybrid-inverter-s-series",
+      "vendor": "Ginlong",
+      "vendorSlug": "ginlong",
+      "model": "Solis Hybrid Inverter (S Series)",
+      "modelSlug": "solis-hybrid-inverter-s-series",
+      "name": "Ginlong Solis Hybrid Inverter (S Series)",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 14,
+      "needsReview": true
+    },
+    {
+      "slug": "ginlong-solis-inverter",
+      "vendor": "Ginlong",
+      "vendorSlug": "ginlong",
+      "model": "Solis Inverter",
+      "modelSlug": "solis-inverter",
+      "name": "Ginlong Solis Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 4,
+      "needsReview": true
+    },
+    {
+      "slug": "ginlong-solis-pv",
+      "vendor": "ginlong",
+      "vendorSlug": "ginlong",
+      "model": "solis-pv",
+      "modelSlug": "solis-pv",
+      "name": "ginlong solis-pv",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "goodwe-et-eh-bh-bt-hybrid-inverter",
+      "vendor": "GoodWe",
+      "vendorSlug": "goodwe",
+      "model": "ET/EH/BH/BT Hybrid Inverter",
+      "modelSlug": "et-eh-bh-bt-hybrid-inverter",
+      "name": "GoodWe ET/EH/BH/BT Hybrid Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 6,
+      "needsReview": true
+    },
+    {
+      "slug": "goodwe-modbus-protokol-fur-energy-storage-inverter",
+      "vendor": "GoodWe",
+      "vendorSlug": "goodwe",
+      "model": "Modbus Protokol für Energy Storage Inverter",
+      "modelSlug": "modbus-protokol-fur-energy-storage-inverter",
+      "name": "GoodWe Modbus Protokol für Energy Storage Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 2093,
+      "needsReview": true
+    },
+    {
+      "slug": "growatt-mic-2500tl-x",
+      "vendor": "Growatt",
+      "vendorSlug": "growatt",
+      "model": "MIC 2500TL-X",
+      "modelSlug": "mic-2500tl-x",
+      "name": "Growatt MIC 2500TL-X",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 60,
+      "needsReview": true
+    },
+    {
+      "slug": "growatt-min-6000tl-xh",
+      "vendor": "Growatt",
+      "vendorSlug": "growatt",
+      "model": "MIN 6000TL-XH",
+      "modelSlug": "min-6000tl-xh",
+      "name": "Growatt MIN 6000TL-XH",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 77,
+      "needsReview": true
+    },
+    {
+      "slug": "growatt-min-mod-max-series-dynamic",
+      "vendor": "Growatt",
+      "vendorSlug": "growatt",
+      "model": "MIN/MOD/MAX Series Dynamic",
+      "modelSlug": "min-mod-max-series-dynamic",
+      "name": "Growatt MIN/MOD/MAX Series Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 77,
+      "needsReview": true
+    },
+    {
+      "slug": "growatt-mod-10ktl3-xh",
+      "vendor": "Growatt",
+      "vendorSlug": "growatt",
+      "model": "MOD 10KTL3-XH",
+      "modelSlug": "mod-10ktl3-xh",
+      "name": "Growatt MOD 10KTL3-XH",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 77,
+      "needsReview": true
+    },
+    {
+      "slug": "growatt-mod-6000tl-x",
+      "vendor": "Growatt",
+      "vendorSlug": "growatt",
+      "model": "MOD 6000TL-X",
+      "modelSlug": "mod-6000tl-x",
+      "name": "Growatt MOD 6000TL-X",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 77,
+      "needsReview": true
+    },
+    {
+      "slug": "growatt-sph3600tl-bl-up",
+      "vendor": "Growatt",
+      "vendorSlug": "growatt",
+      "model": "SPH3600TL BL_UP",
+      "modelSlug": "sph3600tl-bl-up",
+      "name": "Growatt SPH3600TL BL_UP",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 31,
+      "needsReview": true
+    },
+    {
+      "slug": "growatt-tl-x-h-hybrid-inverter",
+      "vendor": "Growatt",
+      "vendorSlug": "growatt",
+      "model": "TL-X(H) Hybrid Inverter",
+      "modelSlug": "tl-x-h-hybrid-inverter",
+      "name": "Growatt TL-X(H) Hybrid Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 12,
+      "needsReview": true
+    },
+    {
+      "slug": "hager-ecn-ecp-ect-ecm-ecr-eca",
+      "vendor": "hager",
+      "vendorSlug": "hager",
+      "model": "ecn-ecp-ect-ecm-ecr-eca",
+      "modelSlug": "ecn-ecp-ect-ecm-ecr-eca",
+      "name": "hager ecn-ecp-ect-ecm-ecr-eca",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "herholdt-control-ecsem-ecsan-ecspm",
+      "vendor": "herholdt",
+      "vendorSlug": "herholdt",
+      "model": "control-ecsem-ecsan-ecspm",
+      "modelSlug": "control-ecsem-ecsan-ecspm",
+      "name": "herholdt control-ecsem-ecsan-ecspm",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 49,
+      "needsReview": true
+    },
+    {
+      "slug": "herholdt-controls-ecs",
+      "vendor": "herholdt",
+      "vendorSlug": "herholdt",
+      "model": "controls-ecs",
+      "modelSlug": "controls-ecs",
+      "name": "herholdt controls-ecs",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "herholdt-controls-m1pro-m3pro",
+      "vendor": "herholdt",
+      "vendorSlug": "herholdt",
+      "model": "controls-m1pro-m3pro",
+      "modelSlug": "controls-m1pro-m3pro",
+      "name": "herholdt controls-m1pro-m3pro",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "heyuan-dz81-dzs310",
+      "vendor": "heyuan",
+      "vendorSlug": "heyuan",
+      "model": "dz81-dzs310",
+      "modelSlug": "dz81-dzs310",
+      "name": "heyuan dz81-dzs310",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "heyuan-dzs310",
+      "vendor": "heyuan",
+      "vendorSlug": "heyuan",
+      "model": "dzs310",
+      "modelSlug": "dzs310",
+      "name": "heyuan dzs310",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "heyuan-dzs900",
+      "vendor": "heyuan",
+      "vendorSlug": "heyuan",
+      "model": "dzs900",
+      "modelSlug": "dzs900",
+      "name": "heyuan dzs900",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "heyuan-ma3ui5c",
+      "vendor": "heyuan",
+      "vendorSlug": "heyuan",
+      "model": "ma3ui5c",
+      "modelSlug": "ma3ui5c",
+      "name": "heyuan ma3ui5c",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "hiking-ddm18sd",
+      "vendor": "Hiking",
+      "vendorSlug": "hiking",
+      "model": "DDM18SD",
+      "modelSlug": "ddm18sd",
+      "name": "Hiking DDM18SD",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 8,
+      "needsReview": true
+    },
+    {
+      "slug": "huawei-emma",
+      "vendor": "Huawei",
+      "vendorSlug": "huawei",
+      "model": "EMMA",
+      "modelSlug": "emma",
+      "name": "Huawei EMMA",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 16,
+      "needsReview": true
+    },
+    {
+      "slug": "huawei-huawei-sun2000-hybrid",
+      "vendor": "Huawei",
+      "vendorSlug": "huawei",
+      "model": "huawei-sun2000-hybrid",
+      "modelSlug": "huawei-sun2000-hybrid",
+      "name": "Huawei huawei-sun2000-hybrid",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 10,
+      "needsReview": true
+    },
+    {
+      "slug": "huawei-huawei-sun2000-inverter",
+      "vendor": "Huawei",
+      "vendorSlug": "huawei",
+      "model": "huawei-sun2000-inverter",
+      "modelSlug": "huawei-sun2000-inverter",
+      "name": "Huawei huawei-sun2000-inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 2,
+      "needsReview": true
+    },
+    {
+      "slug": "huawei-smartlogger",
+      "vendor": "Huawei",
+      "vendorSlug": "huawei",
+      "model": "SmartLogger",
+      "modelSlug": "smartlogger",
+      "name": "Huawei SmartLogger",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 10,
+      "needsReview": true
+    },
+    {
+      "slug": "huawei-solar-inverter",
+      "vendor": "huawei",
+      "vendorSlug": "huawei",
+      "model": "solar-inverter",
+      "modelSlug": "solar-inverter",
+      "name": "huawei solar-inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "husdata-h60",
+      "vendor": "Husdata",
+      "vendorSlug": "husdata",
+      "model": "H60",
+      "modelSlug": "h60",
+      "name": "Husdata H60",
+      "equipmentType": "pac",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 9,
+      "needsReview": false
+    },
+    {
+      "slug": "ime-mpm3pm",
+      "vendor": "IME",
+      "vendorSlug": "ime",
+      "model": "MPM3PM",
+      "modelSlug": "mpm3pm",
+      "name": "IME MPM3PM",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 23,
+      "needsReview": true
+    },
+    {
+      "slug": "ime-nemo-72",
+      "vendor": "ime",
+      "vendorSlug": "ime",
+      "model": "nemo-72",
+      "modelSlug": "nemo-72",
+      "name": "ime nemo-72",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "ime-nemo-96",
+      "vendor": "ime",
+      "vendorSlug": "ime",
+      "model": "nemo-96",
+      "modelSlug": "nemo-96",
+      "name": "ime nemo-96",
+      "equipmentType": "gateway",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "ime-nemo-d4-le",
+      "vendor": "ime",
+      "vendorSlug": "ime",
+      "model": "nemo-d4-le",
+      "modelSlug": "nemo-d4-le",
+      "name": "ime nemo-d4-le",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "ime-nemo-d4-lp",
+      "vendor": "ime",
+      "vendorSlug": "ime",
+      "model": "nemo-d4-lp",
+      "modelSlug": "nemo-d4-lp",
+      "name": "ime nemo-d4-lp",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "inepro-metering-pro1",
+      "vendor": "inepro",
+      "vendorSlug": "inepro",
+      "model": "metering-pro1",
+      "modelSlug": "metering-pro1",
+      "name": "inepro metering-pro1",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "inepro-metering-pro2",
+      "vendor": "inepro",
+      "vendorSlug": "inepro",
+      "model": "metering-pro2",
+      "modelSlug": "metering-pro2",
+      "name": "inepro metering-pro2",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "inepro-metering-pro380",
+      "vendor": "inepro",
+      "vendorSlug": "inepro",
+      "model": "metering-pro380",
+      "modelSlug": "metering-pro380",
+      "name": "inepro metering-pro380",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "inepro-pro380",
+      "vendor": "Inepro",
+      "vendorSlug": "inepro",
+      "model": "PRO380",
+      "modelSlug": "pro380",
+      "name": "Inepro PRO380",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 61,
+      "needsReview": true
+    },
+    {
+      "slug": "integra-ci3-ri3",
+      "vendor": "integra",
+      "vendorSlug": "integra",
+      "model": "ci3-ri3",
+      "modelSlug": "ci3-ri3",
+      "name": "integra ci3-ri3",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "intilion-scalebloc-energy",
+      "vendor": "INTILION",
+      "vendorSlug": "intilion",
+      "model": "scalebloc energy",
+      "modelSlug": "scalebloc-energy",
+      "name": "INTILION scalebloc energy",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 11,
+      "needsReview": true
+    },
+    {
+      "slug": "iskra-ecs3",
+      "vendor": "iskra",
+      "vendorSlug": "iskra",
+      "model": "ecs3",
+      "modelSlug": "ecs3",
+      "name": "iskra ecs3",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "iskra-mt880-cm-f3e",
+      "vendor": "iskra",
+      "vendorSlug": "iskra",
+      "model": "mt880-cm-f3e",
+      "modelSlug": "mt880-cm-f3e",
+      "name": "iskra mt880-cm-f3e",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "janitza-b21-b23-b24",
+      "vendor": "janitza",
+      "vendorSlug": "janitza",
+      "model": "b21-b23-b24",
+      "modelSlug": "b21-b23-b24",
+      "name": "janitza b21-b23-b24",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "janitza-ecs",
+      "vendor": "janitza",
+      "vendorSlug": "janitza",
+      "model": "ecs",
+      "modelSlug": "ecs",
+      "name": "janitza ecs",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "janitza-umg-series",
+      "vendor": "Janitza",
+      "vendorSlug": "janitza",
+      "model": "UMG series",
+      "modelSlug": "umg-series",
+      "name": "Janitza UMG series",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 22,
+      "needsReview": true
+    },
+    {
+      "slug": "janitza-umg103",
+      "vendor": "janitza",
+      "vendorSlug": "janitza",
+      "model": "umg103",
+      "modelSlug": "umg103",
+      "name": "janitza umg103",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "janitza-umg104",
+      "vendor": "janitza",
+      "vendorSlug": "janitza",
+      "model": "umg104",
+      "modelSlug": "umg104",
+      "name": "janitza umg104",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "janitza-umg511",
+      "vendor": "janitza",
+      "vendorSlug": "janitza",
+      "model": "umg511",
+      "modelSlug": "umg511",
+      "name": "janitza umg511",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "janitza-umg604",
+      "vendor": "janitza",
+      "vendorSlug": "janitza",
+      "model": "umg604",
+      "modelSlug": "umg604",
+      "name": "janitza umg604",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "janitza-umg605",
+      "vendor": "janitza",
+      "vendorSlug": "janitza",
+      "model": "umg605",
+      "modelSlug": "umg605",
+      "name": "janitza umg605",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "janitza-umg96",
+      "vendor": "janitza",
+      "vendorSlug": "janitza",
+      "model": "umg96",
+      "modelSlug": "umg96",
+      "name": "janitza umg96",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "jiangsu-sfere-electric-d1900",
+      "vendor": "jiangsu",
+      "vendorSlug": "jiangsu",
+      "model": "sfere-electric-d1900",
+      "modelSlug": "sfere-electric-d1900",
+      "name": "jiangsu sfere-electric-d1900",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "jiangsu-sfere-electric-d1900-3-phases",
+      "vendor": "jiangsu",
+      "vendorSlug": "jiangsu",
+      "model": "sfere-electric-d1900-3-phases",
+      "modelSlug": "sfere-electric-d1900-3-phases",
+      "name": "jiangsu sfere-electric-d1900-3-phases",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "jiangsu-sfere-electric-sfere-720",
+      "vendor": "jiangsu",
+      "vendorSlug": "jiangsu",
+      "model": "sfere-electric-sfere-720",
+      "modelSlug": "sfere-electric-sfere-720",
+      "name": "jiangsu sfere-electric-sfere-720",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kaco-new-energy-holding-registers-blueplanet-nx3-m2",
+      "vendor": "KACO new energy",
+      "vendorSlug": "kaco-new-energy",
+      "model": "holding-registers_blueplanet_nx3_m2",
+      "modelSlug": "holding-registers-blueplanet-nx3-m2",
+      "name": "KACO new energy holding-registers_blueplanet_nx3_m2",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 45,
+      "needsReview": true
+    },
+    {
+      "slug": "kaco-new-energy-holding-registers-blueplanet-nx3-m2-multidevice",
+      "vendor": "KACO new energy",
+      "vendorSlug": "kaco-new-energy",
+      "model": "holding-registers_blueplanet_nx3_m2-multidevice",
+      "modelSlug": "holding-registers-blueplanet-nx3-m2-multidevice",
+      "name": "KACO new energy holding-registers_blueplanet_nx3_m2-multidevice",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 45,
+      "needsReview": true
+    },
+    {
+      "slug": "kael-energy-01",
+      "vendor": "kael",
+      "vendorSlug": "kael",
+      "model": "energy-01",
+      "modelSlug": "energy-01",
+      "name": "kael energy-01",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kael-energy-02-pc-96",
+      "vendor": "kael",
+      "vendorSlug": "kael",
+      "model": "energy-02-pc-96",
+      "modelSlug": "energy-02-pc-96",
+      "name": "kael energy-02-pc-96",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kael-multimet-01-pc-96",
+      "vendor": "kael",
+      "vendorSlug": "kael",
+      "model": "multimet-01-pc-96",
+      "modelSlug": "multimet-01-pc-96",
+      "name": "kael multimet-01-pc-96",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kael-multiser-01-96-multiser-11-96",
+      "vendor": "kael",
+      "vendorSlug": "kael",
+      "model": "multiser-01-96-multiser-11-96",
+      "modelSlug": "multiser-01-96-multiser-11-96",
+      "name": "kael multiser-01-96-multiser-11-96",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kael-multiser-01-multiser-11-multiser-13",
+      "vendor": "kael",
+      "vendorSlug": "kael",
+      "model": "multiser-01-multiser-11-multiser-13",
+      "modelSlug": "multiser-01-multiser-11-multiser-13",
+      "name": "kael multiser-01-multiser-11-multiser-13",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kael-multiser-02-multiser-21",
+      "vendor": "kael",
+      "vendorSlug": "kael",
+      "model": "multiser-02-multiser-21",
+      "modelSlug": "multiser-02-multiser-21",
+      "name": "kael multiser-02-multiser-21",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kael-multiser-03-pc-tft",
+      "vendor": "kael",
+      "vendorSlug": "kael",
+      "model": "multiser-03-pc-tft",
+      "modelSlug": "multiser-03-pc-tft",
+      "name": "kael multiser-03-pc-tft",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kael-multiser-04-pc-tft",
+      "vendor": "kael",
+      "vendorSlug": "kael",
+      "model": "multiser-04-pc-tft",
+      "modelSlug": "multiser-04-pc-tft",
+      "name": "kael multiser-04-pc-tft",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kael-multiser-05-multiser-52-multiser-53",
+      "vendor": "kael",
+      "vendorSlug": "kael",
+      "model": "multiser-05-multiser-52-multiser-53",
+      "modelSlug": "multiser-05-multiser-52-multiser-53",
+      "name": "kael multiser-05-multiser-52-multiser-53",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kael-varkombi-18-pc-tft",
+      "vendor": "kael",
+      "vendorSlug": "kael",
+      "model": "varkombi-18-pc-tft",
+      "modelSlug": "varkombi-18-pc-tft",
+      "name": "kael varkombi-18-pc-tft",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "klemsan-klea-110p-ecras-powys",
+      "vendor": "klemsan",
+      "vendorSlug": "klemsan",
+      "model": "klea-110p-ecras-powys",
+      "modelSlug": "klea-110p-ecras-powys",
+      "name": "klemsan klea-110p-ecras-powys",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "klemsan-klea-220p-powys-3121",
+      "vendor": "klemsan",
+      "vendorSlug": "klemsan",
+      "model": "klea-220p-powys-3121",
+      "modelSlug": "klea-220p-powys-3121",
+      "name": "klemsan klea-220p-powys-3121",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "klemsan-rapidus",
+      "vendor": "klemsan",
+      "vendorSlug": "klemsan",
+      "model": "rapidus",
+      "modelSlug": "rapidus",
+      "name": "klemsan rapidus",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kohler-decision-maker-340",
+      "vendor": "kohler",
+      "vendorSlug": "kohler",
+      "model": "decision-maker-340",
+      "modelSlug": "decision-maker-340",
+      "name": "kohler decision-maker-340",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kohler-decision-maker-3500",
+      "vendor": "kohler",
+      "vendorSlug": "kohler",
+      "model": "decision-maker-3500",
+      "modelSlug": "decision-maker-3500",
+      "name": "kohler decision-maker-3500",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kohler-decision-maker-550",
+      "vendor": "kohler",
+      "vendorSlug": "kohler",
+      "model": "decision-maker-550",
+      "modelSlug": "decision-maker-550",
+      "name": "kohler decision-maker-550",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kohler-decision-maker-6000",
+      "vendor": "kohler",
+      "vendorSlug": "kohler",
+      "model": "decision-maker-6000",
+      "modelSlug": "decision-maker-6000",
+      "name": "kohler decision-maker-6000",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kohler-m340",
+      "vendor": "kohler",
+      "vendorSlug": "kohler",
+      "model": "m340",
+      "modelSlug": "m340",
+      "name": "kohler m340",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kohler-mpac-1000",
+      "vendor": "kohler",
+      "vendorSlug": "kohler",
+      "model": "mpac-1000",
+      "modelSlug": "mpac-1000",
+      "name": "kohler mpac-1000",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kohler-mpac-1500",
+      "vendor": "kohler",
+      "vendorSlug": "kohler",
+      "model": "mpac-1500",
+      "modelSlug": "mpac-1500",
+      "name": "kohler mpac-1500",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kostal-kostal-smart-energy-meter",
+      "vendor": "kostal",
+      "vendorSlug": "kostal",
+      "model": "kostal-smart-energy-meter",
+      "modelSlug": "kostal-smart-energy-meter",
+      "name": "kostal kostal-smart-energy-meter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "kostal-piko-iq-plenticore",
+      "vendor": "kostal",
+      "vendorSlug": "kostal",
+      "model": "piko-iq-plenticore",
+      "modelSlug": "piko-iq-plenticore",
+      "name": "kostal piko-iq-plenticore",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "lambda-wp-lambda-wp",
+      "vendor": "Lambda-WP",
+      "vendorSlug": "lambda-wp",
+      "model": "Lambda-WP",
+      "modelSlug": "lambda-wp",
+      "name": "Lambda-WP",
+      "equipmentType": "pac",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 72,
+      "needsReview": true
+    },
+    {
+      "slug": "landis-gyr-e650-gateway-meter-1",
+      "vendor": "landis",
+      "vendorSlug": "landis",
+      "model": "gyr-e650-gateway-meter-1",
+      "modelSlug": "gyr-e650-gateway-meter-1",
+      "name": "landis gyr-e650-gateway-meter-1",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "landis-gyr-e650-gateway-meter-2",
+      "vendor": "landis",
+      "vendorSlug": "landis",
+      "model": "gyr-e650-gateway-meter-2",
+      "modelSlug": "gyr-e650-gateway-meter-2",
+      "name": "landis gyr-e650-gateway-meter-2",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "landis-gyr-e650-gateway-meter-3",
+      "vendor": "landis",
+      "vendorSlug": "landis",
+      "model": "gyr-e650-gateway-meter-3",
+      "modelSlug": "gyr-e650-gateway-meter-3",
+      "name": "landis gyr-e650-gateway-meter-3",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "landis-gyr-e650-gateway-meter-4",
+      "vendor": "landis",
+      "vendorSlug": "landis",
+      "model": "gyr-e650-gateway-meter-4",
+      "modelSlug": "gyr-e650-gateway-meter-4",
+      "name": "landis gyr-e650-gateway-meter-4",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "larsen-toubro-vega",
+      "vendor": "larsen",
+      "vendorSlug": "larsen",
+      "model": "toubro-vega",
+      "modelSlug": "toubro-vega",
+      "name": "larsen toubro-vega",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 56,
+      "needsReview": true
+    },
+    {
+      "slug": "lifasa-master-control-var",
+      "vendor": "lifasa",
+      "vendorSlug": "lifasa",
+      "model": "master-control-var",
+      "modelSlug": "master-control-var",
+      "name": "lifasa master-control-var",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "lifasa-master-control-var-fast",
+      "vendor": "lifasa",
+      "vendorSlug": "lifasa",
+      "model": "master-control-var-fast",
+      "modelSlug": "master-control-var-fast",
+      "name": "lifasa master-control-var-fast",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "lifasa-mca-plus-ii",
+      "vendor": "lifasa",
+      "vendorSlug": "lifasa",
+      "model": "mca-plus-ii",
+      "modelSlug": "mca-plus-ii",
+      "name": "lifasa mca-plus-ii",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "lovato-dme",
+      "vendor": "lovato",
+      "vendorSlug": "lovato",
+      "model": "dme",
+      "modelSlug": "dme",
+      "name": "lovato dme",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "lovato-dmg210-dmg300-dmg700-dmg800",
+      "vendor": "lovato",
+      "vendorSlug": "lovato",
+      "model": "dmg210-dmg300-dmg700-dmg800",
+      "modelSlug": "dmg210-dmg300-dmg700-dmg800",
+      "name": "lovato dmg210-dmg300-dmg700-dmg800",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "lovato-dmg610",
+      "vendor": "Lovato",
+      "vendorSlug": "lovato",
+      "model": "DMG610",
+      "modelSlug": "dmg610",
+      "name": "Lovato DMG610",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 32,
+      "needsReview": true
+    },
+    {
+      "slug": "lovato-dmk40",
+      "vendor": "lovato",
+      "vendorSlug": "lovato",
+      "model": "dmk40",
+      "modelSlug": "dmk40",
+      "name": "lovato dmk40",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "lovato-electric-rgk800",
+      "vendor": "lovato",
+      "vendorSlug": "lovato",
+      "model": "electric-rgk800",
+      "modelSlug": "electric-rgk800",
+      "name": "lovato electric-rgk800",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "m-tec-energy-butler-gen2",
+      "vendor": "M-TEC",
+      "vendorSlug": "m-tec",
+      "model": "Energy Butler GEN2",
+      "modelSlug": "energy-butler-gen2",
+      "name": "M-TEC Energy Butler GEN2",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 4,
+      "needsReview": true
+    },
+    {
+      "slug": "m-tec-energy-butler-gen3",
+      "vendor": "M-TEC",
+      "vendorSlug": "m-tec",
+      "model": "Energy Butler GEN3",
+      "modelSlug": "energy-butler-gen3",
+      "name": "M-TEC Energy Butler GEN3",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 4,
+      "needsReview": true
+    },
+    {
+      "slug": "marstek-jupiter-c-plus-battery-storage",
+      "vendor": "Marstek",
+      "vendorSlug": "marstek",
+      "model": "Jupiter C Plus Battery Storage",
+      "modelSlug": "jupiter-c-plus-battery-storage",
+      "name": "Marstek Jupiter C Plus Battery Storage",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 6,
+      "needsReview": true
+    },
+    {
+      "slug": "marstek-venus-a",
+      "vendor": "Marstek",
+      "vendorSlug": "marstek",
+      "model": "Venus A",
+      "modelSlug": "venus-a",
+      "name": "Marstek Venus A",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 7,
+      "needsReview": true
+    },
+    {
+      "slug": "marstek-venus-d",
+      "vendor": "Marstek",
+      "vendorSlug": "marstek",
+      "model": "Venus D",
+      "modelSlug": "venus-d",
+      "name": "Marstek Venus D",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 7,
+      "needsReview": true
+    },
+    {
+      "slug": "marstek-venus-e",
+      "vendor": "Marstek",
+      "vendorSlug": "marstek",
+      "model": "Venus E",
+      "modelSlug": "venus-e",
+      "name": "Marstek Venus E",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 3,
+      "needsReview": true
+    },
+    {
+      "slug": "marstek-venus-e-gen-3-0",
+      "vendor": "Marstek",
+      "vendorSlug": "marstek",
+      "model": "Venus E Gen 3.0",
+      "modelSlug": "venus-e-gen-3-0",
+      "name": "Marstek Venus E Gen 3.0",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 3,
+      "needsReview": true
+    },
+    {
+      "slug": "masibus-pm2160-3p3w",
+      "vendor": "masibus",
+      "vendorSlug": "masibus",
+      "model": "pm2160-3p3w",
+      "modelSlug": "pm2160-3p3w",
+      "name": "masibus pm2160-3p3w",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "masibus-pm2160-3p4w",
+      "vendor": "masibus",
+      "vendorSlug": "masibus",
+      "model": "pm2160-3p4w",
+      "modelSlug": "pm2160-3p4w",
+      "name": "masibus pm2160-3p4w",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "meatrol-me237",
+      "vendor": "meatrol",
+      "vendorSlug": "meatrol",
+      "model": "me237",
+      "modelSlug": "me237",
+      "name": "meatrol me237",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "meatrol-me437",
+      "vendor": "meatrol",
+      "vendorSlug": "meatrol",
+      "model": "me437",
+      "modelSlug": "me437",
+      "name": "meatrol me437",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "meatrol-me631",
+      "vendor": "meatrol",
+      "vendorSlug": "meatrol",
+      "model": "me631",
+      "modelSlug": "me631",
+      "name": "meatrol me631",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "meatrol-mp440",
+      "vendor": "meatrol",
+      "vendorSlug": "meatrol",
+      "model": "mp440",
+      "modelSlug": "mp440",
+      "name": "meatrol mp440",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "meltem-meltem-default",
+      "vendor": "Meltem",
+      "vendorSlug": "meltem",
+      "model": "meltem_default",
+      "modelSlug": "meltem-default",
+      "name": "Meltem meltem_default",
+      "equipmentType": "vmc",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 19,
+      "needsReview": true
+    },
+    {
+      "slug": "meltem-meltem-default-f",
+      "vendor": "Meltem",
+      "vendorSlug": "meltem",
+      "model": "meltem_default_F",
+      "modelSlug": "meltem-default-f",
+      "name": "Meltem meltem_default_F",
+      "equipmentType": "vmc",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 21,
+      "needsReview": true
+    },
+    {
+      "slug": "meltem-meltem-default-fc",
+      "vendor": "Meltem",
+      "vendorSlug": "meltem",
+      "model": "meltem_default_FC",
+      "modelSlug": "meltem-default-fc",
+      "name": "Meltem meltem_default_FC",
+      "equipmentType": "vmc",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 23,
+      "needsReview": true
+    },
+    {
+      "slug": "meltem-meltem-optional-config",
+      "vendor": "Meltem",
+      "vendorSlug": "meltem",
+      "model": "meltem_optional_config",
+      "modelSlug": "meltem-optional-config",
+      "name": "Meltem meltem_optional_config",
+      "equipmentType": "vmc",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 11,
+      "needsReview": true
+    },
+    {
+      "slug": "mikro-dpm680",
+      "vendor": "mikro",
+      "vendorSlug": "mikro",
+      "model": "dpm680",
+      "modelSlug": "dpm680",
+      "name": "mikro dpm680",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "mikro-pfrlcd",
+      "vendor": "mikro",
+      "vendorSlug": "mikro",
+      "model": "pfrlcd",
+      "modelSlug": "pfrlcd",
+      "name": "mikro pfrlcd",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "my-pv-wifi-meter",
+      "vendor": "my-PV",
+      "vendorSlug": "my-pv",
+      "model": "WiFi Meter",
+      "modelSlug": "wifi-meter",
+      "name": "my-PV WiFi Meter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 8,
+      "needsReview": true
+    },
+    {
+      "slug": "northern-design-cube-350-cube-400-rail-350-modbus",
+      "vendor": "northern",
+      "vendorSlug": "northern",
+      "model": "design-cube-350-cube-400-rail-350-modbus",
+      "modelSlug": "design-cube-350-cube-400-rail-350-modbus",
+      "name": "northern design-cube-350-cube-400-rail-350-modbus",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "northern-design-multicube-modbus",
+      "vendor": "northern",
+      "vendorSlug": "northern",
+      "model": "design-multicube-modbus",
+      "modelSlug": "design-multicube-modbus",
+      "name": "northern design-multicube-modbus",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "orno-or-we-504-1p",
+      "vendor": "Orno",
+      "vendorSlug": "orno",
+      "model": "OR-WE-504 (1P)",
+      "modelSlug": "or-we-504-1p",
+      "name": "Orno OR-WE-504 (1P)",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 9,
+      "needsReview": true
+    },
+    {
+      "slug": "orno-or-we-525-1p",
+      "vendor": "Orno",
+      "vendorSlug": "orno",
+      "model": "OR-WE-525 (1P)",
+      "modelSlug": "or-we-525-1p",
+      "name": "Orno OR-WE-525 (1P)",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 37,
+      "needsReview": true
+    },
+    {
+      "slug": "orno-we-514-515-1p",
+      "vendor": "Orno",
+      "vendorSlug": "orno",
+      "model": "WE-514/515 (1P)",
+      "modelSlug": "we-514-515-1p",
+      "name": "Orno WE-514/515 (1P)",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 13,
+      "needsReview": true
+    },
+    {
+      "slug": "orno-we-516-3p",
+      "vendor": "Orno",
+      "vendorSlug": "orno",
+      "model": "WE-516 (3P)",
+      "modelSlug": "we-516-3p",
+      "name": "Orno WE-516 (3P)",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 70,
+      "needsReview": true
+    },
+    {
+      "slug": "outback-power-mate3s",
+      "vendor": "outback",
+      "vendorSlug": "outback",
+      "model": "power-mate3s",
+      "modelSlug": "power-mate3s",
+      "name": "outback power-mate3s",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "phoenix-contact-eem-em3xx-eem-dm3xx-coils",
+      "vendor": "Phoenix Contact EEM-EM3xx EEM-DM3xx",
+      "vendorSlug": "phoenix-contact-eem-em3xx-eem-dm3xx",
+      "model": "Coils",
+      "modelSlug": "coils",
+      "name": "Phoenix Contact EEM-EM3xx EEM-DM3xx Coils",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 25,
+      "needsReview": true
+    },
+    {
+      "slug": "phoenix-contact-eem-em3xx-eem-dm3xx-discrete-outputs",
+      "vendor": "Phoenix Contact EEM-EM3xx EEM-DM3xx",
+      "vendorSlug": "phoenix-contact-eem-em3xx-eem-dm3xx",
+      "model": "discrete-outputs",
+      "modelSlug": "discrete-outputs",
+      "name": "Phoenix Contact EEM-EM3xx EEM-DM3xx discrete-outputs",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 25,
+      "needsReview": true
+    },
+    {
+      "slug": "phoenix-contact-eem-em3xx-eem-dm3xx-holding-register-gerat-und-konfig",
+      "vendor": "Phoenix Contact EEM-EM3xx EEM-DM3xx",
+      "vendorSlug": "phoenix-contact-eem-em3xx-eem-dm3xx",
+      "model": "Holding Register - Gerät und Konfig",
+      "modelSlug": "holding-register-gerat-und-konfig",
+      "name": "Phoenix Contact EEM-EM3xx EEM-DM3xx Holding Register - Gerät und Konfig",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 31,
+      "needsReview": true
+    },
+    {
+      "slug": "phoenix-contact-eem-em3xx-eem-dm3xx-input-register-float",
+      "vendor": "Phoenix Contact EEM-EM3xx EEM-DM3xx",
+      "vendorSlug": "phoenix-contact-eem-em3xx-eem-dm3xx",
+      "model": "Input Register- Float",
+      "modelSlug": "input-register-float",
+      "name": "Phoenix Contact EEM-EM3xx EEM-DM3xx Input Register- Float",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 212,
+      "needsReview": true
+    },
+    {
+      "slug": "phoenix-contact-eem-em3xx-eem-dm3xx-input-register-integer",
+      "vendor": "Phoenix Contact EEM-EM3xx EEM-DM3xx",
+      "vendorSlug": "phoenix-contact-eem-em3xx-eem-dm3xx",
+      "model": "Input Register - Integer",
+      "modelSlug": "input-register-integer",
+      "name": "Phoenix Contact EEM-EM3xx EEM-DM3xx Input Register - Integer",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 264,
+      "needsReview": true
+    },
+    {
+      "slug": "phoenix-contact-eem-em3xx-eem-dm3xx-phoenix-contact-eem-em3xx-eem-dm3xx",
+      "vendor": "Phoenix Contact EEM-EM3xx EEM-DM3xx",
+      "vendorSlug": "phoenix-contact-eem-em3xx-eem-dm3xx",
+      "model": "Phoenix Contact EEM-EM3xx EEM-DM3xx",
+      "modelSlug": "phoenix-contact-eem-em3xx-eem-dm3xx",
+      "name": "Phoenix Contact EEM-EM3xx EEM-DM3xx",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 215,
+      "needsReview": true
+    },
+    {
+      "slug": "phoenix-contact-eem-em3xx-em325-em355-em375-em327-em357-em377",
+      "vendor": "phoenix",
+      "vendorSlug": "phoenix",
+      "model": "contact-eem-em3xx-em325-em355-em375-em327-em357-em377",
+      "modelSlug": "contact-eem-em3xx-em325-em355-em375-em327-em357-em377",
+      "name": "phoenix contact-eem-em3xx-em325-em355-em375-em327-em357-em377",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "pichler-luftungsgerat-lg-150-lg-250",
+      "vendor": "Pichler",
+      "vendorSlug": "pichler",
+      "model": "Lüftungsgerät LG 150 - LG 250",
+      "modelSlug": "luftungsgerat-lg-150-lg-250",
+      "name": "Pichler Lüftungsgerät LG 150 - LG 250",
+      "equipmentType": "vmc",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 41,
+      "needsReview": false
+    },
+    {
+      "slug": "pichler-luftungsgerat-lg-350-lg-450",
+      "vendor": "Pichler",
+      "vendorSlug": "pichler",
+      "model": "Lüftungsgerät LG 350 - LG 450",
+      "modelSlug": "luftungsgerat-lg-350-lg-450",
+      "name": "Pichler Lüftungsgerät LG 350 - LG 450",
+      "equipmentType": "vmc",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 129,
+      "needsReview": false
+    },
+    {
+      "slug": "pilot-pmac735",
+      "vendor": "pilot",
+      "vendorSlug": "pilot",
+      "model": "pmac735",
+      "modelSlug": "pmac735",
+      "name": "pilot pmac735",
+      "equipmentType": "gateway",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "pilot-pmac770",
+      "vendor": "pilot",
+      "vendorSlug": "pilot",
+      "model": "pmac770",
+      "modelSlug": "pmac770",
+      "name": "pilot pmac770",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "pilot-spm32",
+      "vendor": "pilot",
+      "vendorSlug": "pilot",
+      "model": "spm32",
+      "modelSlug": "spm32",
+      "name": "pilot spm32",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "pilot-spm33",
+      "vendor": "pilot",
+      "vendorSlug": "pilot",
+      "model": "spm33",
+      "modelSlug": "spm33",
+      "name": "pilot spm33",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "pilot-spm93",
+      "vendor": "pilot",
+      "vendorSlug": "pilot",
+      "model": "spm93",
+      "modelSlug": "spm93",
+      "name": "pilot spm93",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "power-one-inverter-pvi-aurora-central",
+      "vendor": "power",
+      "vendorSlug": "power",
+      "model": "one-inverter-pvi-aurora-central",
+      "modelSlug": "one-inverter-pvi-aurora-central",
+      "name": "power one-inverter-pvi-aurora-central",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "powerscout-3-8-viewpoint",
+      "vendor": "powerscout",
+      "vendorSlug": "powerscout",
+      "model": "3-8-viewpoint",
+      "modelSlug": "3-8-viewpoint",
+      "name": "powerscout 3-8-viewpoint",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "rayleigh-instruments-ri-f100",
+      "vendor": "rayleigh",
+      "vendorSlug": "rayleigh",
+      "model": "instruments-ri-f100",
+      "modelSlug": "instruments-ri-f100",
+      "name": "rayleigh instruments-ri-f100",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "rayleigh-instruments-ri-f200",
+      "vendor": "rayleigh",
+      "vendorSlug": "rayleigh",
+      "model": "instruments-ri-f200",
+      "modelSlug": "instruments-ri-f200",
+      "name": "rayleigh instruments-ri-f200",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "rayleigh-instruments-ri-f220",
+      "vendor": "rayleigh",
+      "vendorSlug": "rayleigh",
+      "model": "instruments-ri-f220",
+      "modelSlug": "instruments-ri-f220",
+      "name": "rayleigh instruments-ri-f220",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "rayleigh-instruments-ri-f300-ri-f400",
+      "vendor": "rayleigh",
+      "vendorSlug": "rayleigh",
+      "model": "instruments-ri-f300-ri-f400",
+      "modelSlug": "instruments-ri-f300-ri-f400",
+      "name": "rayleigh instruments-ri-f300-ri-f400",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "rish-em1300-em2300-em13xx-em23xx",
+      "vendor": "rish",
+      "vendorSlug": "rish",
+      "model": "em1300-em2300-em13xx-em23xx",
+      "modelSlug": "em1300-em2300-em13xx-em23xx",
+      "name": "rish em1300-em2300-em13xx-em23xx",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "rish-lm1350-lm1360",
+      "vendor": "rish",
+      "vendorSlug": "rish",
+      "model": "lm1350-lm1360",
+      "modelSlug": "lm1350-lm1360",
+      "name": "rish lm1350-lm1360",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "rish-rm1300-rm2300",
+      "vendor": "rish",
+      "vendorSlug": "rish",
+      "model": "rm1300-rm2300",
+      "modelSlug": "rm1300-rm2300",
+      "name": "rish rm1300-rm2300",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "rish-rm3430i",
+      "vendor": "rish",
+      "vendorSlug": "rish",
+      "model": "rm3430i",
+      "modelSlug": "rm3430i",
+      "name": "rish rm3430i",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "rish-rm3440",
+      "vendor": "rish",
+      "vendorSlug": "rish",
+      "model": "rm3440",
+      "modelSlug": "rm3440",
+      "name": "rish rm3440",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "rish-rm3440i",
+      "vendor": "rish",
+      "vendorSlug": "rish",
+      "model": "rm3440i",
+      "modelSlug": "rm3440i",
+      "name": "rish rm3440i",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "saci-ahm1",
+      "vendor": "saci",
+      "vendorSlug": "saci",
+      "model": "ahm1",
+      "modelSlug": "ahm1",
+      "name": "saci ahm1",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "saci-ang96",
+      "vendor": "saci",
+      "vendorSlug": "saci",
+      "model": "ang96",
+      "modelSlug": "ang96",
+      "name": "saci ang96",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "saci-tcil2",
+      "vendor": "saci",
+      "vendorSlug": "saci",
+      "model": "tcil2",
+      "modelSlug": "tcil2",
+      "name": "saci tcil2",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "saj-h1-series-hybrid-solar-inverter",
+      "vendor": "SAJ",
+      "vendorSlug": "saj",
+      "model": "H1 Series Hybrid Solar Inverter",
+      "modelSlug": "h1-series-hybrid-solar-inverter",
+      "name": "SAJ H1 Series Hybrid Solar Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 7,
+      "needsReview": true
+    },
+    {
+      "slug": "saj-h2-series-hybrid-solar-inverter",
+      "vendor": "SAJ",
+      "vendorSlug": "saj",
+      "model": "H2 Series Hybrid Solar Inverter",
+      "modelSlug": "h2-series-hybrid-solar-inverter",
+      "name": "SAJ H2 Series Hybrid Solar Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 10,
+      "needsReview": true
+    },
+    {
+      "slug": "saj-r5-series-solar-inverter",
+      "vendor": "SAJ",
+      "vendorSlug": "saj",
+      "model": "R5 Series Solar Inverter",
+      "modelSlug": "r5-series-solar-inverter",
+      "name": "SAJ R5 Series Solar Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 2,
+      "needsReview": true
+    },
+    {
+      "slug": "sample-manufacturer-sample-model-1",
+      "vendor": "Sample Manufacturer",
+      "vendorSlug": "sample-manufacturer",
+      "model": "Sample Model 1",
+      "modelSlug": "sample-model-1",
+      "name": "Sample Manufacturer Sample Model 1",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 4,
+      "needsReview": true
+    },
+    {
+      "slug": "sax-sax-power-home-plus",
+      "vendor": "SAX",
+      "vendorSlug": "sax",
+      "model": "SAX Power Home (Plus)",
+      "modelSlug": "sax-power-home-plus",
+      "name": "SAX SAX Power Home (Plus)",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 3,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-cm2000",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-cm2000",
+      "modelSlug": "electric-cm2000",
+      "name": "schneider electric-cm2000",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-em1000-em1100-em1200",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-em1000-em1100-em1200",
+      "modelSlug": "electric-em1000-em1100-em1200",
+      "name": "schneider electric-em1000-em1100-em1200",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-em3502-em3550",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-em3502-em3550",
+      "modelSlug": "electric-em3502-em3550",
+      "name": "schneider electric-em3502-em3550",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-em4200",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-em4200",
+      "modelSlug": "electric-em4200",
+      "name": "schneider electric-em4200",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-em6400",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-em6400",
+      "modelSlug": "electric-em6400",
+      "name": "schneider electric-em6400",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-em6400ng-pm2100-pm2200",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-em6400ng-pm2100-pm2200",
+      "modelSlug": "electric-em6400ng-pm2100-pm2200",
+      "name": "schneider electric-em6400ng-pm2100-pm2200",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-em7200",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-em7200",
+      "modelSlug": "electric-em7200",
+      "name": "schneider electric-em7200",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-iem3000",
+      "vendor": "Schneider Electric",
+      "vendorSlug": "schneider-electric",
+      "model": "iEM3000",
+      "modelSlug": "iem3000",
+      "name": "Schneider Electric iEM3000",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 23,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-pm1000-pm1200",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-pm1000-pm1200",
+      "modelSlug": "electric-pm1000-pm1200",
+      "name": "schneider electric-pm1000-pm1200",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-pm5000-pm5200",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-pm5000-pm5200",
+      "modelSlug": "electric-pm5000-pm5200",
+      "name": "schneider electric-pm5000-pm5200",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-pm5100-pm5300",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-pm5100-pm5300",
+      "modelSlug": "electric-pm5100-pm5300",
+      "name": "schneider electric-pm5100-pm5300",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-pm5500",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-pm5500",
+      "modelSlug": "electric-pm5500",
+      "name": "schneider electric-pm5500",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-pm600",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-pm600",
+      "modelSlug": "electric-pm600",
+      "name": "schneider electric-pm600",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-pm700",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-pm700",
+      "modelSlug": "electric-pm700",
+      "name": "schneider electric-pm700",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-pm800",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-pm800",
+      "modelSlug": "electric-pm800",
+      "name": "schneider electric-pm800",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-pm8000",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-pm8000",
+      "modelSlug": "electric-pm8000",
+      "name": "schneider electric-pm8000",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-powerlogic-em4800",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-powerlogic-em4800",
+      "modelSlug": "electric-powerlogic-em4800",
+      "name": "schneider electric-powerlogic-em4800",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-powerlogic-ion6200",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-powerlogic-ion6200",
+      "modelSlug": "electric-powerlogic-ion6200",
+      "name": "schneider electric-powerlogic-ion6200",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-powerlogic-ion7300",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-powerlogic-ion7300",
+      "modelSlug": "electric-powerlogic-ion7300",
+      "name": "schneider electric-powerlogic-ion7300",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-powerlogic-ion7400",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-powerlogic-ion7400",
+      "modelSlug": "electric-powerlogic-ion7400",
+      "name": "schneider electric-powerlogic-ion7400",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-powerlogic-ion7500-ion7600",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-powerlogic-ion7500-ion7600",
+      "modelSlug": "electric-powerlogic-ion7500-ion7600",
+      "name": "schneider electric-powerlogic-ion7500-ion7600",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-powerlogic-ion7550-ion7650",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-powerlogic-ion7550-ion7650",
+      "modelSlug": "electric-powerlogic-ion7550-ion7650",
+      "name": "schneider electric-powerlogic-ion7550-ion7650",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-powerlogic-ion8300-ion8400-ion8500",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-powerlogic-ion8300-ion8400-ion8500",
+      "modelSlug": "electric-powerlogic-ion8300-ion8400-ion8500",
+      "name": "schneider electric-powerlogic-ion8300-ion8400-ion8500",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-powerlogic-ion8600",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-powerlogic-ion8600",
+      "modelSlug": "electric-powerlogic-ion8600",
+      "name": "schneider electric-powerlogic-ion8600",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-powerlogic-ion8800",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-powerlogic-ion8800",
+      "modelSlug": "electric-powerlogic-ion8800",
+      "name": "schneider electric-powerlogic-ion8800",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-pvscl20e",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-pvscl20e",
+      "modelSlug": "electric-pvscl20e",
+      "name": "schneider electric-pvscl20e",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-sepam-40",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-sepam-40",
+      "modelSlug": "electric-sepam-40",
+      "name": "schneider electric-sepam-40",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-sepam-60",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-sepam-60",
+      "modelSlug": "electric-sepam-60",
+      "name": "schneider electric-sepam-60",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-sepam-80",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-sepam-80",
+      "modelSlug": "electric-sepam-80",
+      "name": "schneider electric-sepam-80",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schneider-electric-symmetra-px",
+      "vendor": "schneider",
+      "vendorSlug": "schneider",
+      "model": "electric-symmetra-px",
+      "modelSlug": "electric-symmetra-px",
+      "name": "schneider electric-symmetra-px",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schrack-na96",
+      "vendor": "schrack",
+      "vendorSlug": "schrack",
+      "model": "na96",
+      "modelSlug": "na96",
+      "name": "schrack na96",
+      "equipmentType": "gateway",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "schweitzer-engineering-laboratories-sel-735",
+      "vendor": "schweitzer",
+      "vendorSlug": "schweitzer",
+      "model": "engineering-laboratories-sel-735",
+      "modelSlug": "engineering-laboratories-sel-735",
+      "name": "schweitzer engineering-laboratories-sel-735",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "secure-elite-103-elite-303-elite-307",
+      "vendor": "secure",
+      "vendorSlug": "secure",
+      "model": "elite-103-elite-303-elite-307",
+      "modelSlug": "elite-103-elite-303-elite-307",
+      "name": "secure elite-103-elite-303-elite-307",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "secure-elite-440",
+      "vendor": "secure",
+      "vendorSlug": "secure",
+      "model": "elite-440",
+      "modelSlug": "elite-440",
+      "name": "secure elite-440",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "seneca-s203",
+      "vendor": "seneca",
+      "vendorSlug": "seneca",
+      "model": "s203",
+      "modelSlug": "s203",
+      "name": "seneca s203",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "seneca-s604",
+      "vendor": "seneca",
+      "vendorSlug": "seneca",
+      "model": "s604",
+      "modelSlug": "s604",
+      "name": "seneca s604",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "seneca-s700",
+      "vendor": "seneca",
+      "vendorSlug": "seneca",
+      "model": "s700",
+      "modelSlug": "s700",
+      "name": "seneca s700",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "senergy-hybrid-inverter",
+      "vendor": "Senergy",
+      "vendorSlug": "senergy",
+      "model": "Hybrid Inverter",
+      "modelSlug": "hybrid-inverter",
+      "name": "Senergy Hybrid Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 12,
+      "needsReview": true
+    },
+    {
+      "slug": "senergy-se-4-5-6ktl-s1-g2-inverter",
+      "vendor": "Senergy",
+      "vendorSlug": "senergy",
+      "model": "SE 4/5/6KTL-S1/G2 Inverter",
+      "modelSlug": "se-4-5-6ktl-s1-g2-inverter",
+      "name": "Senergy SE 4/5/6KTL-S1/G2 Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 2,
+      "needsReview": true
+    },
+    {
+      "slug": "sermatec-smt-5k-tl-lv-hybrid-inverter",
+      "vendor": "Sermatec",
+      "vendorSlug": "sermatec",
+      "model": "SMT-5K-TL-LV Hybrid Inverter",
+      "modelSlug": "smt-5k-tl-lv-hybrid-inverter",
+      "name": "Sermatec SMT-5K-TL-LV Hybrid Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 6,
+      "needsReview": true
+    },
+    {
+      "slug": "siemens-7kt1665",
+      "vendor": "Siemens",
+      "vendorSlug": "siemens",
+      "model": "7KT1665",
+      "modelSlug": "7kt1665",
+      "name": "Siemens 7KT1665",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 8,
+      "needsReview": true
+    },
+    {
+      "slug": "siemens-junelight-smart-battery",
+      "vendor": "Siemens",
+      "vendorSlug": "siemens",
+      "model": "Junelight Smart Battery",
+      "modelSlug": "junelight-smart-battery",
+      "name": "Siemens Junelight Smart Battery",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 4,
+      "needsReview": true
+    },
+    {
+      "slug": "siemens-sem3-dual-phase",
+      "vendor": "siemens",
+      "vendorSlug": "siemens",
+      "model": "sem3-dual-phase",
+      "modelSlug": "sem3-dual-phase",
+      "name": "siemens sem3-dual-phase",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "siemens-sem3-single-phase",
+      "vendor": "siemens",
+      "vendorSlug": "siemens",
+      "model": "sem3-single-phase",
+      "modelSlug": "sem3-single-phase",
+      "name": "siemens sem3-single-phase",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "siemens-sem3-three-phase",
+      "vendor": "siemens",
+      "vendorSlug": "siemens",
+      "model": "sem3-three-phase",
+      "modelSlug": "sem3-three-phase",
+      "name": "siemens sem3-three-phase",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "siemens-sentron-pac-2200",
+      "vendor": "siemens",
+      "vendorSlug": "siemens",
+      "model": "sentron-pac-2200",
+      "modelSlug": "sentron-pac-2200",
+      "name": "siemens sentron-pac-2200",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "siemens-sentron-pac-3100",
+      "vendor": "siemens",
+      "vendorSlug": "siemens",
+      "model": "sentron-pac-3100",
+      "modelSlug": "sentron-pac-3100",
+      "name": "siemens sentron-pac-3100",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "siemens-sentron-pac-3200",
+      "vendor": "siemens",
+      "vendorSlug": "siemens",
+      "model": "sentron-pac-3200",
+      "modelSlug": "sentron-pac-3200",
+      "name": "siemens sentron-pac-3200",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "siemens-sentron-pac-4200",
+      "vendor": "siemens",
+      "vendorSlug": "siemens",
+      "model": "sentron-pac-4200",
+      "modelSlug": "sentron-pac-4200",
+      "name": "siemens sentron-pac-4200",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "siemens-sicam-p",
+      "vendor": "siemens",
+      "vendorSlug": "siemens",
+      "model": "sicam-p",
+      "modelSlug": "sicam-p",
+      "name": "siemens sicam-p",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "sigenergy-sigen-hybrid",
+      "vendor": "Sigenergy",
+      "vendorSlug": "sigenergy",
+      "model": "Sigen Hybrid",
+      "modelSlug": "sigen-hybrid",
+      "name": "Sigenergy Sigen Hybrid",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 9,
+      "needsReview": true
+    },
+    {
+      "slug": "sma-data-manager",
+      "vendor": "SMA",
+      "vendorSlug": "sma",
+      "model": "Data Manager",
+      "modelSlug": "data-manager",
+      "name": "SMA Data Manager",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 10,
+      "needsReview": true
+    },
+    {
+      "slug": "sma-sma-hybrid",
+      "vendor": "SMA",
+      "vendorSlug": "sma",
+      "model": "sma-hybrid",
+      "modelSlug": "sma-hybrid",
+      "name": "SMA sma-hybrid",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 19,
+      "needsReview": true
+    },
+    {
+      "slug": "sma-solar-inverter",
+      "vendor": "sma",
+      "vendorSlug": "sma",
+      "model": "solar-inverter",
+      "modelSlug": "solar-inverter",
+      "name": "sma solar-inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "sma-sunny-boy-storage-1-5-2-0-2-5-modbus",
+      "vendor": "SMA",
+      "vendorSlug": "sma",
+      "model": "Sunny Boy Storage 1.5/2.0/2.5 (Modbus)",
+      "modelSlug": "sunny-boy-storage-1-5-2-0-2-5-modbus",
+      "name": "SMA Sunny Boy Storage 1.5/2.0/2.5 (Modbus)",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 3,
+      "needsReview": true
+    },
+    {
+      "slug": "sma-sunny-boy-storage-3-7-5-0-6-0-modbus",
+      "vendor": "SMA",
+      "vendorSlug": "sma",
+      "model": "Sunny Boy Storage 3.7/5.0/6.0 (Modbus)",
+      "modelSlug": "sunny-boy-storage-3-7-5-0-6-0-modbus",
+      "name": "SMA Sunny Boy Storage 3.7/5.0/6.0 (Modbus)",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 3,
+      "needsReview": true
+    },
+    {
+      "slug": "sma-sunny-island-modbus",
+      "vendor": "SMA",
+      "vendorSlug": "sma",
+      "model": "Sunny Island (Modbus)",
+      "modelSlug": "sunny-island-modbus",
+      "name": "SMA Sunny Island (Modbus)",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 3,
+      "needsReview": true
+    },
+    {
+      "slug": "sma-sunny-tripower-10-0-se-sma-sunny-tripower-10-0-se",
+      "vendor": "SMA SUNNY TRIPOWER 10.0 SE",
+      "vendorSlug": "sma-sunny-tripower-10-0-se",
+      "model": "SMA SUNNY TRIPOWER 10.0 SE",
+      "modelSlug": "sma-sunny-tripower-10-0-se",
+      "name": "SMA SUNNY TRIPOWER 10.0 SE",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 39,
+      "needsReview": true
+    },
+    {
+      "slug": "sma-sunny-tripower-boy-series-dynamic",
+      "vendor": "SMA",
+      "vendorSlug": "sma",
+      "model": "Sunny Tripower/Boy Series Dynamic",
+      "modelSlug": "sunny-tripower-boy-series-dynamic",
+      "name": "SMA Sunny Tripower/Boy Series Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 8,
+      "needsReview": true
+    },
+    {
+      "slug": "sma-tripower-x",
+      "vendor": "SMA",
+      "vendorSlug": "sma",
+      "model": "Tripower X",
+      "modelSlug": "tripower-x",
+      "name": "SMA Tripower X",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "sma-wechselrichter-modbus",
+      "vendor": "SMA",
+      "vendorSlug": "sma",
+      "model": "Wechselrichter (Modbus)",
+      "modelSlug": "wechselrichter-modbus",
+      "name": "SMA Wechselrichter (Modbus)",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 2,
+      "needsReview": true
+    },
+    {
+      "slug": "smartprocess-smartrail-x835",
+      "vendor": "smartprocess",
+      "vendorSlug": "smartprocess",
+      "model": "smartrail-x835",
+      "modelSlug": "smartrail-x835",
+      "name": "smartprocess smartrail-x835",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "socomec-countis-e13",
+      "vendor": "socomec",
+      "vendorSlug": "socomec",
+      "model": "countis-e13",
+      "modelSlug": "countis-e13",
+      "name": "socomec countis-e13",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "socomec-countis-e14",
+      "vendor": "socomec",
+      "vendorSlug": "socomec",
+      "model": "countis-e14",
+      "modelSlug": "countis-e14",
+      "name": "socomec countis-e14",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "socomec-countis-e23",
+      "vendor": "socomec",
+      "vendorSlug": "socomec",
+      "model": "countis-e23",
+      "modelSlug": "countis-e23",
+      "name": "socomec countis-e23",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "socomec-countis-e24",
+      "vendor": "socomec",
+      "vendorSlug": "socomec",
+      "model": "countis-e24",
+      "modelSlug": "countis-e24",
+      "name": "socomec countis-e24",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "socomec-countis-e33-countis-e43",
+      "vendor": "socomec",
+      "vendorSlug": "socomec",
+      "model": "countis-e33-countis-e43",
+      "modelSlug": "countis-e33-countis-e43",
+      "name": "socomec countis-e33-countis-e43",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "socomec-countis-e34-countis-e44",
+      "vendor": "socomec",
+      "vendorSlug": "socomec",
+      "model": "countis-e34-countis-e44",
+      "modelSlug": "countis-e34-countis-e44",
+      "name": "socomec countis-e34-countis-e44",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "socomec-countis-e50-e53-e50r-e53r",
+      "vendor": "socomec",
+      "vendorSlug": "socomec",
+      "model": "countis-e50-e53-e50r-e53r",
+      "modelSlug": "countis-e50-e53-e50r-e53r",
+      "name": "socomec countis-e50-e53-e50r-e53r",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "socomec-countis-e63",
+      "vendor": "socomec",
+      "vendorSlug": "socomec",
+      "model": "countis-e63",
+      "modelSlug": "countis-e63",
+      "name": "socomec countis-e63",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "socomec-countis-eci2",
+      "vendor": "socomec",
+      "vendorSlug": "socomec",
+      "model": "countis-eci2",
+      "modelSlug": "countis-eci2",
+      "name": "socomec countis-eci2",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "socomec-countis-eci3",
+      "vendor": "socomec",
+      "vendorSlug": "socomec",
+      "model": "countis-eci3",
+      "modelSlug": "countis-eci3",
+      "name": "socomec countis-eci3",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "socomec-diris-a20-modbus",
+      "vendor": "socomec",
+      "vendorSlug": "socomec",
+      "model": "diris-a20-modbus",
+      "modelSlug": "diris-a20-modbus",
+      "name": "socomec diris-a20-modbus",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "socomec-diris-a40-a41-rs485",
+      "vendor": "socomec",
+      "vendorSlug": "socomec",
+      "model": "diris-a40-a41-rs485",
+      "modelSlug": "diris-a40-a41-rs485",
+      "name": "socomec diris-a40-a41-rs485",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "socomec-diris-d30-d50-d70",
+      "vendor": "socomec",
+      "vendorSlug": "socomec",
+      "model": "diris-d30-d50-d70",
+      "modelSlug": "diris-d30-d50-d70",
+      "name": "socomec diris-d30-d50-d70",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "socomec-diris-i31",
+      "vendor": "socomec",
+      "vendorSlug": "socomec",
+      "model": "diris-i31",
+      "modelSlug": "diris-i31",
+      "name": "socomec diris-i31",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "socomec-diris-u30",
+      "vendor": "socomec",
+      "vendorSlug": "socomec",
+      "model": "diris-u30",
+      "modelSlug": "diris-u30",
+      "name": "socomec diris-u30",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "socomec-multis-l20-multis-l40",
+      "vendor": "socomec",
+      "vendorSlug": "socomec",
+      "model": "multis-l20-multis-l40",
+      "modelSlug": "multis-l20-multis-l40",
+      "name": "socomec multis-l20-multis-l40",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "socomec-netys-pr-netys-rt-itys",
+      "vendor": "socomec",
+      "vendorSlug": "socomec",
+      "model": "netys-pr-netys-rt-itys",
+      "modelSlug": "netys-pr-netys-rt-itys",
+      "name": "socomec netys-pr-netys-rt-itys",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "sofarsolar-hyd-5-20k-3ph",
+      "vendor": "SofarSolar",
+      "vendorSlug": "sofarsolar",
+      "model": "HYD 5…20K-3PH",
+      "modelSlug": "hyd-5-20k-3ph",
+      "name": "SofarSolar HYD 5…20K-3PH",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 16,
+      "needsReview": true
+    },
+    {
+      "slug": "sofarsolar-inverter",
+      "vendor": "SofarSolar",
+      "vendorSlug": "sofarsolar",
+      "model": "Inverter",
+      "modelSlug": "inverter",
+      "name": "SofarSolar Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 9,
+      "needsReview": true
+    },
+    {
+      "slug": "solaredge-holding-registers-meter-battery",
+      "vendor": "SolarEdge",
+      "vendorSlug": "solaredge",
+      "model": "holding-registers-meter-battery",
+      "modelSlug": "holding-registers-meter-battery",
+      "name": "SolarEdge holding-registers-meter-battery",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 113,
+      "needsReview": true
+    },
+    {
+      "slug": "solaredge-holding-registers-meter1",
+      "vendor": "SolarEdge",
+      "vendorSlug": "solaredge",
+      "model": "holding-registers-meter1",
+      "modelSlug": "holding-registers-meter1",
+      "name": "SolarEdge holding-registers-meter1",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 80,
+      "needsReview": true
+    },
+    {
+      "slug": "solaredge-holding-registers-s10krwb-se30k-battery",
+      "vendor": "SolarEdge",
+      "vendorSlug": "solaredge",
+      "model": "holding-registers-S10KRWB-SE30K-Battery",
+      "modelSlug": "holding-registers-s10krwb-se30k-battery",
+      "name": "SolarEdge holding-registers-S10KRWB-SE30K-Battery",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 62,
+      "needsReview": true
+    },
+    {
+      "slug": "solaredge-hybrid-inverter",
+      "vendor": "SolarEdge",
+      "vendorSlug": "solaredge",
+      "model": "Hybrid Inverter",
+      "modelSlug": "hybrid-inverter",
+      "name": "SolarEdge Hybrid Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 3,
+      "needsReview": true
+    },
+    {
+      "slug": "solaredge-se12",
+      "vendor": "solaredge",
+      "vendorSlug": "solaredge",
+      "model": "se12",
+      "modelSlug": "se12",
+      "name": "solaredge se12",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "solaredge-se5000",
+      "vendor": "solaredge",
+      "vendorSlug": "solaredge",
+      "model": "se5000",
+      "modelSlug": "se5000",
+      "name": "solaredge se5000",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "solaredge-se6000h",
+      "vendor": "solaredge",
+      "vendorSlug": "solaredge",
+      "model": "se6000h",
+      "modelSlug": "se6000h",
+      "name": "solaredge se6000h",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "solaredge-solaredge",
+      "vendor": "SolarEdge",
+      "vendorSlug": "solaredge",
+      "model": "SolarEdge",
+      "modelSlug": "solaredge",
+      "name": "SolarEdge",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 49,
+      "needsReview": true
+    },
+    {
+      "slug": "solarmax-solarmax-smt",
+      "vendor": "SolarMax",
+      "vendorSlug": "solarmax",
+      "model": "SolarMax SMT",
+      "modelSlug": "solarmax-smt",
+      "name": "SolarMax SolarMax SMT",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 2,
+      "needsReview": true
+    },
+    {
+      "slug": "solarx-power-hybrid-x1-hybrid-x3-x1ac",
+      "vendor": "solarx",
+      "vendorSlug": "solarx",
+      "model": "power-hybrid-x1-hybrid-x3-x1ac",
+      "modelSlug": "power-hybrid-x1-hybrid-x3-x1ac",
+      "name": "solarx power-hybrid-x1-hybrid-x3-x1ac",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "solax-hybrid-x1-x3-g3-g4",
+      "vendor": "Solax",
+      "vendorSlug": "solax",
+      "model": "Hybrid X1/X3 G3/G4",
+      "modelSlug": "hybrid-x1-x3-g3-g4",
+      "name": "Solax Hybrid X1/X3 G3/G4",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 14,
+      "needsReview": true
+    },
+    {
+      "slug": "solax-qcells-solax-qcells",
+      "vendor": "Solax-QCells",
+      "vendorSlug": "solax-qcells",
+      "model": "Solax-QCells",
+      "modelSlug": "solax-qcells",
+      "name": "Solax-QCells",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 31,
+      "needsReview": true
+    },
+    {
+      "slug": "solax-solax-series-dynamic",
+      "vendor": "SolaX",
+      "vendorSlug": "solax",
+      "model": "SolaX Series Dynamic",
+      "modelSlug": "solax-series-dynamic",
+      "name": "SolaX Inverter Series",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 22,
+      "needsReview": true
+    },
+    {
+      "slug": "solax-x3-mic-g2",
+      "vendor": "Solax",
+      "vendorSlug": "solax",
+      "model": "X3-MIC G2",
+      "modelSlug": "x3-mic-g2",
+      "name": "Solax X3-MIC G2",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 10,
+      "needsReview": true
+    },
+    {
+      "slug": "solinteg-solinteg",
+      "vendor": "Solinteg",
+      "vendorSlug": "solinteg",
+      "model": "solinteg",
+      "modelSlug": "solinteg",
+      "name": "Solinteg solinteg",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 9,
+      "needsReview": true
+    },
+    {
+      "slug": "solvis-sc3",
+      "vendor": "Solvis",
+      "vendorSlug": "solvis",
+      "model": "SC3",
+      "modelSlug": "sc3",
+      "name": "Solvis SC3 Heating Control",
+      "equipmentType": "chaudiere",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 56,
+      "needsReview": false
+    },
+    {
+      "slug": "stiebel-eltron-isg",
+      "vendor": "Stiebel Eltron",
+      "vendorSlug": "stiebel-eltron",
+      "model": "ISG (WPM/LWZ)",
+      "modelSlug": "isg",
+      "name": "Stiebel Eltron ISG (WPM / LWZ)",
+      "equipmentType": "pac",
+      "transport": [
+        "tcp"
+      ],
+      "registerCount": 63,
+      "needsReview": true
+    },
+    {
+      "slug": "sungrow-ac011e-01",
+      "vendor": "Sungrow",
+      "vendorSlug": "sungrow",
+      "model": "AC011E-01",
+      "modelSlug": "ac011e-01",
+      "name": "Sungrow AC011E Wallbox",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 27,
+      "needsReview": true
+    },
+    {
+      "slug": "sungrow-ihomemanager",
+      "vendor": "Sungrow",
+      "vendorSlug": "sungrow",
+      "model": "iHomeManager",
+      "modelSlug": "ihomemanager",
+      "name": "Sungrow iHomeManager",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 44,
+      "needsReview": true
+    },
+    {
+      "slug": "sungrow-ihomemanager-ihm",
+      "vendor": "Sungrow",
+      "vendorSlug": "sungrow",
+      "model": "iHomeManager (iHM)",
+      "modelSlug": "ihomemanager-ihm",
+      "name": "Sungrow iHomeManager (iHM)",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 11,
+      "needsReview": true
+    },
+    {
+      "slug": "sungrow-sbr-battery",
+      "vendor": "Sungrow",
+      "vendorSlug": "sungrow",
+      "model": "SBR Battery",
+      "modelSlug": "sbr-battery",
+      "name": "Sungrow SBR Battery",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 48,
+      "needsReview": true
+    },
+    {
+      "slug": "sungrow-sg-series-inverter",
+      "vendor": "Sungrow",
+      "vendorSlug": "sungrow",
+      "model": "SG Series Inverter",
+      "modelSlug": "sg-series-inverter",
+      "name": "Sungrow SG Series Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 4,
+      "needsReview": true
+    },
+    {
+      "slug": "sungrow-sh-series-hybrid-inverter",
+      "vendor": "Sungrow",
+      "vendorSlug": "sungrow",
+      "model": "SH Series Hybrid Inverter",
+      "modelSlug": "sh-series-hybrid-inverter",
+      "name": "Sungrow SH Series Hybrid Inverter",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 15,
+      "needsReview": true
+    },
+    {
+      "slug": "sungrow-sungrow",
+      "vendor": "Sungrow",
+      "vendorSlug": "sungrow",
+      "model": "Sungrow",
+      "modelSlug": "sungrow",
+      "name": "Sungrow",
+      "equipmentType": "onduleur-pv",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 78,
+      "needsReview": true
+    },
+    {
+      "slug": "test-test-model-do-not-use",
+      "vendor": "Test",
+      "vendorSlug": "test",
+      "model": "Test Model (DO NOT USE)",
+      "modelSlug": "test-model-do-not-use",
+      "name": "Test Test Model (DO NOT USE)",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 14,
+      "needsReview": true
+    },
+    {
+      "slug": "trinity-em9400",
+      "vendor": "trinity",
+      "vendorSlug": "trinity",
+      "model": "em9400",
+      "modelSlug": "em9400",
+      "name": "trinity em9400",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "trinity-goblin",
+      "vendor": "trinity",
+      "vendorSlug": "trinity",
+      "model": "goblin",
+      "modelSlug": "goblin",
+      "name": "trinity goblin",
+      "equipmentType": "chaudiere",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "trinity-xpert",
+      "vendor": "trinity",
+      "vendorSlug": "trinity",
+      "model": "xpert",
+      "modelSlug": "xpert",
+      "name": "trinity xpert",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "tyco-electronics-integra-1630",
+      "vendor": "tyco",
+      "vendorSlug": "tyco",
+      "model": "electronics-integra-1630",
+      "modelSlug": "electronics-integra-1630",
+      "name": "tyco electronics-integra-1630",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "varmann-qtherm",
+      "vendor": "Varmann",
+      "vendorSlug": "varmann",
+      "model": "Qtherm",
+      "modelSlug": "qtherm",
+      "name": "Varmann Qtherm",
+      "equipmentType": "variateur",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 24,
+      "needsReview": false
+    },
+    {
+      "slug": "varta-pulse",
+      "vendor": "VARTA",
+      "vendorSlug": "varta",
+      "model": "pulse",
+      "modelSlug": "pulse",
+      "name": "VARTA pulse",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 4,
+      "needsReview": true
+    },
+    {
+      "slug": "veris-e23",
+      "vendor": "veris",
+      "vendorSlug": "veris",
+      "model": "e23",
+      "modelSlug": "e23",
+      "name": "veris e23",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "veris-e34",
+      "vendor": "veris",
+      "vendorSlug": "veris",
+      "model": "e34",
+      "modelSlug": "e34",
+      "name": "veris e34",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "veris-e50",
+      "vendor": "veris",
+      "vendorSlug": "veris",
+      "model": "e50",
+      "modelSlug": "e50",
+      "name": "veris e50",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "veris-e51",
+      "vendor": "veris",
+      "vendorSlug": "veris",
+      "model": "e51",
+      "modelSlug": "e51",
+      "name": "veris e51",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "victron-energy",
+      "vendor": "Victron",
+      "vendorSlug": "victron",
+      "model": "Energy",
+      "modelSlug": "energy",
+      "name": "Victron Energy",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 15,
+      "needsReview": true
+    },
+    {
+      "slug": "victron-ev-charging-station",
+      "vendor": "Victron",
+      "vendorSlug": "victron",
+      "model": "EV Charging Station",
+      "modelSlug": "ev-charging-station",
+      "name": "Victron EV Charging Station",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 31,
+      "needsReview": true
+    },
+    {
+      "slug": "wattsonic-wattsonic",
+      "vendor": "Wattsonic",
+      "vendorSlug": "wattsonic",
+      "model": "wattsonic",
+      "modelSlug": "wattsonic",
+      "name": "Wattsonic wattsonic",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 9,
+      "needsReview": true
+    },
+    {
+      "slug": "wattsonic-wattsonic-gen3",
+      "vendor": "Wattsonic",
+      "vendorSlug": "wattsonic",
+      "model": "Wattsonic GEN3",
+      "modelSlug": "wattsonic-gen3",
+      "name": "Wattsonic Wattsonic GEN3",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 9,
+      "needsReview": true
+    },
+    {
+      "slug": "waveshare-modbus-poe-eth-relay-30ch",
+      "vendor": "Waveshare",
+      "vendorSlug": "waveshare",
+      "model": "Modbus POE ETH Relay 30CH",
+      "modelSlug": "modbus-poe-eth-relay-30ch",
+      "name": "Waveshare Modbus POE ETH Relay 30CH",
+      "equipmentType": "gateway",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 31,
+      "needsReview": false
+    },
+    {
+      "slug": "waveshare-modbus-rtu-relay-d",
+      "vendor": "Waveshare",
+      "vendorSlug": "waveshare",
+      "model": "Modbus RTU Relay (D)",
+      "modelSlug": "modbus-rtu-relay-d",
+      "name": "Waveshare Modbus RTU Relay (D)",
+      "equipmentType": "gateway",
+      "transport": [
+        "rtu",
+        "tcp"
+      ],
+      "registerCount": 17,
+      "needsReview": false
+    },
+    {
+      "slug": "ytl-5300",
+      "vendor": "ytl",
+      "vendorSlug": "ytl",
+      "model": "5300",
+      "modelSlug": "5300",
+      "name": "ytl 5300",
+      "equipmentType": "compteur-elec",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    },
+    {
+      "slug": "ziegler-delta-energy",
+      "vendor": "ziegler",
+      "vendorSlug": "ziegler",
+      "model": "delta-energy",
+      "modelSlug": "delta-energy",
+      "name": "ziegler delta-energy",
+      "equipmentType": "autre",
+      "transport": [
+        "rtu"
+      ],
+      "registerCount": 50,
+      "needsReview": true
+    }
+  ],
+  "vendors": [
+    "abb",
+    "ABB",
+    "accuenergy",
+    "acrel",
+    "Acrel",
+    "Ads-tec",
+    "Afore",
+    "Aldes",
+    "algodue",
+    "allen",
+    "Alpha ESS",
+    "Amperfied",
+    "Anker",
+    "arch",
+    "Atmoce",
+    "B+GE-TECH",
+    "BG-Tech",
+    "BTicino",
+    "BYD",
+    "bytronic",
+    "carlo",
+    "Carlo Gavazzi",
+    "cet",
+    "cewe",
+    "Cfos",
+    "chint",
+    "CHINT",
+    "circutor",
+    "Compleo",
+    "continental",
+    "crompton",
+    "delab",
+    "delta",
+    "dent",
+    "Deye",
+    "Dimplex",
+    "DZG",
+    "E3/DC",
+    "eastron",
+    "Eastron",
+    "EASTRON",
+    "Eastron SDM630",
+    "eaton",
+    "ebyte",
+    "electrex",
+    "electro",
+    "elmeasure",
+    "elnet",
+    "elspec",
+    "elster",
+    "enerdis",
+    "entes",
+    "farnell",
+    "ff",
+    "finder",
+    "Finder",
+    "Finder Typ 7M",
+    "forlong",
+    "FoxESS",
+    "frako",
+    "Fröling GmbH",
+    "fronius",
+    "Fronius",
+    "ge",
+    "ginlong",
+    "Ginlong",
+    "GoodWe",
+    "Growatt",
+    "hager",
+    "herholdt",
+    "heyuan",
+    "Hiking",
+    "huawei",
+    "Huawei",
+    "Husdata",
+    "ime",
+    "IME",
+    "inepro",
+    "Inepro",
+    "integra",
+    "INTILION",
+    "iskra",
+    "janitza",
+    "Janitza",
+    "jiangsu",
+    "KACO new energy",
+    "kael",
+    "klemsan",
+    "kohler",
+    "kostal",
+    "Lambda-WP",
+    "landis",
+    "larsen",
+    "lifasa",
+    "lovato",
+    "Lovato",
+    "M-TEC",
+    "Marstek",
+    "masibus",
+    "meatrol",
+    "Meltem",
+    "mikro",
+    "my-PV",
+    "northern",
+    "Orno",
+    "outback",
+    "phoenix",
+    "Phoenix Contact EEM-EM3xx EEM-DM3xx",
+    "Pichler",
+    "pilot",
+    "power",
+    "powerscout",
+    "rayleigh",
+    "rish",
+    "saci",
+    "SAJ",
+    "Sample Manufacturer",
+    "SAX",
+    "schneider",
+    "Schneider Electric",
+    "schrack",
+    "schweitzer",
+    "secure",
+    "seneca",
+    "Senergy",
+    "Sermatec",
+    "siemens",
+    "Siemens",
+    "Sigenergy",
+    "sma",
+    "SMA",
+    "SMA SUNNY TRIPOWER 10.0 SE",
+    "smartprocess",
+    "socomec",
+    "SofarSolar",
+    "solaredge",
+    "SolarEdge",
+    "SolarMax",
+    "solarx",
+    "Solax",
+    "SolaX",
+    "Solax-QCells",
+    "Solinteg",
+    "Solvis",
+    "Stiebel Eltron",
+    "Sungrow",
+    "Test",
+    "trinity",
+    "tyco",
+    "Varmann",
+    "VARTA",
+    "veris",
+    "Victron",
+    "Wattsonic",
+    "Waveshare",
+    "ytl",
+    "ziegler"
+  ],
+  "equipmentTypes": [
+    "autre",
+    "chaudiere",
+    "compteur-elec",
+    "gateway",
+    "onduleur-pv",
+    "pac",
+    "variateur",
+    "vmc",
+    "wallbox"
+  ]
+}

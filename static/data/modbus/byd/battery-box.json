@@ -1,0 +1,173 @@
+{
+  "slug": "byd-battery-box",
+  "vendor": "BYD",
+  "vendorSlug": "byd",
+  "model": "Battery Box",
+  "modelSlug": "battery-box",
+  "name": "BYD Battery Box",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "battery_module_count",
+      "label": "Module Count",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "battery_bms_count",
+      "label": "BMS Count",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "access": "r"
+    },
+    {
+      "address": 1280,
+      "function": "holding",
+      "name": "battery_soc",
+      "label": "State of Charge",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1281,
+      "function": "holding",
+      "name": "battery_max_cell_voltage",
+      "label": "Max Cell Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1282,
+      "function": "holding",
+      "name": "battery_min_cell_voltage",
+      "label": "Min Cell Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1283,
+      "function": "holding",
+      "name": "battery_soh",
+      "label": "State of Health",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1284,
+      "function": "holding",
+      "name": "battery_current",
+      "label": "Battery Current",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1285,
+      "function": "holding",
+      "name": "battery_voltage",
+      "label": "Battery Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1286,
+      "function": "holding",
+      "name": "battery_max_cell_temp",
+      "label": "Max Cell Temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 1287,
+      "function": "holding",
+      "name": "battery_min_cell_temp",
+      "label": "Min Cell Temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 1288,
+      "function": "holding",
+      "name": "battery_bmu_temp",
+      "label": "BMU Temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 1296,
+      "function": "holding",
+      "name": "battery_output_voltage",
+      "label": "Output Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1297,
+      "function": "holding",
+      "name": "battery_charge_cycles",
+      "label": "Charge Cycles",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "cycles",
+      "access": "r"
+    },
+    {
+      "address": 1299,
+      "function": "holding",
+      "name": "battery_discharge_cycles",
+      "label": "Discharge Cycles",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 1,
+      "unit": "cycles",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-manager",
+    "ref": "8932e9a23c65e9f9fe333780bcb3477d81a80b7b",
+    "needsReview": false
+  }
+}

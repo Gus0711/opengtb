@@ -1,0 +1,476 @@
+{
+  "slug": "smartprocess-smartrail-x835",
+  "vendor": "smartprocess",
+  "vendorSlug": "smartprocess",
+  "model": "smartrail-x835",
+  "modelSlug": "smartrail-x835",
+  "name": "smartprocess smartrail-x835",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Phase-2-line-to-neutral-volts",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Phase-3-line-to-neutral-volts",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Phase-1-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Phase-2-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Phase-3-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Phase-1-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Phase-2-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Phase-3-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Phase-1-volt-amps",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VoltAmps",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Phase-2-volt-amps",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VoltAmps",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Phase-3-volt-amps",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VoltAmps",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Phase-1-volt-amps-reactive",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "Phase-2-volt-amps-reactive",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Phase-3-volt-amps-reactive",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Phase-1-power-factor-(1)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "None",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Phase-2-power-factor-(1)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "None",
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Phase-3-power-factor-(1)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "None",
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Phase-1-phase-angle",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Phase-2-phase-angle",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "Phase-3-phase-angle",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "Average-line-to-neutral-volts",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Average-line-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Sum-of-line-currents",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Total-system-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Total-system-volt-amps",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "Total-system-VAr",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "Total-system-power-factor-(1)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "None",
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "holding",
+      "name": "Total-system-phase-angle",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "Frequency-of-supply-voltages",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "holding",
+      "name": "Import-wh-since-last-reset-(2)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh/MWh",
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "holding",
+      "name": "Export-wh-since-last-reset-(2)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh/MWh",
+      "access": "r"
+    },
+    {
+      "address": 76,
+      "function": "holding",
+      "name": "Import-VArh-since-last-reset-(2)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVArh/MVArh",
+      "access": "r"
+    },
+    {
+      "address": 78,
+      "function": "holding",
+      "name": "Export-VArh-since-last-reset-(2)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVArh/MVArh",
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "VAh-since-last-reset-(2)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVAh/MVAh",
+      "access": "r"
+    },
+    {
+      "address": 82,
+      "function": "holding",
+      "name": "Ah-since-last-reset-(3)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Ah/kAh",
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "Total-system-power-demand-(4)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "Maximum-total-system-power-demand-(4)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "Total-system-VA-demand",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "Maximum-total-system-VA-demand",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "Neutral-current-demand",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 106,
+      "function": "holding",
+      "name": "Maximum-neutral-current-demand",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 200,
+      "function": "holding",
+      "name": "Line-1-to-line-2-volts",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 202,
+      "function": "holding",
+      "name": "Line-2-to-line-3-volts",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 204,
+      "function": "holding",
+      "name": "Line-3-to-line-1-volts",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 206,
+      "function": "holding",
+      "name": "Average-line-to-line-volts",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 224,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 234,
+      "function": "holding",
+      "name": "Phase-1-L/N-volts-THD",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 236,
+      "function": "holding",
+      "name": "Phase-2-L/N-volts-THD",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 238,
+      "function": "holding",
+      "name": "Phase-3-L/N-volts-THD",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 240,
+      "function": "holding",
+      "name": "Phase-1-current-THD",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/smartprocess-smartrail-x835.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Newspaper from '@lucide/svelte/icons/newspaper';
 	import { getAllArticles } from '$lib/articles/loader';
 	import ArticleCard from '$lib/components/articles/ArticleCard.svelte';
 
@@ -9,8 +10,8 @@
 	<div
 		class="border-border mb-6 flex items-baseline justify-between gap-6 border-b pb-3.5 max-sm:flex-col max-sm:items-start"
 	>
-		<div class="flex items-baseline gap-3.5">
-			<span class="text-primary font-mono text-[13px] font-semibold">§ 03</span>
+		<div class="flex items-center gap-3">
+			<Newspaper class="text-amber size-[18px] shrink-0" aria-hidden="true" />
 			<h2 class="m-0 text-[clamp(22px,2.4vw,28px)] font-bold tracking-[-0.015em]">
 				Journal
 				<span class="text-text-dim font-normal">— retours d'expérience terrain.</span>

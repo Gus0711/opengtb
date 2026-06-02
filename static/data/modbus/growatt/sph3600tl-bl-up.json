@@ -1,0 +1,329 @@
+{
+  "slug": "growatt-sph3600tl-bl-up",
+  "vendor": "Growatt",
+  "vendorSlug": "growatt",
+  "model": "SPH3600TL BL_UP",
+  "modelSlug": "sph3600tl-bl-up",
+  "name": "Growatt SPH3600TL BL_UP",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 0,
+      "function": "holding",
+      "name": "Remote On/Off",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 0,
+      "function": "holding",
+      "name": "Inverter Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Firmware version",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "rw"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Control firmware version",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "rw"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "LCD language",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Italian",
+        "1": "English",
+        "2": "German",
+        "3": "Spanish",
+        "4": "French",
+        "5": "Chinese",
+        "6": "Polish",
+        "7": "Portuguese",
+        "8": "Hungarian"
+      }
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Baud Rate",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "9600 bps",
+        "1": "38400 bps"
+      }
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Serial Number",
+      "dataType": "uint64",
+      "size": 4,
+      "access": "rw"
+    },
+    {
+      "address": 37,
+      "function": "holding",
+      "name": "Grid frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Grid voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 39,
+      "function": "holding",
+      "name": "Grid output current",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "Grid output watt VA",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "VoltAmps",
+      "access": "r"
+    },
+    {
+      "address": 93,
+      "function": "holding",
+      "name": "Inverter temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Celsius",
+      "access": "r"
+    },
+    {
+      "address": 94,
+      "function": "holding",
+      "name": "IPM Inverter temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Celsius",
+      "access": "r"
+    },
+    {
+      "address": 95,
+      "function": "holding",
+      "name": "Boost temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Celsius",
+      "access": "r"
+    },
+    {
+      "address": 116,
+      "function": "holding",
+      "name": "Charge Power",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 1000,
+      "function": "holding",
+      "name": "System Work Mode",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1009,
+      "function": "holding",
+      "name": "Discharge power",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 1013,
+      "function": "holding",
+      "name": "Battery voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 1014,
+      "function": "holding",
+      "name": "SoC",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1015,
+      "function": "holding",
+      "name": "AC power to user",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 1031,
+      "function": "holding",
+      "name": "Inverter power to local load",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 1037,
+      "function": "holding",
+      "name": "Inverter power to local load total",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 1040,
+      "function": "holding",
+      "name": "Battery temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "Celsius",
+      "access": "r"
+    },
+    {
+      "address": 1041,
+      "function": "holding",
+      "name": "SPS DSP Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1044,
+      "function": "holding",
+      "name": "Priority Mode",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Load",
+        "1": "Battery",
+        "2": "Grid"
+      }
+    },
+    {
+      "address": 1060,
+      "function": "holding",
+      "name": "UPS On/Off",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1062,
+      "function": "holding",
+      "name": "UPS Output Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "239V",
+        "1": "208V",
+        "2": "240V"
+      }
+    },
+    {
+      "address": 1070,
+      "function": "holding",
+      "name": "Discharge Power Rate (Grid First)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 1071,
+      "function": "holding",
+      "name": "Discharge Stop SoC (Grid First)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 1090,
+      "function": "holding",
+      "name": "Charge Stop SoC (Battery First)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 1092,
+      "function": "holding",
+      "name": "AC Charge",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-gateway",
+    "ref": "20de1794f20f946fa9d9e81effeee6d47258c3a7",
+    "needsReview": true,
+    "reviewReasons": [
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

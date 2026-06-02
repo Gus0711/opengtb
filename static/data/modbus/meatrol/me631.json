@@ -1,0 +1,465 @@
+{
+  "slug": "meatrol-me631",
+  "vendor": "meatrol",
+  "vendorSlug": "meatrol",
+  "model": "me631",
+  "modelSlug": "me631",
+  "name": "meatrol me631",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2000,
+      "function": "holding",
+      "name": "Phase-1-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2002,
+      "function": "holding",
+      "name": "Phase-2-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2004,
+      "function": "holding",
+      "name": "Phase-3-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2006,
+      "function": "holding",
+      "name": "Average-of-PF1,-PF2,-PF3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2008,
+      "function": "holding",
+      "name": "Phase-1-displacement-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2010,
+      "function": "holding",
+      "name": "Phase-2-displacement-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2012,
+      "function": "holding",
+      "name": "Phase-3-displacement-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2014,
+      "function": "holding",
+      "name": "Average-of-DPF1,-DPF2,-DPF3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2016,
+      "function": "holding",
+      "name": "Phase-1-frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 2018,
+      "function": "holding",
+      "name": "Phase-2-frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 2020,
+      "function": "holding",
+      "name": "Phase-3-frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 2022,
+      "function": "holding",
+      "name": "Average-of-freq1,-freq2,-freq3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 2024,
+      "function": "holding",
+      "name": "Range:2-52",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2025,
+      "function": "holding",
+      "name": "Range:2-52",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2026,
+      "function": "holding",
+      "name": "Range:2-52",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2027,
+      "function": "holding",
+      "name": "Phase-1-X-times-harmonics-current-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2029,
+      "function": "holding",
+      "name": "Phase-2-X-times-harmonics-current-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2031,
+      "function": "holding",
+      "name": "Phase-3-X-times-harmonics-current-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2033,
+      "function": "holding",
+      "name": "Average-of-I1THDx,-I2THDx,-I3THDx",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2035,
+      "function": "holding",
+      "name": "Phase-1-y-times-harmonics-current-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2037,
+      "function": "holding",
+      "name": "Phase-2-y-times-harmonics-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2039,
+      "function": "holding",
+      "name": "Phase-3-y-times-harmonics-current-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2041,
+      "function": "holding",
+      "name": "Average-of-U1THDy,-U2THDy,-U3THDy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2043,
+      "function": "holding",
+      "name": "Phase-1-z-times-harmonics-current-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2045,
+      "function": "holding",
+      "name": "Phase-2-z-times-harmonics-current-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2047,
+      "function": "holding",
+      "name": "Phase-3-z-times-harmonics-current-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2049,
+      "function": "holding",
+      "name": "Average-of-U1THDz,-U2THDz,-U3THDz",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2051,
+      "function": "holding",
+      "name": "Phase-1-total-harmonics-current-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2053,
+      "function": "holding",
+      "name": "Phase-2-total-harmonics-current-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2055,
+      "function": "holding",
+      "name": "Phase-3-total-harmonics-current-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2057,
+      "function": "holding",
+      "name": "Average-of-U1THD,-U2THD,-U3THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2059,
+      "function": "holding",
+      "name": "Phase-1-x-times-harmonics-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2061,
+      "function": "holding",
+      "name": "Phase-2-x-times-harmonics-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2063,
+      "function": "holding",
+      "name": "Phase-3-x-times-harmonics-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2065,
+      "function": "holding",
+      "name": "Average-of-U1THx,-U2THx,-U3THx",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2067,
+      "function": "holding",
+      "name": "Phase-1-y-times-harmonics-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2069,
+      "function": "holding",
+      "name": "Phase-2-y-times-harmonics-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2071,
+      "function": "holding",
+      "name": "Phase-3-y-times-harmonics-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2073,
+      "function": "holding",
+      "name": "Average-of-U1THy,-U2THy,-U3THy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2075,
+      "function": "holding",
+      "name": "Phase-1-z-times-harmonics-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2077,
+      "function": "holding",
+      "name": "Phase-2-z-times-harmonics-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2079,
+      "function": "holding",
+      "name": "Phase-3-z-times-harmonics-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2081,
+      "function": "holding",
+      "name": "Average-of-U1THz,-U2THz,-U3THz",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2083,
+      "function": "holding",
+      "name": "Phase-1-X-times-harmonics-voltage-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2085,
+      "function": "holding",
+      "name": "Phase-2-X-times-harmonics-voltage-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2087,
+      "function": "holding",
+      "name": "Phase-3-X-times-harmonics-voltage-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2089,
+      "function": "holding",
+      "name": "Average-of-U1THDx,-U2THDx,-U3THDx",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2091,
+      "function": "holding",
+      "name": "Phase-1-y-times-harmonics-voltage-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2093,
+      "function": "holding",
+      "name": "Phase-2-y-times-harmonics-voltage-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2095,
+      "function": "holding",
+      "name": "Phase-3-y-times-harmonics-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/meatrol-me631.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

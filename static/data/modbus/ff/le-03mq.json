@@ -1,0 +1,472 @@
+{
+  "slug": "ff-le-03mq",
+  "vendor": "ff",
+  "vendorSlug": "ff",
+  "model": "le-03mq",
+  "modelSlug": "le-03mq",
+  "name": "ff le-03mq",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "L2-(L-n)-phase-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "L3-(L-n)-phase-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "L1-current-strength",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "L2-current-strength",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "L3-current-strength",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "L1-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "L2-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "L3-active-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "L1-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "L2-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "L3-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "L1-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "L2-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "L3-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "L1-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "L2-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "L3-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "L1-phase-angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "L2-phase-angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "L3-phase-angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "Average-phase-voltage-among-phase-and-neutral-wire",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Average-line-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Sum-of-phase-currents",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Total-system-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Total-system-volt-amps",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "Total-system-var",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "Total-system-power-factor-(*1)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "holding",
+      "name": "Total-system-phase-angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "Frequency-of-supply-voltages",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "holding",
+      "name": "Imported-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh/ MWh",
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "holding",
+      "name": "Exported-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWH/ MWh",
+      "access": "r"
+    },
+    {
+      "address": 76,
+      "function": "holding",
+      "name": "Imported-reactive-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVarh/ MVarh",
+      "access": "r"
+    },
+    {
+      "address": 78,
+      "function": "holding",
+      "name": "Exported-reactive-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVarh/ MVarh",
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "Apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVah/ MVAh",
+      "access": "r"
+    },
+    {
+      "address": 82,
+      "function": "holding",
+      "name": "Ah-since-last-reset",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ah/kAh",
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "Total-system-power-demand-(*2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "Maximum-total-system-power-demand-(*2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "Total-system-VA-demand-(*2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "Maximum-total-system-VA-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "Neutral-current-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 106,
+      "function": "holding",
+      "name": "Maximum-neutral-current-demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 200,
+      "function": "holding",
+      "name": "L1-L2-interphase-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 202,
+      "function": "holding",
+      "name": "L2-L3-interphase-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 204,
+      "function": "holding",
+      "name": "L3-L1-interphase-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 206,
+      "function": "holding",
+      "name": "Average-interphase-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 224,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 234,
+      "function": "holding",
+      "name": "Phase-1-L/N-volts-THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 236,
+      "function": "holding",
+      "name": "Phase-2-L/N-volts-THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 238,
+      "function": "holding",
+      "name": "Phase-3-L/N-volts-THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 240,
+      "function": "holding",
+      "name": "Phase-1-current-THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/ff-le-03mq.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

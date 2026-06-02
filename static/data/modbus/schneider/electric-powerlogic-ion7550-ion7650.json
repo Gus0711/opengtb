@@ -1,0 +1,447 @@
+{
+  "slug": "schneider-electric-powerlogic-ion7550-ion7650",
+  "vendor": "schneider",
+  "vendorSlug": "schneider",
+  "model": "electric-powerlogic-ion7550-ion7650",
+  "modelSlug": "electric-powerlogic-ion7550-ion7650",
+  "name": "schneider electric-powerlogic-ion7550-ion7650",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 149,
+      "function": "holding",
+      "name": "I-a,-Amp/freq/unbal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 150,
+      "function": "holding",
+      "name": "I-b,-Amp/freq/unbal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 151,
+      "function": "holding",
+      "name": "I-c,-Amp/freq/unbal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 152,
+      "function": "holding",
+      "name": "I-4,-Amp/freq/unbal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 153,
+      "function": "holding",
+      "name": "I-5,-Amp/freq/unbal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 154,
+      "function": "holding",
+      "name": "I-avg,-Amp/freq/unbal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 155,
+      "function": "holding",
+      "name": "I-avg-mn,-Amp/freq/unbal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 156,
+      "function": "holding",
+      "name": "I-avg-mx,-Amp/freq/unbal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 157,
+      "function": "holding",
+      "name": "I-avg-mean,-Amp/freq/unbal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 158,
+      "function": "holding",
+      "name": "Freq,-Amp/freq/unbal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 159,
+      "function": "holding",
+      "name": "Freq-mn,-Amp/freq/unbal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 160,
+      "function": "holding",
+      "name": "Freq-mx,-Amp/freq/unbal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 161,
+      "function": "holding",
+      "name": "Freq-mean,-Amp/freq/unbal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 162,
+      "function": "holding",
+      "name": "V-unbal,-Amp/freq/unbal",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 163,
+      "function": "holding",
+      "name": "I-unbal,-Amp/freq/unbal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 164,
+      "function": "holding",
+      "name": "Phase-Rev,-Amp/freq/unbal",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 165,
+      "function": "holding",
+      "name": "Vln-a,-Volts",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 167,
+      "function": "holding",
+      "name": "Vln-b,-Volts",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 169,
+      "function": "holding",
+      "name": "Vln-c,-Volts",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 171,
+      "function": "holding",
+      "name": "Vln-avg,-Volts",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 173,
+      "function": "holding",
+      "name": "Vln-avg-mx,-Volts",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 177,
+      "function": "holding",
+      "name": "Vll-ab,-Volts",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 179,
+      "function": "holding",
+      "name": "Vll-bc,-Volts",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 181,
+      "function": "holding",
+      "name": "Vll-ca,-Volts",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 183,
+      "function": "holding",
+      "name": "Vll-avg,-Volts",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 185,
+      "function": "holding",
+      "name": "Vll-avg-mx,-Volts",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 187,
+      "function": "holding",
+      "name": "Vll-avg-mean,-Volts",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 197,
+      "function": "holding",
+      "name": "kW-a,-kW/kVAr/kVA",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 199,
+      "function": "holding",
+      "name": "kW-b,-kW/kVAr/kVA",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 201,
+      "function": "holding",
+      "name": "kW-c,-kW/kVAr/kVA",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 203,
+      "function": "holding",
+      "name": "kW-tot,-kW/kVAr/kVA",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 205,
+      "function": "holding",
+      "name": "kW-tot-mx,-kW/kVAr/kVA",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 207,
+      "function": "holding",
+      "name": "kVAR-a,-kW/kVAr/kVA",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 209,
+      "function": "holding",
+      "name": "kVAR-b,-kW/kVAr/kVA",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 211,
+      "function": "holding",
+      "name": "kVAR-c,-kW/kVAr/kVA",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 213,
+      "function": "holding",
+      "name": "kVAR-tot,-kW/kVAr/kVA",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 215,
+      "function": "holding",
+      "name": "kVAR-tot-mx,-kW/kVAr/kVA",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 217,
+      "function": "holding",
+      "name": "kVA-a,-kW/kVAr/kVA",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 219,
+      "function": "holding",
+      "name": "kVA-b,-kW/kVAr/kVA",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 221,
+      "function": "holding",
+      "name": "kVA-c,-kW/kVAr/kVA",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 223,
+      "function": "holding",
+      "name": "kVA-tot,-kW/kVAr/kVA",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 225,
+      "function": "holding",
+      "name": "kVA-tot-mx,-kW/kVAr/kVA",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 229,
+      "function": "holding",
+      "name": "kWh-del,-kWh/kVArh",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 231,
+      "function": "holding",
+      "name": "kWh-rec,-kWh/kVArh",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 233,
+      "function": "holding",
+      "name": "kVARh-del,-kWh/kVArh",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 235,
+      "function": "holding",
+      "name": "kVARh-rec,-kWh/kVArh",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 237,
+      "function": "holding",
+      "name": "kVAh-del+rec,-kWh/kVArh",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVArh",
+      "access": "r"
+    },
+    {
+      "address": 261,
+      "function": "holding",
+      "name": "PF-sign-a,-PF/THD/Kfactor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 262,
+      "function": "holding",
+      "name": "PF-sign-b,-PF/THD/Kfactor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 263,
+      "function": "holding",
+      "name": "PF-sign-c,-PF/THD/Kfactor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/schneider-electric-powerlogic-ion7550-ion7650.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

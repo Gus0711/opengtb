@@ -1,0 +1,156 @@
+{
+  "slug": "senergy-hybrid-inverter",
+  "vendor": "Senergy",
+  "vendorSlug": "senergy",
+  "model": "Hybrid Inverter",
+  "modelSlug": "hybrid-inverter",
+  "name": "Senergy Hybrid Inverter",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 4129,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Total Energy"
+    },
+    {
+      "address": 4168,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "PV Total Input Power"
+    },
+    {
+      "address": 4864,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "L1 watt of grid"
+    },
+    {
+      "address": 4866,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "L2 watt of grid"
+    },
+    {
+      "address": 4868,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "L3 watt of grid"
+    },
+    {
+      "address": 4870,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Accumulated energy of import"
+    },
+    {
+      "address": 4893,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r",
+      "notes": "Grid Phase A Current"
+    },
+    {
+      "address": 4895,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r",
+      "notes": "Grid Phase B Current"
+    },
+    {
+      "address": 4897,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "A",
+      "access": "r",
+      "notes": "Grid Phase C Current"
+    },
+    {
+      "address": 8192,
+      "function": "holding",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r",
+      "notes": "Battery SOC"
+    },
+    {
+      "address": 8201,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Battery Power"
+    },
+    {
+      "address": 8209,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Battery accumulated discharge energy"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

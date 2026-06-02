@@ -1,0 +1,46 @@
+{
+  "slug": "eastron-sdm120-modbus",
+  "vendor": "Eastron",
+  "vendorSlug": "eastron",
+  "model": "SDM120-Modbus",
+  "modelSlug": "sdm120-modbus",
+  "name": "Eastron SDM120-Modbus",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 12,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Active power"
+    },
+    {
+      "address": 72,
+      "function": "input",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Import active energy"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

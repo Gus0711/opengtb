@@ -1,0 +1,473 @@
+{
+  "slug": "kohler-decision-maker-6000",
+  "vendor": "kohler",
+  "vendorSlug": "kohler",
+  "model": "decision-maker-6000",
+  "modelSlug": "decision-maker-6000",
+  "name": "kohler decision-maker-6000",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "L2-L3-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "L3-L1-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "L1-l0-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "L2-l0-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "L3-l0-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts AC",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "L1-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps AC",
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "L2-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps AC",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "L3-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amps AC",
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Total-kw",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Percent-of-rated-kw",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "% Rated kW",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Total-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "PF",
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "L1-kw",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "L1-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "PF",
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "L2-kw",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "L2-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "PF",
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "L3-kw",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "L3-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "PF",
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Total-kvar",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "L1-kvar",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "L2-kvar",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "L3-kvar",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Total-kva",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "L1-kva",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "L2-kva",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "L3-kva",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 27,
+      "function": "holding",
+      "name": "Current-lead/lag",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Bits 0-1 Total Current - Leading = 10 Lagging = 01 Bits 2-3 L1 Current Leading = 10 Lagging = 01 Bits 4-5 L2 Current - Leading = 10 Lagging = 01 Bits 6-7 L3 Current - Leading = 10 Lagging = 01",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Oil-pressure",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kPa/psi",
+      "access": "r"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Coolant-temperature",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Degrees C/Degrees F",
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Engine-speed",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "RPM",
+      "access": "r"
+    },
+    {
+      "address": 35,
+      "function": "holding",
+      "name": "Local-battery-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts DC",
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Fuel-pressure",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kPa/psi DDEC/MDEC/ADEC only",
+      "access": "r"
+    },
+    {
+      "address": 37,
+      "function": "holding",
+      "name": "Fuel-temperature",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Degrees C/Degrees F DDEC/MDEC/ADEC only",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Fuel-rate",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Liters/Hour",
+      "access": "r"
+    },
+    {
+      "address": 39,
+      "function": "holding",
+      "name": "Used-last-run",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Liters/Gallons DDEC only",
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "Coolant-pressure",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kPa/psi DDEC only",
+      "access": "r"
+    },
+    {
+      "address": 41,
+      "function": "holding",
+      "name": "Coolant-level",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "Lube-oil-temperature",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Degrees C/Degrees F DDEC/MDEC/ADEC only",
+      "access": "r"
+    },
+    {
+      "address": 43,
+      "function": "holding",
+      "name": "Oil-level",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "Crankcase-pressure",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kPa/psi DDEC only",
+      "access": "r"
+    },
+    {
+      "address": 45,
+      "function": "holding",
+      "name": "Ambient-temperature",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Degrees C/Degrees F DDEC only",
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Ecm-battery-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts DC",
+      "access": "r"
+    },
+    {
+      "address": 47,
+      "function": "holding",
+      "name": "Ecm-status",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "0 = DDEC-Equipped, 1 = Non-ECM, 2 = MDEC/ADEC-Equipped",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Intake-air-temperature",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Degrees C/Degrees F MDEC/ADEC only",
+      "access": "r"
+    },
+    {
+      "address": 49,
+      "function": "holding",
+      "name": "Intake-air-pressure",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Degrees C/Degrees F MDEC/ADEC only",
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "Mdec/adec-fault-codes",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Numeric Fault Code MDEC/ADEC only",
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "Analog-input-00-(battery-voltage)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Volts DC",
+      "access": "r"
+    },
+    {
+      "address": 61,
+      "function": "holding",
+      "name": "Analog-input01",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "User-defined and calibrated through the 6000 controller. See the controller operation manual.",
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "Analog-input02",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 63,
+      "function": "holding",
+      "name": "Analog-input03",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/kohler-decision-maker-6000.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont"
+    ]
+  }
+}

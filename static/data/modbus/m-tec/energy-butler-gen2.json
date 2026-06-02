@@ -1,0 +1,68 @@
+{
+  "slug": "m-tec-energy-butler-gen2",
+  "vendor": "M-TEC",
+  "vendorSlug": "m-tec",
+  "model": "Energy Butler GEN2",
+  "modelSlug": "energy-butler-gen2",
+  "name": "M-TEC Energy Butler GEN2",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 11000,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Zähler (NVP) Leistung"
+    },
+    {
+      "address": 11028,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "PV Leistung"
+    },
+    {
+      "address": 40258,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Batterie Leistung"
+    },
+    {
+      "address": 43000,
+      "function": "holding",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r",
+      "notes": "State of Charge (SOC)"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

@@ -1,0 +1,426 @@
+{
+  "slug": "elmeasure-mps8000-mpu5110",
+  "vendor": "elmeasure",
+  "vendorSlug": "elmeasure",
+  "model": "mps8000-mpu5110",
+  "modelSlug": "mps8000-mpu5110",
+  "name": "elmeasure mps8000-mpu5110",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "Watts-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "Watts-R-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "Watts-Y-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 106,
+      "function": "holding",
+      "name": "Watts-B-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 108,
+      "function": "holding",
+      "name": "Var-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 110,
+      "function": "holding",
+      "name": "Var-R-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 112,
+      "function": "holding",
+      "name": "Var-Y-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 114,
+      "function": "holding",
+      "name": "Var-B-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 116,
+      "function": "holding",
+      "name": "Pf-avg(inst)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 118,
+      "function": "holding",
+      "name": "Pf-R-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 120,
+      "function": "holding",
+      "name": "Pf-Y-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 122,
+      "function": "holding",
+      "name": "Pf-B-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 124,
+      "function": "holding",
+      "name": "Va-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 126,
+      "function": "holding",
+      "name": "Va-R-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 128,
+      "function": "holding",
+      "name": "Va-Y-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 130,
+      "function": "holding",
+      "name": "Va-B-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 132,
+      "function": "holding",
+      "name": "Vll-average",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 134,
+      "function": "holding",
+      "name": "Vry-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 136,
+      "function": "holding",
+      "name": "Vyb-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 138,
+      "function": "holding",
+      "name": "Vbr-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 140,
+      "function": "holding",
+      "name": "Vln-average",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 142,
+      "function": "holding",
+      "name": "V-R-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 144,
+      "function": "holding",
+      "name": "V-Y-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 146,
+      "function": "holding",
+      "name": "V-B-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 148,
+      "function": "holding",
+      "name": "Current-average",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 150,
+      "function": "holding",
+      "name": "Current-R-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 152,
+      "function": "holding",
+      "name": "Current-Y-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 154,
+      "function": "holding",
+      "name": "Current-B-phase",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 156,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 158,
+      "function": "holding",
+      "name": "Wh-received",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 160,
+      "function": "holding",
+      "name": "Vah-received",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 162,
+      "function": "holding",
+      "name": "Varh-ind.-Received",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 164,
+      "function": "holding",
+      "name": "Varh-cap.-Received",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 174,
+      "function": "holding",
+      "name": "Pf-average-received",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 176,
+      "function": "holding",
+      "name": "Amps-hours-received",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 182,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 184,
+      "function": "holding",
+      "name": "Voltage-R-harmonics",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 186,
+      "function": "holding",
+      "name": "Voltage-Y-harmonics",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 188,
+      "function": "holding",
+      "name": "Voltage-B-harmonics",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 190,
+      "function": "holding",
+      "name": "Current-R-harmonics",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 192,
+      "function": "holding",
+      "name": "Current-Y-harmonics",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 194,
+      "function": "holding",
+      "name": "Current-B-harmonics",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 214,
+      "function": "holding",
+      "name": "Rpm",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 216,
+      "function": "holding",
+      "name": "Load-hours-received",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 220,
+      "function": "holding",
+      "name": "No-of-interruptions",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 230,
+      "function": "holding",
+      "name": "On-hours-(-in-seconds)",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 232,
+      "function": "holding",
+      "name": "Voltage-R-phase-angle",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 234,
+      "function": "holding",
+      "name": "Voltage-Y-phase-angle",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 236,
+      "function": "holding",
+      "name": "Voltage-B-phase-angle",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 238,
+      "function": "holding",
+      "name": "Current-R-phase-angle",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/elmeasure-mps8000-mpu5110.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

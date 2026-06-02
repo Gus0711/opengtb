@@ -1,0 +1,472 @@
+{
+  "slug": "continental-control-systems-wattnode",
+  "vendor": "continental",
+  "vendorSlug": "continental",
+  "model": "control-systems-wattnode",
+  "modelSlug": "control-systems-wattnode",
+  "name": "continental control-systems-wattnode",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1001,
+      "function": "holding",
+      "name": "Total-net-(bidirectional)-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1003,
+      "function": "holding",
+      "name": "Total-positive-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1005,
+      "function": "holding",
+      "name": "Total-net-(bidirectional)-energy-non-resettable",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1007,
+      "function": "holding",
+      "name": "Total-positive-energy-non-resettable",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1009,
+      "function": "holding",
+      "name": "Real-power,-sum-of-active-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1011,
+      "function": "holding",
+      "name": "Real-power,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1013,
+      "function": "holding",
+      "name": "Real-power,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1015,
+      "function": "holding",
+      "name": "Real-power,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 1017,
+      "function": "holding",
+      "name": "Average-phase-to-neutral-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1019,
+      "function": "holding",
+      "name": "Rms-voltage,-phase-A-to-neutral",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1021,
+      "function": "holding",
+      "name": "Rms-voltage,-phase-B-to-neutral",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1023,
+      "function": "holding",
+      "name": "Rms-voltage,-phase-C-to-neutral",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1025,
+      "function": "holding",
+      "name": "Average-line-to-line-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1027,
+      "function": "holding",
+      "name": "Rms-voltage,-line-to-line,-phase-A-to-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1029,
+      "function": "holding",
+      "name": "Rms-voltage,-line-to-line,-phase-B-to-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1031,
+      "function": "holding",
+      "name": "Rms-voltage,-line-to-line,-phase-A-to-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 1033,
+      "function": "holding",
+      "name": "Power-line-frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 1101,
+      "function": "holding",
+      "name": "Net-(bidirectional)-energy,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1103,
+      "function": "holding",
+      "name": "Net-(bidirectional)-energy,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1105,
+      "function": "holding",
+      "name": "Net-(bidirectional)-energy,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1107,
+      "function": "holding",
+      "name": "Positive-energy,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1109,
+      "function": "holding",
+      "name": "Positive-energy,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1111,
+      "function": "holding",
+      "name": "Positive-energy,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1113,
+      "function": "holding",
+      "name": "Negative-energy,-sum-of-active-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1115,
+      "function": "holding",
+      "name": "Negative-energy,-sum-of-active-phases-non-resettable",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1117,
+      "function": "holding",
+      "name": "Negative-energy,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1119,
+      "function": "holding",
+      "name": "Negative-energy,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1121,
+      "function": "holding",
+      "name": "Negative-energy,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1123,
+      "function": "holding",
+      "name": "Reactive-energy,-sum-of-active-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 1125,
+      "function": "holding",
+      "name": "Net-reactive-energy,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 1127,
+      "function": "holding",
+      "name": "Net-reactive-energy,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 1129,
+      "function": "holding",
+      "name": "Net-reactive-energy,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 1131,
+      "function": "holding",
+      "name": "Apparent-energy,-sum-of-active-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 1133,
+      "function": "holding",
+      "name": "Apparent-energy,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 1135,
+      "function": "holding",
+      "name": "Apparent-energy,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 1137,
+      "function": "holding",
+      "name": "Apparent-energy,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 1139,
+      "function": "holding",
+      "name": "Power-factor,-average-of-active-phases",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1141,
+      "function": "holding",
+      "name": "Power-factor,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1143,
+      "function": "holding",
+      "name": "Power-factor,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1145,
+      "function": "holding",
+      "name": "Power-factor,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1147,
+      "function": "holding",
+      "name": "Reactive-power,-sum-of-active-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 1149,
+      "function": "holding",
+      "name": "Reactive-power,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 1151,
+      "function": "holding",
+      "name": "Reactive-power,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 1153,
+      "function": "holding",
+      "name": "Reactive-power,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 1155,
+      "function": "holding",
+      "name": "Apparent-power,-sum-of-active-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1157,
+      "function": "holding",
+      "name": "Apparent-power,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1159,
+      "function": "holding",
+      "name": "Apparent-power,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1161,
+      "function": "holding",
+      "name": "Apparent-power,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 1163,
+      "function": "holding",
+      "name": "Rms-current,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1165,
+      "function": "holding",
+      "name": "Rms-current,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/continental-control-systems-wattnode.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

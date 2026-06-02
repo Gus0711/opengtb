@@ -1,0 +1,426 @@
+{
+  "slug": "trinity-xpert",
+  "vendor": "trinity",
+  "vendorSlug": "trinity",
+  "model": "xpert",
+  "modelSlug": "xpert",
+  "name": "trinity xpert",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 199,
+      "function": "holding",
+      "name": "Vrn",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 203,
+      "function": "holding",
+      "name": "Vbn",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 213,
+      "function": "holding",
+      "name": "Avg.-Vpp",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 215,
+      "function": "holding",
+      "name": "Ir",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 219,
+      "function": "holding",
+      "name": "Lb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 221,
+      "function": "holding",
+      "name": "Avg.-I",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 229,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 231,
+      "function": "holding",
+      "name": "System-pf",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 239,
+      "function": "holding",
+      "name": "System-kw",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 241,
+      "function": "holding",
+      "name": "System-kvar",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 243,
+      "function": "holding",
+      "name": "System-kva",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 267,
+      "function": "holding",
+      "name": "Rising-demand",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 269,
+      "function": "holding",
+      "name": "Max-demand",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 271,
+      "function": "holding",
+      "name": "Dg-kwh",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 273,
+      "function": "holding",
+      "name": "Dg-kvarh",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 275,
+      "function": "holding",
+      "name": "Eb-kwh",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 277,
+      "function": "holding",
+      "name": "Eb-kvarh",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 281,
+      "function": "holding",
+      "name": "Dg-kvah",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 283,
+      "function": "holding",
+      "name": "Eb-kvah",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 285,
+      "function": "holding",
+      "name": "3rd-hvr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 287,
+      "function": "holding",
+      "name": "Sth-hvr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 289,
+      "function": "holding",
+      "name": "7th-hvr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 291,
+      "function": "holding",
+      "name": "9th-hvr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 293,
+      "function": "holding",
+      "name": "11th-hvr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 295,
+      "function": "holding",
+      "name": "13th-hvr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 297,
+      "function": "holding",
+      "name": "15th-hvr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 299,
+      "function": "holding",
+      "name": "Thd-vr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 301,
+      "function": "holding",
+      "name": "3rd-hlr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 303,
+      "function": "holding",
+      "name": "Sth-hlr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 305,
+      "function": "holding",
+      "name": "7th-hlr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 307,
+      "function": "holding",
+      "name": "9th-hlr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 309,
+      "function": "holding",
+      "name": "11th-hlr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 311,
+      "function": "holding",
+      "name": "13th-hlr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 313,
+      "function": "holding",
+      "name": "15th-hlr",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 315,
+      "function": "holding",
+      "name": "Thd-ir",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 349,
+      "function": "holding",
+      "name": "3rd-hvb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 351,
+      "function": "holding",
+      "name": "Sth-hvb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 353,
+      "function": "holding",
+      "name": "7th-hvb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 355,
+      "function": "holding",
+      "name": "9th-hvb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 357,
+      "function": "holding",
+      "name": "11th-hvb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 359,
+      "function": "holding",
+      "name": "13th-hvb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 361,
+      "function": "holding",
+      "name": "15th-hvb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 363,
+      "function": "holding",
+      "name": "Thd-vb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 365,
+      "function": "holding",
+      "name": "3rd-hlb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 367,
+      "function": "holding",
+      "name": "Sth-hlb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 369,
+      "function": "holding",
+      "name": "7th-hlb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 371,
+      "function": "holding",
+      "name": "9th-hlb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 373,
+      "function": "holding",
+      "name": "11th-hlb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 375,
+      "function": "holding",
+      "name": "13th-hlb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 377,
+      "function": "holding",
+      "name": "15th-hlb",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/trinity-xpert.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

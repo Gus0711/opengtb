@@ -1,0 +1,426 @@
+{
+  "slug": "socomec-countis-e63",
+  "vendor": "socomec",
+  "vendorSlug": "socomec",
+  "model": "countis-e63",
+  "modelSlug": "countis-e63",
+  "name": "socomec countis-e63",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 38912,
+      "function": "holding",
+      "name": "Communication-board-version-(Major)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 38913,
+      "function": "holding",
+      "name": "Communication-board-version-(Minor)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 38914,
+      "function": "holding",
+      "name": "Communication-board-version-(Revision)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 38915,
+      "function": "holding",
+      "name": "Communication-board-version-(Build)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 38919,
+      "function": "holding",
+      "name": "Communication-board-VLO",
+      "dataType": "string",
+      "size": 8,
+      "access": "r"
+    },
+    {
+      "address": 50000,
+      "function": "holding",
+      "name": "Product-name",
+      "dataType": "string",
+      "size": 8,
+      "access": "r"
+    },
+    {
+      "address": 50004,
+      "function": "holding",
+      "name": "Product-order-ID-(Countis:100,-protection:200,-atys:300,-diris:400)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 50005,
+      "function": "holding",
+      "name": "Product-ID",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 50007,
+      "function": "holding",
+      "name": "Product-software-version",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 50018,
+      "function": "holding",
+      "name": "Product-version-(Major)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 50019,
+      "function": "holding",
+      "name": "Product-version-(Minor)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 50020,
+      "function": "holding",
+      "name": "Product-version-(Revision)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 50021,
+      "function": "holding",
+      "name": "Product-version-(Build)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 50025,
+      "function": "holding",
+      "name": "Software-technical-base-version-(Major)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 50026,
+      "function": "holding",
+      "name": "Software-technical-base-version-(Minor)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 50027,
+      "function": "holding",
+      "name": "Software-technical-base-version-(Revision)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 50028,
+      "function": "holding",
+      "name": "Customization-version-(Major)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 50029,
+      "function": "holding",
+      "name": "Customization-version-(Minor)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 50030,
+      "function": "holding",
+      "name": "Product-VLO",
+      "dataType": "string",
+      "size": 8,
+      "access": "r"
+    },
+    {
+      "address": 50034,
+      "function": "holding",
+      "name": "Customization-VLO",
+      "dataType": "string",
+      "size": 8,
+      "access": "r"
+    },
+    {
+      "address": 50038,
+      "function": "holding",
+      "name": "Software-technical-base-VLO",
+      "dataType": "string",
+      "size": 8,
+      "access": "r"
+    },
+    {
+      "address": 50042,
+      "function": "holding",
+      "name": "Vendor-name",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 50050,
+      "function": "holding",
+      "name": "Product-name",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 50058,
+      "function": "holding",
+      "name": "Extended-name",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 50514,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage:-U12",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50516,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage:-U23",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50518,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage:-U31",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50520,
+      "function": "holding",
+      "name": "Simple-voltage:-V1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50522,
+      "function": "holding",
+      "name": "Simple-voltage:-V2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50524,
+      "function": "holding",
+      "name": "Simple-voltage:-V3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50526,
+      "function": "holding",
+      "name": "Frequency:-F",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50528,
+      "function": "holding",
+      "name": "Current:-I1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50530,
+      "function": "holding",
+      "name": "Current:-I2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50532,
+      "function": "holding",
+      "name": "Current:-I3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50536,
+      "function": "holding",
+      "name": "Active-power-+/-:-P",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50540,
+      "function": "holding",
+      "name": "Apparent-power:-S",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50542,
+      "function": "holding",
+      "name": "Power-factor:--:-leading-et-+:-lagging:-PF",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50544,
+      "function": "holding",
+      "name": "Active-power-phase-1-+/-:-P1",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50546,
+      "function": "holding",
+      "name": "Active-power-phase-2-+/-:-P2",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50548,
+      "function": "holding",
+      "name": "Active-power-phase-3-+/-:-P3",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50556,
+      "function": "holding",
+      "name": "Apparent-power-phase-1:-S1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50558,
+      "function": "holding",
+      "name": "Apparent-power-phase-2:-S2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50560,
+      "function": "holding",
+      "name": "Apparent-power-phase-3:-S3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50562,
+      "function": "holding",
+      "name": "Power-factor-phase-1--:-leading-and-+:-lagging:-PF1",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50564,
+      "function": "holding",
+      "name": "Power-factor-phase-2--:-leading-and-+:-lagging:-PF2",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50770,
+      "function": "holding",
+      "name": "Total-positive-active-energy-(no-resetable):-ea+",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 50780,
+      "function": "holding",
+      "name": "Partial-positive-active-energy:-ea+",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 57346,
+      "function": "holding",
+      "name": "Current-transformer-primary",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57355,
+      "function": "holding",
+      "name": "Synchronisation-top-for-P+/--Q+/-:-time-in-seconds-(-2mn,-5mn,-8mn,-10mn,-15mn,-20mn,-30mn,-60mn)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57602,
+      "function": "holding",
+      "name": "Year",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/socomec-countis-e63.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

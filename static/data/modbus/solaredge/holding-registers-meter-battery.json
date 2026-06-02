@@ -1,0 +1,1101 @@
+{
+  "slug": "solaredge-holding-registers-meter-battery",
+  "vendor": "SolarEdge",
+  "vendorSlug": "solaredge",
+  "model": "holding-registers-meter-battery",
+  "modelSlug": "holding-registers-meter-battery",
+  "name": "SolarEdge holding-registers-meter-battery",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 40001,
+      "function": "holding",
+      "name": "SunSpecID",
+      "label": "C_SunSpec_ID",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40003,
+      "function": "holding",
+      "name": "SunSpecDID",
+      "label": "C_SunSpec_DID",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40004,
+      "function": "holding",
+      "name": "SunSpecLength",
+      "label": "C_SunSpec_Length",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40005,
+      "function": "holding",
+      "name": "Manufacturer",
+      "label": "C_Manufacturer",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 40021,
+      "function": "holding",
+      "name": "Model",
+      "label": "C_Model",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 40045,
+      "function": "holding",
+      "name": "Version",
+      "label": "C_Version",
+      "dataType": "string",
+      "size": 8,
+      "access": "r"
+    },
+    {
+      "address": 40053,
+      "function": "holding",
+      "name": "SerialNumber",
+      "label": "C_SerialNumber",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 40069,
+      "function": "holding",
+      "name": "DeviceAddress",
+      "label": "C_DeviceAddress",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40070,
+      "function": "holding",
+      "name": "PhaseTypes",
+      "label": "C_SunSpec_DID",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40071,
+      "function": "holding",
+      "name": "SunSpecLength",
+      "label": "C_SunSpec_Length",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40072,
+      "function": "holding",
+      "name": "CurrentTotal",
+      "label": "I_AC_Current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40073,
+      "function": "holding",
+      "name": "CurrentL1",
+      "label": "I_AC_CurrentA",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40074,
+      "function": "holding",
+      "name": "CurrentL2",
+      "label": "I_AC_CurrentB",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40075,
+      "function": "holding",
+      "name": "CurrentL3",
+      "label": "I_AC_CurrentC",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40076,
+      "function": "holding",
+      "name": "CurrentSF",
+      "label": "I_AC_Current_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40080,
+      "function": "holding",
+      "name": "VoltageL1N",
+      "label": "I_AC_VoltageAN",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40081,
+      "function": "holding",
+      "name": "VoltageL2N",
+      "label": "I_AC_VoltageBN",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40082,
+      "function": "holding",
+      "name": "VoltageL3N",
+      "label": "I_AC_VoltageCN",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40083,
+      "function": "holding",
+      "name": "VoltageSF",
+      "label": "I_AC_Voltage_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40084,
+      "function": "holding",
+      "name": "Power",
+      "label": "I_AC_Power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40085,
+      "function": "holding",
+      "name": "PowerSF",
+      "label": "I_AC_Power_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40086,
+      "function": "holding",
+      "name": "Frequency",
+      "label": "I_AC_Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 40087,
+      "function": "holding",
+      "name": "FrequencySF",
+      "label": "I_AC_Frequency_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40088,
+      "function": "holding",
+      "name": "VA",
+      "label": "I_AC_VA",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40089,
+      "function": "holding",
+      "name": "VASF",
+      "label": "I_AC_VA_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40090,
+      "function": "holding",
+      "name": "VAR",
+      "label": "I_AC_VAR",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 40091,
+      "function": "holding",
+      "name": "VARSF",
+      "label": "I_AC_VAR_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40092,
+      "function": "holding",
+      "name": "PF",
+      "label": "I_AC_PF",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 40093,
+      "function": "holding",
+      "name": "PFSF",
+      "label": "I_AC_PF_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40094,
+      "function": "holding",
+      "name": "TotalEnergy",
+      "label": "I_AC_Energy_WH",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40096,
+      "function": "holding",
+      "name": "TotalEnergySF",
+      "label": "I_AC_Energy_WH_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40097,
+      "function": "holding",
+      "name": "DCCurrent",
+      "label": "I_DC_Current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40098,
+      "function": "holding",
+      "name": "DCCurrentSF",
+      "label": "I_DC_Current_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40099,
+      "function": "holding",
+      "name": "DCVoltage",
+      "label": "I_DC_Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40100,
+      "function": "holding",
+      "name": "DCVoltageSF",
+      "label": "I_DC_Voltage_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40101,
+      "function": "holding",
+      "name": "DCPower",
+      "label": "I_DC_Power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40102,
+      "function": "holding",
+      "name": "DCPowerSF",
+      "label": "I_DC_Power_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40104,
+      "function": "holding",
+      "name": "Temp",
+      "label": "I_Temp_Sink",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 40107,
+      "function": "holding",
+      "name": "TempSF",
+      "label": "I_Temp_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40108,
+      "function": "holding",
+      "name": "Status",
+      "label": "I_Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40109,
+      "function": "holding",
+      "name": "StatusVendor",
+      "label": "I_Status_Vendor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40140,
+      "function": "holding",
+      "name": "MeterModel",
+      "label": "M_C_Model",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 40164,
+      "function": "holding",
+      "name": "MeterVersion",
+      "label": "M_C_Version",
+      "dataType": "string",
+      "size": 8,
+      "access": "r"
+    },
+    {
+      "address": 40172,
+      "function": "holding",
+      "name": "MeterSerialNumber",
+      "label": "M_C_SerialNumber",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 40191,
+      "function": "holding",
+      "name": "MeterCurrentTotal",
+      "label": "M_AC_Current",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40192,
+      "function": "holding",
+      "name": "MeterCurrentL1",
+      "label": "M_AC_Current_A",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40193,
+      "function": "holding",
+      "name": "MeterCurrentL2",
+      "label": "M_AC_Current_B",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40194,
+      "function": "holding",
+      "name": "MeterCurrentL3",
+      "label": "M_AC_Current_C",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40195,
+      "function": "holding",
+      "name": "MeterCurrentSF",
+      "label": "M_AC_Current_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40196,
+      "function": "holding",
+      "name": "MeterVoltageLN",
+      "label": "M_AC_Voltage_L_N",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40197,
+      "function": "holding",
+      "name": "MeterVoltageL1N",
+      "label": "M_AC_Voltage_A_N",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40198,
+      "function": "holding",
+      "name": "MeterVoltageL2N",
+      "label": "M_AC_Voltage_B_N",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40199,
+      "function": "holding",
+      "name": "MeterVoltageL3N",
+      "label": "M_AC_Voltage_C_N",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40204,
+      "function": "holding",
+      "name": "MeterVoltageSF",
+      "label": "M_AC_Voltage_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40205,
+      "function": "holding",
+      "name": "MeterFrequency",
+      "label": "M_AC_Freq",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 40206,
+      "function": "holding",
+      "name": "MeterFrequencySF",
+      "label": "M_AC_Freq_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40207,
+      "function": "holding",
+      "name": "MeterPowerTotal",
+      "label": "M_AC_Power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40208,
+      "function": "holding",
+      "name": "MeterPowerL1",
+      "label": "M_AC_Power_A",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40209,
+      "function": "holding",
+      "name": "MeterPowerL2",
+      "label": "M_AC_Power_B",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40210,
+      "function": "holding",
+      "name": "MeterPowerL3",
+      "label": "M_AC_Power_C",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40211,
+      "function": "holding",
+      "name": "MeterPowerSF",
+      "label": "M_AC_Power_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40212,
+      "function": "holding",
+      "name": "MeterApparentPowerTotal",
+      "label": "M_AC_VA",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40213,
+      "function": "holding",
+      "name": "MeterApparentPowerL1",
+      "label": "M_AC_VA_A",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40214,
+      "function": "holding",
+      "name": "MeterApparentPowerL2",
+      "label": "M_AC_VA_B",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40215,
+      "function": "holding",
+      "name": "MeterApparentPowerL3",
+      "label": "M_AC_VA_C",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40216,
+      "function": "holding",
+      "name": "MeterApparentPowerSF",
+      "label": "M_AC_VA_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40217,
+      "function": "holding",
+      "name": "MeterReactivePowerTotal",
+      "label": "M_AC_VAR",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 40218,
+      "function": "holding",
+      "name": "MeterReactivePowerL1",
+      "label": "M_AC_VAR_A",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 40219,
+      "function": "holding",
+      "name": "MeterReactivePowerL2",
+      "label": "M_AC_VAR_B",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 40220,
+      "function": "holding",
+      "name": "MeterReactivePowerL3",
+      "label": "M_AC_VAR_C",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "VAR",
+      "access": "r"
+    },
+    {
+      "address": 40221,
+      "function": "holding",
+      "name": "MeterReactivePowerSF",
+      "label": "M_AC_VAR_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40227,
+      "function": "holding",
+      "name": "MeterEnergyExportedTotal",
+      "label": "M_Exported",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40229,
+      "function": "holding",
+      "name": "MeterEnergyExportedL1",
+      "label": "M_Exported_A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40231,
+      "function": "holding",
+      "name": "MeterEnergyExportedL2",
+      "label": "M_Exported_B",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40233,
+      "function": "holding",
+      "name": "MeterEnergyExportedL3",
+      "label": "M_Exported_C",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40235,
+      "function": "holding",
+      "name": "MeterEnergyImportedTotal",
+      "label": "M_Imported",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40237,
+      "function": "holding",
+      "name": "MeterEnergyImportedL1",
+      "label": "M_Imported_A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40239,
+      "function": "holding",
+      "name": "MeterEnergyImportedL2",
+      "label": "M_Imported_B",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40241,
+      "function": "holding",
+      "name": "MeterEnergyImportedL3",
+      "label": "M_Imported_C",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40243,
+      "function": "holding",
+      "name": "MeterEnergySF",
+      "label": "M_Energy_W_SF",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 97601,
+      "function": "holding",
+      "name": "Batt1_Manufacturer",
+      "label": "Battery manufacturer",
+      "dataType": "string",
+      "size": 8,
+      "access": "r"
+    },
+    {
+      "address": 97617,
+      "function": "holding",
+      "name": "Batt1_Model",
+      "label": "Battery model",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 97633,
+      "function": "holding",
+      "name": "Batt1_Firmware",
+      "label": "Battery firmware",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 97649,
+      "function": "holding",
+      "name": "Batt1_Serial",
+      "label": "Battery serial no",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 97665,
+      "function": "holding",
+      "name": "Batt1_ID",
+      "label": "Device ID",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 97667,
+      "function": "holding",
+      "name": "Batt1_RatedEnergy",
+      "label": "Nennenergie",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 97669,
+      "function": "holding",
+      "name": "Batt1_MaxChargeConPower",
+      "label": "Max. Ladeleistung Fortlaufend",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 97671,
+      "function": "holding",
+      "name": "Batt1_MaxDischargeConPower",
+      "label": " Max. Entladeleistung Fortlaufend",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 97673,
+      "function": "holding",
+      "name": "Batt1_MaxChargePower",
+      "label": "Max. Ladeleistung",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 97675,
+      "function": "holding",
+      "name": "Batt1_MaxDischargePower",
+      "label": "Max. Entladeleistung",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 97709,
+      "function": "holding",
+      "name": "Batt1_AverageTemp",
+      "label": "Durchschnittstemperatur",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 97711,
+      "function": "holding",
+      "name": "Batt1_MaxTemp",
+      "label": "Maximale Temperatur",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 97713,
+      "function": "holding",
+      "name": "Batt1_Voltage",
+      "label": "Aktuelle Spannung",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 97715,
+      "function": "holding",
+      "name": "Batt1_Current",
+      "label": "Aktueller Strom Minus = Laden; Plus = Entladen",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 97717,
+      "function": "holding",
+      "name": "Batt1_Power",
+      "label": "Aktuelle Leistung Minus = Entladen; Plus = Laden",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 97719,
+      "function": "holding",
+      "name": "Batt1_TestExport",
+      "label": "gesamt Exportierte Energie - heute?",
+      "dataType": "uint16",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 97723,
+      "function": "holding",
+      "name": "Batt1_TestImport",
+      "label": "gesamt Importierte Energie - heute?",
+      "dataType": "uint16",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 97727,
+      "function": "holding",
+      "name": "Batt1_MaxEnergy",
+      "label": "Maximale Ladung",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 97729,
+      "function": "holding",
+      "name": "Batt1_AvailableEnergy",
+      "label": "Nutzbare Ladung",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 97731,
+      "function": "holding",
+      "name": "Batt1_StateOfHealth",
+      "label": "Lebenszustand",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 97733,
+      "function": "holding",
+      "name": "Batt1_StateOfCharge",
+      "label": "Ladezustand",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 97735,
+      "function": "holding",
+      "name": "Batt1_Status",
+      "label": "Battery operating state: 0 – Off; 1 – Standby; 2 – Init; 3 – Charge; 4 – Discharge; 5 – Fault; 7 - Idle",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 97737,
+      "function": "holding",
+      "name": "Batt1_StatusIntern",
+      "label": "Vendor-defined status codes.",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 97739,
+      "function": "holding",
+      "name": "Batt1_EventLog",
+      "label": "Battery vendor's last fault ID",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 101697,
+      "function": "holding",
+      "name": "CommitSettings",
+      "label": "Commit Power Control Settings",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 101701,
+      "function": "holding",
+      "name": "ReactivePwrConfig",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 101763,
+      "function": "holding",
+      "name": "AdvancedPwrControlEn",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 103237,
+      "function": "holding",
+      "name": "StCtrlMode",
+      "label": "Storage Control Mode",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 103238,
+      "function": "holding",
+      "name": "Storage_AC_Charge_Policy_RW",
+      "label": "0 - Disable, 1 - Always allowed , 2 - Fixed Energy Limit",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 103241,
+      "function": "holding",
+      "name": "Storage_Backup_Reserved_Setting_RW",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 103243,
+      "function": "holding",
+      "name": "StChDisChMode",
+      "label": "Storage Charge/Discharge Default Mode",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 103244,
+      "function": "holding",
+      "name": "Timeout",
+      "label": "Timout",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "sec",
+      "access": "r"
+    },
+    {
+      "address": 103247,
+      "function": "holding",
+      "name": "Remote Control Charge Limit",
+      "dataType": "uint16",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

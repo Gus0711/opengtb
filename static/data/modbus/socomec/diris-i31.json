@@ -1,0 +1,474 @@
+{
+  "slug": "socomec-diris-i31",
+  "vendor": "socomec",
+  "vendorSlug": "socomec",
+  "model": "diris-i31",
+  "modelSlug": "diris-i31",
+  "name": "socomec diris-i31",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 18433,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Date-of-last-instance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "s",
+      "access": "r"
+    },
+    {
+      "address": 18435,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Integration-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "s",
+      "access": "r"
+    },
+    {
+      "address": 18442,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Frequency",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 18444,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Ph-N-voltage-:-V1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 18446,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Ph-N-voltage-:-V2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 18448,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Ph-N-voltage-:-V3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 18452,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Ph-ph-voltage-:-U12",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 18454,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Ph-ph-voltage-:-U23",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 18456,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Ph-ph-voltage-:-U31",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 18458,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Current-:-I1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 18460,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Current-:-I2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 18462,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Current-:-I3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 18464,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Current-:-in",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 18474,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Snom",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 18476,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Total-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 18478,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Total-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 18480,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Total-lagging-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 18482,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Total-leading-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 18484,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Total-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 18486,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Total-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "-",
+      "access": "r"
+    },
+    {
+      "address": 18487,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#1.-Total-power-factor-type",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 20481,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Date-of-last-instance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "s",
+      "access": "r"
+    },
+    {
+      "address": 20483,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Integration-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "s",
+      "access": "r"
+    },
+    {
+      "address": 20490,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Frequency",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 20492,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Ph-N-voltage-:-V1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 20494,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Ph-N-voltage-:-V2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 20496,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Ph-N-voltage-:-V3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 20500,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Ph-ph-voltage-:-U12",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 20502,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Ph-ph-voltage-:-U23",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 20504,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Ph-ph-voltage-:-U31",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 20506,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Current-:-I1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 20508,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Current-:-I2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 20510,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Current-:-I3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 20512,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Current-:-in",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 20522,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Snom",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 20524,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Total-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 20526,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Total-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 20528,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Total-lagging-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 20530,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Total-leading-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 20532,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Total-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 20534,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Total-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "-",
+      "access": "r"
+    },
+    {
+      "address": 20535,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#2.-Total-power-factor-type",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 22529,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#3.-Date-of-last-instance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "s",
+      "access": "r"
+    },
+    {
+      "address": 22531,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#3.-Integration-time",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "s",
+      "access": "r"
+    },
+    {
+      "address": 22538,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#3.-Frequency",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 22540,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#3.-Ph-N-voltage-:-V1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 22542,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#3.-Ph-N-voltage-:-V2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 22544,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#3.-Ph-N-voltage-:-V3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 22548,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#3.-Ph-ph-voltage-:-U12",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 22550,
+      "function": "holding",
+      "name": "Inst.-Measurement.-Load-#3.-Ph-ph-voltage-:-U23",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/socomec-diris-i31.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

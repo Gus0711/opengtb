@@ -1,0 +1,426 @@
+{
+  "slug": "arch-meter-pa310",
+  "vendor": "arch",
+  "vendorSlug": "arch",
+  "model": "meter-pa310",
+  "modelSlug": "meter-pa310",
+  "name": "arch meter-pa310",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Ct-ratio",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4096,
+      "function": "holding",
+      "name": "Modbus-address",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4097,
+      "function": "holding",
+      "name": "Baudrate-set",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4098,
+      "function": "holding",
+      "name": "Stopbit",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4100,
+      "function": "holding",
+      "name": "Wiring",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4114,
+      "function": "holding",
+      "name": "Clr-kwh",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4128,
+      "function": "holding",
+      "name": "Kt-value",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4129,
+      "function": "holding",
+      "name": "Voltage-transform-er-ratio",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4130,
+      "function": "holding",
+      "name": "Current-transform-er-ratio",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4131,
+      "function": "holding",
+      "name": "Year",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4132,
+      "function": "holding",
+      "name": "Month",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4133,
+      "function": "holding",
+      "name": "Date",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4134,
+      "function": "holding",
+      "name": "Hour",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4135,
+      "function": "holding",
+      "name": "Minute",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4136,
+      "function": "holding",
+      "name": "Second",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4137,
+      "function": "holding",
+      "name": "Day-of-week",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4144,
+      "function": "holding",
+      "name": "Demand-flag",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4145,
+      "function": "holding",
+      "name": "Sub-interval",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4146,
+      "function": "holding",
+      "name": "Interval-multipli-er",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4147,
+      "function": "holding",
+      "name": "Lp_data_group1_-clr",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4148,
+      "function": "holding",
+      "name": "Lp_group1_datac-ounter",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4149,
+      "function": "holding",
+      "name": "Lp-group1-intlen-gth",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4150,
+      "function": "holding",
+      "name": "Lp_g1_ch1_save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4151,
+      "function": "holding",
+      "name": "Lp-G1-Ch2-save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4152,
+      "function": "holding",
+      "name": "Lp_g1_ch3_save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4153,
+      "function": "holding",
+      "name": "Lp-G1-Ch4-save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4154,
+      "function": "holding",
+      "name": "Lp_g1_ch5_save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4155,
+      "function": "holding",
+      "name": "Lp-G1-Ch6-save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4156,
+      "function": "holding",
+      "name": "Lp_g1_ch7_save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4157,
+      "function": "holding",
+      "name": "Lp-G1-Ch8-save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4158,
+      "function": "holding",
+      "name": "Lp_g1_ch9_save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4159,
+      "function": "holding",
+      "name": "Lp-G1-ch10-save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4160,
+      "function": "holding",
+      "name": "Lp_g1_ch11_save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4161,
+      "function": "holding",
+      "name": "Lp_g1_ch12_save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4162,
+      "function": "holding",
+      "name": "Lp-data-group2-cfr",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4163,
+      "function": "holding",
+      "name": "Lp-group2-datac-ounter",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4164,
+      "function": "holding",
+      "name": "Lp-group2-intlen-gth",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4165,
+      "function": "holding",
+      "name": "Lp-G2-Ch1-save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4166,
+      "function": "holding",
+      "name": "Lp-G2-Ch2-save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4167,
+      "function": "holding",
+      "name": "Lp-G2-Ch3-save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4168,
+      "function": "holding",
+      "name": "Lp-G2-Ch4-save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4169,
+      "function": "holding",
+      "name": "Lp-G2-Ch5-save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4170,
+      "function": "holding",
+      "name": "Lp-G2-Ch6-save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4171,
+      "function": "holding",
+      "name": "Lp-G2-Ch7-save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4172,
+      "function": "holding",
+      "name": "Lp-G2-Ch8-save-data",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4173,
+      "function": "holding",
+      "name": "Lp-read-begin-int-erval-serial-numbe",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4864,
+      "function": "holding",
+      "name": "Kwh_deiiver_a",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4866,
+      "function": "holding",
+      "name": "Kwh-receiver-a",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4868,
+      "function": "holding",
+      "name": "Kvarh_iagging_a",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4870,
+      "function": "holding",
+      "name": "Kvarh_ieading_a",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/arch-meter-pa310.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

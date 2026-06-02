@@ -1,0 +1,461 @@
+{
+  "slug": "ginlong-solis-pv",
+  "vendor": "ginlong",
+  "vendorSlug": "ginlong",
+  "model": "solis-pv",
+  "modelSlug": "solis-pv",
+  "name": "ginlong solis-pv",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 3021,
+      "function": "holding",
+      "name": "System-time-year",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "a",
+      "access": "r"
+    },
+    {
+      "address": 3022,
+      "function": "holding",
+      "name": "System-time-month",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3023,
+      "function": "holding",
+      "name": "System-time-day",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "a",
+      "access": "r"
+    },
+    {
+      "address": 3024,
+      "function": "holding",
+      "name": "System-time",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3025,
+      "function": "holding",
+      "name": "System-time",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3026,
+      "function": "holding",
+      "name": "System-time-second",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3028,
+      "function": "holding",
+      "name": "Inverter-total-power-generation",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 3030,
+      "function": "holding",
+      "name": "Inverter-power-generation-in-the-month",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 3032,
+      "function": "holding",
+      "name": "Inverted-last-month's-power-generation",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 3034,
+      "function": "holding",
+      "name": "Inverter-power-generation-today",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 3035,
+      "function": "holding",
+      "name": "Inverter-yesterday's-power-generation",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 3036,
+      "function": "holding",
+      "name": "Inverter-power-generation-this-year",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 3038,
+      "function": "holding",
+      "name": "Inverter-last-year's-power-generation",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 3048,
+      "function": "holding",
+      "name": "Dc-voltage-1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3049,
+      "function": "holding",
+      "name": "Dc-current-1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3050,
+      "function": "holding",
+      "name": "Dc-voltage-2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3051,
+      "function": "holding",
+      "name": "Dc-current-2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3052,
+      "function": "holding",
+      "name": "Dc-voltage-3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3053,
+      "function": "holding",
+      "name": "Dc-current-3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3054,
+      "function": "holding",
+      "name": "Dc-voltage-4",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3055,
+      "function": "holding",
+      "name": "Dc-current-4",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3056,
+      "function": "holding",
+      "name": "Total-dc-output-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 3070,
+      "function": "holding",
+      "name": "Dc-bus-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3071,
+      "function": "holding",
+      "name": "Dc-bus-half-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3072,
+      "function": "holding",
+      "name": "Ab-line-voltage-/-phase-A-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3073,
+      "function": "holding",
+      "name": "Bc-line-voltage-/-phase-B-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3074,
+      "function": "holding",
+      "name": "Ca-line-voltage-/-C-phase-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3075,
+      "function": "holding",
+      "name": "Phase-A-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3076,
+      "function": "holding",
+      "name": "Phase-B-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3077,
+      "function": "holding",
+      "name": "Phase-C-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3078,
+      "function": "holding",
+      "name": "Active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 3082,
+      "function": "holding",
+      "name": "Apparent-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3091,
+      "function": "holding",
+      "name": "National-standard",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3092,
+      "function": "holding",
+      "name": "Inverter-temperature",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3093,
+      "function": "holding",
+      "name": "Grid-frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 3094,
+      "function": "holding",
+      "name": "Current-state-of-the-inverter",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3103,
+      "function": "holding",
+      "name": "Actual-power",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3104,
+      "function": "holding",
+      "name": "Actual-power",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3114,
+      "function": "holding",
+      "name": "Set-the-flag-bit",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3125,
+      "function": "holding",
+      "name": "Electricity-meter-total-active-power-generation",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 3127,
+      "function": "holding",
+      "name": "Meter-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3128,
+      "function": "holding",
+      "name": "Meter-current",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3129,
+      "function": "holding",
+      "name": "Meter-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3131,
+      "function": "holding",
+      "name": "Energy-storage-control-switch",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3132,
+      "function": "holding",
+      "name": "Battery-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3133,
+      "function": "holding",
+      "name": "Battery-current",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3134,
+      "function": "holding",
+      "name": "Battery-current-direction",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3135,
+      "function": "holding",
+      "name": "Llcbus-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3136,
+      "function": "holding",
+      "name": "Bypassac-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3137,
+      "function": "holding",
+      "name": "Bypass-ac-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/ginlong-solis-pv.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

@@ -1,0 +1,476 @@
+{
+  "slug": "elspec-g4400",
+  "vendor": "elspec",
+  "vendorSlug": "elspec",
+  "model": "g4400",
+  "modelSlug": "g4400",
+  "name": "elspec g4400",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 537,
+      "function": "holding",
+      "name": "Power-supply-temperature-(read-every-second)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 543,
+      "function": "holding",
+      "name": "Compliance-name-(EN-50160-or-any-other-compliance-standard)",
+      "dataType": "string",
+      "size": 1,
+      "unit": "String",
+      "access": "r"
+    },
+    {
+      "address": 563,
+      "function": "holding",
+      "name": "Compliance-description",
+      "dataType": "string",
+      "size": 1,
+      "unit": "String",
+      "access": "r"
+    },
+    {
+      "address": 603,
+      "function": "holding",
+      "name": "OK-/-fail-/-NA-status-of-the-compliance-currently-running",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "UINT16",
+      "access": "r"
+    },
+    {
+      "address": 621,
+      "function": "holding",
+      "name": "Percentage-from-the-entire-time-(including-off-time)-in-which-this-compliance-parameters-was-ok",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 623,
+      "function": "holding",
+      "name": "Percentage-from-the-entire-time-(including-off-time)-in-which-this-the-compliance-parameter-was-not-ok",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 625,
+      "function": "holding",
+      "name": "Percentage-from-the-entire-time-(including-off-time)-in-which-this-compliance-parameter-was-not-evaluated-(due-to-device-off-time)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 627,
+      "function": "holding",
+      "name": "Number-of-compliance-parameters-under-check",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "UINT32",
+      "access": "r"
+    },
+    {
+      "address": 999,
+      "function": "holding",
+      "name": "The-measured-frequency-,-calculated-every-200-msec-(10/12-cycles)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1025,
+      "function": "holding",
+      "name": "Line-1-active-power-(W),-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1027,
+      "function": "holding",
+      "name": "Line-2-active-power-(W),-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1029,
+      "function": "holding",
+      "name": "Line-3-active-power-(W),-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1037,
+      "function": "holding",
+      "name": "Total-active-power-(W),-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1041,
+      "function": "holding",
+      "name": "Line-1-reactive-power-(VAr)-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1043,
+      "function": "holding",
+      "name": "Line-2-reactive-power-(VAr)-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1045,
+      "function": "holding",
+      "name": "Line-3-reactive-power-(VAr)-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1053,
+      "function": "holding",
+      "name": "Reactive-power---total-(VAr)-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1057,
+      "function": "holding",
+      "name": "Line-1-apparent-power-(VA)-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1059,
+      "function": "holding",
+      "name": "Line-2-apparent-power-(VA)-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1061,
+      "function": "holding",
+      "name": "Line-3-apparent-power-(VA)-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1069,
+      "function": "holding",
+      "name": "Apparent-power-total-(VA)-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1103,
+      "function": "holding",
+      "name": "RMS-voltage-V1,-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1105,
+      "function": "holding",
+      "name": "RMS-voltage-V2,-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1107,
+      "function": "holding",
+      "name": "RMS-voltage-V3,-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1109,
+      "function": "holding",
+      "name": "RMS-voltage-V12,-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1111,
+      "function": "holding",
+      "name": "RMS-voltage-V23,-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1113,
+      "function": "holding",
+      "name": "RMS-voltage-V31,-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1117,
+      "function": "holding",
+      "name": "RMS-voltage-I1,-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1119,
+      "function": "holding",
+      "name": "RMS-voltage-I2,-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1121,
+      "function": "holding",
+      "name": "RMS-current-I3,-calculate-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1123,
+      "function": "holding",
+      "name": "Cycle-by-cycle-average-RMS-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1125,
+      "function": "holding",
+      "name": "Cycle-by-cycle-average-RMS-phase-to-phase-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1127,
+      "function": "holding",
+      "name": "Cycle-by-cycle-average-RMS-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1159,
+      "function": "holding",
+      "name": "Internal-DSP-temperature,-read-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1161,
+      "function": "holding",
+      "name": "External-DSP-temperature-(PT100-READING)-,-read-every-cycle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1659,
+      "function": "holding",
+      "name": "PST-(short-term-flicker)---L1---calculated-over-2-seconds",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1661,
+      "function": "holding",
+      "name": "PST-(short-term-flicker)---L1---calculated-over-2-seconds",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1663,
+      "function": "holding",
+      "name": "PST-(short-term-flicker)---L1---calculated-over-2-seconds",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1665,
+      "function": "holding",
+      "name": "PST-(short-term-flicker)--L12---calculated-over-2-seconds",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1667,
+      "function": "holding",
+      "name": "PST-(short-term-flicker)--L23--calculated-over-2-seconds",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1669,
+      "function": "holding",
+      "name": "PST-(short-term-flicker)--L31---calculated-over-2-seconds",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1671,
+      "function": "holding",
+      "name": "PST-(short-term-flicker)---L1---calculated-over-10-seconds",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1673,
+      "function": "holding",
+      "name": "PST-(short-term-flicker)--L2---calculated-over-10-seconds",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1675,
+      "function": "holding",
+      "name": "PST-(short-term-flicker)--L3---calculated-over-10-seconds",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1677,
+      "function": "holding",
+      "name": "PST-(short-term-flicker)--L12---calculated-over-10-seconds",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1679,
+      "function": "holding",
+      "name": "PST-(short-term-flicker)--L23---calculated-over-10-seconds",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1681,
+      "function": "holding",
+      "name": "PST-(short-term-flicker)--L31---calculated-over-10-seconds",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1683,
+      "function": "holding",
+      "name": "PST-(short-term-flicker)--L1---calculated-over-10-minutes",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1685,
+      "function": "holding",
+      "name": "PST-(short-term-flicker)--L2---calculated-over-10-minutes",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    },
+    {
+      "address": 1687,
+      "function": "holding",
+      "name": "PST-(short-term-flicker)--L3---calculated-over-10-minutes",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "float",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/elspec-g4400.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

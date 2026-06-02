@@ -1,0 +1,474 @@
+{
+  "slug": "kohler-decision-maker-3500",
+  "vendor": "kohler",
+  "vendorSlug": "kohler",
+  "model": "decision-maker-3500",
+  "modelSlug": "decision-maker-3500",
+  "name": "kohler decision-maker-3500",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Rms-generator-voltage-L2-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Rms-generator-voltage-L3-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Rms-generator-voltage-line-to-line-average",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Rms-generator-voltage-L1-N",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Rms-generator-voltage-L2-N",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Rms-generator-voltage-L3-N",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Rms-generator-voltage-line-to-neutral-average",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Rms-generator-current-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Rms-generator-current-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Rms-generator-current-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Rms-generator-current-average",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Generator-frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "100",
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Generator-real-power-L1",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Generator-real-power-L2",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "Generator-real-power-L3",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Generator-total-real-power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Generator-reactive-power-L1",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Generator-reactive-power-L2",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Generator-reactive-power-L3",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Generator-reactive-power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "Generator-apparent-power-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Generator-apparent-power-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Generator-apparent-power-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Generator-apparent-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "Generator-power-factor-L1",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "pF",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "Generator-power-factor-L2",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "pF",
+      "access": "r"
+    },
+    {
+      "address": 27,
+      "function": "holding",
+      "name": "Generator-power-factor-L3",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "pF",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Generator-power-factor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "pF",
+      "access": "r"
+    },
+    {
+      "address": 29,
+      "function": "holding",
+      "name": "Generator-phase-angle-voltage-L1-voltage-L2",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "D",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Generator-phase-angle-voltage-L1-voltage-L3",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "D",
+      "access": "r"
+    },
+    {
+      "address": 31,
+      "function": "holding",
+      "name": "Generator-phase-angle-voltage-L1-current-L1",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "D",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Generator-phase-angle-voltage-L2-current-L2",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "D",
+      "access": "r"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Generator-phase-angle-voltage-L3-current-L3",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "D",
+      "access": "r"
+    },
+    {
+      "address": 43,
+      "function": "holding",
+      "name": "Rms-bus-voltage-L1-L2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "Rms-bus-voltage-L2-L3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 45,
+      "function": "holding",
+      "name": "Rms-bus-voltage-L3-L1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Rms-bus-voltage-average-line-to-line",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 47,
+      "function": "holding",
+      "name": "Total-bus-real-power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Total-bus-reactive-power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 49,
+      "function": "holding",
+      "name": "Bus-frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "100",
+      "access": "r"
+    },
+    {
+      "address": 51,
+      "function": "holding",
+      "name": "Phase-angle-generator-voltage-L1-bus-voltage-L1",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "D",
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Speed-bias",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 53,
+      "function": "holding",
+      "name": "Voltage-bias",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 110,
+      "function": "holding",
+      "name": "Engine-run-speed",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "RPM",
+      "access": "r"
+    },
+    {
+      "address": 512,
+      "function": "holding",
+      "name": "Total-number-of-starts",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 513,
+      "function": "holding",
+      "name": "Total-runtime-hours-since-maintenance-lw",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "hr",
+      "access": "r"
+    },
+    {
+      "address": 515,
+      "function": "holding",
+      "name": "Total-loaded-hours-since-maintenance-lw",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "hr",
+      "access": "r"
+    },
+    {
+      "address": 517,
+      "function": "holding",
+      "name": "Total-kw-hours-since-maintenance-lw",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 519,
+      "function": "holding",
+      "name": "Last-maintenance-day,-month",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Day of Month, Month of Year",
+      "access": "r"
+    },
+    {
+      "address": 520,
+      "function": "holding",
+      "name": "Last-maintenance-year",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "16 bit year",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/kohler-decision-maker-3500.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont"
+    ]
+  }
+}

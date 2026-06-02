@@ -1,0 +1,792 @@
+{
+  "slug": "eastron-sdm-630",
+  "vendor": "Eastron",
+  "vendorSlug": "eastron",
+  "model": "SDM-630",
+  "modelSlug": "sdm-630",
+  "name": "Eastron SDM-630",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 0,
+      "function": "holding",
+      "name": "Phase 1 Voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Phase 2 Voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Phase 3 Voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Phase 1 Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Phase 2 Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Phase 3 Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Phase 1 Active Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Phase 2 Active Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Phase 3 Active Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Phase 1 Apparent Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VoltAmps",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Communicate address",
+      "dataType": "float32",
+      "size": 2,
+      "access": "rw"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Phase 2 Apparent Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VoltAmps",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Phase 3 Apparent Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VoltAmps",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Phase 1 Reactive Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "Phase 2 Reactive Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Baud Rate",
+      "dataType": "float32",
+      "size": 2,
+      "access": "rw",
+      "enum": {
+        "0": "2400 bps",
+        "1": "4800 bps",
+        "2": "9600 bps",
+        "3": "19200 bps",
+        "4": "38400 bps"
+      }
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Phase 3 Reactive Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Energy Units Prefix",
+      "dataType": "float32",
+      "size": 2,
+      "access": "rw",
+      "enum": {
+        "0": "kWh / Ah",
+        "1": "Mwh / kAh"
+      }
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Phase 1 Power Factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Phase 2 Power Factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Phase 3 Power Factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Phase 1 Phase Angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Phase 2 Phase Angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "Phase 3 Phase Angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "Average Line to neutral Volts",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Average Line Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Sum of Line currents",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Total System Power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Total System VA",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "Total System VAr",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAr",
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "Total System Power factor",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "holding",
+      "name": "Total System Phase Angle",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degrees",
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "holding",
+      "name": "Total Import Active Energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "holding",
+      "name": "Total Export Active Energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 76,
+      "function": "holding",
+      "name": "Total Import Reactive Energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVArh",
+      "access": "r"
+    },
+    {
+      "address": 78,
+      "function": "holding",
+      "name": "Total Export Reactive Energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVArh",
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "Total VAh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 82,
+      "function": "holding",
+      "name": "Ah",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ah",
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "Total System Power demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "Maximum Total System Power demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Watts",
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "Total System VA demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "Maximum Total System VA demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "Neutral Current demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 106,
+      "function": "holding",
+      "name": "Maximum neutral Current demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 200,
+      "function": "holding",
+      "name": "Line 1 to Line 2 Volts",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 202,
+      "function": "holding",
+      "name": "Line 2 to Line 3 Volts",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 204,
+      "function": "holding",
+      "name": "Line 3 to Line 1 Volts",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 206,
+      "function": "holding",
+      "name": "Average Line to Line Volts",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volts",
+      "access": "r"
+    },
+    {
+      "address": 224,
+      "function": "holding",
+      "name": "Neutral Current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 234,
+      "function": "holding",
+      "name": "Phase 1 L/N Volts THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 236,
+      "function": "holding",
+      "name": "Phase 2 L/N Volts THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 238,
+      "function": "holding",
+      "name": "Phase 3 L/N Volts THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 240,
+      "function": "holding",
+      "name": "Phase 1 Current THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 242,
+      "function": "holding",
+      "name": "Phase 2 Current THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 244,
+      "function": "holding",
+      "name": "Phase 3 Current THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 248,
+      "function": "holding",
+      "name": "Average Line to neutral Volts THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 250,
+      "function": "holding",
+      "name": "Average Line Current THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 258,
+      "function": "holding",
+      "name": "Phase 1 Current demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 260,
+      "function": "holding",
+      "name": "Phase 2 Current demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 262,
+      "function": "holding",
+      "name": "Phase 3 Current demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 264,
+      "function": "holding",
+      "name": "Phase 1 Maximum Current Demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 266,
+      "function": "holding",
+      "name": "Phase 2 Maximum Current Demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 268,
+      "function": "holding",
+      "name": "Phase 3 Maximum Current Demand",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amps",
+      "access": "r"
+    },
+    {
+      "address": 342,
+      "function": "holding",
+      "name": "Total kWh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 344,
+      "function": "holding",
+      "name": "Total kVArh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVArh",
+      "access": "r"
+    },
+    {
+      "address": 346,
+      "function": "holding",
+      "name": "L1 Import kWh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 348,
+      "function": "holding",
+      "name": "L2 Import kWh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 350,
+      "function": "holding",
+      "name": "L3 Import kWh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 352,
+      "function": "holding",
+      "name": "L1 Export kWh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 354,
+      "function": "holding",
+      "name": "L2 Export kWh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 356,
+      "function": "holding",
+      "name": "L3 Export kWh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 358,
+      "function": "holding",
+      "name": "L1 Total kWh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 360,
+      "function": "holding",
+      "name": "L2 Total kWh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 362,
+      "function": "holding",
+      "name": "L3 Total kWh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 364,
+      "function": "holding",
+      "name": "L1 Import kVArh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVArh",
+      "access": "r"
+    },
+    {
+      "address": 366,
+      "function": "holding",
+      "name": "L2 Import kVArh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVArh",
+      "access": "r"
+    },
+    {
+      "address": 368,
+      "function": "holding",
+      "name": "L3 Import kVArh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVArh",
+      "access": "r"
+    },
+    {
+      "address": 370,
+      "function": "holding",
+      "name": "L1 Export kVArh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVArh",
+      "access": "r"
+    },
+    {
+      "address": 372,
+      "function": "holding",
+      "name": "L2 Export kVArh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVArh",
+      "access": "r"
+    },
+    {
+      "address": 374,
+      "function": "holding",
+      "name": "L3 Export kVArh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVArh",
+      "access": "r"
+    },
+    {
+      "address": 376,
+      "function": "holding",
+      "name": "L1 Total kVArh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVArh",
+      "access": "r"
+    },
+    {
+      "address": 378,
+      "function": "holding",
+      "name": "L2 Total kVArh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVArh",
+      "access": "r"
+    },
+    {
+      "address": 380,
+      "function": "holding",
+      "name": "L3 Total kVArh",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVArh",
+      "access": "r"
+    },
+    {
+      "address": 64512,
+      "function": "holding",
+      "name": "Serial Number",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "rw"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-gateway",
+    "ref": "20de1794f20f946fa9d9e81effeee6d47258c3a7",
+    "needsReview": true,
+    "reviewReasons": [
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

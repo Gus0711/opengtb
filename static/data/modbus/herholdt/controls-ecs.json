@@ -1,0 +1,461 @@
+{
+  "slug": "herholdt-controls-ecs",
+  "vendor": "herholdt",
+  "vendorSlug": "herholdt",
+  "model": "controls-ecs",
+  "modelSlug": "controls-ecs",
+  "name": "herholdt controls-ecs",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 4099,
+      "function": "holding",
+      "name": "Device-type",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4100,
+      "function": "holding",
+      "name": "Firmware-version",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4101,
+      "function": "holding",
+      "name": "Range-overflow-alarm",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4102,
+      "function": "holding",
+      "name": "Running-tariff",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4104,
+      "function": "holding",
+      "name": "PID-bytes-1-and-2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4105,
+      "function": "holding",
+      "name": "PID-bytes-3-and-4",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4106,
+      "function": "holding",
+      "name": "PID-bytes-5-and-6",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4107,
+      "function": "holding",
+      "name": "PID-bytes-7-and-8",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4108,
+      "function": "holding",
+      "name": "PID-bytes-9-and-10",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4109,
+      "function": "holding",
+      "name": "PID-bytes-11-and-12",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4110,
+      "function": "holding",
+      "name": "PID-bytes-13-and-14",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4119,
+      "function": "holding",
+      "name": "Active-energy-1st-phase-T1,-imp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4123,
+      "function": "holding",
+      "name": "Active-energy-2nd-phase-T1,-imp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4127,
+      "function": "holding",
+      "name": "Active-energy-3rd-phase-T1,-imp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4131,
+      "function": "holding",
+      "name": "Active-energy-sum-T1,-imp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4135,
+      "function": "holding",
+      "name": "Active-energy-1st-phase-T2,-imp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4139,
+      "function": "holding",
+      "name": "Active-energy-2nd-phase-T2,-imp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4143,
+      "function": "holding",
+      "name": "Active-energy-3rd-phase-T2,-imp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4147,
+      "function": "holding",
+      "name": "Active-energy-sum-T2,-imp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4151,
+      "function": "holding",
+      "name": "Active-power-1st-phase",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4153,
+      "function": "holding",
+      "name": "Active-power-2nd-phase",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4155,
+      "function": "holding",
+      "name": "Active-power-3rd-phase",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 4157,
+      "function": "holding",
+      "name": "Active-power-sum",
+      "dataType": "int64",
+      "size": 4,
+      "access": "r"
+    },
+    {
+      "address": 4161,
+      "function": "holding",
+      "name": "Active-energy-1st-phase-T1,-exp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4165,
+      "function": "holding",
+      "name": "Active-energy-2nd-phase-T1,-exp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4169,
+      "function": "holding",
+      "name": "Active-energy-3rd-phase-T1,-exp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4173,
+      "function": "holding",
+      "name": "Active-energy-sum-T1,-exp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4177,
+      "function": "holding",
+      "name": "Active-energy-1st-phase-T2,-exp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4181,
+      "function": "holding",
+      "name": "Active-energy-2nd-phase-T2,-exp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4185,
+      "function": "holding",
+      "name": "Active-energy-3rd-phase-T2,-exp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4189,
+      "function": "holding",
+      "name": "Active-energy-sum-T2,-exp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 4193,
+      "function": "holding",
+      "name": "Reactive-energy-1st-phase-T1,-imp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 4197,
+      "function": "holding",
+      "name": "Reactive-energy-2nd-phase-T1,-imp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 4201,
+      "function": "holding",
+      "name": "Reactive-energy-3rd-phase-T1,-imp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 4205,
+      "function": "holding",
+      "name": "Reactive-energy-sum-T1,-imp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 4209,
+      "function": "holding",
+      "name": "Reactive-energy-1st-phase-T2,-imp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 4213,
+      "function": "holding",
+      "name": "Reactive-energy-2nd-phase-T2,-imp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 4217,
+      "function": "holding",
+      "name": "Reactive-energy-3rd-phase-T2,-imp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 4221,
+      "function": "holding",
+      "name": "Reactive-energy-sum-T2,-imp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 4225,
+      "function": "holding",
+      "name": "Reactive-energy-1st-phase-T1,-exp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 4229,
+      "function": "holding",
+      "name": "Reactive-energy-2nd-phase-T1,-exp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 4233,
+      "function": "holding",
+      "name": "Reactive-energy-3rd-phase-T1,-exp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 4237,
+      "function": "holding",
+      "name": "Reactive-energy-sum-T1,-exp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 4241,
+      "function": "holding",
+      "name": "Reactive-energy-1st-phase-T2,-exp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 4245,
+      "function": "holding",
+      "name": "Reactive-energy-2nd-phase-T2,-exp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 4249,
+      "function": "holding",
+      "name": "Reactive-energy-3rd-phase-T2,-exp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 4253,
+      "function": "holding",
+      "name": "Reactive-energy-sum-T2,-exp",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 4257,
+      "function": "holding",
+      "name": "Reactive-power-1st-phase",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 4259,
+      "function": "holding",
+      "name": "Reactive-power-2nd-phase",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 4261,
+      "function": "holding",
+      "name": "Reactive-power-3rd-phase",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/herholdt-controls-ecs.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "deye-string-inverter",
+  "vendor": "Deye",
+  "vendorSlug": "deye",
+  "model": "String inverter",
+  "modelSlug": "string-inverter",
+  "name": "Deye String inverter",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 63,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "\"Total_Active_PowerWh\""
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "\"Output active power\""
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

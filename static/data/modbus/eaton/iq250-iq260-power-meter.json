@@ -1,0 +1,476 @@
+{
+  "slug": "eaton-iq250-iq260-power-meter",
+  "vendor": "eaton",
+  "vendorSlug": "eaton",
+  "model": "iq250-iq260-power-meter",
+  "modelSlug": "iq250-iq260-power-meter",
+  "name": "eaton iq250-iq260-power-meter",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1999,
+      "function": "holding",
+      "name": "Amps-a,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 2001,
+      "function": "holding",
+      "name": "Amps-b,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 2003,
+      "function": "holding",
+      "name": "Amps-c,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 2005,
+      "function": "holding",
+      "name": "Positive-watts,-3-ph,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 2007,
+      "function": "holding",
+      "name": "Positive-vars,-3-ph,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VARs",
+      "access": "r"
+    },
+    {
+      "address": 2009,
+      "function": "holding",
+      "name": "Negative-watts,-3-ph,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 2011,
+      "function": "holding",
+      "name": "Negative-vars,-3-ph,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VARs",
+      "access": "r"
+    },
+    {
+      "address": 2013,
+      "function": "holding",
+      "name": "Vas,-3-ph,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAs",
+      "access": "r"
+    },
+    {
+      "address": 2015,
+      "function": "holding",
+      "name": "Positive-pf,-3-ph,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "none",
+      "access": "r"
+    },
+    {
+      "address": 2017,
+      "function": "holding",
+      "name": "Negative-pf,-3-pf,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "none",
+      "access": "r"
+    },
+    {
+      "address": 2019,
+      "function": "holding",
+      "name": "Neutral-current,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 2021,
+      "function": "holding",
+      "name": "Positive-watts,-phase-a,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 2023,
+      "function": "holding",
+      "name": "Positive-watts,-phase-b,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 2025,
+      "function": "holding",
+      "name": "Positive-watts,-phase-c,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 2027,
+      "function": "holding",
+      "name": "Positive-vars,-phase-a,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VARs",
+      "access": "r"
+    },
+    {
+      "address": 2029,
+      "function": "holding",
+      "name": "Positive-vars,-phase-b,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VARs",
+      "access": "r"
+    },
+    {
+      "address": 2031,
+      "function": "holding",
+      "name": "Positive-vars,-phase-c,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VARs",
+      "access": "r"
+    },
+    {
+      "address": 2033,
+      "function": "holding",
+      "name": "Negative-watts,-phase-a,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 2035,
+      "function": "holding",
+      "name": "Negative-watts,-phase-b,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 2037,
+      "function": "holding",
+      "name": "Negative-watts,-phase-c,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 2039,
+      "function": "holding",
+      "name": "Negative-vars,-phase-a,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VARs",
+      "access": "r"
+    },
+    {
+      "address": 2041,
+      "function": "holding",
+      "name": "Negative-vars,-phase-b,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VARs",
+      "access": "r"
+    },
+    {
+      "address": 2043,
+      "function": "holding",
+      "name": "Negative-vars,-phase-c,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VARs",
+      "access": "r"
+    },
+    {
+      "address": 2045,
+      "function": "holding",
+      "name": "Vas,-phase-a,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAs",
+      "access": "r"
+    },
+    {
+      "address": 2047,
+      "function": "holding",
+      "name": "Vas,-phase-b,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAs",
+      "access": "r"
+    },
+    {
+      "address": 2049,
+      "function": "holding",
+      "name": "Vas,-phase-c,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAs",
+      "access": "r"
+    },
+    {
+      "address": 2051,
+      "function": "holding",
+      "name": "Positive-pf,-phase-a,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "none",
+      "access": "r"
+    },
+    {
+      "address": 2053,
+      "function": "holding",
+      "name": "Positive-pf,-phase-b,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "none",
+      "access": "r"
+    },
+    {
+      "address": 2055,
+      "function": "holding",
+      "name": "Positive-pf,-phase-c,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "none",
+      "access": "r"
+    },
+    {
+      "address": 2057,
+      "function": "holding",
+      "name": "Negative-pf,-phase-a,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "none",
+      "access": "r"
+    },
+    {
+      "address": 2059,
+      "function": "holding",
+      "name": "Negative-pf,-phase-b,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "none",
+      "access": "r"
+    },
+    {
+      "address": 2061,
+      "function": "holding",
+      "name": "Negative-pf,-phase-c,-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "none",
+      "access": "r"
+    },
+    {
+      "address": 2999,
+      "function": "holding",
+      "name": "Watts,-3-ph-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 3001,
+      "function": "holding",
+      "name": "Vars,-3-ph-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VARs",
+      "access": "r"
+    },
+    {
+      "address": 3003,
+      "function": "holding",
+      "name": "Vas,-3-ph-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAs",
+      "access": "r"
+    },
+    {
+      "address": 3005,
+      "function": "holding",
+      "name": "Power-factor,-3-ph-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "none",
+      "access": "r"
+    },
+    {
+      "address": 3007,
+      "function": "holding",
+      "name": "Watts,-phase-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 3009,
+      "function": "holding",
+      "name": "Watts,-phase-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 3011,
+      "function": "holding",
+      "name": "Watts,-phase-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 3013,
+      "function": "holding",
+      "name": "Vars,-phase-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VARs",
+      "access": "r"
+    },
+    {
+      "address": 3017,
+      "function": "holding",
+      "name": "Vars,-phase-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VARs",
+      "access": "r"
+    },
+    {
+      "address": 3019,
+      "function": "holding",
+      "name": "Vas,-phase-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAs",
+      "access": "r"
+    },
+    {
+      "address": 3021,
+      "function": "holding",
+      "name": "Vas,-phase-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAs",
+      "access": "r"
+    },
+    {
+      "address": 3023,
+      "function": "holding",
+      "name": "Vas,-phase-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAs",
+      "access": "r"
+    },
+    {
+      "address": 3025,
+      "function": "holding",
+      "name": "Power-factor,-phase-a",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "none",
+      "access": "r"
+    },
+    {
+      "address": 3027,
+      "function": "holding",
+      "name": "Power-factor,-phase-b",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "none",
+      "access": "r"
+    },
+    {
+      "address": 3029,
+      "function": "holding",
+      "name": "Power-factor,-phase-c",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "none",
+      "access": "r"
+    },
+    {
+      "address": 3031,
+      "function": "holding",
+      "name": "W-hours,-received",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Wh per energy format",
+      "access": "r"
+    },
+    {
+      "address": 3033,
+      "function": "holding",
+      "name": "W-hours,-delivered",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Wh per energy format",
+      "access": "r"
+    },
+    {
+      "address": 3035,
+      "function": "holding",
+      "name": "W-hours,-net",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Wh per energy format",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/eaton-iq250-iq260-power-meter.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

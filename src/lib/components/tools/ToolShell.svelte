@@ -21,6 +21,7 @@
 	} = $props();
 
 	const sector = $derived(SECTORS.find((s) => s.slug === tool.sector));
+	const SectorIcon = $derived(sector?.icon);
 	const meta = $derived(
 		buildMeta({
 			title: seoTitle ?? tool.title,
@@ -48,10 +49,10 @@
 	</nav>
 
 	<header class="mt-6">
-		{#if sector}
-			<p class="text-text-dim font-mono text-[11px] tracking-wide uppercase">
-				<span class="text-muted-foreground">§</span>
-				{sector.number} · {sector.name}
+		{#if sector && SectorIcon}
+			<p class="text-text-dim flex items-center gap-1.5 font-mono text-[11px] tracking-wide uppercase">
+				<SectorIcon class="text-amber size-3.5" aria-hidden="true" />
+				<span class="text-text-dim">{sector.name}</span>
 			</p>
 		{/if}
 		<div class="mt-2 flex items-start gap-3">

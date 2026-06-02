@@ -1,0 +1,468 @@
+{
+  "slug": "eaton-pxm-2000",
+  "vendor": "eaton",
+  "vendorSlug": "eaton",
+  "model": "pxm-2000",
+  "modelSlug": "pxm-2000",
+  "name": "eaton pxm-2000",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1032,
+      "function": "holding",
+      "name": "Vendor-name",
+      "dataType": "string",
+      "size": 64,
+      "access": "r"
+    },
+    {
+      "address": 1064,
+      "function": "holding",
+      "name": "Model-name",
+      "dataType": "string",
+      "size": 64,
+      "access": "r"
+    },
+    {
+      "address": 1096,
+      "function": "holding",
+      "name": "Display-name",
+      "dataType": "string",
+      "size": 64,
+      "access": "r"
+    },
+    {
+      "address": 1276,
+      "function": "holding",
+      "name": "Serial-number",
+      "dataType": "string",
+      "size": 64,
+      "access": "r"
+    },
+    {
+      "address": 1355,
+      "function": "holding",
+      "name": "Nominal-voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 1361,
+      "function": "holding",
+      "name": "Phases-to-display-on-meter-front",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1605,
+      "function": "holding",
+      "name": "Field-replaceable-unit",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1668,
+      "function": "holding",
+      "name": "Nominal-frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "hertz",
+      "access": "r"
+    },
+    {
+      "address": 1810,
+      "function": "holding",
+      "name": "Output-current-rating",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 2108,
+      "function": "holding",
+      "name": "Software-version",
+      "dataType": "string",
+      "size": 48,
+      "access": "r"
+    },
+    {
+      "address": 3000,
+      "function": "holding",
+      "name": "Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4002,
+      "function": "holding",
+      "name": "Vab",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 4004,
+      "function": "holding",
+      "name": "Vbc",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 4006,
+      "function": "holding",
+      "name": "Vca",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 4008,
+      "function": "holding",
+      "name": "V-(L-l)-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 4010,
+      "function": "holding",
+      "name": "Van",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 4012,
+      "function": "holding",
+      "name": "Vbn",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 4014,
+      "function": "holding",
+      "name": "Vcn",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 4016,
+      "function": "holding",
+      "name": "V-(L-n)-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 4497,
+      "function": "holding",
+      "name": "Phase-angle-vab",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "degrees-phase",
+      "access": "r"
+    },
+    {
+      "address": 4499,
+      "function": "holding",
+      "name": "Phase-angle-vbc",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "degrees-phase",
+      "access": "r"
+    },
+    {
+      "address": 4501,
+      "function": "holding",
+      "name": "Phase-angle-vca",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "degrees-phase",
+      "access": "r"
+    },
+    {
+      "address": 4525,
+      "function": "holding",
+      "name": "V-(L-l)-average---long-term-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 4527,
+      "function": "holding",
+      "name": "V-(L-n)-average---long-term-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 5002,
+      "function": "holding",
+      "name": "Ia",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 5004,
+      "function": "holding",
+      "name": "Ib",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 5006,
+      "function": "holding",
+      "name": "Ic",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 5010,
+      "function": "holding",
+      "name": "In",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 5012,
+      "function": "holding",
+      "name": "Iavg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 5014,
+      "function": "holding",
+      "name": "Demand-ia-peak",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 5016,
+      "function": "holding",
+      "name": "Demand-ib-peak",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 5018,
+      "function": "holding",
+      "name": "Demand-ic-peak",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 5250,
+      "function": "holding",
+      "name": "Demand-ia",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 5252,
+      "function": "holding",
+      "name": "Demand-ib",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 5254,
+      "function": "holding",
+      "name": "Demand-ic",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 5258,
+      "function": "holding",
+      "name": "Demand-in",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 5262,
+      "function": "holding",
+      "name": "Demand-in-peak",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 5338,
+      "function": "holding",
+      "name": "Phase-angle-ia",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "degrees-phase",
+      "access": "r"
+    },
+    {
+      "address": 5340,
+      "function": "holding",
+      "name": "Phase-angle-ib",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "degrees-phase",
+      "access": "r"
+    },
+    {
+      "address": 5342,
+      "function": "holding",
+      "name": "Phase-angle-ic",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "degrees-phase",
+      "access": "r"
+    },
+    {
+      "address": 5448,
+      "function": "holding",
+      "name": "Ia---long-term-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 5450,
+      "function": "holding",
+      "name": "Ib---long-term-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 5452,
+      "function": "holding",
+      "name": "Ic---long-term-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 5454,
+      "function": "holding",
+      "name": "In---long-term-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amperes",
+      "access": "r"
+    },
+    {
+      "address": 6000,
+      "function": "holding",
+      "name": "Real-power-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 6002,
+      "function": "holding",
+      "name": "Real-power-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 6004,
+      "function": "holding",
+      "name": "Real-power-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 6006,
+      "function": "holding",
+      "name": "Real-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "watts",
+      "access": "r"
+    },
+    {
+      "address": 6064,
+      "function": "holding",
+      "name": "Apparent-power-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volt-amperes",
+      "access": "r"
+    },
+    {
+      "address": 6066,
+      "function": "holding",
+      "name": "Apparent-power-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volt-amperes",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/eaton-pxm-2000.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

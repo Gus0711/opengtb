@@ -1,0 +1,707 @@
+{
+  "slug": "ge-epm-5100",
+  "vendor": "ge",
+  "vendorSlug": "ge",
+  "model": "epm-5100",
+  "modelSlug": "epm-5100",
+  "name": "ge epm-5100",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Initialize-meter",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Clear-energy-(var-hour)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Clear-meter-errors",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Serial-number",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Firmware-revision",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "COC-software-revision",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1000,
+      "function": "holding",
+      "name": "Number-of-pending-event-messages",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1002,
+      "function": "holding",
+      "name": "kVA-max,-total-of-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1004,
+      "function": "holding",
+      "name": "kW-max,-total-of-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1006,
+      "function": "holding",
+      "name": "Kvar-lag-max,-total-of-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 1008,
+      "function": "holding",
+      "name": "Kvar-lead-max,-total-of-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 1010,
+      "function": "holding",
+      "name": "Current-max-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 1012,
+      "function": "holding",
+      "name": "Current-max-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 1014,
+      "function": "holding",
+      "name": "Current-max-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 1016,
+      "function": "holding",
+      "name": "Kvarh-lag,-total-of-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1018,
+      "function": "holding",
+      "name": "Kvarh-lead,-total-of-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1020,
+      "function": "holding",
+      "name": "kWh,-total-of-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1022,
+      "function": "holding",
+      "name": "kQh,-total-of-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1024,
+      "function": "holding",
+      "name": "kVAh,-total-of-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1026,
+      "function": "holding",
+      "name": "Average-power-factor-since-last-reset,-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1028,
+      "function": "holding",
+      "name": "Power-factor,-total-of-all-phases,-at-maximum-kVA",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1030,
+      "function": "holding",
+      "name": "Apparent-power-demand-(kVA),-total-of-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1032,
+      "function": "holding",
+      "name": "Real-power-demand-(kW)-total-of-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1034,
+      "function": "holding",
+      "name": "Reactive-power-demand-(kvar-lag),-total-of-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 1036,
+      "function": "holding",
+      "name": "Reactive-power-demand-(kvar-lead),-total-of-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 1038,
+      "function": "holding",
+      "name": "Current-demand,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 1040,
+      "function": "holding",
+      "name": "Current-demand,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 1042,
+      "function": "holding",
+      "name": "Current-demand,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 1044,
+      "function": "holding",
+      "name": "Power-factor,-all-phases-(over-last-demand-interval)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1046,
+      "function": "holding",
+      "name": "Real-power-(kW),-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1048,
+      "function": "holding",
+      "name": "Real-power-(kW),-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1050,
+      "function": "holding",
+      "name": "Real-power-(kW),-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1052,
+      "function": "holding",
+      "name": "Reactive-power-(kvar),-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 1054,
+      "function": "holding",
+      "name": "Reactive-power-(kvar),-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 1056,
+      "function": "holding",
+      "name": "Reactive-power-(kvar),-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 1058,
+      "function": "holding",
+      "name": "Apparent-power-(kVA),-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1060,
+      "function": "holding",
+      "name": "Apparent-power-(kVA),-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1062,
+      "function": "holding",
+      "name": "Apparent-power-(kVA),-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1064,
+      "function": "holding",
+      "name": "Power-factor,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1066,
+      "function": "holding",
+      "name": "Power-factor,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1068,
+      "function": "holding",
+      "name": "Power-factor,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1070,
+      "function": "holding",
+      "name": "Apparent-power-(kVA),-total-of-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1072,
+      "function": "holding",
+      "name": "Real-power-(kW),-total-of-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1074,
+      "function": "holding",
+      "name": "Reactive-power-(kvar),-total-of-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1076,
+      "function": "holding",
+      "name": "L-N-voltage,-phase-A-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 1078,
+      "function": "holding",
+      "name": "L-N-voltage,-phase-B-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 1080,
+      "function": "holding",
+      "name": "L-N-voltage,-phase-C-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 1082,
+      "function": "holding",
+      "name": "L-L-voltage,-phase-A-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 1084,
+      "function": "holding",
+      "name": "L-L-voltage,-phase-B-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 1086,
+      "function": "holding",
+      "name": "L-L-voltage,-phase-C-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "volts",
+      "access": "r"
+    },
+    {
+      "address": 1088,
+      "function": "holding",
+      "name": "Total-power-factor-of-all-phases",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1090,
+      "function": "holding",
+      "name": "Real-power-(KW),-total-of-all-phases-at-maximum-kVA",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1092,
+      "function": "holding",
+      "name": "Current,-phase-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 1094,
+      "function": "holding",
+      "name": "Current,-phase-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 1096,
+      "function": "holding",
+      "name": "Current,-phase-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 1098,
+      "function": "holding",
+      "name": "Neutral-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "amps",
+      "access": "r"
+    },
+    {
+      "address": 3000,
+      "function": "holding",
+      "name": "Hour",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3001,
+      "function": "holding",
+      "name": "Minute",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3002,
+      "function": "holding",
+      "name": "Seconds",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3003,
+      "function": "holding",
+      "name": "Password",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3005,
+      "function": "holding",
+      "name": "Pulse-value-interval-time-for-pulse-KYZ-output-1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3007,
+      "function": "holding",
+      "name": "Pulse-value-interval-time-for-pulse-KYZ-output-2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3009,
+      "function": "holding",
+      "name": "Pulse-units-for-KYZ-output-1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3010,
+      "function": "holding",
+      "name": "Pulse-units-for-KYZ-output-2",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3011,
+      "function": "holding",
+      "name": "Programming-flags",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3013,
+      "function": "holding",
+      "name": "Demand-interval-length-(in-minutes)",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3014,
+      "function": "holding",
+      "name": "Number-of-sub-intervals",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3015,
+      "function": "holding",
+      "name": "Display-scroll-time",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3016,
+      "function": "holding",
+      "name": "Meter-configuration",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3017,
+      "function": "holding",
+      "name": "Potential-transformer-ratio",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3019,
+      "function": "holding",
+      "name": "Current-transformer-ratio",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 3021,
+      "function": "holding",
+      "name": "Energy-display-format",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3022,
+      "function": "holding",
+      "name": "Demand-display-format",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3023,
+      "function": "holding",
+      "name": "Voltage-display-format",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3024,
+      "function": "holding",
+      "name": "Amps-display-format",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3025,
+      "function": "holding",
+      "name": "Energy-display-scale-(kWh,-MWh)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3026,
+      "function": "holding",
+      "name": "Demand-display-scale-(W,-kW,-MW)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3027,
+      "function": "holding",
+      "name": "Voltage-display-scale-(V,-kV)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3028,
+      "function": "holding",
+      "name": "Amps-display-scale-(A,-kA)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3029,
+      "function": "holding",
+      "name": "Local-faceplate-password",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/ge-epm-5100.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

@@ -1,0 +1,476 @@
+{
+  "slug": "schneider-electric-em6400ng-pm2100-pm2200",
+  "vendor": "schneider",
+  "vendorSlug": "schneider",
+  "model": "electric-em6400ng-pm2100-pm2200",
+  "modelSlug": "electric-em6400ng-pm2100-pm2200",
+  "name": "schneider electric-em6400ng-pm2100-pm2200",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2699,
+      "function": "holding",
+      "name": "Active-energy-delivered-(into-load)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2701,
+      "function": "holding",
+      "name": "Active-energy-received-(out-of-load)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2703,
+      "function": "holding",
+      "name": "Active-energy-delivered-+-received",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2705,
+      "function": "holding",
+      "name": "Active-energy-delivered-received",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 2707,
+      "function": "holding",
+      "name": "Reactive-energy-delivered",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 2709,
+      "function": "holding",
+      "name": "Reactive-energy-received",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 2711,
+      "function": "holding",
+      "name": "Reactive-energy-delivered-+-received",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 2713,
+      "function": "holding",
+      "name": "Reactive-energy-delivered-received",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 2715,
+      "function": "holding",
+      "name": "Apparent-energy-delivered",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 2717,
+      "function": "holding",
+      "name": "Apparent-energy-received",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 2719,
+      "function": "holding",
+      "name": "Apparent-energy-delivered-+-received",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 2721,
+      "function": "holding",
+      "name": "Apparent-energy-delivered-received",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 2999,
+      "function": "holding",
+      "name": "Current-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3001,
+      "function": "holding",
+      "name": "Current-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3003,
+      "function": "holding",
+      "name": "Current-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3005,
+      "function": "holding",
+      "name": "Current-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3007,
+      "function": "holding",
+      "name": "Current-G",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3009,
+      "function": "holding",
+      "name": "Current-avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 3011,
+      "function": "holding",
+      "name": "Current-unbalance-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 3013,
+      "function": "holding",
+      "name": "Current-unbalance-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 3015,
+      "function": "holding",
+      "name": "Current-unbalance-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 3017,
+      "function": "holding",
+      "name": "Current-unbalance-worst",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 3019,
+      "function": "holding",
+      "name": "Voltage-A-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3021,
+      "function": "holding",
+      "name": "Voltage-B-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3023,
+      "function": "holding",
+      "name": "Voltage-C-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3025,
+      "function": "holding",
+      "name": "Voltage-L-L-avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3027,
+      "function": "holding",
+      "name": "Voltage-A-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3029,
+      "function": "holding",
+      "name": "Voltage-B-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3031,
+      "function": "holding",
+      "name": "Voltage-C-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3035,
+      "function": "holding",
+      "name": "Voltage-L-N-avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 3037,
+      "function": "holding",
+      "name": "Voltage-unbalance-A-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 3039,
+      "function": "holding",
+      "name": "Voltage-unbalance-B-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 3041,
+      "function": "holding",
+      "name": "Voltage-unbalance-C-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 3043,
+      "function": "holding",
+      "name": "Voltage-unbalance-L-L-worst",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 3045,
+      "function": "holding",
+      "name": "Voltage-unbalance-A-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 3047,
+      "function": "holding",
+      "name": "Voltage-unbalance-B-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 3049,
+      "function": "holding",
+      "name": "Voltage-unbalance-C-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 3051,
+      "function": "holding",
+      "name": "Voltage-unbalance-L-N-worst",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 3053,
+      "function": "holding",
+      "name": "Active-power-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 3055,
+      "function": "holding",
+      "name": "Active-power-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 3057,
+      "function": "holding",
+      "name": "Active-power-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 3059,
+      "function": "holding",
+      "name": "Active-power-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 3061,
+      "function": "holding",
+      "name": "Reactive-power-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 3063,
+      "function": "holding",
+      "name": "Reactive-power-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 3065,
+      "function": "holding",
+      "name": "Reactive-power-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 3067,
+      "function": "holding",
+      "name": "Reactive-power-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 3069,
+      "function": "holding",
+      "name": "Apparent-power-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 3071,
+      "function": "holding",
+      "name": "Apparent-power-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 3073,
+      "function": "holding",
+      "name": "Apparent-power-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 3075,
+      "function": "holding",
+      "name": "Apparent-power-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/schneider-electric-em6400ng-pm2100-pm2200.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

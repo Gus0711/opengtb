@@ -1,0 +1,476 @@
+{
+  "slug": "cewe-prometer-100",
+  "vendor": "cewe",
+  "vendorSlug": "cewe",
+  "model": "prometer-100",
+  "modelSlug": "prometer-100",
+  "name": "cewe prometer-100",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1012,
+      "function": "holding",
+      "name": "Meter-primary-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1014,
+      "function": "holding",
+      "name": "Meter-secondary-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1016,
+      "function": "holding",
+      "name": "Meter-primary-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1018,
+      "function": "holding",
+      "name": "Meter-secondary-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1020,
+      "function": "holding",
+      "name": "Meter-maximum-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1022,
+      "function": "holding",
+      "name": "Meter-type:-0---HT3,-1---HT4,-2---LT-3CT-4W",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "NA",
+      "access": "r"
+    },
+    {
+      "address": 1100,
+      "function": "holding",
+      "name": "Phase-voltage-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1102,
+      "function": "holding",
+      "name": "Phase-voltage-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1104,
+      "function": "holding",
+      "name": "Phase-voltage-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1106,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage-L1---L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1108,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage-L2---L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1110,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage-L3---L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1112,
+      "function": "holding",
+      "name": "Line-current-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1114,
+      "function": "holding",
+      "name": "Line-current-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1116,
+      "function": "holding",
+      "name": "Line-current-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1118,
+      "function": "holding",
+      "name": "Three-phase-average-voltages-%-of-vnominal",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1120,
+      "function": "holding",
+      "name": "All-phase-power-factor",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "NA",
+      "access": "r"
+    },
+    {
+      "address": 1122,
+      "function": "holding",
+      "name": "Frequency-hz",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 1124,
+      "function": "holding",
+      "name": "All-phase-active-power-(Total)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 1126,
+      "function": "holding",
+      "name": "All-phase-reactive-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KVAr",
+      "access": "r"
+    },
+    {
+      "address": 1128,
+      "function": "holding",
+      "name": "All-phase-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KVA",
+      "access": "r"
+    },
+    {
+      "address": 1130,
+      "function": "holding",
+      "name": "All-phase-active-power-(Fundamental)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 1200,
+      "function": "holding",
+      "name": "Phase-symmetry-voltage-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degree",
+      "access": "r"
+    },
+    {
+      "address": 1202,
+      "function": "holding",
+      "name": "Phase-symmetry-voltage-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degree",
+      "access": "r"
+    },
+    {
+      "address": 1204,
+      "function": "holding",
+      "name": "Phase-symmetry-voltage-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degree",
+      "access": "r"
+    },
+    {
+      "address": 1206,
+      "function": "holding",
+      "name": "Phase-symmetry-current-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degree",
+      "access": "r"
+    },
+    {
+      "address": 1208,
+      "function": "holding",
+      "name": "Phase-symmetry-current-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degree",
+      "access": "r"
+    },
+    {
+      "address": 1210,
+      "function": "holding",
+      "name": "Phase-symmetry-current-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degree",
+      "access": "r"
+    },
+    {
+      "address": 1212,
+      "function": "holding",
+      "name": "THD-voltage-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1214,
+      "function": "holding",
+      "name": "THD-voltage-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1216,
+      "function": "holding",
+      "name": "THD-voltage-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1218,
+      "function": "holding",
+      "name": "THD-current-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1220,
+      "function": "holding",
+      "name": "THD-current-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1222,
+      "function": "holding",
+      "name": "THD-current-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1224,
+      "function": "holding",
+      "name": "THD-power-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1226,
+      "function": "holding",
+      "name": "THD-power-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1228,
+      "function": "holding",
+      "name": "THD-power-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1300,
+      "function": "holding",
+      "name": "Active-power-L1(T)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1302,
+      "function": "holding",
+      "name": "Active-power-L2(T)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1304,
+      "function": "holding",
+      "name": "Active-power-L3(T)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1306,
+      "function": "holding",
+      "name": "Active-power-L1(F)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1308,
+      "function": "holding",
+      "name": "Active-power-L2(F)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1310,
+      "function": "holding",
+      "name": "Active-power-L3(F)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1312,
+      "function": "holding",
+      "name": "Reactive-power-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAr",
+      "access": "r"
+    },
+    {
+      "address": 1314,
+      "function": "holding",
+      "name": "Reactive-power-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAr",
+      "access": "r"
+    },
+    {
+      "address": 1316,
+      "function": "holding",
+      "name": "Reactive-power-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAr",
+      "access": "r"
+    },
+    {
+      "address": 1318,
+      "function": "holding",
+      "name": "Apparent-power-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1320,
+      "function": "holding",
+      "name": "Apparent-power-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1322,
+      "function": "holding",
+      "name": "Apparent-power-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1324,
+      "function": "holding",
+      "name": "Power-factor-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "NA",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/cewe-prometer-100.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

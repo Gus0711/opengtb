@@ -1,0 +1,502 @@
+{
+  "slug": "fronius-gen24-register",
+  "vendor": "Fronius",
+  "vendorSlug": "fronius",
+  "model": "Gen24 register",
+  "modelSlug": "gen24-register",
+  "name": "Fronius Gen24 register",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 40004,
+      "function": "holding",
+      "name": "1",
+      "label": "Mn",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 16,
+      "offset": 1,
+      "unit": "Manufacturer",
+      "access": "rw"
+    },
+    {
+      "address": 40020,
+      "function": "holding",
+      "name": "1",
+      "label": "Md",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 16,
+      "offset": 1,
+      "unit": "Device model",
+      "access": "rw"
+    },
+    {
+      "address": 40036,
+      "function": "holding",
+      "name": "200",
+      "label": "Opt",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 8,
+      "offset": 1,
+      "unit": "Options",
+      "access": "rw"
+    },
+    {
+      "address": 40044,
+      "function": "holding",
+      "name": "1",
+      "label": "Vr",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 8,
+      "offset": 1,
+      "unit": "SW version of inverter",
+      "access": "rw"
+    },
+    {
+      "address": 40071,
+      "function": "holding",
+      "name": "1",
+      "label": "A",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "AC Current",
+      "access": "rw"
+    },
+    {
+      "address": 40072,
+      "function": "holding",
+      "name": "1",
+      "label": "AphA",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "AC Phase-A Current value",
+      "access": "rw"
+    },
+    {
+      "address": 40073,
+      "function": "holding",
+      "name": "1",
+      "label": "AphB",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "AC Phase-B Current value",
+      "access": "rw"
+    },
+    {
+      "address": 40074,
+      "function": "holding",
+      "name": "1",
+      "label": "AphC",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "AC Phase-C Current value",
+      "access": "rw"
+    },
+    {
+      "address": 40075,
+      "function": "holding",
+      "name": "1",
+      "label": "A_SF",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 40083,
+      "function": "holding",
+      "name": "1",
+      "label": "W",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "AC Power",
+      "access": "rw"
+    },
+    {
+      "address": 40084,
+      "function": "holding",
+      "name": "1",
+      "label": "W_SF",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 40087,
+      "function": "holding",
+      "name": "200",
+      "label": "W",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Total Real Power",
+      "access": "rw"
+    },
+    {
+      "address": 40088,
+      "function": "holding",
+      "name": "200",
+      "label": "WphA",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Watts phase A",
+      "access": "rw"
+    },
+    {
+      "address": 40089,
+      "function": "holding",
+      "name": "200",
+      "label": "WphB",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Watts phase B",
+      "access": "rw"
+    },
+    {
+      "address": 40090,
+      "function": "holding",
+      "name": "200",
+      "label": "WphC",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Watts phase C",
+      "access": "rw"
+    },
+    {
+      "address": 40091,
+      "function": "holding",
+      "name": "200",
+      "label": "W_SF",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 40100,
+      "function": "holding",
+      "name": "1",
+      "label": "DCW",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "DC Power value",
+      "access": "rw"
+    },
+    {
+      "address": 40101,
+      "function": "holding",
+      "name": "1",
+      "label": "DCW_SF",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 40108,
+      "function": "holding",
+      "name": "200",
+      "label": "TotWhExp",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "unit": "Total Watt-hours Exported",
+      "access": "rw"
+    },
+    {
+      "address": 40114,
+      "function": "holding",
+      "name": "200",
+      "label": "TotWhImp",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 2,
+      "offset": 1,
+      "unit": "Total Watt-hours Imported",
+      "access": "rw"
+    },
+    {
+      "address": 40124,
+      "function": "holding",
+      "name": "200",
+      "label": "TotWh_SF",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 40255,
+      "function": "holding",
+      "name": "1",
+      "label": "DCA_SF",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 40256,
+      "function": "holding",
+      "name": "1",
+      "label": "DCV_SF",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 40257,
+      "function": "holding",
+      "name": "1",
+      "label": "DCW_SF",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 40272,
+      "function": "holding",
+      "name": "1",
+      "label": "MPPT1_DCA",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "DC Current",
+      "access": "rw"
+    },
+    {
+      "address": 40273,
+      "function": "holding",
+      "name": "1",
+      "label": "MPPT1_DCV",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "DC Voltage",
+      "access": "rw"
+    },
+    {
+      "address": 40274,
+      "function": "holding",
+      "name": "1",
+      "label": "MPPT1_DCW",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "DC Power ",
+      "access": "rw"
+    },
+    {
+      "address": 40292,
+      "function": "holding",
+      "name": "1",
+      "label": "MPPT2_DCA",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "DC Current",
+      "access": "rw"
+    },
+    {
+      "address": 40293,
+      "function": "holding",
+      "name": "1",
+      "label": "MPPT2_DCV",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "DC Voltage",
+      "access": "rw"
+    },
+    {
+      "address": 40294,
+      "function": "holding",
+      "name": "1",
+      "label": "MPPT2_DCW",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "DC Power ",
+      "access": "rw"
+    },
+    {
+      "address": 40312,
+      "function": "holding",
+      "name": "1",
+      "label": "Battery_DCA",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "DC Current",
+      "access": "rw"
+    },
+    {
+      "address": 40313,
+      "function": "holding",
+      "name": "1",
+      "label": "Battery_DCV",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "DC Voltage",
+      "access": "rw"
+    },
+    {
+      "address": 40314,
+      "function": "holding",
+      "name": "1",
+      "label": "Battery_DCW",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "DC Power",
+      "access": "rw"
+    },
+    {
+      "address": 40345,
+      "function": "holding",
+      "name": "1",
+      "label": "WChaMax",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Setpoint for maximum charg",
+      "access": "rw"
+    },
+    {
+      "address": 40348,
+      "function": "holding",
+      "name": "1",
+      "label": "StorCtl_Mod",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Activate hold/discharge/charge storage control mode",
+      "access": "rw"
+    },
+    {
+      "address": 40350,
+      "function": "holding",
+      "name": "1",
+      "label": "MinRsvPct",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Setpoint for minimum reserve for storage as a percentage of the nominal maximum storage.",
+      "access": "rw"
+    },
+    {
+      "address": 40351,
+      "function": "holding",
+      "name": "1",
+      "label": "ChaState",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Currently available energy as a percent of the capacity rating.",
+      "access": "rw"
+    },
+    {
+      "address": 40354,
+      "function": "holding",
+      "name": "1",
+      "label": "ChaSt",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Charge status of storage device",
+      "access": "rw"
+    },
+    {
+      "address": 40355,
+      "function": "holding",
+      "name": "1",
+      "label": "OutWRte",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Percent of max discharge rate",
+      "access": "rw"
+    },
+    {
+      "address": 40356,
+      "function": "holding",
+      "name": "1",
+      "label": "InWRte",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "unit": "Percent of max charging rate",
+      "access": "rw"
+    },
+    {
+      "address": 40361,
+      "function": "holding",
+      "name": "1",
+      "label": "WChaMax_SF",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 40364,
+      "function": "holding",
+      "name": "1",
+      "label": "MinRsvPct_SF",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 40365,
+      "function": "holding",
+      "name": "1",
+      "label": "ChaState_SF",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    },
+    {
+      "address": 40368,
+      "function": "holding",
+      "name": "1",
+      "label": "InOutWRte_SF",
+      "dataType": "uint16",
+      "size": 1,
+      "offset": 1,
+      "access": "rw"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

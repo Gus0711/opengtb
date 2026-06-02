@@ -1,0 +1,139 @@
+{
+  "slug": "test-test-model-do-not-use",
+  "vendor": "Test",
+  "vendorSlug": "test",
+  "model": "Test Model (DO NOT USE)",
+  "modelSlug": "test-model-do-not-use",
+  "name": "Test Test Model (DO NOT USE)",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 0,
+      "function": "holding",
+      "name": "Remote On/Off",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1,
+      "function": "coil",
+      "name": "coil1",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1,
+      "function": "coil",
+      "name": "coil2",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1,
+      "function": "coil",
+      "name": "coil3",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1,
+      "function": "coil",
+      "name": "coil4",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 3,
+      "function": "coil",
+      "name": "di1",
+      "dataType": "bool",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Heißwasser Nachfrage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Heizung Nachfrage",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Antilegionellen Aktiv",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Boolean Register",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Degree minutes t",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "DM",
+      "access": "rw"
+    },
+    {
+      "address": 2180,
+      "function": "holding",
+      "name": "Energy LO (2180)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 2180,
+      "function": "holding",
+      "name": "Total energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "rw"
+    },
+    {
+      "address": 2181,
+      "function": "holding",
+      "name": "Energy HI (2181)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-gateway",
+    "ref": "20de1794f20f946fa9d9e81effeee6d47258c3a7",
+    "needsReview": true,
+    "reviewReasons": [
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

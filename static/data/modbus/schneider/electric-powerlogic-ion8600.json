@@ -1,0 +1,450 @@
+{
+  "slug": "schneider-electric-powerlogic-ion8600",
+  "vendor": "schneider",
+  "vendorSlug": "schneider",
+  "model": "electric-powerlogic-ion8600",
+  "modelSlug": "electric-powerlogic-ion8600",
+  "name": "schneider electric-powerlogic-ion8600",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Vln-a,-Volts/Amps/Freq",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Vln-b,-Volts/Amps/Freq",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Vln-c,-Volts/Amps/Freq",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Vln-avg,-Volts/Amps/Freq",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Vll-ab,-Volts/Amps/Freq",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "Vll-bc,-Volts/Amps/Freq",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Vll-ca,-Volts/Amps/Freq",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Vll-avg,-Volts/Amps/Freq",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "I-a,-Volts/Amps/Freq",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "I-b,-Volts/Amps/Freq",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "I-c,-Volts/Amps/Freq",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "I-avg,-Volts/Amps/Freq",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "V-unbal,-Volts/Amps/Freq",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "I-unbal,-Volts/Amps/Freq",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Freq,-Volts/Amps/Freq",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "I4,-Volts/Amps/Freq",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "kW-a,-Power/PF",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "kW-b,-Power/PF",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "kW-c,-Power/PF",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "kW-tot,-Power/PF",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "kVAR-a,-Power/PF",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "kVAR-b,-Power/PF",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "kVAR-c,-Power/PF",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "kVAR-tot,-Power/PF",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "kVA-a,-Power/PF",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "kVA-b,-Power/PF",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "kVA-c,-Power/PF",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "kVA-tot,-Power/PF",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "PF-sign-a,-Power/PF",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "PF-sign-b,-Power/PF",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 54,
+      "function": "holding",
+      "name": "PF-sign-c,-Power/PF",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "PF-sign-tot,-Power/PF",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 58,
+      "function": "holding",
+      "name": "Vll-avg-mx,-Min/Max/Demand",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "I-avg-mx,-Min/Max/Demand",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "kW-tot-mx,-Min/Max/Demand",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 64,
+      "function": "holding",
+      "name": "kVAR-tot-mx,-Min/Max/Demand",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "holding",
+      "name": "kVA-tot-mx,-Min/Max/Demand",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 68,
+      "function": "holding",
+      "name": "Freq-mx,-Min/Max/Demand",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "Vll-avg-mn,-Min/Max/Demand",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "holding",
+      "name": "I-avg-mn,-Min/Max/Demand",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "holding",
+      "name": "Freq-mn,-Min/Max/Demand",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 76,
+      "function": "holding",
+      "name": "kW-sd-del-rec,-Min/Max/Demand",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 78,
+      "function": "holding",
+      "name": "kVA-sd-del+rec,-Min/Max/Demand",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "kVAR-sd-del-rec,-Min/Max/Demand",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 82,
+      "function": "holding",
+      "name": "kW-sd-mx-d-r,-Min/Max/Demand",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "kVA-sd-mx-d+r,-Min/Max/Demand",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "kVAR-sd-mx-d-r,-Min/Max/Demand",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 88,
+      "function": "holding",
+      "name": "Phase-Rev,-Min/Max/Demand",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 90,
+      "function": "holding",
+      "name": "kWh-del,-Energy/THD",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 92,
+      "function": "holding",
+      "name": "kWh-rec,-Energy/THD",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/schneider-electric-powerlogic-ion8600.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

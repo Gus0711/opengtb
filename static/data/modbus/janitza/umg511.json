@@ -1,0 +1,472 @@
+{
+  "slug": "janitza-umg511",
+  "vendor": "janitza",
+  "vendorSlug": "janitza",
+  "model": "umg511",
+  "modelSlug": "umg511",
+  "name": "janitza umg511",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 19000,
+      "function": "holding",
+      "name": "Voltage-L1-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 19002,
+      "function": "holding",
+      "name": "Voltage-L2-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 19004,
+      "function": "holding",
+      "name": "Voltage-L3-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 19006,
+      "function": "holding",
+      "name": "Voltage-L1-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 19008,
+      "function": "holding",
+      "name": "Voltage-L2-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 19010,
+      "function": "holding",
+      "name": "Voltage-L3-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 19012,
+      "function": "holding",
+      "name": "Apparent-current,-L1-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 19014,
+      "function": "holding",
+      "name": "Apparent-current,-L2-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 19016,
+      "function": "holding",
+      "name": "Apparent-current,-L3-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 19018,
+      "function": "holding",
+      "name": "Vector-sum;-in=i1+i2+i3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 19020,
+      "function": "holding",
+      "name": "Real-power-L1-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 19022,
+      "function": "holding",
+      "name": "Real-power-L2-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 19024,
+      "function": "holding",
+      "name": "Real-power-L3-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 19026,
+      "function": "holding",
+      "name": "Psum3=p1+p2+p3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 19028,
+      "function": "holding",
+      "name": "Apparent-power-L1-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 19030,
+      "function": "holding",
+      "name": "Apparent-power-L2-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 19032,
+      "function": "holding",
+      "name": "Apparent-power-L3-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 19034,
+      "function": "holding",
+      "name": "Sum;-ssum3=s1+s2+s3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 19036,
+      "function": "holding",
+      "name": "Reactive-power-L1-(fundamental-comp.)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 19038,
+      "function": "holding",
+      "name": "Reactive-power-L2-(fundamental-comp.)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 19040,
+      "function": "holding",
+      "name": "Reactive-power-L3-(fundamental-comp.)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 19042,
+      "function": "holding",
+      "name": "Qsum3=q1+q2+q3-(fundamental-comp.)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 19044,
+      "function": "holding",
+      "name": "Cosphi;-UL1-IL1-(fundamental-comp.)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 19046,
+      "function": "holding",
+      "name": "Cosphi;-UL2-IL2-(fundamental-comp.)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 19048,
+      "function": "holding",
+      "name": "Cosphi;-UL3-IL3-(fundamental-comp.)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 19050,
+      "function": "holding",
+      "name": "Measured-frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 19052,
+      "function": "holding",
+      "name": "Rotation-field;-1=right,-0=none,-1=left",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 19054,
+      "function": "holding",
+      "name": "Real-energy-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 19056,
+      "function": "holding",
+      "name": "Real-energy-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 19058,
+      "function": "holding",
+      "name": "Real-energy-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 19060,
+      "function": "holding",
+      "name": "Real-energy-l1..l3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 19062,
+      "function": "holding",
+      "name": "Real-energy-l1,-consumed",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 19064,
+      "function": "holding",
+      "name": "Real-energy-l2,-consumed",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 19066,
+      "function": "holding",
+      "name": "Real-energy-l3,-consumed",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 19068,
+      "function": "holding",
+      "name": "Real-energy-l1..l3,-consumed,-rate-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 19070,
+      "function": "holding",
+      "name": "Real-energy-l1,-delivered",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 19072,
+      "function": "holding",
+      "name": "Real-energy-l2,-delivered",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 19074,
+      "function": "holding",
+      "name": "Real-energy-l3,-delivered",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 19076,
+      "function": "holding",
+      "name": "Real-energy-l1..l3,-delivered",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 19078,
+      "function": "holding",
+      "name": "Apparent-energy-L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 19080,
+      "function": "holding",
+      "name": "Apparent-energy-L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 19082,
+      "function": "holding",
+      "name": "Apparent-energy-L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 19084,
+      "function": "holding",
+      "name": "Apparent-energy-l1..l3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 19086,
+      "function": "holding",
+      "name": "Reaktive-energy-L1-(fundamental-comp.)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 19088,
+      "function": "holding",
+      "name": "Reaktive-energy-L2-(fundamental-comp.)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 19090,
+      "function": "holding",
+      "name": "Reaktive-energy-L3-(fundamental-comp.)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 19092,
+      "function": "holding",
+      "name": "Reaktive-energy-l1..l3-(fundamental-comp.)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 19094,
+      "function": "holding",
+      "name": "Reactive-energy,-inductive,-L1-(fundamental-comp.)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 19096,
+      "function": "holding",
+      "name": "Reactive-energy,-inductive,-L2-(fundamental-comp.)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    },
+    {
+      "address": 19098,
+      "function": "holding",
+      "name": "Reactive-energy,-inductive,-L3-(fundamental-comp.)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "varh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/janitza-umg511.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

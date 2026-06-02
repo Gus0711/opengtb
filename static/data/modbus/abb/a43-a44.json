@@ -1,0 +1,476 @@
+{
+  "slug": "abb-a43-a44",
+  "vendor": "abb",
+  "vendorSlug": "abb",
+  "model": "a43-a44",
+  "modelSlug": "a43-a44",
+  "name": "abb a43-a44",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 20480,
+      "function": "holding",
+      "name": "Active-import,-kwh",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20484,
+      "function": "holding",
+      "name": "Active-export,-kwh",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20488,
+      "function": "holding",
+      "name": "Active-net,-kwh",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20492,
+      "function": "holding",
+      "name": "Reactive-import,-kvarh",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20496,
+      "function": "holding",
+      "name": "Reactive-export,-kvarh",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20500,
+      "function": "holding",
+      "name": "Reactive-net,-kvarh",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20504,
+      "function": "holding",
+      "name": "Apparent-import,-kvah",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 20508,
+      "function": "holding",
+      "name": "Apparent-export,-kvah",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 20512,
+      "function": "holding",
+      "name": "Apparent-net,-kvah",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 20516,
+      "function": "holding",
+      "name": "Active-import,-kvah",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kg",
+      "access": "r"
+    },
+    {
+      "address": 20532,
+      "function": "holding",
+      "name": "Active-import,-kvah",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "currency",
+      "access": "r"
+    },
+    {
+      "address": 20848,
+      "function": "holding",
+      "name": "Active-import,-tariff-1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20852,
+      "function": "holding",
+      "name": "Active-import,-tariff-2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20856,
+      "function": "holding",
+      "name": "Active-import,-tariff-3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20860,
+      "function": "holding",
+      "name": "Active-import,-tariff-4",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20880,
+      "function": "holding",
+      "name": "Active-export,-tariff-1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20884,
+      "function": "holding",
+      "name": "Active-export,-tariff-2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20888,
+      "function": "holding",
+      "name": "Active-export,-tariff-3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20892,
+      "function": "holding",
+      "name": "Active-export,-tariff-4",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 20912,
+      "function": "holding",
+      "name": "Reactive-import,-tariff-1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20916,
+      "function": "holding",
+      "name": "Reactive-import,-tariff-2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20920,
+      "function": "holding",
+      "name": "Reactive-import,-tariff-3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20924,
+      "function": "holding",
+      "name": "Reactive-import,-tariff-4",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20944,
+      "function": "holding",
+      "name": "Reactive-export,-tariff-1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20948,
+      "function": "holding",
+      "name": "Reactive-export,-tariff-2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20952,
+      "function": "holding",
+      "name": "Reactive-export,-tariff-3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 20956,
+      "function": "holding",
+      "name": "Reactive-export,-tariff-4",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21600,
+      "function": "holding",
+      "name": "Active-import,-l1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21604,
+      "function": "holding",
+      "name": "Active-import,-l2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21608,
+      "function": "holding",
+      "name": "Active-import,-l3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21612,
+      "function": "holding",
+      "name": "Active-export,-l1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21616,
+      "function": "holding",
+      "name": "Active-export,-l2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21620,
+      "function": "holding",
+      "name": "Active-export,-l3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21624,
+      "function": "holding",
+      "name": "Active-net,-l1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21628,
+      "function": "holding",
+      "name": "Active-net,-l2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21632,
+      "function": "holding",
+      "name": "Active-net,-l3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 21636,
+      "function": "holding",
+      "name": "Reactive-import,-l1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21640,
+      "function": "holding",
+      "name": "Reactive-import,-l2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21644,
+      "function": "holding",
+      "name": "Reactive-import,-l3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21648,
+      "function": "holding",
+      "name": "Reactive-export,-l1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21652,
+      "function": "holding",
+      "name": "Reactive-export,-l2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21656,
+      "function": "holding",
+      "name": "Reactive-export,-l3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21660,
+      "function": "holding",
+      "name": "Reactive-net,-l1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21664,
+      "function": "holding",
+      "name": "Reactive-net,-l2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21668,
+      "function": "holding",
+      "name": "Reactive-net,-l3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kvarh",
+      "access": "r"
+    },
+    {
+      "address": 21672,
+      "function": "holding",
+      "name": "Apparent-import,-l1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 21676,
+      "function": "holding",
+      "name": "Apparent-import,-l2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 21680,
+      "function": "holding",
+      "name": "Apparent-import,-l3",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 21684,
+      "function": "holding",
+      "name": "Apparent-export,-l1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 21688,
+      "function": "holding",
+      "name": "Apparent-export,-l2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "kVAh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/abb-a43-a44.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

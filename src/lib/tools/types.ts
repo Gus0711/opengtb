@@ -11,7 +11,10 @@ export interface Sector {
 	slug: SectorSlug;
 	number: string;
 	name: string;
+	icon: Component;
 }
+
+export type ToolStatus = 'done' | 'todo';
 
 export interface Tool {
 	slug: string;
@@ -22,4 +25,5 @@ export interface Tool {
 	icon: Component;
 	tags: string[];
 	external?: string;
+	status: ToolStatus;
 }

@@ -1,0 +1,453 @@
+{
+  "slug": "sma-solar-inverter",
+  "vendor": "sma",
+  "vendorSlug": "sma",
+  "model": "solar-inverter",
+  "modelSlug": "solar-inverter",
+  "name": "sma solar-inverter",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 40185,
+      "function": "holding",
+      "name": "AC-Current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40186,
+      "function": "holding",
+      "name": "Phase-A-Current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40187,
+      "function": "holding",
+      "name": "Phase-B-Current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40188,
+      "function": "holding",
+      "name": "Phase-C-Current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40189,
+      "function": "holding",
+      "name": "Scale-factor-[A_SF]",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40190,
+      "function": "holding",
+      "name": "Phase-Voltage-AB",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40191,
+      "function": "holding",
+      "name": "Phase-Voltage-BC",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40192,
+      "function": "holding",
+      "name": "Phase-Voltage-CA",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40193,
+      "function": "holding",
+      "name": "Phase-Voltage-AN",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40194,
+      "function": "holding",
+      "name": "Phase-Voltage-BN",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40195,
+      "function": "holding",
+      "name": "Phase-Voltage-CN",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40196,
+      "function": "holding",
+      "name": "Scale-factor-[V_SF]",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40197,
+      "function": "holding",
+      "name": "AC-Power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40198,
+      "function": "holding",
+      "name": "Scale-factor-[W_SF]",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40199,
+      "function": "holding",
+      "name": "Line-Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 40200,
+      "function": "holding",
+      "name": "Scale-factor-[HZ_SF]",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40201,
+      "function": "holding",
+      "name": "AC-Apparent-Power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40202,
+      "function": "holding",
+      "name": "Scale-factor-[VA_SF]",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40203,
+      "function": "holding",
+      "name": "AC-Reactive-Power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 40204,
+      "function": "holding",
+      "name": "Scale-factor-[VAR_SF]",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40205,
+      "function": "holding",
+      "name": "AC-Power-Factor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Pct",
+      "access": "r"
+    },
+    {
+      "address": 40206,
+      "function": "holding",
+      "name": "Scale-factor-[PF_SF]",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40207,
+      "function": "holding",
+      "name": "AC-Energy",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40209,
+      "function": "holding",
+      "name": "Scale-factor-[WH_SF]",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40210,
+      "function": "holding",
+      "name": "DC-Current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40211,
+      "function": "holding",
+      "name": "Scale-factor-[DCA_SF]",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40212,
+      "function": "holding",
+      "name": "DC-Voltage",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40213,
+      "function": "holding",
+      "name": "Scale-factor-[DCV_SF]",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40214,
+      "function": "holding",
+      "name": "DC-Power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40215,
+      "function": "holding",
+      "name": "Scale-factor-[DCW_SF]",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40216,
+      "function": "holding",
+      "name": "Cabinet-Temperature",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "C",
+      "access": "r"
+    },
+    {
+      "address": 40217,
+      "function": "holding",
+      "name": "Heat-Sink-Temperature",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "C",
+      "access": "r"
+    },
+    {
+      "address": 40218,
+      "function": "holding",
+      "name": "Transformer-Temperature",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "C",
+      "access": "r"
+    },
+    {
+      "address": 40219,
+      "function": "holding",
+      "name": "Other-Temperature",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "C",
+      "access": "r"
+    },
+    {
+      "address": 40220,
+      "function": "holding",
+      "name": "Scale-factor-[TMP_SF]",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40221,
+      "function": "holding",
+      "name": "Enumerated-value.--Operating-state",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40222,
+      "function": "holding",
+      "name": "Vendor-specific-operating-state-code",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40223,
+      "function": "holding",
+      "name": "Bitmask-value.-Event-fields",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40225,
+      "function": "holding",
+      "name": "Reserved-for-future-use",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40227,
+      "function": "holding",
+      "name": "Vendor-defined-events",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40229,
+      "function": "holding",
+      "name": "Vendor-defined-events",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40231,
+      "function": "holding",
+      "name": "Vendor-defined-events",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40233,
+      "function": "holding",
+      "name": "Vendor-defined-events",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40237,
+      "function": "holding",
+      "name": "Type-of-DER-device.-Default-value-is-4-to-indicate-PV-device.",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40238,
+      "function": "holding",
+      "name": "Continuous-power-output-capability-of-the-inverter.",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40239,
+      "function": "holding",
+      "name": "Scale-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40240,
+      "function": "holding",
+      "name": "Continuous-Volt-Ampere-capability-of-the-inverter.",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40241,
+      "function": "holding",
+      "name": "Scale-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40242,
+      "function": "holding",
+      "name": "Continuous-VAR-capability-of-the-inverter-in-quadrant-1.",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 40243,
+      "function": "holding",
+      "name": "Continuous-VAR-capability-of-the-inverter-in-quadrant-2.",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/sma-solar-inverter.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

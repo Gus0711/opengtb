@@ -1,0 +1,471 @@
+{
+  "slug": "forlong-drt-301m",
+  "vendor": "forlong",
+  "vendorSlug": "forlong",
+  "model": "drt-301m",
+  "modelSlug": "drt-301m",
+  "name": "forlong drt-301m",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Voltage-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Voltage-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Voltage-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 78,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "Current-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 82,
+      "function": "holding",
+      "name": "Current-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "Current-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "Current-neutral",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 144,
+      "function": "holding",
+      "name": "Power-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 146,
+      "function": "holding",
+      "name": "Power-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 148,
+      "function": "holding",
+      "name": "Power-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 150,
+      "function": "holding",
+      "name": "Power-total",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 208,
+      "function": "holding",
+      "name": "Apparent-power-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 210,
+      "function": "holding",
+      "name": "Apparent-power-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 212,
+      "function": "holding",
+      "name": "Apparent-power-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 214,
+      "function": "holding",
+      "name": "Apparent-power-total",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 272,
+      "function": "holding",
+      "name": "Reactive-power-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 274,
+      "function": "holding",
+      "name": "Reactive-power-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 276,
+      "function": "holding",
+      "name": "Reactive-power-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 278,
+      "function": "holding",
+      "name": "Reactive-power-total",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 336,
+      "function": "holding",
+      "name": "Power-factor-L1",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 338,
+      "function": "holding",
+      "name": "Power-factor-L2",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 340,
+      "function": "holding",
+      "name": "Power-factor-L3",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 342,
+      "function": "holding",
+      "name": "Power-factor-total",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 352,
+      "function": "holding",
+      "name": "Import-energy",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 358,
+      "function": "holding",
+      "name": "Export-energy",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 2000,
+      "function": "holding",
+      "name": "Import-energy-rate-1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 2002,
+      "function": "holding",
+      "name": "Import-energy-rate-2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 2004,
+      "function": "holding",
+      "name": "Import-energy-rate-3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 2006,
+      "function": "holding",
+      "name": "Import-energy-rate-4",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 2256,
+      "function": "holding",
+      "name": "Export-energy-rate-1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 2258,
+      "function": "holding",
+      "name": "Export-energy-rate-2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 2260,
+      "function": "holding",
+      "name": "Export-energy-rate-3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 2262,
+      "function": "holding",
+      "name": "Export-energy-rate-4",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 61440,
+      "function": "holding",
+      "name": "Time",
+      "dataType": "string",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 61713,
+      "function": "holding",
+      "name": "Last-1-month-positive-energy,-total",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 61715,
+      "function": "holding",
+      "name": "Last-1-month-positive-energy,-rate-1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 61717,
+      "function": "holding",
+      "name": "Last-1-month-positive-energy,-rate-2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 61719,
+      "function": "holding",
+      "name": "Last-1-month-positive-energy,-rate-3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 61721,
+      "function": "holding",
+      "name": "Last-1-month-positive-energy,-rate-4",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 61729,
+      "function": "holding",
+      "name": "Last-2-month-positive-energy,-total",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 61731,
+      "function": "holding",
+      "name": "Last-2-month-positive-energy,-rate-1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 61733,
+      "function": "holding",
+      "name": "Last-2-month-positive-energy,-rate-2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 61735,
+      "function": "holding",
+      "name": "Last-2-month-positive-energy,-rate-3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 61737,
+      "function": "holding",
+      "name": "Last-2-month-positive-energy,-rate-4",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 61745,
+      "function": "holding",
+      "name": "Last-3-month-positive-energy,-total",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 61747,
+      "function": "holding",
+      "name": "Last-3-month-positive-energy,-rate-1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 61749,
+      "function": "holding",
+      "name": "Last-3-month-positive-energy,-rate-2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 61751,
+      "function": "holding",
+      "name": "Last-3-month-positive-energy,-rate-3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 61753,
+      "function": "holding",
+      "name": "Last-3-month-positive-energy,-rate-4",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/forlong-drt-301m.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

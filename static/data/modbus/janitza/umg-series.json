@@ -1,0 +1,242 @@
+{
+  "slug": "janitza-umg-series",
+  "vendor": "Janitza",
+  "vendorSlug": "janitza",
+  "model": "UMG series",
+  "modelSlug": "umg-series",
+  "name": "Janitza UMG series",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 19000,
+      "function": "holding",
+      "name": "VoltageL1",
+      "label": "Tension L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 19002,
+      "function": "holding",
+      "name": "VoltageL2",
+      "label": "Tension L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 19004,
+      "function": "holding",
+      "name": "VoltageL3",
+      "label": "Tension L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 19012,
+      "function": "holding",
+      "name": "CurrentL1",
+      "label": "Courant L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 19014,
+      "function": "holding",
+      "name": "CurrentL2",
+      "label": "Courant L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 19016,
+      "function": "holding",
+      "name": "CurrentL3",
+      "label": "Courant L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 19020,
+      "function": "holding",
+      "name": "PowerL1",
+      "label": "Puissance active L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 19022,
+      "function": "holding",
+      "name": "PowerL2",
+      "label": "Puissance active L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 19024,
+      "function": "holding",
+      "name": "PowerL3",
+      "label": "Puissance active L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 19026,
+      "function": "holding",
+      "name": "Power",
+      "label": "Puissance active",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 19044,
+      "function": "holding",
+      "name": "CosphiL1",
+      "label": "Cos φ L1",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 19046,
+      "function": "holding",
+      "name": "CosphiL2",
+      "label": "Cos φ L2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 19048,
+      "function": "holding",
+      "name": "CosphiL3",
+      "label": "Cos φ L3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 19050,
+      "function": "holding",
+      "name": "Frequency",
+      "label": "Fréquence",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 19062,
+      "function": "holding",
+      "name": "ImportL1",
+      "label": "Énergie active importée L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 19064,
+      "function": "holding",
+      "name": "ImportL2",
+      "label": "Énergie active importée L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 19066,
+      "function": "holding",
+      "name": "ImportL3",
+      "label": "Énergie active importée L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 19068,
+      "function": "holding",
+      "name": "Import",
+      "label": "Énergie active importée",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 19070,
+      "function": "holding",
+      "name": "ExportL1",
+      "label": "Énergie active exportée L1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 19072,
+      "function": "holding",
+      "name": "ExportL2",
+      "label": "Énergie active exportée L2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 19074,
+      "function": "holding",
+      "name": "ExportL3",
+      "label": "Énergie active exportée L3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 19076,
+      "function": "holding",
+      "name": "Export",
+      "label": "Énergie active exportée",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    }
+  ],
+  "doc": "Importé depuis volkszaehler/mbmd (BSD-3-Clause). Description amont : Janitza B-Series meters.",
+  "upstream": {
+    "source": "mbmd",
+    "ref": "c71dfb268a7a9a3d608dbb990c1c26d6d67fd9d9",
+    "needsReview": true,
+    "reviewReasons": [
+      "Type float32 et ordre AB-CD supposés (convention mbmd). Vérifier sur la datasheet JANITZA."
+    ]
+  }
+}

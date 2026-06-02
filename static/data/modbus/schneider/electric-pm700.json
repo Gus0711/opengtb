@@ -1,0 +1,475 @@
+{
+  "slug": "schneider-electric-pm700",
+  "vendor": "schneider",
+  "vendorSlug": "schneider",
+  "model": "electric-pm700",
+  "modelSlug": "electric-pm700",
+  "name": "schneider electric-pm700",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1000,
+      "function": "holding",
+      "name": "Real-energy,-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 1002,
+      "function": "holding",
+      "name": "Apparent-energy,-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 1004,
+      "function": "holding",
+      "name": "Reactive-energy,-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 1006,
+      "function": "holding",
+      "name": "Real-power,-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1008,
+      "function": "holding",
+      "name": "Apparent-power,-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1010,
+      "function": "holding",
+      "name": "Reactive-power,-total",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1012,
+      "function": "holding",
+      "name": "Power-factor,-total",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1014,
+      "function": "holding",
+      "name": "Voltage,-L-L,-3P-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1016,
+      "function": "holding",
+      "name": "Voltage,-L-N,-3P-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1018,
+      "function": "holding",
+      "name": "Current,-3P-average",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1020,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 1022,
+      "function": "holding",
+      "name": "Real-power,-total-demand-present",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1024,
+      "function": "holding",
+      "name": "Apparent-power,-total-demand-present",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1026,
+      "function": "holding",
+      "name": "Reactive-power,-total-demand-present",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1028,
+      "function": "holding",
+      "name": "Real-power,-total-demand-peak",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1030,
+      "function": "holding",
+      "name": "Apparent-power,-total-demand-peak",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1032,
+      "function": "holding",
+      "name": "Reactive-power,-total-demand-peak",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1034,
+      "function": "holding",
+      "name": "Current,-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1036,
+      "function": "holding",
+      "name": "Current,-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1038,
+      "function": "holding",
+      "name": "Current,-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1040,
+      "function": "holding",
+      "name": "Current,-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1042,
+      "function": "holding",
+      "name": "Current,-A,-demand-present",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1044,
+      "function": "holding",
+      "name": "Current,-B,-demand-present",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1046,
+      "function": "holding",
+      "name": "Current,-C,-demand-present",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1048,
+      "function": "holding",
+      "name": "Current,-A,-demand-peak",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1050,
+      "function": "holding",
+      "name": "Current,-B,-demand-peak",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 1054,
+      "function": "holding",
+      "name": "Voltage,-A-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1056,
+      "function": "holding",
+      "name": "Voltage,-B-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1058,
+      "function": "holding",
+      "name": "Voltage,-C-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1060,
+      "function": "holding",
+      "name": "Voltage,-A-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1062,
+      "function": "holding",
+      "name": "Voltage,-B-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1064,
+      "function": "holding",
+      "name": "Voltage,-C-N",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 1066,
+      "function": "holding",
+      "name": "Real-power,-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1068,
+      "function": "holding",
+      "name": "Real-power,-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1070,
+      "function": "holding",
+      "name": "Real-power,-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 1072,
+      "function": "holding",
+      "name": "Apparent-power,-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1074,
+      "function": "holding",
+      "name": "Apparent-power,-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1076,
+      "function": "holding",
+      "name": "Apparent-power,-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 1078,
+      "function": "holding",
+      "name": "Reactive-power,-A",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1080,
+      "function": "holding",
+      "name": "Reactive-power,-B",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1082,
+      "function": "holding",
+      "name": "Reactive-power,-C",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 1084,
+      "function": "holding",
+      "name": "Current,-A,-THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1086,
+      "function": "holding",
+      "name": "Current,-B,-THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1088,
+      "function": "holding",
+      "name": "Current,-C,-THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1092,
+      "function": "holding",
+      "name": "Voltage,-A-N,-THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1094,
+      "function": "holding",
+      "name": "Voltage,-B-N,-THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1096,
+      "function": "holding",
+      "name": "Voltage,-C-N,-THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1098,
+      "function": "holding",
+      "name": "Voltage,-A-B,-THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1100,
+      "function": "holding",
+      "name": "Voltage,-B-C,-THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 1102,
+      "function": "holding",
+      "name": "Voltage,-C-A,-THD",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/schneider-electric-pm700.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

@@ -1,0 +1,470 @@
+{
+  "slug": "secure-elite-440",
+  "vendor": "secure",
+  "vendorSlug": "secure",
+  "model": "elite-440",
+  "modelSlug": "elite-440",
+  "name": "secure elite-440",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 99,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage-(V1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 101,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage-(V2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 103,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage-(V3)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 105,
+      "function": "holding",
+      "name": "Average-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 107,
+      "function": "holding",
+      "name": "Voltage-(v12)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 109,
+      "function": "holding",
+      "name": "Voltage-(v23)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 111,
+      "function": "holding",
+      "name": "Voltage-(v31)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Volt",
+      "access": "r"
+    },
+    {
+      "address": 113,
+      "function": "holding",
+      "name": "Phase-line-current-(L1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ampere",
+      "access": "r"
+    },
+    {
+      "address": 115,
+      "function": "holding",
+      "name": "Phase-line-current-(L2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ampere",
+      "access": "r"
+    },
+    {
+      "address": 117,
+      "function": "holding",
+      "name": "Phase-line-current-(L3)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ampere",
+      "access": "r"
+    },
+    {
+      "address": 119,
+      "function": "holding",
+      "name": "Neutral-line-current-(ln)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ampere",
+      "access": "r"
+    },
+    {
+      "address": 121,
+      "function": "holding",
+      "name": "Phase-active-current-(I1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ampere",
+      "access": "r"
+    },
+    {
+      "address": 123,
+      "function": "holding",
+      "name": "Phase-active-current-(I2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ampere",
+      "access": "r"
+    },
+    {
+      "address": 125,
+      "function": "holding",
+      "name": "Phase-active-current-(I3)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ampere",
+      "access": "r"
+    },
+    {
+      "address": 127,
+      "function": "holding",
+      "name": "Phase-reactive-current-(R1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ampere",
+      "access": "r"
+    },
+    {
+      "address": 129,
+      "function": "holding",
+      "name": "Phase-reactive-current-(R2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ampere",
+      "access": "r"
+    },
+    {
+      "address": 131,
+      "function": "holding",
+      "name": "Phase-reactive-current-(R3)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Ampere",
+      "access": "r"
+    },
+    {
+      "address": 133,
+      "function": "holding",
+      "name": "Power-factor-(Q1)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 135,
+      "function": "holding",
+      "name": "Power-factor-(Q2)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 137,
+      "function": "holding",
+      "name": "Power-factor-(Q3)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 139,
+      "function": "holding",
+      "name": "Avg-power-factor-(qa)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 141,
+      "function": "holding",
+      "name": "Phase-active-power-(kt1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 143,
+      "function": "holding",
+      "name": "Phase-active-power-(kt2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 145,
+      "function": "holding",
+      "name": "Phase-active-power-(kt3)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 147,
+      "function": "holding",
+      "name": "Phase-active-power-(kt)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "KW",
+      "access": "r"
+    },
+    {
+      "address": 149,
+      "function": "holding",
+      "name": "Phase-reactive-power-(kv1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAr",
+      "access": "r"
+    },
+    {
+      "address": 151,
+      "function": "holding",
+      "name": "Phase-reactive-power-(kv2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAr",
+      "access": "r"
+    },
+    {
+      "address": 153,
+      "function": "holding",
+      "name": "Phase-reactive-power-(kv3)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAr",
+      "access": "r"
+    },
+    {
+      "address": 155,
+      "function": "holding",
+      "name": "Phase-reactive-power-(kv)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVAr",
+      "access": "r"
+    },
+    {
+      "address": 157,
+      "function": "holding",
+      "name": "Phase-apparent-power-(ka1)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 159,
+      "function": "holding",
+      "name": "Phase-apparent-power-(ka2)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 161,
+      "function": "holding",
+      "name": "Phase-apparent-power-(ka3)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 163,
+      "function": "holding",
+      "name": "Phase-apparent-power-(ka)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 165,
+      "function": "holding",
+      "name": "Ph-ang-(a12)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degree",
+      "access": "r"
+    },
+    {
+      "address": 167,
+      "function": "holding",
+      "name": "Ph-ang-(a23)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degree",
+      "access": "r"
+    },
+    {
+      "address": 169,
+      "function": "holding",
+      "name": "Ph-ang-(a31)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degree",
+      "access": "r"
+    },
+    {
+      "address": 171,
+      "function": "holding",
+      "name": "Frequency-hz-(fq)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 173,
+      "function": "holding",
+      "name": "Meter-real-time-(rt)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Seconds",
+      "access": "r"
+    },
+    {
+      "address": 175,
+      "function": "holding",
+      "name": "Meter-temperature",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Degree Centi",
+      "access": "r"
+    },
+    {
+      "address": 177,
+      "function": "holding",
+      "name": "R-phase-voltage-total-harmonic-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 179,
+      "function": "holding",
+      "name": "Y-phase-voltage-total-harmonic-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 181,
+      "function": "holding",
+      "name": "B-phase-voltage-total-harmonic-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 183,
+      "function": "holding",
+      "name": "R-phase-current-total-harmonic-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 185,
+      "function": "holding",
+      "name": "Y-phase-current-total-harmonic-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 187,
+      "function": "holding",
+      "name": "B-phase-current-total-harmonic-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 189,
+      "function": "holding",
+      "name": "R-phase-power-total-harmonic-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 191,
+      "function": "holding",
+      "name": "Y-phase-power-total-harmonic-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 193,
+      "function": "holding",
+      "name": "B-phase-power-total-harmonic-distortion",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 199,
+      "function": "holding",
+      "name": "Active-total-import",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 201,
+      "function": "holding",
+      "name": "Active-total-export",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/secure-elite-440.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

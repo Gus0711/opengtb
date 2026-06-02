@@ -1,0 +1,472 @@
+{
+  "slug": "electrex-flash-d",
+  "vendor": "electrex",
+  "vendorSlug": "electrex",
+  "model": "flash-d",
+  "modelSlug": "flash-d",
+  "name": "electrex flash-d",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 200,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage,-thd",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 202,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage,-thd",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 204,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage,-thd",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 206,
+      "function": "holding",
+      "name": "Line-current,-thd",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 208,
+      "function": "holding",
+      "name": "Line-current,-thd",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 210,
+      "function": "holding",
+      "name": "Line-current,-thd",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 212,
+      "function": "holding",
+      "name": "Voltage-input-frequency",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 214,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage,-rms-amplitude",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 216,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage,-rms-amplitude",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 218,
+      "function": "holding",
+      "name": "Phase-to-neutral-voltage,-rms-amplitude",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 220,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage,-rms-amplitude",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 222,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage,-rms-amplitude",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 224,
+      "function": "holding",
+      "name": "Phase-to-phase-voltage,-rms-amplitude",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 226,
+      "function": "holding",
+      "name": "Line-current,-rms-amplitude",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 228,
+      "function": "holding",
+      "name": "Line-current,-rms-amplitude",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 230,
+      "function": "holding",
+      "name": "Line-current,-rms-amplitude",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 232,
+      "function": "holding",
+      "name": "Neutral-current,-rms-amplitude",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 234,
+      "function": "holding",
+      "name": "Phase-active-power-(+/)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 236,
+      "function": "holding",
+      "name": "Phase-active-power-(+/)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 238,
+      "function": "holding",
+      "name": "Phase-active-power-(+/)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 240,
+      "function": "holding",
+      "name": "Phase-reactive-power-(+/)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 242,
+      "function": "holding",
+      "name": "Phase-reactive-power-(+/)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 244,
+      "function": "holding",
+      "name": "Phase-reactive-power-(+/)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 246,
+      "function": "holding",
+      "name": "Phase-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 248,
+      "function": "holding",
+      "name": "Phase-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 250,
+      "function": "holding",
+      "name": "Phase-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 252,
+      "function": "holding",
+      "name": "Phase-power-factor-(+/)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 254,
+      "function": "holding",
+      "name": "Phase-power-factor-(+/)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 256,
+      "function": "holding",
+      "name": "Phase-power-factor-(+/)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 258,
+      "function": "holding",
+      "name": "Phase-voltage,-mean-thd",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 260,
+      "function": "holding",
+      "name": "Line-current,-mean-thd",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 262,
+      "function": "holding",
+      "name": "Phase-to-neutral-mean-voltage,-rms-amplitude",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 264,
+      "function": "holding",
+      "name": "Phase-to-phase-mean-voltage,-rms-amplitude",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 266,
+      "function": "holding",
+      "name": "Three-phase-current,-rms-amplitude",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 268,
+      "function": "holding",
+      "name": "Total-active-power-(+/)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 270,
+      "function": "holding",
+      "name": "Total-reactive-power-(+/)",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 272,
+      "function": "holding",
+      "name": "Total-apparent-power",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 274,
+      "function": "holding",
+      "name": "Total-power-factor-(+/)",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 276,
+      "function": "holding",
+      "name": "Total-import-active-power,-avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 278,
+      "function": "holding",
+      "name": "Total-avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "import",
+      "access": "r"
+    },
+    {
+      "address": 280,
+      "function": "holding",
+      "name": "Total-import-capacitive-power,-avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 282,
+      "function": "holding",
+      "name": "Total-avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "import",
+      "access": "r"
+    },
+    {
+      "address": 284,
+      "function": "holding",
+      "name": "Total-export-active-power,-avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 286,
+      "function": "holding",
+      "name": "Total-avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "export",
+      "access": "r"
+    },
+    {
+      "address": 288,
+      "function": "holding",
+      "name": "Total-export-capacitive-power,-avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 290,
+      "function": "holding",
+      "name": "Total-avg",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "export",
+      "access": "r"
+    },
+    {
+      "address": 292,
+      "function": "holding",
+      "name": "Total-import-active-power,-md",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 294,
+      "function": "holding",
+      "name": "Total-md",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "import",
+      "access": "r"
+    },
+    {
+      "address": 296,
+      "function": "holding",
+      "name": "Total-import-capacitive-power,-md",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 298,
+      "function": "holding",
+      "name": "Total-md",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "import",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/electrex-flash-d.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

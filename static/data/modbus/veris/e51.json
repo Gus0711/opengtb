@@ -1,0 +1,474 @@
+{
+  "slug": "veris-e51",
+  "vendor": "veris",
+  "vendorSlug": "veris",
+  "model": "e51",
+  "modelSlug": "e51",
+  "name": "veris e51",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Real-energy-(diet-import-export)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Real-energy-(Q1-4-import)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Real-energy-(Q2-3-import)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Reactive-energy-Q1",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Reactive-energy-Q2",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Reactive-energy-Q3",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Reactive-energy-Q4",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "Apparent-energy:-net-(import-export)",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Apparent:-Q1-4-import",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Apparent:-Q2-3-import",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "Total-instantaneous-real-power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Total-instantaneous-reactive-power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Total-instantaneous-apparent-power",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "KVA",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Total-power-factor-(total-kw-/total-kva)",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Ratio",
+      "access": "r"
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "Voltage-L-L,-average-of-active-phases",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "yolt",
+      "access": "r"
+    },
+    {
+      "address": 27,
+      "function": "holding",
+      "name": "Current,-average-of-active-phases",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Amp",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 29,
+      "function": "holding",
+      "name": "Total-real-power-present-demand",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Total-reactive-power-present-demand",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 31,
+      "function": "holding",
+      "name": "Total-apparent-power-present-demand",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "KVA",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Total-real-power-max.-demand",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Total-reactive-power-max.-demand",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Total-apparent-power-max.-demand",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "KVA",
+      "access": "r"
+    },
+    {
+      "address": 35,
+      "function": "holding",
+      "name": "Total-real-power-max.-demand",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Total-reactive-power-max.-demand",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "kVAR",
+      "access": "r"
+    },
+    {
+      "address": 37,
+      "function": "holding",
+      "name": "Total-apparent-power-max.-demand",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "KVA",
+      "access": "r"
+    },
+    {
+      "address": 39,
+      "function": "holding",
+      "name": "Pulse-counter-1-(import-real-energy)",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 41,
+      "function": "holding",
+      "name": "Pulse-counter-2-(export-real-energy)",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 43,
+      "function": "holding",
+      "name": "Accumulated-real-energy,-phase-A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 45,
+      "function": "holding",
+      "name": "Accumulated-real-energy,-phase-B",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 47,
+      "function": "holding",
+      "name": "Accumulated-real-energy,-phase-C",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 49,
+      "function": "holding",
+      "name": "Accumulated-real-energy,-phase-A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 51,
+      "function": "holding",
+      "name": "Accumulated-real-energy,-phase-B",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 53,
+      "function": "holding",
+      "name": "Accumulated-real-energy,-phase-C",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r"
+    },
+    {
+      "address": 55,
+      "function": "holding",
+      "name": "Accumulated-Q1-reactive-energy-phase-A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 57,
+      "function": "holding",
+      "name": "Accumulated-Q1-reactive-energy-phase-B",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 59,
+      "function": "holding",
+      "name": "Accumulated-Q1-reactive-energy-phase-C",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 61,
+      "function": "holding",
+      "name": "Accumulated-Q2-reactive-energy-phase-A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 63,
+      "function": "holding",
+      "name": "Accumulated-Q2-reactive-energy-phase-B",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 65,
+      "function": "holding",
+      "name": "Accumulated-Q2-reactive-energy-phase-C",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 67,
+      "function": "holding",
+      "name": "Accumulated-Q3-reactive-energy-phase-A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 69,
+      "function": "holding",
+      "name": "Accumulated-Q3-reactive-energy-phase-B",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 71,
+      "function": "holding",
+      "name": "Accumulated-Q3-reactive-energy-phase-C",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 73,
+      "function": "holding",
+      "name": "Accumulated-Q4-reactive-energy-phase-A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kYARh",
+      "access": "r"
+    },
+    {
+      "address": 75,
+      "function": "holding",
+      "name": "Accumulated-Q4-reactive-energy-phase-B",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 77,
+      "function": "holding",
+      "name": "Accumulated-Q4-reactive-energy-phase-C",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVARh",
+      "access": "r"
+    },
+    {
+      "address": 79,
+      "function": "holding",
+      "name": "Accumulated-apparent-energy,-phase-A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kVAh",
+      "access": "r"
+    },
+    {
+      "address": 81,
+      "function": "holding",
+      "name": "Accumulated-apparent-energy,-phase-B",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kYAh",
+      "access": "r"
+    },
+    {
+      "address": 83,
+      "function": "holding",
+      "name": "Accumulated-apparent-energy,-phase-C",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kYAh",
+      "access": "r"
+    },
+    {
+      "address": 85,
+      "function": "holding",
+      "name": "Accumulated-apparent-energy,-phase-A",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kYAh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/veris-e51.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

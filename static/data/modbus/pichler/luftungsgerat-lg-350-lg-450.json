@@ -1,0 +1,1232 @@
+{
+  "slug": "pichler-luftungsgerat-lg-350-lg-450",
+  "vendor": "Pichler",
+  "vendorSlug": "pichler",
+  "model": "Lüftungsgerät LG 350 - LG 450",
+  "modelSlug": "luftungsgerat-lg-350-lg-450",
+  "name": "Pichler Lüftungsgerät LG 350 - LG 450",
+  "equipmentType": "vmc",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Betriebsmodus Sommer/Winter",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "1": "Sommer",
+        "2": "Winter"
+      }
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Lüftungsstufe",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Standby",
+        "1": "Stufe 1",
+        "2": "Stufe 2",
+        "3": "Stufe 3",
+        "4": "Grundlüftung"
+      }
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "L5/Ai1 CO2 Sensor",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.4884,
+      "unit": "ppm",
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "EWT Sommer Umschaltpunkt",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "L7/Ai2 rF Sensor",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.02442,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "EWT Winter Umschaltpunkt",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Zuluft Temperatur (extern)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Außenluft Temperatur (extern)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Temperaturregelungsart",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "1": "Abluft",
+        "2": "Zuluft",
+        "3": "Raum"
+      }
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Luftstrom Lüftungsstufe 1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "m³/h",
+      "access": "rw"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Raum Temperatur (extern)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Luftstrom Lüftungsstufe 2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "m³/h",
+      "access": "rw"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Raumtemperatur TouchDisplay",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Luftstrom Lüftungsstufe 3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "m³/h",
+      "access": "rw"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Heizmischer Steuersignal",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Luftstrom Grundlüftung",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "m³/h",
+      "access": "rw"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Kühlmischer Steuersignal",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Vorheizregister Relais Schwellwert",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Außentemperatur gedämpft",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Vorheizregister Relais",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Heizanforderung",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Kühlanforderung",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Ventilatoren",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Bypassklappe Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "Außenluft- & Fortluftklappen",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Soll Zulufttemperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Soll Raumlufttemperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "Firmware Version",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Soll Ablufttemperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 25,
+      "function": "holding",
+      "name": "Lüftungsgerät Modell",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "Kombiregister Mischer Steuersignal",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 27,
+      "function": "holding",
+      "name": "Pumpe Nachheizregister",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Pumpe Kühl-/Kombiregister",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 29,
+      "function": "holding",
+      "name": "Tauschintervall Filter",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "h",
+      "access": "rw"
+    },
+    {
+      "address": 29,
+      "function": "holding",
+      "name": "Summenstörmeldung",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Temperatur Außenluft",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 31,
+      "function": "holding",
+      "name": "Lüftungsstufe 3 Nachlaufzeit (External Din2)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "min",
+      "access": "rw"
+    },
+    {
+      "address": 31,
+      "function": "holding",
+      "name": "Temperatur Fortluft",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Raumtemperaturfühler Quelle",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "1": "T8 extern",
+        "2": "TouchDisplay"
+      }
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Temperatur Abluft",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Filterintervall zurücksetzen",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Keine Aktion",
+        "1": "Reset",
+        "2": "Später erinnern"
+      }
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Temperatur Zuluft",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Konfiguration Lüftungsstufe",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Standby",
+        "1": "Grundlüftung"
+      }
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Temperatur Vorheizregister",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 35,
+      "function": "holding",
+      "name": "Bedieneinheit Fehlerausgabe",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Nein",
+        "1": "Ja"
+      }
+    },
+    {
+      "address": 37,
+      "function": "holding",
+      "name": "Extern Aus / BMZ",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Extern Lüftungsstufe 3",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 39,
+      "function": "holding",
+      "name": "CO2 Regelung",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Aus",
+        "1": "Ein"
+      }
+    },
+    {
+      "address": 39,
+      "function": "holding",
+      "name": "Drehzahl Zuluft",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "rpm",
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "CO2 Sollwert",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "ppm",
+      "access": "rw"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "Drehzahl Abluft",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "rpm",
+      "access": "r"
+    },
+    {
+      "address": 41,
+      "function": "holding",
+      "name": "Filtermeldung",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "Sollwert Zuluftvolumenstrom",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "m³/h",
+      "access": "r"
+    },
+    {
+      "address": 43,
+      "function": "holding",
+      "name": "Sollwert Abluftvolumenstrom",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "m³/h",
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "Feuchte Regelung",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Aus",
+        "1": "Ein"
+      }
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "CO2 Modbus Sensor 1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "ppm",
+      "access": "r"
+    },
+    {
+      "address": 45,
+      "function": "holding",
+      "name": "Luftfeuchte Sollwert",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "rw"
+    },
+    {
+      "address": 45,
+      "function": "holding",
+      "name": "Luftfeuchte Modbus Sensor 1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Feuchte Regelung LS3 maximale Zeit",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "min",
+      "access": "rw"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Istwert Zuluftvolumenstrom",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "m³/h",
+      "access": "r"
+    },
+    {
+      "address": 47,
+      "function": "holding",
+      "name": "Istwert Abluftvolumenstrom",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "m³/h",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Sommer/Winter Zeitumstellung",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Aus",
+        "1": "Automatisch"
+      }
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Betriebsstatus",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 49,
+      "function": "holding",
+      "name": "Bypassklappe Stellung",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Regelung arbeiten lassen",
+        "1": "Bypass geschlossen",
+        "2": "Bypass offen"
+      }
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "Filter Reststandzeit",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "h",
+      "access": "r"
+    },
+    {
+      "address": 55,
+      "function": "holding",
+      "name": "Berechnete Zuluftsolltemperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Soll Zulufttemperatur (Abgesenkt)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "CO2 Regelsignal Sollwert",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "m³/h",
+      "access": "r"
+    },
+    {
+      "address": 57,
+      "function": "holding",
+      "name": "Soll Raumlufttemperatur (Abgesenkt)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 58,
+      "function": "holding",
+      "name": "Soll Ablufttemperatur (Abgesenkt)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 58,
+      "function": "holding",
+      "name": "Vorheizregister PWM",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 59,
+      "function": "holding",
+      "name": "Aktuelle Lüftungsstufe",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "Fehler Erdwärmetauscher",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 61,
+      "function": "holding",
+      "name": "Fehler Bedieneinheit",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "Fehler Frostschutz NHR (Din3)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 63,
+      "function": "holding",
+      "name": "System Zurücksetzen",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Keine Aktion",
+        "1": "Fehlerprotokoll löschen",
+        "2": "Filterprotokoll löschen",
+        "3": "Neustart"
+      }
+    },
+    {
+      "address": 63,
+      "function": "holding",
+      "name": "Fehler Fortluftventilator",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 64,
+      "function": "holding",
+      "name": "Fehler Zuluftventilator",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 65,
+      "function": "holding",
+      "name": "Vorheizregister Zieltemperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 65,
+      "function": "holding",
+      "name": "Fehler Temperatur T1 (Außenluft)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "holding",
+      "name": "Fehler Temperatur T2 (Fortluft)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 67,
+      "function": "holding",
+      "name": "Fehler Temperatur T3 (Abluft)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 68,
+      "function": "holding",
+      "name": "Fehler Temperatur T4 (Zuluft)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 69,
+      "function": "holding",
+      "name": "Automatische Umschaltung Sommer/Winter",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Aus",
+        "1": "Ein"
+      }
+    },
+    {
+      "address": 69,
+      "function": "holding",
+      "name": "Fehler Temperatur T5 (Vorheizregister)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "Lüftungsstufe 3 Maximale Zeit",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "min",
+      "access": "rw"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "Fehler Temperatur T6 (Zuluft extern)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 71,
+      "function": "holding",
+      "name": "Fehler Temperatur T7 (Außenluft extern)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "holding",
+      "name": "Fehler Temperatur T8 (Raum extern)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 73,
+      "function": "holding",
+      "name": "Fehler Ventilatoren Kommunikation",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "holding",
+      "name": "Fehler Niedrige Zulufttemperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 75,
+      "function": "holding",
+      "name": "Fehler Filtermeldung",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 76,
+      "function": "holding",
+      "name": "Fehler Niedrige Vorheizregister Temperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "Fehler NHR Frostschutz",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 81,
+      "function": "holding",
+      "name": "Betriebsstunden Stufe 2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "h",
+      "access": "r"
+    },
+    {
+      "address": 82,
+      "function": "holding",
+      "name": "Betriebsstunden Stufe 3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "h",
+      "access": "r"
+    },
+    {
+      "address": 83,
+      "function": "holding",
+      "name": "Abluft-Balance Lüftungsstufe 1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "m³/h",
+      "access": "rw"
+    },
+    {
+      "address": 83,
+      "function": "holding",
+      "name": "Betriebsstunden Grundlüftung",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "h",
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "Abluft-Balance Lüftungsstufe 2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "m³/h",
+      "access": "rw"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "Betriebsstunden Gesamt",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "h",
+      "access": "r"
+    },
+    {
+      "address": 85,
+      "function": "holding",
+      "name": "Abluft-Balance Lüftungsstufe 3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "m³/h",
+      "access": "rw"
+    },
+    {
+      "address": 85,
+      "function": "holding",
+      "name": "Betriebsstunden Heizregister",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "h",
+      "access": "r"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "Abluft-Balance Grundlüftung",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "m³/h",
+      "access": "rw"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "Betriebsstunden Bypass",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "h",
+      "access": "r"
+    },
+    {
+      "address": 87,
+      "function": "holding",
+      "name": "Betriebsstunden Stufe 1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "h",
+      "access": "r"
+    },
+    {
+      "address": 88,
+      "function": "holding",
+      "name": "Fehler Modbus Sensoren",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 89,
+      "function": "holding",
+      "name": "Freigabe Heizen",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Deaktivieren",
+        "1": "Aktivieren"
+      }
+    },
+    {
+      "address": 89,
+      "function": "holding",
+      "name": "CO2 Sensor 1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "ppm",
+      "access": "r"
+    },
+    {
+      "address": 90,
+      "function": "holding",
+      "name": "Freigabe Kühlen",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Deaktivieren",
+        "1": "Aktivieren"
+      }
+    },
+    {
+      "address": 90,
+      "function": "holding",
+      "name": "CO2 Sensor 2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "ppm",
+      "access": "r"
+    },
+    {
+      "address": 91,
+      "function": "holding",
+      "name": "Feuchtesensor 1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 92,
+      "function": "holding",
+      "name": "Feuchtesensor 2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 95,
+      "function": "holding",
+      "name": "Kanaldruck Zuluft Stufe 1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Pa",
+      "access": "rw"
+    },
+    {
+      "address": 96,
+      "function": "holding",
+      "name": "Kanaldruck Zuluft Stufe 2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Pa",
+      "access": "rw"
+    },
+    {
+      "address": 97,
+      "function": "holding",
+      "name": "Kanaldruck Zuluft Stufe 3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Pa",
+      "access": "rw"
+    },
+    {
+      "address": 97,
+      "function": "holding",
+      "name": "CO2 Modbus Sensor 2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "ppm",
+      "access": "r"
+    },
+    {
+      "address": 98,
+      "function": "holding",
+      "name": "Kanaldruck Zuluft Grundlüftung",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Pa",
+      "access": "rw"
+    },
+    {
+      "address": 98,
+      "function": "holding",
+      "name": "Luftfeuchte Modbus Sensor 2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 99,
+      "function": "holding",
+      "name": "Kanaldruck Abluft Stufe 1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Pa",
+      "access": "rw"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "Kanaldruck Abluft Stufe 2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Pa",
+      "access": "rw"
+    },
+    {
+      "address": 101,
+      "function": "holding",
+      "name": "Kanaldruck Abluft Stufe 3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Pa",
+      "access": "rw"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "Kanaldruck Abluft Grundlüftung",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Pa",
+      "access": "rw"
+    },
+    {
+      "address": 103,
+      "function": "holding",
+      "name": "Zeitprogramm Lüftungsstufen",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Inaktiv",
+        "1": "Aktiv"
+      }
+    },
+    {
+      "address": 103,
+      "function": "holding",
+      "name": "L7/Ai4 Abluft externer Sensor",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01221,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "Zeitprogramm Temperaturregelung",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw",
+      "enum": {
+        "0": "Inaktiv",
+        "1": "Aktiv"
+      }
+    },
+    {
+      "address": 105,
+      "function": "holding",
+      "name": "Firmware Version TouchDisplay",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "",
+      "access": "r"
+    },
+    {
+      "address": 108,
+      "function": "holding",
+      "name": "Extern Frostschutz",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 118,
+      "function": "holding",
+      "name": "Zeitprogramm Raumtemperatur Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 119,
+      "function": "holding",
+      "name": "Zeitprogramm Lüftungsstufe",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-gateway",
+    "ref": "20de1794f20f946fa9d9e81effeee6d47258c3a7",
+    "needsReview": false
+  }
+}

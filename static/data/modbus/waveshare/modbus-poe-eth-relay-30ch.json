@@ -1,0 +1,270 @@
+{
+  "slug": "waveshare-modbus-poe-eth-relay-30ch",
+  "vendor": "Waveshare",
+  "vendorSlug": "waveshare",
+  "model": "Modbus POE ETH Relay 30CH",
+  "modelSlug": "modbus-poe-eth-relay-30ch",
+  "name": "Waveshare Modbus POE ETH Relay 30CH",
+  "equipmentType": "gateway",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 0,
+      "function": "coil",
+      "name": "Relay 1",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 1,
+      "function": "coil",
+      "name": "Relay 2",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 2,
+      "function": "coil",
+      "name": "Relay 3",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 3,
+      "function": "coil",
+      "name": "Relay 4",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 4,
+      "function": "coil",
+      "name": "Relay 5",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 5,
+      "function": "coil",
+      "name": "Relay 6",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 6,
+      "function": "coil",
+      "name": "Relay 7",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 7,
+      "function": "coil",
+      "name": "Relay 8",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 8,
+      "function": "coil",
+      "name": "Relay 9",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 9,
+      "function": "coil",
+      "name": "Relay 10",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 10,
+      "function": "coil",
+      "name": "Relay 11",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 11,
+      "function": "coil",
+      "name": "Relay 12",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 12,
+      "function": "coil",
+      "name": "Relay 13",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 13,
+      "function": "coil",
+      "name": "Relay 14",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 14,
+      "function": "coil",
+      "name": "Relay 15",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 15,
+      "function": "coil",
+      "name": "Relay 16",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 16,
+      "function": "coil",
+      "name": "Relay 17",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 17,
+      "function": "coil",
+      "name": "Relay 18",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 18,
+      "function": "coil",
+      "name": "Relay 19",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 19,
+      "function": "coil",
+      "name": "Relay 20",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 20,
+      "function": "coil",
+      "name": "Relay 21",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 21,
+      "function": "coil",
+      "name": "Relay 22",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 22,
+      "function": "coil",
+      "name": "Relay 23",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 23,
+      "function": "coil",
+      "name": "Relay 24",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 24,
+      "function": "coil",
+      "name": "Relay 25",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 25,
+      "function": "coil",
+      "name": "Relay 26",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 26,
+      "function": "coil",
+      "name": "Relay 27",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 27,
+      "function": "coil",
+      "name": "Relay 28",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 28,
+      "function": "coil",
+      "name": "Relay 29",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 29,
+      "function": "coil",
+      "name": "Relay 30",
+      "dataType": "bool",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 32768,
+      "function": "holding",
+      "name": "Software Version",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.01,
+      "access": "rw"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-gateway",
+    "ref": "20de1794f20f946fa9d9e81effeee6d47258c3a7",
+    "needsReview": false
+  }
+}

@@ -1,0 +1,425 @@
+{
+  "slug": "ge-epm-5300",
+  "vendor": "ge",
+  "vendorSlug": "ge",
+  "model": "epm-5300",
+  "modelSlug": "epm-5300",
+  "name": "ge epm-5300",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 278,
+      "function": "holding",
+      "name": "Volt-an,-Instant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 279,
+      "function": "holding",
+      "name": "Volt-bn,-Instant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 280,
+      "function": "holding",
+      "name": "Volt-cn,-Instant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 281,
+      "function": "holding",
+      "name": "Volt-ab,-Instant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 282,
+      "function": "holding",
+      "name": "Volt-bc,-Instant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 283,
+      "function": "holding",
+      "name": "Volt-ca,-Instant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 284,
+      "function": "holding",
+      "name": "Amp-A,-Instant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 285,
+      "function": "holding",
+      "name": "Amp-B,-Instant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 286,
+      "function": "holding",
+      "name": "Amp-C,-Instant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 287,
+      "function": "holding",
+      "name": "Amp-N,-Instant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 288,
+      "function": "holding",
+      "name": "Watt,-Instant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 289,
+      "function": "holding",
+      "name": "Var,-Instant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 290,
+      "function": "holding",
+      "name": "Va,-Instant",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 317,
+      "function": "holding",
+      "name": "Volt-an,-Average",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 318,
+      "function": "holding",
+      "name": "Volt-bn,-Average",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 319,
+      "function": "holding",
+      "name": "Volt-cn,-Average",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 320,
+      "function": "holding",
+      "name": "Volt-ab,-Average",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 321,
+      "function": "holding",
+      "name": "Volt-bc,-Average",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 322,
+      "function": "holding",
+      "name": "Volt-ca,-Average",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 323,
+      "function": "holding",
+      "name": "Amp-A,-Average",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 324,
+      "function": "holding",
+      "name": "Amp-B,-Average",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 325,
+      "function": "holding",
+      "name": "Amp-C,-Average",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 326,
+      "function": "holding",
+      "name": "Amp-N,-Average",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 327,
+      "function": "holding",
+      "name": "Watt,-Average",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 328,
+      "function": "holding",
+      "name": "Var,-Average",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 329,
+      "function": "holding",
+      "name": "Va,-Average",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 356,
+      "function": "holding",
+      "name": "Volt-an,-Max",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 357,
+      "function": "holding",
+      "name": "Volt-bn,-Max",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 358,
+      "function": "holding",
+      "name": "Volt-cn,-Max",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 359,
+      "function": "holding",
+      "name": "Volt-ab,-Max",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 360,
+      "function": "holding",
+      "name": "Volt-bc,-Max",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 361,
+      "function": "holding",
+      "name": "Volt-ca,-Max",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 362,
+      "function": "holding",
+      "name": "Amp-A,-Max",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 363,
+      "function": "holding",
+      "name": "Amp-B,-Max",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 364,
+      "function": "holding",
+      "name": "Amp-C,-Max",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 365,
+      "function": "holding",
+      "name": "Amp-N,-Max",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 366,
+      "function": "holding",
+      "name": "Watt,-Max",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 367,
+      "function": "holding",
+      "name": "Var,-Max",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 395,
+      "function": "holding",
+      "name": "Volt-an,-Min",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 396,
+      "function": "holding",
+      "name": "Volt-bn,-Min",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 397,
+      "function": "holding",
+      "name": "Volt-cn,-Min",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 398,
+      "function": "holding",
+      "name": "Volt-ab,-Min",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 399,
+      "function": "holding",
+      "name": "Volt-bc,-Min",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 400,
+      "function": "holding",
+      "name": "Volt-ca,-Min",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 401,
+      "function": "holding",
+      "name": "Amp-A,-Min",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 402,
+      "function": "holding",
+      "name": "Amp-B,-Min",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 403,
+      "function": "holding",
+      "name": "Amp-C,-Min",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 404,
+      "function": "holding",
+      "name": "Amp-N,-Min",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 405,
+      "function": "holding",
+      "name": "Watt,-Min",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 406,
+      "function": "holding",
+      "name": "Var,-Min",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/ge-epm-5300.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont"
+    ]
+  }
+}

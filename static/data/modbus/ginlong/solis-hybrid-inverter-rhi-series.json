@@ -1,0 +1,167 @@
+{
+  "slug": "ginlong-solis-hybrid-inverter-rhi-series",
+  "vendor": "Ginlong",
+  "vendorSlug": "ginlong",
+  "model": "Solis Hybrid Inverter (RHI series)",
+  "modelSlug": "solis-hybrid-inverter-rhi-series",
+  "name": "Ginlong Solis Hybrid Inverter (RHI series)",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 33029,
+      "function": "input",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Total energy generation"
+    },
+    {
+      "address": 33057,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Total DC output power (PV Power)"
+    },
+    {
+      "address": 33139,
+      "function": "input",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r",
+      "notes": "Battery capacity SOC"
+    },
+    {
+      "address": 33149,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Battery power"
+    },
+    {
+      "address": 33165,
+      "function": "input",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Battery total discharge energy"
+    },
+    {
+      "address": 33252,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Meter ac current A"
+    },
+    {
+      "address": 33254,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Meter ac current B"
+    },
+    {
+      "address": 33256,
+      "function": "input",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Meter ac current C"
+    },
+    {
+      "address": 33257,
+      "function": "input",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Meter active power A"
+    },
+    {
+      "address": 33259,
+      "function": "input",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Meter active power B"
+    },
+    {
+      "address": 33261,
+      "function": "input",
+      "name": "powers",
+      "label": "Puissance par phase",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Meter active power C"
+    },
+    {
+      "address": 33263,
+      "function": "input",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "W",
+      "access": "r",
+      "notes": "Meter total active power"
+    },
+    {
+      "address": 33283,
+      "function": "input",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Meter total active energy from grid"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

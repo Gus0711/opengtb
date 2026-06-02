@@ -1,0 +1,468 @@
+{
+  "slug": "kostal-kostal-smart-energy-meter",
+  "vendor": "kostal",
+  "vendorSlug": "kostal",
+  "model": "kostal-smart-energy-meter",
+  "modelSlug": "kostal-smart-energy-meter",
+  "name": "kostal kostal-smart-energy-meter",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 40069,
+      "function": "holding",
+      "name": "Total-AC-Current",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40070,
+      "function": "holding",
+      "name": "Phase-A-Current",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40071,
+      "function": "holding",
+      "name": "Phase-B-Current",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40072,
+      "function": "holding",
+      "name": "Phase-C-Current",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 40073,
+      "function": "holding",
+      "name": "Current-scale-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40074,
+      "function": "holding",
+      "name": "Line-to-Neutral-AC-Voltage-(average-of-active-phases)",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40075,
+      "function": "holding",
+      "name": "Phase-Voltage-AN",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40076,
+      "function": "holding",
+      "name": "Phase-Voltage-BN",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40077,
+      "function": "holding",
+      "name": "Phase-Voltage-CN",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40078,
+      "function": "holding",
+      "name": "Line-to-Line-AC-Voltage-(average-of-active-phases)",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40079,
+      "function": "holding",
+      "name": "PHVPHAB",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40080,
+      "function": "holding",
+      "name": "PHVPHBC",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40081,
+      "function": "holding",
+      "name": "PHVPHCA",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 40082,
+      "function": "holding",
+      "name": "Voltage-scale-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40083,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 40084,
+      "function": "holding",
+      "name": "Frequency-scale-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40085,
+      "function": "holding",
+      "name": "Total-Real-Power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40086,
+      "function": "holding",
+      "name": "WPHA",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40087,
+      "function": "holding",
+      "name": "WPHB",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40088,
+      "function": "holding",
+      "name": "WPHC",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 40089,
+      "function": "holding",
+      "name": "Real-Power-scale-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40090,
+      "function": "holding",
+      "name": "AC-Apparent-Power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40091,
+      "function": "holding",
+      "name": "VAPHA",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40092,
+      "function": "holding",
+      "name": "VAPHB",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40093,
+      "function": "holding",
+      "name": "VAPHC",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 40094,
+      "function": "holding",
+      "name": "Apparent-Power-scale-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40095,
+      "function": "holding",
+      "name": "Reactive-Power",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 40096,
+      "function": "holding",
+      "name": "VARPHA",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 40097,
+      "function": "holding",
+      "name": "VARPHB",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 40098,
+      "function": "holding",
+      "name": "VARPHC",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "var",
+      "access": "r"
+    },
+    {
+      "address": 40099,
+      "function": "holding",
+      "name": "Reactive-Power-scale-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40100,
+      "function": "holding",
+      "name": "Power-Factor",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Pct",
+      "access": "r"
+    },
+    {
+      "address": 40101,
+      "function": "holding",
+      "name": "PFPHA",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Pct",
+      "access": "r"
+    },
+    {
+      "address": 40102,
+      "function": "holding",
+      "name": "PFPHB",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Pct",
+      "access": "r"
+    },
+    {
+      "address": 40103,
+      "function": "holding",
+      "name": "PFPHC",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "Pct",
+      "access": "r"
+    },
+    {
+      "address": 40104,
+      "function": "holding",
+      "name": "Power-Factor-scale-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40105,
+      "function": "holding",
+      "name": "Total-Real-Energy-Exported",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40107,
+      "function": "holding",
+      "name": "TOTWHEXPPHA",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40109,
+      "function": "holding",
+      "name": "TOTWHEXPPHB",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40111,
+      "function": "holding",
+      "name": "TOTWHEXPPHC",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40113,
+      "function": "holding",
+      "name": "Total-Real-Energy-Imported",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40115,
+      "function": "holding",
+      "name": "TOTWHIMPPHA",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40117,
+      "function": "holding",
+      "name": "TOTWHIMPPHB",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40119,
+      "function": "holding",
+      "name": "TOTWHIMPPHC",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 40121,
+      "function": "holding",
+      "name": "Real-Energy-scale-factor",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 40122,
+      "function": "holding",
+      "name": "Total-Apparent-Energy-Exported",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 40124,
+      "function": "holding",
+      "name": "TOTVAHEXPPHA",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 40126,
+      "function": "holding",
+      "name": "TOTVAHEXPPHB",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 40128,
+      "function": "holding",
+      "name": "TOTVAHEXPPHC",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    },
+    {
+      "address": 40130,
+      "function": "holding",
+      "name": "Total-Apparent-Energy-Imported",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VAh",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/kostal-kostal-smart-energy-meter.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

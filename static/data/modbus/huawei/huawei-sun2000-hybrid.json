@@ -1,0 +1,132 @@
+{
+  "slug": "huawei-huawei-sun2000-hybrid",
+  "vendor": "Huawei",
+  "vendorSlug": "huawei",
+  "model": "huawei-sun2000-hybrid",
+  "modelSlug": "huawei-sun2000-hybrid",
+  "name": "Huawei huawei-sun2000-hybrid",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 32064,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "Input power DC"
+    },
+    {
+      "address": 32106,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Accumulated energy yield"
+    },
+    {
+      "address": 37107,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Huawei phase A grid current"
+    },
+    {
+      "address": 37109,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Huawei phase B grid current"
+    },
+    {
+      "address": 37111,
+      "function": "holding",
+      "name": "currents",
+      "label": "Courant",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r",
+      "notes": "Huawei phase C grid current"
+    },
+    {
+      "address": 37113,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r",
+      "notes": "Grid import export power"
+    },
+    {
+      "address": 37121,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "Active energy import from the grid"
+    },
+    {
+      "address": 37738,
+      "function": "holding",
+      "name": "soc",
+      "label": "État de charge",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 37743,
+      "function": "holding",
+      "name": "power",
+      "label": "Puissance",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 37755,
+      "function": "holding",
+      "name": "energy",
+      "label": "Énergie cumulée",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kWh",
+      "access": "r",
+      "notes": "[Energy storage unit 2] Total discharge"
+    }
+  ],
+  "upstream": {
+    "source": "evcc",
+    "ref": "20afb737ce62baa6271857abb33f0299a93ad4f2",
+    "needsReview": true,
+    "reviewReasons": [
+      "Tables Modbus extraites du template evcc — registres limités à ceux exposés en lecture par evcc, la doc constructeur peut en lister d'autres."
+    ]
+  }
+}

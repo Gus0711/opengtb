@@ -1,0 +1,475 @@
+{
+  "slug": "socomec-netys-pr-netys-rt-itys",
+  "vendor": "socomec",
+  "vendorSlug": "socomec",
+  "model": "netys-pr-netys-rt-itys",
+  "modelSlug": "netys-pr-netys-rt-itys",
+  "name": "socomec netys-pr-netys-rt-itys",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 96,
+      "function": "holding",
+      "name": "Broadcast,-load-phase-1-(M00)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 99,
+      "function": "holding",
+      "name": "Broadcast,-total-load-(M03)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "Broadcast,-battery-capacity-(M04)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "Broadcast,-auxiliary-mains-star-voltage-v1-(M06)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 105,
+      "function": "holding",
+      "name": "Broadcast,-output-star-voltage-v1-(M09)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 111,
+      "function": "holding",
+      "name": "Broadcast,-output-current-phase-l1-(M15)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 114,
+      "function": "holding",
+      "name": "Broadcast,-auxiliary-frequency-(M18)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 115,
+      "function": "holding",
+      "name": "Broadcast,-output-frequency-(M19)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 116,
+      "function": "holding",
+      "name": "Broadcast,-positive-battery-voltage-(M20)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 118,
+      "function": "holding",
+      "name": "Broadcast,-internal-UPS-temperature-(M22)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "DC",
+      "access": "r"
+    },
+    {
+      "address": 119,
+      "function": "holding",
+      "name": "Broadcast,-remaining-back-up-time-(M23)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Minutes",
+      "access": "r"
+    },
+    {
+      "address": 129,
+      "function": "holding",
+      "name": "Broadcast,-input-mains-star-voltage-v1-(M33)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4192,
+      "function": "holding",
+      "name": "Concentrator,-load-phase-1-(M00)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 4195,
+      "function": "holding",
+      "name": "Concentrator,-total-load-(M03)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 4196,
+      "function": "holding",
+      "name": "Concentrator,-battery-capacity-(M04)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 4198,
+      "function": "holding",
+      "name": "Concentrator,-auxiliary-mains-star-voltage-v1-(M06)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 4201,
+      "function": "holding",
+      "name": "Concentrator,-output-star-voltage-v1-(M09)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4207,
+      "function": "holding",
+      "name": "Concentrator,-output-current-phase-l1-(M15)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 4210,
+      "function": "holding",
+      "name": "Concentrator,-auxiliary-frequency-(M18)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 4211,
+      "function": "holding",
+      "name": "Concentrator,-output-frequency-(M19)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 4212,
+      "function": "holding",
+      "name": "Concentrator,-positive-battery-voltage-(M20)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4214,
+      "function": "holding",
+      "name": "Concentrator,-internal-UPS-temperature-(M22)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "DC",
+      "access": "r"
+    },
+    {
+      "address": 4215,
+      "function": "holding",
+      "name": "Concentrator,-remaining-back-up-time-(M23)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Minutes",
+      "access": "r"
+    },
+    {
+      "address": 4225,
+      "function": "holding",
+      "name": "Concentrator,-input-mains-star-voltage-v1-(M33)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 8288,
+      "function": "holding",
+      "name": "Module-1,-load-phase-1-(M00)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 8291,
+      "function": "holding",
+      "name": "Module-1,-total-load-(M03)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 8292,
+      "function": "holding",
+      "name": "Module-1,-battery-capacity-(M04)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 8294,
+      "function": "holding",
+      "name": "Module-1,-auxiliary-mains-star-voltage-v1-(M06)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 8297,
+      "function": "holding",
+      "name": "Module-1,-output-star-voltage-v1-(M09)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 8303,
+      "function": "holding",
+      "name": "Module-1,-output-current-phase-l1-(M15)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 8306,
+      "function": "holding",
+      "name": "Module-1,-auxiliary-frequency-(M18)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 8307,
+      "function": "holding",
+      "name": "Module-1,-output-frequency-(M19)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 8308,
+      "function": "holding",
+      "name": "Module-1,-positive-battery-voltage-(M20)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 8310,
+      "function": "holding",
+      "name": "Module-1,-internal-UPS-temperature-(M22)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "DC",
+      "access": "r"
+    },
+    {
+      "address": 8311,
+      "function": "holding",
+      "name": "Module-1,-remaining-back-up-time-(M23)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Minutes",
+      "access": "r"
+    },
+    {
+      "address": 8321,
+      "function": "holding",
+      "name": "Module-1,-input-mains-star-voltage-v1-(M33)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 12384,
+      "function": "holding",
+      "name": "Module-2,-load-phase-1-(M00)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 12387,
+      "function": "holding",
+      "name": "Module-2,-total-load-(M03)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 12388,
+      "function": "holding",
+      "name": "Module-2,-battery-capacity-(M04)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 12390,
+      "function": "holding",
+      "name": "Module-2,-auxiliary-mains-star-voltage-v1-(M06)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 12393,
+      "function": "holding",
+      "name": "Module-2,-output-star-voltage-v1-(M09)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 12399,
+      "function": "holding",
+      "name": "Module-2,-output-current-phase-l1-(M15)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 12402,
+      "function": "holding",
+      "name": "Module-2,-auxiliary-frequency-(M18)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 12403,
+      "function": "holding",
+      "name": "Module-2,-output-frequency-(M19)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 12404,
+      "function": "holding",
+      "name": "Module-2,-positive-battery-voltage-(M20)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 12406,
+      "function": "holding",
+      "name": "Module-2,-internal-UPS-temperature-(M22)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "DC",
+      "access": "r"
+    },
+    {
+      "address": 12407,
+      "function": "holding",
+      "name": "Module-2,-remaining-back-up-time-(M23)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Minutes",
+      "access": "r"
+    },
+    {
+      "address": 12417,
+      "function": "holding",
+      "name": "Module-2,-input-mains-star-voltage-v1-(M33)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 16480,
+      "function": "holding",
+      "name": "Module-3,-load-phase-1-(M00)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 16483,
+      "function": "holding",
+      "name": "Module-3,-total-load-(M03)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/socomec-netys-pr-netys-rt-itys.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont"
+    ]
+  }
+}

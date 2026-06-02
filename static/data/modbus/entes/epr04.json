@@ -1,0 +1,471 @@
+{
+  "slug": "entes-epr04",
+  "vendor": "entes",
+  "vendorSlug": "entes",
+  "model": "epr04",
+  "modelSlug": "epr04",
+  "name": "entes epr04",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "L1-phase-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "L2-phase-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "L3-phase-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "L1-phase-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "L2-phase-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "L3-phase-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "L1-phase-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "L2-phase-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "L3-phase-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "L1-phase-cos",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 40,
+      "function": "holding",
+      "name": "L2-phase-cos",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "L3-phase-cos",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "Total-import-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "Total-export-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "Total-inductive-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "Total-capacitive-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "Total-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 54,
+      "function": "holding",
+      "name": "Average-inductive-cos",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Average-capacitive-cos",
+      "dataType": "int32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 58,
+      "function": "holding",
+      "name": "Frequency",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 88,
+      "function": "holding",
+      "name": "Import-active-energy-1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 92,
+      "function": "holding",
+      "name": "Export-active-energy-1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 96,
+      "function": "holding",
+      "name": "Inductive-reactive-energy-1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "VArh",
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "Capacitive-reactive-energy-1",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "VArh",
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "Import-active-energy-2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 108,
+      "function": "holding",
+      "name": "Export-active-energy-2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "Wh",
+      "access": "r"
+    },
+    {
+      "address": 112,
+      "function": "holding",
+      "name": "Inductive-reactive-energy-2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "VArh",
+      "access": "r"
+    },
+    {
+      "address": 116,
+      "function": "holding",
+      "name": "Capacitive-reactive-energy-2",
+      "dataType": "int64",
+      "size": 4,
+      "unit": "VArh",
+      "access": "r"
+    },
+    {
+      "address": 136,
+      "function": "holding",
+      "name": "L1-phase-min.-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 138,
+      "function": "holding",
+      "name": "L2-phase-min.-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 140,
+      "function": "holding",
+      "name": "L3-phase-min.-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 142,
+      "function": "holding",
+      "name": "L1-phase-min.-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 144,
+      "function": "holding",
+      "name": "L2-phase-min.-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 146,
+      "function": "holding",
+      "name": "L3-phase-min.-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 148,
+      "function": "holding",
+      "name": "L1-phase-min.-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 150,
+      "function": "holding",
+      "name": "L2-phase-min.-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 152,
+      "function": "holding",
+      "name": "L3-phase-min.-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 154,
+      "function": "holding",
+      "name": "Total-min.-import-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 156,
+      "function": "holding",
+      "name": "Total-min.-export-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 158,
+      "function": "holding",
+      "name": "Total-min.-import-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 160,
+      "function": "holding",
+      "name": "Total-min.-export-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 162,
+      "function": "holding",
+      "name": "Total-min.-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 182,
+      "function": "holding",
+      "name": "L1-phase-max.-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 184,
+      "function": "holding",
+      "name": "L2-phase-max.-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 186,
+      "function": "holding",
+      "name": "L3-phase-max.-active-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Watt",
+      "access": "r"
+    },
+    {
+      "address": 188,
+      "function": "holding",
+      "name": "L1-phase-max.-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 190,
+      "function": "holding",
+      "name": "L2-phase-max.-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 192,
+      "function": "holding",
+      "name": "L3-phase-max.-reactive-power",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "Var",
+      "access": "r"
+    },
+    {
+      "address": 194,
+      "function": "holding",
+      "name": "L1-phase-max.-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 196,
+      "function": "holding",
+      "name": "L2-phase-max.-apparent-power",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "VA",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/entes-epr04.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

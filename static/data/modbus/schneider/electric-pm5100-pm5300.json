@@ -1,0 +1,444 @@
+{
+  "slug": "schneider-electric-pm5100-pm5300",
+  "vendor": "schneider",
+  "vendorSlug": "schneider",
+  "model": "electric-pm5100-pm5300",
+  "modelSlug": "electric-pm5100-pm5300",
+  "name": "schneider electric-pm5100-pm5300",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 29,
+      "function": "holding",
+      "name": "Meter-name",
+      "dataType": "string",
+      "size": 40,
+      "access": "r"
+    },
+    {
+      "address": 49,
+      "function": "holding",
+      "name": "Meter-model",
+      "dataType": "string",
+      "size": 40,
+      "access": "r"
+    },
+    {
+      "address": 69,
+      "function": "holding",
+      "name": "Manufacturer",
+      "dataType": "string",
+      "size": 40,
+      "access": "r"
+    },
+    {
+      "address": 89,
+      "function": "holding",
+      "name": "Product-ID-number",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 128,
+      "function": "holding",
+      "name": "Manufacturing-unit-id-(To-be-prefixed-in-serial-number-while-displaying)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 129,
+      "function": "holding",
+      "name": "Serial-number",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1827,
+      "function": "holding",
+      "name": "Number-of-metering-system-restarts",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1828,
+      "function": "holding",
+      "name": "Number-of-control-power-failures",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1833,
+      "function": "holding",
+      "name": "Duration-of-last-control-power-failure",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "seconds",
+      "access": "r"
+    },
+    {
+      "address": 1835,
+      "function": "holding",
+      "name": "Cause-of-last-meter-reset",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1836,
+      "function": "holding",
+      "name": "Year",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "year",
+      "access": "r"
+    },
+    {
+      "address": 1837,
+      "function": "holding",
+      "name": "Month",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "month",
+      "access": "r"
+    },
+    {
+      "address": 1838,
+      "function": "holding",
+      "name": "Day",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "days",
+      "access": "r"
+    },
+    {
+      "address": 1839,
+      "function": "holding",
+      "name": "Hour",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "hours",
+      "access": "r"
+    },
+    {
+      "address": 1840,
+      "function": "holding",
+      "name": "Minute",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "minutes",
+      "access": "r"
+    },
+    {
+      "address": 1841,
+      "function": "holding",
+      "name": "Second",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "seconds",
+      "access": "r"
+    },
+    {
+      "address": 1842,
+      "function": "holding",
+      "name": "Millisecond",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "msec",
+      "access": "r"
+    },
+    {
+      "address": 1843,
+      "function": "holding",
+      "name": "Day-of-week",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1844,
+      "function": "holding",
+      "name": "Year",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1845,
+      "function": "holding",
+      "name": "Month-and-day",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1846,
+      "function": "holding",
+      "name": "Hour-and-minute",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1847,
+      "function": "holding",
+      "name": "Milliseconds",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1879,
+      "function": "holding",
+      "name": "Setup-password",
+      "dataType": "string",
+      "size": 8,
+      "access": "r"
+    },
+    {
+      "address": 1883,
+      "function": "holding",
+      "name": "Energy-reset-password",
+      "dataType": "string",
+      "size": 8,
+      "access": "r"
+    },
+    {
+      "address": 1887,
+      "function": "holding",
+      "name": "Demand-reset-password",
+      "dataType": "string",
+      "size": 8,
+      "access": "r"
+    },
+    {
+      "address": 1891,
+      "function": "holding",
+      "name": "Min/Max-reset-password",
+      "dataType": "string",
+      "size": 8,
+      "access": "r"
+    },
+    {
+      "address": 1920,
+      "function": "holding",
+      "name": "Revenue-security-status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1999,
+      "function": "holding",
+      "name": "Conditional-energy-control-status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2001,
+      "function": "holding",
+      "name": "Active-load-timer",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "seconds",
+      "access": "r"
+    },
+    {
+      "address": 2003,
+      "function": "holding",
+      "name": "Meter-operation-timer",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "seconds",
+      "access": "r"
+    },
+    {
+      "address": 2005,
+      "function": "holding",
+      "name": "Cycle-count",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2007,
+      "function": "holding",
+      "name": "Heartbeat-LED-control",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2013,
+      "function": "holding",
+      "name": "Number-of-phases",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2014,
+      "function": "holding",
+      "name": "Number-of-wires",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2015,
+      "function": "holding",
+      "name": "Power-system-configuration",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2016,
+      "function": "holding",
+      "name": "Nominal-frequency",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 2017,
+      "function": "holding",
+      "name": "Nominal-voltage",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2019,
+      "function": "holding",
+      "name": "Nominal-current",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 2021,
+      "function": "holding",
+      "name": "Nominal-power-factor",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 2023,
+      "function": "holding",
+      "name": "Normal-phase-rotation",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2024,
+      "function": "holding",
+      "name": "Number-VTs",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2025,
+      "function": "holding",
+      "name": "VT-primary",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2027,
+      "function": "holding",
+      "name": "VT-secondary",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2028,
+      "function": "holding",
+      "name": "Number-CTs",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2029,
+      "function": "holding",
+      "name": "CT-primary",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 2030,
+      "function": "holding",
+      "name": "CT-secondary",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 2033,
+      "function": "holding",
+      "name": "CT-location-for-1-or-2-CT-metering",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2034,
+      "function": "holding",
+      "name": "VT-location-for-1-or-2-VT-metering",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2035,
+      "function": "holding",
+      "name": "VT-connection-type",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2047,
+      "function": "holding",
+      "name": "Peak-current-demand-over-last-year",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/schneider-electric-pm5100-pm5300.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

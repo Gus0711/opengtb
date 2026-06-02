@@ -1,0 +1,308 @@
+{
+  "slug": "phoenix-contact-eem-em3xx-eem-dm3xx-holding-register-gerat-und-konfig",
+  "vendor": "Phoenix Contact EEM-EM3xx EEM-DM3xx",
+  "vendorSlug": "phoenix-contact-eem-em3xx-eem-dm3xx",
+  "model": "Holding Register - Gerät und Konfig",
+  "modelSlug": "holding-register-gerat-und-konfig",
+  "name": "Phoenix Contact EEM-EM3xx EEM-DM3xx Holding Register - Gerät und Konfig",
+  "equipmentType": "compteur-elec",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1280,
+      "function": "coil",
+      "name": "Seriennummer",
+      "label": "R/o",
+      "dataType": "string",
+      "size": 6,
+      "access": "r"
+    },
+    {
+      "address": 1290,
+      "function": "coil",
+      "name": "Firmware version rEL1",
+      "label": "R/o",
+      "dataType": "uint32",
+      "size": 2,
+      "scale": 0,
+      "access": "r"
+    },
+    {
+      "address": 1292,
+      "function": "coil",
+      "name": "Hardwareversion",
+      "label": "R/o",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1296,
+      "function": "coil",
+      "name": "Aktiver Tarifzähler",
+      "label": "R/o 1 = Tarif 1 aktiv, 2 = Tarif 2 aktiv",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1300,
+      "function": "coil",
+      "name": "Fehlercode",
+      "label": "R/o 0 = kein Fehler, 1 = Phasenfolgefehler, 2 = Speicherfehler, 4 = Echtzeituhr verloren (nur Ethernet)",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1302,
+      "function": "coil",
+      "name": "Primärstrom",
+      "label": "R/o",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1306,
+      "function": "coil",
+      "name": "Sekundärnennstrom",
+      "label": "R/o",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 1308,
+      "function": "coil",
+      "name": "Netzart",
+      "label": "R/o 5: 3 Phasen, 4 Leiter, 3 Ströme; 3: 3 Phasen, 3 Leiter, 3 Ströme; 2: 3 Phasen, 3 Leiter, 2 Ströme",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1310,
+      "function": "coil",
+      "name": "Modbus-Adresse",
+      "label": "R/o",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1314,
+      "function": "coil",
+      "name": "Modbus/RTU Baud-Rate",
+      "label": "R/o 0: 2400 Bit/s 1: 4800 Bit/s 2: 9600 Bit/s 3: 19200 Bit/s 4: 38400 Bit/s 5: 57600 Bit/s 8: 300 Bit/s 9: 1200 Bit/s",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 1318,
+      "function": "coil",
+      "name": "Konfiguration der Teilenergiezähler",
+      "label": "R/W siehe Handbuch (Seite 124) für konfiguration",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 1340,
+      "function": "coil",
+      "name": "Mittelwertbildung",
+      "label": "R/W Intervalldauer und Intervallar siehe Handbuch (Seite 117) für konfiguration",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hex",
+      "access": "r"
+    },
+    {
+      "address": 1341,
+      "function": "coil",
+      "name": "Sync Broadcastbefehl",
+      "label": "W/o Intervalldauer wird synchronisiert durch Schreiben von 0x0001",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hex",
+      "access": "r"
+    },
+    {
+      "address": 57616,
+      "function": "holding",
+      "name": "IP-A",
+      "label": "R/W Ethernet IP-Adresse A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57617,
+      "function": "holding",
+      "name": "IP-B",
+      "label": "R/W Ethernet IP-Adresse A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57618,
+      "function": "holding",
+      "name": "IP-C",
+      "label": "R/W Ethernet IP-Adresse A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57619,
+      "function": "holding",
+      "name": "IP-D",
+      "label": "R/W Ethernet IP-Adresse A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57620,
+      "function": "holding",
+      "name": "GW-A",
+      "label": "R/W Ethernet Gateway-Adresse A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57621,
+      "function": "holding",
+      "name": "GW-B",
+      "label": "R/W Ethernet Gateway-Adresse A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57622,
+      "function": "holding",
+      "name": "GW-C",
+      "label": "R/W Ethernet Gateway-Adresse A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57623,
+      "function": "holding",
+      "name": "GW-D",
+      "label": "R/W Ethernet Gateway-Adresse A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57624,
+      "function": "holding",
+      "name": "SUB-A",
+      "label": "R/W Ethernet Subnetzmaske A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57625,
+      "function": "holding",
+      "name": "SUB-B",
+      "label": "R/W Ethernet Subnetzmaske A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57626,
+      "function": "holding",
+      "name": "SUB-C",
+      "label": "R/W Ethernet Subnetzmaske A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57627,
+      "function": "holding",
+      "name": "SUB-D",
+      "label": "R/W Ethernet Subnetzmaske A.B.C.D",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57628,
+      "function": "holding",
+      "name": "DHCP",
+      "label": "R/W DHCP aktiv: 1, inaktiv: 0",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57631,
+      "function": "holding",
+      "name": "Modbus/RTU Baud-Rate",
+      "label": "R/W 0: 2400 Bit/s 1: 4800 Bit/s 2: 9600 Bit/s 3: 19200 Bit/s 4: 38400 Bit/s 5: 57600 Bit/s 8: 300 Bit/s 9: 1200 Bit/s",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 57633,
+      "function": "holding",
+      "name": "Modbus/RTU Parität",
+      "label": "R/W 0: keine; 1: gerade; 2: ungerade",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57634,
+      "function": "holding",
+      "name": "Modbus/RTU Stoppbit",
+      "label": "R/W 0: 1 Bit; 1: 2 Bits",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57636,
+      "function": "holding",
+      "name": "Modbus/RTU Slave-Adresse",
+      "label": "R/W bei Modbus/TCP fixiert auf 255",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 57856,
+      "function": "holding",
+      "name": "Speichern / Neustart der Konfiguration",
+      "label": "W/o 161: Zwischenspeicherung in den EEPROM; 178: Konfiguration laden aus dem EEPROM",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

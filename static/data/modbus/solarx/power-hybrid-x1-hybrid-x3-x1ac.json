@@ -1,0 +1,465 @@
+{
+  "slug": "solarx-power-hybrid-x1-hybrid-x3-x1ac",
+  "vendor": "solarx",
+  "vendorSlug": "solarx",
+  "model": "power-hybrid-x1-hybrid-x3-x1ac",
+  "modelSlug": "power-hybrid-x1-hybrid-x3-x1ac",
+  "name": "solarx power-hybrid-x1-hybrid-x3-x1ac",
+  "equipmentType": "onduleur-pv",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 1,
+      "function": "holding",
+      "name": "Grid-current-(X1)",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 2,
+      "function": "holding",
+      "name": "Grid-power-(X1)",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 3,
+      "function": "holding",
+      "name": "Pv-voltage1-(Hybrid)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 4,
+      "function": "holding",
+      "name": "Pv-voltage2-(Hybrid)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 5,
+      "function": "holding",
+      "name": "Pv-current1-(Hybrid)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "Pv-current2-(Hybrid)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 7,
+      "function": "holding",
+      "name": "Grid-frequency-(X1)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "Temperature",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 9,
+      "function": "holding",
+      "name": "Run-mode",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "Powerdc1-(Hybrid)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 11,
+      "function": "holding",
+      "name": "Powerdc2-(Hybrid)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "Temper-fault-value",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 13,
+      "function": "holding",
+      "name": "Pv1Volt-fault-value",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "Pv2Volt-fault-value",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 15,
+      "function": "holding",
+      "name": "Gfci-fault-value",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "Grid-volt-fault-value",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 17,
+      "function": "holding",
+      "name": "Grid-freq-fault-value-T",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "Dci-fault-value",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "mA",
+      "access": "r"
+    },
+    {
+      "address": 19,
+      "function": "holding",
+      "name": "Time-count-down",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "ms",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "Bat-voltage-charge1",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 21,
+      "function": "holding",
+      "name": "Bat-current-charge1",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "Batpower-charge1",
+      "dataType": "int16",
+      "size": 1,
+      "unit": "W",
+      "access": "r"
+    },
+    {
+      "address": 23,
+      "function": "holding",
+      "name": "BMS-connect-state",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "Temperature-bat",
+      "dataType": "int16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "Battery-capacity",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "%",
+      "access": "r"
+    },
+    {
+      "address": 29,
+      "function": "holding",
+      "name": "Output-energy-Charge.LSB",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "Output-energy-Charge.MSB",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 31,
+      "function": "holding",
+      "name": "BMS-warning-LSB",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "Output-energy-charge-today",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 33,
+      "function": "holding",
+      "name": "Input-energy-Charge.LSB",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Input-energy-Charge.MSB",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 35,
+      "function": "holding",
+      "name": "Input-energy-charge-today",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "KWh",
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "BMS-charge-max-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 37,
+      "function": "holding",
+      "name": "BMS-discharge-max-current",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "BMS-warning-MSB",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 64,
+      "function": "holding",
+      "name": "Inv-fault-Message.LSB",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 65,
+      "function": "holding",
+      "name": "Inv-fault-Message.MSB",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 67,
+      "function": "holding",
+      "name": "Mgr-fault-message",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "Feedin-power-(meter)",
+      "dataType": "int32",
+      "size": 2,
+      "unit": "w",
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "holding",
+      "name": "Feedin-energy-total-(meter)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kwh",
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "holding",
+      "name": "Consum-energy-total-(meter)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kwh",
+      "access": "r"
+    },
+    {
+      "address": 76,
+      "function": "holding",
+      "name": "EPS-volt-(X1)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 77,
+      "function": "holding",
+      "name": "EPS-current-(X1)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 78,
+      "function": "holding",
+      "name": "EPS-power-(X1)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "VA",
+      "access": "r"
+    },
+    {
+      "address": 79,
+      "function": "holding",
+      "name": "EPS-frequency-(X1)",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "Etoday-togrid",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "kwh",
+      "access": "r"
+    },
+    {
+      "address": 82,
+      "function": "holding",
+      "name": "Etotal-togrid",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "kwh",
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "Lock-state",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "Bus-volt",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 103,
+      "function": "holding",
+      "name": "W-dcv-fault-val",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/solarx-power-hybrid-x1-hybrid-x3-x1ac.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

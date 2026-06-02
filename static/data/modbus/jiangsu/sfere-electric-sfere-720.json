@@ -1,0 +1,472 @@
+{
+  "slug": "jiangsu-sfere-electric-sfere-720",
+  "vendor": "jiangsu",
+  "vendorSlug": "jiangsu",
+  "model": "sfere-electric-sfere-720",
+  "modelSlug": "sfere-electric-sfere-720",
+  "name": "jiangsu sfere-electric-sfere-720",
+  "equipmentType": "autre",
+  "transport": [
+    "rtu"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 6,
+      "function": "holding",
+      "name": "V1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "v",
+      "access": "r"
+    },
+    {
+      "address": 8,
+      "function": "holding",
+      "name": "V2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "v",
+      "access": "r"
+    },
+    {
+      "address": 10,
+      "function": "holding",
+      "name": "V3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "v",
+      "access": "r"
+    },
+    {
+      "address": 12,
+      "function": "holding",
+      "name": "V12",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "v",
+      "access": "r"
+    },
+    {
+      "address": 14,
+      "function": "holding",
+      "name": "V23",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "v",
+      "access": "r"
+    },
+    {
+      "address": 16,
+      "function": "holding",
+      "name": "V31",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "v",
+      "access": "r"
+    },
+    {
+      "address": 18,
+      "function": "holding",
+      "name": "11",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 20,
+      "function": "holding",
+      "name": "12",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 22,
+      "function": "holding",
+      "name": "13",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 24,
+      "function": "holding",
+      "name": "In",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 26,
+      "function": "holding",
+      "name": "P1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 28,
+      "function": "holding",
+      "name": "P2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 30,
+      "function": "holding",
+      "name": "P3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 32,
+      "function": "holding",
+      "name": "P",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 34,
+      "function": "holding",
+      "name": "Q-1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 36,
+      "function": "holding",
+      "name": "Q2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 38,
+      "function": "holding",
+      "name": "Q3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 42,
+      "function": "holding",
+      "name": "S1",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 44,
+      "function": "holding",
+      "name": "S2",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 46,
+      "function": "holding",
+      "name": "S3",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 48,
+      "function": "holding",
+      "name": "S",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 50,
+      "function": "holding",
+      "name": "Pfi",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 52,
+      "function": "holding",
+      "name": "PF2",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 54,
+      "function": "holding",
+      "name": "PF3",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 56,
+      "function": "holding",
+      "name": "Pf",
+      "dataType": "float32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 58,
+      "function": "holding",
+      "name": "F",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "Hz",
+      "access": "r"
+    },
+    {
+      "address": 60,
+      "function": "holding",
+      "name": "Import-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 62,
+      "function": "holding",
+      "name": "Export-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 64,
+      "function": "holding",
+      "name": "Import-reactive-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 66,
+      "function": "holding",
+      "name": "Export-reactive-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 68,
+      "function": "holding",
+      "name": "Apparent-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kVA",
+      "access": "r"
+    },
+    {
+      "address": 70,
+      "function": "holding",
+      "name": "1-quadrant-reactive-energy-eql+",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 72,
+      "function": "holding",
+      "name": "2--quadrant-reactive-energy-eqc",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 74,
+      "function": "holding",
+      "name": "3--quadrant-reactive-energy-eql",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 76,
+      "function": "holding",
+      "name": "4--quadrant-reactive-energy-eqc",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 78,
+      "function": "holding",
+      "name": "Fundamenta-import-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 80,
+      "function": "holding",
+      "name": "Fundamenta-export-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 82,
+      "function": "holding",
+      "name": "Fundamenta-import-reactive-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 84,
+      "function": "holding",
+      "name": "Fundamenta-export-reactive-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 86,
+      "function": "holding",
+      "name": "L1-import-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 88,
+      "function": "holding",
+      "name": "L2-import-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 90,
+      "function": "holding",
+      "name": "L3-import-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 92,
+      "function": "holding",
+      "name": "Li-export-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 94,
+      "function": "holding",
+      "name": "L2-export-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 96,
+      "function": "holding",
+      "name": "L3-export-active-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kW",
+      "access": "r"
+    },
+    {
+      "address": 98,
+      "function": "holding",
+      "name": "Li-import-reactive-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 100,
+      "function": "holding",
+      "name": "L2-import-reactive-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 102,
+      "function": "holding",
+      "name": "L3-import-reactive-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 104,
+      "function": "holding",
+      "name": "L1-export-reactive-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    },
+    {
+      "address": 106,
+      "function": "holding",
+      "name": "L2-export-reactive-energy",
+      "dataType": "float32",
+      "size": 2,
+      "unit": "kvar",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "jibrilsharafi",
+    "ref": "fba9d4691177b0c04b0026f153a0c5ba1d6c6e61",
+    "sourceUrl": "https://www.aggsoft.com/serial-data-logger/tutorials/modbus-data-logging/jiangsu-sfere-electric-sfere-720.htm",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source upstream : tuto tiers, vérifier les registres",
+      "Pas de config RTU/TCP fournie en amont",
+      "Ordre d'octets (word order) non spécifié — défaut AB-CD, vérifier sur datasheet"
+    ]
+  }
+}

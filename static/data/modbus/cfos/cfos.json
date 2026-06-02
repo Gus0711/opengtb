@@ -1,0 +1,453 @@
+{
+  "slug": "cfos-cfos",
+  "vendor": "Cfos",
+  "vendorSlug": "cfos",
+  "model": "Cfos",
+  "modelSlug": "cfos",
+  "name": "Cfos",
+  "equipmentType": "wallbox",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 8000,
+      "function": "holding",
+      "name": "vendor_id",
+      "label": "r Eindeutige Hersteller-Id, 0xcf05",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 8002,
+      "function": "holding",
+      "name": "product_id",
+      "label": "r Produkt-Id, 1",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8003,
+      "function": "holding",
+      "name": "device_id",
+      "label": "r Geräte-Id im Produkt, 0x100",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8004,
+      "function": "holding",
+      "name": "product_version",
+      "label": "r Produktversion, major.minor",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8005,
+      "function": "holding",
+      "name": "product_build",
+      "label": "r Produkt-Build-Nummer",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8006,
+      "function": "holding",
+      "name": "mapping_version",
+      "label": "r major.minor Version dieser Registerzuordnung",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8007,
+      "function": "holding",
+      "name": "padding_1",
+      "label": "r Reserviert",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8008,
+      "function": "holding",
+      "name": "serial_no",
+      "label": "r Seriennummer als Text",
+      "dataType": "string",
+      "size": 8,
+      "access": "r"
+    },
+    {
+      "address": 8016,
+      "function": "holding",
+      "name": "name",
+      "label": "\"r Produktname, \"\"cFos Power Brain\"\"\"",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 8040,
+      "function": "holding",
+      "name": "slave_id",
+      "label": "rw Modbus Slave ID",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8041,
+      "function": "holding",
+      "name": "input",
+      "label": "Reserviert",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8042,
+      "function": "holding",
+      "name": "pulsesperkwh",
+      "label": "Impulse pro kWh für S0-Eingang",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 8044,
+      "function": "holding",
+      "name": "phases",
+      "label": "Bitmaske der simulierten Phasen, Bit 0 = L1, Bit 1 = L2, Bit 2 = L3",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8045,
+      "function": "holding",
+      "name": "voltage_l1",
+      "label": "Nominelle Spannung L1 [V]",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 8046,
+      "function": "holding",
+      "name": "voltage_l2",
+      "label": "Nominelle Spannung L2 [V]",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 8047,
+      "function": "holding",
+      "name": "voltage_l3",
+      "label": "Nominelle Spannung L3 [V]",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 8050,
+      "function": "holding",
+      "name": "pulses",
+      "label": "Absolute Anzahl der Pulse auf dem S0-Eingang",
+      "dataType": "uint16",
+      "size": 4,
+      "access": "r"
+    },
+    {
+      "address": 8054,
+      "function": "holding",
+      "name": "timeperpulse",
+      "label": "Zeit zwischen den letzten zwei Pulsen auf dem S0-Eingang [ms]",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 8056,
+      "function": "holding",
+      "name": "level",
+      "label": "Momentaner Eingangswert auf dem S0-Eingang 0 = Strom fließt, 1 = Strom fließt nicht",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8057,
+      "function": "holding",
+      "name": "meter_flags",
+      "label": "bit 0: 1=has individual phases",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8058,
+      "function": "holding",
+      "name": "energy",
+      "label": "Aktiver Import [Wh]",
+      "dataType": "uint16",
+      "size": 4,
+      "access": "r"
+    },
+    {
+      "address": 8062,
+      "function": "holding",
+      "name": "power",
+      "label": "Aktive Leistung [W]",
+      "dataType": "uint16",
+      "size": 2,
+      "access": "r"
+    },
+    {
+      "address": 8064,
+      "function": "holding",
+      "name": "current_l1",
+      "label": "Momentaner Strom L1 [0.1 A]",
+      "dataType": "uint16",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 8066,
+      "function": "holding",
+      "name": "current_l2",
+      "label": "Momentaner Strom L2 [0.1 A]",
+      "dataType": "uint16",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 8068,
+      "function": "holding",
+      "name": "current_l3",
+      "label": "Momentaner Strom L3 [0.1 A]",
+      "dataType": "uint16",
+      "size": 2,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 8070,
+      "function": "holding",
+      "name": "reset_pulses",
+      "label": "Pulszähler zurücksetzen [1]",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8071,
+      "function": "holding",
+      "name": "reset_energy",
+      "label": "Energie zurücksetzen [1]",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8080,
+      "function": "holding",
+      "name": "def_fixed_current",
+      "label": "rw Standardwert reg_cable_current [0.1 A]",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 8081,
+      "function": "holding",
+      "name": "def_charg_cur_limit",
+      "label": "rw Standardwert Ladestrom-Limit [0.1 A] 6-63",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 8082,
+      "function": "holding",
+      "name": "def_charging_enable",
+      "label": "\"rw Standardwert \"\"Laden möglich\"\" [0/1]\"",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8083,
+      "function": "holding",
+      "name": "fail_safe_duration",
+      "label": "rw Anzahl der Sekunden ohne Lesen/Schreiben, bevor charging_cur_limit und charging_enable wiederhergestellt werden. Default-Wert ist 300 (5 Minuten)",
+      "dataType": "uint32",
+      "size": 2,
+      "unit": "sek",
+      "access": "r"
+    },
+    {
+      "address": 8085,
+      "function": "holding",
+      "name": "fail_safe_current",
+      "label": "rw Strom bei Inaktivität, 0 = Laden deaktivieren",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 8086,
+      "function": "holding",
+      "name": "disconnect_cp",
+      "label": "Schreiben: Anzahl Sekunden der Abschaltung CP, Lesen: Verbleibende Sekunden",
+      "dataType": "uint32",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8087,
+      "function": "holding",
+      "name": "relay_select",
+      "label": "Schreiben: 0=3-Phasenschütz, 1=1-Phasenschütz, bei Wallboxen, die das unterstützen (mindestens controller Rev. F)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8088,
+      "function": "holding",
+      "name": "relay2",
+      "label": "Schreiben: 0=Relais 2 aus, 1=Relais 2 an (nur wenn Relais 1 aus ist), bei Wallboxen, die das unterstützen (mindestens controller Rev. F)",
+      "dataType": "uint32",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8090,
+      "function": "holding",
+      "name": "cable_current",
+      "label": "r PP: Maximaler Kabel-Strom [0.1 A], 0: kein Kabel",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 8091,
+      "function": "holding",
+      "name": "fixed_current",
+      "label": "rw Überschreibe cable_current [0.1 A]",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 8092,
+      "function": "holding",
+      "name": "charge_pilot_state",
+      "label": "r CP: 0 = A (warten), 1 = B (Fahrzeug erkannt), 2 = C (laden), 3 = D (laden mit Kühlung), 4 = E (kein Strom), 5 = F (Fehler)",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8093,
+      "function": "holding",
+      "name": "charging_cur_limit",
+      "label": "rw Ladestrom-Limit [0.1 A] 6-63A, kann wegen modellbedingter Einschränkungen begrenzt sein (z.B. für Power Brain 11kW ist es auf 16A begrenzt)",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 8094,
+      "function": "holding",
+      "name": "charging_enable",
+      "label": "rw Laden möglich [0/1] 0 = ausgeschaltet, 1 = eingeschaltet",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8095,
+      "function": "holding",
+      "name": "charging_current",
+      "label": "r Ladestrom [0.1 A] 6-63",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "A",
+      "access": "r"
+    },
+    {
+      "address": 8096,
+      "function": "holding",
+      "name": "last_rfid",
+      "label": "r Letzte erkannte RFID (hex-string)",
+      "dataType": "string",
+      "size": 16,
+      "access": "r"
+    },
+    {
+      "address": 8111,
+      "function": "holding",
+      "name": "detected_rfids",
+      "label": "r Anzahl der RFID Eingaben",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8112,
+      "function": "holding",
+      "name": "has_meter",
+      "label": "r 1, falls ein Zähler angeheften (dann sind die Register 8058-8068 lesbar), andernfalls 0",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 8120,
+      "function": "holding",
+      "name": "count_restart",
+      "label": "rw Anzahl der Hardware-Neustarts",
+      "dataType": "uint32",
+      "size": 2,
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "iobroker",
+    "ref": "6b2b3355a82a77d7a0f4712f1a16620b2da80e38",
+    "needsReview": true,
+    "reviewReasons": [
+      "Source : ioBroker/modbus-templates. Vérifier l'ordre des octets et le sens du facteur sur datasheet."
+    ]
+  }
+}

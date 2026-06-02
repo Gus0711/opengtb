@@ -1,6 +1,10 @@
 import { SITE_URL } from '$lib/seo/meta';
-import { internalTools } from '$lib/tools/registry';
+import { builtTools } from '$lib/tools/registry';
 import { getAllArticles } from '$lib/articles/loader';
+import modbusManifestJson from '$lib/tools/modbus/manifest.generated.json';
+import type { ModbusManifest } from '$lib/tools/modbus/types';
+
+const modbusManifest = modbusManifestJson as ModbusManifest;
 
 export const prerender = true;
 
@@ -17,7 +21,7 @@ function buildEntries(): UrlEntry[] {
 		{ path: '/outils', changefreq: 'weekly', priority: '0.8' },
 		{ path: '/articles', changefreq: 'weekly', priority: '0.7' }
 	];
-	const toolPages: UrlEntry[] = internalTools().map((t) => ({
+	const toolPages: UrlEntry[] = builtTools().map((t) => ({
 		path: `/outils/${t.slug}`,
 		changefreq: 'monthly',
 		priority: '0.6'
@@ -28,7 +32,12 @@ function buildEntries(): UrlEntry[] {
 		changefreq: 'monthly',
 		priority: '0.5'
 	}));
-	return [...staticPages, ...toolPages, ...articlePages];
+	const modbusDevicePages: UrlEntry[] = modbusManifest.devices.map((d) => ({
+		path: `/outils/modbus/${d.vendorSlug}/${d.modelSlug}`,
+		changefreq: 'monthly',
+		priority: '0.5'
+	}));
+	return [...staticPages, ...toolPages, ...articlePages, ...modbusDevicePages];
 }
 
 function renderEntry({ path, lastmod, changefreq, priority }: UrlEntry): string {

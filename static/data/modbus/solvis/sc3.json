@@ -1,0 +1,584 @@
+{
+  "slug": "solvis-sc3",
+  "vendor": "Solvis",
+  "vendorSlug": "solvis",
+  "model": "SC3",
+  "modelSlug": "sc3",
+  "name": "Solvis SC3 Heating Control",
+  "equipmentType": "chaudiere",
+  "transport": [
+    "rtu",
+    "tcp"
+  ],
+  "defaults": {},
+  "registers": [
+    {
+      "address": 2,
+      "function": "input",
+      "name": "anzahl_heizkreise",
+      "label": "Anzahl Heizkreise",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 2049,
+      "function": "holding",
+      "name": "zirkulation_betriebsart",
+      "label": "Zirkulation Betriebsart",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 2305,
+      "function": "holding",
+      "name": "warmwasser_solltemperatur",
+      "label": "Warmwasser Solltemperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 2322,
+      "function": "holding",
+      "name": "warmwasser_nachheizung_start",
+      "label": "Warmwasser Nachheizung Start",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 2817,
+      "function": "holding",
+      "name": "hkr1_warmwasser_vorrang",
+      "label": "HKR1 Warmwasser Vorrang",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 2818,
+      "function": "holding",
+      "name": "hkr1_betriebsart",
+      "label": "HKR1 Betriebsart",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 2820,
+      "function": "holding",
+      "name": "hkr1_fix_vorlauf_tag_temperatur",
+      "label": "HKR1 Fix Vorlauf Tag-Temperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 2821,
+      "function": "holding",
+      "name": "hkr1_fix_vorlauf_absenk_temperatur",
+      "label": "HKR1 Fix Vorlauf Absenk-Temperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 2822,
+      "function": "holding",
+      "name": "hkr1_heizkurve_tag_temperatur_1",
+      "label": "HKR1 Heizkurve Tag-Temperatur 1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 2823,
+      "function": "holding",
+      "name": "hkr1_heizkurve_tag_temperatur_2",
+      "label": "HKR1 Heizkurve Tag-Temperatur 2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 2824,
+      "function": "holding",
+      "name": "hkr1_heizkurve_tag_temperatur_3",
+      "label": "HKR1 Heizkurve Tag-Temperatur 3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 2825,
+      "function": "holding",
+      "name": "hkr1_heizkurve_absenk_temperatur",
+      "label": "HKR1 Heizkurve Absenk-Temperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 2832,
+      "function": "holding",
+      "name": "hkr1_heizkurve_steilheit",
+      "label": "HKR1 Heizkurve Steilheit",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 3073,
+      "function": "holding",
+      "name": "hkr2_warmwasser_vorrang",
+      "label": "HKR2 Warmwasser Vorrang",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 3074,
+      "function": "holding",
+      "name": "hkr2_betriebsart",
+      "label": "HKR2 Betriebsart",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 3076,
+      "function": "holding",
+      "name": "hkr2_fix_vorlauf_tag_temperatur",
+      "label": "HKR2 Fix Vorlauf Tag-Temperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 3077,
+      "function": "holding",
+      "name": "hkr2_fix_vorlauf_absenk_temperatur",
+      "label": "HKR2 Fix Vorlauf Absenk-Temperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 3078,
+      "function": "holding",
+      "name": "hkr2_heizkurve_tag_temperatur_1",
+      "label": "HKR2 Heizkurve Tag-Temperatur 1",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 3079,
+      "function": "holding",
+      "name": "hkr2_heizkurve_tag_temperatur_2",
+      "label": "HKR2 Heizkurve Tag-Temperatur 2",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 3080,
+      "function": "holding",
+      "name": "hkr2_heizkurve_tag_temperatur_3",
+      "label": "HKR2 Heizkurve Tag-Temperatur 3",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 3081,
+      "function": "holding",
+      "name": "hkr2_heizkurve_absenk_temperatur",
+      "label": "HKR2 Heizkurve Absenk-Temperatur",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "°C",
+      "access": "rw"
+    },
+    {
+      "address": 3088,
+      "function": "holding",
+      "name": "hkr2_heizkurve_steilheit",
+      "label": "HKR2 Heizkurve Steilheit",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "rw"
+    },
+    {
+      "address": 3840,
+      "function": "input",
+      "name": "brennermodulation_modus",
+      "label": "Brennermodulation Modus",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3845,
+      "function": "input",
+      "name": "warmepumpe_ladepumpe_modus",
+      "label": "Wärmepumpe Ladepumpe Modus",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3850,
+      "function": "input",
+      "name": "analog_out_3_status",
+      "label": "Analog Out 3 Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3855,
+      "function": "input",
+      "name": "analog_out_4_status",
+      "label": "Analog Out 4 Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3860,
+      "function": "input",
+      "name": "warmwasserpumpe_modus",
+      "label": "Warmwasserpumpe Modus",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 3865,
+      "function": "input",
+      "name": "analog_out_6_status",
+      "label": "Analog Out 6 Status",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 32770,
+      "function": "input",
+      "name": "version_sc3_raw",
+      "label": "Version SC3 Raw",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 32771,
+      "function": "input",
+      "name": "version_nbg_raw",
+      "label": "Version NBG Raw",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 33024,
+      "function": "input",
+      "name": "temperatur_s1",
+      "label": "Temperatur S1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 33025,
+      "function": "input",
+      "name": "temperatur_s2",
+      "label": "Temperatur S2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 33026,
+      "function": "input",
+      "name": "temperatur_s3",
+      "label": "Temperatur S3",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 33027,
+      "function": "input",
+      "name": "temperatur_s4",
+      "label": "Temperatur S4",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 33028,
+      "function": "input",
+      "name": "temperatur_s5",
+      "label": "Temperatur S5",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 33029,
+      "function": "input",
+      "name": "temperatur_s6",
+      "label": "Temperatur S6",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 33030,
+      "function": "input",
+      "name": "temperatur_s7",
+      "label": "Temperatur S7",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 33031,
+      "function": "input",
+      "name": "temperatur_s8",
+      "label": "Temperatur S8",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 33032,
+      "function": "input",
+      "name": "temperatur_s9",
+      "label": "Temperatur S9",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 33033,
+      "function": "input",
+      "name": "temperatur_s10",
+      "label": "Temperatur S10",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 33034,
+      "function": "input",
+      "name": "temperatur_s11",
+      "label": "Temperatur S11",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 33035,
+      "function": "input",
+      "name": "temperatur_s12",
+      "label": "Temperatur S12",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 33036,
+      "function": "input",
+      "name": "temperatur_s13",
+      "label": "Temperatur S13",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 33037,
+      "function": "input",
+      "name": "temperatur_s14",
+      "label": "Temperatur S14",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 33038,
+      "function": "input",
+      "name": "temperatur_s15",
+      "label": "Temperatur S15",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 33039,
+      "function": "input",
+      "name": "temperatur_s16",
+      "label": "Temperatur S16",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 33040,
+      "function": "input",
+      "name": "durchflussmenge_s17",
+      "label": "Durchflussmenge S17",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "L/min",
+      "access": "r"
+    },
+    {
+      "address": 33041,
+      "function": "input",
+      "name": "durchflussmenge_s18",
+      "label": "Durchflussmenge S18",
+      "dataType": "uint16",
+      "size": 1,
+      "unit": "L/min",
+      "access": "r"
+    },
+    {
+      "address": 33042,
+      "function": "input",
+      "name": "analog_eingang_1",
+      "label": "Analog Eingang 1",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 33043,
+      "function": "input",
+      "name": "analog_eingang_2",
+      "label": "Analog Eingang 2",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 33044,
+      "function": "input",
+      "name": "analog_eingang_3",
+      "label": "Analog Eingang 3",
+      "dataType": "uint16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "V",
+      "access": "r"
+    },
+    {
+      "address": 33045,
+      "function": "input",
+      "name": "digital_eingang_stoerungen",
+      "label": "Digital Eingang Störungen",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 33792,
+      "function": "input",
+      "name": "meldungen_anzahl",
+      "label": "Meldungen Anzahl",
+      "dataType": "uint16",
+      "size": 1,
+      "access": "r"
+    },
+    {
+      "address": 34304,
+      "function": "holding",
+      "name": "raumtemperatur_1",
+      "label": "Raumtemperatur 1",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 34305,
+      "function": "holding",
+      "name": "raumtemperatur_2",
+      "label": "Raumtemperatur 2",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    },
+    {
+      "address": 34306,
+      "function": "holding",
+      "name": "raumtemperatur_3",
+      "label": "Raumtemperatur 3",
+      "dataType": "int16",
+      "size": 1,
+      "scale": 0.1,
+      "unit": "°C",
+      "access": "r"
+    }
+  ],
+  "upstream": {
+    "source": "ha-modbus-manager",
+    "ref": "8932e9a23c65e9f9fe333780bcb3477d81a80b7b",
+    "needsReview": false
+  }
+}
