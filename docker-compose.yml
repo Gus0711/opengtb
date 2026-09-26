@@ -8,12 +8,23 @@ services:
     ports:
       - "7880:7880"
     restart: unless-stopped
+    depends_on:
+      - counter
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:7880/"]
       interval: 30s
       timeout: 5s
       retries: 3
       start_period: 10s
+
+  counter:
+    build:
+      context: ./counter
+    image: opengtb-counter:latest
+    container_name: opengtb-counter
+    volumes:
+      - counter_data:/data
+    restart: unless-stopped
 
   dev:
     image: node:24-alpine
@@ -29,3 +40,4 @@ services:
 
 volumes:
   opengtb_node_modules:
+  counter_data:

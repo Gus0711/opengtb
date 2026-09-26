@@ -1,3 +1,7 @@
+<script lang="ts">
+	import HitCounter from './HitCounter.svelte';
+</script>
+
 <footer class="border-border mt-20 border-t">
 	<div
 		class="text-text-dim mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-6 px-5 py-7 font-mono text-xs md:px-7"
@@ -21,6 +25,7 @@
 			<span class="ml-2">· MIT · hébergé en France</span>
 		</div>
 		<div class="flex flex-wrap items-center gap-5">
+			<HitCounter />
 			<a
 				href="https://github.com"
 				rel="noopener noreferrer"

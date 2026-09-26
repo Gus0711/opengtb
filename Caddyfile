@@ -11,7 +11,7 @@
 	header @immutable Cache-Control "public, max-age=31536000, immutable"
 
 	# Tout le reste (HTML, sitemap.xml, robots.txt, /og/*, etc.) → revalidation systématique
-	@notImmutable not path /_app/immutable/*
+	@notImmutable not path /_app/immutable/* /api/*
 	header @notImmutable Cache-Control "public, max-age=0, must-revalidate"
 
 	# Headers sécurité V1 (sans CSP)
@@ -24,10 +24,16 @@
 	# consolidées (fonts inlinées, OG image, éventuels analytics).
 	# Définir une CSP stricte default-src 'self' à ce moment-là.
 
+	# Compteur de visites (service `counter` du docker-compose)
+	handle /api/* {
+		reverse_proxy counter:8080
+	}
+
 	# adapter-static produit /outils/decode.html, pas /outils/decode/index.html.
 	# Caddy file_server ne tente pas <path>.html par défaut — on l'ajoute via
 	# try_files pour que /outils/decode résolve vers decode.html.
-	try_files {path} {path}.html {path}/index.html
-
-	file_server
+	handle {
+		try_files {path} {path}.html {path}/index.html
+		file_server
+	}
 }
