@@ -89,6 +89,101 @@ export const EQUIPMENT_DEFINITIONS: Record<
 			{ name: 'Défaut variateur', kind: 'DI', signal: 'Contact sec' }
 		]
 	},
+	'heating-circuit': {
+		label: 'Circuit chauffage V3V',
+		defaultName: 'Circuit chauffage 01',
+		points: [
+			{ name: 'Température départ', kind: 'AI', signal: 'PT1000' },
+			{ name: 'Température retour', kind: 'AI', signal: 'PT1000' },
+			{ name: 'Commande vanne 3 voies', kind: 'AO', signal: '0–10 V' },
+			{ name: 'Commande pompe', kind: 'DO', signal: 'Contact relais' },
+			{ name: 'Retour marche pompe', kind: 'DI', signal: 'Contact sec' },
+			{ name: 'Défaut pompe', kind: 'DI', signal: 'Contact sec' }
+		]
+	},
+	ahu: {
+		label: 'CTA double flux',
+		defaultName: 'CTA 01',
+		points: [
+			{ name: 'Température soufflage', kind: 'AI', signal: 'PT1000' },
+			{ name: 'Température reprise', kind: 'AI', signal: 'PT1000' },
+			{ name: 'Température air neuf', kind: 'AI', signal: 'PT1000' },
+			{ name: 'Commande ventilateur soufflage', kind: 'DO', signal: 'Contact relais' },
+			{ name: 'Retour marche ventilateur soufflage', kind: 'DI', signal: 'Contact sec' },
+			{ name: 'Vitesse ventilateur soufflage', kind: 'AO', signal: '0–10 V' },
+			{ name: 'Commande ventilateur reprise', kind: 'DO', signal: 'Contact relais' },
+			{ name: 'Retour marche ventilateur reprise', kind: 'DI', signal: 'Contact sec' },
+			{ name: 'Vitesse ventilateur reprise', kind: 'AO', signal: '0–10 V' },
+			{ name: 'Vanne batterie chaude', kind: 'AO', signal: '0–10 V' },
+			{ name: 'Commande récupérateur', kind: 'AO', signal: '0–10 V' },
+			{ name: 'Encrassement filtre soufflage', kind: 'DI', signal: 'Contact sec' },
+			{ name: 'Encrassement filtre reprise', kind: 'DI', signal: 'Contact sec' },
+			{ name: 'Thermostat antigel', kind: 'DI', signal: 'Contact sec' }
+		]
+	},
+	'heat-pump': {
+		label: 'Pompe à chaleur',
+		defaultName: 'PAC 01',
+		points: [
+			{ name: 'Autorisation marche', kind: 'DO', signal: 'Contact relais' },
+			{ name: 'Consigne température', kind: 'AO', signal: '0–10 V' },
+			{ name: 'Retour marche', kind: 'DI', signal: 'Contact sec' },
+			{ name: 'Défaut général', kind: 'DI', signal: 'Contact sec' },
+			{ name: 'Température départ', kind: 'AI', signal: 'PT1000' },
+			{ name: 'Température retour', kind: 'AI', signal: 'PT1000' }
+		]
+	},
+	chiller: {
+		label: 'Groupe froid',
+		defaultName: 'Groupe froid 01',
+		points: [
+			{ name: 'Autorisation marche', kind: 'DO', signal: 'Contact relais' },
+			{ name: 'Consigne eau glacée', kind: 'AO', signal: '0–10 V' },
+			{ name: 'Retour marche', kind: 'DI', signal: 'Contact sec' },
+			{ name: 'Défaut général', kind: 'DI', signal: 'Contact sec' },
+			{ name: 'Température départ eau glacée', kind: 'AI', signal: 'PT1000' },
+			{ name: 'Température retour eau glacée', kind: 'AI', signal: 'PT1000' }
+		]
+	},
+	'fan-coil': {
+		label: 'Ventilo-convecteur',
+		defaultName: 'Ventilo 01',
+		points: [
+			{ name: 'Température ambiante', kind: 'AI', signal: 'NTC 10k' },
+			{ name: 'Décalage de consigne', kind: 'AI', signal: 'Résistance' },
+			{ name: 'Vanne chaud', kind: 'AO', signal: '0–10 V' },
+			{ name: 'Vanne froid', kind: 'AO', signal: '0–10 V' },
+			{ name: 'Vitesse ventilateur', kind: 'AO', signal: '0–10 V' },
+			{ name: 'Contact fenêtre', kind: 'DI', signal: 'Contact sec' }
+		]
+	},
+	dhw: {
+		label: 'Production ECS',
+		defaultName: 'ECS 01',
+		points: [
+			{ name: 'Température ballon', kind: 'AI', signal: 'PT1000' },
+			{ name: 'Température retour bouclage', kind: 'AI', signal: 'PT1000' },
+			{ name: 'Commande pompe de charge', kind: 'DO', signal: 'Contact relais' },
+			{ name: 'Commande pompe de bouclage', kind: 'DO', signal: 'Contact relais' },
+			{ name: 'Retour marche pompe de bouclage', kind: 'DI', signal: 'Contact sec' },
+			{ name: 'Défaut pompe de bouclage', kind: 'DI', signal: 'Contact sec' }
+		]
+	},
+	'extract-fan': {
+		label: 'Extracteur / VMC',
+		defaultName: 'Extracteur 01',
+		points: [
+			{ name: 'Commande marche', kind: 'DO', signal: 'Contact relais' },
+			{ name: 'Retour marche', kind: 'DI', signal: 'Contact sec' },
+			{ name: 'Défaut', kind: 'DI', signal: 'Contact sec' },
+			{ name: 'Contrôle débit (pressostat)', kind: 'DI', signal: 'Contact sec' }
+		]
+	},
+	'outdoor-sensor': {
+		label: 'Sonde extérieure',
+		defaultName: 'Sonde extérieure',
+		points: [{ name: 'Température extérieure', kind: 'AI', signal: 'NTC 10k' }]
+	},
 	'temperature-sensor': {
 		label: 'Sonde de température',
 		defaultName: 'Sonde départ',
@@ -295,7 +390,8 @@ export interface EquipmentFamily {
  * Chaque EquipmentKind doit apparaître dans exactement une famille (cf. mapper.test.ts).
  */
 export const EQUIPMENT_FAMILIES: readonly EquipmentFamily[] = [
-	{ id: 'wired', label: 'Câblé', hint: 'AI · AO · DI · DO', color: POINT_COLORS.AI, kinds: ['boiler', 'pump', 'temperature-sensor', 'custom'] },
+	{ id: 'hvac', label: 'CVC', hint: 'Modèles métier', color: POINT_COLORS.AO, kinds: ['boiler', 'heating-circuit', 'pump', 'ahu', 'heat-pump', 'chiller', 'fan-coil', 'dhw', 'extract-fan'] },
+	{ id: 'wired', label: 'Câblé', hint: 'AI · AO · DI · DO', color: POINT_COLORS.AI, kinds: ['temperature-sensor', 'outdoor-sensor', 'custom'] },
 	{ id: 'modbus', label: 'Modbus', hint: 'RTU · TCP', color: POINT_COLORS.MODBUS, kinds: ['energy-meter', 'modbus-rtu-device', 'modbus-tcp-device'] },
 	{ id: 'bacnet', label: 'BACnet', hint: 'MS/TP · IP', color: POINT_COLORS.BACNET, kinds: ['bacnet-mstp-device', 'bacnet-ip-device'] },
 	{ id: 'mbus', label: 'M-Bus', hint: 'Comptage', color: POINT_COLORS.MBUS, kinds: ['mbus-device'] },

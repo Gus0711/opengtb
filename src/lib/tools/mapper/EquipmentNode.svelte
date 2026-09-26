@@ -2,6 +2,7 @@
 	import { Handle, Position, useUpdateNodeInternals, type Node, type NodeProps } from '@xyflow/svelte';
 	import Box from '@lucide/svelte/icons/box';
 	import Cable from '@lucide/svelte/icons/cable';
+	import Copy from '@lucide/svelte/icons/copy';
 	import GripVertical from '@lucide/svelte/icons/grip-vertical';
 	import Unlink from '@lucide/svelte/icons/unlink';
 	import Plus from '@lucide/svelte/icons/plus';
@@ -68,6 +69,7 @@
 			<input value={data.item.name} oninput={(event) => data.onRename(data.item.id, event.currentTarget.value)} aria-label="Nom de l’équipement" />
 		</div>
 		<button type="button" onclick={() => { showBulkLink = !showBulkLink; queueMicrotask(() => updateNodeInternals(id)); }} class="icon-button nodrag" class:is-active={showBulkLink} aria-label="Affecter tous les points de {data.item.name}" title="Affecter tous les points"><Cable size={15} /></button>
+		<button type="button" onclick={() => data.onDuplicate(data.item.id)} class="icon-button nodrag is-copy" aria-label="Dupliquer {data.item.name}" title="Dupliquer (raccordé au même automate / bus)"><Copy size={15} /></button>
 		<button type="button" onclick={() => data.onRemove(data.item.id)} class="icon-button nodrag danger" aria-label="Supprimer {data.item.name}" title="Supprimer"><Trash2 size={15} /></button>
 	</header>
 	{#if showBulkLink}
@@ -144,6 +146,7 @@
 	.node-title input { width: 100%; border: 0; outline: 0; background: transparent; color: inherit; font: 600 13px var(--font-sans); }
 	.icon-button { display: inline-flex; width: 28px; height: 28px; align-items: center; justify-content: center; border: 0; background: transparent; color: var(--color-text-dim); }
 	.icon-button:hover, .remove-point:hover { color: var(--color-danger); }
+	.icon-button.is-copy:hover { color: var(--color-primary); }
 	.icon-button.is-active { background: color-mix(in srgb, var(--color-primary) 12%, transparent); color: var(--color-primary); }
 	.bulk-linker { display: flex; min-height: 48px; align-items: center; gap: 10px; border-bottom: 1px solid var(--color-border); background: #0c1216; padding: 8px 10px; }
 	.bulk-linker > span { flex: none; color: var(--color-text-dim); font: 9px var(--font-mono); text-transform: uppercase; }

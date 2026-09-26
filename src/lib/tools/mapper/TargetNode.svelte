@@ -2,6 +2,7 @@
 	import { Handle, Position, useUpdateNodeInternals, type Node, type NodeProps } from '@xyflow/svelte';
 	import ArrowUpRight from '@lucide/svelte/icons/arrow-up-right';
 	import Cable from '@lucide/svelte/icons/cable';
+	import Copy from '@lucide/svelte/icons/copy';
 	import Cpu from '@lucide/svelte/icons/cpu';
 	import GripVertical from '@lucide/svelte/icons/grip-vertical';
 	import RadioTower from '@lucide/svelte/icons/radio-tower';
@@ -54,6 +55,7 @@
 			<input value={data.item.name} oninput={(event) => data.onRename(data.item.id, event.currentTarget.value)} aria-label="Nom de la cible" />
 		</div>
 		<span class="count" title="Entrées/sorties câblées · points réseau">{data.physical.length} E/S · {networkCount} réseau</span>
+		<button type="button" onclick={(event) => { event.stopPropagation(); data.onDuplicate(data.item.id); }} class="icon-button nodrag is-copy" aria-label="Dupliquer {data.item.name}" title="Dupliquer avec ses bus et ses équipements"><Copy size={15} /></button>
 		<button type="button" onclick={() => data.onRemove(data.item.id)} class="icon-button nodrag" aria-label="Supprimer {data.item.name}" title="Supprimer"><Trash2 size={15} /></button>
 	</header>
 
@@ -149,6 +151,7 @@
 	.count { flex: none; white-space: nowrap; }
 	.icon-button { display: inline-flex; width: 28px; height: 28px; align-items: center; justify-content: center; border: 0; background: transparent; color: var(--color-text-dim); }
 	.icon-button:hover { color: var(--color-danger); }
+	.icon-button.is-copy:hover { color: var(--color-primary); }
 	.empty { display: flex; height: 42px; align-items: center; padding: 0 14px; }
 	.assigned-row { position: relative; height: 34px; border-bottom: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent); }
 	.assigned-row button { display: flex; width: 100%; height: 100%; align-items: center; gap: 8px; border: 0; padding: 0 12px; background: transparent; color: inherit; text-align: left; }

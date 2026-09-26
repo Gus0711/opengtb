@@ -11,7 +11,9 @@
 	import { mapperToCsv, renderMapperSvg } from '$lib/tools/mapper/render';
 	import { POINT_KINDS, type Equipment, type EquipmentKind, type GtbPoint, type MapperDocument, type MapperPosition, type MapperViewport, type PointKind, type Segment, type SegmentMedia, type SegmentParity, type Supervisor, type SupervisorKind, type Target, type TargetKind, type UplinkProtocol } from '$lib/tools/mapper/types';
 	import { validateMapper } from '$lib/tools/mapper/validation';
+	import { duplicateEquipment, duplicateTarget } from '$lib/tools/mapper/duplicate';
 	import type { Connection, Edge, OnConnectStartParams } from '@xyflow/svelte';
+	import AirVent from '@lucide/svelte/icons/air-vent';
 	import Box from '@lucide/svelte/icons/box';
 	import Cable from '@lucide/svelte/icons/cable';
 	import Cloud from '@lucide/svelte/icons/cloud';
@@ -21,8 +23,10 @@
 	import Cpu from '@lucide/svelte/icons/cpu';
 	import Download from '@lucide/svelte/icons/download';
 	import Expand from '@lucide/svelte/icons/expand';
+	import Fan from '@lucide/svelte/icons/fan';
 	import Flame from '@lucide/svelte/icons/flame';
 	import Gauge from '@lucide/svelte/icons/gauge';
+	import Heater from '@lucide/svelte/icons/heater';
 	import MonitorCog from '@lucide/svelte/icons/monitor-cog';
 	import Import from '@lucide/svelte/icons/import';
 	import Network from '@lucide/svelte/icons/network';
@@ -33,9 +37,14 @@
 	import RotateCcw from '@lucide/svelte/icons/rotate-ccw';
 	import Save from '@lucide/svelte/icons/save';
 	import Search from '@lucide/svelte/icons/search';
+	import ShowerHead from '@lucide/svelte/icons/shower-head';
 	import Shrink from '@lucide/svelte/icons/shrink';
+	import Snowflake from '@lucide/svelte/icons/snowflake';
+	import SunSnow from '@lucide/svelte/icons/sun-snow';
 	import Table2 from '@lucide/svelte/icons/table-2';
 	import Thermometer from '@lucide/svelte/icons/thermometer';
+	import ThermometerSun from '@lucide/svelte/icons/thermometer-sun';
+	import Wind from '@lucide/svelte/icons/wind';
 	import Undo2 from '@lucide/svelte/icons/undo-2';
 
 	const tool = getTool('mapper')!;
@@ -45,6 +54,8 @@
 	const TARGET_ICONS: Record<TargetKind, typeof Cpu> = { controller: Cpu, 'lora-gateway': RadioTower };
 	const EQUIPMENT_ICONS: Record<EquipmentKind, typeof Cpu> = {
 		boiler: Flame, pump: CircleGauge, 'temperature-sensor': Thermometer, custom: Box,
+		'heating-circuit': Heater, ahu: AirVent, 'heat-pump': SunSnow, chiller: Snowflake,
+		'fan-coil': Fan, dhw: ShowerHead, 'extract-fan': Wind, 'outdoor-sensor': ThermometerSun,
 		'energy-meter': Gauge, 'modbus-rtu-device': Cable, 'modbus-tcp-device': Network,
 		'bacnet-mstp-device': Cable, 'bacnet-ip-device': Network,
 		'mbus-device': Gauge, 'lora-sensor': Radio
@@ -180,9 +191,9 @@
 	function syncNodes() {
 		const current = new Map(nodes.map((node) => [node.id, node]));
 		const equipmentNodes: MapperFlowNode[] = equipment.map((item, index) => ({ id: item.id, type: 'equipment', position: positions[item.id] ?? current.get(item.id)?.position ?? defaultNodePosition('equipment', index), dragHandle: '.node-drag-handle', selected: current.get(item.id)?.selected ?? false,
-			data: { kind: 'equipment', item, active: isEquipmentActive(item), bulkTargets: targets.filter((target) => item.points.length > 0 && item.points.every((point) => targetAccepts(target.kind, point.kind))), selectedPointId: inspectorPointId, onFocus: focusEquipment, onRename: updateEquipment, onRemove: removeEquipment, onOpenPoint: openPoint, onClosePoint: closePoint, onRemovePoint: removePoint, onAddPoint: addPoint, onChangePointKind: changePointKind, onUpdatePoint: updatePoint, onUnassignPoint: unassignPoint, onSelectConnection: selectPointConnection, onAssignAll: assignAllPoints, bus: equipmentBusView(item), onAttachSegment: attachSegment, onSetDeviceAddress: setDeviceAddress } }));
+			data: { kind: 'equipment', item, active: isEquipmentActive(item), bulkTargets: targets.filter((target) => item.points.length > 0 && item.points.every((point) => targetAccepts(target.kind, point.kind))), selectedPointId: inspectorPointId, onFocus: focusEquipment, onRename: updateEquipment, onRemove: removeEquipment, onDuplicate: duplicateEquipmentNode, onOpenPoint: openPoint, onClosePoint: closePoint, onRemovePoint: removePoint, onAddPoint: addPoint, onChangePointKind: changePointKind, onUpdatePoint: updatePoint, onUnassignPoint: unassignPoint, onSelectConnection: selectPointConnection, onAssignAll: assignAllPoints, bus: equipmentBusView(item), onAttachSegment: attachSegment, onSetDeviceAddress: setDeviceAddress } }));
 		const targetNodes: MapperFlowNode[] = targets.map((item, index) => ({ id: item.id, type: 'target', position: positions[item.id] ?? current.get(item.id)?.position ?? defaultNodePosition('target', index), dragHandle: '.node-drag-handle', selected: current.get(item.id)?.selected ?? false,
-			data: { kind: 'target', item, ...targetPointGroups(item), supervisors, supervisor: supervisors.find((entry) => entry.id === item.supervisorId) ?? null, active: isTargetActive(item), onFocus: focusTarget, onRename: updateTarget, onRemove: removeTarget, onOpenPoint: openPoint, onConnectPending: connectPendingPoint, onAssignSupervisor: assignSupervisor, onSetUplink: setUplink, onSelectUplink: selectUplinkConnection, onUpdateSegment: updateSegment, onRemoveSegment: removeSegment } }));
+			data: { kind: 'target', item, ...targetPointGroups(item), supervisors, supervisor: supervisors.find((entry) => entry.id === item.supervisorId) ?? null, active: isTargetActive(item), onFocus: focusTarget, onRename: updateTarget, onRemove: removeTarget, onDuplicate: duplicateTargetNode, onOpenPoint: openPoint, onConnectPending: connectPendingPoint, onAssignSupervisor: assignSupervisor, onSetUplink: setUplink, onSelectUplink: selectUplinkConnection, onUpdateSegment: updateSegment, onRemoveSegment: removeSegment } }));
 		const supervisorNodes: MapperFlowNode[] = supervisors.map((item, index) => ({ id: item.id, type: 'supervisor', position: positions[item.id] ?? current.get(item.id)?.position ?? defaultNodePosition('supervisor', index), dragHandle: '.node-drag-handle', selected: current.get(item.id)?.selected ?? false,
 			data: { kind: 'supervisor', item, uplinks: targets.filter((target) => target.supervisorId === item.id), active: isSupervisorActive(item), onFocus: focusSupervisor, onFocusTarget: focusTarget, onRename: updateSupervisor, onRemove: removeSupervisor, onConnectPending: connectPendingUplink } }));
 		nodes = [...equipmentNodes, ...targetNodes, ...supervisorNodes];
@@ -215,6 +226,31 @@
 	function addTarget(kind: TargetKind) { commit(() => { const item = createTarget(kind, `${kind}-${nextId++}`, uniqueName(TARGET_DEFINITIONS[kind].defaultName, targets.map((entry) => entry.name))); positions[item.id] = freeNodePosition('target', Object.values(positions)); targets = [...targets, item]; focus = { type: 'target', id: item.id }; }); }
 	function updateTarget(id: string, name: string) { targets = targets.map((item) => item.id === id ? { ...item, name } : item); syncNodes(); persist(); }
 	function removeTarget(id: string) { commit(() => { const orphans = new Set(targets.find((item) => item.id === id)?.segments.map((segment) => segment.id) ?? []); targets = targets.filter((item) => item.id !== id); equipment = equipment.map((item) => ({ ...item, points: item.points.map((point) => point.targetId === id ? { ...point, targetId: null, address: '' } : point) })); detachOrphans(orphans); delete positions[id]; if (focus?.id === id) focus = null; }); }
+	/** Identifiant libre : le compteur repart d'une base arbitraire apres un rechargement, on verifie donc les collisions. */
+	function makeId(prefix: string) {
+		const used = new Set([...supervisors.map((item) => item.id), ...targets.flatMap((item) => [item.id, ...item.segments.map((segment) => segment.id)]), ...equipment.flatMap((item) => [item.id, ...item.points.map((point) => point.id)])]);
+		let id = `${prefix}-${nextId++}`;
+		while (used.has(id)) id = `${prefix}-${nextId++}`;
+		return id;
+	}
+	function duplicateEquipmentNode(id: string) {
+		const result = duplicateEquipment({ targets, equipment }, id, makeId);
+		if (!result) return;
+		commit(() => { equipment = result.equipment; positions[result.copy.id] = freeNodePosition('equipment', Object.values(positions)); focus = { type: 'equipment', id: result.copy.id }; });
+		flash(`${result.copy.name} créé`);
+	}
+	function duplicateTargetNode(id: string) {
+		const result = duplicateTarget({ targets, equipment }, id, makeId);
+		if (!result) return;
+		commit(() => {
+			targets = result.targets; equipment = result.equipment;
+			positions[result.copy.id] = freeNodePosition('target', Object.values(positions));
+			for (const item of result.equipmentCopies) positions[item.id] = freeNodePosition('equipment', Object.values(positions));
+			focus = { type: 'target', id: result.copy.id };
+		});
+		const count = result.equipmentCopies.length;
+		flash(count ? `${result.copy.name} créé avec ${count} équipement${count > 1 ? 's' : ''}` : `${result.copy.name} créé`);
+	}
 	function addEquipment(kind: EquipmentKind) { commit(() => { const item = createEquipment(kind, `${kind}-${nextId++}`); item.name = uniqueName(item.name, equipment.map((entry) => entry.name)); positions[item.id] = freeNodePosition('equipment', Object.values(positions)); equipment = [...equipment, item]; focus = { type: 'equipment', id: item.id }; }); }
 	function updateEquipment(id: string, name: string) { equipment = equipment.map((item) => item.id === id ? { ...item, name } : item); syncNodes(); persist(); }
 	function removeEquipment(id: string) { commit(() => { const pointIds = new Set(equipment.find((item) => item.id === id)?.points.map((point) => point.id) ?? []); equipment = equipment.filter((item) => item.id !== id); delete positions[id]; if (focus?.id === id || (focus?.type === 'point' && pointIds.has(focus.id))) focus = null; if (inspectorPointId && pointIds.has(inspectorPointId)) inspectorPointId = null; }); }

@@ -36,6 +36,7 @@ export interface EquipmentNodeData extends Record<string, unknown> {
 	onFocus: (id: string) => void;
 	onRename: (id: string, name: string) => void;
 	onRemove: (id: string) => void;
+	onDuplicate: (id: string) => void;
 	onOpenPoint: (id: string) => void;
 	onClosePoint: (id: string) => void;
 	onRemovePoint: (equipmentId: string, pointId: string) => void;
@@ -65,6 +66,7 @@ export interface TargetNodeData extends Record<string, unknown> {
 	onFocus: (id: string) => void;
 	onRename: (id: string, name: string) => void;
 	onRemove: (id: string) => void;
+	onDuplicate: (id: string) => void;
 	onOpenPoint: (id: string) => void;
 	onConnectPending: (targetId: string) => void;
 	onAssignSupervisor: (targetId: string, supervisorId: string) => void;
