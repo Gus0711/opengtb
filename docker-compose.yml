@@ -6,8 +6,9 @@ services:
     image: opengtb:latest
     container_name: opengtb-prod
     ports:
-      - "7880:7880"
+      - "127.0.0.1:7880:7880"   # local uniquement, l'accès public passe par le tunnel
     restart: unless-stopped
+    mem_limit: 256m
     depends_on:
       - counter
     healthcheck:
@@ -25,6 +26,20 @@ services:
     volumes:
       - counter_data:/data
     restart: unless-stopped
+    mem_limit: 128m
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: opengtb-tunnel
+    profiles: ["tunnel"]        # lancé seulement si COMPOSE_PROFILES=tunnel (VPS)
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+    restart: unless-stopped
+    mem_limit: 128m
+    depends_on:
+      prod:
+        condition: service_healthy
 
   dev:
     image: node:24-alpine
