@@ -1,0 +1,19 @@
+[2026-09-25T18:35:16.186Z] [INFO] ========================================================================================================================
+[2026-09-25T18:35:16.186Z] [INFO] Initializing MAM Client.
+App: com.microsoft.edge 153.0.4234.48
+SDK: 2.1.367.0
+OS: windows 10.0.26200.9168
+DeviceType: Desktop
+Manufacturer: ASUSTeK COMPUTER INC.
+Model: ASUS EXPERTBOOK PM3606CKA
+Telemetry: yes
+Managed device support: enabled
+[2026-09-25T18:35:16.187Z] [INFO] Telemetry session ffe10af6-6b49-4e71-b13a-de1c9d994aa2.
+[2026-09-25T18:35:16.187Z] [INFO] Initializing cache (v1).
+[2026-09-25T18:35:16.229Z] [INFO] Registered UserID:0fc63cb9-afdb-46b0-86ea-bdacfb0ebb34 in the Azure public cloud.
+[2026-09-25T18:35:16.229Z] [INFO] Conditional Access is blocked for UserID:0fc63cb9-afdb-46b0-86ea-bdacfb0ebb34 pre-enrollment; compliance reporting will be accelerated to unblock the user.
+[2026-09-25T18:35:16.229Z] [INFO] Queuing pre-enrollment policy assignment check for UserID:0fc63cb9-afdb-46b0-86ea-bdacfb0ebb34 to run as soon as possible.
+[2026-09-25T18:35:16.229Z] [INFO] Scheduler background thread starting for UserID:0fc63cb9-afdb-46b0-86ea-bdacfb0ebb34.
+[2026-09-25T18:35:16.431Z] [INFO] Resolved MAM Location Service address "https://mamservice.manage.microsoft.com/api/Locations" for UserID:0fc63cb9-afdb-46b0-86ea-bdacfb0ebb34.
+[2026-09-25T18:35:16.957Z] [INFO] Shutting down.
+[2026-09-25T18:35:16.958Z] [INFO] Stopping the task scheduler and canceling any outstanding work items...

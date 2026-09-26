@@ -1,0 +1,20 @@
+2026-09-25 18:48:31.333: [INFO] CurrentProfilePath: C:\Users\augus\OneDrive - TIPIE\Documents\Github\opengtb\tmp\edge-mapper-after2-mobile-single\Default
+2026-09-25 18:48:31.333: [INFO] Profiles total count: 1
+2026-09-25 18:48:31.333: [INFO] Profile: name=Profil 1 path=C:\Users\augus\OneDrive - TIPIE\Documents\Github\opengtb\tmp\edge-mapper-after2-mobile-single\Default lastActive=2026-09-25T18:48:31.278Z
+2026-09-25 18:48:31.333: [INFO] LastUsedProfileDir: C:\Users\augus\OneDrive - TIPIE\Documents\Github\opengtb\tmp\edge-mapper-after2-mobile-single\Default
+2026-09-25 18:48:31.333: [INFO] MostRecentlyActiveProfile: name=Profil 1 path=C:\Users\augus\OneDrive - TIPIE\Documents\Github\opengtb\tmp\edge-mapper-after2-mobile-single\Default lastActive=2026-09-25T18:48:31.278Z
+2026-09-25 18:48:31.334: [INFO] OnDoneLoading sync enabled: 0
+2026-09-25 18:48:31.334: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-25 18:48:31.334: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-25 18:48:31.334: [INFO] BookmarksSnapshot Startup total=3 bar=3 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-25 18:48:31.344: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-09-25 18:48:31.809: [INFO] VisibilityChanged: 0
+2026-09-25 18:48:32.514: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-09-25 18:48:32.519: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-09-25 18:48:32.525: [INFO] Primary account changed.
+2026-09-25 18:48:32.525: [INFO] OnPrimaryAccountChanged PrimaryAccountChangeEvent::Type::kSet
+2026-09-25 18:48:32.535: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-09-25 18:48:32.645: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-09-25 18:48:32.792: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-09-25 18:48:34.641: [INFO] Sync initialization duration: 1632ms
+2026-09-25 18:48:45.745: [INFO] BookmarksSnapshot Shutdown total=3 bar=3 other=0 mobile=0 showBar=0 showBarNTP=1

@@ -10,6 +10,8 @@
 	import Download from '@lucide/svelte/icons/download';
 	import Copy from '@lucide/svelte/icons/copy';
 	import Check from '@lucide/svelte/icons/check';
+	import Workflow from '@lucide/svelte/icons/workflow';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import type { SvgEntry, SvgManifest, SvgTaxonomy } from '$lib/tools/svg/types';
 	import taxonomyData from '../../../content/data/svg-taxonomy.json';
 
@@ -136,6 +138,20 @@
 			Symboles SVG libres pour synoptiques GTB. Téléchargement direct, sans inscription.
 		</p>
 	</header>
+
+	<a
+		href="/outils/mapper"
+		class="border-primary/30 bg-primary/5 hover:border-primary/60 group mt-6 flex items-center gap-3 rounded border px-4 py-3 transition-colors"
+	>
+		<span class="border-primary/30 text-primary inline-flex size-9 shrink-0 items-center justify-center rounded border">
+			<Workflow class="size-4.5" aria-hidden="true" />
+		</span>
+		<span class="min-w-0 flex-1">
+			<strong class="block font-mono text-[13px] font-medium">Cartographier une architecture GTB</strong>
+			<span class="text-text-soft block text-[12.5px]">Relier équipements, automates, gateways et listes de points.</span>
+		</span>
+		<ArrowRight class="text-text-dim group-hover:text-primary size-4 shrink-0 transition-colors" aria-hidden="true" />
+	</a>
 
 	<!-- Search + theme chips -->
 	<div class="mt-7 space-y-3">

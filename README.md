@@ -4,10 +4,10 @@ La boîte à outils des intégrateurs GTB & IoT — des outils gratuits exécut�
 dans le navigateur, sans installer, sans s'inscrire. Site SvelteKit prerendu en statique
 (`adapter-static`), servi par Caddy en conteneur derrière Cloudflare Tunnel.
 
-Le catalogue est piloté par un **registry unique** (`src/lib/tools/registry.ts`) : 13
-entrées réparties en 5 secteurs — 12 outils + 1 lien externe (`bacs` → ConformBACS).
-Au moment de la rédaction, 10 entrées sont en statut `done`
-(`decode`, `modbus`, `conv`, `dju`, `v3v`, `loi-eau`, `air-hyg`, `pdc`, `svg`, `bacs`)
+Le catalogue est piloté par un **registry unique** (`src/lib/tools/registry.ts`) : 15
+entrées réparties en 5 secteurs — 14 outils + 1 lien externe (`bacs` → ConformBACS).
+Au moment de la rédaction, 12 entrées sont en statut `done`
+(`decode`, `modbus`, `modbus-lab`, `conv`, `dju`, `v3v`, `loi-eau`, `air-hyg`, `pdc`, `svg`, `mapper`, `bacs`)
 et 3 en `todo` (`pcap`, `compteur-th`, `trends`), rendues via une page « à venir »
 générique. Voir [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) pour le détail du modèle.
 

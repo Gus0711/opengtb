@@ -8,6 +8,8 @@
 	import Search from '@lucide/svelte/icons/search';
 	import TriangleAlert from '@lucide/svelte/icons/triangle-alert';
 	import X from '@lucide/svelte/icons/x';
+	import Binary from '@lucide/svelte/icons/binary';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import manifestJson from '$lib/tools/modbus/manifest.generated.json';
 	import {
 		EMPTY_FILTERS,
@@ -78,6 +80,20 @@
 	seoTitle="Catalogue Modbus — registres, types, échelles"
 	seoDescription="Catalogue ouvert de devices Modbus RTU/TCP : registres, types, échelles, CRC-16. {manifest.devices.length} devices, {manifest.vendors.length} marques."
 >
+	<a
+		href="/outils/modbus-lab"
+		class="border-primary/30 bg-primary/5 hover:border-primary/60 group flex items-center gap-3 rounded border px-4 py-3 transition-colors"
+	>
+		<span class="border-primary/30 text-primary inline-flex size-9 shrink-0 items-center justify-center rounded border">
+			<Binary class="size-4.5" aria-hidden="true" />
+		</span>
+		<span class="min-w-0 flex-1">
+			<strong class="block font-mono text-[13px] font-medium">Laboratoire de registres</strong>
+			<span class="text-text-soft block text-[12.5px]">Décoder un FLOAT32, vérifier l’ordre des octets ou lire un mot d’état.</span>
+		</span>
+		<ArrowRight class="text-text-dim group-hover:text-primary size-4 shrink-0 transition-colors" aria-hidden="true" />
+	</a>
+
 	<div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[18rem_1fr]">
 		<!-- Facettes -->
 		<aside class="space-y-5">

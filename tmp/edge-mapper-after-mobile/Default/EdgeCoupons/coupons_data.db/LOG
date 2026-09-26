@@ -1,0 +1,5 @@
+2026/09/25-20:46:30.368 141cc Creating DB C:\Users\augus\OneDrive - TIPIE\Documents\Github\opengtb\tmp\edge-mapper-after-mobile\Default\EdgeCoupons/coupons_data.db since it was missing.
+2026/09/25-20:46:30.394 141cc Reusing MANIFEST C:\Users\augus\OneDrive - TIPIE\Documents\Github\opengtb\tmp\edge-mapper-after-mobile\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/09/25-20:46:30.886 13ddc Level-0 table #5: started
+2026/09/25-20:46:30.892 13ddc Level-0 table #5: 683273 bytes OK
+2026/09/25-20:46:30.895 13ddc Delete type=0 #3

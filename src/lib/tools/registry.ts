@@ -11,6 +11,8 @@ import WavesHorizontal from '@lucide/svelte/icons/waves-horizontal';
 import Wind from '@lucide/svelte/icons/wind';
 import Funnel from '@lucide/svelte/icons/funnel';
 import Activity from '@lucide/svelte/icons/activity';
+import Binary from '@lucide/svelte/icons/binary';
+import Workflow from '@lucide/svelte/icons/workflow';
 
 // Icônes de secteur
 import Cpu from '@lucide/svelte/icons/cpu';
@@ -49,6 +51,17 @@ export const TOOLS: Tool[] = [
 		sector: 'briques-techniques',
 		icon: Table2,
 		tags: ['rtu', 'tcp', 'registres'],
+		status: 'done'
+	},
+	{
+		slug: 'modbus-lab',
+		name: 'modbus-lab',
+		title: 'Laboratoire de registres Modbus',
+		description:
+			'Décoder et encoder des registres Modbus — types numériques, ordre des octets, échelle et bits actifs.',
+		sector: 'briques-techniques',
+		icon: Binary,
+		tags: ['float32', 'int16', 'endianness', 'bitfield'],
 		status: 'done'
 	},
 	{
@@ -151,6 +164,17 @@ export const TOOLS: Tool[] = [
 		sector: 'referentiels',
 		icon: Shapes,
 		tags: ['supervision', 'animé', 'open'],
+		status: 'done'
+	},
+	{
+		slug: 'mapper',
+		name: 'mapper',
+		title: 'Architecture GTB & liste de points',
+		description:
+			'Relier équipements, automates et gateways — AI/DI, Modbus, BACnet, M-Bus et LoRaWAN.',
+		sector: 'referentiels',
+		icon: Workflow,
+		tags: ['automate', 'modbus', 'bacnet', 'm-bus', 'lorawan', 'liste de points'],
 		status: 'done'
 	},
 	{
