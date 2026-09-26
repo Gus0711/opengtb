@@ -33,6 +33,7 @@
 				class="text-text-soft hover:text-primary transition-colors">github</a
 			>
 			<a href="/#pricing" class="text-text-soft hover:text-primary transition-colors">roadmap</a>
+			<a href="/messages" class="text-text-soft hover:text-primary transition-colors">messages</a>
 		</div>
 	</div>
 </footer>

@@ -19,7 +19,8 @@ function buildEntries(): UrlEntry[] {
 	const staticPages: UrlEntry[] = [
 		{ path: '/', changefreq: 'weekly', priority: '1.0' },
 		{ path: '/outils', changefreq: 'weekly', priority: '0.8' },
-		{ path: '/articles', changefreq: 'weekly', priority: '0.7' }
+		{ path: '/articles', changefreq: 'weekly', priority: '0.7' },
+		{ path: '/messages', changefreq: 'weekly', priority: '0.5' }
 	];
 	const toolPages: UrlEntry[] = builtTools().map((t) => ({
 		path: `/outils/${t.slug}`,

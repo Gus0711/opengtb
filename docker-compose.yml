@@ -10,7 +10,7 @@ services:
     restart: unless-stopped
     mem_limit: 256m
     depends_on:
-      - counter
+      - api
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:7880/"]
       interval: 30s
@@ -18,13 +18,18 @@ services:
       retries: 3
       start_period: 10s
 
-  counter:
+  api:
     build:
-      context: ./counter
-    image: opengtb-counter:latest
-    container_name: opengtb-counter
+      context: ./api
+    image: opengtb-api:latest
+    container_name: opengtb-api
     volumes:
-      - counter_data:/data
+      - counter_data:/data      # nom conservé pour garder le compteur existant
+    environment:
+      - ADMIN_TOKEN=${MESSAGES_ADMIN_TOKEN:-}
+      - TURNSTILE_SITE_KEY=${TURNSTILE_SITE_KEY:-}
+      - TURNSTILE_SECRET=${TURNSTILE_SECRET:-}
+      - NTFY_URL=${NTFY_URL:-}
     restart: unless-stopped
     mem_limit: 128m
 

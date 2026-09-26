@@ -36,6 +36,11 @@
 				>journal</a
 			>
 			<a
+				href="/messages"
+				class="text-text-soft hover:text-primary px-3 py-1.5 text-[13px] transition-colors"
+				>messages</a
+			>
+			<a
 				href="/#pricing"
 				class="text-text-soft hover:text-primary px-3 py-1.5 text-[13px] transition-colors">pro</a
 			>

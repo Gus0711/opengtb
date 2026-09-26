@@ -24,9 +24,9 @@
 	# consolidées (fonts inlinées, OG image, éventuels analytics).
 	# Définir une CSP stricte default-src 'self' à ce moment-là.
 
-	# Compteur de visites (service `counter` du docker-compose)
+	# Compteur de visites + fil de messages (service `api` du docker-compose)
 	handle /api/* {
-		reverse_proxy counter:8080
+		reverse_proxy api:8080
 	}
 
 	# adapter-static produit /outils/decode.html, pas /outils/decode/index.html.
