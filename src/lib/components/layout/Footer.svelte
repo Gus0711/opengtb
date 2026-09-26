@@ -33,10 +33,6 @@
 				class="text-text-soft hover:text-primary transition-colors">github</a
 			>
 			<a href="/#pricing" class="text-text-soft hover:text-primary transition-colors">roadmap</a>
-			<a
-				href="mailto:contact@opengtb.fr"
-				class="text-text-soft hover:text-primary transition-colors">contact</a
-			>
 		</div>
 	</div>
 </footer>
