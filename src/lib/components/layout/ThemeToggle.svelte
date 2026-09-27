@@ -1,15 +1,55 @@
 <script lang="ts">
-	import { theme } from '$lib/stores/theme.svelte';
+	// Commutateur de thème façon façade d'armoire : AUTO / MANU / HORS.
+	// AUTO suit le système ; MANU force le thème — cliquer sur MANU bascule
+	// toujours clair ⇄ sombre, pour qu'il se passe quelque chose de visible.
+	import { theme, type ThemeMode } from '$lib/stores/theme.svelte';
+	import { fun } from '$lib/fun/fun.svelte';
+
+	const POSITIONS: { mode: ThemeMode; label: string; title: string }[] = [
+		{ mode: 'auto', label: 'AUTO', title: 'Suivre le thème du système' },
+		{ mode: 'manu', label: 'MANU', title: 'Forcer le thème — chaque clic bascule clair/sombre' },
+		{ mode: 'hors', label: 'HORS', title: 'Mettre le site hors service' }
+	];
+
+	const name = (t: 'dark' | 'light') => (t === 'dark' ? 'sombre' : 'clair');
+	const icon = (t: 'dark' | 'light') => (t === 'dark' ? '☾' : '☀');
+
+	function select(mode: ThemeMode) {
+		if (mode === 'manu') {
+			theme.toggle();
+			fun.toast(`MANU — thème ${name(theme.current)} forcé. Reclique pour basculer.`);
+		} else if (mode === 'auto') {
+			if (theme.mode === 'auto') return;
+			theme.setMode('auto');
+			fun.toast(`AUTO — le thème suit ton système (actuellement ${name(theme.current)}).`);
+		} else {
+			theme.setMode('hors');
+		}
+	}
 </script>
 
-<button
-	type="button"
-	onclick={() => theme.toggle()}
-	aria-label="Basculer entre thème clair et sombre"
-	aria-pressed={theme.current === 'dark'}
-	class="border-border text-text-soft hover:text-foreground hover:border-line-strong inline-flex items-center gap-1.5 border px-2.5 py-1.5 font-mono text-[11px] transition-colors"
+<div
+	role="radiogroup"
+	aria-label="Commutateur de thème"
+	class="border-border inline-flex items-stretch border font-mono text-[10.5px]"
 >
-	<span aria-hidden="true">[ ◐</span>
-	<span>{theme.current}</span>
-	<span aria-hidden="true">]</span>
-</button>
+	{#each POSITIONS as p, i (p.mode)}
+		{@const active = theme.mode === p.mode}
+		<button
+			type="button"
+			role="radio"
+			aria-checked={active}
+			title={p.title}
+			onclick={() => select(p.mode)}
+			class="px-2 py-1.5 tracking-wide transition-colors {i > 0 ? 'border-border border-l' : ''} {active
+				? p.mode === 'hors'
+					? 'bg-red-signal/15 text-red-signal'
+					: 'bg-accent-glow text-primary'
+				: 'text-text-dim hover:text-foreground'}"
+		>
+			{p.label}{#if active && p.mode !== 'hors'}<span class="ml-1" aria-hidden="true"
+					>{icon(theme.current)}</span
+				>{/if}
+		</button>
+	{/each}
+</div>

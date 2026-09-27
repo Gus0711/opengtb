@@ -5,8 +5,12 @@
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import PollBanner from '$lib/components/layout/PollBanner.svelte';
+	import FunLayer from '$lib/components/fun/FunLayer.svelte';
+	import { onMount } from 'svelte';
 
 	let { children } = $props();
+
+	onMount(() => theme.init());
 
 	$effect(() => {
 		const cl = document.documentElement.classList;
@@ -30,3 +34,5 @@
 	</main>
 	<Footer />
 </div>
+
+<FunLayer />

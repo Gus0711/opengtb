@@ -1,5 +1,6 @@
 <script lang="ts">
 	import HitCounter from './HitCounter.svelte';
+	import StatusBar from './StatusBar.svelte';
 </script>
 
 <footer class="border-border mt-20 border-t">
@@ -36,4 +37,5 @@
 			<a href="/messages" class="text-text-soft hover:text-primary transition-colors">messages</a>
 		</div>
 	</div>
+	<StatusBar />
 </footer>

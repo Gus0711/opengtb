@@ -36,4 +36,14 @@
 		try_files {path} {path}.html {path}/index.html
 		file_server
 	}
+
+	# URL inconnue → coquille 404.html (adapter-static `fallback`), qui affiche
+	# la page d'alarme de src/routes/+error.svelte. Le statut 404 est conservé.
+	handle_errors {
+		@notfound expression {err.status_code} == 404
+		handle @notfound {
+			rewrite * /404.html
+			file_server
+		}
+	}
 }

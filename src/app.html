@@ -4,6 +4,17 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#07090a" />
+		<script>
+			// Applique le thème mémorisé avant l'hydratation (cf. stores/theme.svelte.ts).
+			try {
+				var t = JSON.parse(localStorage.getItem('opengtb:theme') || 'null');
+				var light =
+					t && t.mode === 'auto'
+						? matchMedia('(prefers-color-scheme: light)').matches
+						: t && t.manual === 'light';
+				if (light) document.documentElement.classList.remove('dark');
+			} catch (e) {}
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

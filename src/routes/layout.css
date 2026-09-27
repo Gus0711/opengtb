@@ -196,3 +196,92 @@
 		text-decoration: none;
 	}
 }
+
+/* Mode rétro (code Konami ou `retro` dans le terminal) : écran de supervision
+   cathodique, tout en vert phosphore, lignes de balayage et léger scintillement. */
+html.retro {
+	--background: #020a02;
+	--foreground: #7dff7d;
+	--card: #031203;
+	--card-foreground: #7dff7d;
+	--popover: #031203;
+	--popover-foreground: #7dff7d;
+	--primary: #b6ff4a;
+	--primary-foreground: #020a02;
+	--secondary: #062006;
+	--muted: #062006;
+	--muted-foreground: #3fa83f;
+	--accent: #062006;
+	--border: #0f3a0f;
+	--input: #0f3a0f;
+	--ring: #7dff7d;
+	--text-soft: #5fd35f;
+	--text-dim: #3fa83f;
+	--line-soft: #0a2a0a;
+	--line-strong: #1a5a1a;
+	--accent-glow: rgba(125, 255, 125, 0.12);
+	--amber: #d8ff7d;
+	--cyan: #7dffb0;
+	--red-signal: #ff7d7d;
+	--chart-1: #7dff7d;
+	--chart-2: #7dffb0;
+	--chart-3: #d8ff7d;
+}
+html.retro body {
+	font-family: var(--font-mono);
+	text-shadow: 0 0 6px rgba(125, 255, 125, 0.45);
+}
+html.retro img,
+html.retro video {
+	filter: grayscale(1) sepia(1) hue-rotate(60deg) saturate(3) brightness(0.9);
+}
+html.retro body::after {
+	content: '';
+	position: fixed;
+	inset: 0;
+	z-index: 90;
+	pointer-events: none;
+	background:
+		repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.28) 0 1px, transparent 1px 3px),
+		radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.55) 100%);
+	animation: crt-flicker 4s infinite steps(1);
+}
+@keyframes crt-flicker {
+	0%,
+	96%,
+	100% {
+		opacity: 1;
+	}
+	97% {
+		opacity: 0.82;
+	}
+	98% {
+		opacity: 0.95;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	html.retro body::after {
+		animation: none;
+	}
+}
+
+/* Mode HORS « gel » : les textes grelottent. */
+html.hors-gel :is(main, header, footer) :is(h1, h2, h3, button, a) {
+	animation: shiver 0.18s infinite alternate;
+}
+html.hors-gel :is(main, header, footer) :is(h1, h2, h3, button, a):nth-child(2n) {
+	animation-delay: -0.09s;
+}
+@keyframes shiver {
+	from {
+		transform: translate(-0.6px, 0.3px);
+	}
+	to {
+		transform: translate(0.6px, -0.3px);
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	html.hors-gel :is(main, header, footer) :is(h1, h2, h3, button, a) {
+		animation: none;
+	}
+}

@@ -12,7 +12,8 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: undefined,
+			// Coquille SPA servie par Caddy pour les URL inconnues → +error.svelte (404).
+			fallback: '404.html',
 			strict: false
 		}),
 		prerender: {

@@ -1,11 +1,12 @@
 <script lang="ts">
 	import ThemeToggle from './ThemeToggle.svelte';
+	import { fun } from '$lib/fun/fun.svelte';
 </script>
 
 <header
 	class="border-border bg-background/90 sticky top-0 z-50 border-b backdrop-blur supports-[backdrop-filter]:bg-background/85"
 >
-	<div class="mx-auto flex max-w-5xl items-center gap-5 px-5 py-3.5 md:gap-7 md:px-7">
+	<div class="mx-auto flex max-w-5xl items-center gap-3 px-5 py-3.5 md:gap-5 md:px-7">
 		<a href="/" class="flex flex-1 items-center gap-2.5" aria-label="OpenGTB — accueil">
 			<span class="text-primary inline-flex" aria-hidden="true">
 				<svg width="20" height="20" viewBox="0 0 22 22" fill="none">
@@ -46,6 +47,14 @@
 			>
 		</nav>
 
+		<button
+			type="button"
+			onclick={() => (fun.terminalOpen = !fun.terminalOpen)}
+			title="Terminal (touche ` ou Ctrl+K)"
+			aria-label="Ouvrir le terminal"
+			class="border-border text-text-dim hover:text-primary hover:border-primary border px-2 py-1.5 font-mono text-[10.5px] font-semibold transition-colors"
+			>&gt;_</button
+		>
 		<ThemeToggle />
 	</div>
 </header>
