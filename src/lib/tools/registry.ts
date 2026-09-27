@@ -92,7 +92,7 @@ export const TOOLS: Tool[] = [
 		sector: 'reglementaire',
 		icon: ShieldCheck,
 		tags: ['décret 2020-887', 'iso 52120'],
-		external: 'https://conformbacs.datagtb.com',
+		external: 'https://conformbacs.opengtb.com',
 		status: 'done'
 	},
 	{
