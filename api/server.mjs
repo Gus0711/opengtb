@@ -10,6 +10,9 @@
 // DELETE /api/comments/:id   → 204                       modération (Authorization: Bearer $ADMIN_TOKEN)
 // GET    /api/reactions       → { counts }                (?article=<slug>)
 // POST   /api/reactions       → { counts }                { article, emoji, on } — 1 vote / IP / emoji
+// GET    /api/poll            → { poll, counts, voters }  sondage en cours (bandeau du site)
+// POST   /api/poll            → { counts, voters }        { choices, other } — 1 vote / IP / sondage
+// GET    /api/poll/ideas      → { ideas }                 idées libres (Authorization: Bearer $ADMIN_TOKEN)
 //
 // Persistance dans /data (volume Docker) : hits.json + messages.db (SQLite).
 // Aucune IP n'est stockée sur disque : l'anti-flood travaille sur un hash salé, en mémoire.
@@ -436,6 +439,99 @@ async function handleReactions(req, res, url) {
 	return send(res, 200, { counts: reactionCounts(article) });
 }
 
+// ───────────────────────── sondage du bandeau ─────────────────────────
+
+// Un seul sondage actif à la fois. Pour en lancer un nouveau : changer `id`
+// (les votes de l'ancien restent en base, sous son id).
+const POLL = {
+	id: '2026-10-la-suite',
+	question: 'Qu’est-ce qui te ferait revenir plus souvent sur OpenGTB ?',
+	options: [
+		{ id: 'compte', label: 'Un compte pour sauvegarder mes projets et calculs' },
+		{ id: 'favoris', label: 'Mettre mes outils préférés en favoris' },
+		{ id: 'newsletter', label: 'Une newsletter mensuelle (nouveaux outils, articles)' },
+		{ id: 'articles', label: 'Plus de retours de chantier et de pièges à éviter' },
+		{ id: 'outils', label: 'De nouveaux outils de terrain' }
+	]
+};
+const POLL_OPTION_IDS = new Set(POLL.options.map((o) => o.id));
+
+db.exec(`
+	CREATE TABLE IF NOT EXISTS poll_votes (
+		poll   TEXT    NOT NULL,
+		option TEXT    NOT NULL,
+		count  INTEGER NOT NULL DEFAULT 0,
+		PRIMARY KEY (poll, option)
+	);
+	CREATE TABLE IF NOT EXISTS poll_voters (
+		poll  TEXT    PRIMARY KEY,
+		count INTEGER NOT NULL DEFAULT 0
+	);
+	CREATE TABLE IF NOT EXISTS poll_ideas (
+		id         INTEGER PRIMARY KEY AUTOINCREMENT,
+		poll       TEXT    NOT NULL,
+		body       TEXT    NOT NULL,
+		created_at TEXT    NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ', 'now'))
+	);
+`);
+
+const stmtPollCounts = db.prepare('SELECT option, count FROM poll_votes WHERE poll = ?');
+const stmtPollVoters = db.prepare('SELECT count FROM poll_voters WHERE poll = ?');
+const stmtPollVote = db.prepare(
+	'INSERT INTO poll_votes (poll, option, count) VALUES (?, ?, 1) ON CONFLICT (poll, option) DO UPDATE SET count = count + 1'
+);
+const stmtPollVoter = db.prepare(
+	'INSERT INTO poll_voters (poll, count) VALUES (?, 1) ON CONFLICT (poll) DO UPDATE SET count = count + 1'
+);
+const stmtPollIdea = db.prepare('INSERT INTO poll_ideas (poll, body) VALUES (?, ?)');
+const stmtPollIdeas = db.prepare(
+	'SELECT id, body, created_at FROM poll_ideas WHERE poll = ? ORDER BY id DESC LIMIT 500'
+);
+
+// Un vote par IP (hashée) et par sondage, en mémoire — même compromis que les réactions.
+const pollVoted = new Set(); // `${ipKey}|${pollId}`
+
+function pollResults() {
+	const counts = Object.fromEntries(POLL.options.map((o) => [o.id, 0]));
+	for (const { option, count } of stmtPollCounts.all(POLL.id)) {
+		if (option in counts) counts[option] = count;
+	}
+	return { counts, voters: stmtPollVoters.get(POLL.id)?.count ?? 0 };
+}
+
+async function handlePoll(req, res, url) {
+	if (url.pathname === '/api/poll/ideas') {
+		if (req.method !== 'GET') return send(res, 405, { error: 'Méthode non autorisée.' });
+		if (!isAdmin(req)) return send(res, 401, { error: 'Non autorisé.' });
+		return send(res, 200, { ideas: stmtPollIdeas.all(POLL.id) });
+	}
+
+	if (req.method === 'GET') return send(res, 200, { poll: POLL, ...pollResults() });
+	if (req.method !== 'POST') return send(res, 405, { error: 'Méthode non autorisée.' });
+
+	const input = await readJson(req, 4 * 1024);
+	if (input.poll !== POLL.id) throw new HttpError(409, 'Ce sondage est terminé — recharge la page.');
+
+	const choices = [...new Set(Array.isArray(input.choices) ? input.choices.map(String) : [])];
+	if (choices.some((c) => !POLL_OPTION_IDS.has(c))) throw new HttpError(400, 'Choix inconnu.');
+	const other = clean(input.other, { multiline: false });
+	if (other.length > 300) throw new HttpError(400, 'Idée : 300 caractères maximum.');
+	if (HAS_LINK.test(other)) throw new HttpError(400, 'Pas de lien dans l’idée.');
+	if (!choices.length && other.length < 3) throw new HttpError(400, 'Coche au moins un choix.');
+
+	const vote = `${ipKey(req)}|${POLL.id}`;
+	if (pollVoted.has(vote)) throw new HttpError(409, 'Tu as déjà répondu, merci !');
+	pollVoted.add(vote);
+
+	for (const c of choices) stmtPollVote.run(POLL.id, c);
+	stmtPollVoter.run(POLL.id);
+	if (other.length >= 3) {
+		stmtPollIdea.run(POLL.id, other);
+		notify('sondage', POLL.id, other);
+	}
+	return send(res, 200, pollResults());
+}
+
 // ───────────────────────── routeur ─────────────────────────
 
 createServer(async (req, res) => {
@@ -449,6 +545,9 @@ createServer(async (req, res) => {
 		const c = url.pathname.match(/^\/api\/comments\/(\d+)$/);
 		if (c) return await handleComments(req, res, url, Number(c[1]));
 		if (url.pathname === '/api/reactions') return await handleReactions(req, res, url);
+		if (url.pathname === '/api/poll' || url.pathname === '/api/poll/ideas') {
+			return await handlePoll(req, res, url);
+		}
 		return send(res, 404, { error: 'Introuvable.' });
 	} catch (err) {
 		if (err instanceof HttpError) return send(res, err.status, { error: err.message });
