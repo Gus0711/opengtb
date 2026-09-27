@@ -5,6 +5,8 @@
 	import SeoHead from '$lib/seo/SeoHead.svelte';
 	import { buildMeta } from '$lib/seo/meta';
 	import BackLink from '$lib/components/layout/BackLink.svelte';
+	import ArticleReactions from '$lib/components/articles/ArticleReactions.svelte';
+	import ArticleComments from '$lib/components/articles/ArticleComments.svelte';
 
 	let { data }: { data: PageData } = $props();
 
@@ -26,7 +28,7 @@
 	<header class="border-border mt-6 border-b pb-6">
 		<h1 class="text-3xl font-semibold">{data.article.title}</h1>
 		<p class="text-text-dim mt-3 font-mono text-xs">
-			{formatDateLong(data.article.date)} · {data.article.reading_time} min · — {data.article.author}
+			{formatDateLong(data.article.date)} · {data.article.reading_time} min
 		</p>
 		{#if data.article.tags.length > 0}
 			<p class="text-text-dim mt-2 font-mono text-xs">
@@ -38,4 +40,9 @@
 	<div class="prose prose-invert mt-8 max-w-none">
 		<Article />
 	</div>
+
+	{#key data.article.slug}
+		<ArticleReactions slug={data.article.slug} />
+		<ArticleComments slug={data.article.slug} />
+	{/key}
 </article>

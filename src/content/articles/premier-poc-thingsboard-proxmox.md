@@ -1,7 +1,6 @@
 ---
 title: "Premier POC ThingsBoard sur Proxmox"
 date: "2026-03-12"
-author: "Gus"
 tags: ["thingsboard", "proxmox", "docker", "lxc"]
 excerpt: "Retour de chantier après deux semaines à faire tenir ThingsBoard CE sur une LXC Debian 12 dans un cluster Proxmox. Ce qui a marché du premier coup, ce qui a coincé."
 cover: "/articles/premier-poc-thingsboard-proxmox.svg"

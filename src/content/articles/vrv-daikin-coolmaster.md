@@ -1,7 +1,6 @@
 ---
 title: "Du VRV Daikin dans ta GTB sans y laisser ta santé mentale : le CoolMaster sur le grill"
 date: "2026-09-27"
-author: "Gus"
 tags: ["daikin", "vrv", "coolautomation", "bacnet", "distech", "niagara", "retex"]
 excerpt: "Deux gros groupes VRV Daikin, un bâtiment entier à reprendre et un client qui veut que ça marche même quand Internet fait la sieste. On a sorti un CoolMaster de CoolAutomation, un automate Distech et une Niagara 4. Je te raconte tout, y compris le piège de la sonde de reprise."
 cover: "/articles/vrv-daikin-coolmaster/cover.jpg"

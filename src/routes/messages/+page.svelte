@@ -247,7 +247,7 @@
 					bind:value={author}
 					maxlength="30"
 					autocomplete="nickname"
-					placeholder="ex. Gus · intégrateur"
+					placeholder="ton pseudo"
 					class={inputClass}
 				/>
 			</label>

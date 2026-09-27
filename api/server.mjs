@@ -5,6 +5,11 @@
 // GET    /api/messages       → { messages, hasMore, turnstileSiteKey }   (?before=<id>)
 // POST   /api/messages       → { message }               publication directe, anti-spam en couches
 // DELETE /api/messages/:id   → 204                       modération (Authorization: Bearer $ADMIN_TOKEN)
+// GET    /api/comments        → { comments, turnstileSiteKey }   (?article=<slug>)
+// POST   /api/comments        → { comment }               mêmes couches anti-spam que les messages
+// DELETE /api/comments/:id   → 204                       modération (Authorization: Bearer $ADMIN_TOKEN)
+// GET    /api/reactions       → { counts }                (?article=<slug>)
+// POST   /api/reactions       → { counts }                { article, emoji, on } — 1 vote / IP / emoji
 //
 // Persistance dans /data (volume Docker) : hits.json + messages.db (SQLite).
 // Aucune IP n'est stockée sur disque : l'anti-flood travaille sur un hash salé, en mémoire.
@@ -147,36 +152,42 @@ const stmtDuplicate = db.prepare(
 );
 const stmtDelete = db.prepare('DELETE FROM messages WHERE id = ?');
 
-// Anti-flood : 1 message / 10 min et 5 / 24 h par IP (hashée, en mémoire).
-const RATE_GAP_MS = 10 * MIN;
-const RATE_DAY_MAX = 5;
-const posts = new Map(); // ipKey → timestamps[]
-setInterval(() => {
-	const cutoff = Date.now() - 24 * HOUR;
-	for (const [k, ts] of posts) {
-		const kept = ts.filter((t) => t > cutoff);
-		if (kept.length) posts.set(k, kept);
-		else posts.delete(k);
-	}
-}, HOUR).unref();
+// Anti-flood par IP (hashée, en mémoire) : un écart minimal entre deux envois
+// et un plafond sur 24 h glissantes.
+function rateLimiter({ gapMs, dayMax }) {
+	const posts = new Map(); // ipKey → timestamps[]
+	setInterval(() => {
+		const cutoff = Date.now() - 24 * HOUR;
+		for (const [k, ts] of posts) {
+			const kept = ts.filter((t) => t > cutoff);
+			if (kept.length) posts.set(k, kept);
+			else posts.delete(k);
+		}
+	}, HOUR).unref();
 
-function checkRate(key) {
-	const now = Date.now();
-	const ts = (posts.get(key) ?? []).filter((t) => now - t < 24 * HOUR);
-	if (ts.length && now - ts[ts.length - 1] < RATE_GAP_MS) {
-		const wait = Math.ceil((RATE_GAP_MS - (now - ts[ts.length - 1])) / MIN);
-		throw new HttpError(429, `Doucement :) Réessaie dans ${wait} min.`);
-	}
-	if (ts.length >= RATE_DAY_MAX) {
-		throw new HttpError(429, 'Limite de messages atteinte pour aujourd’hui.');
-	}
+	return {
+		check(key) {
+			const now = Date.now();
+			const ts = (posts.get(key) ?? []).filter((t) => now - t < 24 * HOUR);
+			if (ts.length && now - ts[ts.length - 1] < gapMs) {
+				const wait = Math.ceil((gapMs - (now - ts[ts.length - 1])) / MIN);
+				throw new HttpError(429, `Doucement :) Réessaie dans ${wait} min.`);
+			}
+			if (ts.length >= dayMax) {
+				throw new HttpError(429, 'Limite de messages atteinte pour aujourd’hui.');
+			}
+		},
+		record(key) {
+			const ts = posts.get(key) ?? [];
+			ts.push(Date.now());
+			posts.set(key, ts);
+		}
+	};
 }
 
-function recordPost(key) {
-	const ts = posts.get(key) ?? [];
-	ts.push(Date.now());
-	posts.set(key, ts);
-}
+// Messages : 1 / 10 min et 5 / 24 h. Commentaires : 1 / 2 min et 10 / 24 h.
+const messageRate = rateLimiter({ gapMs: 10 * MIN, dayMax: 5 });
+const commentRate = rateLimiter({ gapMs: 2 * MIN, dayMax: 10 });
 
 // Texte brut uniquement : on retire les caractères de contrôle (sauf \n) et on
 // compresse les lignes vides. L'échappement HTML est fait par Svelte à l'affichage.
@@ -208,12 +219,12 @@ async function verifyTurnstile(token, ip) {
 	}
 }
 
-function notify(msg) {
+function notify(author, context, body) {
 	if (!NTFY_URL) return;
 	fetch(NTFY_URL, {
 		method: 'POST',
-		headers: { Title: `opengtb · ${msg.author} [${msg.topic}]`, Tags: 'speech_balloon' },
-		body: msg.body.slice(0, 500),
+		headers: { Title: `opengtb · ${author} [${context}]`, Tags: 'speech_balloon' },
+		body: body.slice(0, 500),
 		signal: AbortSignal.timeout(5000)
 	}).catch(() => {});
 }
@@ -246,10 +257,24 @@ async function handleMessages(req, res, url, id) {
 	if (req.method !== 'POST') return send(res, 405, { error: 'Méthode non autorisée.' });
 
 	const input = await readJson(req);
+	const topic = String(input.topic ?? '');
+	if (!/^[a-z0-9-]{1,30}$/.test(topic)) throw new HttpError(400, 'Sujet invalide.');
 
-	// Pot de miel : un humain ne remplit jamais ce champ invisible. On fait
-	// semblant d'accepter pour ne pas renseigner le bot.
-	if (input.website) return send(res, 201, { message: null });
+	// Pot de miel rempli : on fait semblant d'accepter pour ne pas renseigner le bot.
+	const post = await acceptPost(req, input, messageRate, stmtDuplicate);
+	if (!post) return send(res, 201, { message: null });
+
+	const message = stmtInsert.get(post.author, topic, post.body);
+	messageRate.record(post.key);
+	notify(message.author, message.topic, message.body);
+	return send(res, 201, { message });
+}
+
+// Couches anti-spam communes aux messages et aux commentaires. Renvoie null
+// si le pot de miel est rempli.
+async function acceptPost(req, input, limiter, stmtDup, ...dupArgs) {
+	// Pot de miel : un humain ne remplit jamais ce champ invisible.
+	if (input.website) return null;
 
 	// Formulaire soumis trop vite pour avoir été rempli à la main.
 	if (!(Number(input.elapsed) >= 3000)) {
@@ -257,28 +282,158 @@ async function handleMessages(req, res, url, id) {
 	}
 
 	const author = clean(input.author, { multiline: false });
-	const topic = String(input.topic ?? '');
 	const body = clean(input.body, { multiline: true });
 
 	if (author.length < 2 || author.length > 30) throw new HttpError(400, 'Pseudo : 2 à 30 caractères.');
-	if (!/^[a-z0-9-]{1,30}$/.test(topic)) throw new HttpError(400, 'Sujet invalide.');
 	if (body.length < 3 || body.length > 1000) throw new HttpError(400, 'Message : 3 à 1000 caractères.');
 	if ((body.match(LINK_RE) ?? []).length > 1) throw new HttpError(400, 'Un seul lien par message.');
 	if (HAS_LINK.test(author)) throw new HttpError(400, 'Pas de lien dans le pseudo.');
 
 	const key = ipKey(req);
-	checkRate(key);
+	limiter.check(key);
 
 	if (!(await verifyTurnstile(input.turnstileToken, clientIp(req)))) {
 		throw new HttpError(403, 'Vérification anti-robot échouée — recharge la page et réessaie.');
 	}
 
-	if (stmtDuplicate.get(body)) throw new HttpError(409, 'Ce message a déjà été publié.');
+	if (stmtDup.get(body, ...dupArgs)) throw new HttpError(409, 'Ce message a déjà été publié.');
 
-	const message = stmtInsert.get(author, topic, body);
-	recordPost(key);
-	notify(message);
-	return send(res, 201, { message });
+	return { author, body, key };
+}
+
+// ───────────────────────── commentaires d'articles ─────────────────────────
+
+db.exec(`
+	CREATE TABLE IF NOT EXISTS comments (
+		id         INTEGER PRIMARY KEY AUTOINCREMENT,
+		article    TEXT    NOT NULL,
+		author     TEXT    NOT NULL,
+		body       TEXT    NOT NULL,
+		created_at TEXT    NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ', 'now'))
+	);
+	CREATE INDEX IF NOT EXISTS comments_article ON comments (article, id);
+	CREATE TABLE IF NOT EXISTS reactions (
+		article TEXT    NOT NULL,
+		emoji   TEXT    NOT NULL,
+		count   INTEGER NOT NULL DEFAULT 0,
+		PRIMARY KEY (article, emoji)
+	);
+`);
+
+const SLUG_RE = /^[a-z0-9-]{1,80}$/;
+const COMMENTS_MAX = 500;
+
+const stmtCommentList = db.prepare(
+	'SELECT id, author, body, created_at FROM comments WHERE article = ? ORDER BY id ASC LIMIT ?'
+);
+const stmtCommentInsert = db.prepare(
+	'INSERT INTO comments (article, author, body) VALUES (?, ?, ?) RETURNING id, author, body, created_at'
+);
+const stmtCommentDuplicate = db.prepare(
+	"SELECT 1 FROM comments WHERE body = ? AND article = ? AND created_at > strftime('%Y-%m-%dT%H:%M:%fZ', 'now', '-1 day') LIMIT 1"
+);
+const stmtCommentDelete = db.prepare('DELETE FROM comments WHERE id = ?');
+
+function articleParam(value) {
+	const slug = String(value ?? '');
+	if (!SLUG_RE.test(slug)) throw new HttpError(400, 'Article invalide.');
+	return slug;
+}
+
+async function handleComments(req, res, url, id) {
+	if (id !== undefined) {
+		if (req.method !== 'DELETE') return send(res, 405, { error: 'Méthode non autorisée.' });
+		if (!isAdmin(req)) return send(res, 401, { error: 'Non autorisé.' });
+		stmtCommentDelete.run(id);
+		return send(res, 204);
+	}
+
+	if (req.method === 'GET') {
+		const article = articleParam(url.searchParams.get('article'));
+		return send(res, 200, {
+			comments: stmtCommentList.all(article, COMMENTS_MAX),
+			turnstileSiteKey: TURNSTILE_SITE_KEY || null
+		});
+	}
+
+	if (req.method !== 'POST') return send(res, 405, { error: 'Méthode non autorisée.' });
+
+	const input = await readJson(req);
+	const article = articleParam(input.article);
+
+	const post = await acceptPost(req, input, commentRate, stmtCommentDuplicate, article);
+	if (!post) return send(res, 201, { comment: null });
+
+	const comment = stmtCommentInsert.get(article, post.author, post.body);
+	commentRate.record(post.key);
+	notify(comment.author, `article:${article}`, comment.body);
+	return send(res, 201, { comment });
+}
+
+// ───────────────────────── réactions d'articles ─────────────────────────
+
+// Liste fermée : le front affiche les mêmes, dans le même ordre.
+const EMOJIS = ['👍', '🔥', '💡', '🤯', '😅'];
+
+const stmtReactionList = db.prepare('SELECT emoji, count FROM reactions WHERE article = ?');
+const stmtReactionAdd = db.prepare(
+	'INSERT INTO reactions (article, emoji, count) VALUES (?, ?, 1) ON CONFLICT (article, emoji) DO UPDATE SET count = count + 1'
+);
+const stmtReactionRemove = db.prepare(
+	'UPDATE reactions SET count = MAX(count - 1, 0) WHERE article = ? AND emoji = ?'
+);
+
+// Un vote par IP (hashée) et par emoji, mémorisé en mémoire seulement : après
+// un redémarrage on peut revoter, c'est le prix du « zéro donnée perso ».
+const reacted = new Set(); // `${ipKey}|${article}|${emoji}`
+
+// Anti-matraquage : 60 bascules / heure / IP.
+const REACTIONS_HOUR_MAX = 60;
+const reactionHits = new Map(); // ipKey → timestamps[]
+setInterval(() => {
+	const cutoff = Date.now() - HOUR;
+	for (const [k, ts] of reactionHits) {
+		const kept = ts.filter((t) => t > cutoff);
+		if (kept.length) reactionHits.set(k, kept);
+		else reactionHits.delete(k);
+	}
+}, 10 * MIN).unref();
+
+function reactionCounts(article) {
+	const counts = Object.fromEntries(EMOJIS.map((e) => [e, 0]));
+	for (const { emoji, count } of stmtReactionList.all(article)) {
+		if (emoji in counts) counts[emoji] = count;
+	}
+	return counts;
+}
+
+async function handleReactions(req, res, url) {
+	if (req.method === 'GET') {
+		return send(res, 200, { counts: reactionCounts(articleParam(url.searchParams.get('article'))) });
+	}
+	if (req.method !== 'POST') return send(res, 405, { error: 'Méthode non autorisée.' });
+
+	const input = await readJson(req, 1024);
+	const article = articleParam(input.article);
+	const emoji = String(input.emoji ?? '');
+	if (!EMOJIS.includes(emoji)) throw new HttpError(400, 'Réaction inconnue.');
+
+	const key = ipKey(req);
+	const now = Date.now();
+	const ts = (reactionHits.get(key) ?? []).filter((t) => now - t < HOUR);
+	if (ts.length >= REACTIONS_HOUR_MAX) throw new HttpError(429, 'Doucement :) Réessaie un peu plus tard.');
+	ts.push(now);
+	reactionHits.set(key, ts);
+
+	const vote = `${key}|${article}|${emoji}`;
+	if (input.on === true && !reacted.has(vote)) {
+		stmtReactionAdd.run(article, emoji);
+		reacted.add(vote);
+	} else if (input.on === false && reacted.has(vote)) {
+		stmtReactionRemove.run(article, emoji);
+		reacted.delete(vote);
+	}
+	return send(res, 200, { counts: reactionCounts(article) });
 }
 
 // ───────────────────────── routeur ─────────────────────────
@@ -290,6 +445,10 @@ createServer(async (req, res) => {
 		if (url.pathname === '/api/messages') return await handleMessages(req, res, url);
 		const m = url.pathname.match(/^\/api\/messages\/(\d+)$/);
 		if (m) return await handleMessages(req, res, url, Number(m[1]));
+		if (url.pathname === '/api/comments') return await handleComments(req, res, url);
+		const c = url.pathname.match(/^\/api\/comments\/(\d+)$/);
+		if (c) return await handleComments(req, res, url, Number(c[1]));
+		if (url.pathname === '/api/reactions') return await handleReactions(req, res, url);
 		return send(res, 404, { error: 'Introuvable.' });
 	} catch (err) {
 		if (err instanceof HttpError) return send(res, err.status, { error: err.message });

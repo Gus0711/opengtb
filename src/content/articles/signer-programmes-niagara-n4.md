@@ -1,7 +1,6 @@
 ---
 title: "Niagara N4 te sort « Program is not signed » ? Allez, on dégomme ça"
 date: "2026-06-02"
-author: "Gus"
 tags: ["niagara", "n4", "tridium", "code-signing", "gtb"]
 excerpt: "Tu compiles ton premier objet Program sur une Jace 8000 et BAM — petit point orange, « Program is not signed ». Pas de panique : c'est juste Tridium qui te demande de signer ton code. Je t'explique le pourquoi et je te déroule la procédure, station locale ET Jace distant."
 cover: "/articles/signer-programmes-niagara-n4/cover.svg"

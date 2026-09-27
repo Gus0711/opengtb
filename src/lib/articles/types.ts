@@ -1,7 +1,7 @@
 export interface ArticleFrontmatter {
 	title: string;
 	date: string;
-	author: string;
+	author?: string;
 	tags: string[];
 	excerpt: string;
 	cover?: string;

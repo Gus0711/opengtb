@@ -1,7 +1,6 @@
 ---
 title: "On a ressuscité une VMC double flux morte depuis 3 ans (tuée par une télécommande noyée)"
 date: "2026-05-20"
-author: "Gus"
 tags: ["gtb", "cvc", "distech-controls", "ecy-650", "retrofit"]
 excerpt: "Trois ans qu'une grosse VMC double flux dormait, débranchée, abandonnée. La cause du drame ? Une simple télécommande qui avait pris l'eau. On est repartis de zéro : dépose de la régul propriétaire, recâblage intégral, automate Distech ECY-650… et un redémarrage à retenir son souffle. Récit d'un rétrofit, avec ses victoires et son imprévu qui pique."
 cover: "/articles/resurrection-vmc-double-flux/cta-toiture.jpg"

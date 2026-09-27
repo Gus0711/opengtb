@@ -42,7 +42,7 @@
 		</h3>
 		<p class="m-0 text-sm leading-[1.5] text-text-soft">{article.excerpt}</p>
 		<div class="mt-2 font-mono text-[11.5px] text-text-dim">
-			{formatMonthYear(article.date)} · {article.reading_time} min · — {article.author}
+			{formatMonthYear(article.date)} · {article.reading_time} min
 		</div>
 	</div>
 
