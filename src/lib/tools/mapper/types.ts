@@ -82,9 +82,27 @@ export interface Target {
 	id: string;
 	kind: TargetKind;
 	name: string;
+	/** Superviseur destinataire ; sans objet quand la cible est intégrée par un automate. */
 	supervisorId: string | null;
 	uplink: UplinkProtocol;
 	segments: Segment[];
+}
+
+/**
+ * - `integration` : l'automate `sourceId` lit la cible `targetId` (gateway LoRa,
+ *   automate esclave). La cible intégrée remonte en supervision à travers lui.
+ * - `exchange`    : échange pair-à-pair (points partagés entre automates), non
+ *   orienté et hors de la chaîne de remontée.
+ */
+export type TargetLinkKind = 'integration' | 'exchange';
+
+/** Liaison entre deux cibles, distincte de la remontée vers la supervision. */
+export interface TargetLink {
+	id: string;
+	kind: TargetLinkKind;
+	sourceId: string;
+	targetId: string;
+	protocol: UplinkProtocol;
 }
 
 /** Niveau haut : poste de supervision local ou plateforme cloud. */
@@ -114,5 +132,7 @@ export interface MapperDocument {
 	supervisors: Supervisor[];
 	targets: Target[];
 	equipment: Equipment[];
+	/** Absent des projets antérieurs aux liaisons entre cibles. */
+	links?: TargetLink[];
 	layout?: MapperLayout;
 }

@@ -7,12 +7,13 @@
 	import { DEFAULT_MAPPER, EQUIPMENT_DEFINITIONS, EQUIPMENT_FAMILIES, POINT_COLORS, SIGNAL_PRESETS, SUPERVISOR_DEFINITIONS, SUPERVISOR_PALETTE, TARGET_DEFINITIONS, TARGET_PALETTE, UPLINK_COLOR, createEquipment, createSupervisor, createTarget, defaultSignal, ensureSegment, equipmentBus, equipmentProtocol, migrateBusAttachments, nextFreeAddress, normalizeEquipment, normalizeTarget, targetAccepts, uniqueName } from '$lib/tools/mapper/data';
 	import { defaultNodePosition, edgeColor, freeNodePosition, type MapperFlowNode } from '$lib/tools/mapper/flow';
 	import { addressProfile, isBusKind, nextFreeDeviceAddress, segmentProfile } from '$lib/tools/mapper/bus';
-	import type { EquipmentBusView, SegmentView } from '$lib/tools/mapper/flow';
+	import type { EquipmentBusView, LinkRole, LinkRowView, SegmentView } from '$lib/tools/mapper/flow';
 	import { mapperToCsv, renderMapperSvg } from '$lib/tools/mapper/render';
-	import { POINT_KINDS, type Equipment, type EquipmentKind, type GtbPoint, type MapperDocument, type MapperPosition, type MapperViewport, type PointKind, type Segment, type SegmentMedia, type SegmentParity, type Supervisor, type SupervisorKind, type Target, type TargetKind, type UplinkProtocol } from '$lib/tools/mapper/types';
+	import { POINT_KINDS, type Equipment, type EquipmentKind, type GtbPoint, type MapperDocument, type MapperPosition, type MapperViewport, type PointKind, type Segment, type SegmentMedia, type SegmentParity, type Supervisor, type SupervisorKind, type Target, type TargetKind, type TargetLink, type UplinkProtocol, UPLINK_PROTOCOLS } from '$lib/tools/mapper/types';
 	import { validateMapper } from '$lib/tools/mapper/validation';
 	import { duplicateEquipment, duplicateTarget } from '$lib/tools/mapper/duplicate';
-	import type { Connection, Edge, OnConnectStartParams } from '@xyflow/svelte';
+	import { LINK_COLOR, canConnect, defaultLinkProtocol, descendantIds, inferLink, integrationOf, migrateUpstreams, sanitizeLinks, targetsUnderSupervisor, uplinkChain } from '$lib/tools/mapper/links';
+	import { MarkerType, type Connection, type Edge, type OnConnectStartParams } from '@xyflow/svelte';
 	import AirVent from '@lucide/svelte/icons/air-vent';
 	import Box from '@lucide/svelte/icons/box';
 	import Cable from '@lucide/svelte/icons/cable';
@@ -69,6 +70,7 @@
 	let supervisors = $state<Supervisor[]>(cloneSupervisors(DEFAULT_MAPPER.supervisors));
 	let targets = $state<Target[]>(cloneTargets(DEFAULT_MAPPER.targets));
 	let equipment = $state<Equipment[]>(cloneEquipment(DEFAULT_MAPPER.equipment));
+	let links = $state<TargetLink[]>([]);
 	let positions = $state<Record<string, MapperPosition>>({});
 	let viewport = $state<MapperViewport>({ x: 32, y: 32, zoom: 0.75 });
 	let nodes = $state.raw<MapperFlowNode[]>([]);
@@ -79,6 +81,7 @@
 	let inspectorPointId = $state<string | null>(null);
 	let connectingPointId = $state<string | null>(null);
 	let connectingTargetId = $state<string | null>(null);
+	let connectingPeerId = $state<string | null>(null);
 	let expanded = $state(false);
 	let paletteOpen = $state(false);
 	let search = $state('');
@@ -94,7 +97,7 @@
 	let connectionEndTimer: ReturnType<typeof setTimeout> | null = null;
 	let connectionStartedFrom: OnConnectStartParams['handleType'] = null;
 
-	const mapperDocument = $derived<MapperDocument>({ version: 1, title: title.trim() || 'Architecture GTB', supervisors, targets, equipment, layout: { positions, viewport } });
+	const mapperDocument = $derived<MapperDocument>({ version: 1, title: title.trim() || 'Architecture GTB', supervisors, targets, equipment, links, layout: { positions, viewport } });
 	const exportSvg = $derived(renderMapperSvg(mapperDocument));
 	const allPoints = $derived(equipment.flatMap((item) => item.points.map((point) => ({ equipment: item, point }))));
 	const pointCount = $derived(allPoints.length);
@@ -116,20 +119,29 @@
 	});
 	const allSegments = $derived(targets.flatMap((target) => target.segments.map((segment) => ({ segment, target }))));
 	const connectingPoint = $derived(connectingPointId ? allPoints.find(({ point }) => point.id === connectingPointId)?.point ?? null : null);
-	const connectionColor = $derived(connectingPoint ? edgeColor(connectingPoint.kind) : '#2dd4bf');
+	const connectionColor = $derived(connectingPoint ? edgeColor(connectingPoint.kind) : connectingPeerId ? LINK_COLOR : '#2dd4bf');
 	const pointEdges = $derived<Edge[]>(allPoints.filter(({ point }) => point.targetId).map(({ equipment: item, point }) => {
 		const active = isConnectionActive(item.id, point);
 		return { id: `edge-${point.id}`, source: item.id, target: point.targetId!, sourceHandle: point.id, targetHandle: point.id,
 			 type: ['MODBUS', 'BACNET', 'MBUS', 'LORA'].includes(point.kind) ? 'smoothstep' : 'default', animated: ['MODBUS', 'BACNET', 'MBUS', 'LORA'].includes(point.kind), selectable: false,
 			style: `stroke:${edgeColor(point.kind)};stroke-width:${active ? 2.5 : 1.25};opacity:${active ? .9 : .12}` };
 	}));
-	const uplinkEdges = $derived<Edge[]>(targets.filter((target) => target.supervisorId && supervisors.some((item) => item.id === target.supervisorId)).map((target) => {
+	const uplinkEdges = $derived<Edge[]>(targets.filter((target) => target.supervisorId && !integrationOf(links, target.id) && supervisors.some((item) => item.id === target.supervisorId)).map((target) => {
 		const active = isUplinkActive(target);
 		return { id: `uplink-${target.id}`, source: target.id, target: target.supervisorId!, sourceHandle: 'uplink', targetHandle: target.id,
 			type: 'smoothstep', animated: true, selectable: false, label: target.uplink, labelShowBg: false, labelStyle: `fill:${UPLINK_COLOR};font-family:var(--font-mono);font-size:9px;opacity:${active ? 1 : .15}`,
 			style: `stroke:${UPLINK_COLOR};stroke-width:${active ? 3 : 1.5};opacity:${active ? .95 : .12}` };
 	}));
-	const edges = $derived<Edge[]>([...pointEdges, ...uplinkEdges]);
+	// Intégration : fléchée de la cible lue vers l'automate qui la lit. Échange : pointillé, sans sens.
+	const linkEdges = $derived<Edge[]>(links.map((link) => {
+		const active = isLinkActive(link);
+		const integration = link.kind === 'integration';
+		return { id: `link-${link.id}`, source: integration ? link.targetId : link.sourceId, target: integration ? link.sourceId : link.targetId, sourceHandle: 'peer', targetHandle: 'input',
+			type: 'smoothstep', selectable: false, label: link.protocol, labelShowBg: false, labelStyle: `fill:${LINK_COLOR};font-family:var(--font-mono);font-size:9px;opacity:${active ? 1 : .15}`,
+			markerEnd: integration ? { type: MarkerType.ArrowClosed, color: LINK_COLOR, width: 16, height: 16 } : undefined,
+			style: `stroke:${LINK_COLOR};stroke-width:${active ? 2.5 : 1.25};${integration ? '' : 'stroke-dasharray:6 4;'}opacity:${active ? .9 : .12}` };
+	}));
+	const edges = $derived<Edge[]>([...pointEdges, ...uplinkEdges, ...linkEdges]);
 	const filteredPoints = $derived.by(() => {
 		const needle = search.trim().toLocaleLowerCase('fr');
 		return allPoints.filter(({ equipment: item, point }) => {
@@ -147,7 +159,7 @@
 	function cloneSupervisors(items: Supervisor[]) { return items.map((item) => ({ ...item })); }
 	function cloneEquipment(items: Equipment[]) { return items.map((item) => normalizeEquipment({ ...item, points: item.points.map((point) => ({ ...point })) })); }
 	function harvestPositions() { if (nodes.length) positions = Object.fromEntries(nodes.map((node) => [node.id, { ...node.position }])); }
-	function projectSnapshot(): string { harvestPositions(); return JSON.stringify({ version: 1, title, supervisors, targets, equipment, layout: { positions, viewport } } satisfies MapperDocument); }
+	function projectSnapshot(): string { harvestPositions(); return JSON.stringify({ version: 1, title, supervisors, targets, equipment, links, layout: { positions, viewport } } satisfies MapperDocument); }
 	function persist() { if (browser) localStorage.setItem(STORAGE_KEY, projectSnapshot()); }
 	function flash(message: string) { notification = message; setTimeout(() => { if (notification === message) notification = ''; }, 2200); }
 
@@ -164,6 +176,10 @@
 		supervisors = cloneSupervisors(migrated.supervisors);
 		targets = migrated.targets;
 		equipment = migrated.equipment;
+		// Les projets de la première version portaient la remontée vers un automate sur la cible.
+		links = sanitizeLinks(migrateUpstreams(project.targets, project.links), targets, UPLINK_PROTOCOLS);
+		// Une cible intégrée remonte par son automate : un superviseur direct serait un doublon.
+		targets = targets.map((item) => integrationOf(links, item.id) ? { ...item, supervisorId: null } : item);
 		positions = { ...(project.layout?.positions ?? {}) };
 		viewport = { ...(project.layout?.viewport ?? { x: 32, y: 32, zoom: 0.75 }) };
 		fitInitial = !project.layout?.viewport;
@@ -193,7 +209,7 @@
 		const equipmentNodes: MapperFlowNode[] = equipment.map((item, index) => ({ id: item.id, type: 'equipment', position: positions[item.id] ?? current.get(item.id)?.position ?? defaultNodePosition('equipment', index), dragHandle: '.node-drag-handle', selected: current.get(item.id)?.selected ?? false,
 			data: { kind: 'equipment', item, active: isEquipmentActive(item), bulkTargets: targets.filter((target) => item.points.length > 0 && item.points.every((point) => targetAccepts(target.kind, point.kind))), selectedPointId: inspectorPointId, onFocus: focusEquipment, onRename: updateEquipment, onRemove: removeEquipment, onDuplicate: duplicateEquipmentNode, onOpenPoint: openPoint, onClosePoint: closePoint, onRemovePoint: removePoint, onAddPoint: addPoint, onChangePointKind: changePointKind, onUpdatePoint: updatePoint, onUnassignPoint: unassignPoint, onSelectConnection: selectPointConnection, onAssignAll: assignAllPoints, bus: equipmentBusView(item), onAttachSegment: attachSegment, onSetDeviceAddress: setDeviceAddress } }));
 		const targetNodes: MapperFlowNode[] = targets.map((item, index) => ({ id: item.id, type: 'target', position: positions[item.id] ?? current.get(item.id)?.position ?? defaultNodePosition('target', index), dragHandle: '.node-drag-handle', selected: current.get(item.id)?.selected ?? false,
-			data: { kind: 'target', item, ...targetPointGroups(item), supervisors, supervisor: supervisors.find((entry) => entry.id === item.supervisorId) ?? null, active: isTargetActive(item), onFocus: focusTarget, onRename: updateTarget, onRemove: removeTarget, onDuplicate: duplicateTargetNode, onOpenPoint: openPoint, onConnectPending: connectPendingPoint, onAssignSupervisor: assignSupervisor, onSetUplink: setUplink, onSelectUplink: selectUplinkConnection, onUpdateSegment: updateSegment, onRemoveSegment: removeSegment } }));
+			data: { kind: 'target', item, ...targetPointGroups(item), supervisors, supervisor: supervisors.find((entry) => entry.id === item.supervisorId) ?? null, ...targetLinkGroups(item), active: isTargetActive(item), onFocus: focusTarget, onRename: updateTarget, onRemove: removeTarget, onDuplicate: duplicateTargetNode, onOpenPoint: openPoint, onConnectPending: connectPendingPoint, onAssignSupervisor: assignSupervisor, onSetUplink: setUplink, onSelectUplink: selectUplinkConnection, onSelectPeer: selectPeerConnection, onSetLinkProtocol: setLinkProtocol, onSetLinkRole: setLinkRole, onRemoveLink: removeLink, onUpdateSegment: updateSegment, onRemoveSegment: removeSegment } }));
 		const supervisorNodes: MapperFlowNode[] = supervisors.map((item, index) => ({ id: item.id, type: 'supervisor', position: positions[item.id] ?? current.get(item.id)?.position ?? defaultNodePosition('supervisor', index), dragHandle: '.node-drag-handle', selected: current.get(item.id)?.selected ?? false,
 			data: { kind: 'supervisor', item, uplinks: targets.filter((target) => target.supervisorId === item.id), active: isSupervisorActive(item), onFocus: focusSupervisor, onFocusTarget: focusTarget, onRename: updateSupervisor, onRemove: removeSupervisor, onConnectPending: connectPendingUplink } }));
 		nodes = [...equipmentNodes, ...targetNodes, ...supervisorNodes];
@@ -210,6 +226,26 @@
 			orphanNetwork: assigned.filter(({ point }) => isBusKind(point.kind) && !grouped.has(point.id))
 		};
 	}
+	function targetLinkGroups(item: Target): { integratedBy: Target | null; links: LinkRowView[] } {
+		const reader = integrationOf(links, item.id)?.sourceId;
+		return {
+			integratedBy: targets.find((entry) => entry.id === reader) ?? null,
+			links: links.flatMap((link) => {
+				const otherId = link.sourceId === item.id ? link.targetId : link.targetId === item.id ? link.sourceId : null;
+				const other = otherId ? targets.find((entry) => entry.id === otherId) : undefined;
+				if (!other) return [];
+				const role: LinkRole = link.kind === 'exchange' ? 'exchange' : link.sourceId === item.id ? 'reads' : 'read-by';
+				const roles = (['reads', 'read-by', 'exchange'] as const).filter((candidate) => candidate === role || canConnect(targets, links, ...linkForRole(item.id, other.id, candidate), link.id));
+				return [{ link, other, role, roles }];
+			})
+		};
+	}
+	/** Traduit un rôle vu depuis `selfId` en type et sens de liaison. */
+	function linkForRole(selfId: string, otherId: string, role: LinkRole): [TargetLink['kind'], string, string] {
+		if (role === 'reads') return ['integration', selfId, otherId];
+		if (role === 'read-by') return ['integration', otherId, selfId];
+		return ['exchange', selfId, otherId];
+	}
 	function setFocus(next: FocusState) { focus = next; syncNodes(); }
 	function focusEquipment(id: string) { setFocus({ type: 'equipment', id }); }
 	function focusTarget(id: string) { setFocus({ type: 'target', id }); }
@@ -218,17 +254,37 @@
 	function addSupervisor(kind: SupervisorKind) { commit(() => { const item = createSupervisor(kind, `${kind}-${nextId++}`, uniqueName(SUPERVISOR_DEFINITIONS[kind].defaultName, supervisors.map((entry) => entry.name))); positions[item.id] = freeNodePosition('supervisor', Object.values(positions)); supervisors = [...supervisors, item]; focus = { type: 'supervisor', id: item.id }; }); }
 	function updateSupervisor(id: string, name: string) { supervisors = supervisors.map((item) => item.id === id ? { ...item, name } : item); syncNodes(); persist(); }
 	function removeSupervisor(id: string) { commit(() => { supervisors = supervisors.filter((item) => item.id !== id); targets = targets.map((item) => item.supervisorId === id ? { ...item, supervisorId: null } : item); delete positions[id]; if (focus?.id === id) focus = null; }); }
-	function assignSupervisor(targetId: string, supervisorId: string) { commit(() => targets = targets.map((item) => item.id === targetId ? { ...item, supervisorId: supervisorId || null } : item)); }
+	function assignSupervisor(targetId: string, supervisorId: string) { if (integrationOf(links, targetId)) return; commit(() => targets = targets.map((item) => item.id === targetId ? { ...item, supervisorId: supervisorId || null } : item)); }
 	function setUplink(targetId: string, protocol: UplinkProtocol) { commit(() => targets = targets.map((item) => item.id === targetId ? { ...item, uplink: protocol } : item)); }
-	function selectUplinkConnection(targetId: string) { clearConnectionEndTimer(); connectingPointId = null; connectingTargetId = targetId; }
+	function selectUplinkConnection(targetId: string) { clearConnectionEndTimer(); connectingPointId = null; connectingPeerId = null; connectingTargetId = targetId; }
+	function selectPeerConnection(targetId: string) { clearConnectionEndTimer(); connectingPointId = null; connectingTargetId = null; connectingPeerId = targetId; }
+	/** Une cible intégrée remonte par son automate : on lui retire son superviseur direct. */
+	function detachIntegrated() { targets = targets.map((item) => item.supervisorId && integrationOf(links, item.id) ? { ...item, supervisorId: null } : item); }
+	function addLink(fromId: string, toId: string) {
+		const inferred = inferLink(targets, links, fromId, toId);
+		if (!inferred) { flash('Ces deux cibles sont déjà reliées'); return; }
+		commit(() => { links = [...links, { id: makeId('link'), ...inferred, protocol: defaultLinkProtocol(targets, inferred) }]; detachIntegrated(); });
+		flash(inferred.kind === 'integration' ? `${targetName(inferred.sourceId)} intègre ${targetName(inferred.targetId)}` : `${targetName(fromId)} ⇄ ${targetName(toId)}`);
+	}
+	function setLinkProtocol(linkId: string, protocol: UplinkProtocol) { commit(() => links = links.map((link) => link.id === linkId ? { ...link, protocol } : link)); }
+	function setLinkRole(linkId: string, selfId: string, role: LinkRole) {
+		const link = links.find((entry) => entry.id === linkId);
+		if (!link) return;
+		const [kind, sourceId, targetId] = linkForRole(selfId, link.sourceId === selfId ? link.targetId : link.sourceId, role);
+		if (!canConnect(targets, links, kind, sourceId, targetId, linkId)) return;
+		commit(() => { links = links.map((entry) => entry.id === linkId ? { ...entry, kind, sourceId, targetId } : entry); detachIntegrated(); });
+	}
+	function removeLink(linkId: string) { commit(() => links = links.filter((link) => link.id !== linkId)); }
+	/** Retire les liaisons qui visaient des cibles supprimées. */
+	function forgetTargets(removed: Set<string>) { if (removed.size) links = links.filter((link) => !removed.has(link.sourceId) && !removed.has(link.targetId)); }
 	function connectPendingUplink(supervisorId: string) { clearConnectionEndTimer(); const pending = connectingTargetId; connectingTargetId = null; if (!pending || !supervisors.some((item) => item.id === supervisorId)) return; assignSupervisor(pending, supervisorId); }
 
 	function addTarget(kind: TargetKind) { commit(() => { const item = createTarget(kind, `${kind}-${nextId++}`, uniqueName(TARGET_DEFINITIONS[kind].defaultName, targets.map((entry) => entry.name))); positions[item.id] = freeNodePosition('target', Object.values(positions)); targets = [...targets, item]; focus = { type: 'target', id: item.id }; }); }
 	function updateTarget(id: string, name: string) { targets = targets.map((item) => item.id === id ? { ...item, name } : item); syncNodes(); persist(); }
-	function removeTarget(id: string) { commit(() => { const orphans = new Set(targets.find((item) => item.id === id)?.segments.map((segment) => segment.id) ?? []); targets = targets.filter((item) => item.id !== id); equipment = equipment.map((item) => ({ ...item, points: item.points.map((point) => point.targetId === id ? { ...point, targetId: null, address: '' } : point) })); detachOrphans(orphans); delete positions[id]; if (focus?.id === id) focus = null; }); }
+	function removeTarget(id: string) { commit(() => { const orphans = new Set(targets.find((item) => item.id === id)?.segments.map((segment) => segment.id) ?? []); targets = targets.filter((item) => item.id !== id); forgetTargets(new Set([id])); equipment = equipment.map((item) => ({ ...item, points: item.points.map((point) => point.targetId === id ? { ...point, targetId: null, address: '' } : point) })); detachOrphans(orphans); delete positions[id]; if (focus?.id === id) focus = null; }); }
 	/** Identifiant libre : le compteur repart d'une base arbitraire apres un rechargement, on verifie donc les collisions. */
 	function makeId(prefix: string) {
-		const used = new Set([...supervisors.map((item) => item.id), ...targets.flatMap((item) => [item.id, ...item.segments.map((segment) => segment.id)]), ...equipment.flatMap((item) => [item.id, ...item.points.map((point) => point.id)])]);
+		const used = new Set([...supervisors.map((item) => item.id), ...targets.flatMap((item) => [item.id, ...item.segments.map((segment) => segment.id)]), ...links.map((link) => link.id), ...equipment.flatMap((item) => [item.id, ...item.points.map((point) => point.id)])]);
 		let id = `${prefix}-${nextId++}`;
 		while (used.has(id)) id = `${prefix}-${nextId++}`;
 		return id;
@@ -242,8 +298,11 @@
 	function duplicateTargetNode(id: string) {
 		const result = duplicateTarget({ targets, equipment }, id, makeId);
 		if (!result) return;
+		const integration = integrationOf(links, id);
 		commit(() => {
 			targets = result.targets; equipment = result.equipment;
+			// Une gateway lue par un automate l'est aussi une fois dupliquée.
+			if (integration) links = [...links, { ...integration, id: makeId('link'), targetId: result.copy.id }];
 			positions[result.copy.id] = freeNodePosition('target', Object.values(positions));
 			for (const item of result.equipmentCopies) positions[item.id] = freeNodePosition('equipment', Object.values(positions));
 			focus = { type: 'target', id: result.copy.id };
@@ -362,12 +421,19 @@
 		const host = allSegments.find((entry) => entry.segment.id === segmentId);
 		if (host) attachToSegment(equipmentId, host.target.id);
 	}
-	function targetsOf(supervisorId: string) { return targets.filter((item) => item.supervisorId === supervisorId).map((item) => item.id); }
+	function targetsOf(supervisorId: string) { return targetsUnderSupervisor(targets, links, supervisorId); }
+	/** Cibles voisines d'une cible focalisée : les automates qui l'intègrent, ce qu'elle intègre, ses pairs. */
+	function relatedTargets(targetId: string) {
+		const related = new Set([...uplinkChain(targets, links, targetId).chain.map((item) => item.id), ...descendantIds(links, targetId)]);
+		for (const link of links) { if (link.sourceId === targetId) related.add(link.targetId); if (link.targetId === targetId) related.add(link.sourceId); }
+		return related;
+	}
+	function isLinkActive(link: TargetLink) { const current = focus; if (!current) return true; if (current.type === 'target') return link.sourceId === current.id || link.targetId === current.id; if (current.type === 'supervisor') { const linked = targetsOf(current.id); return linked.includes(link.sourceId) || linked.includes(link.targetId); } return false; }
 	function isConnectionActive(equipmentId: string, point: GtbPoint) { const current = focus; return !current || (current.type === 'point' && point.id === current.id) || (current.type === 'equipment' && equipmentId === current.id) || (current.type === 'target' && point.targetId === current.id) || (current.type === 'supervisor' && targetsOf(current.id).includes(point.targetId ?? '')); }
 	function isEquipmentActive(item: Equipment) { const current = focus; return !current || (current.type === 'target' && item.points.some((point) => point.targetId === current.id)) || (current.type === 'equipment' && current.id === item.id) || (current.type === 'point' && item.points.some((point) => point.id === current.id)) || (current.type === 'supervisor' && item.points.some((point) => targetsOf(current.id).includes(point.targetId ?? ''))); }
-	function isTargetActive(target: Target) { const current = focus; return !current || (current.type === 'equipment' && equipment.find((item) => item.id === current.id)?.points.some((point) => point.targetId === target.id) === true) || (current.type === 'target' && current.id === target.id) || (current.type === 'supervisor' && target.supervisorId === current.id) || (current.type === 'point' && allPoints.some(({ point }) => point.id === current.id && point.targetId === target.id)); }
+	function isTargetActive(target: Target) { const current = focus; return !current || (current.type === 'equipment' && equipment.find((item) => item.id === current.id)?.points.some((point) => point.targetId === target.id) === true) || (current.type === 'target' && relatedTargets(current.id).has(target.id)) || (current.type === 'supervisor' && targetsOf(current.id).includes(target.id)) || (current.type === 'point' && allPoints.some(({ point }) => point.id === current.id && point.targetId === target.id)); }
 	function isSupervisorActive(supervisor: Supervisor) { const current = focus; if (!current) return true; const linked = targetsOf(supervisor.id); if (current.type === 'supervisor') return current.id === supervisor.id; if (current.type === 'target') return linked.includes(current.id); if (current.type === 'equipment') return equipment.find((item) => item.id === current.id)?.points.some((point) => linked.includes(point.targetId ?? '')) === true; return allPoints.some(({ point }) => point.id === current.id && linked.includes(point.targetId ?? '')); }
-	function isUplinkActive(target: Target) { const current = focus; if (!current) return true; if (current.type === 'target') return current.id === target.id; if (current.type === 'supervisor') return target.supervisorId === current.id; if (current.type === 'equipment') return equipment.find((item) => item.id === current.id)?.points.some((point) => point.targetId === target.id) === true; return allPoints.some(({ point }) => point.id === current.id && point.targetId === target.id); }
+	function isUplinkActive(target: Target) { const current = focus; if (!current) return true; if (current.type === 'target') return relatedTargets(current.id).has(target.id); if (current.type === 'supervisor') return targetsOf(current.id).includes(target.id); if (current.type === 'equipment') return equipment.find((item) => item.id === current.id)?.points.some((point) => point.targetId === target.id) === true; return allPoints.some(({ point }) => point.id === current.id && point.targetId === target.id); }
 	function findPoint(id: string) { for (const item of equipment) { const point = item.points.find((entry) => entry.id === id); if (point) return { equipment: item, point }; } return null; }
 	function resolveConnection(connection: Connection | Edge) {
 		const fromSource = connection.sourceHandle ? findPoint(connection.sourceHandle) : null;
@@ -376,9 +442,17 @@
 		if (fromTarget && targets.some((item) => item.id === connection.source)) return { ...fromTarget, targetId: connection.source };
 		return null;
 	}
-	function resolveUplink(connection: Connection | Edge) { if (connection.sourceHandle !== 'uplink') return null; const target = targets.find((item) => item.id === connection.source); const supervisor = supervisors.find((item) => item.id === connection.target); return target && supervisor ? { target, supervisor } : null; }
+	/** Remontée glissée depuis le port « uplink » : vers un superviseur uniquement. */
+	function resolveUplink(connection: Connection | Edge) {
+		if (connection.sourceHandle !== 'uplink') return null;
+		const target = targets.find((item) => item.id === connection.source);
+		const supervisor = supervisors.find((item) => item.id === connection.target);
+		return target && supervisor && !integrationOf(links, target.id) ? { target, supervisor } : null;
+	}
+	function resolvePeer(connection: Connection | Edge) { if (connection.sourceHandle !== 'peer') return null; return inferLink(targets, links, connection.source, connection.target) ? { a: connection.source, b: connection.target } : null; }
 	function connectionIsValid(connection: Connection | Edge) {
-		if (resolveUplink(connection)) return true;
+		if (connection.sourceHandle === 'uplink') return Boolean(resolveUplink(connection));
+		if (connection.sourceHandle === 'peer') return Boolean(resolvePeer(connection));
 		const resolved = resolveConnection(connection);
 		const target = resolved ? targets.find((item) => item.id === resolved.targetId) : null;
 		if (!resolved || !target || !targetAccepts(target.kind, resolved.point.kind)) return false;
@@ -387,12 +461,17 @@
 		if (isBusKind(resolved.point.kind) !== Boolean(required)) return false;
 		return true;
 	}
-	function connectPoint(connection: Connection) { const uplink = resolveUplink(connection); if (uplink) { assignSupervisor(uplink.target.id, uplink.supervisor.id); return; } const resolved = resolveConnection(connection); if (resolved && connectionIsValid(connection)) assignTarget(resolved.equipment.id, resolved.point, resolved.targetId); }
+	function connectPoint(connection: Connection) { const uplink = resolveUplink(connection); if (uplink) { assignSupervisor(uplink.target.id, uplink.supervisor.id); return; } const peer = resolvePeer(connection); if (peer) { addLink(peer.a, peer.b); return; } const resolved = resolveConnection(connection); if (resolved && connectionIsValid(connection)) assignTarget(resolved.equipment.id, resolved.point, resolved.targetId); }
 	function clearConnectionEndTimer() { if (connectionEndTimer) clearTimeout(connectionEndTimer); connectionEndTimer = null; }
 	function selectPointConnection(pointId: string) { clearConnectionEndTimer(); connectingTargetId = null; connectingPointId = pointId; }
-	function connectPendingPoint(targetId: string) { clearConnectionEndTimer(); const record = connectingPointId ? findPoint(connectingPointId) : null; const target = targets.find((item) => item.id === targetId); if (record && target && targetAccepts(target.kind, record.point.kind)) assignTarget(record.equipment.id, record.point, targetId); connectingPointId = null; }
-	function startConnection(params: OnConnectStartParams) { clearConnectionEndTimer(); connectionStartedFrom = params.handleType; if (params.handleId === 'uplink') { connectingPointId = null; connectingTargetId = params.nodeId; return; } if (params.handleType === 'source') connectingPointId = params.handleId; }
-	function endConnection() { clearConnectionEndTimer(); if (connectionStartedFrom === 'target' && connectingPointId) return; connectionEndTimer = setTimeout(() => { connectingPointId = null; connectingTargetId = null; connectionEndTimer = null; }, 0); }
+	function connectPendingPoint(targetId: string) {
+		clearConnectionEndTimer();
+		// Mode « Lier » : le clic sur la carte choisit l'autre extrémité. Une remontée ne vise qu'un superviseur.
+		if (connectingTargetId) { connectingTargetId = null; return; }
+		if (connectingPeerId) { const from = connectingPeerId; connectingPeerId = null; addLink(from, targetId); return; }
+		const record = connectingPointId ? findPoint(connectingPointId) : null; const target = targets.find((item) => item.id === targetId); if (record && target && targetAccepts(target.kind, record.point.kind)) assignTarget(record.equipment.id, record.point, targetId); connectingPointId = null; }
+	function startConnection(params: OnConnectStartParams) { clearConnectionEndTimer(); connectionStartedFrom = params.handleType; if (params.handleId === 'uplink') { connectingPointId = null; connectingPeerId = null; connectingTargetId = params.nodeId; return; } if (params.handleId === 'peer') { connectingPointId = null; connectingTargetId = null; connectingPeerId = params.nodeId; return; } if (params.handleType === 'source') connectingPointId = params.handleId; }
+	function endConnection() { clearConnectionEndTimer(); if (connectionStartedFrom === 'target' && connectingPointId) return; connectionEndTimer = setTimeout(() => { connectingPointId = null; connectingTargetId = null; connectingPeerId = null; connectionEndTimer = null; }, 0); }
 	function startNodeDrag() { dragSnapshot = projectSnapshot(); }
 	function stopNodeDrag(dragged: MapperFlowNode[]) {
 		for (const node of dragged) {
@@ -405,7 +484,7 @@
 		dragSnapshot = '';
 	}
 	function deleteNodes(ids: string[]) { if (!ids.length) return; commit(() => { const removedTargets = new Set(targets.filter((item) => ids.includes(item.id)).map((item) => item.id));
-		const orphanSegments = new Set(targets.filter((item) => ids.includes(item.id)).flatMap((item) => item.segments.map((segment) => segment.id))); const removedSupervisors = new Set(supervisors.filter((item) => ids.includes(item.id)).map((item) => item.id)); supervisors = supervisors.filter((item) => !ids.includes(item.id)); targets = targets.filter((item) => !ids.includes(item.id)).map((item) => removedSupervisors.has(item.supervisorId ?? '') ? { ...item, supervisorId: null } : item); equipment = equipment.filter((item) => !ids.includes(item.id)).map((item) => ({ ...item, points: item.points.map((point) => removedTargets.has(point.targetId ?? '') ? { ...point, targetId: null, address: '' } : point) })); detachOrphans(orphanSegments); for (const id of ids) delete positions[id]; focus = null; }); }
+		const orphanSegments = new Set(targets.filter((item) => ids.includes(item.id)).flatMap((item) => item.segments.map((segment) => segment.id))); const removedSupervisors = new Set(supervisors.filter((item) => ids.includes(item.id)).map((item) => item.id)); supervisors = supervisors.filter((item) => !ids.includes(item.id)); targets = targets.filter((item) => !ids.includes(item.id)).map((item) => removedSupervisors.has(item.supervisorId ?? '') ? { ...item, supervisorId: null } : item); forgetTargets(removedTargets); equipment = equipment.filter((item) => !ids.includes(item.id)).map((item) => ({ ...item, points: item.points.map((point) => removedTargets.has(point.targetId ?? '') ? { ...point, targetId: null, address: '' } : point) })); detachOrphans(orphanSegments); for (const id of ids) delete positions[id]; focus = null; }); }
 	function targetName(id: string | null) { return targets.find((target) => target.id === id)?.name ?? 'Non affecté'; }
 	function showPoints(status: StatusFilter = 'all') { view = 'points'; statusFilter = status; kindFilter = 'all'; search = ''; }
 	function compatibleTargets(point: GtbPoint) { return targets.filter((target) => targetAccepts(target.kind, point.kind)); }
@@ -420,7 +499,7 @@
 		const count = issueMap.get(id)?.length ?? 0;
 		return count === 0 ? 'conforme' : `${count} alerte${count === 1 ? '' : 's'}`;
 	}
-	function reset() { commit(() => { title = DEFAULT_MAPPER.title; supervisors = cloneSupervisors(DEFAULT_MAPPER.supervisors); targets = cloneTargets(DEFAULT_MAPPER.targets); equipment = cloneEquipment(DEFAULT_MAPPER.equipment); positions = {}; viewport = { x: 32, y: 32, zoom: 0.75 }; fitInitial = true; canvasKey += 1; focus = null; inspectorPointId = null; }); flash('Projet réinitialisé'); }
+	function reset() { commit(() => { title = DEFAULT_MAPPER.title; supervisors = cloneSupervisors(DEFAULT_MAPPER.supervisors); targets = cloneTargets(DEFAULT_MAPPER.targets); equipment = cloneEquipment(DEFAULT_MAPPER.equipment); links = []; positions = {}; viewport = { x: 32, y: 32, zoom: 0.75 }; fitInitial = true; canvasKey += 1; focus = null; inspectorPointId = null; }); flash('Projet réinitialisé'); }
 	function download(content: string, name: string, type: string) { const blob = new Blob([content], { type }); const url = URL.createObjectURL(blob); const anchor = document.createElement('a'); anchor.href = url; anchor.download = name; document.body.appendChild(anchor); anchor.click(); anchor.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000); }
 	function filename(extension: string) { const base = title.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''); return `${base || 'architecture-gtb'}.${extension}`; }
 	function exportProject() { download(projectSnapshot(), filename('json'), 'application/json;charset=utf-8'); }
@@ -531,7 +610,7 @@
 							</section>
 						</div>
 					</aside>
-					<div class="canvas-frame">{#if canvasReady}{#key canvasKey}<MapperCanvas bind:nodes {edges} {fitInitial} {connectionColor} connectionKind={connectingPoint?.kind ?? null} connectionUplink={connectingTargetId !== null} initialViewport={viewport} onConnect={connectPoint} onValidateConnection={connectionIsValid} onConnectionStart={startConnection} onConnectionEnd={endConnection} onClearFocus={() => setFocus(null)} onDragStart={startNodeDrag} onDragStop={stopNodeDrag} onDeleteNodes={deleteNodes} onViewportChange={(next) => { viewport = next; persist(); }} />{/key}{/if}</div>
+					<div class="canvas-frame">{#if canvasReady}{#key canvasKey}<MapperCanvas bind:nodes {edges} {fitInitial} {connectionColor} connectionKind={connectingPoint?.kind ?? null} connectionUplink={connectingTargetId !== null} connectionPeer={connectingPeerId !== null} initialViewport={viewport} onConnect={connectPoint} onValidateConnection={connectionIsValid} onConnectionStart={startConnection} onConnectionEnd={endConnection} onClearFocus={() => setFocus(null)} onDragStart={startNodeDrag} onDragStop={stopNodeDrag} onDeleteNodes={deleteNodes} onViewportChange={(next) => { viewport = next; persist(); }} />{/key}{/if}</div>
 				</div>
 			</div>
 		{:else}

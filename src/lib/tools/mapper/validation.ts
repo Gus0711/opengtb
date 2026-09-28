@@ -1,5 +1,6 @@
 import { isBusKind, isValidDeviceAddress, segmentDevices, segmentProfile } from './bus';
 import { equipmentBus, targetAccepts } from './data';
+import { canIntegrate, integrationOf, uplinkChain } from './links';
 import type { MapperDocument, Segment } from './types';
 
 export type MapperIssueKind =
@@ -8,6 +9,8 @@ export type MapperIssueKind =
 	| 'incompatible'
 	| 'missing-data'
 	| 'no-supervisor'
+	| 'uplink-invalid'
+	| 'uplink-cycle'
 	| 'bus-unattached'
 	| 'bus-mismatch'
 	| 'bus-target-mismatch'
@@ -141,10 +144,24 @@ export function validateMapper(document: MapperDocument): MapperIssue[] {
 	}
 
 	// --- remontée vers la supervision ---
+	// Une cible remonte vers un superviseur, ou à travers l'automate qui l'intègre.
+	// Chaque maillon ne répond que de son propre lien : la rupture est signalée là où elle est.
 	const supervisors = new Set(document.supervisors.map((supervisor) => supervisor.id));
+	const links = document.links ?? [];
 	for (const target of document.targets) {
+		const integration = integrationOf(links, target.id);
+		const reader = integration ? targets.get(integration.sourceId) : undefined;
+		if (reader) {
+			if (!canIntegrate(reader.kind)) {
+				issues.push({ kind: 'uplink-invalid', scope: 'target', id: target.id, message: 'Une gateway LoRa ne peut pas intégrer une autre cible' });
+			} else if (uplinkChain(document.targets, links, target.id).cycle) {
+				issues.push({ kind: 'uplink-cycle', scope: 'target', id: target.id, message: 'Boucle dans la chaîne d’intégration' });
+			}
+			continue;
+		}
 		const carriesPoints = document.equipment.some((equipment) => equipment.points.some((point) => point.targetId === target.id));
-		if (!carriesPoints) continue;
+		const integratesTargets = links.some((link) => link.kind === 'integration' && link.sourceId === target.id);
+		if (!carriesPoints && !integratesTargets) continue;
 		if (!target.supervisorId || !supervisors.has(target.supervisorId)) {
 			issues.push({ kind: 'no-supervisor', scope: 'target', id: target.id, message: 'Cible non remontée en supervision' });
 		}

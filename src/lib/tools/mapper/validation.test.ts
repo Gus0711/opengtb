@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { createSegment } from './bus';
 import { validateMapper } from './validation';
-import type { Equipment, MapperDocument, Target } from './types';
+import type { Equipment, MapperDocument, Target, TargetLink } from './types';
 
 const controller: Target = { id: 'controller', kind: 'controller', name: 'Automate', supervisorId: 'scada', uplink: 'BACnet/IP', segments: [] };
 const supervisors = [{ id: 'scada', kind: 'scada', name: 'Supervision' } as const];
@@ -188,5 +188,45 @@ describe('validateMapper — supervision', () => {
 			}]
 		});
 		expect(kinds(doc)).toEqual(['no-supervisor']);
+	});
+
+	describe('intégration entre cibles', () => {
+		const gateway: Target = { id: 'gw', kind: 'lora-gateway', name: 'Gateway', supervisorId: null, uplink: 'MQTT', segments: [] };
+		const sensor: Equipment = {
+			id: 'sonde', kind: 'lora-sensor', name: 'Sonde', bus: { segmentId: 'seg-lora', address: '' },
+			points: [{ id: 'l1', name: 'T°', kind: 'LORA', signal: 'LoRaWAN', address: 'DEV-01', targetId: 'gw' }]
+		};
+		const lora = createSegment('LORA', 'lorawan', 'seg-lora', 'Réseau LoRaWAN');
+		const reads = (sourceId: string, targetId: string): TargetLink => ({ id: `${sourceId}-${targetId}`, kind: 'integration', sourceId, targetId, protocol: 'Modbus TCP' });
+
+		it('accepte une gateway intégrée par un automate lui-même supervisé', () => {
+			const doc = document({ targets: [{ ...controller }, { ...gateway, segments: [lora] }], equipment: [sensor], links: [reads('controller', 'gw')] });
+			expect(kinds(doc)).toEqual([]);
+		});
+
+		it('signale l’automate intégrateur non supervisé, même sans point propre', () => {
+			const doc = document({ targets: [{ ...controller, supervisorId: null }, { ...gateway, segments: [lora] }], equipment: [sensor], links: [reads('controller', 'gw')] });
+			expect(validateMapper(doc)).toEqual([
+				{ kind: 'no-supervisor', scope: 'target', id: 'controller', message: 'Cible non remontée en supervision' }
+			]);
+		});
+
+		it('un simple échange ne remonte pas la cible en supervision', () => {
+			const exchange: TargetLink = { ...reads('controller', 'gw'), kind: 'exchange' };
+			const doc = document({ targets: [{ ...controller }, { ...gateway, segments: [lora] }], equipment: [sensor], links: [exchange] });
+			expect(kinds(doc)).toEqual(['no-supervisor']);
+		});
+
+		it('refuse une gateway LoRa comme intégrateur', () => {
+			const child: Target = { ...controller, id: 'auto-2', supervisorId: null };
+			const doc = document({ targets: [{ ...controller }, { ...gateway, supervisorId: 'scada' }, child], links: [reads('gw', 'auto-2')] });
+			expect(kinds(doc)).toEqual(['uplink-invalid']);
+		});
+
+		it('signale une boucle d’intégration', () => {
+			const a: Target = { ...controller, id: 'a', supervisorId: null };
+			const b: Target = { ...controller, id: 'b', supervisorId: null };
+			expect(kinds(document({ targets: [a, b], links: [reads('a', 'b'), reads('b', 'a')] }))).toEqual(['uplink-cycle', 'uplink-cycle']);
+		});
 	});
 });

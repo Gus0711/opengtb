@@ -1,7 +1,7 @@
 import type { Node } from '@xyflow/svelte';
 import type { AddressProfile } from './bus';
 import { UPLINK_COLOR } from './data';
-import type { Equipment, GtbPoint, MapperPosition, PointKind, Segment, Supervisor, Target, UplinkProtocol } from './types';
+import type { Equipment, GtbPoint, MapperPosition, PointKind, Segment, Supervisor, Target, TargetLink, UplinkProtocol } from './types';
 
 /** Raccordement bus tel qu'affiche sur un noeud equipement. */
 export interface EquipmentBusView {
@@ -16,6 +16,24 @@ export interface EquipmentBusView {
 export interface AssignedPoint {
 	equipment: Equipment;
 	point: GtbPoint;
+}
+
+/** Role d'une liaison vu depuis une cible : elle lit l'autre, est lue par elle, ou echange. */
+export type LinkRole = 'reads' | 'read-by' | 'exchange';
+
+export const LINK_ROLE_LABELS: Record<LinkRole, string> = {
+	reads: 'Intègre',
+	'read-by': 'Intégré par',
+	exchange: 'Échange'
+};
+
+/** Liaison telle qu'affichee dans la section LIAISONS d'un noeud cible. */
+export interface LinkRowView {
+	link: TargetLink;
+	other: Target;
+	role: LinkRole;
+	/** Roles admissibles pour cette liaison, role courant compris. */
+	roles: LinkRole[];
 }
 
 /** Segment tel qu'affiche dans la section BUS d'un noeud cible, avec ses points. */
@@ -61,6 +79,9 @@ export interface TargetNodeData extends Record<string, unknown> {
 	orphanNetwork: AssignedPoint[];
 	supervisors: Supervisor[];
 	supervisor: Supervisor | null;
+	/** Automate qui lit cette cible : sa remontee passe alors par lui. */
+	integratedBy: Target | null;
+	links: LinkRowView[];
 	segments: SegmentView[];
 	active: boolean;
 	onFocus: (id: string) => void;
@@ -70,6 +91,10 @@ export interface TargetNodeData extends Record<string, unknown> {
 	onOpenPoint: (id: string) => void;
 	onConnectPending: (targetId: string) => void;
 	onAssignSupervisor: (targetId: string, supervisorId: string) => void;
+	onSelectPeer: (targetId: string) => void;
+	onSetLinkProtocol: (linkId: string, protocol: UplinkProtocol) => void;
+	onSetLinkRole: (linkId: string, targetId: string, role: LinkRole) => void;
+	onRemoveLink: (linkId: string) => void;
 	onSetUplink: (targetId: string, protocol: UplinkProtocol) => void;
 	onSelectUplink: (targetId: string) => void;
 	onUpdateSegment: (targetId: string, segmentId: string, patch: Partial<Segment>) => void;

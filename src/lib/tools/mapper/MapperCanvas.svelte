@@ -15,7 +15,9 @@
 	import EquipmentNode from './EquipmentNode.svelte';
 	import SupervisorNode from './SupervisorNode.svelte';
 	import TargetNode from './TargetNode.svelte';
+	import { UPLINK_COLOR } from './data';
 	import type { MapperFlowNode } from './flow';
+	import { LINK_COLOR } from './links';
 
 	interface Props {
 		nodes: MapperFlowNode[];
@@ -28,6 +30,7 @@
 		connectionColor: string;
 		connectionKind: string | null;
 		connectionUplink: boolean;
+		connectionPeer: boolean;
 		onDragStart: () => void;
 		onDragStop: (nodes: MapperFlowNode[]) => void;
 		onDeleteNodes: (ids: string[]) => void;
@@ -47,6 +50,7 @@
 		connectionColor,
 		connectionKind,
 		connectionUplink,
+		connectionPeer,
 		onDragStart,
 		onDragStop,
 		onDeleteNodes,
@@ -58,7 +62,7 @@
 	const nodeTypes = { equipment: EquipmentNode, target: TargetNode, supervisor: SupervisorNode };
 </script>
 
-<div class="flow-shell" data-connection-kind={connectionKind ?? undefined} data-connection-uplink={connectionUplink ? '' : undefined}>
+<div class="flow-shell" data-connection-kind={connectionKind ?? undefined} data-connection-uplink={connectionUplink ? '' : undefined} data-connection-peer={connectionPeer ? '' : undefined}>
 	<SvelteFlow
 		bind:nodes
 		{edges}
@@ -103,10 +107,18 @@
 		<MiniMap pannable zoomable nodeColor={(node) => node.type === 'supervisor' ? '#5eead4' : node.type === 'target' ? '#2dd4bf' : '#64748b'} maskColor="rgba(4, 8, 11, .72)" />
 		<Controls position="bottom-left" />
 	</SvelteFlow>
+	<ul class="legend" aria-label="Légende des liaisons">
+		<li><svg width="26" height="8" aria-hidden="true"><line x1="0" y1="4" x2="26" y2="4" stroke={UPLINK_COLOR} stroke-width="2.5" /></svg>Supervision</li>
+		<li><svg width="26" height="8" aria-hidden="true"><line x1="0" y1="4" x2="20" y2="4" stroke={LINK_COLOR} stroke-width="2.5" /><path d="M19 0L26 4L19 8z" fill={LINK_COLOR} /></svg>Intégration</li>
+		<li><svg width="26" height="8" aria-hidden="true"><line x1="0" y1="4" x2="26" y2="4" stroke={LINK_COLOR} stroke-width="2.5" stroke-dasharray="5 3" /></svg>Échange</li>
+		<li><svg width="26" height="8" aria-hidden="true"><line x1="0" y1="4" x2="26" y2="4" stroke="#64748b" stroke-width="2" /></svg>Points</li>
+	</ul>
 </div>
 
 <style>
-	.flow-shell { width: 100%; height: 100%; background: #090d10; }
+	.flow-shell { position: relative; width: 100%; height: 100%; background: #090d10; }
+	.legend { position: absolute; top: 10px; left: 10px; z-index: 5; display: flex; flex-wrap: wrap; gap: 4px 12px; border: 1px solid #28343b; border-radius: 4px; background: rgba(14, 21, 25, .88); padding: 6px 10px; color: #94a3b8; font: 9px var(--font-mono); pointer-events: none; }
+	.legend li { display: flex; align-items: center; gap: 6px; }
 	:global(.svelte-flow) { --xy-background-color: #090d10; --xy-edge-stroke: #64748b; --xy-edge-stroke-selected: #2dd4bf; --xy-selection-background-color: rgba(45, 212, 191, .08); --xy-selection-border: 1px solid rgba(45, 212, 191, .6); }
 	:global(.svelte-flow__node) { border: 0; background: transparent; }
 	:global(.svelte-flow__edge-path) { stroke-width: 2; }
@@ -123,6 +135,8 @@
 	:global(.flow-shell[data-connection-kind="MBUS"] .target-card[data-target-kind="controller"]) { opacity: 1; border-color: color-mix(in srgb, var(--color-primary) 85%, white); box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-primary) 24%, transparent), 0 16px 34px rgba(0,0,0,.4); }
 	:global(.flow-shell[data-connection-uplink] .supervisor-card) { border-color: color-mix(in srgb, var(--color-primary) 85%, white); box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-primary) 24%, transparent), 0 16px 34px rgba(0,0,0,.4); }
 	:global(.flow-shell[data-connection-kind] .supervisor-card) { opacity: .22; }
+	:global(.flow-shell[data-connection-peer] .supervisor-card) { opacity: .22; }
+	:global(.flow-shell[data-connection-peer] .target-card) { border-color: color-mix(in srgb, #c084fc 85%, white); box-shadow: 0 0 0 2px color-mix(in srgb, #c084fc 24%, transparent), 0 16px 34px rgba(0,0,0,.4); }
 	:global(.svelte-flow__minimap) { right: 12px; bottom: 12px; overflow: hidden; border: 1px solid #28343b; border-radius: 4px; background: #0e1519; }
 	:global(.svelte-flow__controls) { overflow: hidden; border: 1px solid #28343b; border-radius: 4px; box-shadow: none; }
 	:global(.svelte-flow__controls-button) { border-bottom-color: #28343b; background: #10181d; fill: #cbd5e1; }

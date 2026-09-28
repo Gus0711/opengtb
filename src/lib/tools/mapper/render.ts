@@ -1,5 +1,6 @@
 import { MEDIA_LABELS, segmentSummary } from './bus';
 import { POINT_COLORS, SUPERVISOR_DEFINITIONS, TARGET_DEFINITIONS, UPLINK_COLOR } from './data';
+import { LINK_COLOR, integrationOf, rootSupervisorId, uplinkPath } from './links';
 import type { Equipment, MapperDocument, Segment, Target } from './types';
 
 /** Index segment → libelle « Bus compteurs · esclave 5 » affiche sous le nom de l'equipement. */
@@ -107,15 +108,37 @@ export function renderMapperSvg(document: MapperDocument): string {
 		})
 		.join('');
 
+	const layoutById = new Map(targetLayouts.map((layout) => [layout.target.id, layout]));
+	const links = document.links ?? [];
+	/** Arc à droite de la colonne des cibles, entre deux cibles empilées ; flèche vers `toY` si orienté. */
+	const targetArc = (fromY: number, toY: number, reach: number, dashed: boolean, arrow: boolean, label: string) => {
+		const x = 970 + 274;
+		return `<path d="M${x} ${fromY} C${x + reach} ${fromY} ${x + reach} ${toY} ${x + (arrow ? 6 : 0)} ${toY}" fill="none" stroke="${LINK_COLOR}" stroke-width="2.25" opacity="0.85"${dashed ? ' stroke-dasharray="6 4"' : ''}${arrow ? ' marker-end="url(#mapper-arrow)"' : ''}/><circle cx="${x}" cy="${fromY}" r="3.5" fill="${LINK_COLOR}"/>${arrow ? '' : `<circle cx="${x}" cy="${toY}" r="3.5" fill="${LINK_COLOR}"/>`}<text x="${x + reach * 0.75 + 6}" y="${(fromY + toY) / 2 + 3}" fill="${LINK_COLOR}" font-family="monospace" font-size="10">${escapeXml(label)}</text>`;
+	};
+
 	const uplinkConnections = targetLayouts
 		.map((layout) => {
 			const portY = uplinkPortY.get(layout.target.id);
 			const from = layout.x + 274;
+			// Une cible intégrée remonte par son automate : l'arc d'intégration suffit.
+			if (integrationOf(links, layout.target.id)) return '';
 			if (portY === undefined) {
 				return `<path d="M${from} ${layout.y + 30} H${from + 120}" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 5" opacity="0.55"/><text x="${from + 132}" y="${layout.y + 34}" fill="#f59e0b" font-family="monospace" font-size="10">NON REMONTÉ</text>`;
 			}
 			const midY = layout.y + 30;
 			return `<path d="M${from} ${midY} C${from + 110} ${midY} ${supervisorX - 110} ${portY} ${supervisorX} ${portY}" fill="none" stroke="${UPLINK_COLOR}" stroke-width="2.5" opacity="0.85"/><circle cx="${from}" cy="${midY}" r="4" fill="${UPLINK_COLOR}"/><text x="${(from + supervisorX) / 2}" y="${(midY + portY) / 2 - 6}" text-anchor="middle" fill="${UPLINK_COLOR}" font-family="monospace" font-size="10">${escapeXml(layout.target.uplink)}</text>`;
+		})
+		.join('');
+
+	const linkConnections = links
+		.map((link) => {
+			const reader = layoutById.get(link.sourceId);
+			const read = layoutById.get(link.targetId);
+			if (!reader || !read) return '';
+			// L'intégration part de la cible lue et pointe vers l'automate qui la lit.
+			return link.kind === 'integration'
+				? targetArc(read.y + 30, reader.y + 30, 90, false, true, link.protocol)
+				: targetArc(reader.y + 48, read.y + 48, 60, true, false, link.protocol);
 		})
 		.join('');
 
@@ -140,7 +163,7 @@ export function renderMapperSvg(document: MapperDocument): string {
 		})
 		.join('');
 
-	return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="mapper-title mapper-desc"><title id="mapper-title">${escapeXml(document.title)}</title><desc id="mapper-desc">Architecture GTB et affectation des points</desc><defs><pattern id="mapper-grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#1c252b" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="#090d10"/><rect width="100%" height="100%" fill="url(#mapper-grid)"/><text x="36" y="42" fill="#f9fafb" font-family="Arial, sans-serif" font-size="22" font-weight="700">${escapeXml(document.title)}</text><text x="36" y="66" fill="#71808a" font-family="monospace" font-size="11">ÉQUIPEMENTS TERRAIN</text><text x="970" y="66" fill="#71808a" font-family="monospace" font-size="11">INFRASTRUCTURE GTB</text><text x="${supervisorX}" y="66" fill="#71808a" font-family="monospace" font-size="11">SUPERVISION</text>${connections.join('')}${uplinkConnections}${equipmentMarkup}${targetsMarkup}${supervisorsMarkup}</svg>`;
+	return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="mapper-title mapper-desc"><title id="mapper-title">${escapeXml(document.title)}</title><desc id="mapper-desc">Architecture GTB et affectation des points</desc><defs><marker id="mapper-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="${LINK_COLOR}"/></marker><pattern id="mapper-grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#1c252b" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="#090d10"/><rect width="100%" height="100%" fill="url(#mapper-grid)"/><text x="36" y="42" fill="#f9fafb" font-family="Arial, sans-serif" font-size="22" font-weight="700">${escapeXml(document.title)}</text><text x="36" y="66" fill="#71808a" font-family="monospace" font-size="11">ÉQUIPEMENTS TERRAIN</text><text x="970" y="66" fill="#71808a" font-family="monospace" font-size="11">INFRASTRUCTURE GTB</text><text x="${supervisorX}" y="66" fill="#71808a" font-family="monospace" font-size="11">SUPERVISION</text>${connections.join('')}${uplinkConnections}${linkConnections}${equipmentMarkup}${targetsMarkup}${supervisorsMarkup}</svg>`;
 }
 
 export function mapperToCsv(document: MapperDocument): string {
@@ -153,6 +176,8 @@ export function mapperToCsv(document: MapperDocument): string {
 		const segment = equipment.bus?.segmentId ? segmentById.get(equipment.bus.segmentId) : undefined;
 		for (const point of equipment.points) {
 			const target = point.targetId ? targetById.get(point.targetId) : undefined;
+			// Une gateway remontée par un automate hérite du superviseur de celui-ci.
+			const supervisorId = target ? rootSupervisorId(document.targets, document.links ?? [], target.id) : null;
 			rows.push([
 				equipment.name,
 				point.name,
@@ -162,8 +187,8 @@ export function mapperToCsv(document: MapperDocument): string {
 				segment?.name ?? '',
 				segment ? equipment.bus?.address ?? '' : '',
 				point.address,
-				target?.supervisorId ? supervisorById.get(target.supervisorId) ?? '' : '',
-				target?.supervisorId ? target.uplink : ''
+				supervisorId ? supervisorById.get(supervisorId) ?? '' : '',
+				target ? uplinkPath(document.targets, document.links ?? [], document.supervisors, target.id) : ''
 			]);
 		}
 	}

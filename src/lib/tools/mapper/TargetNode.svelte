@@ -4,14 +4,17 @@
 	import Cable from '@lucide/svelte/icons/cable';
 	import Copy from '@lucide/svelte/icons/copy';
 	import Cpu from '@lucide/svelte/icons/cpu';
+	import ArrowDownLeft from '@lucide/svelte/icons/arrow-down-left';
+	import ArrowLeftRight from '@lucide/svelte/icons/arrow-left-right';
 	import GripVertical from '@lucide/svelte/icons/grip-vertical';
+	import Link2 from '@lucide/svelte/icons/link-2';
 	import RadioTower from '@lucide/svelte/icons/radio-tower';
 	import Spline from '@lucide/svelte/icons/spline';
 	import Trash2 from '@lucide/svelte/icons/trash-2';
 	import TriangleAlert from '@lucide/svelte/icons/triangle-alert';
 	import { BAUD_RATES, MEDIA_LABELS, isSerial } from './bus';
 	import { POINT_COLORS, TARGET_DEFINITIONS, UPLINK_COLOR } from './data';
-	import type { AssignedPoint, TargetNodeData } from './flow';
+	import { LINK_ROLE_LABELS, type AssignedPoint, type LinkRole, type TargetNodeData } from './flow';
 	import { UPLINK_PROTOCOLS, type SegmentParity } from './types';
 
 	type TargetFlowNode = Node<TargetNodeData, 'target'>;
@@ -28,6 +31,8 @@
 		networkCount;
 		data.segments.length;
 		data.item.supervisorId;
+		data.links.length;
+		data.integratedBy;
 		queueMicrotask(() => updateNodeInternals(id));
 	});
 </script>
@@ -119,20 +124,57 @@
 		</section>
 	{/if}
 
-	<footer class="uplink nodrag" class:is-orphan={!data.item.supervisorId}>
-		<Handle type="source" position={Position.Right} id="uplink" class="uplink-out-port" title="Remonter vers un superviseur" aria-label="Remonter {data.item.name} vers un superviseur"><ArrowUpRight size={14} /></Handle>
-		<span class="uplink-label" style:color={data.item.supervisorId ? UPLINK_COLOR : undefined}>Remontée</span>
-		<select value={data.item.uplink} onchange={(event) => data.onSetUplink(data.item.id, event.currentTarget.value as typeof UPLINK_PROTOCOLS[number])} aria-label="Protocole de remontée de {data.item.name}">
-			{#each UPLINK_PROTOCOLS as protocol (protocol)}<option value={protocol}>{protocol}</option>{/each}
-		</select>
-		<select value={data.item.supervisorId ?? ''} onchange={(event) => data.onAssignSupervisor(data.item.id, event.currentTarget.value)} aria-label="Superviseur de {data.item.name}">
-			<option value="">Non remonté</option>
-			{#each data.supervisors as supervisor (supervisor.id)}<option value={supervisor.id}>{supervisor.name}</option>{/each}
-		</select>
-		{#if !data.item.supervisorId}
-			<button type="button" onclick={() => data.onSelectUplink(data.item.id)} class="uplink-connect" title="Choisir un superviseur sur le canvas">Relier</button>
+	<section class="links nodrag" aria-label="Liaisons de {data.item.name}">
+		<header>
+			<h3>Liaisons</h3>
+			<button type="button" onclick={(event) => { event.stopPropagation(); data.onSelectPeer(data.item.id); }} class="link-connect" title="Relier à un automate ou une gateway, puis cliquer sur l’autre carte"><Link2 size={11} /> Lier</button>
+			<Handle type="source" position={Position.Right} id="peer" class="peer-out-port" title="Glisser vers un automate ou une gateway" aria-label="Lier {data.item.name} à une autre cible"><Link2 size={12} /></Handle>
+		</header>
+		{#each data.links as row (row.link.id)}
+			<div class="link-row" class:is-exchange={row.role === 'exchange'}>
+				<div class="link-main">
+					{#if row.role === 'reads'}<ArrowDownLeft size={11} />{:else if row.role === 'read-by'}<ArrowUpRight size={11} />{:else}<ArrowLeftRight size={11} />{/if}
+					{#if row.other.kind === 'controller'}<Cpu size={11} />{:else}<RadioTower size={11} />{/if}
+					<strong title={row.other.name}>{row.other.name}</strong>
+					<button type="button" onclick={() => data.onRemoveLink(row.link.id)} class="icon-button" aria-label="Supprimer la liaison avec {row.other.name}" title="Supprimer la liaison"><Trash2 size={12} /></button>
+				</div>
+				<div class="link-params">
+					<select value={row.role} disabled={row.roles.length < 2} onchange={(event) => data.onSetLinkRole(row.link.id, data.item.id, event.currentTarget.value as LinkRole)} aria-label="Type de liaison avec {row.other.name}">
+						{#each row.roles as role (role)}<option value={role}>{LINK_ROLE_LABELS[role]}</option>{/each}
+					</select>
+					<select value={row.link.protocol} onchange={(event) => data.onSetLinkProtocol(row.link.id, event.currentTarget.value as typeof UPLINK_PROTOCOLS[number])} aria-label="Protocole de la liaison avec {row.other.name}">
+						{#each UPLINK_PROTOCOLS as protocol (protocol)}<option value={protocol}>{protocol}</option>{/each}
+					</select>
+				</div>
+			</div>
+		{/each}
+		{#if !data.links.length}
+			<p class="links-empty">Aucun automate ni gateway relié</p>
 		{/if}
-	</footer>
+	</section>
+
+	{#if data.integratedBy}
+		<!-- Une cible lue par un automate remonte à travers lui : pas de superviseur propre. -->
+		<footer class="uplink is-via nodrag">
+			<span class="uplink-label">Remontée</span>
+			<span class="via">via <strong>{data.integratedBy.name}</strong></span>
+		</footer>
+	{:else}
+		<footer class="uplink nodrag" class:is-orphan={!data.item.supervisorId}>
+			<Handle type="source" position={Position.Right} id="uplink" class="uplink-out-port" title="Remonter vers un superviseur" aria-label="Remonter {data.item.name} vers un superviseur"><ArrowUpRight size={14} /></Handle>
+			<span class="uplink-label" style:color={data.item.supervisorId ? UPLINK_COLOR : undefined}>Remontée</span>
+			<select value={data.item.uplink} onchange={(event) => data.onSetUplink(data.item.id, event.currentTarget.value as typeof UPLINK_PROTOCOLS[number])} aria-label="Protocole de remontée de {data.item.name}">
+				{#each UPLINK_PROTOCOLS as protocol (protocol)}<option value={protocol}>{protocol}</option>{/each}
+			</select>
+			<select value={data.item.supervisorId ?? ''} onchange={(event) => data.onAssignSupervisor(data.item.id, event.currentTarget.value)} aria-label="Superviseur de {data.item.name}">
+				<option value="">Non remonté</option>
+				{#each data.supervisors as supervisor (supervisor.id)}<option value={supervisor.id}>{supervisor.name}</option>{/each}
+			</select>
+			{#if !data.item.supervisorId}
+				<button type="button" onclick={(event) => { event.stopPropagation(); data.onSelectUplink(data.item.id); }} class="uplink-connect" title="Choisir un superviseur sur le canvas">Relier</button>
+			{/if}
+		</footer>
+	{/if}
 </div>
 
 <style>
@@ -199,4 +241,24 @@
 	:global(.uplink-out-port) { right: -16px; top: auto; bottom: 14px; display: inline-flex; width: 32px; height: 26px; align-items: center; justify-content: center; border: 1px solid color-mix(in srgb, var(--color-primary) 55%, #131c22); border-radius: 4px; background: #101a1f; color: var(--color-primary); opacity: .7; transition: opacity .15s, box-shadow .15s; }
 	:global(.uplink-out-port:hover), :global(.uplink-out-port.connecting) { opacity: 1; box-shadow: 0 0 0 5px color-mix(in srgb, var(--color-primary) 16%, transparent); }
 	:global(.uplink-out-port svg) { pointer-events: none; }
+	.links { border-top: 1px solid var(--color-border); background: #0f181d; padding: 6px 10px 7px; }
+	.links header { position: relative; display: flex; height: auto; align-items: center; gap: 6px; border: 0; background: transparent; padding: 0; }
+	.links h3 { flex: 1; color: var(--color-text-dim); font: 700 8.5px var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+	.link-connect { display: inline-flex; align-items: center; gap: 3px; margin-right: 14px; border: 1px solid color-mix(in srgb, #c084fc 45%, transparent); border-radius: 3px; padding: 2px 6px; color: #c084fc; font: 9px var(--font-mono); }
+	.link-connect:hover { background: color-mix(in srgb, #c084fc 14%, transparent); }
+	.link-row { margin-top: 5px; border-left: 2px solid #c084fc; padding-left: 6px; }
+	.link-row.is-exchange { border-left-style: dashed; }
+	.link-main { display: flex; height: 22px; align-items: center; gap: 5px; color: #c084fc; }
+	.link-main strong { min-width: 0; flex: 1; overflow: hidden; color: var(--color-foreground); font-size: 10.5px; font-weight: 400; text-overflow: ellipsis; white-space: nowrap; }
+	.link-main .icon-button { width: 20px; height: 20px; }
+	.link-params { display: grid; gap: 5px; grid-template-columns: 1fr 1fr; }
+	.link-params select { min-width: 0; height: 20px; border: 1px solid var(--color-border); border-radius: 3px; background: #0e161a; color: var(--color-text-soft); font: 9px var(--font-mono); }
+	.link-params select:disabled { opacity: .75; }
+	.uplink.is-via { color: var(--color-text-dim); }
+	.via { font: 9.5px var(--font-mono); }
+	.via strong { color: #c084fc; font-weight: 600; }
+	.links-empty { margin-top: 3px; color: var(--color-text-dim); font: 9px var(--font-mono); opacity: .7; }
+	:global(.peer-out-port) { right: -24px; top: 50%; display: inline-flex; width: 26px; height: 20px; align-items: center; justify-content: center; border: 1px solid color-mix(in srgb, #c084fc 55%, #0f181d); border-radius: 4px; background: #0f181d; color: #c084fc; opacity: .7; transition: opacity .15s, box-shadow .15s; }
+	:global(.peer-out-port:hover), :global(.peer-out-port.connecting) { opacity: 1; box-shadow: 0 0 0 5px color-mix(in srgb, #c084fc 16%, transparent); }
+	:global(.peer-out-port svg) { pointer-events: none; }
 </style>
