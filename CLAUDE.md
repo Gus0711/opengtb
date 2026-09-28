@@ -10,34 +10,84 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Status
+## What this is
 
-This repository is pre-implementation. There are no commits, no source code, no build setup, and no tests yet. The only artifact is a static design mockup at `desginexport/variant-b.html` (note: the directory name is misspelled — "desgin" instead of "design"). That file is a self-contained HTML page with inline CSS and one `<script>` block — it has no build pipeline.
+`opengtb` — « la boîte à outils des intégrateurs GTB & IoT » — free, browser-based tools for French-speaking building-automation (GTB = Gestion Technique du Bâtiment) and IoT integrators, plus a blog (retex articles) and a small community layer (public messages, article comments/reactions, poll). **UI and content are in French.**
 
-When asked to "run", "build", or "test" anything, confirm with the user first: there is nothing to run, and any tooling choice (bundler, framework, package manager) is still open.
+Deeper docs: `README.md` (setup, env vars, Docker), `docs/ARCHITECTURE.md` (tool model, data pipelines, security surface), `docs/CODE_REVIEW.md` (known issues, referenced as CRIT-/MAJ-/MIN-n).
 
-## What the mockup tells you about the planned product
+## Commands
 
-`opengtb` is positioned as "la boîte à outils des intégrateurs GTB & IoT" — a browser-based toolbox for French-speaking building-automation (GTB = Gestion Technique du Bâtiment) and IoT integrators. The mockup commits to a few product constraints that should shape implementation decisions:
+```sh
+npm run dev          # Vite dev server → http://localhost:5173
+DATA_DIR=./tmp/api node api/server.mjs   # optional: community API on :8080 (proxied at /api)
+npm run build        # prerender static site → ./build/
+npm run preview      # serve ./build/ locally
+npm run check        # svelte-check (types + a11y)
+npm test             # vitest run (logic only, environment: 'node')
+npx vitest run src/lib/tools/dju   # single folder / file
 
-- **Local-first, no install, no sign-up.** Tools run in the browser. A paid tier ("enregistrer des projets, brancher une API ou héberger une instance dédiée") is mentioned but is explicitly out of scope for the free tools — treat any backend dependency as a deliberate choice, not a default.
-- **French UI**, mono/terminal aesthetic (JetBrains Mono + IBM Plex Sans, `$ gtb <cmd>`-style affordances). Theme is dark by default with a light variant; CSS custom properties under `:root` and `[data-theme="light"]` are the source of truth for tokens.
-- **12 tools across 5 sectors**, as enumerated in `variant-b.html` around lines 575–685:
-  - **01 · Briques techniques (4):** `decode` (BACnet/IP, Modbus RTU/TCP, LoRaWAN Cayenne LPP payload decoder), `modbus` (register tables, types, scales, CRC-16), `conv` (HVAC unit converter — energy, pressure, flow, temperature, power), `pcap` (BACnet/Modbus PCAP analyzer).
-  - **02 · Réglementaire (2):** `bacs` (external link to ConformBACS), `dju` (degree-days).
-  - **03 · Dimensionnement (5):** `v3v`, `loi-eau` (heating curve), `air-hyg`, `pdc` (heat pump), `compteur-th` (thermal meter).
-  - **04 · Référentiels (1):** `svg`.
-  - **05 · Commissioning (1):** `trends` (Niagara-style trend-export validator).
+# Offline data generation (NOT wired into build; outputs are committed)
+npm run fetch-codecs # LoRaWAN codecs (TTN lorawan-devices + overrides) → static/data/lorawan-codecs/
+npm run build-modbus # Modbus device catalogue → static/data/modbus/ + src/lib/tools/modbus/manifest.generated.json
+npm run dju:fetch    # Météo-France DJU → needs MF_APPLICATION_ID in .env
 
-  The `conv` tool is partially wired in the mockup (tabs, inputs, presets) — when implementing the real version, check what behavior the mockup already implies before redesigning the UX.
+docker compose build prod && docker compose up   # Caddy + api on http://localhost:7880
+```
 
-## Conventions worth preserving from the mockup
+No CI and no lint/prettier config yet — run `npm run check` and `npm test` yourself before committing.
 
-- Monospace surfaces (nav links, CTAs, tool names, code/command labels) vs. sans-serif narrative copy is a deliberate split — see the `.mono` / class list at the top of the stylesheet. Don't collapse them.
-- Brand mark: `open<span class="slash">/</span><span class="b">gtb</span>` — the slash is dimmed, "gtb" is accented.
-- Section numbering uses `§ 01`, `§ 02`, … as part of the visual identity.
-- `data-comment-anchor="..."` attributes on sections suggest a planned commenting/annotation overlay — keep the anchors if you migrate the markup.
+## Stack & architecture
 
-## Permissions
+- **SvelteKit 2 + Svelte 5 (runes enforced for all project files)**, TypeScript, Tailwind v4, shadcn-svelte bits, `@lucide/svelte` icons, `@xyflow/svelte` (mapper), mdsvex for Markdown articles, shiki for code highlighting.
+- **Static site**: `@sveltejs/adapter-static` prerenders everything to `build/` (fallback `404.html`), served by Caddy (`Caddyfile`, `try_files {path}.html`) behind a Cloudflare Tunnel.
+- **Tools are local-first**: all computation runs in the browser, no secrets or external calls at runtime. Keep it that way — any new backend dependency is a deliberate decision, not a default.
+- **The only backend is `api/server.mjs`**: a zero-dependency Node service (`node:http` + `node:sqlite`) proxied at `/api/*` by Caddy. It serves the hit counter, messages, article comments/reactions and the poll, with Turnstile + hashed-IP anti-spam and Bearer `ADMIN_TOKEN` moderation. No IPs stored on disk, no cookies. Callers `fetch('/api/…')` directly (`HitCounter`, `PollBanner`, `ArticleComments`, `ArticleReactions`, `routes/messages`); Turnstile helper in `src/lib/community/turnstile.ts`. In dev, Vite proxies `/api` to `localhost:8080` — run `DATA_DIR=./tmp/api node api/server.mjs` alongside `npm run dev`.
+- A paid tier (projects, API, dedicated instance) is planned but out of scope: `src/lib/auth/` and `src/lib/exporters/` are placeholders/abstractions for it.
 
-`.claude/settings.local.json` already grants broad allow rules (Bash/Read/Write/Edit `*`, WebSearch, WebFetch on github.com and bac0.readthedocs.io — the latter is the Python BACnet library, a likely reference for the `decode`/`pcap`/`modbus` tools).
+### Tool registry — single source of truth
+
+`src/lib/tools/registry.ts` declares `SECTORS` (5) and `TOOLS`. Home page, `/outils` index, SEO, breadcrumbs and sitemap all derive from it. Each tool has a `status: 'done' | 'todo'`.
+
+| Sector | Tools |
+| --- | --- |
+| 01 · Briques techniques | `decode` (LoRaWAN codecs, uplink decode + downlink encode), `modbus` (device register catalogue), `modbus-lab`, `conv` (HVAC units), `pcap` *(todo)* |
+| 02 · Réglementaire | `bacs` (external link → ConformBACS, conformbacs.opengtb.com), `dju` (degree-days / IPMVP) |
+| 03 · Dimensionnement | `v3v`, `loi-eau`, `air-hyg`, `pdc` (pertes de charge), `compteur-th` *(todo)* |
+| 04 · Référentiels | `svg` (synoptic symbol library), `mapper` (CVC equipment models) |
+| 05 · Commissioning | `trends` *(todo)* |
+
+`todo` tools have no route; they fall through to the generic `src/routes/outils/[slug]/` "à venir" page. `src/routes/outils/synoptic/` is currently an empty folder.
+
+### Adding / implementing a tool
+
+Three co-located layers (reference implementation: `dju`):
+
+```
+src/lib/tools/<slug>/             pure TS logic (calc, types, constants, validators) + *.test.ts
+src/lib/components/tools/<slug>/  Svelte UI components (optional)
+src/routes/outils/<slug>/+page.svelte   wraps everything in <ToolShell {tool}>
+```
+
+Then flip `status` to `'done'` in the registry. Keep business logic DOM-free and tested; avoid the monolithic-`+page.svelte` pattern of `air-hyg`/`pdc` (CODE_REVIEW MAJ-3). Large datasets go in `static/data/<domain>/` and are `fetch()`ed at runtime, generated by a script in `scripts/<domain>/`.
+
+LoRaWAN vendor encoders not in TTN go under `scripts/decode/overrides/` — use the `encoder-override` project skill for that workflow.
+
+### Articles
+
+Markdown files in `src/content/articles/<slug>.md` with frontmatter `title`, `date` (YYYY-MM-DD), `tags`, `excerpt`, `cover`. They can import Svelte components (e.g. `$lib/components/articles/*`). Images go in `static/articles/<slug>/`. Loaded by `src/lib/articles/loader.ts`; also exposed at `/articles.json` and in the sitemap. Tone: informal French, tutoiement, retex-style.
+
+## Conventions
+
+- **Visual identity** (from the original mockup `design-export/variant-b.html`): mono/terminal aesthetic — JetBrains Mono for nav, CTAs, tool names, command labels (`$ gtb <cmd>`); IBM Plex Sans for narrative copy. Don't collapse that split.
+- Dark and light themes; CSS custom properties in `src/routes/layout.css` (`:root` = light, `.dark` class = dark, shadcn/Tailwind v4 style) are the token source of truth. Theme store: `src/lib/stores/theme.svelte.ts`.
+- Brand mark: `open<span class="slash">/</span><span class="b">gtb</span>` (dimmed slash, accented "gtb"). Section numbering `§ 01`, `§ 02`, …
+- Keep `data-comment-anchor="..."` attributes when moving markup.
+- Easter eggs / "fun" layer (terminal, gravity, freeze, "hors" mode) live in `src/lib/fun/` and `src/lib/components/fun/`.
+
+## Security notes
+
+- Never import anything that touches `MF_APPLICATION_ID` (i.e. `scripts/dju/lib/mf-client.ts`) from `src/` — it would leak into the client bundle.
+- `/__svg-admin/*` (`scripts/vite-svg-admin-plugin.ts`) exists in dev only, protected by `ADMIN_TOKEN`.
+- LoRaWAN codecs run via `new Function()` on the main thread — fine while codecs are versioned assets; needs a Worker sandbox if users can ever paste arbitrary code.
+- No CSP yet in the `Caddyfile` (TODO, must account for `unsafe-eval` from codecs).
