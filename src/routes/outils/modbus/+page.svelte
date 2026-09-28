@@ -16,7 +16,9 @@
 		facetCounts,
 		filterDevices,
 		filtersFromQuery,
-		filtersToQuery
+		filtersToQuery,
+		type ModbusReviewFilter,
+		type ModbusSort
 	} from '$lib/tools/modbus/search';
 	import {
 		EQUIPMENT_TYPE_LABELS,
@@ -59,6 +61,28 @@
 			.sort((a, b) => b.n - a.n)
 	);
 
+	const SORT_OPTIONS: Array<{ value: ModbusSort; label: string }> = [
+		{ value: 'catalogue', label: 'Ordre source' },
+		{ value: 'name-asc', label: 'Nom A-Z' },
+		{ value: 'vendor-asc', label: 'Marque A-Z' },
+		{ value: 'registers-desc', label: 'Plus de registres' },
+		{ value: 'registers-asc', label: 'Moins de registres' }
+	];
+
+	const reviewCounts = $derived.by(() => {
+		const base = filterDevices(manifest.devices, {
+			...filters,
+			review: 'all',
+			sort: 'catalogue'
+		});
+		const needsReview = base.filter((d) => d.needsReview).length;
+		return {
+			all: base.length,
+			verified: base.length - needsReview,
+			needsReview
+		};
+	});
+
 	function toggle<T extends string>(list: T[], item: T): T[] {
 		return list.includes(item) ? list.filter((x) => x !== item) : [...list, item];
 	}
@@ -71,7 +95,9 @@
 		filters.query.length > 0 ||
 			filters.vendors.length > 0 ||
 			filters.equipmentTypes.length > 0 ||
-			filters.transports.length > 0
+			filters.transports.length > 0 ||
+			filters.review !== 'all' ||
+			filters.sort !== 'catalogue'
 	);
 </script>
 
@@ -122,6 +148,33 @@
 							<X class="size-3.5" />
 						</button>
 					{/if}
+				</div>
+			</div>
+
+			<div class="border-border bg-card/60 rounded border p-4">
+				<label
+					class="text-text-dim mb-2 block font-mono text-[11px] tracking-wide uppercase"
+					for="modbus-sort"
+				>
+					Tri
+				</label>
+				<select
+					id="modbus-sort"
+					class="border-border bg-background focus:ring-primary/40 w-full rounded border px-2.5 py-1.5 font-mono text-[12px] outline-none focus:ring-2"
+					bind:value={filters.sort}
+				>
+					{#each SORT_OPTIONS as option (option.value)}
+						<option value={option.value}>{option.label}</option>
+					{/each}
+				</select>
+			</div>
+
+			<div class="border-border bg-card/60 rounded border p-4">
+				<p class="text-text-dim mb-2 font-mono text-[11px] tracking-wide uppercase">Qualité</p>
+				<div class="grid gap-1">
+					{@render ReviewButton('all', 'Tous', reviewCounts.all)}
+					{@render ReviewButton('verified', 'Vérifiés', reviewCounts.verified)}
+					{@render ReviewButton('needs-review', 'À vérifier', reviewCounts.needsReview)}
 				</div>
 			</div>
 
@@ -220,6 +273,19 @@
 			{/each}
 		</ul>
 	</div>
+{/snippet}
+
+{#snippet ReviewButton(value: ModbusReviewFilter, label: string, count: number)}
+	<button
+		type="button"
+		onclick={() => (filters.review = value)}
+		class="flex items-center justify-between rounded border px-2 py-1 text-left font-mono text-[12px] transition-colors {filters.review === value
+			? 'border-primary bg-primary/10 text-foreground'
+			: 'border-transparent text-text-soft hover:bg-secondary/40 hover:text-foreground'}"
+	>
+		<span>{label}</span>
+		<span class="text-text-dim text-[10.5px]">{count}</span>
+	</button>
 {/snippet}
 
 {#snippet DeviceCard(device: ModbusManifestDevice)}

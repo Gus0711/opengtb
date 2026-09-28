@@ -27,7 +27,15 @@ function dev(p: Partial<ModbusManifestDevice>): ModbusManifestDevice {
 
 const sample: ModbusManifestDevice[] = [
 	dev({ vendor: 'Eastron', model: 'SDM630', name: 'Eastron SDM630', equipmentType: 'compteur-elec', transport: ['rtu'] }),
-	dev({ vendor: 'Eastron', model: 'SDM230', name: 'Eastron SDM230', equipmentType: 'compteur-elec', transport: ['rtu'] }),
+	dev({
+		vendor: 'Eastron',
+		model: 'SDM230',
+		name: 'Eastron SDM230',
+		equipmentType: 'compteur-elec',
+		transport: ['rtu'],
+		registerCount: 12,
+		needsReview: true
+	}),
 	dev({ vendor: 'Fronius', model: 'Symo', name: 'Fronius Symo', equipmentType: 'onduleur-pv', transport: ['tcp'] }),
 	dev({ vendor: 'Dimplex', model: 'SI-11TU', name: 'Dimplex SI-11TU', equipmentType: 'pac', transport: ['rtu', 'tcp'] })
 ];
@@ -73,6 +81,16 @@ describe('filterDevices', () => {
 		});
 		expect(r).toHaveLength(2);
 	});
+	test('filtre qualité', () => {
+		const r = filterDevices(sample, { ...EMPTY_FILTERS, review: 'needs-review' });
+		expect(r).toHaveLength(1);
+		expect(r[0].model).toBe('SDM230');
+	});
+	test('tri par nombre de registres', () => {
+		const r = filterDevices(sample, { ...EMPTY_FILTERS, sort: 'registers-desc' });
+		expect(r[0].registerCount).toBeGreaterThanOrEqual(r[1].registerCount);
+		expect(r[0].model).toBe('SDM230');
+	});
 });
 
 describe('facetCounts', () => {
@@ -94,10 +112,14 @@ describe('filtersToQuery / fromQuery', () => {
 			query: 'foo',
 			vendors: ['Eastron'],
 			equipmentTypes: ['compteur-elec' as const],
-			transports: ['rtu' as const]
+			transports: ['rtu' as const],
+			review: 'verified' as const,
+			sort: 'registers-desc' as const
 		};
 		const qs = filtersToQuery(f);
 		expect(qs).toContain('q=foo');
+		expect(qs).toContain('quality=verified');
+		expect(qs).toContain('sort=registers-desc');
 		const back = filtersFromQuery(new URLSearchParams(qs.replace('?', '')));
 		expect(back).toEqual(f);
 	});

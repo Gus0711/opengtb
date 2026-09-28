@@ -4,11 +4,17 @@
 	import Tag from '$lib/components/ui/Tag.svelte';
 	import Copy from '@lucide/svelte/icons/copy';
 	import Check from '@lucide/svelte/icons/check';
+	import Download from '@lucide/svelte/icons/download';
+	import RotateCcw from '@lucide/svelte/icons/rotate-ccw';
+	import Search from '@lucide/svelte/icons/search';
 	import TriangleAlert from '@lucide/svelte/icons/triangle-alert';
 	import ExternalLink from '@lucide/svelte/icons/external-link';
 	import {
 		EQUIPMENT_TYPE_LABELS,
+		type ModbusAccess,
+		type ModbusDataType,
 		type ModbusDevice,
+		type ModbusFunction,
 		type ModbusRegister
 	} from '$lib/tools/modbus/types';
 
@@ -17,9 +23,44 @@
 	const device = $derived(data.device);
 
 	type SortKey = 'address' | 'function' | 'name' | 'dataType' | 'access';
+	type RegisterFunctionFilter = 'all' | ModbusFunction;
+	type RegisterTypeFilter = 'all' | ModbusDataType;
+	type RegisterAccessFilter = 'all' | ModbusAccess;
+
+	const ACCESS_LABEL: Record<ModbusRegister['access'], string> = { r: 'R', w: 'W', rw: 'R/W' };
+
 	let sortKey = $state<SortKey>('address');
 	let sortDir = $state<'asc' | 'desc'>('asc');
 	let filter = $state('');
+	let functionFilter = $state<RegisterFunctionFilter>('all');
+	let dataTypeFilter = $state<RegisterTypeFilter>('all');
+	let accessFilter = $state<RegisterAccessFilter>('all');
+	let unitFilter = $state('all');
+
+	const functionOptions = $derived(uniqueSorted(device.registers.map((r) => r.function)));
+	const dataTypeOptions = $derived(uniqueSorted(device.registers.map((r) => r.dataType)));
+	const accessOptions = $derived(uniqueSorted(device.registers.map((r) => r.access)));
+	const unitOptions = $derived(
+		uniqueSorted(device.registers.map((r) => r.unit).filter((unit): unit is string => Boolean(unit)))
+	);
+
+	const registerStats = $derived.by(() => {
+		const writable = device.registers.filter((r) => r.access === 'w' || r.access === 'rw').length;
+		const scaled = device.registers.filter(
+			(r) => r.scale !== undefined || r.offset !== undefined
+		).length;
+		const enumerated = device.registers.filter((r) => r.enum).length;
+		const multiWord = device.registers.filter((r) => r.size > 1).length;
+		return { writable, scaled, enumerated, multiWord };
+	});
+
+	const hasActiveRegisterFilters = $derived(
+		filter.trim().length > 0 ||
+			functionFilter !== 'all' ||
+			dataTypeFilter !== 'all' ||
+			accessFilter !== 'all' ||
+			unitFilter !== 'all'
+	);
 
 	function sortBy(k: SortKey) {
 		if (sortKey === k) sortDir = sortDir === 'asc' ? 'desc' : 'asc';
@@ -30,32 +71,68 @@
 	}
 
 	const filtered = $derived.by(() => {
-		const q = filter.trim().toLowerCase();
-		let list = q
-			? device.registers.filter(
-					(r) =>
-						r.name.toLowerCase().includes(q) ||
-						(r.label ?? '').toLowerCase().includes(q) ||
-						String(r.address).includes(q) ||
-						`0x${r.address.toString(16)}`.includes(q) ||
-						(r.unit ?? '').toLowerCase().includes(q)
-				)
-			: [...device.registers];
+		const tokens = normalizeSearch(filter).split(/\s+/).filter(Boolean);
+		const list = device.registers.filter((r) => {
+			if (functionFilter !== 'all' && r.function !== functionFilter) return false;
+			if (dataTypeFilter !== 'all' && r.dataType !== dataTypeFilter) return false;
+			if (accessFilter !== 'all' && r.access !== accessFilter) return false;
+			if (unitFilter !== 'all' && (r.unit ?? '') !== unitFilter) return false;
+			if (tokens.length === 0) return true;
+
+			const enumText = r.enum
+				? Object.entries(r.enum)
+						.map(([key, value]) => `${key} ${value}`)
+						.join(' ')
+				: '';
+			const haystack = normalizeSearch(
+				[
+					r.name,
+					r.label ?? '',
+					r.function,
+					r.dataType,
+					r.wordOrder ?? '',
+					r.unit ?? '',
+					r.notes ?? '',
+					enumText,
+					ACCESS_LABEL[r.access],
+					String(r.address),
+					hex(r.address)
+				].join(' ')
+			);
+			return tokens.every((token) => haystack.includes(token));
+		});
 		const dir = sortDir === 'asc' ? 1 : -1;
 		list.sort((a, b) => {
-			const va = a[sortKey];
-			const vb = b[sortKey];
+			const va = sortKey === 'name' ? (a.label ?? a.name) : a[sortKey];
+			const vb = sortKey === 'name' ? (b.label ?? b.name) : b[sortKey];
 			if (typeof va === 'number' && typeof vb === 'number') return (va - vb) * dir;
-			return String(va).localeCompare(String(vb)) * dir;
+			return String(va).localeCompare(String(vb), 'fr') * dir;
 		});
 		return list;
 	});
 
+	function uniqueSorted<T extends string>(values: T[]): T[] {
+		return Array.from(new Set(values)).sort((a, b) => a.localeCompare(b, 'fr'));
+	}
+
+	function normalizeSearch(value: string): string {
+		return value
+			.normalize('NFD')
+			.replace(/[\u0300-\u036f]/g, '')
+			.toLowerCase();
+	}
+
+	function resetRegisterFilters() {
+		filter = '';
+		functionFilter = 'all';
+		dataTypeFilter = 'all';
+		accessFilter = 'all';
+		unitFilter = 'all';
+	}
+
 	function hex(n: number, width = 4): string {
 		return '0x' + n.toString(16).toUpperCase().padStart(width, '0');
 	}
-
-	const ACCESS_LABEL: Record<ModbusRegister['access'], string> = { r: 'R', w: 'W', rw: 'R/W' };
 
 	let copiedKey = $state<string | null>(null);
 
@@ -92,6 +169,60 @@
 				`| ${hex(r.address)} (${r.address}) | ${r.function} | ${r.label ?? r.name} | ${r.dataType}${r.size > 1 ? `×${r.size}` : ''} | ${r.scale ?? ''} | ${r.unit ?? ''} | ${ACCESS_LABEL[r.access]} |`
 		);
 		return [`# ${device.name} — registres Modbus`, '', head, sep, ...rows].join('\n');
+	}
+
+	function csvCell(value: unknown): string {
+		const text = String(value ?? '');
+		return /[",;\r\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
+	}
+
+	function tableToCsv(): string {
+		const rows = [
+			[
+				'adresse_dec',
+				'adresse_hex',
+				'fonction',
+				'nom',
+				'nom_source',
+				'type',
+				'taille',
+				'ordre_mots',
+				'scale',
+				'offset',
+				'unite',
+				'acces',
+				'notes'
+			],
+			...filtered.map((r) => [
+				r.address,
+				hex(r.address),
+				r.function,
+				r.label ?? r.name,
+				r.name,
+				r.dataType,
+				r.size,
+				r.wordOrder ?? '',
+				r.scale ?? '',
+				r.offset ?? '',
+				r.unit ?? '',
+				ACCESS_LABEL[r.access],
+				r.notes ?? ''
+			])
+		];
+		return rows.map((row) => row.map(csvCell).join(';')).join('\n');
+	}
+
+	function downloadCsv() {
+		if (typeof document === 'undefined') return;
+		const blob = new Blob([`\uFEFF${tableToCsv()}`], { type: 'text/csv;charset=utf-8' });
+		const url = URL.createObjectURL(blob);
+		const link = document.createElement('a');
+		link.href = url;
+		link.download = `${device.vendorSlug}-${device.modelSlug}-modbus.csv`;
+		document.body.appendChild(link);
+		link.click();
+		link.remove();
+		URL.revokeObjectURL(url);
 	}
 </script>
 
@@ -188,32 +319,126 @@
 		</section>
 	{/if}
 
+	<section class="mt-6 grid grid-cols-2 gap-2 md:grid-cols-4" aria-label="Statistiques des registres">
+		{@render Stat('Écritures', registerStats.writable)}
+		{@render Stat('Échelles', registerStats.scaled)}
+		{@render Stat('Enums', registerStats.enumerated)}
+		{@render Stat('Multi-registres', registerStats.multiWord)}
+	</section>
+
 	<!-- Table registres -->
 	<section class="mt-6">
-		<div class="mb-2 flex items-center justify-between gap-3">
-			<h3 class="text-text-dim font-mono text-[11px] tracking-wide uppercase">
-				Registres ({filtered.length}/{device.registers.length})
-			</h3>
-			<div class="flex items-center gap-2">
-				<input
-					type="search"
-					placeholder="filtrer la table…"
-					class="border-border bg-background placeholder:text-text-dim/70 focus:ring-primary/40 rounded border px-2 py-1 font-mono text-[11.5px] outline-none focus:ring-2"
-					bind:value={filter}
-				/>
-				<button
-					type="button"
-					class="border-border hover:border-line-strong text-text-soft hover:text-foreground inline-flex items-center gap-1 rounded border px-2 py-1 font-mono text-[11px] transition-colors"
-					onclick={() => copyText(tableToMd(), '__table__')}
-				>
-					{#if copiedKey === '__table__'}
-						<Check class="size-3" />
-						copié
-					{:else}
-						<Copy class="size-3" />
-						copier la table
-					{/if}
-				</button>
+		<div class="mb-3 space-y-3">
+			<div class="flex flex-wrap items-center justify-between gap-3">
+				<h3 class="text-text-dim font-mono text-[11px] tracking-wide uppercase">
+					Registres ({filtered.length}/{device.registers.length})
+				</h3>
+				<div class="flex items-center gap-2">
+					<button
+						type="button"
+						class="border-border hover:border-line-strong text-text-soft hover:text-foreground inline-flex items-center gap-1 rounded border px-2 py-1 font-mono text-[11px] transition-colors"
+						onclick={() => copyText(tableToMd(), '__table__')}
+					>
+						{#if copiedKey === '__table__'}
+							<Check class="size-3" />
+							copié
+						{:else}
+							<Copy class="size-3" />
+							copier
+						{/if}
+					</button>
+					<button
+						type="button"
+						class="border-border hover:border-line-strong text-text-soft hover:text-foreground inline-flex items-center gap-1 rounded border px-2 py-1 font-mono text-[11px] transition-colors"
+						onclick={downloadCsv}
+						title="Télécharger les lignes filtrées en CSV"
+					>
+						<Download class="size-3" />
+						CSV
+					</button>
+				</div>
+			</div>
+
+			<div class="border-border bg-card/40 rounded border p-3">
+				<div class="grid gap-2 md:grid-cols-[minmax(12rem,1fr)_repeat(4,minmax(8rem,auto))]">
+					<label class="block">
+						<span class="text-text-dim mb-1 block font-mono text-[10.5px] uppercase">Recherche</span>
+						<span
+							class="border-border bg-background focus-within:ring-primary/40 flex items-center gap-2 rounded border px-2 py-1.5 focus-within:ring-2"
+						>
+							<Search class="text-text-dim size-3.5 shrink-0" aria-hidden="true" />
+							<input
+								type="search"
+								placeholder="nom, adresse, unité, enum…"
+								class="placeholder:text-text-dim/70 min-w-0 flex-1 bg-transparent font-mono text-[11.5px] outline-none"
+								bind:value={filter}
+							/>
+						</span>
+					</label>
+
+					<label class="block">
+						<span class="text-text-dim mb-1 block font-mono text-[10.5px] uppercase">Fonction</span>
+						<select
+							class="border-border bg-background focus:ring-primary/40 w-full rounded border px-2 py-1.5 font-mono text-[11.5px] outline-none focus:ring-2"
+							bind:value={functionFilter}
+						>
+							<option value="all">Toutes</option>
+							{#each functionOptions as option (option)}
+								<option value={option}>{option}</option>
+							{/each}
+						</select>
+					</label>
+
+					<label class="block">
+						<span class="text-text-dim mb-1 block font-mono text-[10.5px] uppercase">Type</span>
+						<select
+							class="border-border bg-background focus:ring-primary/40 w-full rounded border px-2 py-1.5 font-mono text-[11.5px] outline-none focus:ring-2"
+							bind:value={dataTypeFilter}
+						>
+							<option value="all">Tous</option>
+							{#each dataTypeOptions as option (option)}
+								<option value={option}>{option}</option>
+							{/each}
+						</select>
+					</label>
+
+					<label class="block">
+						<span class="text-text-dim mb-1 block font-mono text-[10.5px] uppercase">Accès</span>
+						<select
+							class="border-border bg-background focus:ring-primary/40 w-full rounded border px-2 py-1.5 font-mono text-[11.5px] outline-none focus:ring-2"
+							bind:value={accessFilter}
+						>
+							<option value="all">Tous</option>
+							{#each accessOptions as option (option)}
+								<option value={option}>{ACCESS_LABEL[option]}</option>
+							{/each}
+						</select>
+					</label>
+
+					<label class="block">
+						<span class="text-text-dim mb-1 block font-mono text-[10.5px] uppercase">Unité</span>
+						<select
+							class="border-border bg-background focus:ring-primary/40 w-full rounded border px-2 py-1.5 font-mono text-[11.5px] outline-none focus:ring-2"
+							bind:value={unitFilter}
+						>
+							<option value="all">Toutes</option>
+							{#each unitOptions as option (option)}
+								<option value={option}>{option}</option>
+							{/each}
+						</select>
+					</label>
+				</div>
+
+				{#if hasActiveRegisterFilters}
+					<button
+						type="button"
+						class="text-text-soft hover:text-primary mt-2 inline-flex items-center gap-1.5 font-mono text-[11px]"
+						onclick={resetRegisterFilters}
+					>
+						<RotateCcw class="size-3" />
+						Réinitialiser les filtres de registres
+					</button>
+				{/if}
 			</div>
 		</div>
 
@@ -352,6 +577,13 @@
 		</div>
 	</section>
 </ToolShell>
+
+{#snippet Stat(label: string, value: number)}
+	<div class="border-border bg-card/50 rounded border p-3">
+		<p class="text-text-dim font-mono text-[10.5px] uppercase">{label}</p>
+		<p class="text-foreground mt-1 font-mono text-lg tabular-nums">{value}</p>
+	</div>
+{/snippet}
 
 {#snippet Th(key: SortKey, label: string)}
 	<th class="px-2 py-1.5">

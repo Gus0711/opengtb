@@ -4,19 +4,32 @@
 
 import type { EquipmentType, ModbusManifestDevice, ModbusTransport } from './types.ts';
 
+export type ModbusReviewFilter = 'all' | 'verified' | 'needs-review';
+
+export type ModbusSort =
+	| 'catalogue'
+	| 'name-asc'
+	| 'vendor-asc'
+	| 'registers-desc'
+	| 'registers-asc';
+
 export interface ModbusFilters {
 	/** Texte libre — matching insensible à la casse / accents. */
 	query: string;
 	vendors: string[];
 	equipmentTypes: EquipmentType[];
 	transports: ModbusTransport[];
+	review: ModbusReviewFilter;
+	sort: ModbusSort;
 }
 
 export const EMPTY_FILTERS: ModbusFilters = {
 	query: '',
 	vendors: [],
 	equipmentTypes: [],
-	transports: []
+	transports: [],
+	review: 'all',
+	sort: 'catalogue'
 };
 
 function normalize(s: string): string {
@@ -48,12 +61,40 @@ export function filterDevices(
 	const vendorSet = new Set(filters.vendors);
 	const typeSet = new Set(filters.equipmentTypes);
 	const transportSet = new Set(filters.transports);
-	return devices.filter((d) => {
+	const list = devices.filter((d) => {
 		if (vendorSet.size > 0 && !vendorSet.has(d.vendor)) return false;
 		if (typeSet.size > 0 && !typeSet.has(d.equipmentType)) return false;
 		if (transportSet.size > 0 && !d.transport.some((t) => transportSet.has(t))) return false;
+		if (filters.review === 'verified' && d.needsReview) return false;
+		if (filters.review === 'needs-review' && !d.needsReview) return false;
 		return matchesQuery(d, filters.query);
 	});
+	return sortDevices(list, filters.sort);
+}
+
+function sortDevices(devices: ModbusManifestDevice[], sort: ModbusSort): ModbusManifestDevice[] {
+	if (sort === 'catalogue') return devices;
+	const list = [...devices];
+	list.sort((a, b) => {
+		const fallback =
+			a.vendor.localeCompare(b.vendor, 'fr') ||
+			a.model.localeCompare(b.model, 'fr') ||
+			a.slug.localeCompare(b.slug, 'fr');
+
+		switch (sort) {
+			case 'name-asc':
+				return a.name.localeCompare(b.name, 'fr') || fallback;
+			case 'vendor-asc':
+				return fallback;
+			case 'registers-desc':
+				return b.registerCount - a.registerCount || fallback;
+			case 'registers-asc':
+				return a.registerCount - b.registerCount || fallback;
+			default:
+				return fallback;
+		}
+	});
+	return list;
 }
 
 /** Compte les occurrences pour une facette donnée, en tenant compte des autres filtres. */
@@ -96,6 +137,8 @@ export function filtersToQuery(filters: ModbusFilters): string {
 	if (filters.vendors.length) params.set('vendor', filters.vendors.join(','));
 	if (filters.equipmentTypes.length) params.set('type', filters.equipmentTypes.join(','));
 	if (filters.transports.length) params.set('transport', filters.transports.join(','));
+	if (filters.review !== 'all') params.set('quality', filters.review);
+	if (filters.sort !== 'catalogue') params.set('sort', filters.sort);
 	const s = params.toString();
 	return s ? `?${s}` : '';
 }
@@ -105,10 +148,28 @@ export function filtersFromQuery(search: URLSearchParams): ModbusFilters {
 		query: search.get('q') ?? '',
 		vendors: split(search.get('vendor')),
 		equipmentTypes: split(search.get('type')) as EquipmentType[],
-		transports: split(search.get('transport')) as ModbusTransport[]
+		transports: split(search.get('transport')) as ModbusTransport[],
+		review: parseReview(search.get('quality')),
+		sort: parseSort(search.get('sort'))
 	};
 }
 
 function split(v: string | null): string[] {
 	return v ? v.split(',').filter(Boolean) : [];
+}
+
+function parseReview(value: string | null): ModbusReviewFilter {
+	return value === 'verified' || value === 'needs-review' ? value : 'all';
+}
+
+function parseSort(value: string | null): ModbusSort {
+	switch (value) {
+		case 'name-asc':
+		case 'vendor-asc':
+		case 'registers-desc':
+		case 'registers-asc':
+			return value;
+		default:
+			return 'catalogue';
+	}
 }
